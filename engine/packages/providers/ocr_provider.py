@@ -12,6 +12,23 @@ from packages.core.schemas import ExtractedPage, OCRToken
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".webp"}
 
 
+def _tesseract_lines(data: dict) -> str:
+    """Reconstruct reading lines from Tesseract's layout identifiers."""
+    lines: dict[tuple[int, int, int], list[str]] = {}
+    order: list[tuple[int, int, int]] = []
+    for index, raw in enumerate(data.get("text", [])):
+        word = str(raw).strip()
+        if not word:
+            continue
+        key = tuple(int(data.get(name, [0] * len(data["text"]))[index])
+                    for name in ("block_num", "par_num", "line_num"))
+        if key not in lines:
+            lines[key] = []
+            order.append(key)
+        lines[key].append(word)
+    return "\n".join(" ".join(lines[key]) for key in order)
+
+
 class LocalOCRPlaceholder:
     """P0 local OCR placeholder. It treats text files as already extracted text."""
 
@@ -51,7 +68,7 @@ class TesseractOCR:
                                    bbox=[x, y, x + w, y + h], page_number=page_number))
         confidences = [t.confidence for t in tokens if t.confidence is not None]
         return ExtractedPage(document_id=document_id, page_number=page_number,
-            text=" ".join(t.text for t in tokens), source_url=f"file://{document_id}",
+            text=_tesseract_lines(data), source_url=f"file://{document_id}",
             location_reference=f"page {page_number}",
             confidence=sum(confidences) / len(confidences) if confidences else None,
             tokens=tokens, metadata={"ocr_engine": "tesseract", "engine_version": str(pytesseract.get_tesseract_version())})
@@ -163,6 +180,7 @@ class RemotePaddleOCR:
         send_pdf: bool = True,
         lang: str | None = None,
         transport: httpx.BaseTransport | None = None,
+        engine_name: str = "remote_paddle",
     ) -> None:
         self._request_format = request_format
         self._send_pdf = send_pdf      # upload whole PDFs (server v2.0+ rasterizes them)
@@ -176,6 +194,7 @@ class RemotePaddleOCR:
             self._base = endpoint
         self._endpoint = self._base  # kept for logging/metadata
         self._dpi = dpi
+        self._engine_name = engine_name
         headers = {}
         if api_key:
             headers = {"Authorization": f"Bearer {api_key}", "X-API-Key": api_key}
@@ -205,7 +224,7 @@ class RemotePaddleOCR:
             location_reference=f"page {page_number}",
             confidence=confidence,
             tokens=tokens,
-            metadata={"ocr_engine": "remote_paddle", "endpoint": self._ocr_url},
+            metadata={"ocr_engine": self._engine_name, "endpoint": self._ocr_url},
         )
 
     def ocr_image(
@@ -311,6 +330,52 @@ class FallbackRemotePaddleOCR(RemotePaddleOCR):
         return primary
 
 
+class PaddleVLCascade:
+    """Scanned-page route: PaddleOCR-VL -> PaddleOCR -> Tesseract.
+
+    The VL response is accepted as canonical OCR only when it preserves token
+    boxes. Text-only/Markdown VL output remains useful diagnostically but cannot
+    create CitationProof, so the deterministic OCR fallback is used instead.
+    """
+
+    def __init__(self, vl: RemotePaddleOCR, fallback: FallbackRemotePaddleOCR):
+        self._vl = vl
+        self._fallback = fallback
+
+    @staticmethod
+    def _proof_capable(pages: list[ExtractedPage]) -> bool:
+        return bool(pages) and all(
+            page.text.strip() and page.tokens
+            and all(token.bbox is not None for token in page.tokens)
+            for page in pages
+        )
+
+    def extract(self, file_path: str) -> list[ExtractedPage]:
+        try:
+            pages = self._vl.extract(file_path)
+            if not self._proof_capable(pages):
+                raise ValueError("PaddleOCR-VL response lacks citation-capable token boxes")
+            return pages
+        except (httpx.HTTPError, OSError, ValueError):
+            pages = self._fallback.extract(file_path)
+            for page in pages:
+                page.metadata["ocr_fallback_reason"] = "PaddleOCR-VL unavailable or proof-incomplete"
+            return pages
+
+    def ocr_image(self, image_bytes: bytes, page_number: int = 1,
+                  document_id: str = "image") -> ExtractedPage:
+        try:
+            page = self._vl.ocr_image(image_bytes, page_number, document_id)
+            if not self._proof_capable([page]):
+                raise ValueError("PaddleOCR-VL response lacks citation-capable token boxes")
+            return page
+        except (httpx.HTTPError, OSError, ValueError):
+            page = self._fallback.ocr_image(image_bytes, page_number, document_id)
+            page.metadata["ocr_fallback_reason"] = (
+                "PaddleOCR-VL unavailable or proof-incomplete"
+            )
+            return page
+
 def build_ocr(config: dict | None):
     """Factory keyed on the profile's ocr.provider (models.yaml) — the config-only swap."""
     config = config or {}
@@ -324,7 +389,21 @@ def build_ocr(config: dict | None):
             config.get("request_format") or os.getenv("OCR_REQUEST_FORMAT") or "multipart"
         )
         lang = config.get("lang") or os.getenv("OCR_LANG") or None
-        return FallbackRemotePaddleOCR(
+        standard = FallbackRemotePaddleOCR(
             endpoint, api_key=api_key, request_format=request_format, lang=lang
         )
+        vl_endpoint = config.get("vl_endpoint") or os.getenv("OCR_VL_ENDPOINT")
+        if vl_endpoint:
+            vl_request_format = (
+                config.get("vl_request_format") or
+                os.getenv("OCR_VL_REQUEST_FORMAT") or request_format
+            )
+            vl = RemotePaddleOCR(
+                vl_endpoint, api_key=(config.get("vl_api_key") or
+                                      os.getenv("OCR_VL_API_KEY") or api_key),
+                request_format=vl_request_format, lang=lang,
+                engine_name="remote_paddle_vl",
+            )
+            return PaddleVLCascade(vl, standard)
+        return standard
     return LocalOCRPlaceholder()

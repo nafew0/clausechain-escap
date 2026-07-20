@@ -97,8 +97,21 @@ class OpenAIChatProvider:
         """Use OpenAI Batch when explicitly enabled; otherwise preserve live latency."""
         keys = prompt_cache_keys or [None] * len(prompts)
         def synchronous() -> list[BaseModel]:
-            return [self.complete(p, schema, prompt_cache_key=k)
-                    for p, k in zip(prompts, keys, strict=True)]
+            # These mapping requests are independent. A bounded worker pool keeps
+            # live runs from paying one network round trip at a time while
+            # preserving input order and the provider's existing retry policy.
+            workers = max(1, int(os.getenv("CLAUSECHAIN_LLM_CONCURRENCY", "6")))
+            if workers == 1 or len(prompts) < 2:
+                return [self.complete(p, schema, prompt_cache_key=k)
+                        for p, k in zip(prompts, keys, strict=True)]
+            from concurrent.futures import ThreadPoolExecutor
+
+            def invoke(item):
+                prompt, key = item
+                return self.complete(prompt, schema, prompt_cache_key=key)
+
+            with ThreadPoolExecutor(max_workers=min(workers, len(prompts))) as pool:
+                return list(pool.map(invoke, zip(prompts, keys, strict=True)))
 
         if (os.getenv("CLAUSECHAIN_OPENAI_BATCH") != "1" or len(prompts) < 2
                 or self._batch_available is False):

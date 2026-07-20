@@ -335,6 +335,7 @@ def test_restamp_requires_full_processing_fingerprint(tmp_path):
                   "evidence_eligible": True},
     )
     store.upsert_rule_unit(unit)
+    store.mark_artifact_build_complete("Malaysia", fp, "g1", 1)
     # identical fingerprint (same bytes + extraction version + profile) -> reuse
     assert store.restamp_artifact_generation("Malaysia", fp, "g2") == 1
     assert store.prune_economy_generation("Malaysia", "g2") == 0  # survived

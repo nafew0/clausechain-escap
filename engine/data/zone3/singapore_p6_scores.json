@@ -1,12 +1,15 @@
 {
  "economy": "Singapore",
  "pillar": 6,
- "run": "run-sg-p6-1784114671",
- "krippendorff_alpha": 1.0,
+ "run": "run-sg-p6-1784544950",
+ "krippendorff_alpha": 0.682,
  "indicators": {
   "P6-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
@@ -16,12 +19,12 @@
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No evidence was found (pending review) of any ban and local processing requirements covering personal data or applying horizontally, so transfers appear free of"
+     "reason": "No gate-verified evidence was found that the economy has any ban and local processing requirements for personal data or any horizontal/non-personal-specific req"
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence was found that the economy imposes any ban or local processing requirement on personal data or applies such requirements horizontally (or on non-per"
+     "reason": "No verified evidence was found that the economy imposes any ban or local processing requirement on personal data or applies such requirements horizontally (the "
     }
    ],
    "band": [
@@ -35,6 +38,9 @@
   "P6-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
@@ -49,7 +55,7 @@
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal specific storage rule."
+     "reason": "No gate-verified evidence was found that any local storage requirement applies to personal data or that any non-personal/specific-data storage rule exists."
     }
    ],
    "band": [
@@ -57,17 +63,20 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I3": {
    "deterministic": 0.0,
    "deterministic_reason": "none found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found that any rule makes local data centre/server infrastructure a precondition for service or conditions data transfer on such infrastructure."
+     "reason": "No infrastructure requirement is plainly stated in the provided evidence (NO_EVIDENCE_FOUND_PENDING_REVIEW), so the score is 0."
     },
     {
      "persona": "ESCAP",
@@ -77,7 +86,7 @@
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence was found that any service is conditioned on local data-centre/server infrastructure or that transfers require such infrastructure, so the "
+     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition or transfer conditioned on infrastr"
     }
    ],
    "band": [
@@ -89,31 +98,65 @@
    "reviewer_decision": "pending"
   },
   "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited provisions impose conditions on transfers of personal data outside Singapore and are explicitly described as horizontal (e.g., PDPA 2012 s. 26(1), s. "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Personal Data Protection Act 2012 s.26 and the Personal Data Protection Regulations 2021 s.12/s.10 impose conditions on cross-border transfers of personal d"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence shows horizontal, personal-data transfer restrictions and conditions under Singapore\u2019s PDPA 2012 s.26 and PDPR 2021 regs. 10\u201312, meaning transfer f"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
    "deterministic": 0.0,
-   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "deterministic_reason": "unknown indicator",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No quoted evidence shows any conditional flow regimes on transfers under the Personal Data Protection Act 2012, and the provided row indicates no evidence found"
+     "reason": "The cited agreements (Digital Economy Partnership Agreement Art. 4.3 and Singapore-Australia Digital Economy Agreement Art. 23) each contain binding commitments"
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No evidence was found of any conditional flow regime governing transfers (including for personal data) in the provided material."
+     "reason": "The economy has binding commitments allowing cross-border electronic transfer of information (including personal information) under the Digital Economy Partners"
     },
     {
      "persona": "skeptical",
-     "score": 0.0,
-     "reason": "No gate-verified evidence was found that any conditional flow regime applies to transfers (personal or non-personal), so the indicator should be scored as havin"
+     "score": 1.0,
+     "reason": "The cited agreements contain binding commitments to allow or not restrict cross-border electronic information transfers (including personal information) for cov"
     }
    ],
    "band": [
     0.0,
-    0.0
+    1.0
    ],
-   "spread": 0.0,
-   "flag_for_review": false,
+   "spread": 1.0,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   }
  },

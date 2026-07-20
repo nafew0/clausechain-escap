@@ -13,13 +13,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="evidencerow",
             name="review_subject_hash",
-            field=models.CharField(default="", max_length=64),
-            preserve_default=False,
+            field=models.CharField(blank=True, default="", max_length=64),
         ),
         migrations.AddField(
             model_name="findingdecision",
             name="review_subject_hash",
-            field=models.CharField(default="", max_length=64),
-            preserve_default=False,
+            field=models.CharField(blank=True, default="", max_length=64),
         ),
     ]

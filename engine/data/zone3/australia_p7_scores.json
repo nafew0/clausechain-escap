@@ -1,12 +1,15 @@
 {
  "economy": "Australia",
  "pillar": 7,
- "run": "run-au-p7-1784113103",
- "krippendorff_alpha": 0.527,
+ "run": "run-au-p7-1784547631",
+ "krippendorff_alpha": 0.576,
  "indicators": {
   "P7-I1": {
    "deterministic": 1.0,
    "deterministic_reason": "no DP framework evidence found -> lacks framework -> 1",
+   "master_gold": 0.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
@@ -21,7 +24,7 @@
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "No evidence was found (pending review) for a comprehensive horizontal data protection framework, so the safest assessment is that such a framework is not establ"
+     "reason": "No comprehensive horizontal data protection framework is evidenced (Privacy Act 1988 has no evidence found pending review), so the indicator should be scored as"
     }
    ],
    "band": [
@@ -29,27 +32,30 @@
     1.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P7-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited Security of Critical Infrastructure Act 2018 s. 3 is described as a horizontal provision imposing enhanced cyber security obligations, indicating a de"
+     "reason": "The cited provisions include a horizontal Cyber Security Act 2024 framework (e.g., a Cyber Incident Review Board and incident information to a National Cyber Se"
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The Security of Critical Infrastructure Act 2018 provides a dedicated horizontal cybersecurity framework by imposing enhanced cyber security obligations on rele"
+     "reason": "The Cyber Security Act 2024 provides a dedicated horizontal cybersecurity framework (e.g., incident review mechanisms and incident information reporting to the "
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The evidence points to a horizontal framework limited to critical infrastructure/system-of-national-significance obligations rather than a fully dedicated horiz"
+     "reason": "Although there is a Cyber Security Act 2024 with horizontal provisions (e.g., incident review board and reporting to a national coordinator), the evidence provi"
     }
    ],
    "band": [
@@ -63,49 +69,55 @@
   "P7-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "Section 17(2) states the record must be retained for a period but the quoted text does not plainly specify any minimum retention duration (e.g., days/months/yea"
+     "score": 1.0,
+     "reason": "The cited provisions repeatedly and plainly specify a minimum retention period of 7 years (e.g., AML/CTF Act 2006 ss 117(2), 114A(1), 111(4) and Corporations Ac"
     },
     {
      "persona": "ESCAP",
-     "score": 0.0,
-     "reason": "Section 17(2) requires retention for a period but does not specify any minimum duration (e.g., days/months/years), so no minimum period is clearly stated."
+     "score": 1.0,
+     "reason": "Multiple provisions explicitly specify a minimum data retention period of 7 years (e.g., AML/CTF Act 2006 ss. 117(2), 114A(1), 111(4) and Corporations Act 2001 "
     },
     {
      "persona": "skeptical",
-     "score": 0.0,
-     "reason": "Section 17(2) requires retention for \u201cthe period:\u201d but the minimum retention duration is not specified in the provided evidence, so it cannot be scored as havin"
+     "score": 1.0,
+     "reason": "Multiple provisions explicitly specify a minimum retention period of 7 years for relevant records (e.g., AML/CTF Act 2006 ss. 117(2), 114A(1), 111(4) and Corpor"
     }
    ],
    "band": [
-    0.0,
+    1.0,
     1.0
    ],
-   "spread": 1.0,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P7-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": 0.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The text shows a sectoral/public-sector power for the Commissioner to direct an agency to provide a privacy impact assessment, and it also defines a privacy imp"
+     "reason": "The quoted text states a DPO/DPIA-type requirement only when an agency proposes an activity involving handling personal information and the Commissioner conside"
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "Evidence shows a sectoral/public-sector requirement where the Commissioner can direct an agency to provide a privacy impact assessment, but it does not establis"
+     "reason": "The evidence shows a horizontal Privacy Act 1988 s.33D(1) requirement tied to agencies proposing activities involving handling personal information, indicating "
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "Evidence shows DPIA is mandated only via the Commissioner\u2019s direction for specific activities/functions (sectoral public-sector context), not as a blanket DPO/D"
+     "reason": "The evidence shows a horizontal statutory trigger for a Privacy Act s.33D(1) DPIA/DPO-type requirement when an agency proposes an activity involving handling pe"
     }
    ],
    "band": [
@@ -119,28 +131,31 @@
   "P7-I5": {
    "deterministic": 1.0,
    "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "The cited provisions allow the Commissioner/inspector to require information or search and seize, but the quoted text does not plainly state that government acc"
+     "score": 1.0,
+     "reason": "The cited provisions allow government/authorised officers to require or access relevant information or documents by notice without any stated independent judici"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Data Availability and Transparency Act 2022 s.104(1) and s.104(4) allow the Commissioner to require a person to provide information/documents and to take po"
+     "reason": "The cited provisions allow government/authorised officers to require or access relevant personal information/documents by notice without indicating independent "
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The cited provisions allow regulators/inspectors to compel production and take possession/copies (and to search/seize in telecommunications enforcement) without"
+     "reason": "The cited provisions allow government/authorised officers to compel provision of information or use certain surveillance/electronic access without independent j"
     }
    ],
    "band": [
-    0.0,
+    0.5,
     1.0
    ],
-   "spread": 1.0,
+   "spread": 0.5,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   }

@@ -77,6 +77,15 @@ def test_optimistic_concurrency_conflict(tmp_path):
     assert code == 3 and out["conflict"]
 
 
+def test_stale_review_subject_is_refused(tmp_path):
+    root = _seed_root(tmp_path)
+    decision = _approval("00" * 32)
+    decision["review_subject_hash"] = "ff" * 32
+    code, out = _run(root, "findings", {"decisions": [decision]})
+    assert code == 2
+    assert "stale or missing review_subject_hash" in out["error"]
+
+
 def test_recall_zone3_and_bundle(tmp_path):
     root = _seed_root(tmp_path)
     code, _ = _run(root, "recall", {"decisions": [

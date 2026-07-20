@@ -89,6 +89,8 @@ def minimal_artifacts():
             "proof_asset": None,
         },
     ]
+    for index, item in enumerate(key_rows, start=4):
+        item["review_subject_hash"] = str(index) * 64
     consolidated = [
         {
             "Economy": item["economy"],
@@ -747,6 +749,7 @@ class WorkspaceApiTests(TestCase):
         evidence.save(update_fields=["row_json"])
         FindingDecision.objects.create(
             finding_key="2" * 64,
+            review_subject_hash=evidence.review_subject_hash,
             queue="known",
             review_stage="citation",
             decision="approved",

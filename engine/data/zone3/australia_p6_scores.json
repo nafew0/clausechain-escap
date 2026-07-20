@@ -1,27 +1,30 @@
 {
  "economy": "Australia",
  "pillar": 6,
- "run": "run-au-p6-1784112964",
+ "run": "run-au-p6-1784546704",
  "krippendorff_alpha": 1.0,
  "indicators": {
   "P6-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found that the economy imposes any ban or local processing requirement on personal data or applies such requirements horizontally (or on non-per"
+     "reason": "No evidence was found that this economy has any ban or local processing requirement for personal data or applies such requirements horizontally (or on non-perso"
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No ban and local processing requirements for personal data (or any horizontal/non-personal-specific requirements) were found in the provided evidence, so transf"
+     "reason": "No gate-verified evidence was found for any ban and local processing requirement covering personal data or applying horizontally, so the indicator is not met."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No ban or local processing requirement evidence was found for personal data or non-personal/specific data (horizontal or otherwise), so transfers appear free of"
+     "reason": "No evidence was found (pending review) that the economy imposes any ban or local processing requirement for personal data or applies such requirements horizonta"
     }
    ],
    "band": [
@@ -29,55 +32,61 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I2": {
-   "deterministic": 0.5,
-   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited provision only states an offence for contravening subsection (1) and does not plainly impose any local storage requirement for personal or non-persona"
+     "reason": "The provided evidence shows no local storage requirement for personal data or any horizontal/non-personal storage rule (NO_EVIDENCE_FOUND_PENDING_REVIEW)."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The cited provision (My Health Records Act 2012 s. 77(2A)) is an offence/contravention clause and does not establish any local storage requirement for personal "
+     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any non-personal/specific-data storage rule."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The cited provision concerns an offence for contravening obligations under the My Health Records Act, but it does not itself establish a local storage requireme"
+     "reason": "No gate-verified evidence was found of any local storage requirement (personal-data or horizontal, or any non-personal/specific-data storage rule), so the indic"
     }
    ],
    "band": [
     0.0,
-    0.5
+    0.0
    ],
-   "spread": 0.5,
+   "spread": 0.0,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I3": {
    "deterministic": 0.0,
    "deterministic_reason": "none found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found that any infrastructure requirement (e.g., local data centre/server as a precondition of service or transfer) exists in the provided text."
+     "reason": "No evidence was found that any infrastructure requirement (e.g., local data centre/server as a precondition of service or transfer conditioned on infrastructure"
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No evidence was found (pending review) that any service is conditioned on local data-centre/server infrastructure or that transfer is conditioned on such infras"
+     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition or transfer conditioned on infrastr"
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition) for the Privacy Act 1988, so the i"
+     "reason": "No evidence was found that any infrastructure requirement (e.g., local data centre/server as a precondition or transfer conditioned on infrastructure) exists fo"
     }
    ],
    "band": [
@@ -91,21 +100,24 @@
   "P6-I4": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 1.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 1.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No quoted text provides any conditions on transfer (privacy act row shows NO_EVIDENCE_FOUND_PENDING_REVIEW), so the indicator is not met."
+     "reason": "No conditions on transfer are evidenced in the provided text (NO_EVIDENCE_FOUND_PENDING_REVIEW)."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found that any conditional flow regime applies to transfers (horizontal or personal-data coverage), so the indicator cannot be sup"
+     "reason": "No gate-verified evidence was found showing any conditional flow regimes for transfers (personal or non-personal), so the indicator cannot be supported."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found that any conditional flow regime applies to transfers (horizontal or otherwise), so the indicator should be scored as having"
+     "reason": "No gate-verified evidence was found that any conditional flow regime applies to transfers (horizontal or sectoral), so the indicator should be scored as having "
     }
    ],
    "band": [
@@ -113,7 +125,38 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "unknown indicator",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provided evidence shows no binding data-transfer agreement (NO_EVIDENCE_FOUND_PENDING_REVIEW), so the criterion for at least one binding agreement is not me"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "No binding data-transfer agreement is evidenced in the provided material (only 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the Privacy Act 1988), so the criterion fo"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "No binding data-transfer agreement is evidenced (Privacy Act 1988 shows no evidence found pending review), so the criterion for at least one binding agreement i"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   }
  },

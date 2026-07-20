@@ -26,9 +26,9 @@ _SECTION_PATTERNS = [
     re.compile(r"^\s{0,6}Section\s+(\d{1,3}[A-Z]{0,2})\.?\s+(.{0,120})", re.IGNORECASE),
     # Schedule decimals (474.17A) and official-code hierarchy (3.5.14).
     re.compile(r"^\s{0,6}(\d{1,3}(?:\.\d{1,2}){1,2}[A-Z]{0,2})\s+(\S.{0,110})"),
-    re.compile(r"^\s{0,6}(\d{1,3}[A-Z]{0,2})\.\s+(.{0,120})"),
+    re.compile(r"^\s{0,6}(\d{1,3}[A-Z]{0,2})\.\s+(.{0,120})", re.I),
     # AU Commonwealth compilations: "13  Interferences with privacy" (no dot, 2+ spaces)
-    re.compile(r"^\s{0,6}(\d{1,3}[A-Z]{0,2})\s{2,}(\S.{0,110})"),
+    re.compile(r"^\s{0,6}(\d{1,3}[A-Z]{0,2})\s{2,}(\S.{0,110})", re.I),
 ]
 
 # R5 (P3.5) heading-plausibility guards — the user-verified failure modes:
@@ -45,6 +45,8 @@ def _plausible_heading(heading_text: str, act_name: str) -> bool:
         return True
     if _LOWERCASE_CONTINUATION.match(text):
         return False  # "removes...", "of this Act..." = sentence continuation, not a heading
+    if re.search(r"\b(?:Section|Article|Regulation|Clause)\s+\d", text, re.I):
+        return False  # a body cross-reference wrapped onto a new line is not a heading
     from packages.discovery.diff import law_tokens
 
     head_tokens = law_tokens(text[:80])
@@ -58,7 +60,14 @@ def _plausible_heading(heading_text: str, act_name: str) -> bool:
 # Use via parse_act_text(extra_section_patterns=TREATY_SECTION_PATTERNS,
 #                        citation_template="Art. {label}") — data-driven, no per-row code.
 TREATY_SECTION_PATTERNS = [
-    re.compile(r"^\s{0,6}Article\s+(\d{1,3}(?:\.\d{1,2})?[A-Z]?(?:-[A-Z])?)\s*[:.\-\u2013\u2014]?\s+(\S.{0,110})", re.I),
+    # One grammar covers both ``Article 12.14: Title`` and a standalone
+    # ``ARTICLE 13`` whose title is printed on the following line. Anchoring to
+    # the full line prevents a body sentence from being accepted by prefix only.
+    re.compile(
+        r"^\s{0,6}Article\s+(\d{1,3}[A-Z]?(?:\.\d{1,2}[A-Z]?){0,2}(?:-[A-Z])?)"
+        r"\s*(?:[:.\-\u2013\u2014]\s*)?(.*?)\s*$",
+        re.I,
+    ),
 ]
 
 # Malay-language statute grammar (rerun-fix #6 wiring): official Malaysian acts print
@@ -82,11 +91,46 @@ _SUBSECTION = re.compile(r"\((\d{1,2})\)\s")
 
 def _sec_sort_key(num: str) -> tuple[int, int, int, str]:
     """Sortable body/schedule/code path, including nested clause 4.10.3."""
-    match = re.fullmatch(r"(\d+)(?:\.(\d+))?(?:\.(\d+))?([A-Z]*)", num)
+    annex = re.fullmatch(r"(\d+)([A-Z]+)\.(\d+)([A-Z]*)", num.upper())
+    if annex:
+        letters = 0
+        for char in annex.group(2):
+            letters = letters * 26 + ord(char) - 64
+        return (int(annex.group(1)), 1000 + letters,
+                int(annex.group(3)), annex.group(4))
+    match = re.fullmatch(r"(\d+)(?:\.(\d+))?(?:\.(\d+))?([A-Z]*)", num.upper())
     if not match:
         return (0, -1, -1, "")
     return (int(match.group(1)), int(match.group(2) or -1),
             int(match.group(3) or -1), match.group(4))
+
+
+_OCR_LOWER_SUFFIX = re.compile(r"^(\s{0,6})(\d{1,3})([a-z])(\.\s+.*)$")
+
+
+def _repair_ocr_section_labels(lines: list[tuple[int, str]]) -> list[tuple[int, str]]:
+    """Repair lowercase OCR suffixes using neighbouring statutory sequence.
+
+    This handles font confusions such as A, ``s``, C where the middle glyph is
+    a misread B, without knowing an Act or citation in advance.
+    """
+    hits = []
+    for index, (_page, line) in enumerate(lines):
+        match = _OCR_LOWER_SUFFIX.match(line)
+        if match:
+            hits.append((index, match.group(2), match.group(3), match))
+    replacements: dict[int, str] = {}
+    for position, (index, base, suffix, match) in enumerate(hits):
+        repaired = suffix.upper()
+        previous = hits[position - 1] if position else None
+        following = hits[position + 1] if position + 1 < len(hits) else None
+        if previous and following and previous[1] == base == following[1]:
+            before, after = previous[2].upper(), following[2].upper()
+            if ord(after) - ord(before) == 2:
+                repaired = chr(ord(before) + 1)
+        replacements[index] = f"{match.group(1)}{base}{repaired}{match.group(4)}"
+    return [(page, replacements.get(index, line))
+            for index, (page, line) in enumerate(lines)]
 
 
 def parse_act_text(pages: list, economy: str, act_name: str, act_ref: str,
@@ -99,6 +143,9 @@ def parse_act_text(pages: list, economy: str, act_name: str, act_ref: str,
     for page in pages:
         for line in page.text.splitlines():
             lines.append((page.page_number, line))
+    if any(str(page.metadata.get("extraction", "")).startswith("ocr")
+           or page.metadata.get("ocr_engine") for page in pages):
+        lines = _repair_ocr_section_labels(lines)
 
     # Consolidated Acts commonly put a complete numbered table of contents before
     # the enacting text. Feeding both copies to the monotonic parser makes the TOC
@@ -149,7 +196,7 @@ def parse_act_text(pages: list, economy: str, act_name: str, act_ref: str,
         body = "\n".join(line for _, line in lines[sec["line_index"]:end])
         body = re.sub(r"\s+", " ", body).strip()
         body = re.sub(rf"^{re.escape(sec['number'])}\.\s*", "", body)
-        number = sec["number"]
+        number = sec["number"].upper()
 
         # split on top-level (1) (2) ... markers, in increasing order
         markers = []

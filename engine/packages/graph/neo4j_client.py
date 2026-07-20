@@ -145,6 +145,19 @@ class Neo4jGraphStore:
                     MERGE (p)-[:HAS_SPAN]->(s)
                     """, rows=rows[start:start + batch_size])
 
+    def get_text_spans(self, span_ids: list[str]) -> list[TextSpan]:
+        if not span_ids:
+            return []
+        with self._connect().session() as session:
+            records = session.run(
+                "UNWIND range(0,size($ids)-1) AS pos "
+                "MATCH (s:TextSpan {id:$ids[pos]}) "
+                "RETURN pos,s.payload_json AS payload ORDER BY pos",
+                ids=span_ids,
+            )
+            return [TextSpan.model_validate_json(record["payload"])
+                    for record in records]
+
     def add_discovery_lead(self, lead_id: str, reason_code: str, payload: dict) -> None:
         with self._connect().session() as session:
             self._ensure_schema(session)
@@ -395,6 +408,35 @@ class Neo4jGraphStore:
     def count_nodes(self) -> int:
         with self._connect().session() as session:
             return int(session.run("MATCH (n) RETURN count(n) AS c").single()["c"])
+
+    def quarantine_unaligned_provisions(self, economy: str | None = None) -> int:
+        """Mirror the judged-path fail-closed alignment policy in Neo4j."""
+        where = "p.pdf_alignment = 'unaligned-review' AND p.evidence_eligible = true"
+        if economy:
+            where += " AND p.economy = $economy"
+        with self._connect().session() as session:
+            record = session.run(
+                f"MATCH (p:Provision) WHERE {where} "
+                "SET p.evidence_eligible = false, "
+                "p.quarantine_reason = 'ALIGNMENT_UNRESOLVED' "
+                "RETURN count(p) AS changed",
+                economy=economy,
+            ).single()
+            return int(record["changed"] if record else 0)
+
+    def mark_artifact_build_complete(self, economy: str, fingerprint: str,
+                                     generation: str, unit_count: int) -> None:
+        if unit_count <= 0:
+            return
+        with self._connect().session() as session:
+            session.run(
+                "MERGE (b:ArtifactBuild {id:$id}) "
+                "SET b.economy=$economy,b.fingerprint=$fingerprint,"
+                "b.generation=$generation,b.unit_count=$unit_count,"
+                "b.completed_at=datetime()",
+                id=f"{economy}:{fingerprint}", economy=economy,
+                fingerprint=fingerprint, generation=generation, unit_count=unit_count,
+            )
 
     def upsert_finding(self, finding_id: str, run_id: str, finding: MappedFinding) -> None:
         with self._connect().session() as session:

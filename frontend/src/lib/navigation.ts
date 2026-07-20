@@ -31,7 +31,7 @@ export interface WorkspaceNavItem {
 export const WORKSPACE_NAV_ITEMS: WorkspaceNavItem[] = [
   { href: '/dashboard', icon: LayoutDashboard, label: 'Dashboard', state: 'live', section: 'workspace' },
   { href: '/review', icon: ClipboardCheck, label: 'Review', state: 'live', section: 'workspace' },
-  { href: '/submission', icon: FileCheck2, label: 'Submission', state: 'live', section: 'workspace' },
+  { href: '/submission', icon: FileCheck2, label: 'RDTII Dataset', state: 'live', section: 'workspace' },
   { href: '/runs', icon: Activity, label: 'Runs', state: 'live', section: 'workspace' },
   { href: '/jurisdictions/sg/documents/SG-PDPA-2012', icon: ShieldCheck, label: 'Evidence Audit', state: 'prototype', section: 'workspace' },
   { href: '/source-status', icon: Network, label: 'Source Status', state: 'prototype', section: 'workspace' },

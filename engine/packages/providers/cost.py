@@ -7,6 +7,7 @@ Prices are per 1M tokens (USD, as of Jul 2026) — edit PRICES when they change.
 from __future__ import annotations
 
 import json
+import threading
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -20,21 +21,24 @@ PRICES = {  # standard per 1M tokens: (input, cached input, output), Jul 2026
 _USAGE: dict[str, dict] = defaultdict(lambda: {
     "input_tokens": 0, "cached_input_tokens": 0, "output_tokens": 0, "calls": 0,
 })
+_LOCK = threading.Lock()
 
 
 def record(model: str, input_tokens: int, output_tokens: int = 0,
            cached_input_tokens: int = 0, *, batch: bool = False) -> None:
     if batch:
         model = f"{model} [batch]"
-    entry = _USAGE[model]
-    entry["input_tokens"] += int(input_tokens or 0)
-    entry["cached_input_tokens"] += int(cached_input_tokens or 0)
-    entry["output_tokens"] += int(output_tokens or 0)
-    entry["calls"] += 1
+    with _LOCK:
+        entry = _USAGE[model]
+        entry["input_tokens"] += int(input_tokens or 0)
+        entry["cached_input_tokens"] += int(cached_input_tokens or 0)
+        entry["output_tokens"] += int(output_tokens or 0)
+        entry["calls"] += 1
 
 
 def reset() -> None:
-    _USAGE.clear()
+    with _LOCK:
+        _USAGE.clear()
 
 
 def report() -> dict:

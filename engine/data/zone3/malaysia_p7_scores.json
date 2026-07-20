@@ -1,83 +1,123 @@
 {
  "economy": "Malaysia",
  "pillar": 7,
- "run": "run-my-p7-1784112332",
- "krippendorff_alpha": 0.627,
+ "run": "run-my-p7-1784546147",
+ "krippendorff_alpha": 0.097,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The Personal Data Protection Act (Act 709) provides horizontal principles and access/correction rights, but the evidence also shows sectoral codes (banking) add"
+     "reason": "Act 709 provides a horizontal personal data protection framework with access and correction rights, but the cited provisions show only partial rights (e.g., acc"
     },
     {
      "persona": "ESCAP",
-     "score": 0.5,
-     "reason": "Malaysia has a horizontal Personal Data Protection Act (Act 709) with core principles and data subject rights (access and correction), but the evidence provided"
+     "score": 1.0,
+     "reason": "A comprehensive horizontal data protection framework exists under the Personal Data Protection Act (Act 709) 2010, including core principles and data subject ri"
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "While Act 709 provides a horizontal framework and includes access/correction rights, the evidence does not show a fully comprehensive set of data subject rights"
+     "reason": "While Act 709 provides a horizontal data protection framework with notice/choice and access/correction rights, the evidence indicates the framework is not fully"
     }
    ],
    "band": [
     0.0,
-    0.5
+    1.0
    ],
-   "spread": 0.5,
+   "spread": 1.0,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P7-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited provisions show a horizontal Cyber Security Act framework (e.g., licensing requirements for providing/advertising cyber security services under Act 85"
+     "reason": "The cited provisions are from a dedicated horizontal Cyber Security Act (Act 854) 2024, including enforcement powers and licensing rules for cyber security serv"
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The Cyber Security Act (Act 854) 2024 provides a dedicated horizontal cybersecurity framework (e.g., licensing requirements for cyber security service providers"
+     "reason": "The Cyber Security Act (Act 854) 2024 provides a dedicated horizontal cybersecurity framework (e.g., licensing and enforcement powers under sections 27 and 36),"
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "Although the Cyber Security Act (Act 854) 2024 contains horizontal licensing provisions for cyber security service providers, the evidence provided does not sho"
+     "score": 1.0,
+     "reason": "The evidence shows a dedicated Cyber Security Act (Act 854) with horizontal provisions (e.g., enforcement powers and licensing of cyber security service provide"
     }
    ],
    "band": [
     0.0,
-    0.5
+    1.0
    ],
-   "spread": 0.5,
+   "spread": 1.0,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P7-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The evidence includes multiple provisions that clearly specify minimum retention periods (e.g., banking sector retention \u201cmore than seven (7) years\u201d and \u201cuntil "
+     "reason": "The cited provisions plainly specify minimum retention periods (e.g., at least seven years under Companies Act 2016 s. 341(5) and five years for retained books "
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Multiple laws/codes explicitly specify minimum retention periods (e.g., at least seven years for banking records and tax records, and not less than six years fo"
+     "reason": "Evidence specifies minimum retention periods (e.g., Companies Act 2016 s.341(5) requires records kept for at least seven years, and s.518(2) requires retention "
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "While some laws specify minimum retention periods (e.g., Companies Act 2016 at least seven years; AML/sectoral provisions implying retention beyond seven years)"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited provisions plainly require data controllers to appoint a Data Protection Officer (s.12A(3)-(4) Act A1727 and Circular 1/2025 s.10(1),(9)), with no ind"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Evidence shows a horizontal legal requirement under Act A1727 s.12A for all data controllers to appoint a Data Protection Officer (and the PDP Commissioner Circ"
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Multiple laws and sectoral guidance explicitly specify minimum retention periods (e.g., at least seven years for banking records and at least six years for cybe"
+     "reason": "The evidence shows a horizontal legal requirement under Act A1727 s.12A(3)-(4) and PDP Commissioner Circular 1/2025 s.10(1),(9) for data controllers/processors "
     }
    ],
    "band": [
@@ -88,52 +128,27 @@
    "flag_for_review": false,
    "reviewer_decision": "pending"
   },
-  "P7-I4": {
-   "deterministic": 0.0,
-   "deterministic_reason": "no DPO/DPIA requirement found",
-   "judges": [
-    {
-     "persona": "strict",
-     "score": 0.0,
-     "reason": "The provided evidence contains no gate-verified text establishing any DPO or DPIA requirement under Act 709 (Personal Data Protection Act 2010), so neither is p"
-    },
-    {
-     "persona": "ESCAP",
-     "score": 0.0,
-     "reason": "No gate-verified evidence was found that Act 709 (or any other law) requires a DPO and/or DPIA for any sectors, so neither requirement can be confirmed."
-    },
-    {
-     "persona": "skeptical",
-     "score": 0.0,
-     "reason": "The only cited source (Act 709) has no gate-verified evidence of any DPO or DPIA requirement, so the indicator cannot support a sector-specific or cross-sector "
-    }
-   ],
-   "band": [
-    0.0,
-    0.0
-   ],
-   "spread": 0.0,
-   "flag_for_review": false,
-   "reviewer_decision": "pending"
-  },
   "P7-I5": {
    "deterministic": 1.0,
    "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": 0.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions allow government/police interception and entry powers based on authorization by the Public Prosecutor or in urgent cases without independen"
+     "reason": "The cited provisions allow police officers (and in some cases the Public Prosecutor) to access or obtain data without stating that independent judicial authoriz"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The cited provisions allow government/police/public prosecutor-authorized officers to access/intercept/enter and exercise investigative powers without independe"
+     "reason": "The Criminal Procedure Code allows police officers (not below Inspector) conducting searches to be given access to computerized data, and the Security Offences "
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The cited laws allow government/police to compel interception/retention and to enter premises based on authorization by the Public Prosecutor or an \u201curgent and "
+     "reason": "The cited provisions allow police (and in some cases the Public Prosecutor) to access or obtain data without independent judicial authorization, but the evidenc"
     }
    ],
    "band": [

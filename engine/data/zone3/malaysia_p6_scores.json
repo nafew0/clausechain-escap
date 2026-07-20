@@ -1,27 +1,30 @@
 {
  "economy": "Malaysia",
  "pillar": 6,
- "run": "run-my-p6-1784112136",
- "krippendorff_alpha": 1.0,
+ "run": "run-my-p6-1784545752",
+ "krippendorff_alpha": 0.417,
  "indicators": {
   "P6-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found that the economy\u2019s rules impose any ban or local processing requirement on personal data or apply such requirements horizontally (or on no"
+     "reason": "No evidence was found that the economy has any ban or local processing requirement for personal data or non-personal/specific data under the cited Act 709 (PDP "
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No evidence was found (pending review) of any ban or local processing requirement for personal data or any horizontal/non-personal-specific requirement affectin"
+     "reason": "No gate-verified evidence was found that the economy imposes any ban or local processing requirement on personal data (or any horizontal/non-personal specific r"
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence was found (pending review) of any ban or local processing requirement applying to personal data or horizontally, so the indicator cannot be credited"
+     "reason": "No verified evidence was found that the economy imposes any ban or local processing requirement on personal data or applies such requirements horizontally, so t"
     }
    ],
    "band": [
@@ -35,21 +38,24 @@
   "P6-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The provided evidence states no local-storage requirement was found (NO_EVIDENCE_FOUND_PENDING_REVIEW), so the criterion is not met."
+     "reason": "No local storage requirement is evidenced in the provided text (NO_EVIDENCE_FOUND_PENDING_REVIEW)."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found for any local storage requirement for personal data or any non-personal/specific-data storage rule under the cited Act 709 ("
+     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal storage rule under the cited Act 709 "
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal specific storage rule."
+     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal storage rule under the cited framewor"
     }
    ],
    "band": [
@@ -63,11 +69,14 @@
   "P6-I3": {
    "deterministic": 0.0,
    "deterministic_reason": "none found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found (pending review) of any infrastructure requirement such as a local data centre/server as a precondition of service or as a condition for d"
+     "reason": "No evidence was found in the provided text that any local data centre/server or other infrastructure is required as a precondition for service or for data trans"
     },
     {
      "persona": "ESCAP",
@@ -77,7 +86,7 @@
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found that any service or data transfer is conditioned on local data-centre/server infrastructure, and the only cited act is marke"
+     "reason": "No gate-verified evidence was found that any law or rule makes local data-centre/server infrastructure a precondition for providing services or conditions data "
     }
    ],
    "band": [
@@ -91,29 +100,63 @@
   "P6-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The evidence shows conditional cross-border transfer rules for personal data under the Personal Data Protection Act (Act 709) applying horizontally (e.g., conse"
+     "reason": "The cited provisions impose conditional rules on transferring personal data outside Malaysia (e.g., Act 709 s.129 and the banking code of practice), so the cond"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The law and banking code impose conditional cross-border transfer regimes for personal data (e.g., consent, specified destinations, and sufficient data protecti"
+     "reason": "The evidence shows conditional transfer rules that specifically restrict transfers of personal data outside Malaysia (e.g., Act 709 s.129 and the banking sector"
     },
     {
      "persona": "skeptical",
-     "score": 1.0,
-     "reason": "The evidence shows conditional cross-border transfer rules for personal data (consent and minister-specified/sufficient protection requirements) that apply hori"
+     "score": 0.5,
+     "reason": "The evidence shows conditional rules on cross-border transfers of personal data (e.g., only to places specified by the Minister / sufficient data protection cou"
     }
    ],
    "band": [
-    1.0,
+    0.5,
     1.0
    ],
-   "spread": 0.0,
-   "flag_for_review": false,
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "unknown indicator",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited CPTPP Article 14.11 text is a binding obligation requiring each Party to allow cross-border transfer of information by electronic means for covered pe"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "CPTPP Art. 14.11 is a binding commitment requiring each Party to allow cross-border electronic transfer of information (including personal information) for cove"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The CPTPP Art. 14.11 provides a binding obligation to allow cross-border electronic transfer of information (including personal information) for covered persons"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   }
  },

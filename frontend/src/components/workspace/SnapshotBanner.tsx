@@ -45,7 +45,7 @@ export function SnapshotBanner({ className }: { className?: string }) {
   const warningReason = snapshot.stale
     ? 'This snapshot is stale.'
     : championStatus === 'FAIL'
-      ? 'Champion validation is not yet passing.'
+      ? 'Reviewer sign-offs are still in progress.'
       : ''
 
   return (

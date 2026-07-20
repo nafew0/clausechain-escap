@@ -98,14 +98,33 @@ def _load_refuter_verdicts() -> tuple[dict[tuple, dict], bool]:
     when every item came from the full-rubric v2 panel (rubric_version gate)."""
     verdicts: dict[tuple, dict] = {}
     versions: set[str] = set()
+    current_new: set[tuple] = set()
+    freshness_ok = True
     for run in RUNS:
+        output_path = Path(f"outputs/{run}/output.json")
+        if output_path.is_file():
+            envelope = json.loads(output_path.read_text())
+            current_new.update(
+                (item.get("Indicator ID"), item.get("Law Name"), item.get("Article / Section"))
+                for item in envelope.get("findings", [])
+                if item.get("Discovery Tag") == "NEW"
+            )
         path = Path(f"data/review/refutation_{run}.json")
         if not path.is_file():
+            if output_path.is_file() and any(
+                item.get("Discovery Tag") == "NEW" for item in envelope.get("findings", [])
+            ):
+                freshness_ok = False
             continue
+        # Refuter output has no immutable review-subject hash yet.  Until it
+        # does, never attach an older panel result to a newly rebuilt finding.
+        if output_path.is_file() and path.stat().st_mtime_ns < output_path.stat().st_mtime_ns:
+            freshness_ok = False
         for item in json.loads(path.read_text()):
             versions.add(str(item.get("rubric_version")))
             verdicts[(item.get("indicator"), item.get("law"), item.get("article"))] = item
-    return verdicts, bool(verdicts) and versions == {"full-indicator-v2"}
+    return verdicts, (bool(verdicts) and versions == {"full-indicator-v2"}
+                      and freshness_ok and current_new.issubset(verdicts))
 
 
 def _engine_git_sha() -> str:
@@ -210,7 +229,8 @@ def build_payload() -> dict:
         ])
 
     zone_headers = [
-        "Score ID", "Economy", "Indicator", "Indicator question", "Deterministic score",
+        "Score ID", "Economy", "Indicator", "Indicator question", "Freshness",
+        "Deterministic score",
         "Deterministic reason", "Master gold score", "Gold divergence",
         "Judge scores", "Judge reasoning", "Agreement alpha",
         "Score band", "Spread", "Flagged for review", "Reviewer score", "Reviewer decision",
@@ -218,14 +238,27 @@ def build_payload() -> dict:
     ]
     zone_rows = []
     zone_index = 0
+    zone_run_paths = {
+        "singapore_p6": Path("outputs/final_si_p6/output.json"),
+        "singapore_p7": Path("outputs/final_si_p7/output.json"),
+        "malaysia_p6": Path("outputs/final_ma_p6/output.json"),
+        "malaysia_p7": Path("outputs/final_ma_p7/output.json"),
+        "australia_p6": Path("outputs/final_au_p6/output.json"),
+        "australia_p7": Path("outputs/final_au_p7/output.json"),
+    }
     for path in sorted(Path("data/zone3").glob("*_scores.json")):
         payload = json.loads(path.read_text())
+        run_path = zone_run_paths.get(path.stem.removesuffix("_scores"))
+        fresh = bool(run_path and run_path.is_file()
+                     and path.stat().st_mtime_ns >= run_path.stat().st_mtime_ns)
+        freshness = ("CURRENT" if fresh else
+                     "STALE — engine output changed; do not approve this score without manual recalculation")
         for indicator_id, result in sorted((payload.get("indicators") or {}).items()):
             zone_index += 1
             judges = result.get("judges") or []
             zone_rows.append([
                 f"Z{zone_index:03d}", payload.get("economy"), indicator_id,
-                question(configs.get(indicator_id, {})), result.get("deterministic"),
+                question(configs.get(indicator_id, {})), freshness, result.get("deterministic"),
                 result.get("deterministic_reason"),
                 result.get("master_gold"),
                 (result.get("gold_divergence_note") or "") if result.get("gold_divergence") else "agrees",

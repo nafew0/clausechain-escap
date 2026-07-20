@@ -20,6 +20,7 @@ profiles:
     ocr:
       provider: ${OCR_PROVIDER:-local}     # set OCR_PROVIDER=remote_paddle in .env to use the PaddleOCR VM
       endpoint: ${OCR_ENDPOINT:-http://localhost:8089}
+      vl_endpoint: ${OCR_VL_ENDPOINT:-}
       api_key: ${OCR_API_KEY:-}
       model: ${LOCAL_OCR_MODEL:-local-ocr-placeholder}
     graph:

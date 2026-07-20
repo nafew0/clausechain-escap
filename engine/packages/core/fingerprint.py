@@ -17,9 +17,9 @@ import json
 
 # Bump whenever extractor/parser behavior changes so cached RuleUnits from the
 # previous behavior can never satisfy an incremental rebuild.
-# 2026-07-19.1: clause-boundary snippets, SSO subsection line-breaks, treaty +
-#               malay grammars, monotonic-filter state as of the 19 Jul rerun.
-EXTRACTION_VERSION = "2026-07-19.1"
+# 2026-07-20.1: shared SG/MY/AU PDF alignment, canonical paragraph context,
+#               proof-span binding and paragraph-closed snippet contract.
+EXTRACTION_VERSION = "2026-07-20.9"
 
 
 def processing_fingerprint(content_sha256: str, source_type: str = "act",

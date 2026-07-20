@@ -1,7 +1,7 @@
 from types import SimpleNamespace
 
 from packages.providers import cost
-from packages.rdtii.mapper import MapDecision, map_candidates
+from packages.rdtii.mapper import MapDecision, _indicator_brief, map_candidates
 
 
 class QueueLLM:
@@ -53,6 +53,15 @@ def test_rejected_known_anchor_is_escalated_to_mini():
     assert mini.calls[0][1] == ["clausechain:legal-escalation:v1:7.3"]
 
 
+def test_counter_evidence_indicators_separate_recording_from_scoring():
+    retention = _indicator_brief("P7-I3", {"name": "Retention", "question": "Duty?"})
+    access = _indicator_brief("P7-I5", {"name": "Access", "question": "Warrantless?"})
+    assert "duration is unspecified" in retention
+    assert "score 0" in retention
+    assert "executive/agency officer" in access
+    assert "without independent judicial authorization as 1" in access
+
+
 def test_cost_report_prices_cached_and_batch_tokens_separately():
     cost.reset()
     cost.record("gpt-5.4-nano", 1_000_000, 1_000_000,
@@ -62,4 +71,3 @@ def test_cost_report_prices_cached_and_batch_tokens_separately():
     assert report["models"]["gpt-5.4-nano"]["usd"] == 1.36
     assert report["models"]["gpt-5.4-nano [batch]"]["usd"] == 0.725
     assert report["total_usd"] == 2.085
-

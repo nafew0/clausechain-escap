@@ -7,6 +7,9 @@ import pytest
 
 from packages.verifier.gates import (finalize_snippet_result,
                                      g9_structural_closure)
+from packages.core.finalization import review_subject_hash
+from packages.core.schemas import MappedFinding
+from packages.ingest.expected_anchors import citation_refs
 
 
 def test_sg_cpc_s34_regression_closes_complete_a_to_c_rule():
@@ -76,6 +79,18 @@ def test_legislative_abbreviations_and_decimals_are_not_sentence_stops():
     assert result.text.endswith("regulated person.")
 
 
+def test_fragment_expands_to_containing_labelled_paragraph():
+    source = (
+        "Section heading without punctuation (1) The authorised officer may inspect "
+        "the complete record for an investigation. (2) A separate power applies."
+    )
+    result = finalize_snippet_result("officer may inspect", source)
+    assert result.passed
+    assert result.text.startswith("(1) The authorised officer")
+    assert result.text.endswith("for an investigation.")
+    assert "Section heading" not in result.text
+
+
 def test_closed_passage_between_soft_and_hard_limits_passes_long():
     source = "The controller must " + ("retain every audit record and " * 35) + "finish the audit."
     result = finalize_snippet_result("The controller must", source)
@@ -89,6 +104,27 @@ def test_closed_passage_over_hard_limit_is_blocked_without_truncation():
     result = finalize_snippet_result("The controller must", source)
     assert len(result.text) > 3000 and result.text == source
     assert result.closure_code == "FAIL_CLOSURE_OVER_HARD_LIMIT"
+
+
+def test_review_subject_changes_when_mapping_rationale_changes():
+    finding = MappedFinding(Economy="Singapore", **{
+        "Law Name": "Example Act", "Indicator ID": "P7-I1",
+        "Article / Section": "s. 1", "Discovery Tag": "NEW",
+        "Location Reference": "#s1", "Verbatim Snippet": "The duty applies.",
+        "Mapping Rationale": "Establishes the duty.",
+        "Source URL": "https://official.example/act", "Confidence": 0.9,
+        "Status": "in_force",
+    })
+    first = review_subject_hash(finding)
+    finding.mapping_rationale = "Establishes a materially different duty."
+    assert review_subject_hash(finding) != first
+
+
+def test_expected_anchor_citation_lists_expand_without_parenthetical_range_noise():
+    assert citation_refs("ss. 245(3), 341(2), 531(2)") == [
+        "s. 245(3)", "s. 341(2)", "s. 531(2)"
+    ]
+    assert citation_refs("Sch. 1, cl. 14(a)–(h)") == ["Sch 1, cl. 14(a)"]
 
 
 def test_current_run_artifacts_never_emit_open_snippets():

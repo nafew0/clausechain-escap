@@ -56,10 +56,17 @@ def test_g4_accepts_iso_compilation_dates():
 
 
 def test_g7_understands_without_first_obtaining_warrant():
-    text = "An officer may enter and search without first obtaining a warrant if delay creates risk."
+    text = ("An authorized officer may enter and search computer data without first "
+            "obtaining a warrant if delay creates risk.")
     assert g7_indicator_fit("P7-I5", text, text, "Services Tax Act 2018").status == "PASS"
-    gated = "An officer may search only under a warrant issued by a magistrate."
+    gated = ("An authorized officer may search computer data only under a warrant "
+             "issued by a magistrate.")
     assert g7_indicator_fit("P7-I5", gated, gated, "Services Tax Act 2018").status == "WARN"
+    executive = ("The Director-General may, by warrant under his own hand, authorise "
+                 "interception of communications.")
+    assert g7_indicator_fit("P7-I5", executive, executive, "Security Act").status == "PASS"
+    attorney = "The Attorney-General may issue a warrant authorising access to computer data."
+    assert g7_indicator_fit("P7-I5", attorney, attorney, "Security Act").status == "PASS"
 
 
 def test_g7_local_infrastructure_requires_domestic_mandatory_condition():
@@ -83,6 +90,13 @@ def test_g7_retention_minimum_rejects_ceiling_or_permission():
     assert g7_indicator_fit("P7-I3", ceiling, ceiling, "Companies Act").status == "FAIL"
     duty = "The company must retain every record for a period of at least 5 years."
     assert g7_indicator_fit("P7-I3", duty, duty, "Companies Act").status == "PASS"
+
+
+def test_g7_records_mandatory_retention_without_duration_for_score_zero_review():
+    text = "An employer must make and keep employee records for the period prescribed."
+    result = g7_indicator_fit("P7-I3", text, text, "Employment Act")
+    assert result.status == "WARN"
+    assert "score 0" in result.reason
 
 
 def test_g7_cross_border_indicators_require_the_correct_legal_effect():

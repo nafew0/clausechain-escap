@@ -95,6 +95,35 @@ def _open_ending_code(text: str) -> str | None:
 
 
 _LIST_CHILD = re.compile(r"\(\s*(?:[a-z]|[ivxlcdm]{1,6})\s*\)", re.IGNORECASE)
+_STRUCTURAL_LABEL = re.compile(
+    r"(?<!\w)\(\s*(?:\d+[A-Z]?|[a-z]|[ivxlcdm]{1,6})\s*\)\s+",
+    re.IGNORECASE,
+)
+
+
+def _containing_paragraph_start(source: str, claimed_start: int) -> int:
+    """Expand a fragment to its containing sentence/labelled paragraph start."""
+    previous_stop = 0
+    for index in range(claimed_start - 1, -1, -1):
+        if _is_real_sentence_stop(source, index):
+            previous_stop = index + 1
+            break
+    blank = source.rfind("\n\n", previous_stop, claimed_start)
+    base = blank + 2 if blank >= 0 else previous_stop
+    while base < claimed_start and source[base].isspace():
+        base += 1
+
+    # A subsection/paragraph label is a stronger boundary than a flattened
+    # heading.  A child following ':'/'—'/and/or still depends on its introducer,
+    # so retain the containing passage in that case.
+    labels = list(_STRUCTURAL_LABEL.finditer(source, base, claimed_start))
+    if labels:
+        label_start = labels[-1].start()
+        introducer = source[base:label_start].rstrip()
+        if not (introducer.endswith((":", "—", "–"))
+                or _DANGLING_CONNECTOR.search(introducer)):
+            base = label_start
+    return base
 
 
 def _list_has_later_child(source: str, start: int, stop: int) -> bool:
@@ -171,7 +200,8 @@ def finalize_snippet_result(
             claimed, None, None, "FAIL_UNBALANCED_STRUCTURE",
             "mapper quote is not source-locatable; structural closure cannot be proven",
         )
-    _, start, claimed_end = located
+    _, located_start, claimed_end = located
+    start = _containing_paragraph_start(source_text, located_start)
     minimum_end = _semantic_child_end(
         claimed, source_text, claimed_end, semantic_blocks
     )
@@ -352,7 +382,7 @@ def g4_currentness(current_as_at: str | None, status: str = "in_force") -> GateR
 # quote/source/currentness but NOT legal fit — these lexical gates do, per indicator.
 _XBORDER = re.compile(r"outside|abroad|cross[- ]border|foreign|another country|other countr|place outside|out of", re.I)
 _TRANSFER = re.compile(r"transfer|transmit|send|disclos\w+ to .{0,40}(outside|abroad|foreign)", re.I)
-_RETAIN = re.compile(r"retain|keep|preserve|maintain|stor\w+", re.I)
+_RETAIN = re.compile(r"retain|keep|preserve|maintain|stor\w+|\bhold\b", re.I)
 _DURATION = re.compile(r"(period of|not less than|at least|minimum of)?\s*\w*\s*(year|month|day|week)s?", re.I)
 _RECORDS = re.compile(r"record|data|document|book|information|register", re.I)
 _INFRASTRUCTURE = re.compile(r"server|data cent(?:re|er)|comput(?:er|ing) (?:system|facility)|infrastructure|facility", re.I)
@@ -362,6 +392,12 @@ _DOMESTIC_LOCATION = re.compile(
     r"\b(?:server|data cent(?:re|er)|facility|infrastructure)\b.{0,35}"
     r"\b(?:in|within)\b(?!\s+(?:another|other|foreign))",
     re.I,
+)
+_OUTSIDE_DOMESTIC_PROHIBITION = re.compile(
+    r"\b(?:must not|shall not|may not|prohibit(?:s|ed)?)\b.{0,120}"
+    r"\b(?:hold|take|store|process|handle)\b.{0,80}\boutside\b.{0,40}"
+    r"\b(?:Australia|Malaysia|Singapore|the country|the jurisdiction)\b",
+    re.I | re.S,
 )
 _PROHIBITION = re.compile(r"\b(?:must not|shall not|may not|is prohibited|are prohibited|prohibit(?:s|ed)?)\b", re.I)
 # Statutory conditional vocabulary. Real acts phrase the condition as
@@ -373,10 +409,31 @@ _CONDITION = re.compile(
     re.I)
 _MINIMUM_DUTY = re.compile(r"\b(?:must|shall|required to|not less than|at least|minimum(?: period)? of)\b", re.I)
 _RETENTION_CEILING = re.compile(r"\b(?:need only|may (?:retain|keep)|up to|not more than|no longer than|maximum(?: period)? of)\b", re.I)
-_WARRANT = re.compile(r"warrant|court order|order of (a|the) court|judge|magistrate|judicial", re.I)
+_INDEPENDENT_JUDICIAL = re.compile(
+    r"court order|order of (?:a|the) court|judge|magistrate|judicial|"
+    r"(?:warrant.{0,100}(?:issued|granted|authori[sz]ed) by .{0,30}"
+    r"(?:court|judge|magistrate))",
+    re.I,
+)
 _WITHOUT_JUDICIAL = re.compile(
     r"\b(?:without|no need for|does not require|not required to obtain)\b"
     r".{0,35}\b(?:warrant|court order|judicial authori[sz]ation)\b|\bwarrantless\b",
+    re.I,
+)
+_GOVERNMENT_ACTOR = re.compile(
+    r"\b(?:police|law[- ]enforcement|security agency|intelligence agency|"
+    r"authori[sz]ed officer|commissioner|director[- ]general|attorney[- ]general|minister|"
+    r"inspector|magistrate|prosecutor|government|public authority|agency)\b",
+    re.I,
+)
+_ACCESS_POWER = re.compile(
+    r"\b(?:access|intercept\w*|search|seiz\w*|obtain|inspect|copy|produce|"
+    r"give|provide|disclos\w*|warrant|enter)\b",
+    re.I,
+)
+_ACCESS_OBJECT = re.compile(
+    r"\b(?:personal data|data|information|document|record|communication\w*|"
+    r"computer|device|account|book)\b",
     re.I,
 )
 
@@ -396,8 +453,14 @@ def g7_indicator_fit(indicator_id: str, snippet: str, full_text: str, law_name: 
         return GateResult(gate_id="G7", status="FAIL",
                           reason="P6-I1 requires an operative prohibition on cross-border transfer")
     if indicator_id == "P6-I2":
-        if not (_RETAIN.search(blob) and _RECORDS.search(blob)
-                and _DOMESTIC_LOCATION.search(blob) and _MINIMUM_DUTY.search(blob)):
+        positive_domestic_duty = (
+            _RETAIN.search(blob) and _RECORDS.search(blob)
+            and _DOMESTIC_LOCATION.search(blob) and _MINIMUM_DUTY.search(blob)
+        )
+        negative_extraterritorial_duty = (
+            _RECORDS.search(blob) and _OUTSIDE_DOMESTIC_PROHIBITION.search(blob)
+        )
+        if not (positive_domestic_duty or negative_extraterritorial_duty):
             return GateResult(gate_id="G7", status="FAIL",
                               reason="P6-I2 requires a mandatory domestic-copy/storage duty")
     if indicator_id == "P6-I3":
@@ -410,19 +473,35 @@ def g7_indicator_fit(indicator_id: str, snippet: str, full_text: str, law_name: 
         return GateResult(gate_id="G7", status="FAIL",
                           reason="P6-I4 requires an operative condition or safeguard for transfer")
     if indicator_id == "P7-I3":
-        if not (_RETAIN.search(blob) and _DURATION.search(blob) and _RECORDS.search(blob)):
+        if not (_RETAIN.search(blob) and _RECORDS.search(blob)
+                and _MINIMUM_DUTY.search(blob)):
             return GateResult(gate_id="G7", status="FAIL",
-                              reason="P7-I3 requires retention verb + records/data object + a minimum duration")
+                              reason="P7-I3 requires a mandatory retention verb and records/data object")
         if re.search(r"licen[cs]e|permit", snippet, re.I) and not re.search(r"record|data", snippet, re.I):
             return GateResult(gate_id="G7", status="FAIL",
                               reason="P7-I3: licence-duration provisions are not data retention")
-        if _RETENTION_CEILING.search(blob) or not _MINIMUM_DUTY.search(blob):
+        if _RETENTION_CEILING.search(blob):
             return GateResult(gate_id="G7", status="FAIL",
-                              reason="P7-I3 requires a mandatory minimum; permissive or maximum retention does not qualify")
+                              reason="P7-I3: a permissive or maximum-retention ceiling is not a minimum retention duty")
+        if not _DURATION.search(blob):
+            return GateResult(
+                gate_id="G7", status="WARN",
+                reason=("P7-I3 mandatory retention duty is recordable, but no explicit "
+                        "numeric duration is present; this supports indicator score 0 "
+                        "unless a linked provision supplies the minimum"),
+            )
     if indicator_id == "P7-I5":
-        if _WARRANT.search(blob) and not _WITHOUT_JUDICIAL.search(blob):
+        if not (_GOVERNMENT_ACTOR.search(blob) and _ACCESS_POWER.search(blob)
+                and _ACCESS_OBJECT.search(blob)):
+            return GateResult(
+                gate_id="G7", status="FAIL",
+                reason=("P7-I5 requires a government/public-authority actor, an "
+                        "operative access/search/interception power, and a data, "
+                        "communications or records object"),
+            )
+        if _INDEPENDENT_JUDICIAL.search(blob) and not _WITHOUT_JUDICIAL.search(blob):
             return GateResult(gate_id="G7", status="WARN",
-                              reason="P7-I5: access appears COURT-GATED (warrant/judicial language) — "
+                              reason="P7-I5: access appears independently COURT-GATED — "
                                      "court-order test says this supports score 0; flag for legal review")
     return GateResult(gate_id="G7", status="PASS", reason=f"{indicator_id} legal-fit checks passed")
 

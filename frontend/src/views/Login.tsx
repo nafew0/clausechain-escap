@@ -67,6 +67,17 @@ export default function Login() {
       {recoveryIdentifier ? <div className="public-recovery"><MailCheck /><div><strong>Need help signing in?</strong><p>Request another verification email without revealing whether an account exists.</p><div><Button type="button" variant="outline" onClick={resend} disabled={resending || cooldown > 0}>{resending ? 'Requesting…' : cooldown ? `Resend in ${cooldown}s` : 'Resend verification email'}</Button><Link href="/forgot-password">Reset password</Link></div></div></div> : null}
       <div className="public-auth-social"><span>Or continue with</span><SocialLoginButtons nextPath={redirectTo} /></div>
       <p className="public-auth-switch">No account yet? <Link href="/register">Create one</Link></p>
+      {/* Public read-only demo access (no reviewer roles, cannot write decisions or launch runs) */}
+      <div className="public-auth-notice" style={{ marginTop: '0.75rem', display: 'block', textAlign: 'center' }}>
+        <strong>Evaluator demo access (read-only)</strong>
+        <p style={{ margin: '0.35rem 0 0.5rem' }}>
+          username <code>viewer</code> · password <code>escap-rdtii-2026</code>
+        </p>
+        <Button type="button" variant="outline"
+          onClick={() => { setForm({ username: 'viewer', password: 'escap-rdtii-2026' }); setError('') }}>
+          Fill demo credentials
+        </Button>
+      </div>
     </>}
   </div></PublicAuthShell>
 }

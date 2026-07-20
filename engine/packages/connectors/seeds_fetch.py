@@ -17,6 +17,7 @@ from datetime import date
 from pathlib import Path
 
 import httpx
+import os
 
 _HEADERS = {
     "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -80,6 +81,7 @@ def fetch_seeds(economy: str, only_pillars: tuple[str, ...] | None = None,
     # beside the manifest so "did the new research reach the corpus?" is checkable.
     recon = {"economy": economy, "seed_rows": len(rows), "already_ok": 0,
              "fetched_now": 0, "dead": 0, "refreshed_metadata": 0}
+    offline = os.getenv("CLAUSECHAIN_OFFLINE") == "1"
     with httpx.Client(headers=_HEADERS, follow_redirects=True, timeout=90) as client:
         for row in rows:
             url = (row.get("url") or "").strip()
@@ -98,6 +100,18 @@ def fetch_seeds(economy: str, only_pillars: tuple[str, ...] | None = None,
                     recon["refreshed_metadata"] += 1
                     manifest_path.write_text(json.dumps(manifest, indent=1))
                 continue  # static docs: never refetch a success
+            if offline:
+                # Offline evaluation is archive-authoritative: preserve the
+                # unresolved acquisition honestly, without attempting network or
+                # manufacturing a successful source record.
+                entry = dict(prior or {}, **{k: v for k, v in meta_fields.items()
+                                             if v is not None})
+                entry.setdefault("status", "dead")
+                entry.setdefault("http_status", 0)
+                entry["offline_not_retried"] = True
+                manifest[url] = entry
+                recon["dead"] += 1
+                continue
             time.sleep(POLITE_DELAY_S)
             entry = dict(meta_fields, access_date=date.today().isoformat())
             status_code, content, content_type, final_url, via = 0, b"", "", url, "httpx"

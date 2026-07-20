@@ -87,8 +87,30 @@ class EmbeddingCache:
     def vector(self, provision_id: str, text: str) -> list[float] | None:
         return self._cache.get(self._key(provision_id, text))
 
+    @staticmethod
+    def _query_key(query: str) -> str:
+        return "__query__:" + hashlib.sha256(query.strip().encode()).hexdigest()
+
+    def ensure_queries(self, queries: list[str]) -> None:
+        """Persist query embeddings and request all missing queries in one call.
+
+        Query packs are deterministic configuration data. Caching them is both
+        cheaper and substantially faster than making one HTTP request per cue on
+        every economy/pillar run.
+        """
+        unique = list(dict.fromkeys(q.strip() for q in queries if q.strip()))
+        missing = [query for query in unique if self._query_key(query) not in self._cache]
+        if not missing:
+            return
+        vectors = self._embedder.embed([self._sanitize(query) for query in missing])
+        for query, vector in zip(missing, vectors, strict=True):
+            self._cache[self._query_key(query)] = vector
+        self._path.parent.mkdir(parents=True, exist_ok=True)
+        self._path.write_text(json.dumps(self._cache))
+
     def embed_query(self, query: str) -> list[float]:
-        return self._embedder.embed([query])[0]
+        self.ensure_queries([query])
+        return self._cache[self._query_key(query)]
 
     def matrix(self, corpus: list[dict]):
         """Normalized numpy matrix over the corpus vectors (built once, reused per run)."""
@@ -213,6 +235,8 @@ def retrieve_for_indicator(
 
     # dense leg — vectorized cosine over the cached corpus matrix (numpy, A3)
     cache.ensure([(c["provision_id"], c["text"]) for c in corpus])
+    if hasattr(cache, "ensure_queries"):
+        cache.ensure_queries(queries)
     for query in queries:
         for sim, row in cache.dense_top(query, corpus, DENSE_LIMIT_PER_QUERY,
                                         DENSE_MIN_SIMILARITY):

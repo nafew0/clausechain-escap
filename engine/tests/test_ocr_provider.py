@@ -7,7 +7,8 @@ import httpx
 
 from packages.core.schemas import ExtractedPage, OCRToken
 from packages.providers.ocr_provider import (FallbackRemotePaddleOCR, LocalOCRPlaceholder,
-                                             RemotePaddleOCR, TesseractOCR, build_ocr)
+                                             PaddleVLCascade, RemotePaddleOCR, TesseractOCR,
+                                             build_ocr)
 
 
 CANNED = {
@@ -138,6 +139,22 @@ def test_build_ocr_selects_by_provider(monkeypatch):
     remote_explicit = build_ocr({"provider": "remote_paddle", "endpoint": "http://other:9000/"})
     assert remote_explicit._endpoint == "http://other:9000"
     assert isinstance(build_ocr({"provider": "tesseract"}), TesseractOCR)
+    monkeypatch.setenv("OCR_VL_ENDPOINT", "http://ocr-vl:9000")
+    assert isinstance(build_ocr({"provider": "remote_paddle"}), PaddleVLCascade)
+
+
+def test_vl_text_without_boxes_falls_back_to_proof_capable_ocr():
+    class VL:
+        def extract(self, path):
+            return [ExtractedPage(
+                document_id=path, page_number=1, text="s. 26(1)",
+                source_url=f"file://{path}", location_reference="page 1",
+                tokens=[OCRToken(text="s. 26(1)", confidence=.9, bbox=None)],
+            )]
+    fallback = _FallbackSpy("s. 26(1)")
+    pages = PaddleVLCascade(VL(), fallback).extract("scan.pdf")
+    assert fallback.calls == 1
+    assert pages[0].tokens[0].bbox == [1.0, 2.0, 3.0, 4.0]
 
 
 class _FallbackSpy:

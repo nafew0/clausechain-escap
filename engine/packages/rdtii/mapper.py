@@ -120,6 +120,27 @@ def _indicator_brief(indicator_id: str, cfg: dict) -> str:
             "as the evidence row; the SCORE (not your mapping) captures absence. Do NOT reject "
             "a provision merely because it proves the framework EXISTS."
         )
+    if indicator_id in {"7.3", "P7-I3"}:
+        parts.append(
+            "EVIDENCE RECORDING RULE: applies=true for an operative mandatory "
+            "records/data-retention duty even when this provision does not state a "
+            "numeric minimum period. State clearly when the duration is unspecified; "
+            "the INDICATOR SCORE, not mapping eligibility, distinguishes an explicit "
+            "minimum (score 1) from an unspecified period (score 0). A maximum-retention "
+            "or deletion/minimisation ceiling remains excluded."
+        )
+    if indicator_id in {"7.5", "P7-I5"}:
+        parts.append(
+            "EVIDENCE RECORDING RULE: applies=true for an operative provision that "
+            "authorises or materially governs government access to data, whether the "
+            "power is warrantless OR requires a warrant/court order. Identify the "
+            "judicial safeguard in the rationale. A document called a 'warrant' is "
+            "judicially gated only when an independent court, judge or magistrate issues "
+            "or authorises it; an executive/agency officer issuing a warrant under their "
+            "own hand is not independent judicial authorization. The INDICATOR SCORE "
+            "separately treats access without independent judicial authorization as 1 "
+            "and exclusively court-gated access as support for 0."
+        )
     if cfg.get("legal_test"):
         parts.append(str(cfg["legal_test"]).strip())
     if exclusions:

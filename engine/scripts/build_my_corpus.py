@@ -120,9 +120,22 @@ def main() -> int:
                 continue
             pdf_file = Path(file).with_suffix(".resolved.pdf")
             if not pdf_file.is_file():
+                if os.getenv("CLAUSECHAIN_OFFLINE") == "1":
+                    print(f"  FAILED archived PDF unavailable {act_name[:45]}")
+                    skipped_html += 1
+                    build_complete = False
+                    continue
                 _time2.sleep(2.0)
-                resp = _httpx.get(resolved, follow_redirects=True, timeout=120,
-                                  headers={"User-Agent": "Mozilla/5.0 ClauseChain-research/0.1"})
+                try:
+                    resp = _httpx.get(
+                        resolved, follow_redirects=True, timeout=120,
+                        headers={"User-Agent": "Mozilla/5.0 ClauseChain-research/0.1"},
+                    )
+                except _httpx.HTTPError as error:
+                    print(f"  FAILED PDF acquisition {act_name[:45]}: {str(error)[:70]}")
+                    skipped_html += 1
+                    build_complete = False
+                    continue
                 if resp.status_code != 200 or resp.content[:5] != b"%PDF-":
                     skipped_html += 1
                     build_complete = False
@@ -162,9 +175,21 @@ def main() -> int:
             url_key = hashlib.sha256(quotation_url.encode("utf-8")).hexdigest()[:12]
             official_file = Path("data/raw/my") / f"official_{assertion_key}_{url_key}.pdf"
             if not official_file.is_file():
+                if os.getenv("CLAUSECHAIN_OFFLINE") == "1":
+                    print(f"  FAILED archived official quotation unavailable {act_name[:38]}")
+                    build_complete = False
+                    continue
                 import httpx as _httpx3
-                response = _httpx3.get(quotation_url, follow_redirects=True, timeout=180,
-                    headers={"User-Agent": "Mozilla/5.0 ClauseChain-research/0.1"})
+                try:
+                    response = _httpx3.get(
+                        quotation_url, follow_redirects=True, timeout=180,
+                        headers={"User-Agent": "Mozilla/5.0 ClauseChain-research/0.1"},
+                    )
+                except _httpx3.HTTPError as error:
+                    print(f"  FAILED official quotation acquisition {act_name[:37]}: "
+                          f"{str(error)[:70]}")
+                    build_complete = False
+                    continue
                 if response.status_code != 200 or response.content[:5] != b"%PDF-":
                     print(f"  FAILED official quotation acquisition {act_name[:45]}")
                     build_complete = False
@@ -278,7 +303,9 @@ def main() -> int:
             continue
         from packages.extractors.pdf_align import align_and_bind_pdf_evidence
 
-        aligned, unit_count = align_and_bind_pdf_evidence(units, [file], [text_spans])
+        aligned, unit_count = align_and_bind_pdf_evidence(
+            units, [file], [text_spans], [pages]
+        )
         if aligned != unit_count:
             print(f"  ALIGNMENT REVIEW {act_name[:45]}: {aligned}/{unit_count} exact")
         for unit in units:
@@ -287,7 +314,9 @@ def main() -> int:
             unit.metadata["inventory_url"] = url  # what ESCAP cited (audit trail)
             unit.metadata["content_sha256"] = artifact.sha256
             unit.metadata["legal_status"] = status.status
-            unit.metadata["evidence_eligible"] = eligible
+            unit.metadata["evidence_eligible"] = (
+                eligible and unit.metadata.get("pdf_alignment") == "exact"
+            )
             unit.metadata["source_type"] = profile["source_type"]
             unit.metadata["processing_fingerprint"] = fingerprint
             unit.metadata["build_generation"] = generation
@@ -312,6 +341,9 @@ def main() -> int:
             else:
                 for unit in units:
                     st.upsert_rule_unit(unit)
+            mark_complete = getattr(st, "mark_artifact_build_complete", None)
+            if mark_complete:
+                mark_complete("Malaysia", fingerprint, generation, len(units))
         if units:
             loaded_acts += 1
             total += len(units)

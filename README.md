@@ -21,6 +21,26 @@ Skip to [Quick Start](#quick-start) to run it in under 10 minutes.
 
 ---
 
+## Live Demo
+
+**Try the review console right now — no setup:** **https://clausechain.zai.bd**
+
+- Read-only evaluator access is printed on the login page
+  (username `viewer` · password `escap-rdtii-2026`) with a one-click
+  **Fill demo credentials** button.
+- What to look at: the **Dashboard** release-readiness card (the system refuses
+  to call itself done while human sign-offs are open), the **Review** workbench
+  (byte-exact source quotes, refuter verdicts, role-separated sign-off), the
+  **Runs** console (measured cost + model route per run), and the
+  **Knowledge Graph** (54k provisions, parity-verified Neo4j mirror).
+- The demo account can browse everything and write nothing: decision endpoints
+  require reviewer roles and run-launch requires an administrator.
+- Screen-by-screen guide with screenshots: [README_WEB.md](README_WEB.md).
+  Deployment notes: [backend/README.md](backend/README.md) ·
+  [frontend/README.md](frontend/README.md).
+
+---
+
 ## What This Tool Does
 
 This tool automates the two tasks required by the UN Regional Digital Trade Integration Index (RDTII):
@@ -355,17 +375,6 @@ Third-party licences: Python (PSF), httpx/pydantic/numpy/pytest (BSD/MIT), pymup
 
 ---
 
-## Key Dates
-
-| Date | Milestone |
-| :---- | :---- |
-| **20 July 2026** | **Round 1 entry (this repository)** |
-| 31 July 2026 | Shortlist announced |
-| 3 August 2026 | Live online pitching |
-| 5 August 2026 | Finalists announced |
-| October 2026 | Grand Finale — Bangkok |
-
----
 
 ## Acknowledgements
 

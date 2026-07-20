@@ -56,6 +56,11 @@ CREATE TABLE IF NOT EXISTS coverage_manifests (
 CREATE TABLE IF NOT EXISTS review_decisions (
     finding_id TEXT PRIMARY KEY, payload TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS artifact_builds (
+    economy TEXT NOT NULL, fingerprint TEXT NOT NULL, unit_count INTEGER NOT NULL,
+    generation TEXT NOT NULL, completed_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (economy, fingerprint)
+);
 """
 
 
@@ -173,6 +178,95 @@ class SqliteGraphStore:
         conn.commit()
         return f"sqlite://rule-unit/{rule_unit.id}"
 
+    def upsert_rule_units(self, rule_units: list[RuleUnit], batch_size: int = 1000) -> int:
+        """Transactional bulk writer for large statute compilations.
+
+        The single-row method remains useful for tests and interactive updates;
+        corpus builds must not pay six SQLite commits per provision.
+        """
+        for start in range(0, len(rule_units), batch_size):
+            batch = rule_units[start:start + batch_size]
+            instruments: dict[str, tuple[str, str, str]] = {}
+            sections: dict[str, tuple[str, str, str]] = {}
+            provisions: list[tuple[str, str, str]] = []
+            edges: list[tuple[str, str, str, str]] = []
+            fts: list[tuple[str, str, str]] = []
+            for unit in batch:
+                instrument_id = f"instrument:{unit.economy}:{unit.law_name}"
+                section_id = (
+                    f"section:{unit.economy}:{unit.law_name}:{unit.article_section}"
+                )
+                provision_id = f"provision:{unit.id}"
+                instruments[instrument_id] = (
+                    instrument_id, "Instrument", json.dumps({
+                        "law_name": unit.law_name, "economy": unit.economy,
+                        "law_number_ref": unit.law_number_ref,
+                        "last_amended": unit.last_amended,
+                    }, ensure_ascii=False),
+                )
+                sections[section_id] = (
+                    section_id, "Section", json.dumps({
+                        "article_section": unit.article_section,
+                        "source_url": unit.source_url,
+                    }, ensure_ascii=False),
+                )
+                props = {
+                    "text": unit.text, "location_reference": unit.location_reference,
+                    "start_char": unit.start_char, "end_char": unit.end_char,
+                    "source_url": unit.source_url,
+                    "article_section": unit.article_section,
+                    "law_name": unit.law_name, "economy": unit.economy,
+                    "law_number_ref": unit.law_number_ref,
+                    "last_amended": unit.last_amended,
+                    "heading": str(unit.metadata.get("heading", "")),
+                    "part": str(unit.metadata.get("part", "")),
+                    "current_as_at": unit.metadata.get("current_as_at"),
+                    "legal_status": unit.metadata.get("legal_status", "unknown"),
+                    "evidence_eligible": bool(unit.metadata.get("evidence_eligible", False)),
+                    "status_evidence": unit.metadata.get("status_evidence"),
+                    "source_artifact_id": unit.source_artifact_id,
+                    "structure_artifact_id": unit.metadata.get("structure_artifact_id"),
+                    "compilation_bundle_id": unit.metadata.get("compilation_bundle_id"),
+                    "raw_context": unit.raw_context,
+                    "linked_span_ids": unit.linked_span_ids,
+                    "archived_copy": unit.metadata.get("archived_copy"),
+                    "access_date": unit.metadata.get("access_date"),
+                    "content_sha256": unit.metadata.get("content_sha256"),
+                    "processing_fingerprint": unit.metadata.get("processing_fingerprint"),
+                    "source_type": unit.metadata.get("source_type"),
+                    "extraction": unit.metadata.get("extraction"),
+                    "confidence": unit.extraction_confidence,
+                    "pdf_alignment": unit.metadata.get("pdf_alignment"),
+                    "alignment_score": unit.metadata.get("alignment_score"),
+                    "ocr_citation_disagreement": unit.metadata.get(
+                        "ocr_citation_disagreement", False),
+                    "build_generation": unit.metadata.get("build_generation"),
+                    "metadata": unit.metadata, "id": provision_id,
+                }
+                provisions.append((provision_id, "Provision",
+                                   json.dumps(props, ensure_ascii=False)))
+                edges.extend([
+                    (instrument_id, "HAS_SECTION", section_id, "{}"),
+                    (section_id, "HAS_PROVISION", provision_id, "{}"),
+                ])
+                fts.append((provision_id, unit.economy, unit.text))
+            conn = self._connect()
+            conn.execute("BEGIN")
+            conn.executemany(
+                "INSERT OR REPLACE INTO nodes(id,label,props) VALUES (?,?,?)",
+                list(instruments.values()) + list(sections.values()) + provisions,
+            )
+            conn.executemany(
+                "INSERT OR REPLACE INTO edges(src,rel,dst,props) VALUES (?,?,?,?)", edges,
+            )
+            conn.executemany("DELETE FROM provisions_fts WHERE provision_id=?",
+                             [(row[0],) for row in fts])
+            conn.executemany(
+                "INSERT INTO provisions_fts(provision_id,economy,text) VALUES (?,?,?)", fts,
+            )
+            conn.commit()
+        return len(rule_units)
+
     def upsert_source_artifact(self, artifact: SourceArtifact) -> None:
         self._connect().execute(
             "INSERT OR REPLACE INTO source_artifacts(id,payload) VALUES (?,?)",
@@ -193,6 +287,20 @@ class SqliteGraphStore:
             [(s.id, s.source_artifact_id, s.page_number, s.model_dump_json()) for s in spans],
         )
         self._connect().commit()
+
+    def get_text_spans(self, span_ids: list[str]) -> list[TextSpan]:
+        if not span_ids:
+            return []
+        found: dict[str, TextSpan] = {}
+        for start in range(0, len(span_ids), 800):
+            batch = span_ids[start:start + 800]
+            placeholders = ",".join("?" for _ in batch)
+            rows = self._connect().execute(
+                f"SELECT id,payload FROM text_spans WHERE id IN ({placeholders})", batch
+            ).fetchall()
+            found.update({span_id: TextSpan.model_validate_json(payload)
+                          for span_id, payload in rows})
+        return [found[span_id] for span_id in span_ids if span_id in found]
 
     def upsert_finding(self, finding_id: str, run_id: str, finding: MappedFinding) -> None:
         conn = self._connect()
@@ -273,6 +381,48 @@ class SqliteGraphStore:
         conn.commit()
         return len(rows)
 
+    def quarantine_unaligned_provisions(self, economy: str | None = None) -> int:
+        """Keep unresolved PDF units auditable but remove them from retrieval."""
+        conn = self._connect()
+        condition = (
+            "label='Provision' "
+            "AND json_extract(props,'$.pdf_alignment')='unaligned-review' "
+            "AND COALESCE(json_extract(props,'$.evidence_eligible'),0)=1"
+        )
+        params: tuple = ()
+        if economy:
+            condition += " AND json_extract(props,'$.economy')=?"
+            params = (economy,)
+        changed = int(conn.execute(
+            f"SELECT count(*) FROM nodes WHERE {condition}", params
+        ).fetchone()[0])
+        if not changed:
+            return 0
+        conn.execute("BEGIN")
+        # Audit payload is intentionally compact. Copying every multi-kilobyte
+        # provision into a lead can turn one generic quarantine into gigabytes.
+        conn.execute(
+            f"INSERT OR REPLACE INTO discovery_leads(id,reason_code,payload) "
+            f"SELECT 'lead:'||id,'ALIGNMENT_UNRESOLVED',json_object(" 
+            f"'provision_id',id,'economy',json_extract(props,'$.economy'),"
+            f"'law_name',json_extract(props,'$.law_name'),"
+            f"'article_section',json_extract(props,'$.article_section')) "
+            f"FROM nodes WHERE {condition}", params,
+        )
+        conn.execute(
+            f"DELETE FROM provisions_fts WHERE provision_id IN "
+            f"(SELECT id FROM nodes WHERE {condition})", params,
+        )
+        conn.execute(
+            f"UPDATE nodes SET props=json_set(props," 
+            f"'$.evidence_eligible',json('false'),"
+            f"'$.metadata.evidence_eligible',json('false'),"
+            f"'$.metadata.quarantine_reason','ALIGNMENT_UNRESOLVED') "
+            f"WHERE {condition}", params,
+        )
+        conn.commit()
+        return changed
+
     def restamp_artifact_generation(self, economy: str, fingerprint: str,
                                     generation: str) -> int:
         """Incremental-processing guard (19 Jul): provisions are reused ONLY on a
@@ -282,23 +432,43 @@ class SqliteGraphStore:
         end-of-build prune retains them. A parser/grammar change bumps the version,
         misses the match, and forces a fresh extraction."""
         conn = self._connect()
+        completed = conn.execute(
+            "SELECT unit_count FROM artifact_builds WHERE economy=? AND fingerprint=?",
+            (economy, fingerprint),
+        ).fetchone()
+        if not completed or int(completed[0]) <= 0:
+            return 0
         rows = conn.execute(
             "SELECT id, props FROM nodes WHERE label='Provision' "
             "AND json_extract(props,'$.economy')=? "
             "AND json_extract(props,'$.processing_fingerprint')=?",
             (economy, fingerprint),
         ).fetchall()
+        if len(rows) != int(completed[0]):
+            return 0  # interrupted/partial artifact must be rebuilt, never restamped
         if not rows:
             return 0
-        import json as _json
         conn.execute("BEGIN")
-        for node_id, props_raw in rows:
-            props = _json.loads(props_raw)
-            props["build_generation"] = generation
-            conn.execute("UPDATE nodes SET props=? WHERE id=?",
-                         (_json.dumps(props, ensure_ascii=False), node_id))
+        conn.execute(
+            "UPDATE nodes SET props=json_set(props,'$.build_generation',?) "
+            "WHERE label='Provision' AND json_extract(props,'$.economy')=? "
+            "AND json_extract(props,'$.processing_fingerprint')=?",
+            (generation, economy, fingerprint),
+        )
         conn.commit()
         return len(rows)
+
+    def mark_artifact_build_complete(self, economy: str, fingerprint: str,
+                                     generation: str, unit_count: int) -> None:
+        if unit_count <= 0:
+            return
+        self._connect().execute(
+            "INSERT OR REPLACE INTO artifact_builds"
+            "(economy,fingerprint,unit_count,generation,completed_at) "
+            "VALUES (?,?,?,?,CURRENT_TIMESTAMP)",
+            (economy, fingerprint, unit_count, generation),
+        )
+        self._connect().commit()
 
     def prune_economy_generation(self, economy: str, generation: str) -> int:
         """Atomically remove stale derived provisions only after a complete rebuild."""

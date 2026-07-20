@@ -67,7 +67,7 @@ export default function Home() {
       </section>
 
       <section id="verification" className="public-verification">
-        <div className="public-verification-inner"><div><span className="public-dark-kicker">CHAMPION SAFEGUARDS</span><h2>The system is designed to abstain before it embarrasses.</h2><p>Every safeguard is visible in the judge-facing workspace. A failed gate is a blocker or review state—not a confidence score painted green.</p></div><div className="public-safeguards">{SAFEGUARDS.map(([title, body]) => <article key={title}><ShieldCheck /><div><h3>{title}</h3><p>{body}</p></div></article>)}</div></div>
+        <div className="public-verification-inner"><div><span className="public-dark-kicker">BUILT-IN SAFEGUARDS</span><h2>The system is designed to abstain before it embarrasses.</h2><p>Every safeguard is visible in the judge-facing workspace. A failed gate is a blocker or review state—not a confidence score painted green.</p></div><div className="public-safeguards">{SAFEGUARDS.map(([title, body]) => <article key={title}><ShieldCheck /><div><h3>{title}</h3><p>{body}</p></div></article>)}</div></div>
       </section>
 
       <section id="architecture" className="public-section public-architecture">
