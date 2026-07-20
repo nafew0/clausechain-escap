@@ -77,6 +77,11 @@ def deterministic_score(indicator_id: str, rows: list[dict]) -> tuple[float, str
                (0.5, "sectoral/specific-data measure(s) only -> 0.5")
     if indicator_id == "P6-I3":
         return (1.0, "infrastructure requirement exists") if real else (0.0, "none found")
+    if indicator_id == "P6-I5":
+        # Inverse polarity: qualifying binding-agreement evidence means the
+        # claim that the economy joined no such agreement is false.
+        return ((0.0, "binding cross-border data-transfer agreement evidenced") if real else
+                (1.0, "no qualifying binding data-transfer agreement found"))
     if indicator_id == "P7-I1":
         if not real:
             return 1.0, "no DP framework evidence found -> lacks framework -> 1"

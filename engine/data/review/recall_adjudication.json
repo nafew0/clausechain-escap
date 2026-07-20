@@ -26,25 +26,25 @@
   },
   "Malaysia P7": {
    "gold": 12,
-   "matched": 10,
+   "matched": 11,
    "NOT_IN_CORPUS": 1,
    "IN_CORPUS_NOT_EMITTED": 0,
-   "EMITTED_OTHER_INDICATOR": 1,
+   "EMITTED_OTHER_INDICATOR": 0,
    "GOLD_REF_UNPARSEABLE": 0
   },
   "Australia P6": {
    "gold": 1,
-   "matched": 0,
+   "matched": 1,
    "NOT_IN_CORPUS": 0,
-   "IN_CORPUS_NOT_EMITTED": 1,
+   "IN_CORPUS_NOT_EMITTED": 0,
    "EMITTED_OTHER_INDICATOR": 0,
    "GOLD_REF_UNPARSEABLE": 0
   },
   "Australia P7": {
    "gold": 4,
-   "matched": 3,
+   "matched": 4,
    "NOT_IN_CORPUS": 0,
-   "IN_CORPUS_NOT_EMITTED": 1,
+   "IN_CORPUS_NOT_EMITTED": 0,
    "EMITTED_OTHER_INDICATOR": 0,
    "GOLD_REF_UNPARSEABLE": 0
   }
@@ -203,14 +203,14 @@
    "act": "Personal Data Protection Code of Practice for Licensees Under the Communications and Multimedia (Act 1998) of 2017",
    "ref": "s. 4.7",
    "base": "s. 4.7",
-   "class": "ACQUISITION",
+   "class": "STRUCTURE",
    "emitted_under": [],
    "proposed_verdict": "REAL_MISS",
    "evidence": {
     "corpus_checked": true,
     "matched_output_rows": 0,
     "technical_class": "NOT_IN_CORPUS",
-    "failure_taxonomy": "ACQUISITION"
+    "failure_taxonomy": "STRUCTURE"
    },
    "reviewer_verdict": "REAL_MISS",
    "reviewer_note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun.",
@@ -232,14 +232,14 @@
    "act": "Personal Data Protection Code of Practice for Licensees Under the Communications and Multimedia (Act 1998) of 2017",
    "ref": "s. 3.2(ii)",
    "base": "s. 3.2",
-   "class": "ACQUISITION",
+   "class": "STRUCTURE",
    "emitted_under": [],
    "proposed_verdict": "REAL_MISS",
    "evidence": {
     "corpus_checked": true,
     "matched_output_rows": 0,
     "technical_class": "NOT_IN_CORPUS",
-    "failure_taxonomy": "ACQUISITION"
+    "failure_taxonomy": "STRUCTURE"
    },
    "reviewer_verdict": "REAL_MISS",
    "reviewer_note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun.",
@@ -257,113 +257,24 @@
    "economy": "Malaysia",
    "pillar": "7",
    "run": "outputs/final_ma_p7",
-   "gold_indicator": "P7-I4",
-   "act": "Personal Data Protection Act (Act 709) 2010;\n\nPersonal Data Protection\n(Amendment) Bill (Act A1727) 2024",
-   "ref": "s. 12a(1)",
-   "base": "s. 12a",
-   "class": "GOLD_ERROR",
-   "emitted_under": [
-    "P7-I1"
-   ],
-   "proposed_verdict": "GOLD_AMBIGUOUS",
-   "evidence": {
-    "corpus_checked": true,
-    "matched_output_rows": 1,
-    "technical_class": "EMITTED_OTHER_INDICATOR",
-    "failure_taxonomy": "GOLD_ERROR"
-   },
-   "reviewer_verdict": "REAL_MISS",
-   "reviewer_note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun.",
-   "recall_key": "21c246fb54df07eebf042093097e22e74028bf4e8f45b24c4f3c3497f97a5e29",
-   "review": {
-    "recall_key": "21c246fb54df07eebf042093097e22e74028bf4e8f45b24c4f3c3497f97a5e29",
-    "verdict": "REAL_MISS",
-    "reviewer_name": "Abu Naser Md. Nafew",
-    "reviewer_role": "Team Lead, Team zAI BD",
-    "reviewed_at": "2026-07-19T12:50:04+00:00",
-    "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
-   }
-  },
-  {
-   "economy": "Malaysia",
-   "pillar": "7",
-   "run": "outputs/final_ma_p7",
    "gold_indicator": "P7-I5",
    "act": "Personal Data Protection Code of Practice for Licensees Under the Communications and Multimedia (Act 1998) of 2017",
    "ref": "s. 7.4",
    "base": "s. 7.4",
-   "class": "ACQUISITION",
+   "class": "STRUCTURE",
    "emitted_under": [],
    "proposed_verdict": "REAL_MISS",
    "evidence": {
     "corpus_checked": true,
     "matched_output_rows": 0,
     "technical_class": "NOT_IN_CORPUS",
-    "failure_taxonomy": "ACQUISITION"
+    "failure_taxonomy": "STRUCTURE"
    },
    "reviewer_verdict": "REAL_MISS",
    "reviewer_note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun.",
    "recall_key": "905e485c7f68ef136f82332cc333174129ce13b513601594a6ab2695f0d32a8d",
    "review": {
     "recall_key": "905e485c7f68ef136f82332cc333174129ce13b513601594a6ab2695f0d32a8d",
-    "verdict": "REAL_MISS",
-    "reviewer_name": "Abu Naser Md. Nafew",
-    "reviewer_role": "Team Lead, Team zAI BD",
-    "reviewed_at": "2026-07-19T12:50:04+00:00",
-    "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
-   }
-  },
-  {
-   "economy": "Australia",
-   "pillar": "6",
-   "run": "outputs/final_au_p6",
-   "gold_indicator": "P6-I2",
-   "act": "My Health Records Act 2012",
-   "ref": "s. 77",
-   "base": "s. 77",
-   "class": "MAPPING",
-   "emitted_under": [],
-   "proposed_verdict": "LEGAL_MAPPING_REVIEW",
-   "evidence": {
-    "corpus_checked": true,
-    "matched_output_rows": 0,
-    "technical_class": "IN_CORPUS_NOT_EMITTED",
-    "failure_taxonomy": "MAPPING"
-   },
-   "reviewer_verdict": "REAL_MISS",
-   "reviewer_note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun.",
-   "recall_key": "e96fbe886cc01ec86e90cba5063f2908a210fbd8241e0c04b5f082cab1967fb8",
-   "review": {
-    "recall_key": "e96fbe886cc01ec86e90cba5063f2908a210fbd8241e0c04b5f082cab1967fb8",
-    "verdict": "REAL_MISS",
-    "reviewer_name": "Abu Naser Md. Nafew",
-    "reviewer_role": "Team Lead, Team zAI BD",
-    "reviewed_at": "2026-07-19T12:50:04+00:00",
-    "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
-   }
-  },
-  {
-   "economy": "Australia",
-   "pillar": "7",
-   "run": "outputs/final_au_p7",
-   "gold_indicator": "P7-I5",
-   "act": "Australian Security Intelligence Organisation Act 1979; \n\nSurveillance Legislation Amendment (Identify and Disrupt) Act 2021;\n\nData Availability and Transparency Act 2022",
-   "ref": "s. 25A",
-   "base": "s. 25a",
-   "class": "MAPPING",
-   "emitted_under": [],
-   "proposed_verdict": "LEGAL_MAPPING_REVIEW",
-   "evidence": {
-    "corpus_checked": true,
-    "matched_output_rows": 0,
-    "technical_class": "IN_CORPUS_NOT_EMITTED",
-    "failure_taxonomy": "MAPPING"
-   },
-   "reviewer_verdict": "REAL_MISS",
-   "reviewer_note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun.",
-   "recall_key": "0e438b99ffa0e7f2a9eab41323925999d1f2382ce881047a4efc0457579d0b6e",
-   "review": {
-    "recall_key": "0e438b99ffa0e7f2a9eab41323925999d1f2382ce881047a4efc0457579d0b6e",
     "verdict": "REAL_MISS",
     "reviewer_name": "Abu Naser Md. Nafew",
     "reviewer_role": "Team Lead, Team zAI BD",

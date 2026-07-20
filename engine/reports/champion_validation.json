@@ -2,1337 +2,12 @@
   "status": "FAIL",
   "failures": [
     "graph validation failed",
-    "outputs/final_au_p6 is stale against the current evidence corpus",
-    "outputs/final_au_p7 is stale against the current evidence corpus",
-    "30-page extraction gold lacks named human sign-off",
-    "7 unresolved REAL_MISS recall gaps remain",
+    "4 unresolved REAL_MISS recall gaps remain",
     "candidate findings still require named human decisions",
     "30 Zone-3 scores await explicit approval/override",
     "approval-only submission replay has not produced final artifacts"
   ],
   "runs": {
-    "outputs/final_au_p6": {
-      "corpus_fingerprint": {
-        "recorded": "f81404696701041cd782bbc2c713e27b2147793109372da7cef1adc6ba303e69",
-        "current": "d6e7be716da81fd88a0823e3281d0f6491115abe12055949aa64fabf17341864",
-        "status": "STALE"
-      },
-      "candidates": 5,
-      "warnings": 22,
-      "pipeline_stats": {
-        "candidates": 1290,
-        "screened_in": 33,
-        "mapped": 0,
-        "gate_rejected": 11,
-        "nano_mappings": 23,
-        "mini_escalations": 10,
-        "escalation_reasons": {
-          "low-confidence-positive": 7,
-          "low-confidence-known-anchor": 1,
-          "known-anchor-rejected": 3
-        },
-        "by_indicator": {
-          "P6-I1": {
-            "candidate_count": 400,
-            "resolved_known_anchors": 0,
-            "candidate_recall": null,
-            "screen_survival_recall": null,
-            "mapper_survival_recall": null,
-            "gate_survival_recall": null,
-            "injected_anchor_count": 0,
-            "caps": [
-              {
-                "stage": "retrieval_union",
-                "limit": 400,
-                "input_count": 403
-              },
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 400
-              }
-            ],
-            "expected_anchor_trace": []
-          },
-          "P6-I2": {
-            "candidate_count": 261,
-            "resolved_known_anchors": 1,
-            "candidate_recall": 0.0,
-            "screen_survival_recall": 1.0,
-            "mapper_survival_recall": 1.0,
-            "gate_survival_recall": 0.0,
-            "injected_anchor_count": 1,
-            "caps": [
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 266
-              }
-            ],
-            "expected_anchor_trace": []
-          },
-          "P6-I3": {
-            "candidate_count": 267,
-            "resolved_known_anchors": 0,
-            "candidate_recall": null,
-            "screen_survival_recall": null,
-            "mapper_survival_recall": null,
-            "gate_survival_recall": null,
-            "injected_anchor_count": 0,
-            "caps": [
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 267
-              }
-            ],
-            "expected_anchor_trace": []
-          },
-          "P6-I4": {
-            "candidate_count": 357,
-            "resolved_known_anchors": 0,
-            "candidate_recall": null,
-            "screen_survival_recall": null,
-            "mapper_survival_recall": null,
-            "gate_survival_recall": null,
-            "injected_anchor_count": 0,
-            "caps": [
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 357
-              }
-            ],
-            "expected_anchor_trace": [
-              {
-                "anchor_id": "5301f375a7481fb22c42e2ed1a3f2ae2a186ea59796f06723c5bd1f0822fc3c6",
-                "instrument": "Health Records and Information Privacy Act 2002 No 71 (NSW)",
-                "citation": "Sch 1, cl. 14(a)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              }
-            ]
-          },
-          "P6-I5": {
-            "candidate_count": 0,
-            "resolved_known_anchors": 0,
-            "candidate_recall": null,
-            "screen_survival_recall": null,
-            "mapper_survival_recall": null,
-            "gate_survival_recall": null,
-            "injected_anchor_count": 0,
-            "caps": [],
-            "expected_anchor_trace": [
-              {
-                "anchor_id": "f5cb52f3f855d4d9b6acc0f14dcba76eac2af31faf5806b87db5e06f97346659",
-                "instrument": "Australia-Singapore Digital Economy Agreement",
-                "citation": "Art. 23",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "0e539701caa05732f9d9429afbb3b0d54a7dd15ddff581016d6b7ef2a3795d53",
-                "instrument": "Australia-United Kingdom Free Trade Agreement",
-                "citation": "Art. 14.10",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "fdc493d24d1c03101f237868115170e6dd2a29f8c2330d00294fd8cdb7a1283d",
-                "instrument": "Comprehensive and Progressive Agreement for Trans-Pacific Partnership",
-                "citation": "Art. 1",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "4e8a063cda4707881b0377feaa1a34f48fa71992e924ea3400d4d970fab5d6b6",
-                "instrument": "Comprehensive and Progressive Agreement for Trans-Pacific Partnership",
-                "citation": "Art. 14.11",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "c70ec701d2cb814d43ff10a1be6d6e85fd99a4f4357e757a73d83e08440cdf96",
-                "instrument": "Regional Comprehensive Economic Partnership Agreement",
-                "citation": "Art. 12.15",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              }
-            ]
-          }
-        },
-        "anchors_retrieved_organically": 0,
-        "anchors_injection_saved": 1,
-        "known_anchors": 5,
-        "research_expected_anchors": 6,
-        "curation": {
-          "excluded_count": 0,
-          "excluded": []
-        }
-      }
-    },
-    "outputs/final_au_p7": {
-      "corpus_fingerprint": {
-        "recorded": "2c531071cb263d72be1a0876a8f5b6e2b2406234d94ec2e874c312885a60c1a2",
-        "current": "d6e7be716da81fd88a0823e3281d0f6491115abe12055949aa64fabf17341864",
-        "status": "STALE"
-      },
-      "candidates": 31,
-      "warnings": 100,
-      "pipeline_stats": {
-        "candidates": 1821,
-        "screened_in": 332,
-        "mapped": 72,
-        "gate_rejected": 51,
-        "nano_mappings": 184,
-        "mini_escalations": 148,
-        "escalation_reasons": {
-          "expected-anchor-rejected": 102,
-          "low-confidence-positive": 23,
-          "snippet-not-source-locatable": 3,
-          "known-anchor-rejected": 16,
-          "low-confidence-known-anchor": 1,
-          "judicial-access-ambiguity": 5
-        },
-        "by_indicator": {
-          "P7-I1": {
-            "candidate_count": 268,
-            "resolved_known_anchors": 0,
-            "candidate_recall": null,
-            "screen_survival_recall": null,
-            "mapper_survival_recall": null,
-            "gate_survival_recall": null,
-            "injected_anchor_count": 0,
-            "caps": [
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 273
-              }
-            ],
-            "expected_anchor_trace": [
-              {
-                "anchor_id": "61ea87187129e1a228be6e7c43c15dc7b8e32c916fc70196c9fbb8a201d8e157",
-                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
-                "citation": "s. 7",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "ed068747731286be5010d96e7d59f81cb6a2f1e74905a5b5585761a5db376153",
-                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
-                "citation": "s. 9(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "e8ef57e9d046b87cab4ccad89741451d9fdd24fa3fbf0c8a194aeade464dd2f8",
-                "instrument": "Privacy Act 1988 (No. 119, 1988)",
-                "citation": "s. 7B(3)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00227:s7B-1",
-                  "provision:au:C2026C00227:s7B-2",
-                  "provision:au:C2026C00227:s7B-3",
-                  "provision:au:C2026C00227:s7B-4",
-                  "provision:au:C2026C00227:s7B-5"
-                ],
-                "outcome": "MAPPING_MISS"
-              }
-            ]
-          },
-          "P7-I2": {
-            "candidate_count": 266,
-            "resolved_known_anchors": 0,
-            "candidate_recall": null,
-            "screen_survival_recall": null,
-            "mapper_survival_recall": null,
-            "gate_survival_recall": null,
-            "injected_anchor_count": 0,
-            "caps": [
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 278
-              }
-            ],
-            "expected_anchor_trace": [
-              {
-                "anchor_id": "1eb57f769046c30aedba34c7d7ca77b83dcb9b38d59c9eb1f68ccf2c08046228",
-                "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025 (F2025L00277)",
-                "citation": "s. 7",
-                "matched_provision_ids": [
-                  "provision:au:F2025L00277:s7"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "8ae6df5d546983ef4860186688f727d2256bff5c5291c3a603292a70f9e1b6b9",
-                "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025 (F2025L00277)",
-                "citation": "s. 8",
-                "matched_provision_ids": [
-                  "provision:au:F2025L00277:s8"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "ebcbf309bc8a5bf8e0dc7800754d38761d12e869b989bb702f4fdfe102946137",
-                "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025 (F2025L00278)",
-                "citation": "s. 6(1)",
-                "matched_provision_ids": [
-                  "provision:au:F2025L00278:s6-1",
-                  "provision:au:F2025L00278:s6-2"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "812b1b94c4a5f52380084a4b786f17d81df490c9cf531b0184baed8e5ffa8c12",
-                "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025 (F2025L00278)",
-                "citation": "s. 7(1)",
-                "matched_provision_ids": [
-                  "provision:au:F2025L00278:s7-1",
-                  "provision:au:F2025L00278:s7-2",
-                  "provision:au:F2025L00278:s7-3",
-                  "provision:au:F2025L00278:s7-4"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "476c8e640f3be62c29c281c43e5365a193426b95bbda447590c8ba0cd9926a87",
-                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
-                "citation": "s. 27",
-                "matched_provision_ids": [
-                  "provision:au:C2024A00098:s27-1",
-                  "provision:au:C2024A00098:s27-2",
-                  "provision:au:C2024A00098:s27-3",
-                  "provision:au:C2024A00098:s27-4",
-                  "provision:au:C2024A00098:s27-6"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "d8945811af697dc76b58540d9cb743a4ea81b6aafbb86b4a2d030cdb2e6f60ac",
-                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
-                "citation": "s. 3",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "8db6b685a8f063c44f2952f17f69ca1adcfd8d2ade1269822c3d8741f466b0d5",
-                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
-                "citation": "s. 4",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "0812812cf7c1767e22bcc2e57eddf410f0a1d62255ef09c60da0abd9c0dab96e",
-                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
-                "citation": "s. 60",
-                "matched_provision_ids": [
-                  "provision:au:C2024A00098:s60-1",
-                  "provision:au:C2024A00098:s60-2"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "d22155b2a8c5c04055aebc6b0abc1df35d54cc7b7d22a9375c3e0475830ae183",
-                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
-                "citation": "s. 62",
-                "matched_provision_ids": [
-                  "provision:au:C2024A00098:s62-1",
-                  "provision:au:C2024A00098:s62-2",
-                  "provision:au:C2024A00098:s62-3",
-                  "provision:au:C2024A00098:s62-4",
-                  "provision:au:C2024A00098:s62-5"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "94b45a69f865586eaabc942133ca533e317a1f95e2891420f7ed94a466bce89f",
-                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
-                "citation": "s. 63",
-                "matched_provision_ids": [
-                  "provision:au:C2024A00098:s63"
-                ],
-                "outcome": "MAPPING_MISS"
-              }
-            ]
-          },
-          "P7-I3": {
-            "candidate_count": 400,
-            "resolved_known_anchors": 0,
-            "candidate_recall": null,
-            "screen_survival_recall": null,
-            "mapper_survival_recall": null,
-            "gate_survival_recall": null,
-            "injected_anchor_count": 0,
-            "caps": [
-              {
-                "stage": "retrieval_union",
-                "limit": 400,
-                "input_count": 717
-              },
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 411
-              }
-            ],
-            "expected_anchor_trace": [
-              {
-                "anchor_id": "1163fefc71a4362f0166e84ac213eae92ba34f824fbfdada1080bc5e8816ba7d",
-                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
-                "citation": "s. 107(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00274:s107-1",
-                  "provision:au:C2026C00274:s107-2",
-                  "provision:au:C2026C00274:s107-3",
-                  "provision:au:C2026C00274:s107-4",
-                  "provision:au:C2026C00274:s107-5"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "9821da1349c52759412e5233e58af1f944ee2e4fbcb3a3a310dd91b8f7a2c0eb",
-                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
-                "citation": "s. 107(3)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00274:s107-1",
-                  "provision:au:C2026C00274:s107-2",
-                  "provision:au:C2026C00274:s107-3",
-                  "provision:au:C2026C00274:s107-4",
-                  "provision:au:C2026C00274:s107-5"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "40044361d57a7a45d7fe3baed813f11b80796b1a9a7381e42f5eca9f8f4dad99",
-                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
-                "citation": "s. 108(2)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00274:s108-2",
-                  "provision:au:C2026C00274:s108-3"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "74e1c7b93b59240f7418910bfa4a013e12825ba4d565d61381f332719c6f59f2",
-                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
-                "citation": "s. 111(2)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00274:s111-1",
-                  "provision:au:C2026C00274:s111-2",
-                  "provision:au:C2026C00274:s111-3",
-                  "provision:au:C2026C00274:s111-4"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "a0adfbac9829321cfce9cc6c1b7518d60ab93519fd6fd3444974394c3b267190",
-                "instrument": "Corporations Act 2001 (No. 50, 2001)",
-                "citation": "s. 286(2)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00058:s286-2",
-                  "provision:au:C2026C00058:s286-3",
-                  "provision:au:C2026C00058:s286-4"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "a53fa44e59e434c261a365040f671ea48f8d9c28872e27c6c8e506abafb56a80",
-                "instrument": "Corporations Act 2001 (No. 50, 2001)",
-                "citation": "s. 286A(2)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00058:s286A-2",
-                  "provision:au:C2026C00058:s286A-3",
-                  "provision:au:C2026C00058:s286A-4"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "3a308b5ee3b7b106764f2a06934ef3df0344b47ff3218db985c7bca7823da6a2",
-                "instrument": "Fair Work Act 2009 (No. 28, 2009)",
-                "citation": "s. 535(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00293:s535-3",
-                  "provision:au:C2026C00293:s535-5"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "d5ce4ab13af080f136e3bcc8f27a391099302c43f3b28e0f9027f08b5a691c03",
-                "instrument": "Health Records and Information Privacy Act 2002 No. 71",
-                "citation": "s. 25(1)(a)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "f9deb6b6e6519f716168fdf111867be2888159074b7e7160fd9ce8b624654b6b",
-                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
-                "citation": "s. 382",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "c18b42c8cee98217496be02563b013b3ff23943277f9ae07230c83676eefe4c6",
-                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
-                "citation": "s. 5(1)(b)(i)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00303:s5-3"
-                ],
-                "outcome": "MAPPING_MISS"
-              }
-            ]
-          },
-          "P7-I4": {
-            "candidate_count": 375,
-            "resolved_known_anchors": 0,
-            "candidate_recall": null,
-            "screen_survival_recall": null,
-            "mapper_survival_recall": null,
-            "gate_survival_recall": null,
-            "injected_anchor_count": 0,
-            "caps": [
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 377
-              }
-            ],
-            "expected_anchor_trace": [
-              {
-                "anchor_id": "2931f0c6be08f305498fe852f8f795f43a93a2b56e99520d1f38fd68f5786942",
-                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
-                "citation": "s. 10(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "9331ded3eda28af474e1512f91d5238f4a7232f0083a5c0f031206b193580324",
-                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
-                "citation": "s. 12(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "3cf65cfab4d1fca9bad04f3787bb7c499b4180a9427a432f872852df480333f9",
-                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
-                "citation": "s. 15(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "8a1d3c8e37e338de0c227d7bbf9133c84f3a793c018f4718295da95c283214d8",
-                "instrument": "Privacy Act 1988 (No. 119, 1988)",
-                "citation": "s. 33D(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00227:s33D-1",
-                  "provision:au:C2026C00227:s33D-2",
-                  "provision:au:C2026C00227:s33D-3",
-                  "provision:au:C2026C00227:s33D-4",
-                  "provision:au:C2026C00227:s33D-5",
-                  "provision:au:C2026C00227:s33D-6",
-                  "provision:au:C2026C00227:s33D-7"
-                ],
-                "outcome": "PASS"
-              }
-            ]
-          },
-          "P7-I5": {
-            "candidate_count": 400,
-            "resolved_known_anchors": 4,
-            "candidate_recall": 0.25,
-            "screen_survival_recall": 1.0,
-            "mapper_survival_recall": 1.0,
-            "gate_survival_recall": 0.75,
-            "injected_anchor_count": 3,
-            "caps": [
-              {
-                "stage": "retrieval_union",
-                "limit": 400,
-                "input_count": 1367
-              },
-              {
-                "stage": "screen",
-                "limit": 200,
-                "input_count": 482
-              }
-            ],
-            "expected_anchor_trace": [
-              {
-                "anchor_id": "97c889c853a6cb26b7a60f16e2c6d622382c920fdf98566b8ae410dc38aa71e9",
-                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
-                "citation": "s. 167(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00274:s167-1",
-                  "provision:au:C2026C00274:s167-2",
-                  "provision:au:C2026C00274:s167-3",
-                  "provision:au:C2026C00274:s167-3A",
-                  "provision:au:C2026C00274:s167-3B",
-                  "provision:au:C2026C00274:s167-4",
-                  "provision:au:C2026C00274:s167-5",
-                  "provision:au:C2026C00274:s167-6"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "4f58ffefbe23a5d8c396e83dd02fccf2a1da05cb931c642c515731e3649dd88c",
-                "instrument": "Australian Security Intelligence Organisation Act 1979 (No. 113, 1979)",
-                "citation": "s. 25(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00067:s25-11",
-                  "provision:au:C2026C00067:s25-4B",
-                  "provision:au:C2026C00067:s25-7",
-                  "provision:au:C2026C00067:s25-8",
-                  "provision:au:C2026C00067:s25-9"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "eb927a727be55ffdb5af7ab64f1f70dfde69d44a2c170b58195729793b6fdc24",
-                "instrument": "Crimes Act 1914 (No. 12, 1914)",
-                "citation": "s. 1",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00219:s1"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "ff1eb35cf5fed891283088cb6a7c9c9a98272814aa0f5931eab4e820e12c3aa0",
-                "instrument": "Crimes Act 1914 (No. 12, 1914)",
-                "citation": "s. 3Z",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00219:s3Z-1",
-                  "provision:au:C2026C00219:s3Z-2"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "f13fe1738a11928092810d98422656dc1d694f6385cd217a1113f16d7756c86e",
-                "instrument": "National Anti-Corruption Commission Act 2022 (No. 88, 2022)",
-                "citation": "s. 58(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00278:s58-1",
-                  "provision:au:C2026C00278:s58-2",
-                  "provision:au:C2026C00278:s58-3",
-                  "provision:au:C2026C00278:s58-5",
-                  "provision:au:C2026C00278:s58-6",
-                  "provision:au:C2026C00278:s58-7"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "54628066e6336b0456328a7a3f0a37f5bf38ed71826cf46b35da1a29f7047afd",
-                "instrument": "National Anti-Corruption Commission Act 2022 (No. 88, 2022)",
-                "citation": "s. 63(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00278:s63-1",
-                  "provision:au:C2026C00278:s63-4",
-                  "provision:au:C2026C00278:s63-5",
-                  "provision:au:C2026C00278:s63-6",
-                  "provision:au:C2026C00278:s63-7",
-                  "provision:au:C2026C00278:s63-8",
-                  "provision:au:C2026C00278:s63-9"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "c115942647d99b3a3696f19ffa36ea7e77ec9fa2581c7a57a94eb3f5794e958e",
-                "instrument": "Police Powers (Surveillance Devices) Act 2006 No. 22 of 2006",
-                "citation": "s. 23(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "019b7cd928b6a607a2aedd8ccce2cca629eb6ec21df7853ee6b574362e28e3d2",
-                "instrument": "Police Powers (Surveillance Devices) Act 2006 No. 22 of 2006",
-                "citation": "s. 23(3)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "29d42242a51694a429c8f585b342b779b583f5ec5fc9f05b88239a578c4c7c5e",
-                "instrument": "Police Powers (Surveillance Devices) Act 2006 No. 22 of 2006",
-                "citation": "s. 24",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "2005c556970e0cf27376ebcc7066a5eddef26d2d2ac1075e9cbfb525e956b0c6",
-                "instrument": "Police Powers (Surveillance Devices) Act 2006 No. 22 of 2006",
-                "citation": "s. 25(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "cc7c39b2a80693b8e883afc230eefdef49e5f0058ba42299e3615ad227991838",
-                "instrument": "Police Powers and Responsibilities Act 2000 No. 5",
-                "citation": "s. 343",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "da1adec534121b4449962451c024a305e3dd41ebd4201b42ba1fbbdc990a2a30",
-                "instrument": "Police Powers and Responsibilities Act 2000 No. 5",
-                "citation": "s. 344",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "287858dd52048a45f31e4c0d03df10a883ed991175586df0b3115a3bc147d043",
-                "instrument": "Privacy Act 1988 (No. 119, 1988)",
-                "citation": "s. 44(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00227:s44-1",
-                  "provision:au:C2026C00227:s44-2A",
-                  "provision:au:C2026C00227:s44-3",
-                  "provision:au:C2026C00227:s44-4",
-                  "provision:au:C2026C00227:s44-5"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "16bfcbd1763b95da2053f7efe24eed89034efe124832c92f4d0d6481d3526a6a",
-                "instrument": "Surveillance Devices Act 1998 No. 56 of 1998",
-                "citation": "s. 20",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "5611e4504a688c063088d634278e1e1f4ef69cfbf40f2967ae67a5c5871c3b0c",
-                "instrument": "Surveillance Devices Act 1998 No. 56 of 1998",
-                "citation": "s. 21",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "c873a4fcb5e27dfeb8e640b191ac676578b13a4a9741ac65ddf4862887263115",
-                "instrument": "Surveillance Devices Act 1999 No. 21 of 1999",
-                "citation": "s. 26(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "acffdb3655a0f3613c67d82d6a3fe69d910cd9b45141f8766c53afaec9507c1c",
-                "instrument": "Surveillance Devices Act 1999 No. 21 of 1999",
-                "citation": "s. 27(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "5fd0f428bcdbd2dcc2b01b0d939279199752dd48a4461f9303933364f1e71616",
-                "instrument": "Surveillance Devices Act 1999 No. 21 of 1999",
-                "citation": "s. 28(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "166f5583917d5778c70c70460db040c7b75ad4ea9cbae4f5cbade9b848c14d93",
-                "instrument": "Surveillance Devices Act 2004 (No. 152, 2004)",
-                "citation": "s. 28",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00217:s28-1",
-                  "provision:au:C2026C00217:s28-1B",
-                  "provision:au:C2026C00217:s28-1C",
-                  "provision:au:C2026C00217:s28-1D",
-                  "provision:au:C2026C00217:s28-2",
-                  "provision:au:C2026C00217:s28-3",
-                  "provision:au:C2026C00217:s28-4",
-                  "provision:au:C2026C00217:s28-4A",
-                  "provision:au:C2026C00217:s28-4B"
-                ],
-                "outcome": "GATE_MISS"
-              },
-              {
-                "anchor_id": "a6957889c2992d11e48e97e6f9b0ff989fcd391b2cf4f36c51ebfad7e76dea8c",
-                "instrument": "Surveillance Devices Act 2004 (No. 152, 2004)",
-                "citation": "s. 30",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00217:s30-1B",
-                  "provision:au:C2026C00217:s30-2",
-                  "provision:au:C2026C00217:s30-3",
-                  "provision:au:C2026C00217:s30-4"
-                ],
-                "outcome": "GATE_MISS"
-              },
-              {
-                "anchor_id": "120a1b6247ba84cb70231cc5b1adf6712b7ccbf01b03e1f86d7af81f80c21032",
-                "instrument": "Surveillance Devices Act 2004 (No. 152, 2004)",
-                "citation": "s. 33",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00217:s33-2",
-                  "provision:au:C2026C00217:s33-2B",
-                  "provision:au:C2026C00217:s33-3",
-                  "provision:au:C2026C00217:s33-4"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "dc592a271648220b355478020779fb392c67c14a82dfe75f07b29ddf8ba324de",
-                "instrument": "Surveillance Devices Act 2007 No. 19 of 2007",
-                "citation": "s. 33",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "e3716ff5bb79f9dfb9f84329e30e2d7cf4ebf07fa42173ea9a1eb7891c768296",
-                "instrument": "Surveillance Devices Act 2007 No. 19 of 2007",
-                "citation": "s. 39",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "9c1032c2e65d5c711fe76601ae4b6c7fddde91897d47f9ef30643faa8513dfd4",
-                "instrument": "Surveillance Devices Act 2007 No. 64",
-                "citation": "s. 31(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "da224d13e645513ed3699994e2c709f8cbf40f519c226c6470eff4a22faeaf53",
-                "instrument": "Surveillance Devices Act 2007 No. 64",
-                "citation": "s. 32(3)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "ce0e8969cbf23d20b3fb49cb1792581ee1df79c7775ef22d44bc7184fd9f9c52",
-                "instrument": "Surveillance Devices Act 2007 No. 64",
-                "citation": "s. 33(1)",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "29e883c276826ee6de4922feb0336f6481a99b0dfc96f8baef6a0ad569679873",
-                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
-                "citation": "s. 10(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00303:s10-1",
-                  "provision:au:C2026C00303:s10-1A"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "e826ef0d1f4b3a902f2fc272a6282cdef0a86be4bf8d2289c71dc81ddac136d8",
-                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
-                "citation": "s. 15(1)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00303:s15-1",
-                  "provision:au:C2026C00303:s15-2",
-                  "provision:au:C2026C00303:s15-3"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "b92d219c0e9fe872c3648816f80b85a8762f8e05d4b0938c67f2ddb33bb12a70",
-                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
-                "citation": "s. 353",
-                "matched_provision_ids": [],
-                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
-              },
-              {
-                "anchor_id": "3a50d4f5dc7aba1195622d6edf77989bd471e7398c545f2a0cce8e912e987a00",
-                "instrument": "Telecommunications (Interception and Access) Act 1979 (No. 114, 1979)",
-                "citation": "s. 175",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00209:s175-1",
-                  "provision:au:C2026C00209:s175-2",
-                  "provision:au:C2026C00209:s175-3",
-                  "provision:au:C2026C00209:s175-4"
-                ],
-                "outcome": "MAPPING_MISS"
-              },
-              {
-                "anchor_id": "696c47dd4891e0e046fb1a9aee238337626364f34c18c58c412f5a0031bdae4b",
-                "instrument": "Telecommunications (Interception and Access) Act 1979 (No. 114, 1979)",
-                "citation": "s. 176",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00209:s176-1",
-                  "provision:au:C2026C00209:s176-2",
-                  "provision:au:C2026C00209:s176-3",
-                  "provision:au:C2026C00209:s176-4",
-                  "provision:au:C2026C00209:s176-5",
-                  "provision:au:C2026C00209:s176-6"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "6422e2fe206ba0028cd997755b87b427ad80fdabb449b96bf99680cf0f9c1da1",
-                "instrument": "Telecommunications (Interception and Access) Act 1979 (No. 114, 1979)",
-                "citation": "s. 178(2)",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00209:s178-1",
-                  "provision:au:C2026C00209:s178-2"
-                ],
-                "outcome": "PASS"
-              },
-              {
-                "anchor_id": "eccb18304b5ff17ad323e8e4801d28b066d40acfec9bd78bf3f67aa7fed0b5b9",
-                "instrument": "Telecommunications (Interception and Access) Act 1979 (No. 114, 1979)",
-                "citation": "s. 180",
-                "matched_provision_ids": [
-                  "provision:au:C2026C00209:s180-1",
-                  "provision:au:C2026C00209:s180-2",
-                  "provision:au:C2026C00209:s180-3",
-                  "provision:au:C2026C00209:s180-6",
-                  "provision:au:C2026C00209:s180-7"
-                ],
-                "outcome": "PASS"
-              }
-            ]
-          }
-        },
-        "anchors_retrieved_organically": 1,
-        "anchors_injection_saved": 3,
-        "known_anchors": 17,
-        "research_expected_anchors": 60,
-        "known_mapper_abstention_recoveries": 16,
-        "curation": {
-          "excluded_count": 42,
-          "excluded": [
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Cyber Security Act 2024",
-              "article_section": "s. 27(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Cyber Security Act 2024",
-              "article_section": "s. 35(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Cyber Security Act 2024",
-              "article_section": "s. 45",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 12M",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30CM(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.72,
-              "verifier_risks": [
-                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30CJ(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": [
-                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30CU(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": [
-                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30CY(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.74,
-              "verifier_risks": [
-                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 32(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.72,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30CB(4)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30AA",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30AB(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30AH(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": [
-                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30AH(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.91,
-              "verifier_risks": [
-                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 30AI(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "controls",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 31",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.72,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 35AQ(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.74,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I2",
-              "law_name": "Security of Critical Infrastructure Act 2018",
-              "article_section": "s. 35AQ(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 108(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.98,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 107(3)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.98,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 111(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.93,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 107(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.98,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 107(5)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.98,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 111(3)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.93,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 107(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.98,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 107(4)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.98,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 111(4)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.93,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 35F(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.93,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 116(3)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.93,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
-              "article_section": "s. 104",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.9,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Corporations Act 2001",
-              "article_section": "s. 286(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "retention",
-              "confidence": 0.98,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Corporations Act 2001",
-              "article_section": "s. 1233G(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "retention",
-              "confidence": 0.93,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Corporations Act 2001",
-              "article_section": "s. 225(5)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "retention",
-              "confidence": 0.98,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I3",
-              "law_name": "Telecommunications Act 1997",
-              "article_section": "Sch 1, cl. 40",
-              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
-              "legal_function": "retention",
-              "confidence": 0.78,
-              "verifier_risks": [
-                "P7-I3 mandatory retention duty is recordable, but no explicit numeric duration is present; this supports indicator score 0 unless a linked provision supplies the minimum"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I5",
-              "law_name": "Telecommunications (Interception and Access) Act 1979",
-              "article_section": "s. 180(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "investigation",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I5",
-              "law_name": "Telecommunications (Interception and Access) Act 1979",
-              "article_section": "s. 176(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": [
-                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I5",
-              "law_name": "Telecommunications (Interception and Access) Act 1979",
-              "article_section": "s. 178A(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.78,
-              "verifier_risks": [
-                "exception language exists outside the snippet \u2014 reviewer should read the full section"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I5",
-              "law_name": "Telecommunications (Interception and Access) Act 1979",
-              "article_section": "s. 178A(3)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.78,
-              "verifier_risks": [
-                "exception language exists outside the snippet \u2014 reviewer should read the full section"
-              ]
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I5",
-              "law_name": "Telecommunications (Interception and Access) Act 1979",
-              "article_section": "s. 180A(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "incident",
-              "confidence": 0.72,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I5",
-              "law_name": "Telecommunications (Interception and Access) Act 1979",
-              "article_section": "s. 180B(2)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "investigation",
-              "confidence": 0.78,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I5",
-              "law_name": "Telecommunications (Interception and Access) Act 1979",
-              "article_section": "s. 180B(8)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.74,
-              "verifier_risks": []
-            },
-            {
-              "economy": "Australia",
-              "indicator_id": "P7-I5",
-              "law_name": "Telecommunications (Interception and Access) Act 1979",
-              "article_section": "s. 180C(1)",
-              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
-              "legal_function": "framework",
-              "confidence": 0.78,
-              "verifier_risks": []
-            }
-          ]
-        }
-      }
-    },
     "outputs/final_si_p6": {
       "candidates": 11,
       "warnings": 23,
@@ -3060,7 +1735,7 @@
       }
     },
     "outputs/final_ma_p7": {
-      "candidates": 78,
+      "candidates": 80,
       "warnings": 20,
       "pipeline_stats": {
         "candidates": 1635,
@@ -4271,7 +2946,1325 @@
           ]
         }
       }
+    },
+    "outputs/final_au_p6": {
+      "candidates": 5,
+      "warnings": 22,
+      "pipeline_stats": {
+        "candidates": 1290,
+        "screened_in": 33,
+        "mapped": 0,
+        "gate_rejected": 11,
+        "nano_mappings": 23,
+        "mini_escalations": 10,
+        "escalation_reasons": {
+          "low-confidence-positive": 7,
+          "low-confidence-known-anchor": 1,
+          "known-anchor-rejected": 3
+        },
+        "by_indicator": {
+          "P6-I1": {
+            "candidate_count": 400,
+            "resolved_known_anchors": 0,
+            "candidate_recall": null,
+            "screen_survival_recall": null,
+            "mapper_survival_recall": null,
+            "gate_survival_recall": null,
+            "injected_anchor_count": 0,
+            "caps": [
+              {
+                "stage": "retrieval_union",
+                "limit": 400,
+                "input_count": 403
+              },
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 400
+              }
+            ],
+            "expected_anchor_trace": []
+          },
+          "P6-I2": {
+            "candidate_count": 261,
+            "resolved_known_anchors": 1,
+            "candidate_recall": 0.0,
+            "screen_survival_recall": 1.0,
+            "mapper_survival_recall": 1.0,
+            "gate_survival_recall": 0.0,
+            "injected_anchor_count": 1,
+            "caps": [
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 266
+              }
+            ],
+            "expected_anchor_trace": []
+          },
+          "P6-I3": {
+            "candidate_count": 267,
+            "resolved_known_anchors": 0,
+            "candidate_recall": null,
+            "screen_survival_recall": null,
+            "mapper_survival_recall": null,
+            "gate_survival_recall": null,
+            "injected_anchor_count": 0,
+            "caps": [
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 267
+              }
+            ],
+            "expected_anchor_trace": []
+          },
+          "P6-I4": {
+            "candidate_count": 357,
+            "resolved_known_anchors": 0,
+            "candidate_recall": null,
+            "screen_survival_recall": null,
+            "mapper_survival_recall": null,
+            "gate_survival_recall": null,
+            "injected_anchor_count": 0,
+            "caps": [
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 357
+              }
+            ],
+            "expected_anchor_trace": [
+              {
+                "anchor_id": "5301f375a7481fb22c42e2ed1a3f2ae2a186ea59796f06723c5bd1f0822fc3c6",
+                "instrument": "Health Records and Information Privacy Act 2002 No 71 (NSW)",
+                "citation": "Sch 1, cl. 14(a)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              }
+            ]
+          },
+          "P6-I5": {
+            "candidate_count": 0,
+            "resolved_known_anchors": 0,
+            "candidate_recall": null,
+            "screen_survival_recall": null,
+            "mapper_survival_recall": null,
+            "gate_survival_recall": null,
+            "injected_anchor_count": 0,
+            "caps": [],
+            "expected_anchor_trace": [
+              {
+                "anchor_id": "f5cb52f3f855d4d9b6acc0f14dcba76eac2af31faf5806b87db5e06f97346659",
+                "instrument": "Australia-Singapore Digital Economy Agreement",
+                "citation": "Art. 23",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "0e539701caa05732f9d9429afbb3b0d54a7dd15ddff581016d6b7ef2a3795d53",
+                "instrument": "Australia-United Kingdom Free Trade Agreement",
+                "citation": "Art. 14.10",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "fdc493d24d1c03101f237868115170e6dd2a29f8c2330d00294fd8cdb7a1283d",
+                "instrument": "Comprehensive and Progressive Agreement for Trans-Pacific Partnership",
+                "citation": "Art. 1",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "4e8a063cda4707881b0377feaa1a34f48fa71992e924ea3400d4d970fab5d6b6",
+                "instrument": "Comprehensive and Progressive Agreement for Trans-Pacific Partnership",
+                "citation": "Art. 14.11",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "c70ec701d2cb814d43ff10a1be6d6e85fd99a4f4357e757a73d83e08440cdf96",
+                "instrument": "Regional Comprehensive Economic Partnership Agreement",
+                "citation": "Art. 12.15",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              }
+            ]
+          }
+        },
+        "anchors_retrieved_organically": 0,
+        "anchors_injection_saved": 1,
+        "known_anchors": 5,
+        "research_expected_anchors": 6,
+        "curation": {
+          "excluded_count": 0,
+          "excluded": []
+        }
+      }
+    },
+    "outputs/final_au_p7": {
+      "candidates": 33,
+      "warnings": 100,
+      "pipeline_stats": {
+        "candidates": 1821,
+        "screened_in": 332,
+        "mapped": 72,
+        "gate_rejected": 51,
+        "nano_mappings": 184,
+        "mini_escalations": 148,
+        "escalation_reasons": {
+          "expected-anchor-rejected": 102,
+          "low-confidence-positive": 23,
+          "snippet-not-source-locatable": 3,
+          "known-anchor-rejected": 16,
+          "low-confidence-known-anchor": 1,
+          "judicial-access-ambiguity": 5
+        },
+        "by_indicator": {
+          "P7-I1": {
+            "candidate_count": 268,
+            "resolved_known_anchors": 0,
+            "candidate_recall": null,
+            "screen_survival_recall": null,
+            "mapper_survival_recall": null,
+            "gate_survival_recall": null,
+            "injected_anchor_count": 0,
+            "caps": [
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 273
+              }
+            ],
+            "expected_anchor_trace": [
+              {
+                "anchor_id": "61ea87187129e1a228be6e7c43c15dc7b8e32c916fc70196c9fbb8a201d8e157",
+                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
+                "citation": "s. 7",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "ed068747731286be5010d96e7d59f81cb6a2f1e74905a5b5585761a5db376153",
+                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
+                "citation": "s. 9(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "e8ef57e9d046b87cab4ccad89741451d9fdd24fa3fbf0c8a194aeade464dd2f8",
+                "instrument": "Privacy Act 1988 (No. 119, 1988)",
+                "citation": "s. 7B(3)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00227:s7B-1",
+                  "provision:au:C2026C00227:s7B-2",
+                  "provision:au:C2026C00227:s7B-3",
+                  "provision:au:C2026C00227:s7B-4",
+                  "provision:au:C2026C00227:s7B-5"
+                ],
+                "outcome": "MAPPING_MISS"
+              }
+            ]
+          },
+          "P7-I2": {
+            "candidate_count": 266,
+            "resolved_known_anchors": 0,
+            "candidate_recall": null,
+            "screen_survival_recall": null,
+            "mapper_survival_recall": null,
+            "gate_survival_recall": null,
+            "injected_anchor_count": 0,
+            "caps": [
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 278
+              }
+            ],
+            "expected_anchor_trace": [
+              {
+                "anchor_id": "1eb57f769046c30aedba34c7d7ca77b83dcb9b38d59c9eb1f68ccf2c08046228",
+                "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025 (F2025L00277)",
+                "citation": "s. 7",
+                "matched_provision_ids": [
+                  "provision:au:F2025L00277:s7"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "8ae6df5d546983ef4860186688f727d2256bff5c5291c3a603292a70f9e1b6b9",
+                "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025 (F2025L00277)",
+                "citation": "s. 8",
+                "matched_provision_ids": [
+                  "provision:au:F2025L00277:s8"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "ebcbf309bc8a5bf8e0dc7800754d38761d12e869b989bb702f4fdfe102946137",
+                "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025 (F2025L00278)",
+                "citation": "s. 6(1)",
+                "matched_provision_ids": [
+                  "provision:au:F2025L00278:s6-1",
+                  "provision:au:F2025L00278:s6-2"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "812b1b94c4a5f52380084a4b786f17d81df490c9cf531b0184baed8e5ffa8c12",
+                "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025 (F2025L00278)",
+                "citation": "s. 7(1)",
+                "matched_provision_ids": [
+                  "provision:au:F2025L00278:s7-1",
+                  "provision:au:F2025L00278:s7-2",
+                  "provision:au:F2025L00278:s7-3",
+                  "provision:au:F2025L00278:s7-4"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "476c8e640f3be62c29c281c43e5365a193426b95bbda447590c8ba0cd9926a87",
+                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
+                "citation": "s. 27",
+                "matched_provision_ids": [
+                  "provision:au:C2024A00098:s27-1",
+                  "provision:au:C2024A00098:s27-2",
+                  "provision:au:C2024A00098:s27-3",
+                  "provision:au:C2024A00098:s27-4",
+                  "provision:au:C2024A00098:s27-6"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "d8945811af697dc76b58540d9cb743a4ea81b6aafbb86b4a2d030cdb2e6f60ac",
+                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
+                "citation": "s. 3",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "8db6b685a8f063c44f2952f17f69ca1adcfd8d2ade1269822c3d8741f466b0d5",
+                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
+                "citation": "s. 4",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "0812812cf7c1767e22bcc2e57eddf410f0a1d62255ef09c60da0abd9c0dab96e",
+                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
+                "citation": "s. 60",
+                "matched_provision_ids": [
+                  "provision:au:C2024A00098:s60-1",
+                  "provision:au:C2024A00098:s60-2"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "d22155b2a8c5c04055aebc6b0abc1df35d54cc7b7d22a9375c3e0475830ae183",
+                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
+                "citation": "s. 62",
+                "matched_provision_ids": [
+                  "provision:au:C2024A00098:s62-1",
+                  "provision:au:C2024A00098:s62-2",
+                  "provision:au:C2024A00098:s62-3",
+                  "provision:au:C2024A00098:s62-4",
+                  "provision:au:C2024A00098:s62-5"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "94b45a69f865586eaabc942133ca533e317a1f95e2891420f7ed94a466bce89f",
+                "instrument": "Cyber Security Act 2024 (No. 98, 2024)",
+                "citation": "s. 63",
+                "matched_provision_ids": [
+                  "provision:au:C2024A00098:s63"
+                ],
+                "outcome": "MAPPING_MISS"
+              }
+            ]
+          },
+          "P7-I3": {
+            "candidate_count": 400,
+            "resolved_known_anchors": 0,
+            "candidate_recall": null,
+            "screen_survival_recall": null,
+            "mapper_survival_recall": null,
+            "gate_survival_recall": null,
+            "injected_anchor_count": 0,
+            "caps": [
+              {
+                "stage": "retrieval_union",
+                "limit": 400,
+                "input_count": 717
+              },
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 411
+              }
+            ],
+            "expected_anchor_trace": [
+              {
+                "anchor_id": "1163fefc71a4362f0166e84ac213eae92ba34f824fbfdada1080bc5e8816ba7d",
+                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
+                "citation": "s. 107(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00274:s107-1",
+                  "provision:au:C2026C00274:s107-2",
+                  "provision:au:C2026C00274:s107-3",
+                  "provision:au:C2026C00274:s107-4",
+                  "provision:au:C2026C00274:s107-5"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "9821da1349c52759412e5233e58af1f944ee2e4fbcb3a3a310dd91b8f7a2c0eb",
+                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
+                "citation": "s. 107(3)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00274:s107-1",
+                  "provision:au:C2026C00274:s107-2",
+                  "provision:au:C2026C00274:s107-3",
+                  "provision:au:C2026C00274:s107-4",
+                  "provision:au:C2026C00274:s107-5"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "40044361d57a7a45d7fe3baed813f11b80796b1a9a7381e42f5eca9f8f4dad99",
+                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
+                "citation": "s. 108(2)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00274:s108-2",
+                  "provision:au:C2026C00274:s108-3"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "74e1c7b93b59240f7418910bfa4a013e12825ba4d565d61381f332719c6f59f2",
+                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
+                "citation": "s. 111(2)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00274:s111-1",
+                  "provision:au:C2026C00274:s111-2",
+                  "provision:au:C2026C00274:s111-3",
+                  "provision:au:C2026C00274:s111-4"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "a0adfbac9829321cfce9cc6c1b7518d60ab93519fd6fd3444974394c3b267190",
+                "instrument": "Corporations Act 2001 (No. 50, 2001)",
+                "citation": "s. 286(2)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00058:s286-2",
+                  "provision:au:C2026C00058:s286-3",
+                  "provision:au:C2026C00058:s286-4"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "a53fa44e59e434c261a365040f671ea48f8d9c28872e27c6c8e506abafb56a80",
+                "instrument": "Corporations Act 2001 (No. 50, 2001)",
+                "citation": "s. 286A(2)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00058:s286A-2",
+                  "provision:au:C2026C00058:s286A-3",
+                  "provision:au:C2026C00058:s286A-4"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "3a308b5ee3b7b106764f2a06934ef3df0344b47ff3218db985c7bca7823da6a2",
+                "instrument": "Fair Work Act 2009 (No. 28, 2009)",
+                "citation": "s. 535(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00293:s535-3",
+                  "provision:au:C2026C00293:s535-5"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "d5ce4ab13af080f136e3bcc8f27a391099302c43f3b28e0f9027f08b5a691c03",
+                "instrument": "Health Records and Information Privacy Act 2002 No. 71",
+                "citation": "s. 25(1)(a)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "f9deb6b6e6519f716168fdf111867be2888159074b7e7160fd9ce8b624654b6b",
+                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
+                "citation": "s. 382",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "c18b42c8cee98217496be02563b013b3ff23943277f9ae07230c83676eefe4c6",
+                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
+                "citation": "s. 5(1)(b)(i)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00303:s5-3"
+                ],
+                "outcome": "MAPPING_MISS"
+              }
+            ]
+          },
+          "P7-I4": {
+            "candidate_count": 375,
+            "resolved_known_anchors": 0,
+            "candidate_recall": null,
+            "screen_survival_recall": null,
+            "mapper_survival_recall": null,
+            "gate_survival_recall": null,
+            "injected_anchor_count": 0,
+            "caps": [
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 377
+              }
+            ],
+            "expected_anchor_trace": [
+              {
+                "anchor_id": "2931f0c6be08f305498fe852f8f795f43a93a2b56e99520d1f38fd68f5786942",
+                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
+                "citation": "s. 10(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "9331ded3eda28af474e1512f91d5238f4a7232f0083a5c0f031206b193580324",
+                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
+                "citation": "s. 12(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "3cf65cfab4d1fca9bad04f3787bb7c499b4180a9427a432f872852df480333f9",
+                "instrument": "Privacy (Australian Government Agencies \u2014 Governance) APP Code 2017 (F2017L01396)",
+                "citation": "s. 15(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "8a1d3c8e37e338de0c227d7bbf9133c84f3a793c018f4718295da95c283214d8",
+                "instrument": "Privacy Act 1988 (No. 119, 1988)",
+                "citation": "s. 33D(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00227:s33D-1",
+                  "provision:au:C2026C00227:s33D-2",
+                  "provision:au:C2026C00227:s33D-3",
+                  "provision:au:C2026C00227:s33D-4",
+                  "provision:au:C2026C00227:s33D-5",
+                  "provision:au:C2026C00227:s33D-6",
+                  "provision:au:C2026C00227:s33D-7"
+                ],
+                "outcome": "PASS"
+              }
+            ]
+          },
+          "P7-I5": {
+            "candidate_count": 400,
+            "resolved_known_anchors": 4,
+            "candidate_recall": 0.25,
+            "screen_survival_recall": 1.0,
+            "mapper_survival_recall": 1.0,
+            "gate_survival_recall": 0.75,
+            "injected_anchor_count": 3,
+            "caps": [
+              {
+                "stage": "retrieval_union",
+                "limit": 400,
+                "input_count": 1367
+              },
+              {
+                "stage": "screen",
+                "limit": 200,
+                "input_count": 482
+              }
+            ],
+            "expected_anchor_trace": [
+              {
+                "anchor_id": "97c889c853a6cb26b7a60f16e2c6d622382c920fdf98566b8ae410dc38aa71e9",
+                "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (No. 169, 2006)",
+                "citation": "s. 167(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00274:s167-1",
+                  "provision:au:C2026C00274:s167-2",
+                  "provision:au:C2026C00274:s167-3",
+                  "provision:au:C2026C00274:s167-3A",
+                  "provision:au:C2026C00274:s167-3B",
+                  "provision:au:C2026C00274:s167-4",
+                  "provision:au:C2026C00274:s167-5",
+                  "provision:au:C2026C00274:s167-6"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "4f58ffefbe23a5d8c396e83dd02fccf2a1da05cb931c642c515731e3649dd88c",
+                "instrument": "Australian Security Intelligence Organisation Act 1979 (No. 113, 1979)",
+                "citation": "s. 25(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00067:s25-11",
+                  "provision:au:C2026C00067:s25-4B",
+                  "provision:au:C2026C00067:s25-7",
+                  "provision:au:C2026C00067:s25-8",
+                  "provision:au:C2026C00067:s25-9"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "eb927a727be55ffdb5af7ab64f1f70dfde69d44a2c170b58195729793b6fdc24",
+                "instrument": "Crimes Act 1914 (No. 12, 1914)",
+                "citation": "s. 1",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00219:s1"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "ff1eb35cf5fed891283088cb6a7c9c9a98272814aa0f5931eab4e820e12c3aa0",
+                "instrument": "Crimes Act 1914 (No. 12, 1914)",
+                "citation": "s. 3Z",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00219:s3Z-1",
+                  "provision:au:C2026C00219:s3Z-2"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "f13fe1738a11928092810d98422656dc1d694f6385cd217a1113f16d7756c86e",
+                "instrument": "National Anti-Corruption Commission Act 2022 (No. 88, 2022)",
+                "citation": "s. 58(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00278:s58-1",
+                  "provision:au:C2026C00278:s58-2",
+                  "provision:au:C2026C00278:s58-3",
+                  "provision:au:C2026C00278:s58-5",
+                  "provision:au:C2026C00278:s58-6",
+                  "provision:au:C2026C00278:s58-7"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "54628066e6336b0456328a7a3f0a37f5bf38ed71826cf46b35da1a29f7047afd",
+                "instrument": "National Anti-Corruption Commission Act 2022 (No. 88, 2022)",
+                "citation": "s. 63(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00278:s63-1",
+                  "provision:au:C2026C00278:s63-4",
+                  "provision:au:C2026C00278:s63-5",
+                  "provision:au:C2026C00278:s63-6",
+                  "provision:au:C2026C00278:s63-7",
+                  "provision:au:C2026C00278:s63-8",
+                  "provision:au:C2026C00278:s63-9"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "c115942647d99b3a3696f19ffa36ea7e77ec9fa2581c7a57a94eb3f5794e958e",
+                "instrument": "Police Powers (Surveillance Devices) Act 2006 No. 22 of 2006",
+                "citation": "s. 23(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "019b7cd928b6a607a2aedd8ccce2cca629eb6ec21df7853ee6b574362e28e3d2",
+                "instrument": "Police Powers (Surveillance Devices) Act 2006 No. 22 of 2006",
+                "citation": "s. 23(3)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "29d42242a51694a429c8f585b342b779b583f5ec5fc9f05b88239a578c4c7c5e",
+                "instrument": "Police Powers (Surveillance Devices) Act 2006 No. 22 of 2006",
+                "citation": "s. 24",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "2005c556970e0cf27376ebcc7066a5eddef26d2d2ac1075e9cbfb525e956b0c6",
+                "instrument": "Police Powers (Surveillance Devices) Act 2006 No. 22 of 2006",
+                "citation": "s. 25(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "cc7c39b2a80693b8e883afc230eefdef49e5f0058ba42299e3615ad227991838",
+                "instrument": "Police Powers and Responsibilities Act 2000 No. 5",
+                "citation": "s. 343",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "da1adec534121b4449962451c024a305e3dd41ebd4201b42ba1fbbdc990a2a30",
+                "instrument": "Police Powers and Responsibilities Act 2000 No. 5",
+                "citation": "s. 344",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "287858dd52048a45f31e4c0d03df10a883ed991175586df0b3115a3bc147d043",
+                "instrument": "Privacy Act 1988 (No. 119, 1988)",
+                "citation": "s. 44(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00227:s44-1",
+                  "provision:au:C2026C00227:s44-2A",
+                  "provision:au:C2026C00227:s44-3",
+                  "provision:au:C2026C00227:s44-4",
+                  "provision:au:C2026C00227:s44-5"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "16bfcbd1763b95da2053f7efe24eed89034efe124832c92f4d0d6481d3526a6a",
+                "instrument": "Surveillance Devices Act 1998 No. 56 of 1998",
+                "citation": "s. 20",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "5611e4504a688c063088d634278e1e1f4ef69cfbf40f2967ae67a5c5871c3b0c",
+                "instrument": "Surveillance Devices Act 1998 No. 56 of 1998",
+                "citation": "s. 21",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "c873a4fcb5e27dfeb8e640b191ac676578b13a4a9741ac65ddf4862887263115",
+                "instrument": "Surveillance Devices Act 1999 No. 21 of 1999",
+                "citation": "s. 26(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "acffdb3655a0f3613c67d82d6a3fe69d910cd9b45141f8766c53afaec9507c1c",
+                "instrument": "Surveillance Devices Act 1999 No. 21 of 1999",
+                "citation": "s. 27(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "5fd0f428bcdbd2dcc2b01b0d939279199752dd48a4461f9303933364f1e71616",
+                "instrument": "Surveillance Devices Act 1999 No. 21 of 1999",
+                "citation": "s. 28(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "166f5583917d5778c70c70460db040c7b75ad4ea9cbae4f5cbade9b848c14d93",
+                "instrument": "Surveillance Devices Act 2004 (No. 152, 2004)",
+                "citation": "s. 28",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00217:s28-1",
+                  "provision:au:C2026C00217:s28-1B",
+                  "provision:au:C2026C00217:s28-1C",
+                  "provision:au:C2026C00217:s28-1D",
+                  "provision:au:C2026C00217:s28-2",
+                  "provision:au:C2026C00217:s28-3",
+                  "provision:au:C2026C00217:s28-4",
+                  "provision:au:C2026C00217:s28-4A",
+                  "provision:au:C2026C00217:s28-4B"
+                ],
+                "outcome": "GATE_MISS"
+              },
+              {
+                "anchor_id": "a6957889c2992d11e48e97e6f9b0ff989fcd391b2cf4f36c51ebfad7e76dea8c",
+                "instrument": "Surveillance Devices Act 2004 (No. 152, 2004)",
+                "citation": "s. 30",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00217:s30-1B",
+                  "provision:au:C2026C00217:s30-2",
+                  "provision:au:C2026C00217:s30-3",
+                  "provision:au:C2026C00217:s30-4"
+                ],
+                "outcome": "GATE_MISS"
+              },
+              {
+                "anchor_id": "120a1b6247ba84cb70231cc5b1adf6712b7ccbf01b03e1f86d7af81f80c21032",
+                "instrument": "Surveillance Devices Act 2004 (No. 152, 2004)",
+                "citation": "s. 33",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00217:s33-2",
+                  "provision:au:C2026C00217:s33-2B",
+                  "provision:au:C2026C00217:s33-3",
+                  "provision:au:C2026C00217:s33-4"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "dc592a271648220b355478020779fb392c67c14a82dfe75f07b29ddf8ba324de",
+                "instrument": "Surveillance Devices Act 2007 No. 19 of 2007",
+                "citation": "s. 33",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "e3716ff5bb79f9dfb9f84329e30e2d7cf4ebf07fa42173ea9a1eb7891c768296",
+                "instrument": "Surveillance Devices Act 2007 No. 19 of 2007",
+                "citation": "s. 39",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "9c1032c2e65d5c711fe76601ae4b6c7fddde91897d47f9ef30643faa8513dfd4",
+                "instrument": "Surveillance Devices Act 2007 No. 64",
+                "citation": "s. 31(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "da224d13e645513ed3699994e2c709f8cbf40f519c226c6470eff4a22faeaf53",
+                "instrument": "Surveillance Devices Act 2007 No. 64",
+                "citation": "s. 32(3)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "ce0e8969cbf23d20b3fb49cb1792581ee1df79c7775ef22d44bc7184fd9f9c52",
+                "instrument": "Surveillance Devices Act 2007 No. 64",
+                "citation": "s. 33(1)",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "29e883c276826ee6de4922feb0336f6481a99b0dfc96f8baef6a0ad569679873",
+                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
+                "citation": "s. 10(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00303:s10-1",
+                  "provision:au:C2026C00303:s10-1A"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "e826ef0d1f4b3a902f2fc272a6282cdef0a86be4bf8d2289c71dc81ddac136d8",
+                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
+                "citation": "s. 15(1)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00303:s15-1",
+                  "provision:au:C2026C00303:s15-2",
+                  "provision:au:C2026C00303:s15-3"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "b92d219c0e9fe872c3648816f80b85a8762f8e05d4b0938c67f2ddb33bb12a70",
+                "instrument": "Taxation Administration Act 1953 (No. 1, 1953)",
+                "citation": "s. 353",
+                "matched_provision_ids": [],
+                "outcome": "ACQUISITION_OR_STRUCTURE_MISS"
+              },
+              {
+                "anchor_id": "3a50d4f5dc7aba1195622d6edf77989bd471e7398c545f2a0cce8e912e987a00",
+                "instrument": "Telecommunications (Interception and Access) Act 1979 (No. 114, 1979)",
+                "citation": "s. 175",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00209:s175-1",
+                  "provision:au:C2026C00209:s175-2",
+                  "provision:au:C2026C00209:s175-3",
+                  "provision:au:C2026C00209:s175-4"
+                ],
+                "outcome": "MAPPING_MISS"
+              },
+              {
+                "anchor_id": "696c47dd4891e0e046fb1a9aee238337626364f34c18c58c412f5a0031bdae4b",
+                "instrument": "Telecommunications (Interception and Access) Act 1979 (No. 114, 1979)",
+                "citation": "s. 176",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00209:s176-1",
+                  "provision:au:C2026C00209:s176-2",
+                  "provision:au:C2026C00209:s176-3",
+                  "provision:au:C2026C00209:s176-4",
+                  "provision:au:C2026C00209:s176-5",
+                  "provision:au:C2026C00209:s176-6"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "6422e2fe206ba0028cd997755b87b427ad80fdabb449b96bf99680cf0f9c1da1",
+                "instrument": "Telecommunications (Interception and Access) Act 1979 (No. 114, 1979)",
+                "citation": "s. 178(2)",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00209:s178-1",
+                  "provision:au:C2026C00209:s178-2"
+                ],
+                "outcome": "PASS"
+              },
+              {
+                "anchor_id": "eccb18304b5ff17ad323e8e4801d28b066d40acfec9bd78bf3f67aa7fed0b5b9",
+                "instrument": "Telecommunications (Interception and Access) Act 1979 (No. 114, 1979)",
+                "citation": "s. 180",
+                "matched_provision_ids": [
+                  "provision:au:C2026C00209:s180-1",
+                  "provision:au:C2026C00209:s180-2",
+                  "provision:au:C2026C00209:s180-3",
+                  "provision:au:C2026C00209:s180-6",
+                  "provision:au:C2026C00209:s180-7"
+                ],
+                "outcome": "PASS"
+              }
+            ]
+          }
+        },
+        "anchors_retrieved_organically": 1,
+        "anchors_injection_saved": 3,
+        "known_anchors": 17,
+        "research_expected_anchors": 60,
+        "known_mapper_abstention_recoveries": 16,
+        "curation": {
+          "excluded_count": 42,
+          "excluded": [
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Cyber Security Act 2024",
+              "article_section": "s. 27(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Cyber Security Act 2024",
+              "article_section": "s. 35(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Cyber Security Act 2024",
+              "article_section": "s. 45",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 12M",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30CM(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.72,
+              "verifier_risks": [
+                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30CJ(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": [
+                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30CU(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": [
+                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30CY(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.74,
+              "verifier_risks": [
+                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 32(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.72,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30CB(4)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30AA",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30AB(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30AH(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": [
+                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30AH(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.91,
+              "verifier_risks": [
+                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 30AI(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "controls",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 31",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.72,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 35AQ(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.74,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I2",
+              "law_name": "Security of Critical Infrastructure Act 2018",
+              "article_section": "s. 35AQ(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 108(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.98,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 107(3)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.98,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 111(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.93,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 107(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.98,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 107(5)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.98,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 111(3)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.93,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 107(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.98,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 107(4)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.98,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 111(4)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.93,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 35F(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.93,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 116(3)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.93,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+              "article_section": "s. 104",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.9,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Corporations Act 2001",
+              "article_section": "s. 286(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "retention",
+              "confidence": 0.98,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Corporations Act 2001",
+              "article_section": "s. 1233G(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "retention",
+              "confidence": 0.93,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Corporations Act 2001",
+              "article_section": "s. 225(5)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "retention",
+              "confidence": 0.98,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I3",
+              "law_name": "Telecommunications Act 1997",
+              "article_section": "Sch 1, cl. 40",
+              "reason": "redundant NEW evidence after precision curation; retained at most 3 functionally distinct provisions for this law/indicator",
+              "legal_function": "retention",
+              "confidence": 0.78,
+              "verifier_risks": [
+                "P7-I3 mandatory retention duty is recordable, but no explicit numeric duration is present; this supports indicator score 0 unless a linked provision supplies the minimum"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I5",
+              "law_name": "Telecommunications (Interception and Access) Act 1979",
+              "article_section": "s. 180(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "investigation",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I5",
+              "law_name": "Telecommunications (Interception and Access) Act 1979",
+              "article_section": "s. 176(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": [
+                "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I5",
+              "law_name": "Telecommunications (Interception and Access) Act 1979",
+              "article_section": "s. 178A(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.78,
+              "verifier_risks": [
+                "exception language exists outside the snippet \u2014 reviewer should read the full section"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I5",
+              "law_name": "Telecommunications (Interception and Access) Act 1979",
+              "article_section": "s. 178A(3)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.78,
+              "verifier_risks": [
+                "exception language exists outside the snippet \u2014 reviewer should read the full section"
+              ]
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I5",
+              "law_name": "Telecommunications (Interception and Access) Act 1979",
+              "article_section": "s. 180A(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "incident",
+              "confidence": 0.72,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I5",
+              "law_name": "Telecommunications (Interception and Access) Act 1979",
+              "article_section": "s. 180B(2)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "investigation",
+              "confidence": 0.78,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I5",
+              "law_name": "Telecommunications (Interception and Access) Act 1979",
+              "article_section": "s. 180B(8)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.74,
+              "verifier_risks": []
+            },
+            {
+              "economy": "Australia",
+              "indicator_id": "P7-I5",
+              "law_name": "Telecommunications (Interception and Access) Act 1979",
+              "article_section": "s. 180C(1)",
+              "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+              "legal_function": "framework",
+              "confidence": 0.78,
+              "verifier_risks": []
+            }
+          ]
+        }
+      }
     }
+  },
+  "tests": {
+    "passed": true,
+    "summary": [
+      "178 passed, 5 warnings in 27.34s"
+    ]
   },
   "graph": {
     "status": "FAIL",
@@ -13385,10 +13378,10 @@
     ]
   },
   "extraction_gold": {
-    "path": "tests/fixtures/extraction_gold_v1.draft.json",
-    "status": "DRAFT_NOT_HUMAN_GOLD",
+    "path": "tests/fixtures/extraction_gold_v1.json",
+    "status": "HUMAN_VERIFIED",
     "pages": 30,
-    "human_checked": 0
+    "human_checked": 30
   },
   "recall": {
     "stats": {
@@ -13418,30 +13411,30 @@
       },
       "Malaysia P7": {
         "gold": 12,
-        "matched": 10,
+        "matched": 11,
         "NOT_IN_CORPUS": 1,
         "IN_CORPUS_NOT_EMITTED": 0,
-        "EMITTED_OTHER_INDICATOR": 1,
+        "EMITTED_OTHER_INDICATOR": 0,
         "GOLD_REF_UNPARSEABLE": 0
       },
       "Australia P6": {
         "gold": 1,
-        "matched": 0,
+        "matched": 1,
         "NOT_IN_CORPUS": 0,
-        "IN_CORPUS_NOT_EMITTED": 1,
+        "IN_CORPUS_NOT_EMITTED": 0,
         "EMITTED_OTHER_INDICATOR": 0,
         "GOLD_REF_UNPARSEABLE": 0
       },
       "Australia P7": {
         "gold": 4,
-        "matched": 3,
+        "matched": 4,
         "NOT_IN_CORPUS": 0,
-        "IN_CORPUS_NOT_EMITTED": 1,
+        "IN_CORPUS_NOT_EMITTED": 0,
         "EMITTED_OTHER_INDICATOR": 0,
         "GOLD_REF_UNPARSEABLE": 0
       }
     },
-    "misses": 11,
+    "misses": 8,
     "pending_adjudications": 0,
     "unresolved_real_misses": [
       {
@@ -13469,36 +13462,12 @@
         "ref": "s. 3.2(ii)"
       },
       {
-        "recall_key": "21c246fb54df07eebf042093097e22e74028bf4e8f45b24c4f3c3497f97a5e29",
-        "verdict": "REAL_MISS",
-        "economy": "Malaysia",
-        "indicator": "P7-I4",
-        "act": "Personal Data Protection Act (Act 709) 2010;\n\nPersonal Data Protection\n(Amendment) Bill (Act A1727) 2024",
-        "ref": "s. 12a(1)"
-      },
-      {
         "recall_key": "905e485c7f68ef136f82332cc333174129ce13b513601594a6ab2695f0d32a8d",
         "verdict": "REAL_MISS",
         "economy": "Malaysia",
         "indicator": "P7-I5",
         "act": "Personal Data Protection Code of Practice for Licensees Under the Communications and Multimedia (Act 1998) of 2017",
         "ref": "s. 7.4"
-      },
-      {
-        "recall_key": "e96fbe886cc01ec86e90cba5063f2908a210fbd8241e0c04b5f082cab1967fb8",
-        "verdict": "REAL_MISS",
-        "economy": "Australia",
-        "indicator": "P6-I2",
-        "act": "My Health Records Act 2012",
-        "ref": "s. 77"
-      },
-      {
-        "recall_key": "0e438b99ffa0e7f2a9eab41323925999d1f2382ce881047a4efc0457579d0b6e",
-        "verdict": "REAL_MISS",
-        "economy": "Australia",
-        "indicator": "P7-I5",
-        "act": "Australian Security Intelligence Organisation Act 1979; \n\nSurveillance Legislation Amendment (Identify and Disrupt) Act 2021;\n\nData Availability and Transparency Act 2022",
-        "ref": "s. 25A"
       }
     ],
     "adjudicated_gold_or_abstention": [
@@ -13521,12 +13490,12 @@
     ]
   },
   "candidates": {
-    "rows": 224,
-    "pending_review": 224,
-    "citation_proof_rows": 212,
-    "absence_manifest_rows": 12,
-    "complete_evidence_contract": 224,
-    "in_force": 224,
+    "rows": 228,
+    "pending_review": 228,
+    "citation_proof_rows": 217,
+    "absence_manifest_rows": 11,
+    "complete_evidence_contract": 228,
+    "in_force": 228,
     "snippet_closure_failures": []
   },
   "zone3_pending": 30,

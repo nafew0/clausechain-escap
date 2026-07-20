@@ -1,8 +1,8 @@
 {
  "economy": "Singapore",
  "pillar": 7,
- "run": "run-sg-p7-1784545282",
- "krippendorff_alpha": 0.811,
+ "run": "run-sg-p7-1784548650",
+ "krippendorff_alpha": 0.803,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
@@ -13,18 +13,18 @@
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "The cited Personal Data Protection Act 2012 s. 3 states a horizontal purpose to govern collection, use, and disclosure of personal data by organisations while r"
+     "score": 0.5,
+     "reason": "The cited provisions show a horizontal personal data protection regime (e.g., responsibility for data and consent withdrawal), but the evidence does not plainly"
     },
     {
      "persona": "ESCAP",
-     "score": 0.0,
-     "reason": "A comprehensive horizontal framework exists under the Personal Data Protection Act 2012, which governs the collection, use and disclosure of personal data by or"
+     "score": 0.5,
+     "reason": "The evidence shows a horizontal Personal Data Protection Act 2012 with core accountability and consent-withdrawal obligations, but the provided excerpts do not "
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "Although a horizontal Personal Data Protection Act 2012 exists, the evidence provided is only a partial purpose statement and does not demonstrate a comprehensi"
+     "reason": "While there is a horizontal Personal Data Protection Act and regulations, the cited provisions do not demonstrate a comprehensive framework (e.g., key individua"
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The cited provisions establish cybersecurity requirements only for specific categories of critical information infrastructure/essential service providers (secto"
+     "reason": "The cited provisions establish cybersecurity obligations and exercises only for specific categories of critical information infrastructure/essential service pro"
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "The evidence shows cybersecurity obligations only for specific critical information infrastructure/essential service provider categories via sectoral regulation"
+     "reason": "The evidence shows only sectoral cybersecurity obligations for provider-owned and third-party-owned critical information infrastructure/essential service provid"
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The evidence shows only sectoral cybersecurity rules focused on provider/third-party-owned critical information infrastructure and essential service providers, "
+     "reason": "The evidence points to sectoral/critical-infrastructure-specific cybersecurity regulations (provider-owned and third-party-owned CIIs) rather than a dedicated h"
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions (Companies Act 1967 s.199(2)/(3)/(4) and Income Tax Act 1947 s.67(1)) plainly require retention for a minimum period of not less than 5 yea"
+     "reason": "The cited provisions plainly specify minimum retention periods (e.g., Companies Act 1967 s.199(2) requires not less than 5 years, and Income Tax Act 1947 s.67(1"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Companies Act 1967 s.199 and the Income Tax Act 1947 s.67 explicitly require records to be retained for not less than 5 years (from the end of the relevant "
+     "reason": "Multiple laws specify a minimum retention period (e.g., Companies Act 1967 s.199(2) requires retention for not less than 5 years, and Income Tax Act 1947 s.67(1"
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "A clear minimum data retention period is specified in the Companies Act 1967 (not less than 5 years from the end of the financial year) and the Income Tax Act 1"
+     "reason": "Multiple statutes explicitly specify a minimum retention period (e.g., Companies Act 1967 s.199(2) requires not less than 5 years, and Income Tax Act 1947 s.67("
     }
    ],
    "band": [
@@ -138,25 +138,25 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions allow police officers or authorised persons to access/inspect/check data or documents/things based on their own consideration, without any "
+     "reason": "The cited Criminal Procedure Code provisions allow police officers or authorised persons to access/inspect/check data or documents/things based on their own con"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Criminal Procedure Code provisions cited (e.g., s.20(1A), s.20(5), s.39(1) and s.39(1A)) allow police officers/authorised persons to access/inspect/check do"
+     "reason": "The Criminal Procedure Code 2010 s. 20(1A) and s. 39(1A) allow police officers of at least sergeant rank or authorised persons to access/inspect certain data/do"
     },
     {
      "persona": "skeptical",
-     "score": 1.0,
-     "reason": "The cited Criminal Procedure Code provisions (e.g., s.20(1A), s.39(1A)) allow police/authorised persons to access/inspect/check documents or data without indepe"
+     "score": 0.5,
+     "reason": "The cited Criminal Procedure Code provisions allow police/authorised persons to access/inspect/check data and documents based on internal consideration (e.g., s"
     }
    ],
    "band": [
-    1.0,
+    0.5,
     1.0
    ],
-   "spread": 0.0,
-   "flag_for_review": false,
+   "spread": 0.5,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   }
  },

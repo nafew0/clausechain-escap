@@ -1,8 +1,8 @@
 {
  "economy": "Australia",
  "pillar": 7,
- "run": "run-au-p7-1784547631",
- "krippendorff_alpha": 0.576,
+ "run": "run-au-p7-1784553157",
+ "krippendorff_alpha": 0.811,
  "indicators": {
   "P7-I1": {
    "deterministic": 1.0,
@@ -24,7 +24,7 @@
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "No comprehensive horizontal data protection framework is evidenced (Privacy Act 1988 has no evidence found pending review), so the indicator should be scored as"
+     "reason": "No comprehensive horizontal data protection framework is evidenced (Privacy Act 1988 has no supporting evidence found pending review), so the indicator should b"
     }
    ],
    "band": [
@@ -45,24 +45,24 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited provisions include a horizontal Cyber Security Act 2024 framework (e.g., a Cyber Incident Review Board and incident information to a National Cyber Se"
+     "reason": "The cited provisions include a horizontal Cyber Security Act 2024 establishing incident-related functions (e.g., determining cyber security incidents and conduc"
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The Cyber Security Act 2024 provides a dedicated horizontal cybersecurity framework (e.g., incident review mechanisms and incident information reporting to the "
+     "reason": "The Cyber Security Act 2024 provides a dedicated horizontal cybersecurity framework (e.g., incident determination and governance functions under sections 36(2) "
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "Although there is a Cyber Security Act 2024 with horizontal provisions (e.g., incident review board and reporting to a national coordinator), the evidence provi"
+     "score": 0.0,
+     "reason": "The Cyber Security Act 2024 provides a horizontal cybersecurity framework (e.g., incident identification/coordination and governance functions), so the economy "
     }
    ],
    "band": [
     0.0,
-    0.5
+    0.0
    ],
-   "spread": 0.5,
+   "spread": 0.0,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   },
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions repeatedly and plainly specify a minimum retention period of 7 years (e.g., AML/CTF Act 2006 ss 117(2), 114A(1), 111(4) and Corporations Ac"
+     "reason": "The cited provisions (e.g., AML/CTF Act 2006 ss 111(1), 114A(1), 117(2) and Corporations Act 2001 s 286A(2)) plainly specify a minimum retention period of 7 yea"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Multiple provisions explicitly specify a minimum data retention period of 7 years (e.g., AML/CTF Act 2006 ss. 117(2), 114A(1), 111(4) and Corporations Act 2001 "
+     "reason": "Multiple provisions explicitly specify a minimum retention period of 7 years (e.g., AML/CTF Act 2006 ss. 111(1), 114A(1), 117(2), and Corporations Act 2001 s. 2"
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Multiple provisions explicitly specify a minimum retention period of 7 years for relevant records (e.g., AML/CTF Act 2006 ss. 117(2), 114A(1), 111(4) and Corpor"
+     "reason": "Multiple AML/CTF provisions explicitly specify a minimum retention period of 7 years (e.g., AML/CTF Act 2006 ss 111(1), 114A(1), 117(2)), satisfying the require"
     }
    ],
    "band": [
@@ -107,17 +107,17 @@
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The quoted text states a DPO/DPIA-type requirement only when an agency proposes an activity involving handling personal information and the Commissioner conside"
+     "reason": "The quoted text states a DPO/DPIA-like requirement only when an agency proposes an activity involving handling personal information and the Commissioner conside"
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "The evidence shows a horizontal Privacy Act 1988 s.33D(1) requirement tied to agencies proposing activities involving handling personal information, indicating "
+     "reason": "Evidence shows a horizontal Privacy Act 1988 s.33D(1) requirement triggered when an agency proposes an activity involving handling personal information and the "
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The evidence shows a horizontal statutory trigger for a Privacy Act s.33D(1) DPIA/DPO-type requirement when an agency proposes an activity involving handling pe"
+     "reason": "The evidence shows a horizontal statutory trigger for a Privacy Act DPIA/DPO-type requirement when an agency proposes an activity involving handling personal in"
     }
    ],
    "band": [
@@ -137,25 +137,25 @@
    "judges": [
     {
      "persona": "strict",
-     "score": 1.0,
-     "reason": "The cited provisions allow government/authorised officers to require or access relevant information or documents by notice without any stated independent judici"
+     "score": 0.0,
+     "reason": "The cited provisions either require consent for entry (s.150(1)), impose information requirements by notice (s.167(2)), or require an Attorney-General-issued wa"
     },
     {
      "persona": "ESCAP",
-     "score": 1.0,
-     "reason": "The cited provisions allow government/authorised officers to require or access relevant personal information/documents by notice without indicating independent "
+     "score": 0.5,
+     "reason": "The evidence shows some government access powers that can be exercised without independent judicial authorization (e.g., AML/CFT authorised officer powers to re"
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The cited provisions allow government/authorised officers to compel provision of information or use certain surveillance/electronic access without independent j"
+     "reason": "The evidence includes some government access powers that appear to rely on consent or administrative notice (e.g., AML/CFT entry with occupier consent and writt"
     }
    ],
    "band": [
-    0.5,
+    0.0,
     1.0
    ],
-   "spread": 0.5,
+   "spread": 1.0,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   }

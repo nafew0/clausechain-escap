@@ -2061,5 +2061,89 @@
   "economy": "Australia",
   "pillar": 6,
   "elapsed_seconds": 126.3
+ },
+ {
+  "run_id": "run-au-p6-1784555543",
+  "at": "2026-07-20T13:56:05.127804+00:00",
+  "models": {},
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Australia",
+  "pillar": 6,
+  "elapsed_seconds": 221.6
+ },
+ {
+  "run_id": "run-au-p7-1784555643",
+  "at": "2026-07-20T13:58:40.963157+00:00",
+  "models": {},
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Australia",
+  "pillar": 7,
+  "elapsed_seconds": 277.8
+ },
+ {
+  "run_id": "run-my-p7-1784556236",
+  "at": "2026-07-20T14:04:03.410224+00:00",
+  "models": {},
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Malaysia",
+  "pillar": 7,
+  "elapsed_seconds": 6.6
+ },
+ {
+  "run_id": "run-my-p6-1784557829",
+  "at": "2026-07-20T14:35:44.606329+00:00",
+  "models": {
+   "gpt-5.4-nano": {
+    "input_tokens": 175045,
+    "cached_input_tokens": 0,
+    "output_tokens": 36717,
+    "calls": 102,
+    "usd": 0.0809,
+    "priced": true
+   },
+   "gpt-5.4-mini": {
+    "input_tokens": 37024,
+    "cached_input_tokens": 0,
+    "output_tokens": 5766,
+    "calls": 22,
+    "usd": 0.0537,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1346,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Malaysia",
+  "pillar": 6,
+  "elapsed_seconds": 314.9
+ },
+ {
+  "run_id": "run-my-p6-1784561771",
+  "at": "2026-07-20T15:41:36.463202+00:00",
+  "models": {
+   "gpt-5.4-nano": {
+    "input_tokens": 183885,
+    "cached_input_tokens": 0,
+    "output_tokens": 37465,
+    "calls": 109,
+    "usd": 0.0836,
+    "priced": true
+   },
+   "gpt-5.4-mini": {
+    "input_tokens": 40075,
+    "cached_input_tokens": 0,
+    "output_tokens": 6703,
+    "calls": 24,
+    "usd": 0.0602,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1438,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Malaysia",
+  "pillar": 6,
+  "elapsed_seconds": 325.1
  }
 ]

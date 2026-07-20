@@ -111,3 +111,17 @@ def test_zone3_gold_tripwire():
     assert gold.get("P7-I1") == 0.0  # AU has the Privacy Act — master agrees
     det, _ = deterministic_score("P7-I1", [])  # thin evidence -> det claims 1
     assert abs(det - gold["P7-I1"]) > 0.01  # divergence detected -> would flag
+
+
+def test_zone3_binding_agreement_inverse_polarity():
+    from scripts.zone3_score import deterministic_score
+
+    treaty = {
+        "Article / Section": "Art. 14.11",
+        "Coverage": "Horizontal",
+        "Law Name": "Binding digital trade agreement",
+    }
+    assert deterministic_score("P6-I5", [treaty]) == (
+        0.0, "binding cross-border data-transfer agreement evidenced")
+    assert deterministic_score("P6-I5", []) == (
+        1.0, "no qualifying binding data-transfer agreement found")

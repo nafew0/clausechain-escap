@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 
 from packages.verifier.gates import (finalize_snippet_result,
-                                     g9_structural_closure)
+                                     g9_structural_closure, source_exact_span)
 from packages.core.finalization import review_subject_hash
 from packages.core.schemas import MappedFinding
 from packages.ingest.expected_anchors import citation_refs
@@ -43,6 +43,13 @@ def test_colon_introduced_list_follows_all_children():
     assert result.text.endswith("required by a court.")
     assert "(c)" in result.text
     assert result.closure_code == "PASS_CLOSED"
+
+
+def test_source_offset_map_handles_nfkc_character_expansion():
+    source = "The ofﬁcer must record the decision."
+    located = source_exact_span("The officer must record", source)
+    assert located is not None
+    assert located[0] == "The ofﬁcer must record"
 
 
 def test_nested_list_does_not_close_at_first_child_sentence():

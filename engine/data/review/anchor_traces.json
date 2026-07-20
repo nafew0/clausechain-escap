@@ -1,6 +1,6 @@
 {
   "contract": "clausechain-anchor-trace-v1",
-  "generated_at": "2026-07-20T13:31:41.641316+00:00",
+  "generated_at": "2026-07-20T14:05:52.323733+00:00",
   "counts": {
     "PASS": 48,
     "GATE_MISS": 10,

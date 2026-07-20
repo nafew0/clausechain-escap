@@ -302,18 +302,20 @@ def source_exact_span(snippet: str, source_text: str) -> tuple[str, int, int] | 
     offset_map: list[int] = []
     prev_space = True
     for index, ch in enumerate(source_text):
-        c = unicodedata.normalize("NFKC", ch)
-        c = {"‑": "-", "–": "-", "—": "-", "‘": "'", "’": "'", "“": '"', "”": '"'}.get(c, c)
-        if c.isspace():
-            if prev_space:
-                continue
-            norm_chars.append(" ")
-            offset_map.append(index)
-            prev_space = True
-        else:
-            norm_chars.append(c.lower())
-            offset_map.append(index)
-            prev_space = False
+        normalized = unicodedata.normalize("NFKC", ch)
+        for c in normalized:
+            c = {"‑": "-", "–": "-", "—": "-", "‘": "'", "’": "'", "“": '"', "”": '"'}.get(c, c)
+            if c.isspace():
+                if prev_space:
+                    continue
+                norm_chars.append(" ")
+                offset_map.append(index)
+                prev_space = True
+            else:
+                for lowered in c.lower():
+                    norm_chars.append(lowered)
+                    offset_map.append(index)
+                prev_space = False
     norm_source = "".join(norm_chars)
     target = _normalize(snippet)
     pos = norm_source.find(target)

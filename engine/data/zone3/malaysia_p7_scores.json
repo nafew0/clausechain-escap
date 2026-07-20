@@ -1,8 +1,8 @@
 {
  "economy": "Malaysia",
  "pillar": 7,
- "run": "run-my-p7-1784546147",
- "krippendorff_alpha": 0.097,
+ "run": "run-my-p7-1784549177",
+ "krippendorff_alpha": 0.25,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "Act 709 provides a horizontal personal data protection framework with access and correction rights, but the cited provisions show only partial rights (e.g., acc"
+     "reason": "The cited provisions show a horizontal data protection framework (e.g., breach notification and data subject rights), but the evidence does not establish a comp"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "A comprehensive horizontal data protection framework exists under the Personal Data Protection Act (Act 709) 2010, including core principles and data subject ri"
+     "reason": "Malaysia has a horizontal personal data protection framework under the Personal Data Protection Act 2010 (Act 709) as amended by the Personal Data Protection (A"
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "While Act 709 provides a horizontal data protection framework with notice/choice and access/correction rights, the evidence indicates the framework is not fully"
+     "reason": "Although Malaysia has a horizontal personal data protection framework (Act 709 as amended by Act A1727) covering breach notification and access/correction, the "
     }
    ],
    "band": [
@@ -44,25 +44,25 @@
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "The cited provisions are from a dedicated horizontal Cyber Security Act (Act 854) 2024, including enforcement powers and licensing rules for cyber security serv"
+     "score": 0.5,
+     "reason": "The cited provisions show cybersecurity rules that are sectoral (e.g., CII incident notification and risk assessment/audit) and a horizontal licensing regulatio"
     },
     {
      "persona": "ESCAP",
-     "score": 0.0,
-     "reason": "The Cyber Security Act (Act 854) 2024 provides a dedicated horizontal cybersecurity framework (e.g., licensing and enforcement powers under sections 27 and 36),"
+     "score": 0.5,
+     "reason": "The economy has a dedicated cybersecurity legal regime (Cyber Security Act 854 2024 and related 2024 regulations), but the provided evidence shows key operation"
     },
     {
      "persona": "skeptical",
-     "score": 1.0,
-     "reason": "The evidence shows a dedicated Cyber Security Act (Act 854) with horizontal provisions (e.g., enforcement powers and licensing of cyber security service provide"
+     "score": 0.5,
+     "reason": "The evidence shows multiple 2024 cybersecurity regulations that are sectoral (e.g., CII incident notification and risk/audit) plus a licensing regulation that i"
     }
    ],
    "band": [
     0.0,
-    1.0
+    0.5
    ],
-   "spread": 1.0,
+   "spread": 0.5,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   },
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions plainly specify minimum retention periods (e.g., at least seven years under Companies Act 2016 s. 341(5) and five years for retained books "
+     "reason": "The Companies Act 2016 (Act 777) s. 341(3)/(4)/(5) expressly requires records to be kept for at least seven years, which clearly specifies a minimum retention p"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Evidence specifies minimum retention periods (e.g., Companies Act 2016 s.341(5) requires records kept for at least seven years, and s.518(2) requires retention "
+     "reason": "Malaysia\u2019s Companies Act 2016 (Act 777) s. 341(3)-(5) requires records to be kept for at least seven years, which clearly specifies a minimum retention period."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "While some laws specify minimum retention periods (e.g., Companies Act 2016 at least seven years; AML/sectoral provisions implying retention beyond seven years)"
+     "reason": "While the Companies Act 2016 clearly specifies a minimum retention period of at least seven years for certain corporate records, the AML Act 2001 evidence provi"
     }
    ],
    "band": [
@@ -107,17 +107,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions plainly require data controllers to appoint a Data Protection Officer (s.12A(3)-(4) Act A1727 and Circular 1/2025 s.10(1),(9)), with no ind"
+     "reason": "The cited text plainly requires data controllers to appoint a Data Protection Officer (s.12A(1) and (3) of Act A1727, and the PDP Commissioner Circular 1/2025 s"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Evidence shows a horizontal legal requirement under Act A1727 s.12A for all data controllers to appoint a Data Protection Officer (and the PDP Commissioner Circ"
+     "reason": "Evidence shows a horizontal legal requirement for all data controllers to appoint a Data Protection Officer (Act A1727 s.12A(1),(3) and PDP Commissioner Circula"
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The evidence shows a horizontal legal requirement under Act A1727 s.12A(3)-(4) and PDP Commissioner Circular 1/2025 s.10(1),(9) for data controllers/processors "
+     "reason": "The evidence cites a horizontal statutory requirement under Act A1727 s.12A(1) and (3) that all data controllers must appoint one or more Data Protection Office"
     }
    ],
    "band": [
@@ -138,17 +138,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions allow police officers (and in some cases the Public Prosecutor) to access or obtain data without stating that independent judicial authoriz"
+     "reason": "The cited provisions allow investigating or police officers to take possession, require delivery of documents/information, and access computerized data during s"
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Criminal Procedure Code allows police officers (not below Inspector) conducting searches to be given access to computerized data, and the Security Offences "
+     "reason": "The cited provisions allow investigating officers/police to compel delivery of documents/information and to access computerized data during searches without any"
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The cited provisions allow police (and in some cases the Public Prosecutor) to access or obtain data without independent judicial authorization, but the evidenc"
+     "reason": "The cited provisions allow police/investigating officers to compel delivery or access to documents/information and computerized data during investigations/searc"
     }
    ],
    "band": [

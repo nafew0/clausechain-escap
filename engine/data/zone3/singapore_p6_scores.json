@@ -2,7 +2,7 @@
  "economy": "Singapore",
  "pillar": 6,
  "run": "run-sg-p6-1784544950",
- "krippendorff_alpha": 0.682,
+ "krippendorff_alpha": 1.0,
  "indicators": {
   "P6-I1": {
    "deterministic": 0.0,
@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found that the Personal Data Protection Act 2012 imposes any ban or local processing requirement on personal data or applies such requirements h"
+     "reason": "No evidence was found that the Personal Data Protection Act 2012 imposes any ban or local processing requirements on personal data or applies such requirements "
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found that the economy has any ban and local processing requirements for personal data or any horizontal/non-personal-specific req"
+     "reason": "No gate-verified evidence was found that the economy imposes any ban and local processing requirements on personal data or applies such requirements horizontall"
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence was found that the economy imposes any ban or local processing requirement on personal data or applies such requirements horizontally (the "
+     "reason": "No evidence was found that the economy has any ban or local processing requirement covering personal data or applying horizontally (or any equivalent requiremen"
     }
    ],
    "band": [
@@ -55,7 +55,7 @@
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found that any local storage requirement applies to personal data or that any non-personal/specific-data storage rule exists."
+     "reason": "No gate-verified evidence was found of any local storage requirement for personal data or any horizontal/non-personal specific storage rule, so the indicator sh"
     }
    ],
    "band": [
@@ -76,7 +76,7 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No infrastructure requirement is plainly stated in the provided evidence (NO_EVIDENCE_FOUND_PENDING_REVIEW), so the score is 0."
+     "reason": "No evidence was found that any rule makes local data centre/server infrastructure a precondition for service or conditions data transfer on such infrastructure."
     },
     {
      "persona": "ESCAP",
@@ -86,7 +86,7 @@
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition or transfer conditioned on infrastr"
+     "reason": "No verified evidence was found that any service is conditioned on local data-centre/server infrastructure or that data transfer is conditioned on such infrastru"
     }
    ],
    "band": [
@@ -112,12 +112,12 @@
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Personal Data Protection Act 2012 s.26 and the Personal Data Protection Regulations 2021 s.12/s.10 impose conditions on cross-border transfers of personal d"
+     "reason": "The Personal Data Protection Act 2012 s.26 and the Personal Data Protection Regulations 2021 s.12 impose horizontal conditions on transferring personal data out"
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The evidence shows horizontal, personal-data transfer restrictions and conditions under Singapore\u2019s PDPA 2012 s.26 and PDPR 2021 regs. 10\u201312, meaning transfer f"
+     "reason": "The evidence shows horizontal, personal-data transfer restrictions and conditions under Singapore\u2019s PDPA (s.26(1),(2),(4)) plus corresponding cross-border safeg"
     }
    ],
    "band": [
@@ -130,7 +130,7 @@
   },
   "P6-I5": {
    "deterministic": 0.0,
-   "deterministic_reason": "unknown indicator",
+   "deterministic_reason": "binding cross-border data-transfer agreement evidenced",
    "master_gold": null,
    "gold_divergence": false,
    "gold_divergence_note": null,
@@ -138,7 +138,7 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited agreements (Digital Economy Partnership Agreement Art. 4.3 and Singapore-Australia Digital Economy Agreement Art. 23) each contain binding commitments"
+     "reason": "The cited agreements (Digital Economy Partnership Agreement Art. 4.3 and Singapore-Australia Digital Economy Agreement Art. 23) both contain binding commitments"
     },
     {
      "persona": "ESCAP",
@@ -147,16 +147,16 @@
     },
     {
      "persona": "skeptical",
-     "score": 1.0,
-     "reason": "The cited agreements contain binding commitments to allow or not restrict cross-border electronic information transfers (including personal information) for cov"
+     "score": 0.0,
+     "reason": "The cited Digital Economy Partnership Agreement and Singapore\u2013Australia Digital Economy Agreement both contain binding provisions requiring/allowing cross-borde"
     }
    ],
    "band": [
     0.0,
-    1.0
+    0.0
    ],
-   "spread": 1.0,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   }
  },

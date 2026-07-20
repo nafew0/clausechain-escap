@@ -13,7 +13,7 @@ import json
 import re
 from pathlib import Path
 
-_SECTION_BASE = re.compile(r"(\d+(?:\.\d+){0,2}[A-Z]*)")
+_SECTION_BASE = re.compile(r"(\d+(?:\.\d+){0,2}[A-Z]*)", re.I)
 _NON_ALNUM = re.compile(r"[^a-z0-9 ]+")
 
 
@@ -38,7 +38,7 @@ def section_base(article_section: str) -> str | None:
     match = _SECTION_BASE.search(ref)
     if not match:
         return None
-    base = match.group(1)
+    base = match.group(1).upper()
     if base.isdigit() and int(base) >= 1000:  # a year, not a section number
         return None
     return base
@@ -68,7 +68,20 @@ def laws_match(gold_act_norm: str, law_name: str) -> bool:
     gold, ours = law_tokens(gold_act_norm), law_tokens(law_name)
     if not gold or not ours:
         return False
-    return gold <= ours or ours <= gold
+    if gold <= ours or ours <= gold:
+        return True
+    # Master cells often bind a principal Act and its enacted amendment in one
+    # display value.  Compilation years and amendment numbers must not make the
+    # same Act family look like two unrelated instruments.  Eligibility still
+    # rejects Bills separately; this matcher only resolves legal identity.
+    def family(tokens: set[str]) -> set[str]:
+        return {token for token in tokens
+                if token not in {"amendment", "amending"}
+                and not re.fullmatch(r"(?:\d+|[a-z]\d+)", token)}
+
+    gold_family, our_family = family(gold), family(ours)
+    return (len(gold_family) >= 3 and len(our_family) >= 3
+            and (gold_family <= our_family or our_family <= gold_family))
 
 
 class KnownIndex:

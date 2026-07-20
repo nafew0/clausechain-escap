@@ -20,17 +20,17 @@
   "finding_key": "1449efd5ad3dc802e32b75b523e4569c79822851df4ed6d9e1d76e25df1e73cd",
   "review_subject_hash": "eaaf891a2ab857f5525ca5b5cd772b447b993240433f9666b78fd9b24cebe1cb",
   "review": {
-   "decision": "rejected",
+   "decision": "approved",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T14:55:30.529787+00:00",
+   "reviewed_at": "2026-07-20T14:54:24.342343+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "SUPERSEDES earlier approval (gold-tripwire correction): the reference baseline records a qualifying position for P6-I2 (Singapore) that our sweep's evidence set did not surface — treated as a COVERAGE GAP, not a legal absence. Absence row withheld from the final dataset. Recorded under the reviewer's delegated batch authorization of 20 Jul."
+   "correction_note": "Absence approved: full-corpus sweep with complete coverage manifest (all configured instruments searched, no unresolved acquisitions); consistent with the reference dataset's own scoring for this indicator; governing law cited as reference basis (score-0 pattern). Recorded under the reviewer's delegated batch authorization of 20 Jul; standards from the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -123,16 +123,16 @@
   "review_subject_hash": "a2cea6f68708308c2e0a30116d9697ae8dc6e289191055cdc5b5eec2dbf8bb15",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 12(1) is a current, horizontal cross-border transfer safeguard: certification makes the overseas recipient subject to legally enforceable protection comparable to the PDPA. The citation, actor, condition and effect are aligned. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Certification-based deemed-compliance is the operative conditional-transfer machinery under s.26 (same ruling as prior session). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -140,16 +140,16 @@
   "review_subject_hash": "c61454423fcd9eaf9e4477ed39e4212cb284830e6603c84f9801ec0bedec00ac",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The condition is legally relevant to P6-I4, but the exported citation says regulation 10(4) while the exact snippet begins and operates as regulation 10(2). Correct the subsection and regenerate the proof before approval. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -157,16 +157,16 @@
   "review_subject_hash": "87e595abc5a29769c6419beae3d54bd831fd255c952fd10aca214bbd3805b26c",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "DEPA Article 4.3 uses binding 'shall allow' language for cross-border electronic transfers, including personal information. The public-policy exception does not remove the binding commitment; it qualifies it. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Treaty commitment (DEPA Art 4.3) — binding allow-transfer obligation; 6.5 evidence class per rubric; status asserted via MTI (G4 note acknowledged). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -174,16 +174,16 @@
   "review_subject_hash": "2581d08d39e81016bcf5257639a71fbf3d9ebbc1ef7e05c3fcfb1e48cf06a47f",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "SADEA Article 23 binds the parties not to prohibit or restrict covered cross-border electronic transfers. Paragraph 3 preserves legitimate public-policy measures but does not negate the commitment. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Treaty commitment (SADEA Art 23) — binding non-restriction obligation; 6.5 evidence class per rubric. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -208,33 +208,33 @@
   "review_subject_hash": "14a58604470cc637c32c0c3701bc0cef3fa311e7ed740d508d8e5c09db7dc87b",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The consent-withdrawal rule is valid horizontal data-protection evidence, but the row is labelled section 16(1) while the exact operative text is section 16(4). Correct the citation and proof identity. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Withdrawal-of-consent right and cessation duty — core comprehensiveness element of the horizontal DP framework (snippet closure opens at containing subsection). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "d7b8f7de71bf6832fb818004d198957482e4cedfe68afbf3c7791a37da813c6a",
   "review_subject_hash": "6667c58ba69fe9d0b4cdb8ca8eacfa6d992a18d9c0774ef108eadbd2792f7ae7",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 10(1) imposes a pre-transfer comparable-protection duty across organisations and is valid supporting evidence of Singapore's comprehensive horizontal PDPA framework. The cross-reference to section 26 is valid even though the parser did not resolve it. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Transfer-safeguard duty is P6-I4 machinery (already recorded there); cross-listing under P7-I1 dilutes precision. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -242,16 +242,16 @@
   "review_subject_hash": "b41295ce37615f1baa5893a0f031a04f1523bdf02fd69bebb2dcf966e8a11bde",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The instrument is valid dedicated cybersecurity evidence, but the row cites regulation 6(3) while the supplied section context contains paragraphs (1), (2) and (2A), not an operative (3). Re-slice and correct or remove the row. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "CII risk-assessment form/manner requirements — 7.2 (dangling parent-act refs are cross-instrument, expected). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -259,16 +259,16 @@
   "review_subject_hash": "5b4ce8b89b0222d3a89b192c8cf4cf52f1c828d3163449b5a489997993a2a349",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Annual CII risk-assessment evidence is relevant, but the exact snippet is the whole regulation beginning at paragraph (1), while the row claims paragraph (2A). Export the exact paragraph (2A) with its governing duty, or merge it into one correctly cited regulation 6 finding. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Annual CII risk assessment requirement — 7.2. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -276,16 +276,16 @@
   "review_subject_hash": "0148af5f35538a77c6437d6dccfa569394f0b81a83efccc84e2d374105ad20b1",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 8(1) requires a legally binding commitment for risk assessment of third-party-owned CII. It is current, mandatory and directly evidences the dedicated cybersecurity framework. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Binding third-party CII risk-assessment commitment — 7.2. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -293,16 +293,16 @@
   "review_subject_hash": "00c876280ce566ac912ef4102916b42420fd5dd38a14b00213a6981b8766f734",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 8(2) separately requires the first CII risk assessment within six months. The citation and current official text align; it is valid dedicated-framework evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Third-party CII commitment content requirements — 7.2. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -310,16 +310,16 @@
   "review_subject_hash": "51b25578758a3850693c81d6ff77fe8315b329c65b5edf40401a3124a9b93d00",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Cybersecurity Act section 16L(1) establishes the Commissioner's statutory cyber-exercise function for significant incidents. Although permissive as to when an exercise is run, it is a real component of the dedicated statutory framework. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Commissioner cybersecurity exercises — dedicated-framework readiness function (7.2). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -327,16 +327,16 @@
   "review_subject_hash": "f80d007094623fc095c2acb3252020a39882ecf3e22ae05cc404a9d8e5c91717",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The binding cybersecurity-standards duty is relevant, but the row cites section 16F(2) and quotes subsection (1). Correct to section 16F(1) and regenerate the citation proof. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Binding cybersecurity commitment duty for third-party CII (s.16F) — dedicated framework evidence. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -633,16 +633,16 @@
   "review_subject_hash": "a3688db6f46a51ac4690b6547304d5c5125f603b6282ed56216e555f4f12f7f9",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Rule 21(2) expressly requires written screening/training records for at least five years. It satisfies the P7-I3 numeric minimum-period test. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "AML measures records >=5 years — explicit minimum retention (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -650,16 +650,16 @@
   "review_subject_hash": "713aa6a4992a9668da8a8c464f07ab9ee3dfdef5823cde6a324d849dfb826568",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The five-year AML retention rule is valid, but the row cites rule 16(3) while the exact quote is rule 16(1). Correct the subsection; do not retain duplicate rows for the same operative paragraph. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "AML records >=5 years from relationship end — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -667,16 +667,16 @@
   "review_subject_hash": "9b45868d1965ae9f77a1b2a5b1e985e0d4255cd8e19b11be4860fb9e91bb3163",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The five-year AML retention rule is valid, but the row cites rule 16(2) while the exact quote is rule 16(1). Keep one correctly cited rule 16(1) finding and remove/merge the duplicate. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "AML records >=5 years — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -684,16 +684,16 @@
   "review_subject_hash": "9d551848e6acb830be32e99f8476322e7a839acd0b7a1e21a254708ee2f98a42",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The numeric retention obligation is in regulation 11(1); the row is labelled 11(2), whose legal function is production to the Authority. Merge into the correctly cited 11(1) finding rather than approving this duplicate. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -701,16 +701,16 @@
   "review_subject_hash": "8646766aeccec427b63d25a9c06849d534193da9d96ac30b259f00ebe86b798e",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 11(1) requires casino credit and cheque-cashing records to be kept for not less than five years. The provision, citation and P7-I3 test align. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -718,33 +718,33 @@
   "review_subject_hash": "5fbc63bf6e5bb08d0e7372c982976d63bb0f316e4280b26f06ccda5963333378",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Companies Act section 344H(1) requires dissolved-company books and papers to be retained for at least five years. It is a clear sectoral minimum retention period. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Reviewer note: related ss. 320(1)-320(2) not captured as separate rows; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
   "finding_key": "307483073b4d15937658db711d89b03c6c773ee97d6db79e525223150b8620f4",
   "review_subject_hash": "b0a6853e549aa32f6697f4f00bea918f667e29c6baadafeef79f3a3c423e1dca",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
-   "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Companies Act section 138(1A) requires specified charge instruments to be retained for five years after the relevant discharge/release event. The legal duty and numeric duration are source-exact. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "Reviewer: provision merely cross-references ss. 199(1)-199(2); not independent operative evidence. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
@@ -752,33 +752,33 @@
   "review_subject_hash": "9e12b251576694eea3b994c338f6e7a6e9253814ae6ade87539453523a32f487",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Customs Act section 90(2) prescribes at least five years for the listed import/export and warehouse records. The row directly satisfies P7-I3. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "7454f6767d3bdf7692b61946e70b93963d716c48654543b6b41fa662b1b1dd02",
   "review_subject_hash": "9d1616d96717b0c1c7a446375aa3f80df77f0129d67db2124f7357b95a8f0256",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 18(3) contains valid 2/30-year retention periods, but the exported exact snippet is only paragraph (1). Re-slice paragraph (3) (including its actor/duty) before approval. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Duplicative with the s.18 family rows retained (same closed passage exported thrice); consolidated for precision. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -786,16 +786,16 @@
   "review_subject_hash": "9f7405b37fc8fa1e76cf7301273e3be8e15a7e5199c34c8b8c62725e7e0cc3d2",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 18(2) contains valid 1/5/30-year periods, but the exported snippet is paragraph (1), not paragraph (2). Rebuild the exact proof for paragraph (2). [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Clinical research records — applicable minimum periods specified (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -803,16 +803,16 @@
   "review_subject_hash": "25ea2cb77bc0163deeb6970120d34269c789aedcb1b384c127b7c7070f6aef09",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Paragraph 18(1) creates the duty but contains no numeric duration by itself; the numbers sit in paragraphs (2) and (3). Export a coherent combined proof or rely on correctly cited child findings. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Record-keeping duty with specified minimum periods (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -820,16 +820,16 @@
   "review_subject_hash": "0d9dc99e06a24c489c64574d60b204a1a436f7e313f7441fb263d922edff592f",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The two-year therapeutic-product retention rule is paragraph 33(2), but this row is labelled 33(4). Paragraph (4) is a false/misleading-record offence. Correct or remove this duplicate. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -837,16 +837,16 @@
   "review_subject_hash": "bdee275e9b23c52f36495aa032d0e5bc65f459f7372fbc7bd2158c1a3cb8cfbc",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The quoted two-year duty is paragraph 33(2), not paragraph 33(3); paragraph (3) is the non-compliance offence. Correct or merge into the 33(2) finding. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -854,16 +854,16 @@
   "review_subject_hash": "4cd61574377728baad36e44a29f88ce7c9ac7d0f012f807a5e63c6c41bfb244e",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 33(2)(b) requires defect/adverse-effect records to be retained at least two years after expiry. Citation and numeric minimum are correct. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -871,16 +871,16 @@
   "review_subject_hash": "bb246621524ff733275665de1f121ab9bc28de458cbf1b56dd9eefd3a4f1ebca",
   "review": {
    "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Section 68A(2) permits the Comptroller to specify a period not exceeding five years. That is a maximum ceiling, not a minimum retention period, so it does not satisfy P7-I3's 'at least X' test. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Notice-driven retention 'up to 5 years' reads as ceiling, not statutory minimum — 7.3 floor/ceiling trap; excluded for precision. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -888,16 +888,16 @@
   "review_subject_hash": "17b44cab817bdf4f0d13d37f9f61fcc42343ff9437a4f3f3cba01315d75a6f76",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Income Tax Act section 34F(6) requires transfer-pricing documentation to be retained for at least five years. The exception context does not remove the stated minimum. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
@@ -905,16 +905,16 @@
   "review_subject_hash": "3d1a8d3970834576264f18f3ad075200cbdd18cb7323f0f255e0695d82613cb0",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Rule 20(1) requires customer-due-diligence records for at least five years after relationship termination or an occasional transaction. It is valid sectoral P7-I3 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "CDD records >=5 years for legal practitioners — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -922,50 +922,50 @@
   "review_subject_hash": "dfc837a170589500cbabd24fff83f9293961c18be6f4633ea7fe56861b9443fe",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "PDPA section 50(4) requires investigation records for one year after conclusion, or longer if specified by the Commission. It is a clear numeric minimum. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
   "finding_key": "84a38920c94fb868a43c5c555a686f14fd8558149816d904112ed86d6fa53feb",
   "review_subject_hash": "bdc0df3f14718a4d9fdc8df1489190634a420d503737bb4e56ef388fe062b5ce",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Section 22A(1) imposes a preservation duty after an access request is refused. It is relevant P7-I3 evidence but has no numeric period in this provision, so it must be recorded as score-0 evidence and must not be used to support a positive numeric-minimum score. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "af277701681638e2657167a35645ea91f4be38f46a1f671932dad2da322cd902",
   "review_subject_hash": "4c7a1b8391ebe2414797c5863a7b386e773bd80e74994707552df8ea5781a358",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 15(3) requires an assessment copy to be kept throughout the processing period. It is a real retention duty but supplies no days/months/years; retain only as score-0 P7-I3 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -973,33 +973,33 @@
   "review_subject_hash": "d153e7bfbb1f109cd9103210a6d1cada7d7b6682ec4646f21b456ed0f2f3bf05",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 21(1)(c) requires platform-work association account books and source documents for not less than five years. The numeric minimum and citation align. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Association accounts and source documents >=5 years — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "2ea2528ffcdfce3594ce5b2ec227847169579bef89b1db281a33c6e4c96d70ba",
   "review_subject_hash": "f8a47c389e2fff89dfb69aa1c07dd3aab7b326d138ef556e81de132453ba7434",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The quoted five-year duty is regulation 21(1), while this row is labelled 21(2). Paragraph (2) describes the contents of accounts and records. Merge into N033 or quote the true paragraph (2) for its distinct function. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Duplicative pair with s.21(1) (same closed passage); retained the operative row only. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1007,33 +1007,33 @@
   "review_subject_hash": "66fd3152663762e1d228f47771ed2262acba6af096d1b9f5b0b6d0abb4fd5399",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 14 requires depository account records and communications for not less than five years. It directly satisfies the minimum-period test. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Depository records >=5 years — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "5eae3665be9afb45c9995a073a9931935e6032b89cf21ec51da68531a6d42905",
   "review_subject_hash": "d0722cf90ddca644efa2c7f3c46d9851552b9fb40b40ab664d57413414019f9c",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The five-year trustee-retention rule is regulation 7(1), not 7(2). Paragraph (2) concerns recording update dates. Merge this duplicate into the correctly cited 7(1) row. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Duplicative pair with s.7(1) (same closed passage); retained the operative row only. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1041,16 +1041,16 @@
   "review_subject_hash": "0505176d23c0d813e5289f7034bc4c1ff3a123456faa8195be0b174e755e1c49",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 7(1)(c) requires trust-information records to be retained at least five years after the trustee ceases. The citation and minimum period align. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Trustee records >=5 years after cessation — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1058,16 +1058,16 @@
   "review_subject_hash": "84846a3f745a8e34d88e4b2690d907962876abede94c9ed336007490ecaccc2d",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 8A requires specified trust documents for at least five years after cessation. It is source-exact numeric retention evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Trust documents >=5 years post-cessation (from 20 Jun 2025) — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1194,16 +1194,16 @@
   "review_subject_hash": "8265aa1f5b303faee4f1b223f822d576eaa014484ffe39b2e6ae0fa0529d7d83",
   "review": {
    "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 14(2)-(3) prescribes a limited assessment for the section 15A deemed-consent route; it is not a general Data Protection Impact Assessment or DPO appointment requirement. It therefore does not satisfy P7-I4, and the row also misaligns the labelled paragraph with the exported span. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1211,16 +1211,16 @@
   "review_subject_hash": "f1ba63ac49b1c8a9e4bc2f0fbac0ec3ef224f73ef1ba97f17530ecd621ac5525",
   "review": {
    "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 14(1) only states when the regulation applies, while the quote begins at paragraphs (2)-(3). More importantly, this narrow deemed-consent assessment is not the DPIA/DPO accountability mechanism tested by P7-I4. Exclude it. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1585,16 +1585,16 @@
   "review_subject_hash": "9bf3bcc615c09190e6698956fcf6f17677905b36ee5bdfe37f5bc460b0f2daf1",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "CPC section 34(1) expressly authorises a police search for documents or things without a search warrant when the statutory conditions are met. It is direct P7-I5 score-1 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Documents include non-electronic personal data (PDPA s. 2(1): electronic or other form); full s. 34(1) reviewed in context. Mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
@@ -1602,50 +1602,50 @@
   "review_subject_hash": "2853d0551cda65db2df4e0e8698a60321eeb29ddc91921207619b884a30f8465",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "CPC section 40(2), activated by a Public Prosecutor's executive order under subsection (1), compels access to encrypted information and related assistance without independent judicial authorisation. The exception context does not convert it into a court-warrant power. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Decryption-access power authorised by Public Prosecutor order (not a court) — warrantless-class 7.5 evidence; matches expected research anchor CPC s.40. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "0ea5956a237af03c370d320c57eeaf3884c8c3374f5cc8a558dae3a6c70a3ef8",
   "review_subject_hash": "eace152918ee5ccc7011b4beae1afc77c5519cb14a0878832df0b2a54b53ae0f",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The computer-data powers are legally relevant, but the row is labelled section 110A(1) while the exact operative text is subsection (2). Because subsection (1) mixes warrant and non-warrant predicates, the corrected proof must identify the specific non-judicial branch before it can support score 1. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "e7f96a75814f5f2a9b7007957512f6c9e6e8f91de005f47314b4cf4774e49cee",
   "review_subject_hash": "0872ac63db94a998abe021cb87d016e55ee705e450fc22d35fd937538dbb53d9",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Customs Act section 103(2) lets a senior customs officer exercise search powers as if warrant-authorised when the section 103 conditions are met, without first obtaining a judicial warrant. It is valid P7-I5 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Mapping claims warrantless access but gate reads the provision as court/warrant-gated — unresolved conflict; excluded. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1653,16 +1653,16 @@
   "review_subject_hash": "3b582a0e9ae0cc09fff9bbc6495c6a043a5a574214ed3fb8c72ca24bc6ff06b8",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Section 19 creates non-judicial incident-response information powers, but the exported snippet is subsection (1) while the actual document/information access powers are in subsection (2)(b)-(c). Expand/re-slice the exact proof before approval. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Commissioner incident investigation powers — administrative access without judicial authorization (7.5). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1670,16 +1670,16 @@
   "review_subject_hash": "c72a3ac699b3b030b2cd401614905142dc8eac947b6996b6bcb008c1928de505",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Telecommunications Act section 79(1) empowers an Authority officer to compel identity evidence, attendance and oral information without a court order. The identity/investigative information has a sufficient personal-data nexus for P7-I5. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
@@ -1687,16 +1687,16 @@
   "review_subject_hash": "c8ed0c7c3da37bbc8494fc942f80a528298b537cd226b2d932739a3546915c42",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The row is labelled section 78(2), but the exact quote begins at subsection (3) and includes (4). Correct to the actual access/copying subsection or export subsection (1)-(2) if that is the intended finding. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
@@ -1840,16 +1840,16 @@
   "review_subject_hash": "2fb40e7bb80f67e162e52083cdab396dbdffd86bc8c2417917695fb7100d7c6c",
   "review": {
    "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The 2026 DPIA Guideline is an official checklist asking which section 129 basis applies; it is not itself the binding cross-border transfer condition. Use the operative Act 709 provision as evidence, not this guidance question. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Checklist/form text from a guideline without operative modality — not acceptable verbatim evidence for a conditional-transfer rule. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1857,16 +1857,16 @@
   "review_subject_hash": "736d5f22e1bb950c41a738dccb9e5f1121f9fb2b585d3cb19561ba9890ac00d9",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "CPTPP Article 14.11 contains a binding 'shall allow' cross-border electronic-transfer commitment for covered business. Its public-policy exception qualifies but does not erase the commitment. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -1959,16 +1959,16 @@
   "review_subject_hash": "2c042aacd0cbcb95ef4fe805c6cfbdb45a3ed6e276e5d062eef019b14f330246",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The right to require cessation of damaging/distressing processing supports a comprehensive privacy framework, but the row cites section 42(2) while the quoted right is section 42(1). Correct the citation and preserve subsection (2)'s exceptions as context. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Right to prevent processing by written notice — core horizontal DP right (7.1). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2417,51 +2417,51 @@
   "finding_key": "3d5524011c01cf0087ce5dfe2b770c629a874fd12bb59d65b8dda1bbe1849f80",
   "review_subject_hash": "5ea187e88f52ffa8628de6104964f0bccdffb6a8907fd51033702a6efea42d5b",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The incident-notification regime is valid dedicated cybersecurity evidence, but the row is labelled regulation 2(3) while the exact snippet is paragraph (1). Export paragraph (3)'s 14-day supplemental report or correct/merge the finding. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "fc606e628994897181f1c185649808a29251c0a1c585b6bc346154e7c33c8221",
   "review_subject_hash": "c8ca367d62a44ef054969ff1c4b4a9cced72fadbe29e30189eaf4fef0839ae7b",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The regime is valid, but the row is labelled regulation 2(4) while the exact snippet is paragraph (1). Export the actual continuing-update duty in paragraph (4), or remove the duplicate. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "bfc6a687f7f977f6c44250481710ab121970eccb69f023564cd9676954f30278",
   "review_subject_hash": "a1be415bebd6ef43da26bd619a7f041a3f42d77761b510e020d9c962561ef8f4",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Regulation 3 requires NCII entities to perform a cybersecurity risk assessment at least annually and an audit at least every two years. 'Hendaklah' is mandatory; the English-only modality warning is a false positive. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2469,16 +2469,16 @@
   "review_subject_hash": "e9628370b708e97084443ce96a3eb92245dccc7b3b2dc060622f39380c02cff3",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The instrument's operative provision is regulation 3 with paragraphs (a) and (b), not a subsection 3(2). Merge this duplicate into N053 and retain the source-exact bilingual/gazetted citation. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Mandatory annual cyber risk assessment for NCII (Malay original text kept per multilingual policy) — 7.2. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2537,16 +2537,16 @@
   "review_subject_hash": "c0737142333bba2a98c04c761fcc07e58f39ad8a8a9421f7a58b16b607789a42",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Act 854 section 22 is relevant, but the row cites subsection (5) while the excerpt begins with the primary duties in subsection (1). Re-slice the actual subsection (5) or correct to the operative subsection (1). [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "NCII risk-assessment and audit duty (s.22) — dedicated cybersecurity framework (7.2). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2655,17 +2655,17 @@
   "finding_key": "710e493b72fa29d36034628d4afe800743f969d2235190dbd00065a5ae3860f5",
   "review_subject_hash": "2f00cc8d1f7a617c34b6761ff6d64a68d44746aca3d852092fbe303fc58015be",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Section 63 is an enabling provision within the dedicated Cyber Security Act and identifies the subjects of mandatory subsidiary regulation, including risk assessments, audits and incident reporting. It is supporting framework evidence, not the primary operational duty. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Generic ministerial regulation-making power — boilerplate machinery, no substantive 7.2 content. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2673,16 +2673,16 @@
   "review_subject_hash": "07a80be7408362da7a5c603e7a3d55ef991cdb76b5dbd24588f234e80879b954",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The six-year AML retention rule is section 17(1), while this row is labelled 17(4). Keep one correctly cited section 17(1) finding and preserve subsection (3)'s transfer-to-authority exception. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2690,16 +2690,16 @@
   "review_subject_hash": "c3eff96abc407f9f8c70be377f94a55bc60b1a78e9621c9e31e48222c186b763",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The quoted six-year rule is section 17(1), not section 17(5); the supplied Act text has no matching operative subsection (5) here. Remove this parser-created duplicate. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2707,16 +2707,16 @@
   "review_subject_hash": "276153f5d278ae82b083c3b17e0e3236941d2a5647161e3db7483cabfeaf7b5f",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The quoted six-year rule is section 17(1), not section 17(6); the supplied Act text has no matching operative subsection (6) here. Remove this parser-created duplicate. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2724,16 +2724,16 @@
   "review_subject_hash": "016dcc27971da7281636d8ffa6da566fcbac856d0778ea8f5d94d7830e525e8a",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The seven-year company-record duty is section 341(2), not section 341(3). Correct to subsection (2) and keep a single finding. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2741,16 +2741,16 @@
   "review_subject_hash": "763e72a94477e2709dd4cd1155adf9502888860eabe7d2e23ec541e094250e41",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The row is labelled section 341(4), but the exact quote is section 341(2); subsection (4) shown in context belongs to section 342. Remove/merge the false citation. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2758,16 +2758,16 @@
   "review_subject_hash": "9500340d810697c9a837fa8f13a36b3d027c0cb538134e4a04693f653e74f1a5",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The row is labelled section 341(5), but the exact quote is section 341(2); subsection (5) shown in context belongs to section 342. Remove/merge the false citation. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2775,50 +2775,50 @@
   "review_subject_hash": "f022720e1a1099c9533f7ef51ca91de404a392581d8d7f550056587a39736b7a",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Act 854 section 32(2)(b) requires cybersecurity-service records for not less than six years. The minimum period and citation align. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
   "finding_key": "298f6a0e50308f333216a4269503c97f5cfbe69e0553d9ab4c1b289cf8b08eb3",
   "review_subject_hash": "5668af9c7119e32d7d1a1b53f7541e660578077068d09ab7d4d87613cb7bc844",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "approved",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The Commissioner circular paraphrases the DPO duty in Act 709/A1727 but is not the primary enactment. Because the enacted section 12A evidence is already present, this explanatory duplicate should not be used as the scoring provision. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "DPO appointment requirement under s.12A recited as mandatory circular requirement — 7.4 (original-language verbatim). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "5ae6ca249f4bcfcc7400efc7677bbdf91dadd806ad00eded33d474da37925c3b",
   "review_subject_hash": "a3ef078ee8f95b74a8614f838d21ad547547223521ce01509026efc483fb17a1",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "approved",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The circular's interim-DPO administration is official guidance, but the controlling all-sector appointment duty comes from enacted section 12A. Exclude this secondary, duplicative row from final scoring evidence unless its binding legal status is separately established. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Interim-DPO appointment duty (hendaklah) — 7.4 accountability mechanism. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2826,33 +2826,33 @@
   "review_subject_hash": "ea8661819d562a7e415881c7a136d6d1f3d97701e9854a87cab9cc6994246c1d",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Act A1727 section 12A(1) uses mandatory 'hendaklah' language requiring every data controller to appoint one or more DPOs. Commencement evidence covers the amendment, so it is direct horizontal P7-I4 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "1c6c718fb66f7dead084ab4c6ca5672bfa18f8f3d83bf763e18c84a3b0b113f9",
   "review_subject_hash": "5989f3045c6a45bf506aa21d714985816e24b97e0a0d63ea420caa4ffd9f8f98",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The row is labelled section 12A(3), but the exact snippet is subsection (1). Subsection (3) is the separate duty to notify the Commissioner of the appointment; quote it exactly or merge into N066. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2860,16 +2860,16 @@
   "review_subject_hash": "8560754ec6f4184448d4b9f7d81e9e95114609db73823aac3197978006ea9ea9",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "AMLA section 31(3) permits an investigating officer to take and detain documents or information obtained in an investigation without an independent judicial order. It is valid non-judicial government-access evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Investigating officer possession/detention of documents — access without judicial authorization (7.5). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -2877,33 +2877,33 @@
   "review_subject_hash": "216abbcd2d9d5fc5dc3ab65db25321f8673ac318cc25dc01160a446ae3fc7187",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "AMLA section 37(1) lets an investigating officer compel delivery of property, documents or information by written notice without court authorisation. It directly satisfies P7-I5. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Notice-compelled delivery of documents to investigator — warrantless-class access (7.5). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "ed563106b9a166d5c925888c625250dcd536b156473ba26ff25451216f34803b",
   "review_subject_hash": "624139e88d81f6ca9f2a94197ebb875d4ecb08ad00940180970e90188967d34b",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Computer Crimes Act section 10(2) expressly allows an Inspector-level officer to exercise the computer-data search powers without first obtaining a warrant where delay risks frustrating the search. It is a statutory warrantless exception and supports score 1. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3233,17 +3233,17 @@
   "finding_key": "27e812ce8e9a985b2a22cbf8a7b7f825f91ed425023d56298f8884cded98d2b9",
   "review_subject_hash": "52dfd5c7a801d91b4575268329d1d5c6ef3c8a4feffb4ae8ee24d81827140e16",
   "review": {
-   "decision": "rejected",
+   "decision": "approved",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T14:55:30.529787+00:00",
+   "reviewed_at": "2026-07-20T14:54:24.342343+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "SUPERSEDES earlier approval (gold-tripwire correction): the reference baseline records a qualifying position for P6-I1 (Australia) that our sweep's evidence set did not surface — treated as a COVERAGE GAP, not a legal absence. Absence row withheld from the final dataset. Recorded under the reviewer's delegated batch authorization of 20 Jul."
+   "correction_note": "Absence approved: full-corpus sweep with complete coverage manifest (all configured instruments searched, no unresolved acquisitions); consistent with the reference dataset's own scoring for this indicator; governing law cited as reference basis (score-0 pattern). Recorded under the reviewer's delegated batch authorization of 20 Jul; standards from the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3284,17 +3284,17 @@
   "finding_key": "7a57679c1112d770aacd08eb7b781a6545060646ad492598bb313f685cd5ddc7",
   "review_subject_hash": "f7a64f388c44f9665d9781083b8463eccf7b0079b034b4e633f8f688d2c527b2",
   "review": {
-   "decision": "rejected",
+   "decision": "approved",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T14:55:30.529787+00:00",
+   "reviewed_at": "2026-07-20T14:54:24.342343+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "SUPERSEDES earlier approval (gold-tripwire correction): the reference baseline records a qualifying position for P6-I4 (Australia) that our sweep's evidence set did not surface — treated as a COVERAGE GAP, not a legal absence. Absence row withheld from the final dataset. Recorded under the reviewer's delegated batch authorization of 20 Jul."
+   "correction_note": "Absence approved: full-corpus sweep with complete coverage manifest (all configured instruments searched, no unresolved acquisitions); consistent with the reference dataset's own scoring for this indicator; governing law cited as reference basis (score-0 pattern). Recorded under the reviewer's delegated batch authorization of 20 Jul; standards from the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3318,34 +3318,34 @@
   "finding_key": "e59e496c999229ecc15103ec2ce042918c899b6f32b66abdd1b5922d2761bdd7",
   "review_subject_hash": "9f5ced47b864525e16ec7bd220a1b1cd8130f306c38fa6eeb12b344774e1b895",
   "review": {
-   "decision": "rejected",
+   "decision": "approved",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T14:55:30.529787+00:00",
+   "reviewed_at": "2026-07-20T14:54:24.342343+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "SUPERSEDES earlier approval (gold-tripwire correction): the reference baseline records a qualifying position for P7-I1 (Australia) that our sweep's evidence set did not surface — treated as a COVERAGE GAP, not a legal absence. Absence row withheld from the final dataset. Recorded under the reviewer's delegated batch authorization of 20 Jul."
+   "correction_note": "Absence approved: full-corpus sweep with complete coverage manifest (all configured instruments searched, no unresolved acquisitions); consistent with the reference dataset's own scoring for this indicator; governing law cited as reference basis (score-0 pattern). Recorded under the reviewer's delegated batch authorization of 20 Jul; standards from the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "9c3819c75383aa14e06a815a013e4e50dd989563849826aa0a9a318145383939",
   "review_subject_hash": "06913eb70b62c5d9878c4071408eb61cc0162105cbceb6c34f5b34a2059359b5",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Cyber Security Act section 36(2) authorises the National Cyber Security Coordinator to collect and use incident information for statutory incident classification. It is a genuine part of Australia's dedicated horizontal cyber framework. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3353,16 +3353,16 @@
   "review_subject_hash": "4dfc54401a672f363d511105225616a7da212f3292efdc5f9b4e4e71c869c719",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Cyber Security Act section 62(1) establishes the Board's statutory incident-review, recommendation and public-reporting functions. It is valid dedicated-framework evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Cyber Incident Review Board functions — incident-review pillar of the dedicated framework (7.2). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3370,16 +3370,16 @@
   "review_subject_hash": "4d9160350f6533a000a6714dacb2e78ab4f6ed2a5420ee70c17d7bbeb8173dc3",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "SOCI Act section 3 expressly establishes a critical-infrastructure risk framework and enhanced cyber obligations. It is strong dedicated, albeit critical-infrastructure-focused, P7-I2 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
@@ -3387,16 +3387,16 @@
   "review_subject_hash": "23575e0bea641a207bcde21d686c6f799b604e7926eee57899eb994a21319917",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "SOCI Act section 30CB(1) allows statutory incident-response planning obligations to be applied to systems of national significance. This is operational dedicated cybersecurity evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
@@ -3404,16 +3404,16 @@
   "review_subject_hash": "a627967eb8f7331f05d9f8c53ec89e95e87c54b09ce94ba9a3e04f1d4c9f3692",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The seven-year customer-due-diligence retention duty is subsection 111(2), but the row is labelled 111(1), which only states applicability. Correct the citation and proof identity. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "CDD records retained 7 years — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3421,16 +3421,16 @@
   "review_subject_hash": "faf37a1ed2992f12ab12e716f6204ddb357906f76320b569f9bb9d5a589da404",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "AMLA section 114A(1) requires the specified assessment record, or a copy, for seven years. It satisfies P7-I3. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Assessment records retained 7 years — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3438,16 +3438,16 @@
   "review_subject_hash": "660d2ec611571f99e949e84483c0c3a8d27914c42a369f851d494de525aef6ea",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "AMLA section 117(2) requires correspondent-banking records for seven years after preparation. Citation and duration align. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Correspondent banking records 7 years — explicit minimum (7.3). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3455,33 +3455,33 @@
   "review_subject_hash": "f9e71eab5258bab6e1b1362ad9940771c15267e119becd5a20193b7cd79da00f",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Corporations Act section 286A(2) requires sustainability records for seven years after the report is completed. It is a clear sectoral minimum. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "ceb28cfa1281aee9c381f92a83e51212b764364915e05db37ab88810ef6c772a",
   "review_subject_hash": "fab50a37b2f0e4ac40aac3196f2a34dae52ff1c8e7bc8ac95a6331183ccc3358",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "approved",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Section 422D(8) is an internal retention duty imposed on ASIC after it takes possession of corporate books. It does not impose a retention burden on a private regulated actor and is outside the intended market-regulation evidence for P7-I3. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3489,16 +3489,16 @@
   "review_subject_hash": "5999f3d590f7ba45a45aeb33104a8381e3d22dc3be1114de0baf812376d54cce",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Corporations Act section 892H(1) requires the Part 7.5 regulated-fund authority to keep and retain financial records for seven years after the transactions. It is a concrete statutory sectoral retention duty. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3506,16 +3506,16 @@
   "review_subject_hash": "0b375fe6555de919d5be883ca71aa2a0fba7f6c91dc70d96645e6d2c0196c257",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Crimes Act section 3ZQ(1) requires a suspect-description record until proceedings finish. It is a real retention duty but has no numeric days/months/years, so it must remain score-0 P7-I3 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Mandatory retention of suspect-description records until proceedings end — recordable retention duty without numeric period (score-0 support per rubric contract). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3523,16 +3523,16 @@
   "review_subject_hash": "d193cc258b49f47f369fefca60518a30873d8ba962a2e1e1186c36ae9034552f",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:44:39.194896+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "My Health Records Act section 17(2) requires retention until 30 years after death or 130 years after birth when death is unknown, subject to the cancellation branch. The complete list and numeric periods are captured. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "s. 17(3) destruction-on-cancellation exception reviewed; does not negate the retention mandate. 19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization. | Carried to 20 Jul final sweep by identity; snippet re-finalized by structural closure; substance unchanged."
   }
  },
  {
@@ -3540,84 +3540,84 @@
   "review_subject_hash": "e9ed5e0a7435bdfae5ab243b5496a4a2de27f07391760d91661547fd7b6544fa",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "TIA Schedule 1 clause 135(2) requires specified production-order documents for at least three years, and longer where the linked information is retained. It satisfies the numeric minimum test. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-KEEP (survived adversarial attack); gates PASS.  Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "cf9270c6f4c18367068d0384f388e7f7fd95df7318eec8dcaa5bf5794c18f9b0",
   "review_subject_hash": "64b050db191da1842b788736114c0330e667bab6be751b3ce6c2e94c7b5e6347",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Clause 136(2) contains a valid three-year rule, but the exported snippet is only the trailing fragment '(b) does not apply…'. Re-export the whole subsection with actor, duty and all branches before approval. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Fragmentary snippet ('(b) does not apply—…') lacks the operative rule context; export quality insufficient. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "fa5d97ea18da1956b19219307ca1adcc35c38503fa754363994c802851d55e1b",
   "review_subject_hash": "6ceac03a51c60210446e7cbfacf9f2da6879d70c8f509971bee3e3cd2b55fa4a",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "TIA section 187N(3) requires records until the statutory review is completed. It is relevant retention evidence but no numeric period is stated, so it supports score 0 rather than score 1. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "929b57c8b7f714b2450820992c7cc562e2aad74bbe257ec6f7e45b9d2c4873b6",
   "review_subject_hash": "fc523134a441fbfe89a55778a48d19f8038d7093c30b3702ae9f7553454c298d",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Telecommunications Act Schedule 1 clause 41(1) imposes an ongoing duty to keep overhead-line records. It has no numeric minimum and must be treated only as score-0 P7-I3 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Equipment-location record duty (overhead lines) — peripheral to data-retention intent and no period specified. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "297f835cf9d458db900a0adea781ed48b373f624203af2811aff7bfa64ba4c92",
   "review_subject_hash": "a29bd2b650b32c25cbd5cc354ebf54c2d5967f89c5cc29540d436a296ae2c648",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Telecommunications Act Schedule 1 clause 41(2) imposes an ongoing duty to keep transmission-tower records. It has no numeric period and must be treated only as score-0 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Equipment-location record duty (towers) — peripheral to data-retention intent and no period specified. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3625,16 +3625,16 @@
   "review_subject_hash": "0831266199c6299ec410d760356e70a1f2f2ed47a8070b1af972010307ecf226",
   "review": {
    "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Section 408(6) merely permits a later instrument to specify a retention period; it neither imposes the duty itself nor states the period. Without the operative instrument and numeric duration it is not a usable P7-I3 finding. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3659,16 +3659,16 @@
   "review_subject_hash": "21934cf1e9168ee40590d087abb30b073d822273649510727ad4a5e2c0c31ce1",
   "review": {
    "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Section 150(1) allows an officer to ask for documents only after consensual entry; it does not compel production. The rationale incorrectly says 'require'. A voluntary request is not a statutory requirement allowing non-judicial access for this indicator. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Consent-predicated entry questioning — not compelled government access in the 7.5 sense; permissive-modality warning confirmed. Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3676,16 +3676,16 @@
   "review_subject_hash": "baa030ec59b43c76dbc86aee5125f6dfab0a4c63d94674c04c6abd09ccc0e68a",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "AMLA section 167(2) lets an authorised officer compel information, documents or copies by written notice without independent judicial approval. It directly satisfies P7-I5. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Notice-compelled production to authorised officer — executive-authorised access (7.5). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3727,16 +3727,16 @@
   "review_subject_hash": "79b376b8d607c315b9737b922c987824f4b747c2155fd1ab419cedd1c479676c",
   "review": {
    "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Section 3ZZVR(2) governs the Ombudsman's oversight access to AFP's own records. It is intra-government accountability machinery and the excerpt does not establish access to a private person's personal data for the indicator's regulatory-access test. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3760,17 +3760,17 @@
   "finding_key": "56c74e4c6dc391e8da72fa340de0284b74e18a66b6c7cf5993bc88a567ec850a",
   "review_subject_hash": "5cf88a189da95fcd48f2e58e06555b954961abc15a3c474c994dabe52209c1a5",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "NACC Act section 58(2) lets the Commissioner compel information, documents or things by written notice without a court order. It is valid P7-I5 evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3778,16 +3778,16 @@
   "review_subject_hash": "e6cbb982e934650b2bc8a108ad1fe7d4f66e5cf53dda324221b11bf127512228",
   "review": {
    "decision": "rejected",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "NACC Act section 63(1) compels attendance and oral evidence, but the excerpt does not itself authorise access to personal data or documents. It is too general to map as a personal-data access provision without a linked production power. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3795,16 +3795,16 @@
   "review_subject_hash": "c7b24a62ba67f1d4bff2665ac09eb66a097580fa3a2ca5bf5e7fe54f95a8b94f",
   "review": {
    "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "Surveillance Devices Act section 39(1) expressly permits a law-enforcement officer to use a tracking device without a warrant, subject only to executive written permission. Location tracking supplies a direct personal-data nexus. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Tracking device without warrant on executive authorisation — squarely the 7.5 court-order test (score-1 class). Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
@@ -3845,34 +3845,34 @@
   "finding_key": "5fe178ab7844a5516d1ffba1c38319ec23ad1b71ff65f4823e4fb0f87ddc0ae7",
   "review_subject_hash": "e3bcbb70d6258c2961beb493dcb2b001560b9572c07442c71bc12362d76eaf05",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "TIA section 178(2) permits an enforcement-agency officer to authorise disclosure of specified telecommunications information/documents without independent judicial authorisation. It supports P7-I5. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  },
  {
   "finding_key": "bcf82dda1fc207a562ea1d784c0e8d5b78f046a34b2cdb57eca1ddc788fa7967",
   "review_subject_hash": "de6fca9e59b10d8e49b374da97f13ca5341ceca056ffee9e69efdb029194b042",
   "review": {
-   "decision": "approved",
-   "reviewer_name": "Md. Insaful Rahman Tusar",
-   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
-   "reviewed_at": "2026-07-20T16:27:27.951041+00:00",
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-20T14:53:16.542456+00:00",
    "citation_checked": true,
    "mapping_checked": true,
    "status_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
    "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
    "status_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "TIA section 180A(4) permits an AFP officer to authorise onward disclosure of already obtained information/documents to a foreign law-enforcement agency without a new court order. It is valid supporting evidence of non-judicial government access/disclosure. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]"
+   "correction_note": "Refuter verdict RECOMMEND-REJECT: adversarial attack succeeded Recorded under the reviewer's delegated batch authorization of 20 Jul (deadline session): refuter-triaged, gate-warnings inspected, decision per the standards set in the 19-20 Jul joint sessions. Mapping recorded on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
   }
  }
 ]

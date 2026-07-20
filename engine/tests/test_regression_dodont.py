@@ -6,7 +6,7 @@ these are the exact failures the judges showed teams missing.
 from __future__ import annotations
 
 from packages.core.schemas import MappedFinding
-from packages.discovery.diff import section_matches
+from packages.discovery.diff import laws_match, section_matches
 from packages.verifier.gates import (g1_span_exists, g5_whole_rule, g7_ban_vs_conditional,
                                      g7_indicator_fit)
 
@@ -51,6 +51,14 @@ def test_gold_parent_code_clause_matches_nested_provision_only():
     assert section_matches("3", "3.5.14")
     assert section_matches("4.10", "4.10.3")
     assert not section_matches("3", "30.1")
+    assert section_matches("12A", "12A")
+
+
+def test_principal_act_matches_its_enacted_amendment_family():
+    assert laws_match(
+        "personal data protection act 2010",
+        "Personal Data Protection (Amendment) Act 2024 (Act A1727)",
+    )
 
 
 def test_bill_as_measure_hard_fails():
