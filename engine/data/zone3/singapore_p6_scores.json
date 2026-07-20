@@ -1,0 +1,121 @@
+{
+ "economy": "Singapore",
+ "pillar": 6,
+ "run": "run-sg-p6-1784114671",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence was found that the Personal Data Protection Act 2012 imposes any ban or local processing requirement on personal data or applies such requirements h"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found (pending review) of any ban and local processing requirements covering personal data or applying horizontally, so transfers appear free of"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence was found that the economy imposes any ban or local processing requirement on personal data or applies such requirements horizontally (or on non-per"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence shows no local storage requirement for personal data or any non-personal/specific-data storage rule (NO_EVIDENCE_FOUND_PENDING_REVIEW)."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal storage rule under the cited Personal"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal specific storage rule."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence was found that any rule makes local data centre/server infrastructure a precondition for service or conditions data transfer on such infrastructure."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition or transfer conditioned on infrastr"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No verified evidence was found that any service is conditioned on local data-centre/server infrastructure or that transfers require such infrastructure, so the "
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No quoted evidence shows any conditional flow regimes on transfers under the Personal Data Protection Act 2012, and the provided row indicates no evidence found"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found of any conditional flow regime governing transfers (including for personal data) in the provided material."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No gate-verified evidence was found that any conditional flow regime applies to transfers (personal or non-personal), so the indicator should be scored as havin"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

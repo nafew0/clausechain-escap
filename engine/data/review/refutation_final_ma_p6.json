@@ -1,0 +1,86 @@
+[
+ {
+  "indicator": "P6-I4",
+  "law": "PDP Data Protection Impact Assessment Guideline 2026",
+  "article": "s. 13",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The snippet is a DPIA question prompting selection of an applicable legal basis for cross-border transfer, but it does not itself state a conditional permission rule (e.g., “may transfer only if …”); it instead asks what basis under s.129 applies, so mapping it to P6-I4’s “transfer permitted IF conditions are met” is not directly evidenced by the quoted text."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Rubric P6-I4 requires conditions on cross-border transfer (shall/may transfer only if conditions met). The provided evidence is a checklist question about identifying the applicable legal basis under s.129(3), not a transfer-permission conditional clause. Under the rubric’s hunt_in (shall not/may transfer provided/ensures adequate/consent), the snippet lacks the transfer-condition modality, so scoring should not be 1/0.5 for P6-I4 based on this excerpt."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes only that, if planned processing involves transferring personal data outside Malaysia, the user must tick the applicable legal basis (e.g., substantially similar law, adequate protection, consent, or other s.129(3) bases). While it does not itself contain the full statutory “may transfer unless …” wording, it still evidences that cross-border transfer is tied to specified conditions/bases, which is consistent with P6-I4’s conditional-flow concept."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "CPTPP Chapter 14 (Malaysia MITI text)",
+  "article": "Art. 14.11",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "P6-I5 requires the economy to have joined NO agreement with binding cross-border data-transfer commitments; Art. 14.11 is a binding obligation to allow cross-border transfer of information by electronic means, but the claim’s “Sectoral (Covered persons under CPTPP Chapter 14)” framing risks treating the commitment as not a binding cross-border data-transfer commitment for the economy as a whole. If the rubric is applied strictly to “binding cross-border data-transfer commitments” without sectora"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P6-I5 hunt_in is empty and scoring is framework_absent_scores_high: score 0 if at least one binding agreement exists, 1 if none. The quoted text uses mandatory language (“Each Party shall allow the cross-border transfer of information by electronic means, including personal information…”) and is a binding cross-border data-transfer commitment. Sectoral evidence is not a defect because the rubric does not exclude sectoral commitments and the indicator is satisfied by evidence of at least o"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes a binding obligation: “Each Party shall allow the cross-border transfer of information by electronic means, including personal information, when this activity is for the conduct of the business of a covered person.” It does not merely recognize regulatory discretion; it imposes a “shall allow” duty for cross-border electronic transfer of information (including personal information) for covered persons’ business. That is the core fact the rubric’s positive cues require "
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "RCEP Chapter 12 (Malaysia MITI text)",
+  "article": "Art. 12.15",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "lost exception",
+    "reason": "Art. 12.15(3) allows a Party to adopt/maintain measures inconsistent with the “shall not prevent” obligation if necessary for legitimate public policy or essential security interests. The mapping rationale treats the obligation as unconditional, but the rubric’s P6-I5 requires a binding cross-border data-transfer commitment; this provision is binding only subject to explicit carve-outs, so the mapping overstates the commitment’s scope for the indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P6-I5 hunts for binding cross-border data-transfer commitments; the snippet contains a “shall not prevent cross-border transfer of information by electronic means” obligation, which is positive-cue aligned. Sectoral coverage is not an exclusion in the rubric. The scoring note (6.5 applied at scoring time) does not require the mapping decision to determine the 1/0 score, only to identify the presence of a binding commitment. Therefore the mapping is consistent with hunt_in/scoring."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a binding obligation on Parties: they “shall not prevent” cross-border transfer of information by electronic means for the conduct of business of a covered person. That is a binding cross-border data-transfer commitment in the sense required by P6-I5. The surrounding context confirms it is an obligation within Article 12.15, even though it also contains permissible exceptions in paragraph 3."
+   }
+  ]
+ }
+]

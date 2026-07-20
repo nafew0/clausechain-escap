@@ -1,0 +1,394 @@
+[
+ {
+  "indicator": "P7-I2",
+  "law": "Security of Critical Infrastructure Act 2018",
+  "article": "s. 30CB(4)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "P7-I2 asks whether there is a dedicated horizontal cybersecurity framework. s.30CB(4) is a decision-factor provision for issuing a notice that incident-response planning obligations apply to a particular entity/system of national significance; it does not itself establish a horizontal, dedicated cybersecurity framework across the economy (it is conditional/targeted via determinations)."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I2 has hunt_in: [] and scores framework_absent_scores_high based on whether a dedicated horizontal cybersecurity framework exists. The cited provision is within a cybersecurity/critical-infrastructure incident-response planning regime (cyber security incidents; incident response planning obligations), which is at least evidence of a dedicated cyber incident-response framework rather than scattered clauses. Therefore, under the rubric’s scoring, this is not a clear mis-mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text in s.30CB(4) requires the Secretary, when deciding whether to give a notice, to have regard to costs and proportionality of applying statutory incident response planning obligations to cyber security incidents. It does not expressly say “horizontal cybersecurity framework exists/does not exist,” but it does establish that the Act contains statutory incident-response planning obligations tied to cyber security incidents, supporting the claimed “dedicated incident-response framework"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Security of Critical Infrastructure Act 2018",
+  "article": "s. 30CB(1)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "P7-I2 asks whether there is a dedicated horizontal cybersecurity legal framework. s.30CB(1) is a critical-infrastructure-specific mechanism that lets the Secretary extend “incident response planning obligations” to a particular system/entity by written notice. The snippet does not establish a dedicated horizontal cybersecurity act/framework; it shows a sectoral/critical-infrastructure incident-response planning obligation that is activated case-by-case."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I2 scores 0.5 for a NON-DEDICATED framework and/or a dedicated but SECTORAL-ONLY framework. The supplied evidence is critical-infrastructure (systems of national significance) and incident-response planning obligations, not a horizontal cybersecurity act. Under the rubric’s scoring, this supports framework_absent_scores_high (i.e., not 0). hunt_in is empty, and the snippet is directly relevant to incident-response planning obligations, so no rubric-mandated refutation."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "lost exception",
+    "reason": "The text says the Secretary “may… determine” that “statutory incident response planning obligations apply” to an entity “in relation to” a system of national significance and “cyber security incidents.” That is a discretionary, notice-based extension of obligations for particular systems, not an across-the-economy dedicated cybersecurity framework. Treating this as evidence that the economy lacks a dedicated cybersecurity legal framework (P7-I2) is directionally plausible, but the mapping ration"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Anti-Money Laundering and Counter-Terrorism Financing Act 20",
+  "article": "s. 117(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "s.117(2) expressly states a retention obligation for 7 years after completion of preparation of the record, which directly matches the rubric’s requirement for a specified minimum retention period (P7-I3). No scope/function defect is apparent from the provided context."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I3 (requirement_present_scores_high): the snippet “must retain… for 7 years after the completion of the preparation of the record” clearly specifies a minimum retention period (>=7 years). Under scoring, this supports score '1' rather than '0'. hunt_in sectoral evidence is allowed, and the provision is a retention requirement, not a retention limit."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text and surrounding context establish a mandatory duty: “must retain… for 7 years after the completion of the preparation of the record.” The context further confirms it applies to financial institutions that prepared a record under s.96 and that subsection (2) is a civil penalty provision. This is sufficient to establish a specified minimum retention period for P7-I3."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Anti-Money Laundering and Counter-Terrorism Financing Act 20",
+  "article": "s. 114A(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "s. 114A(1) expressly requires retention of the record for 7 years after completion of preparation, which directly matches the rubric’s requirement for a specified minimum retention period (>= X). No scope/function defect is apparent."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I3 hunt_in is satisfied (sectoral: AML/CTF). Positive cue present: “retain … for 7 years after the completion of the preparation of the record.” Therefore scoring should be 1 (minimum retention period clearly specified). No exclusion applies (it is not a “no longer than necessary” limit)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a mandatory retention obligation (“must retain”) and fixes the duration (“for 7 years after the completion of the preparation of the record”). The surrounding context confirms it is a civil penalty provision but does not undermine the retention-minimum fact needed for P7-I3."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Anti-Money Laundering and Counter-Terrorism Financing Act 20",
+  "article": "s. 111(2)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "wrong direction",
+    "reason": "The snippet says records must be retained until the end of a 7-year period beginning when the business relationship ends/completes the occasional transaction. Under the rubric, P7-I3 scores only a minimum retention period (keep >= X). This reads as a fixed/outer endpoint (“until the end of the 7 year period”), not an explicit “at least 7 years” minimum, so the mapping to a minimum-period requirement is directionally wrong for the rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I3 hunts for a specified minimum retention period. The provided text contains a specified 7-year period (“until the end of the 7 year period that begins when…”). Even if phrased as an endpoint, it still evidences a retention requirement tied to a defined 7-year duration, so the evidence supports scoring high for “minimum period … specified” rather than the rubric’s “no minimum specified” case."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Exact text establishes a retention obligation measured by a defined 7-year period starting at a trigger event (“business relationship ends” or “occasional transaction” completion). It does not expressly say “for at least” or “no less than,” but it does require retention through the end of that 7-year period. For P7-I3, the question is whether a specified period is required; the text does require a specified 7-year duration."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Corporations Act 2001",
+  "article": "s. 422D(8)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "s. 422D(8) expressly requires ASIC to retain covered books for a period of 2 years after taking possession/control, so there is no scope/function defect for the claimed minimum-retention indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I3 scores high when a minimum retention period is clearly specified. The snippet states ASIC must retain all relevant books for a period (the retention period) of 2 years after the day ASIC takes possession/control. hunt_in is satisfied (not limited to sectoral exclusions), and the evidence directly matches the minimum-period requirement."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes a minimum retention period: “ASIC must retain all books … for a period … of 2 years after the day on which ASIC takes possession or control of the books.” The later “may destroy … at the end of the retention period” does not negate the minimum; it confirms the end point. The “do not apply to the extent” clause is an exception to applicability, not a change to the stated 2-year minimum for covered books."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Corporations Act 2001",
+  "article": "s. 286(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "s. 286(2) expressly imposes a retention obligation for a specified period (“must be retained for 7 years after the transactions…are completed”), which directly matches the rubric’s requirement for a minimum retention period."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I3 (requirement_present_scores_high): hunt_in allows sectoral law (Corporations/financial record-keeping). Positive cue present: “must be retained for 7 years…”. Therefore score should be 1 (minimum period clearly specified). No exclusion applies (it is not a “no longer than necessary” limit)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a mandatory retention period: records “must be retained for 7 years after” the covered transactions are completed. The surrounding context confirms this is the period for which the financial records must be kept, not merely a permissive or alternative timeframe."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Corporations Act 2001",
+  "article": "s. 225(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "s.225(5) expressly imposes a retention obligation for a specified period (“For 7 years… must retain”), which directly matches the rubric’s requirement for a minimum retention period; no scope/function defect is apparent."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I3 hunt_in allows sectoral law (corporations). The snippet contains a clear minimum retention period: “For 7 years… must retain…”. Under scoring, this satisfies '1' (minimum retention period clearly specified). No exclusion applies (it is not a “no longer than necessary” limit)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a mandatory duty (“must retain”) and fixes the duration (“For 7 years after the day when a resolution… is passed”) for records made under the section in relation to the resolution. It therefore establishes a minimum retention period of at least 7 years for the relevant records."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "My Health Records Act 2012",
+  "article": "s. 17(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "s.17(2) imposes a retention obligation with specified end points (30 years after death / 130 years after birth / until required destruction), so there is no concrete legal-function or scope defect for P7-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P7-I3 hunt_in allows sectoral health evidence. Positive cues match: “retained for the period… ending: (i) 30 years after the death… (ii) 130 years after… (iii) when… required to destroy.” This clearly specifies a minimum retention duration, so score should be 1; no rubric exclusion (e.g., “no longer than necessary”) applies."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text in s.17(2) establishes a retention period with defined temporal endpoints: it begins when first uploaded and ends at 30 years after death (or 130 years after birth if death unknown), or earlier/later when required destruction applies. That directly answers the rubric question: must data be kept for at least a specified period."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Anti-Money Laundering and Counter-Terrorism Financing Act 20",
+  "article": "s. 167(2)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "court-gated access misread as warrantless",
+    "reason": "s.167(2) authorises an officer to issue a written notice requiring information/production, but the rubric’s score hinges on whether access is exercisable WITHOUT independent judicial authorisation. The snippet does not establish that the officer’s access power is not subject to any court/judicial authorisation elsewhere; mapping to “warrantless” access is therefore a scope/establishment defect for P7-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric hunt_in directs looking beyond privacy statutes to lawful-access regimes; this is an AML/CFT law access/compulsion power. The snippet shows government access via an authorised officer’s written notice (no “court order/warrant/authorisation of a judge” in the quoted text). Under the rubric’s court-order test, this is the warrantless-access type that scores 1, so no rubric failure mode is triggered."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Exact text: “The authorised officer may, by written notice… require the person… to give… information; or… produce… documents; or… make copies…”. It establishes a government access/compulsion mechanism triggered by an officer notice, and the quoted provision contains no requirement for an independent judicial body. While it uses “may” (discretion), the rubric’s P7-I5 is about whether access requires independent judicial authorisation; the snippet supports that it does not."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Surveillance Devices Act 2004",
+  "article": "s. 37(2)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "P7-I5 scores only government access to personal data without independent judicial authorization. s.37(2) authorizes use of an optical surveillance device in investigation, but the snippet does not establish that this is access to “personal data” (as opposed to general surveillance/observation) or that the device use constitutes “access” to personal data; therefore the mapping to the indicator’s legal function is not supported by the quoted text."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric hunt_in directs looking beyond privacy statutes to lawful-access/surveillance law, and positive cues include police/officer access without a warrant. The snippet expressly says “may, without warrant, use an optical surveillance device” by law enforcement officers, which is warrantless government access/surveillance. Under the court-order test, warrantless access supports score 1; the provision also does not indicate court authorization is required. Sectoral context does not bar scoring pe"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes a power for “State or Territory law enforcement officer… may, without warrant, use an optical surveillance device” in investigating a relevant offence, subject to conditions (no entry/interference without permission). It does not state that a judge/court order is required, so it supports the rubric’s warrantless-access (score 1) rather than the court-order-only (score 0) scenario."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Surveillance Devices Act 2004",
+  "article": "s. 39(1)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "court-gated access misread as warrantless (7.5 court-order test)",
+    "reason": "Rubric P7-I5 scores 1 only where government access is exercisable WITHOUT independent judicial authorization; here the snippet says tracking device use is allowed without a warrant but only with written permission of an “appropriate authorising officer” (an executive/authorising officer), not a court/warrant. The mapping rationale’s “court-order test” framing is internally inconsistent with the actual text, which does not show judicial authorization gating; therefore the WARN-style handling is a"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under the rubric’s court-order test, the provision authorizes tracking-device use “without a warrant” and does not require “authorization of a judge/court/warrant” for the access power; it is instead conditioned on permission by an appropriate authorising officer. That is the warrantless (judicial-authorization-not-required) type the rubric scores as 1. The sectoral nature is not an exclusion for P7-I5, and the snippet directly evidences the warrantless access power (even though it is executive-"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes: (i) a law enforcement officer may use a tracking device; (ii) it must be with “written permission of an appropriate authorising officer”; and (iii) it is “without a warrant” in investigating a relevant offence. It does not state that a court/judge must authorize the access, nor does it say the permission is a judicial warrant. On that wording alone, the provision supports the rubric’s warrantless-access category for P7-I5."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Telecommunications (Interception and Access) Act 1979",
+  "article": "s. 180A(2)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION (confidentiality != localization; busin",
+    "reason": "Rubric P7-I5 scores only government access powers that do NOT require independent judicial authorization. s.180A(2) is about an AFP authorised officer authorising disclosure of specified information/documents (including to foreign law enforcement) and is not framed as a power to access personal data from a holder without judicial authorization; it is a disclosure/transfer authorisation regime, so the snippet may not evidence the specific “government access” function the indicator tests."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Indicator P7-I5 hunt_in directs looking beyond privacy statutes to lawful-access/surveillance/access law; this is within telecommunications interception/access legislation and concerns AFP authorisation without a court/warrant. Positive cue: “An authorised officer of the Australian Federal Police may authorise the disclosure…”. Under the rubric’s court-order test, the provision does not state that access/disclosure requires independent judicial authorization; therefore it can be recorded as warr"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Exact text establishes only that an “authorised officer of the Australian Federal Police may authorise the disclosure” of specified information/documents that existed before notification, subject to necessity/appropriateness conditions. It does not expressly require a court order/warrant or judge’s authorization. While it is not explicit that the disclosure is “personal data” or that it is “access” in the sense of obtaining data from a telecom system, the snippet’s operative legal effect is an A"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Telecommunications (Interception and Access) Act 1979",
+  "article": "s. 178(2)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "court-gated access misread as warrantless",
+    "reason": "s.178(2) describes an “authorised officer of an enforcement agency” authorising disclosure, but the rubric’s score-1 requires access powers exercisable WITHOUT independent judicial authorization. The snippet does not establish that the authorisation is independent of a court/warrant regime (e.g., whether a judicial warrant is required elsewhere for the same disclosure). Without that linkage, the mapping to P7-I5’s warrantless-access category is not supported by the quoted text/context."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric hunt_in is satisfied (telecommunications interception/access law). The provision is a government-access mechanism (“authorise the disclosure”) and is not framed as “only under a warrant/court order.” Under the rubric’s court-order test, this is the kind of warrantless access power that would score 1-type evidence, even though it is conditioned on an enforcement officer’s authorisation and “reasonably necessary” purpose. No rubric failure mode is clearly triggered by the snippet itself."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes only that an “authorised officer” may authorise disclosure of specified information/documents that existed before notification, and that the officer must be satisfied disclosure is reasonably necessary for enforcement/ACC functions. It does not expressly mention a court order, warrant, or judge authorization. Therefore, based strictly on the quoted text, it supports the existence of a government-access power not expressly requiring independent judicial authorization (c"
+   }
+  ]
+ }
+]

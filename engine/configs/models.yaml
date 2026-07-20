@@ -1,0 +1,45 @@
+# Two profiles (Dev Plan §3A). Default = hybrid_accuracy (Path B): cloud reasoning +
+# self-hosted Neo4j/OCR + local BGE-M3 embeddings → best output, cost ~cents/doc (measured).
+# local_fallback (Path A): key-free (no API keys/internet/GPU) → runs in any sandbox.
+# Graph backend is the single switch GRAPH_BACKEND (get_graph_store): export GRAPH_BACKEND=neo4j for Path B.
+profiles:
+  hybrid_accuracy:            # PATH B — DEFAULT (accuracy-first; our runs, submitted output, live demo)
+    bulk:                     # query expansion / rerank / cheap classification
+      primary: openai:gpt-5.4-nano
+      fallback: google:${GEMINI_BULK_MODEL:-gemini-3-flash-preview}
+    high_reasoning:           # default legal mapping/refutation: nano-first
+      primary: openai:gpt-5.4-nano
+      fallback: google:${GEMINI_BULK_MODEL:-gemini-3-flash-preview}
+    legal_escalation:         # mini only for deterministic ambiguity/failure cases
+      primary: openai:gpt-5.4-mini
+      fallback: google:${GEMINI_HIGH_REASONING_MODEL:-gemini-3-flash-preview}
+    embedding:
+      provider: ${EMBEDDING_PROVIDER:-openai}   # cloud OpenAI (decided 4 Jul); bge_m3 stays the Path A/multilingual option
+      model: ${OPENAI_EMBEDDING_MODEL:-text-embedding-3-small}
+      dimensions: 1536
+    ocr:
+      provider: ${OCR_PROVIDER:-local}     # set OCR_PROVIDER=remote_paddle in .env to use the PaddleOCR VM
+      endpoint: ${OCR_ENDPOINT:-http://localhost:8089}
+      api_key: ${OCR_API_KEY:-}
+      model: ${LOCAL_OCR_MODEL:-local-ocr-placeholder}
+    graph:
+      provider: ${GRAPH_BACKEND:-sqlite}   # Path B: export GRAPH_BACKEND=neo4j (self-hosted)
+      sqlite_path: data/graph.db
+
+  local_fallback:             # PATH A — key-free fallback (ships in repo; runs anywhere)
+    bulk:
+      primary: ollama:${OLLAMA_BULK_MODEL:-qwen2.5:7b}
+    high_reasoning:
+      primary: ollama:${OLLAMA_REASONING_MODEL:-qwen2.5:7b}
+    legal_escalation:
+      primary: ollama:${OLLAMA_REASONING_MODEL:-qwen2.5:7b}
+    embedding:
+      provider: bge_m3
+      model: BAAI/bge-m3
+      dimensions: 1024
+    ocr:
+      provider: local
+      model: ${LOCAL_OCR_MODEL:-local-ocr-placeholder}
+    graph:
+      provider: sqlite        # key-free, zero extra services
+      sqlite_path: data/graph.db

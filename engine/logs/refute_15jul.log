@@ -1,0 +1,6 @@
+final_si_p6: 0 NEW rows -> {} -> data/review/refutation_final_si_p6.json
+final_si_p7: 14 NEW rows -> {'RECOMMEND-KEEP': 1, 'RECOMMEND-REJECT': 12, 'SPLIT-REVIEW': 1} -> data/review/refutation_final_si_p7.json
+final_ma_p6: 0 NEW rows -> {} -> data/review/refutation_final_ma_p6.json
+final_ma_p7: 5 NEW rows -> {'RECOMMEND-REJECT': 4, 'SPLIT-REVIEW': 1} -> data/review/refutation_final_ma_p7.json
+final_au_p6: 0 NEW rows -> {} -> data/review/refutation_final_au_p6.json
+final_au_p7: 5 NEW rows -> {'RECOMMEND-KEEP': 2, 'SPLIT-REVIEW': 1, 'RECOMMEND-REJECT': 2} -> data/review/refutation_final_au_p7.json

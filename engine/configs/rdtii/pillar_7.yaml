@@ -1,0 +1,126 @@
+# RDTII 2.1 — Pillar 7: Domestic data protection and privacy
+# POLARITY WARNING (silent score-killer): P7-I1 and P7-I2 score the ABSENCE of a
+# framework (lack = 1 = more restrictive environment); P7-I3/I4/I5 score the
+# PRESENCE of requirements. Encoded per indicator below — never in anyone's head.
+# CORRECTED 4 Jul vs the full RDTII 2.1 guide (pp.57-63) + methodology sheet:
+# 7.5 court-order test; 7.2 and 7.4 gain 0.5 tiers; 7.3 record-at-0 rule; weights added.
+# Canonical wording: DoDont §9.1 (mirrored in Build Guide §7.1).
+
+schema_version: rdtii-2.1
+pillar: 7
+name: Domestic data protection and privacy
+question: How is data governed domestically — privacy, cybersecurity, retention, accountability, government access?
+scope_exclusions:
+  - Measures applying ONLY to government data are NOT scored for 7.3.
+indicator_weights: { P7-I1: 0.31, P7-I2: 0.31, P7-I3: 0.16, P7-I4: 0.06, P7-I5: 0.16 }
+
+indicators:
+  P7-I1:
+    defined_terms: ["personal data", "data subject"]
+    methodology_number: "7.1"
+    name: Lack of comprehensive legal framework for data protection
+    policy_name: Lack of comprehensive legal framework for data protection
+    polarity: framework_absent_scores_high
+    question: Does the economy LACK a comprehensive (horizontal) personal-data-protection law?
+    check_order:
+      - "First: does a horizontal personal-data law exist (applies across sectors)?"
+      - "Then: substantive sufficiency — does it grant core rights (access, correction/rectification, etc.)?"
+    positive_cues: ["Personal Data Protection Act", "Privacy Act", "data protection law"]
+    exclusions:
+      - "Sectoral DP laws are RECORDED but do not make the framework comprehensive."
+      - "A cybersecurity law does not answer the data-protection question -> P7-I2."
+    scoring:
+      "1": No comprehensive framework exists.
+      "0.5": Sectoral-only laws; OR horizontal-but-thin (e.g. missing right-to-rectification — "not comprehensive enough", Juntong 5 Jun). Organizers invite going deeper than the binary here.
+      "0": A comprehensive horizontal framework exists.
+    example: "SG PDPA 2012 (horizontal) -> score 0; sectoral-only economy -> 0.5."
+
+  P7-I2:
+    defined_terms: ["critical infrastructure", "cyber security incident"]
+    methodology_number: "7.2"
+    name: Lack of dedicated legal framework for cybersecurity
+    policy_name: Lack of dedicated legal framework for cybersecurity
+    polarity: framework_absent_scores_high
+    question: Does the economy LACK a law specifically designed for cybersecurity (network security, incident response, critical infrastructure, cyber-risk)?
+    positive_cues: ["Cybersecurity Act", "Cyber Security Act", "information security law"]
+    exclusions:
+      - "Scattered security clauses inside a privacy/sectoral law do NOT make a dedicated framework."
+      - "Sectoral notices (e.g. MAS Cyber Hygiene for financial sector) are recorded but are NOT the controlling evidence when a horizontal act exists (Assignment-1 trap; the MAS 2019 notice was also superseded by FSM-N16)."
+    scoring:
+      "1": No cybersecurity framework at all.
+      "0.5": A NON-DEDICATED framework (relies on other laws for incident monitoring/detection/prevention/mitigation) and/or a dedicated but SECTORAL-ONLY framework.
+      "0": A dedicated HORIZONTAL cybersecurity framework exists.
+    example: "SG Cybersecurity Act 2018 (dedicated, horizontal) -> score 0; MY Cyber Security Act 854 (2024) -> 0; sector-only cyber rules with no horizontal act -> 0.5."
+
+  P7-I3:
+    defined_terms: ["retain", "records"]
+    methodology_number: "7.3"
+    name: Minimum period of data retention requirements
+    policy_name: Minimum period of data retention requirements
+    polarity: requirement_present_scores_high
+    question: Must data be kept FOR AT LEAST a specified period (days/months/years)?
+    positive_cues:
+      - "shall be retained for at least"
+      - "keep ... for a period of not less than"
+      - "for six years from"
+      - "for a period of seven years"
+    exclusions:
+      - "'Do NOT keep longer than necessary' is a retention LIMIT (data minimisation) — the OPPOSITE. NEVER 7.3 (their most-repeated warning)."
+    hunt_in:
+      - "Sectoral law: anti-money-laundering, tax, companies/accounting, telecom, health, employment."
+    scoring:
+      "1": A minimum retention period is clearly specified (keep >= X days/months/years).
+      "0": No minimum period specified. A retention requirement WITHOUT a specified minimum period is still RECORDED, scored 0 (4-Jul internal-guide rule).
+    example: "Bangladesh: e-commerce transaction data retained 6 years from the transaction."
+
+  P7-I4:
+    defined_terms: ["data protection officer", "impact assessment"]
+    methodology_number: "7.4"
+    name: DPIA / DPO requirements
+    policy_name: Data Protection Impact Assessment or Data Protection Officer requirements
+    polarity: requirement_present_scores_high
+    question: Must organisations appoint a Data Protection Officer and/or run Data Protection Impact Assessments?
+    positive_cues:
+      - "shall appoint a data protection officer"
+      - "data protection impact assessment"
+      - "designate one or more individuals to be responsible"
+      - "responsible for ensuring that the organisation complies"
+      - "compliance officer responsible for"
+    exclusions:
+      - "Having a privacy law in general is NOT enough — the question is the specific accountability mechanisms."
+    scoring:
+      "1": DPO (or DPO + DPIA) required across ALL sectors.
+      "0.5": Sector-specific DPO/DPIA requirement only.
+      "0": "Neither required. (Guide-only theoretical tier: DPIA-only = 0.25 — never yet observed in the data.)"
+    example: "SG PDPA: organisations must appoint a DPO (all sectors) -> 1. India DPDP Act 2023 s. 10: Significant Data Fiduciary must appoint DPO + run DPIA."
+
+  P7-I5:
+    defined_terms: ["authorised officer", "warrant"]
+    methodology_number: "7.5"
+    name: Requirements to allow government access to personal data
+    policy_name: Requirements to allow government access to personal data
+    polarity: requirement_present_scores_high
+    question: Can the government access personal data WITHOUT authorization of an independent judicial body (court decision / warrant / equivalent)?
+    legal_test: >
+      THE COURT-ORDER TEST (4-Jul correction — the score-deciding question): access
+      that does NOT require independent judicial authorization scores 1; a power
+      exercisable ONLY under a court order/warrant supports score 0. Record both
+      kinds of provision, but only warrantless access drives the score.
+    hunt_in:
+      - "Look BEYOND the privacy statute: criminal procedure codes, surveillance/lawful-access law, telecom law, national security law (their explicit research lesson — and our richest NEW-evidence vein)."
+    positive_cues:
+      - "police officer may access"
+      - "shall provide access to ... upon request"
+      - "authorised officer may ... search any data"
+      - "without a warrant"
+    negative_cues:
+      - "only under a warrant issued by"
+      - "pursuant to a court order"
+      - "with the authorization of a judge"
+    exclusions:
+      - "Exceptions inside the privacy act often point to the REAL access powers defined elsewhere — follow them."
+      - "Access gated on a court order / judicial warrant does NOT score 1 — it supports score 0 (record it, note the judicial safeguard)."
+    scoring:
+      "1": A measure allows government access WITHOUT independent judicial authorization.
+      "0": No such measure — including where every access power requires a court order/warrant.
+    example: "SG Criminal Procedure Code s.39: police may access/search/copy computer data (no warrant) -> 1-type evidence. Sri Lanka: telecom operators must open databases to the regulator on request."

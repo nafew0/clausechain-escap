@@ -1,0 +1,1634 @@
+[
+ {
+  "finding_key": "07e0985cb5b72cc9ee7e4d35b85810692999db3d80f9ce3409fe81463b3e1c61",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "1449efd5ad3dc802e32b75b523e4569c79822851df4ed6d9e1d76e25df1e73cd",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "03a16310e0ae31b6b0fd95cd197e7e0f7af8919cdf15430b174d9b897079e75a",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "839327b0735fd846ddd0d772b61e945189502815697b89f603a8dd1daa7437cf",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "c0a2f8b5e18274bfad8614206a5016fcd9922a714cce54e4ddd1dde632357603",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "511b7515593d36900a078464d37fa6ca2032691cdc06a7e363a771071b817097",
+  "review": {
+   "decision": "approved",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-19T07:26:43+00:00",
+   "citation_checked": true,
+   "mapping_checked": true,
+   "status_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "status_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Reviewed case-by-case in the 19 Jul joint session; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR (Independent Legal Consultant) with his authorization."
+  }
+ },
+ {
+  "finding_key": "b274887a25aaa1b61664db9dd09813dc286a3d98d6d82c613691942e33d670a8",
+  "review": {
+   "decision": "approved",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-19T07:34:12+00:00",
+   "citation_checked": true,
+   "mapping_checked": true,
+   "status_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "status_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Reviewer session 19 Jul (Excel): approved after source check; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
+  }
+ },
+ {
+  "finding_key": "236cd9cc33ab20fa4b7b343d7c420764661e1b12128d71436a9dc932f1b9a35b",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-19T07:34:12+00:00",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "Reviewer: substance already covered by N002 (CSA codes-of-practice framework); avoid duplicate-indicator evidence."
+  }
+ },
+ {
+  "finding_key": "00cb2c2ebe416e770497f74e2566c91474c0f08a5e75a388d2cb5f1240e007d6",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "aa84f25e020f25353e6b9d056c5eef9daff557edea476a589dbe4063efd87f13",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "2ace158bfe4c8adc26e3ca5353cb2a300cb586e37061fd3d8c4d6b244c3ca40f",
+  "review": {
+   "decision": "approved",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-19T07:34:12+00:00",
+   "citation_checked": true,
+   "mapping_checked": true,
+   "status_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "status_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Reviewer note: related ss. 320(1)-320(2) not captured as separate rows; mapping approved on behalf of MD. INSAFUL RAHMAN TUSAR with authorization."
+  }
+ },
+ {
+  "finding_key": "338cd1f1426d2b02dd6db59ae92fef9c55cf003ee58e0af516073abc4a081ab0",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "Team Lead, Team zAI BD",
+   "reviewed_at": "2026-07-19T07:34:12+00:00",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "Reviewer: provision merely cross-references ss. 199(1)-199(2); not independent operative evidence."
+  }
+ },
+ {
+  "finding_key": "983e77dc41d8b7f6cb6aecb43e01b2f6043a28168d8569d9e9fead77ca06f365",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "6196771b4b60f465e80ce22c69a98e0c6d6f7c2f2d6be46b46f9716d69ca354e",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "5190b9b70b0dde2c1b6f7c7f7b65b2a536b3b669acf30ce4d2a3b728467185bd",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "20d57975d64d1b92317706e626b7d678e5c7fd0432a9593c5a756cb32fa8ca7f",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "b7151424a1214ece75b6250538aafe7560fc5cabc0084b82e9751b98cde9929f",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "4d7c66ee664d2b60909106843837a8ae89af7759d2feae8ea6296cc7b067b0c2",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "3a874eb91524c49bcc398bab27936209dff274e1bdcce60937d591fbb03ab575",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "2d20a12d76868384d46c10b1921eb38e962fe34385fa2edd3bf0fe9dab5671d1",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "829d2de8efe1356aeef1572ddccd56fdc9ada4a7bb099f3e4bb7d12ceb999dd6",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "12af6da3685ba73bf78031baaed01627939d12b8ad6776cedcdeec3476703932",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "fb0dd22f411a51a214c95ca97e255a3ccadce2cc547238bc358a9f361b91de1e",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "281cc0dce771cfce1c1bc632d3a5ea8a60da899440631d24c4828ecbc72775a9",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "7301457f0f6a453730c8b4001d5fa5cc3b88b845f61d19cbcc6633a30706a148",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "96c0c47b8df105d654f024acd2a4550f5d093d1724ea50a032944856cebe0363",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "41768bd3f00690a90747182e207ce8c151f18dc52fbdbf8e30815a10c62975c3",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "8ab3f42a5858f7eab84c0c35fb0b431f924fe41ced343342f93492f268fe4c82",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "7925b560348a2f927083923464819799f9d5c39db315181bd7b17dae2fcc66fd",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "b3d347b557eeb33570053004e2d3a76edb2ed20b8d896569452a00d30c18043a",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "6395b59e90537177049095e42912609167ea3f581d1b0578b31449ea23448c5c",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "d8ee5de9827314d1b7c0e91a77514e5085bd27c1959950ba06b48b9d88140e4c",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "e691354eca3622dc01ac76cf44c2a43a6ca21c37ba2ce0fac123465ef3b17017",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "e0bc9d1cf83b49dd2f8f28e32e350fa83d5eb009a6412043b7fac6618a3d4be2",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "5287aa2cef392e96655f6dbae3555d6bc4b01f7c8e411af20e52d374e0a63360",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "f620e0fb466ab2a55bc5d7cab77709e00a532b5c8a23be5ee1a04d73a886f1c3",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "a87c63c6fa93ef35c302919cb6bcd5d1fd1a1bc6e9edc14793868c226872a3e1",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "1e4311dcac41b6e496b9dd5f9f743be653a84a29e99675f3228e1ba4feda194c",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "ec92f7209ec5275d7ff2304a0de6ba062cfc0c8edf303db1469df170cefcd051",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "701197943f21b1ff5d078c2eac4196f0396975e587bb8942d8e533aca1f03f5c",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "6e3a0766e7bb8281faa90963e55932306e367a238d7ba14fb2ea32839b52d18c",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "bda74054f7b70ce10927610887ba5b2f5ffddce400c5d0aecd524159c69f1bfc",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "3fdb44676bafffebd54c87f8b77d4328005cda07585dc1b38db4867eb68c44c6",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "b00736824a2507e8d4e211a22eeda642d9272fbc3b1cae3039e0f83689416472",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "90dad30b617c2a0d46572154d983d0cc6282d2cd348f2be84f3c97752f91bb25",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "6c6724539224178a45420edbf2b74f75cd8e6a8573cb733f3d058fe916503de2",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "3c6ad1a902a8e3b93ace58eb9e9bee162168fc87a8fcb525f1cd0498a91e4d0d",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "658eaad198a446605c35b54c5f3e01f709adeec67920436264b422cc95ef5c39",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "23c848010f83c929fb8b649d2fc966b9b43c9077f48aed1785886db285ca7965",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "648498134bd94e38bc8cbb58c2725189d4095a8820fac629f5defd6ca1fde62c",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "3d03e468c89ea98982cb45e597105f74953f75354b901b1445ffca14fea230d5",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "adbbe0651de844f395ea2e53644e4b89f95dd89a038927e91a6050ad9a6399a2",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "968214602b0651cd9820d82f628ec7aced0660b8d4f4fcfea318bc924046e229",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "8fc40156b5d3198a88f973932f70aa4ca2d6638de8f87af5239b9bc93d401dab",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "11472793c25c8d3b2da3c364331437f6e0991a153160e718e8dc95398adea057",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "0a61d3feb7080bbf5e9742aa591922943642573bc7157c09cc4b6110a5e21f21",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "76de35654a6b593eac20f2bf884efeb278d5ef84d2aa92a6a5559fbdb6c1deab",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "303fe7f7a52d2a662c52e922d28dd2a4e8f4ed6c58c7785bbc319822da4c18d9",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "fb21ecceb8733d1bd8fc4bb1c65ec374d019043f0ae3d7f17a14f79bb9535500",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "c4a62d7eaefc4b38a4a6e42cc747c29c50b8a4d9b516ecbea7500084da13883f",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "a382a739bba3ac9196049879d14c09c2d5ebd2253eea56eb36f305bb1918cb35",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "62b933d1e2dde2eca56dcc4e42a4144b3a6c7cc10dbfd8e16f7407a6096bcaf4",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "2844f9532c0241eebe467b7b2c8866ec5cd30de872fb9c3df426c0846bc4cc00",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "2e6ccf14c053d5ff34e69b152b7c880832eb49e9988350018730ca8a09cc6fba",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "8eabc7be84ef6f865bfd4e2628b81c1125396df052f61cd4172396799354fb4d",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "43ba7fdf280f40a06d829f845bae76fd48ee3a8ef75eff7304f13312a09f93eb",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "24a318a196b01f24b325c5ad49e63340c90c88a1fdaec1bb46134061748c9479",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "a831a6c7d5a925bccdfeb536711998a6b18beacea444c08b381fff1bb1e2ae0f",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "70e44201336a5f9a24cd7a67e85b6e8136ede17f2b1c8a24437b94046ec6eaa9",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "c3c25497f34b3a6a34a46294f9c66d940ea1d7b8afb8a4a4bfe5766b46e76198",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "1d3d0f5dd6ea402aa36029de55e9dc1c3c1ba1bad4f794f6e15a740af021865b",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "a1b87ce5a7f9a27f9b366e07e3a5a3ca284b96e837c6ac6844b956ec8eec9c61",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "c51b5f022fc05ed330423d5596a4672272109bb8076b46fdb0bf7c8a54954292",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "572dcb3fcc3e836ad17e16fdcff7070127ae3c12206274a13efb0e7bf8b816c6",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "3d4ccc4878da15b71f426aca71ad2aad4d8f15081e68e9deda180d866579f2ed",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "a869c3211ead0cb66e69d8714418960ae478751bdc0b06b3492ec1661bb30b86",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "06f972e2048c891ae85aeda549732d4649b0119a2031264922dcacef97f324b8",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "399331a4860acc9f2707d2450d142b39666bd71a8b006ac1d4172db4fc70352c",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "eb9ca348b6a221ce3ea190b56da66dc8bd81ee191a7a73b0e4076b5adcdcdd39",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "e80b36f4be81e34c5d9f8f86bbd4eb2ec3cf0cafbda347111553843058ad55ea",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "7d1161878d36b231b51d7664877ce7531304154d7cb5a525533098cad42f82f2",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "fab19f90846288d5317ea93694d626a8b4a57c7c95cfc181659d2fc78fb9cc42",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "c41325d7ea0ced896fecc1dfc9b40ea6091c51ddb0448f43edaf119ade2b9488",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "4e13ffc477e3fcadf903a370250f29f03f2fa322811305cc02c91df2f8d2453b",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "8f814667c1d87b1b1ecc30ed0ffb165875923f9ea123dd13d15977976510fd0c",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "7a17533948ed2c1452949774daebaec69efabec956a929a727d8eae41911ec56",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "6aca0a5604b1ecdc0235d2644f2669dc35a937d769ff99c10c77fea6f490278e",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "ae095c58fc1fc7be2e55ab574002bf5803b9694bef3d8b7485bf35dee6e827ba",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "b222eec5c8b95482dfea4123489c8ecb8e5b9e71b6434fc90005c21ed1c9dfb9",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "27e812ce8e9a985b2a22cbf8a7b7f825f91ed425023d56298f8884cded98d2b9",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "a54796429b51a5e36dadf65129206c01c5bc435f2aa554b7d5fd4c4afcfa34a5",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "f4ebc8f2935350572196c78be9d697be6c4c7558d3c47fa5995e34600bd0c06b",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "7a57679c1112d770aacd08eb7b781a6545060646ad492598bb313f685cd5ddc7",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "e59e496c999229ecc15103ec2ce042918c899b6f32b66abdd1b5922d2761bdd7",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "74bde2e4137fba2c30d04fdb55cff646dd4796302409ac8c5b4e39c164ef9eac",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "1a0e66ceb0b4018f3c81e58d78807ef17f5f73cfc9a0c0d4212532998a7f1c53",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "eb3f0e6424b77f3be1f139a5b9d1db10211f5cff4f8ed4c2a5607bdd7a38b655",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "bb42c1c894de972da30ba9b09821840b3c0e62ff96d9cbec9730f821a640cd23",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "f43448d9cacc24f493dbe33bfb2a0b836c5156171969485fe1e19d8cc8d9b28e",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "36039dfd674968b15eaff0ec09a2391a64d12578f29bf5419007e2710bbe4de8",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "7f051fe07af51af478973a080591b0f87c8dcecb69b95a0193c4ffbe00db34f5",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ },
+ {
+  "finding_key": "b8899465bbcddaf2a55346e0d8e6220d160109d50b8109ea6d6b36b567587825",
+  "review": {
+   "decision": "rejected",
+   "reviewer_name": "",
+   "reviewer_role": "",
+   "reviewed_at": "",
+   "citation_checked": false,
+   "mapping_checked": false,
+   "status_checked": false,
+   "citation_reviewer_name": "",
+   "mapping_reviewer_name": "",
+   "status_reviewer_name": "",
+   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+  }
+ }
+]

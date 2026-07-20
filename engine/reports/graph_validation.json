@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "provisions": {
+    "Malaysia": 3688,
+    "Australia": 39787,
+    "Singapore": 10494
+  },
+  "source_artifacts": 115,
+  "schema_version": 3,
+  "errors": []
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify your email</title>
+  </head>
+  <body style="margin:0;padding:0;background:#f3f7fb;font-family:Arial,sans-serif;color:#10233d;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f3f7fb;padding:32px 16px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;background:#ffffff;border-radius:20px;overflow:hidden;border:1px solid #d6e0ec;">
+            <tr>
+              <td style="padding:32px 32px 12px;background:linear-gradient(135deg,#eff6ff 0%,#f0fdfa 100%);">
+                {% if logo_url %}
+                <img src="{{ logo_url }}" alt="reactdjango" style="height:32px;width:auto;display:block;margin-bottom:20px;" />
+                {% endif %}
+                <p style="margin:0 0 10px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#2563eb;font-weight:700;">
+                  Account security
+                </p>
+                <h1 style="margin:0;font-size:28px;line-height:1.2;color:#10233d;">
+                  Verify your email address
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:28px 32px 18px;">
+                <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">
+                  Hi {% if user.full_name %}{{ user.full_name }}{% else %}{{ user.username }}{% endif %},
+                </p>
+                <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">
+                  Confirm your email to finish setting up your reactdjango account and unlock sign in.
+                </p>
+                <p style="margin:0 0 28px;">
+                  <a
+                    href="{{ verification_url }}"
+                    style="display:inline-block;padding:14px 24px;border-radius:999px;background:#2563eb;color:#ffffff;text-decoration:none;font-weight:700;"
+                  >
+                    Verify email
+                  </a>
+                </p>
+                <p style="margin:0 0 12px;font-size:14px;line-height:1.6;color:#44556d;">
+                  This verification link expires in {{ expires_in_hours }} hours.
+                </p>
+                <p style="margin:0 0 8px;font-size:14px;line-height:1.6;color:#44556d;">
+                  If the button does not work, copy and paste this link into your browser:
+                </p>
+                <p style="margin:0 0 20px;font-size:14px;line-height:1.6;word-break:break-all;">
+                  <a href="{{ verification_url }}" style="color:#2563eb;text-decoration:underline;">
+                    {{ verification_url }}
+                  </a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:18px 32px 28px;border-top:1px solid #e5edf5;font-size:13px;line-height:1.6;color:#6b7b93;">
+                If you did not create a reactdjango account, you can safely ignore this email.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

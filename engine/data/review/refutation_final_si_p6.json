@@ -1,0 +1,114 @@
+[
+ {
+  "indicator": "P6-I4",
+  "law": "Personal Data Protection Regulations 2021",
+  "article": "s. 12(1)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "s. 12(1) does not state a transfer is permitted only if conditions are met; it creates a deemed obligation on an overseas recipient (bound by comparable-protection obligations) when the recipient holds specified certification. Under P6-I4’s “conditional flow regimes” framing, this is more accurately a certification-based compliance/deeming rule for the recipient’s obligations than a transfer-permission condition (no explicit “transfer may/shall not…unless” transfer gate in the quoted text)."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P6-I4 scores conditions on cross-border transfer. The snippet concerns an overseas recipient of transferred personal data and imposes a comparable-protection standard if the recipient holds specified certification—i.e., a conditional pathway tied to cross-border personal data. This satisfies scoring '1' (conditions cover personal data and apply to the cross-border transfer situation). No rubric exclusion is triggered (not a business/asset transfer; not domestic disclosure)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Exact text establishes: (i) the subject is a recipient outside Singapore of an individual’s personal data; (ii) the recipient is “taken to be bound” by legally enforceable obligations to provide a protection standard at least comparable to the Act; (iii) this deemed binding applies “if” the recipient holds specified certification granted/recognized in the destination country/territory. The context provided is regulation 10(1) purposes and defines “specified certification” systems. While the prov"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I4",
+  "law": "Personal Data Protection Regulations 2021",
+  "article": "s. 10(2)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "s. 10(2) is framed as a “taken to have satisfied” compliance mechanism for cross-border transfer, but the rubric P6-I4 requires conditions on transfer being permitted IF conditions are met. Here, the text is not a transfer-permission rule (“may/shall transfer … unless”), but a deeming provision tied to satisfying requirements of paragraph (1) (ascertainment/ensuring comparable protection). That mismatch makes the mapping to P6-I4’s conditional flow regime characterization wrong for the rubric’s "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P6-I4 asks whether transfer is permitted if conditions are met (consent/adequacy/contractual safeguards/approval). The snippet expressly conditions the cross-border transfer on individual consent (and other listed conditions in (b)-(e)), i.e., “taken to have satisfied” requirements for transfers to a recipient outside Singapore if (a) consent, etc. This is conditional cross-border data transfer evidence, so scoring = 1 (conditions cover personal data and apply to cross-border transfers). "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Exact text: “A transferring organisation is taken to have satisfied the requirements of paragraph (1)… in respect of an individual’s personal data which it transfers… to a recipient in a country or territory outside Singapore if — (a) … the individual consents…” This establishes that for cross-border transfers, compliance is satisfied when specified conditions (consent, deemed consent, necessity, transit, public availability) are met. While it is phrased as a deeming/compliance-satisfaction rule"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "Digital Economy Partnership Agreement",
+  "article": "Art. 4.3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Art. 4.3 contains a concrete binding obligation (“Each Party shall allow the cross-border transfer of information by electronic means…”) for covered persons, which directly matches the rubric’s requirement for a binding cross-border data-transfer commitment; sectoral scope does not defeat P6-I5 under the rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P6-I5 hunt_in is empty and positive cues are satisfied by the quoted language (“shall allow the cross-border transfer of information by electronic means, including personal information”). The mapping decision is to record presence of a binding commitment; the rubric’s 6.5 scoring (1=no binding, 0=at least one) is consistent with this provision evidencing at least one binding agreement."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a mandatory cross-border transfer allowance for electronic transfer of information (including personal information) when for the conduct of the business of a covered person. The surrounding context further confirms it is an “Article… Cross-Border Transfer of Information by Electronic Means” with binding “shall” language, supporting the claimed rationale for P6-I5."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "RCEP Chapter 12 (Enterprise Singapore text)",
+  "article": "Art. 12.15",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "lost exception",
+    "reason": "Art. 12.15(2) is a conditional obligation limited to cross-border transfers “where such activity is for the conduct of the business of a covered person,” and Art. 12.15(3) allows measures inconsistent with para. 2 that are necessary for legitimate public policy objectives (with safeguards). The mapping rationale treats the provision as an unconditional binding commitment, which misstates the scope of the binding cross-border data-transfer commitment for P6-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Rubric P6-I5 hunts for any binding cross-border data-transfer commitment; the snippet contains “A Party shall not prevent cross-border transfer of information by electronic means … for the conduct of the business of a covered person,” which is a positive cue for a binding commitment. Sectoral/covered-person limitation is not an exclusion in the rubric, and the scoring (1 vs 0) is applied at scoring time, not by the mapping decision. No rubric-required hunt_in/scoring mismatch is shown."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a “shall not prevent” obligation regarding cross-border transfer of information by electronic means, but only for transfers for the conduct of the business of a covered person. That is still a binding cross-border data-transfer commitment of the type the rubric’s legal_test targets (“shall not prevent/restrict” cross-border transfer). The surrounding context (para. 3) confirms the obligation is subject to permitted exceptions, but it does not negate that a bindi"
+   }
+  ]
+ }
+]

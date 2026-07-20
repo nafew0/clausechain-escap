@@ -1,0 +1,27 @@
+# Final decision (GraphRAG Strategy §12): the graph is a data model behind a
+# swappable GraphStore interface. SQLite is the default judged path (zero extra
+# services); Neo4j is the optional swap for the live-demo graph view.
+backend:
+  env_var: GRAPH_BACKEND
+  default: sqlite
+  sqlite:
+    path: data/graph.db
+
+neo4j:
+  uri_env: NEO4J_URI
+  user_env: NEO4J_USER
+  password_env: NEO4J_PASSWORD
+  required_for_dummy_run: false
+  optional: true
+
+canonical_nodes:
+  - Economy
+  - Instrument
+  - InstrumentVersion
+  - Section
+  - Provision
+  - SourceSpan
+  - Indicator
+  - CandidateFinding
+  - VerifiedFinding
+

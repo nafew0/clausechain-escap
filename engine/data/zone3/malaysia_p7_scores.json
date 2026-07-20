@@ -1,0 +1,149 @@
+{
+ "economy": "Malaysia",
+ "pillar": 7,
+ "run": "run-my-p7-1784112332",
+ "krippendorff_alpha": 0.627,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The Personal Data Protection Act (Act 709) provides horizontal principles and access/correction rights, but the evidence also shows sectoral codes (banking) add"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "Malaysia has a horizontal Personal Data Protection Act (Act 709) with core principles and data subject rights (access and correction), but the evidence provided"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "While Act 709 provides a horizontal framework and includes access/correction rights, the evidence does not show a fully comprehensive set of data subject rights"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited provisions show a horizontal Cyber Security Act framework (e.g., licensing requirements for providing/advertising cyber security services under Act 85"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The Cyber Security Act (Act 854) 2024 provides a dedicated horizontal cybersecurity framework (e.g., licensing requirements for cyber security service providers"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "Although the Cyber Security Act (Act 854) 2024 contains horizontal licensing provisions for cyber security service providers, the evidence provided does not sho"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence includes multiple provisions that clearly specify minimum retention periods (e.g., banking sector retention \u201cmore than seven (7) years\u201d and \u201cuntil "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Multiple laws/codes explicitly specify minimum retention periods (e.g., at least seven years for banking records and tax records, and not less than six years fo"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Multiple laws and sectoral guidance explicitly specify minimum retention periods (e.g., at least seven years for banking records and at least six years for cybe"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no DPO/DPIA requirement found",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence contains no gate-verified text establishing any DPO or DPIA requirement under Act 709 (Personal Data Protection Act 2010), so neither is p"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No gate-verified evidence was found that Act 709 (or any other law) requires a DPO and/or DPIA for any sectors, so neither requirement can be confirmed."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The only cited source (Act 709) has no gate-verified evidence of any DPO or DPIA requirement, so the indicator cannot support a sector-specific or cross-sector "
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited provisions allow government/police interception and entry powers based on authorization by the Public Prosecutor or in urgent cases without independen"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The cited provisions allow government/police/public prosecutor-authorized officers to access/intercept/enter and exercise investigative powers without independe"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The cited laws allow government/police to compel interception/retention and to enter premises based on authorization by the Public Prosecutor or an \u201curgent and "
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

@@ -1,0 +1,831 @@
+{
+  "version": 1,
+  "status": "DRAFT_NOT_HUMAN_GOLD",
+  "targets": {
+    "clean_native": 8,
+    "complex_native": 8,
+    "scanned": 8,
+    "mixed": 3,
+    "multilingual": 3
+  },
+  "mandatory_cases": [
+    "AU Privacy Act s.33D(1)/(2)",
+    "AU TIA s.187A",
+    "AU TIA s.187B / note guard",
+    "AU Telecommunications s.317ZH / page-number guard",
+    "AU Criminal Code 474.17A / Roman item"
+  ],
+  "missing": {},
+  "pages": [
+    {
+      "category": "clean_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 1,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Prepared by the Office of Parliamentary Counsel, Canberra\nData Availability and Transparency Act \n2022\nNo. 11, 2022\nCompilation No. 4\nCompilation date:\n11 December 2024\nIncludes amendments:\nAct No. 128, 2024\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "2022",
+        "11"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "clean_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 2,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "About this compilation\nThis compilation\nThis is a compilation of the Data Availability and Transparency Act 2022 that \nshows the text of the law as amended and in force on 11 December 2024 (the \ncompilation date).\nThe notes at the end of this compilation (the endnotes) include information \nabout amending laws and the amendment history of provisions of the compiled \nlaw.\nUncommenced amendments\nThe effect of uncommenced amendments is not shown in the text of the \ncompiled law. Any uncommenced amendments affecting the law are accessible \non the Register (www.legislation.gov.au). The details of amendments made up \nto, but not commenced at, the compilation date are underlined in the endnotes. \nFor more information on any uncommenced amendments, see the Register for \nthe compiled law.\nApplication, saving and transitional provisions for provisions and \namendments\nIf the operation of a provision or amendment of the compiled law is affected by \nan application, saving or transitional provision that is not included in this \ncompilation, details are included in the endnotes.\nEditorial changes\nFor more information about any editorial changes made in this compilation, see \nthe endnotes.\nModifications\nIf the compiled law is modified by another law, the compiled law operates as \nmodified but the modification does not amend the text of the law. Accordingly, \nthis compilation does not show the text of the compiled law as modified. For \nmore information on any modifications, see the Register for the compiled law.\nSelf-repealing provisions\nIf a provision of the compiled law has been repealed in accordance with a \nprovision of the law, details are included in the endnotes.\n  \n  \n  \nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "clean_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 3,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Data Availability and Transparency Act 2022\ni\nCompilation No. 4\nCompilation date: 11/12/2024\nContents\nChapter 1—Preliminary\n1\nPart 1.1—Introduction\n1\n1\nShort title.............................................................................................1\n2\nCommencement ..................................................................................1\n3\nObjects ................................................................................................1\n4\nSimplified outline of this Act..............................................................2\n5\nAct binds the Crown ...........................................................................3\n6\nExtension to external Territories.........................................................3\n7\nExtraterritorial operation.....................................................................3\nPart 1.2—Definitions\n5\n9\nDefinitions ..........................................................................................5\n10\nReferences to access to data..............................................................12\n11\nEntity definitions...............................................................................12\n11A\nThe data sharing project....................................................................14\nChapter 2—Authorisations\n17\nPart 2.1—Introduction\n17\n12\nSimplified outline of this Chapter.....................................................17\nPart 2.2—Authorisations\n19\n13\nAuthorisation for data custodian to share public sector data............19\n13A\nAuthorisation for accredited user to collect and use data.................21\n13B\nAuthorisation for ADSP to act as intermediary................................22\n13C\nAuthorisation for data custodian to collect and use submitted \ndata....................................................................................................22\n14\nPenalties for unauthorised sharing....................................................23\n14A\nPenalties for unauthorised collection or use .....................................24\nPart 2.3—Data sharing purposes and principles\n28\n15\nData sharing purposes.......................................................................28\n16\nData sharing principles .....................................................................30\nPart 2.4—Privacy protections\n33\n16A\nGeneral privacy protections..............................................................33\n16B\nPurpose-specific privacy protections................................................33\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "5",
+        "9",
+        "10",
+        "11",
+        "11A",
+        "17",
+        "17",
+        "12",
+        "19",
+        "13",
+        "13A",
+        "13B",
+        "13C",
+        "14",
+        "14A",
+        "28",
+        "15",
+        "16",
+        "33",
+        "16A",
+        "16B"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "clean_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 4,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "ii\nData Availability and Transparency Act 2022\nCompilation No. 4\nCompilation date: 11/12/2024\n16C\nProject involving use of de-identification or secure access \ndata services......................................................................................36\n16D\nProject involving complex data integration services........................37\n16E\nPrivacy coverage condition...............................................................39\n16F\nCompliance with APP-equivalence term..........................................40\nPart 2.5—When sharing is barred\n42\n17\nWhen sharing is barred .....................................................................42\nPart 2.6—Data sharing agreements\n45\n18\nData sharing agreement ....................................................................45\n19\nRequirements to be met by all data sharing agreements...................46\nPart 2.7—Allowed access to output of project\n50\n20A\nAllowed access: providing data custodian of source data with \naccess to ADSP-enhanced data or output .........................................50\n20B\nAllowed access: providing access to output for validation or \ncorrection ..........................................................................................50\n20C\nAllowed access: providing access to or releasing output in \nother circumstances...........................................................................51\n20D\nAllowed access: sharing under section 13........................................52\n20E\nExit of ADSP-enhanced data or output of project............................52\n20F\nData custodian of output of project...................................................54\nPart 2.8—Relationship with other laws\n56\n22\nOther authorisations for data custodians not limited ........................56\n23\nAuthorisations override other laws...................................................56\nChapter 3—Responsibilities of data scheme entities\n57\nPart 3.1—Introduction\n57\n24\nSimplified outline of this Chapter.....................................................57\nPart 3.2—General responsibilities\n58\n25\nNo duty to share but reasons required for not sharing......................58\n26\nComply with rules and data codes....................................................58\n27\nHave regard to guidelines .................................................................58\n30\nComply with conditions of accreditation..........................................58\n31\nReport events and changes in circumstances affecting \naccreditation to Commissioner .........................................................59\n32\nNot provide false or misleading information....................................59\n33\nRegistration of data sharing agreements...........................................60\n34\nAssist Commissioner in relation to annual report.............................60\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "16C",
+        "16D",
+        "16E",
+        "16F",
+        "42",
+        "17",
+        "45",
+        "18",
+        "19",
+        "50",
+        "20A",
+        "20B",
+        "20C",
+        "20D",
+        "20E",
+        "20F",
+        "56",
+        "22",
+        "23",
+        "57",
+        "57",
+        "24",
+        "58",
+        "25",
+        "26",
+        "27",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "clean_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 6,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "iv\nData Availability and Transparency Act 2022\nCompilation No. 4\nCompilation date: 11/12/2024\nPart 4.3—National Data Advisory Council\n77\n61\nEstablishment and function of Council.............................................77\n62\nMembership of Council ....................................................................77\n63\nAppointment of members .................................................................78\n64\nTerm of appointment ........................................................................78\n65\nRemuneration and allowances ..........................................................78\n66\nLeave of absence...............................................................................79\n67\nDisclosure of interests to Minister or Commissioner .......................79\n68\nDisclosure of interests to Council.....................................................79\n69\nResignation of members ...................................................................79\n70\nTermination of appointment of members .........................................80\n71\nOther terms and conditions of members...........................................80\n72\nProcedures.........................................................................................81\nChapter 5—Regulation and enforcement\n82\nPart 5.1—Introduction\n82\n73\nSimplified outline of this Chapter.....................................................82\nPart 5.2—Accreditation framework\n84\nDivision 1—Accreditation\n84\n74\nAccreditation.....................................................................................84\n75\nNotice of accreditation decision .......................................................85\n76\nApplication for accreditation ............................................................86\n77\nCriteria for accreditation...................................................................86\n77A\nGeneral provisions relating to accreditation.....................................87\nDivision 2—Conditions of accreditation\n88\n77B\nConditions of accreditation...............................................................88\n78\nImposition, variation or removal of conditions of \naccreditation by accreditation authority............................................88\n79\nNotice before decision relating to conditions of accreditation .........89\n80\nNotice of conditions..........................................................................90\nDivision 3—Suspension and cancellation of accreditation\n92\n81\nSuspension or cancellation of accreditation......................................92\n82\nNotice before decision about suspension or cancellation.................94\n83\nNotice of suspension or cancellation ................................................95\n83A\nLifting of suspension ........................................................................96\nDivision 4—Renewal of accreditation of ADSPs\n97\n84\nRenewal ............................................................................................97\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "77",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "82",
+        "82",
+        "73",
+        "84",
+        "84",
+        "74",
+        "75",
+        "76",
+        "77",
+        "77A",
+        "88",
+        "77B",
+        "78",
+        "79",
+        "80",
+        "92",
+        "81",
+        "82",
+        "83",
+        "83A",
+        "97",
+        "84"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "clean_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 7,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Data Availability and Transparency Act 2022\nv\nCompilation No. 4\nCompilation date: 11/12/2024\n85\nNotice of renewal decision ...............................................................98\n85A\nApplication for renewal ....................................................................99\nDivision 5—Rules and further information\n100\n86\nRules relating to the accreditation framework................................100\n87\nFurther information or evidence .....................................................100\nPart 5.3—Complaints\n101\nDivision 1—Scheme Complaints\n101\n88\nMaking scheme complaints ............................................................101\n89\nRespondents....................................................................................101\n90\nCommunicating with complainant..................................................102\n91\nDealing with complaints.................................................................102\n92\nGrounds for not dealing with complaints .......................................103\n93\nAdmissibility of things said or done in conciliation.......................104\nDivision 2—General complaints\n105\n94\nMaking general complaints.............................................................105\n95\nDealing with complaints.................................................................105\n96\nAdmissibility of things said or done in conciliation.......................106\nPart 5.4—Assessments and investigations\n107\n99\nAssessments....................................................................................107\n100\nNotices of assessment.....................................................................107\n101\nInvestigations..................................................................................107\n102\nDetermination on completion of investigation ...............................109\n103\nNotices relating to investigation .....................................................110\n103A\nRecommendations...........................................................................111\nPart 5.5—Regulatory powers and enforcement\n112\n104\nPower to require information and documents.................................112\n105\nLegal professional privilege............................................................113\n106\nLimits on power to require information and documents.................114\n107\nTransfer of matters to appropriate authority...................................115\n108\nAuthorisation for Commissioner to disclose and receive \ninformation......................................................................................116\n109\nMonitoring powers..........................................................................117\n110\nInvestigation powers.......................................................................119\n112\nDirections........................................................................................120\n113\nCivil penalty provisions..................................................................122\n114\nInfringement notices .......................................................................122\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "85",
+        "85A",
+        "100",
+        "86",
+        "87",
+        "101",
+        "101",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "105",
+        "94",
+        "95",
+        "96",
+        "107",
+        "99",
+        "100",
+        "101",
+        "102",
+        "103",
+        "103A",
+        "112",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108",
+        "109",
+        "110",
+        "112",
+        "113",
+        "114"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "clean_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 8,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "vi\nData Availability and Transparency Act 2022\nCompilation No. 4\nCompilation date: 11/12/2024\n115\nEnforceable undertakings ...............................................................123\n116\nInjunctions ......................................................................................124\nChapter 6—Other matters\n126\nPart 6.1—Introduction\n126\n117\nSimplified outline of this Chapter...................................................126\nPart 6.2—Review of decisions\n127\n118\nReviewable decisions......................................................................127\n119\nApplications for reconsideration of decisions made by \ndelegates of the reviewer ................................................................128\n120\nReconsideration by reviewer ..........................................................128\n121\nDeadline for reconsideration...........................................................129\n122\nReview by the Administrative Review Tribunal ............................129\nPart 6.3—Extension of authorisations and attribution of \nconduct\n130\n123\nDesignated individuals and designation .........................................130\n124\nExtension of authorisations to share, collect or use data................131\n125\nOther things an entity may or must do under the data sharing \nscheme ............................................................................................132\n125A\nContraventions by entities of civil penalty provisions and \nother non-criminal breaches of this Act..........................................132\n125B\nOffences by entities against this Act...............................................134\nPart 6.4—Data sharing scheme instruments\n135\n126\nData codes.......................................................................................135\n127\nGuidelines.......................................................................................136\n128\nRegister of ADSPs..........................................................................137\n129\nRegister of accredited users............................................................138\n130\nRegister of data sharing agreements...............................................138\n131\nRecognition of external dispute resolution schemes.......................140\n132\nApproved forms..............................................................................141\n133\nRules ...............................................................................................141\n134\nRegulations .....................................................................................142\nPart 6.5—Other matters\n143\n135\nDisclosure of scheme data in relation to \ninformation-gathering powers.........................................................143\n135A\nData held by National Archives of Australia..................................143\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "115",
+        "116",
+        "126",
+        "126",
+        "117",
+        "127",
+        "118",
+        "119",
+        "120",
+        "121",
+        "122",
+        "130",
+        "123",
+        "124",
+        "125",
+        "125A",
+        "125B",
+        "135",
+        "126",
+        "127",
+        "128",
+        "129",
+        "130",
+        "131",
+        "132",
+        "133",
+        "134",
+        "143",
+        "135",
+        "135A"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "clean_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 9,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Data Availability and Transparency Act 2022\nvii\nCompilation No. 4\nCompilation date: 11/12/2024\n136\nGeographical jurisdiction of civil penalty provisions and \noffences...........................................................................................144\n137\nAuthorised officers and individuals authorised to do \nparticular things ..............................................................................147\n137A\nDelegation by Minister ...................................................................150\n138\nAnnual report..................................................................................150\n139\nCharging of fees by Commissioner ................................................151\n140\nCharging of fees by data scheme entities........................................152\n141\nCommonwealth not liable to pay a fee ...........................................152\n142\nPeriodic reviews of operation of Act..............................................153\n143\nSunset of the data sharing scheme..................................................154\nEndnotes\n156\nEndnote 1—About the endnotes\n156\nEndnote 2—Abbreviation key\n158\nEndnote 3—Legislation history\n159\nEndnote 4—Amendment history\n160\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "136",
+        "137",
+        "137A",
+        "138",
+        "139",
+        "140",
+        "141",
+        "142",
+        "143",
+        "156",
+        "156",
+        "158",
+        "159",
+        "160"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "complex_native",
+      "source_path": "data/raw/au/C2026C00227.pdf",
+      "source_sha256": "443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+      "page_number": 267,
+      "route": "NATIVE_COMPLEX",
+      "route_reasons": [
+        "dense or multi-column native layout"
+      ],
+      "mandatory_case": "AU Privacy Act s.33D(1)/(2)",
+      "draft_transcription": "   \nFunctions of the Information Commissioner  Part IV \nAssessments by, or at the direction of, the Commissioner  Division 3A \n \nSection 33D \n \n \nPrivacy Act 1988 \n249 \nCompilation No. 104 \n \nCompilation date: 04/06/2026 \n \n \n(b) the impact on the entity or file number recipient of \ncomplying with the notice; \n \n(c) any other matters that the Commissioner considers relevant. \n \n(5) An enforcement body is not required to comply with a notice given \nby the Commissioner under subsection (3) if the chief executive \nofficer of the enforcement body believes on reasonable grounds \nthat compliance with the notice would be likely to prejudice one or \nmore enforcement related activities conducted by or on behalf of \nthe enforcement body. \n \n(6) Subsection (3) is subject to section 70 but it has effect regardless of \nany other Commonwealth law. \n \n(7) A person or entity is not liable to a penalty under the provisions of \nany other Commonwealth law because the person or entity gives \ninformation or produces a document when required to do so under \nsubsection (3). \n \n(8) The Commissioner may publish information relating to an \nassessment on the Commissioner’s website. \n33D  Commissioner may direct an agency to give a privacy impact \nassessment \n \n(1) If: \n \n(a) an agency proposes to engage in an activity or function \ninvolving the handling of personal information about \nindividuals; and \n \n(b) the Commissioner considers that the activity or function \nmight have a significant impact on the privacy of individuals; \nthe Commissioner may, in writing, direct the agency to give the \nCommissioner, within a specified period, a privacy impact \nassessment about the activity or function. \n \n(2) A direction under subsection (1) is not a legislative instrument. \nAuthorised Version C2026C00227 registered 17/06/2026\n",
+      "draft_structure_labels": [
+        " \nSection 33D",
+        "249",
+        "33D"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "complex_native",
+      "source_path": "data/raw/au/C2026C00209_vol2.pdf",
+      "source_sha256": "4e02b39cf93444452e5604790b2f0f2dbed87f1fb5f668ef3d56d495b5a7b386",
+      "page_number": 16,
+      "route": "NATIVE_COMPLEX",
+      "route_reasons": [
+        "dense or multi-column native layout"
+      ],
+      "mandatory_case": "AU TIA s.187A",
+      "draft_transcription": "Chapter 5  Co-operation with agencies \nPart 5-1A  Data retention \nDivision 1  Obligation to keep information and documents \n \nSection 187A \n \n2 \nTelecommunications (Interception and Access) Act 1979 \n \nCompilation No. 133 \n \nCompilation date: 04/06/2026 \n \nPart 5-1A—Data retention \nDivision 1—Obligation to keep information and documents \n187A  Service providers must keep certain information and \ndocuments \n \n(1) A person (a service provider) who operates a service to which this \nPart applies (a relevant service) must keep, or cause to be kept, in \naccordance with section 187BA and for the period specified in \nsection 187C: \n \n(a) information of a kind specified in or under section 187AA; or \n \n(b) documents containing information of that kind; \nrelating to any communication carried by means of the service. \nNote 1: \nSubsection (3) sets out the services to which this Part applies. \nNote 2: \nSection 187B removes some service providers from the scope of this \nobligation, either completely or in relation to some services they \noperate. \nNote 3: \nDivision 3 provides for exemptions from a service provider’s \nobligations under this Part. \n \n(3) This Part applies to a service if: \n \n(a) it is a service for carrying communications, or enabling \ncommunications to be carried, by means of guided or \nunguided electromagnetic energy or both; and \n \n(b) it is a service: \n \n(i) operated by a carrier; or \n \n(ii) operated by an internet service provider (within the \nmeaning of the Online Safety Act 2021; or \n \n(iii) of a kind for which a declaration under subsection (3A) \nis in force; and \n \n(c) the person operating the service owns or operates, in \nAustralia, infrastructure that enables the provision of any of \nits relevant services; \nAuthorised Version C2026C00209 registered 04/06/2026\n",
+      "draft_structure_labels": [
+        " \nSection 187A",
+        " \n2",
+        "187A",
+        "Section 187B"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "complex_native",
+      "source_path": "data/raw/au/C2026C00209_vol2.pdf",
+      "source_sha256": "4e02b39cf93444452e5604790b2f0f2dbed87f1fb5f668ef3d56d495b5a7b386",
+      "page_number": 22,
+      "route": "NATIVE_COMPLEX",
+      "route_reasons": [
+        "dense or multi-column native layout"
+      ],
+      "mandatory_case": "AU TIA s.187B / note guard",
+      "draft_transcription": "Chapter 5  Co-operation with agencies \nPart 5-1A  Data retention \nDivision 1  Obligation to keep information and documents \n \nSection 187B \n \n8 \nTelecommunications (Interception and Access) Act 1979 \n \nCompilation No. 133 \n \nCompilation date: 04/06/2026 \n \n \n(5) For the purposes of items 2, 3, 4 and 6 of the table in subsection (1) \nand any modifications of those items under subsection (2), 2 or \nmore communications that together constitute a single \ncommunications session are taken to be a single communication. \n187B  Certain service providers not covered by this Part \n \n(1) Subsection 187A(1) does not apply to a service provider (other \nthan a carrier that is not a carriage service provider) in relation to a \nrelevant service that it operates if: \n \n(a) the service: \n \n(i) is provided only to a person’s immediate circle (within \nthe meaning of section 23 of the Telecommunications \nAct 1997); or \n \n(ii) is provided only to places that, under section 36 of that \nAct, are all in the same area; and \n \n(b) the service is not subject to a declaration under subsection (2) \nof this section. \n \n(2) A Communications Access Coordinator may declare that \nsubsection 187A(1) applies in relation to a relevant service that a \nservice provider operates. \n \n(2A) Before a declaration is made, a Communications Access \nCoordinator may consult the Privacy Commissioner. \n \n(3) In considering whether to make a declaration, a Communications \nAccess Coordinator must have regard to: \n \n(a) the interests of law enforcement and national security; and \n \n(b) the objects of the Telecommunications Act 1997; and \n \n(ba) the objects of the Privacy Act 1988; and \n \n(bb) any submissions made by the Privacy Commissioner because \nof the consultation under subsection (2A); and \n \n(c) any other matter that the Coordinator considers relevant. \n \n(4) The declaration must be in writing. \nAuthorised Version C2026C00209 registered 04/06/2026\n",
+      "draft_structure_labels": [
+        " \nSection 187B",
+        " \n8",
+        "187B"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "complex_native",
+      "source_path": "data/raw/au/C2026C00224_vol2.pdf",
+      "source_sha256": "2416755cf9a0473c5163e38cde1c35948645cf8e114b89dc8e8c601242b3eda9",
+      "page_number": 130,
+      "route": "NATIVE_COMPLEX",
+      "route_reasons": [
+        "dense or multi-column native layout"
+      ],
+      "mandatory_case": "AU Telecommunications s.317ZH / page-number guard",
+      "draft_transcription": "   \nPart 15  Industry assistance \nDivision 7  Limitations \n \nSection 317ZH \n \n102 \nTelecommunications Act 1997 \n \nCompilation No. 117 \n \nCompilation date: 04/06/2026 \n \n \n(2) For the purposes of subsection (1), ensuring that a kind of service \nor a system has a particular capability includes ensuring that the \ncapability is developed, installed and maintained. \n \n(3) A technical capability notice has no effect to the extent (if any) to \nwhich it requires a designated communications provider to keep, or \ncause to be kept: \n \n(a) information of a kind specified in or under section 187AA of \nthe Telecommunications (Interception and Access) Act 1979; \nor \n \n(b) documents containing information of that kind; \nrelating to any communication carried by means of a service to \nwhich Part 5-1A of the Telecommunications (Interception and \nAccess) Act 1979 applies. \nNote: \nPart 5-1A of the Telecommunications (Interception and Access) Act \n1979 deals with data retention. \n \n(4) A technical capability notice has no effect to the extent (if any) to \nwhich it requires a designated communications provider to keep, or \ncause to be kept, information that: \n \n(a) states an address to which a communication was sent on the \ninternet, from a telecommunications device, using an internet \naccess service provided by the provider; and \n \n(b) was obtained by the provider only as a result of providing the \nservice. \nNote: \nThis subsection ensures that a technical capability notice cannot \nrequire a designated communications provider to keep information \nabout subscribers’ web browsing history. \n \n(5) An expression used in this section and in Chapter 5 of the \nTelecommunications (Interception and Access) Act 1979 has the \nsame meaning in this section as it has in that Chapter. \n317ZH  General limits on technical assistance requests, technical \nassistance notices and technical capability notices \n \n(1) A technical assistance request that relates to an agency, or a \ntechnical assistance notice that relates to an agency, or a technical \nAuthorised Version C2026C00224 registered 12/06/2026\n",
+      "draft_structure_labels": [
+        " \nSection 317ZH",
+        " \n102",
+        "1979",
+        "317ZH"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "complex_native",
+      "source_path": "data/raw/au/C2026C00243_vol3.pdf",
+      "source_sha256": "3e4866adc3b3e47458e1ca619290d548850e91ab509bb5067c4a8b80f3473978",
+      "page_number": 110,
+      "route": "NATIVE_COMPLEX",
+      "route_reasons": [
+        "dense or multi-column native layout"
+      ],
+      "mandatory_case": "AU Criminal Code 474.17A / Roman item",
+      "draft_transcription": "Schedule  The Criminal Code \nChapter 10  National infrastructure \nPart 10.6  Telecommunications Services \nDivision 474  Telecommunications offences \n \nSection 474.17A \n \n \n98 \nCriminal Code Act 1995 \n \nCompilation No. 174 \n \nCompilation date: 30/06/2026 \n \n \n(i) knows that the other person does not consent to the \ntransmission of the material; or \n \n(ii) is reckless as to whether the other person consents to the \ntransmission of the material. \nNote: \nFor material that relates to a person who is, or appears to be, under 18 \nyears of age, see: \n(a) the definition of child abuse material; and \n(b) the offences relating to child abuse material in Subdivision D. \nPenalty: Imprisonment for 6 years. \n \n(2) For the purposes of subsection (1), it is irrelevant whether the \nmaterial transmitted: \n \n(a) is in an unaltered form; or \n \n(b) has been created, or altered in any way, using technology. \nNote: \nParagraph (b) includes images, videos or audio depicting a person that \nhave been edited or entirely created using digital technology \n(including artificial intelligence), generating a realistic but false \ndepiction of the person. Examples of such material are “deepfakes”. \nExceptions \n \n(3) Subsection (1) does not apply if: \n \n(a) transmitting the material is necessary for, or of assistance in: \n \n(i) enforcing a law of the Commonwealth, a State or a \nTerritory; or \n \n(ii) monitoring compliance with, or investigating a \ncontravention of, a law of the Commonwealth, a State \nor a Territory; or \n \n(b) transmitting the material is for the purposes of proceedings in \na court or tribunal; or \n \n(c) transmitting the material is for a genuine medical or scientific \npurpose; or \n \n(d) a reasonable person would consider transmitting the material \nto be acceptable, having regard to the following: \n \n(i) the nature and content of the material; \n \n(ii) the circumstances in which the material was \ntransmitted; \nAuthorised Version C2026C00243 registered 30/06/2026\n",
+      "draft_structure_labels": [
+        " \nSection 474.17A",
+        " \n \n98"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "complex_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 5,
+      "route": "NATIVE_COMPLEX",
+      "route_reasons": [
+        "dense or multi-column native layout"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Data Availability and Transparency Act 2022\niii\nCompilation No. 4\nCompilation date: 11/12/2024\nPart 3.3—Data breach responsibilities\n62\n35\nDefinition of data breach .................................................................62\n36\nTake steps to mitigate data breach....................................................62\n37\nInteraction with Part IIIC of the Privacy Act 1988 \n(notification of eligible data breaches) .............................................63\n38\nNotify Commissioner of non-personal data breach..........................65\nChapter 4—National Data Commissioner and \nNational Data Advisory Council\n67\nPart 4.1—Introduction\n67\n39\nSimplified outline of this Chapter.....................................................67\n40\nCommissioner to have regard to objects of Act................................67\nPart 4.2—National Data Commissioner\n68\nDivision 1—Establishment, functions and powers\n68\n41\nNational Data Commissioner............................................................68\n42\nFunctions...........................................................................................68\n43\nAdvice related functions...................................................................68\n44\nGuidance related functions ...............................................................69\n45\nRegulatory functions.........................................................................69\n45A\nEducation and support related functions...........................................70\n46\nApplication of finance law................................................................70\n47\nStaff...................................................................................................70\n48\nContractors........................................................................................71\n49\nConsultants .......................................................................................71\n50\nDelegation by Commissioner............................................................71\n51\nIndependence of Commissioner........................................................72\n52\nCommissioner not to be sued............................................................72\nDivision 2—Terms and conditions etc.\n73\n53\nAppointment .....................................................................................73\n54\nGeneral terms and conditions of appointment..................................73\n55\nOther paid work ................................................................................73\n56\nRemuneration....................................................................................73\n57\nLeave of absence...............................................................................74\n58\nResignation .......................................................................................74\n58A\nDisclosure of interests to Minister....................................................74\n59\nTermination of appointment .............................................................74\n60\nActing appointments.........................................................................75\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "62",
+        "35",
+        "36",
+        "37",
+        "38",
+        "67",
+        "67",
+        "39",
+        "40",
+        "68",
+        "68",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "45A",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "73",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "58A",
+        "59",
+        "60"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "complex_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 15,
+      "route": "NATIVE_COMPLEX",
+      "route_reasons": [
+        "dense or multi-column native layout"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Preliminary  Chapter 1\nDefinitions  Part 1.2\n  \nSection 9\nData Availability and Transparency Act 2022\n5\nCompilation No. 4\nCompilation date: 11/12/2024\nPart 1.2—Definitions\n  \n9  Definitions\nIn this Act:\naccess has a meaning affected by section 10.\naccreditation authority means:\n(a) for an entity applying for accreditation, or accredited, as an \nADSP—the Commissioner; or\n(b) for a Commonwealth body, State body or Territory body, or \nthe Commonwealth or a State or Territory, applying for \naccreditation, or accredited, as an accredited user—the \nMinister; or\n(c) for another entity applying for accreditation, or accredited, as \nan accredited user—the Commissioner.\naccredited entity: see subsection 11(4).\naccredited user: see subsection 11(4).\nADSP: see subsection 11(4).\nADSP-controlled access: see subsection 16B(6).\nADSP-enhanced data: see subsection 11A(3).\nadverse or qualified security assessment means an adverse \nsecurity assessment, or a qualified security assessment, within the \nmeaning of Part IV of the Australian Security Intelligence \nOrganisation Act 1979.\nancillary contravention of a civil penalty provision means a \ncontravention that arises out of the operation of section 92 of the \nRegulatory Powers Act.\nancillary offence has the same meaning as in the Criminal Code.\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "  \nSection 9",
+        "5",
+        "  \n9"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "complex_native",
+      "source_path": "data/raw/au/C2024C00820.pdf",
+      "source_sha256": "da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+      "page_number": 16,
+      "route": "NATIVE_COMPLEX",
+      "route_reasons": [
+        "dense or multi-column native layout"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Chapter 1  Preliminary\nPart 1.2  Definitions\n  \nSection 9\n6\nData Availability and Transparency Act 2022\nCompilation No. 4\nCompilation date: 11/12/2024\nAPP entity has the same meaning as in the Privacy Act 1988.\nAPP-equivalence term: see subsection 16E(2).\nappointed member: see paragraph 62(1)(e).\napproved contract: see subsection 123(3).\napproved form for a provision of this Act, the rules or a data code \nmeans a form approved by the Commissioner for the purposes of \nthe provision under section 132.\nAustralia, when used in a geographical sense, includes the external \nTerritories.\nAustralian aircraft has the same meaning as in the Criminal Code.\nAustralian entity means an entity that is any of the following:\n(a) a Commonwealth body, a State body or a Territory body;\n(b) the Commonwealth, a State or a Territory;\n(c) an Australian university.\nAustralian ship has the same meaning as in the Criminal Code.\nAustralian university means a registered higher education \nprovider:\n(a) that, for the purposes of the Tertiary Education Quality and \nStandards Agency Act 2011, is registered in the “Australian \nUniversity” provider category; and\n(b) that is established by or under a law of the Commonwealth, a \nState or a Territory.\nauthorised officer: see section 137.\nbiometric data:\n(a) means personal information about any measurable \nbiological or behavioural characteristic relating to an \nindividual that could be used to identify the individual \nor verify the individual’s identity; and\nAuthorised Version C2024C00820 registered 18/12/2024\n",
+      "draft_structure_labels": [
+        "  \nSection 9",
+        "6"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "scanned",
+      "source_path": "data/raw/my/seed_19120468c5bb.pdf",
+      "source_sha256": "19120468c5bbe2c239df286b0a7e40cffa4f26b5a66d1bdcfc5983e342c15995",
+      "page_number": 1,
+      "route": "SCANNED",
+      "route_reasons": [
+        "insufficient native text"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "scanned",
+      "source_path": "data/raw/my/seed_19120468c5bb.pdf",
+      "source_sha256": "19120468c5bbe2c239df286b0a7e40cffa4f26b5a66d1bdcfc5983e342c15995",
+      "page_number": 2,
+      "route": "SCANNED",
+      "route_reasons": [
+        "insufficient native text"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "scanned",
+      "source_path": "data/raw/my/seed_19120468c5bb.pdf",
+      "source_sha256": "19120468c5bbe2c239df286b0a7e40cffa4f26b5a66d1bdcfc5983e342c15995",
+      "page_number": 3,
+      "route": "SCANNED",
+      "route_reasons": [
+        "insufficient native text"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "scanned",
+      "source_path": "data/raw/my/seed_19120468c5bb.pdf",
+      "source_sha256": "19120468c5bbe2c239df286b0a7e40cffa4f26b5a66d1bdcfc5983e342c15995",
+      "page_number": 4,
+      "route": "SCANNED",
+      "route_reasons": [
+        "insufficient native text"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "scanned",
+      "source_path": "data/raw/my/seed_19120468c5bb.pdf",
+      "source_sha256": "19120468c5bbe2c239df286b0a7e40cffa4f26b5a66d1bdcfc5983e342c15995",
+      "page_number": 5,
+      "route": "SCANNED",
+      "route_reasons": [
+        "insufficient native text"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "scanned",
+      "source_path": "data/raw/my/seed_19120468c5bb.pdf",
+      "source_sha256": "19120468c5bbe2c239df286b0a7e40cffa4f26b5a66d1bdcfc5983e342c15995",
+      "page_number": 6,
+      "route": "SCANNED",
+      "route_reasons": [
+        "insufficient native text"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "scanned",
+      "source_path": "data/raw/my/seed_19120468c5bb.pdf",
+      "source_sha256": "19120468c5bbe2c239df286b0a7e40cffa4f26b5a66d1bdcfc5983e342c15995",
+      "page_number": 7,
+      "route": "SCANNED",
+      "route_reasons": [
+        "insufficient native text"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "scanned",
+      "source_path": "data/raw/my/seed_19120468c5bb.pdf",
+      "source_sha256": "19120468c5bbe2c239df286b0a7e40cffa4f26b5a66d1bdcfc5983e342c15995",
+      "page_number": 8,
+      "route": "SCANNED",
+      "route_reasons": [
+        "insufficient native text"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "",
+      "draft_structure_labels": [],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "mixed",
+      "source_path": "data/raw/my/seed_0f8317eb82cd.pdf",
+      "source_sha256": "0f8317eb82cd0a4ed07bff1df8a923b9121d48ab1bb2b5d0a555a8db93d2ce8f",
+      "page_number": 154,
+      "route": "MIXED",
+      "route_reasons": [
+        "image-dominant page with sparse text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "154\nLaws of Malaysia\nAct 588\n\t\nSection\t\nAmending authority\t\nIn force from\n\t\n193\t\nAct A1220\t\n01-04-2005\n\t\n204\t\nAct A1220\t\n01-04-2005\n",
+      "draft_structure_labels": [
+        "154",
+        "\t\n193",
+        "01",
+        "\t\n204",
+        "01"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "mixed",
+      "source_path": "data/raw/my/seed_3ea6d6c135b7.pdf",
+      "source_sha256": "3ea6d6c135b797a99056abc0560ab47f762e258e5a81d9d281ddd4320c56b672",
+      "page_number": 229,
+      "route": "MIXED",
+      "route_reasons": [
+        "image-dominant page with sparse text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "223 \n \nthe Access Provider’s failure to comply with the service level availability required \nunder the mandatory standard on QoS.” \n \n \n \n \n \n",
+      "draft_structure_labels": [
+        "223"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "mixed",
+      "source_path": "data/raw/my/seed_5f086af36a03.pdf",
+      "source_sha256": "5f086af36a033494f823d07e88d1aa5db4e96a4a1c80cf6a0df100376d9eed7c",
+      "page_number": 157,
+      "route": "MIXED",
+      "route_reasons": [
+        "image-dominant page with sparse text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Notes to the Financial Statements\nfor the financial year ended 31 December 2023\n155\nFinancial\n",
+      "draft_structure_labels": [
+        "155"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "multilingual",
+      "source_path": "data/raw/my/seed_0f8317eb82cd.pdf",
+      "source_sha256": "0f8317eb82cd0a4ed07bff1df8a923b9121d48ab1bb2b5d0a555a8db93d2ce8f",
+      "page_number": 19,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "19\nCommunications and Multimedia\nLAWS OF MALAYSIA\nAct 588\nCOMMUNICATIONS AND MULTIMEDIA ACT 1998\nAn Act to provide for and to regulate the converging communications \nand multimedia industries, and for incidental matters.\n[1 April 1999, P.U. (B) 128/1999—\nexcept ss. 157, 159-162, 164-171, 176, 178, 197 & 198;\n1 April 2000, P.U. (B) 106/2000—ss. 157, 159-162,\n164-171, 176 & 178]\nBE IT ENACTED by the Seri Paduka Baginda Yang di-Pertuan \nAgong with the advice and consent of the Dewan Negara and \nDewan Rakyat in Parliament assembled, and by the authority of \nthe same as follows:\nPart I\nPRELIMINARY\nShort title\n1.\t This Act may be cited as the Communications and Multimedia \nAct 1998.\nCommencement\n2.\t This Act comes into operation on a date to be appointed by \nthe Minister by notification in the Gazette, and the Minister may \nappoint different dates for different provisions of this Act.\nObjects\n3.  (1)  The objects of this Act are—\n\t\n(a)\t to promote national policy objectives for the communications \nand multimedia industry;\n",
+      "draft_structure_labels": [
+        "19",
+        "1",
+        "164",
+        "1",
+        "2",
+        "3"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "multilingual",
+      "source_path": "data/raw/my/seed_0f8317eb82cd.pdf",
+      "source_sha256": "0f8317eb82cd0a4ed07bff1df8a923b9121d48ab1bb2b5d0a555a8db93d2ce8f",
+      "page_number": 137,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "137\nCommunications and Multimedia\nprovider or any of his employees, shall not be liable in any \ncriminal proceedings of any nature for any damage (including \npunitive damages), loss, cost, or expenditure suffered or to be \nsuffered (whether directly or indirectly) for any act or omission \ndone in good faith in the performance of the duty imposed under \nsection 263.\nNetwork interception capability\n265.  (1)  The Minister may determine that a licensee or class \nof licensees shall implement the capability to allow authorized \ninterception of communications.\n\t (2)  A determination, under subsection (1), may specify the \ntechnical requirements for authorized interception capability.\nSpecial powers in emergency\n266.  (1)  On the occurrence of any public emergency or in the \ninterest of public safety, the Yang di-Pertuan Agong or the Minister \nauthorized by him in that behalf may—\n\t\n(a)\t suspend the licence of any licensee, take temporary control \nof any network facilities, network service, applications \nservice and/or content applications service owned or \nprovided by a licensee in any manner as he deems fit;\n\t\n(b)\t withdraw either totally or partially the use of any network \nfacilities, network service, applications service and/or \ncontent applications service from any licensee, person \nor the general public;\n\t\n(c)\t order that any communication or class of communications \nto or from any licensee, person or the general public \nrelating to any specified subject shall not be communicated \nor shall be intercepted or detained, or that any such \ncommunication or its records shall be disclosed to an \nauthorized officer mentioned in the order; or\n\t\n(d)\t order the taking of possession of any customer \nequipment.\n\t (2)  If any doubt arises as to the existence of a public emergency \nor whether any act done under subsection (1) was in the interest \nof public safety, a certificate signed by the Yang di-Pertuan Agong \n",
+      "draft_structure_labels": [
+        "137",
+        "265",
+        "266"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    },
+    {
+      "category": "multilingual",
+      "source_path": "data/raw/my/seed_2ce79dd60adc.pdf",
+      "source_sha256": "2ce79dd60adc5fe055234e5156b9068ae63ee27339d99b06f45ff5863c78f6cf",
+      "page_number": 17,
+      "route": "NATIVE_SIMPLE",
+      "route_reasons": [
+        "healthy native text layer"
+      ],
+      "mandatory_case": null,
+      "draft_transcription": "Electronic Commerce\n17\nlaws of MALAYSIA\nAct 658\nelectronic commerce act 2006\nlist of sections amended\nSection\nAmending authority\nIn force from\n– Nil –\nDICETAK OLEH \nPERCETAKAN NASIONAL MALAYSIA BERHAD, \nKUALA LUMPUR \nBAGI PIHAK DAN DENGAN PERINTAH KERAJAAN MALAYSIA\n",
+      "draft_structure_labels": [
+        "17"
+      ],
+      "human_transcription": null,
+      "human_structure_labels": null,
+      "human_checked": false,
+      "reviewer_name": null,
+      "reviewed_at": null
+    }
+  ]
+}

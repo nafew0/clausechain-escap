@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 112" role="img" aria-labelledby="title desc">
+  <title id="title">ClauseChain</title>
+  <desc id="desc">ClauseChain wordmark with a verified evidence chain symbol</desc>
+  <defs>
+    <linearGradient id="mark" x1="12" x2="88" y1="12" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0FB5A7"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="80" height="80" rx="18" fill="url(#mark)"/>
+  <path d="M33 51.5l10.4 10.2L64 36" fill="none" stroke="#fff" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M25 73h46" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".78"/>
+  <path d="M99 36h36M117 36v40h36" fill="none" stroke="#0FB5A7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="99" cy="36" r="6" fill="#0FB5A7"/>
+  <circle cx="135" cy="36" r="6" fill="#0FB5A7"/>
+  <circle cx="153" cy="76" r="6" fill="#2563EB"/>
+  <text x="174" y="68" fill="#0A0A0B" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="-.5">
+    ClauseChain
+  </text>
+</svg>

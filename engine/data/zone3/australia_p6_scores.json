@@ -1,0 +1,121 @@
+{
+ "economy": "Australia",
+ "pillar": 6,
+ "run": "run-au-p6-1784112964",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence was found that the economy imposes any ban or local processing requirement on personal data or applies such requirements horizontally (or on non-per"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No ban and local processing requirements for personal data (or any horizontal/non-personal-specific requirements) were found in the provided evidence, so transf"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No ban or local processing requirement evidence was found for personal data or non-personal/specific data (horizontal or otherwise), so transfers appear free of"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited provision only states an offence for contravening subsection (1) and does not plainly impose any local storage requirement for personal or non-persona"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The cited provision (My Health Records Act 2012 s. 77(2A)) is an offence/contravention clause and does not establish any local storage requirement for personal "
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The cited provision concerns an offence for contravening obligations under the My Health Records Act, but it does not itself establish a local storage requireme"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence was found that any infrastructure requirement (e.g., local data centre/server as a precondition of service or transfer) exists in the provided text."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found (pending review) that any service is conditioned on local data-centre/server infrastructure or that transfer is conditioned on such infras"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition) for the Privacy Act 1988, so the i"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No quoted text provides any conditions on transfer (privacy act row shows NO_EVIDENCE_FOUND_PENDING_REVIEW), so the indicator is not met."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No gate-verified evidence was found that any conditional flow regime applies to transfers (horizontal or personal-data coverage), so the indicator cannot be sup"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No gate-verified evidence was found that any conditional flow regime applies to transfers (horizontal or otherwise), so the indicator should be scored as having"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

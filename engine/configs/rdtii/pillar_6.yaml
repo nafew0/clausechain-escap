@@ -1,0 +1,145 @@
+# RDTII 2.1 — Pillar 6: Cross-border data policies
+# Codes ARE the methodology indicators 1:1 (P6-I1 = 6.1, confirmed 5 Jun).
+# Scoring criteria, weights, polarity: Build Guide §7.1 / DoDont §9.1 (canonical).
+# The Output-Template "Indicator Reference" tab definitions are SUPERSEDED.
+
+schema_version: rdtii-2.1
+pillar: 6
+name: Cross-border data policies
+question: Can data move across borders, under what restrictions, at what compliance cost?
+polarity: restriction_present_scores_high   # all of P6 scores the PRESENCE of restrictions
+scope_exclusions:
+  - Measures applying ONLY to government data are NOT scored for Pillar 6.
+indicator_weights: { P6-I1: 0.38, P6-I2: 0.12, P6-I3: 0.31, P6-I4: 0.12, P6-I5: 0.08 }
+
+indicators:
+  P6-I1:
+    methodology_number: "6.1"
+    name: Ban and local processing requirements
+    policy_name: Ban & local processing requirements    # as in portals/inventory CSVs
+    question: Does the law BAN cross-border transfer OR require data to be PROCESSED domestically?
+    required_predicates:
+      action: [transfer, process]
+      modality: [prohibited, mandatory_local]
+    positive_cues:
+      - "shall not transfer"
+      - "must not be transferred"
+      - "must be processed within"
+      - "shall be processed only in"
+      - "may not be sent abroad"
+    exclusions:
+      - "Transfer allowed if conditions are met -> that is P6-I4 (conditional flow), NOT a ban."
+      - "Banking/professional secrecy or confidentiality duties are NOT transfer bans."
+      - "A copy-stored-domestically rule without a transfer ban -> P6-I2."
+      - "Transfer/amalgamation of a BUSINESS, undertaking, assets or shares (e.g. bank business-transfer schemes) is NOT a data transfer — Pillar 6 concerns DATA moving across borders."
+    scoring:
+      "1": Covers personal data OR applies horizontally; ALSO 1 if two or more such requirements on non-personal/specific data (or targeting more than one economy).
+      "0.5": A single requirement on non-personal/specific data or one economy only.
+      "0": Transfer free of such requirements.
+    example: "Republic of Korea: financial cloud providers must process credit/ID data locally."
+
+  P6-I2:
+    methodology_number: "6.2"
+    name: Local storage requirements
+    policy_name: Local storage requirements
+    question: Must a COPY of the data be stored domestically (transfer may still be allowed)?
+    required_predicates:
+      action: [store, keep, maintain]
+      modality: [mandatory_local_copy]
+    positive_cues:
+      - "shall be stored in"
+      - "stored and located in the territory"
+      - "maintain a copy within"
+    exclusions:
+      - "Local storage does NOT itself forbid transfer -> not P6-I1."
+      - "A local server/data-centre requirement to OPERATE -> P6-I3, not storage."
+    scoring:
+      "1": Covers personal data OR applies horizontally; ALSO 1 if two or more such requirements on non-personal/specific data.
+      "0.5": A single non-personal/specific-data storage rule.
+      "0": No local-storage requirement.
+    example: "Kazakhstan Law 94-V Art. 12: personal data shall be stored in a database located in the territory."
+
+  P6-I3:
+    methodology_number: "6.3"
+    name: Infrastructure requirements
+    policy_name: Infrastructure requirements
+    question: Are local servers / data centres / facilities required AS A CONDITION of providing the service?
+    required_predicates:
+      action: [establish, maintain, locate]
+      object: [server, data_centre, infrastructure]
+      modality: [mandatory]
+    positive_cues:
+      - "maintain at least one local server"
+      - "server located within the territory"
+      - "establish a data centre in"
+    exclusions:
+      - "'Must establish network access control POLICIES' is a rulebook, NOT infrastructure (5-Jun trap)."
+      - "Encryption / network segmentation / crypto-key rules -> P7-I2 cybersecurity, NOT 6.3."
+      - "Storage of a copy on rented capacity -> P6-I2; 6.3 needs a facility precondition."
+      - "Rules on ALREADY-ESTABLISHED data centres (security controls, registration) -> RECORD but score 0.00 (internal guide, 4-Jul read)."
+      - "Data-centre LICENSING regimes -> indicator 9.4, NOT 6.3."
+    scoring:
+      "1": Any infrastructure requirement exists (local data centre/server as a PRECONDITION of service, or transfer conditioned on infrastructure).
+      "0": None. Rules governing already-established data centres are recorded with score 0.
+    example: "Vietnam: providers of websites/social networks must keep at least one local server. China ride-hailing: servers within mainland China."
+
+  P6-I4:
+    methodology_number: "6.4"
+    name: Conditional flow regimes
+    policy_name: Conditional flow regimes
+    question: Is transfer permitted IF conditions are met (consent / adequacy / contractual safeguards / approval)?
+    required_predicates:
+      action: [transfer]
+      modality: [conditional]
+      condition: [consent, adequacy, contractual_safeguards, approval, notification]
+    positive_cues:
+      - "shall not transfer ... unless"
+      - "may transfer ... provided that"
+      - "ensures an adequate level of protection"
+      - "with the consent of"
+    exclusions:
+      - "If NO transfer path exists at all -> P6-I1 ban, not 6.4."
+      - "If transfer stays possible once conditions are met, it is NOT a ban (never code as 6.1)."
+      - "The provision must concern DATA/personal data moving ACROSS BORDERS. Transfer of a BUSINESS/undertaking/assets/shares (e.g. Banking Act business-transfer schemes, company amalgamations) is NOT a data-transfer condition."
+      - "Disclosure of information to a DOMESTIC authority (tax, regulator, court) is not a cross-border data-flow condition (government access may be P7-I5)."
+    scoring:
+      "1": Conditions cover personal data (any coverage) OR apply horizontally (even non-personal data).
+      "0.5": Non-personal/specific data, or sectoral only.
+      "0": No conditions on transfer.
+    example: "SG PDPA 2012 s. 26: transfer prohibited UNLESS prescribed comparable-protection requirements met -> 6.4. Palau: notify ministry + individual consent."
+
+  P6-I5:
+    methodology_number: "6.5"
+    name: Not in agreement with binding commitments on data transfer
+    policy_name: Not in agreement with binding commitments on data transfer
+    regulatory: true         # rerun-fix #5 (19 Jul): treaty texts now flow through the normal
+                             # pipeline via seeds (official treaty PDFs) — no manual rows
+    # Indicator-scoped evidence policy (not an engine limitation): 6.5's rubric
+    # evidence class IS the international agreement; domestic indicators never
+    # see treaty units (retrieval filters BEFORE ranking/caps).
+    allowed_source_types: [treaty]
+    # 6.5 is absence-scored like 7.1/7.2: the QUESTION asks "joined NO agreement?"
+    # but the EVIDENCE row documents the agreement that exists. Without this the
+    # mapper rejects every treaty article for proving the opposite of the question
+    # (observed: SG P6-I5 77 candidates -> 0 mapped, 20 Jul first sweep).
+    polarity: framework_absent_scores_high
+    legal_test: >
+      applies=true when the treaty provision states a BINDING cross-border
+      data-transfer commitment (e.g. "shall allow the cross-border transfer of
+      information by electronic means", "shall not prohibit or restrict the
+      cross-border transfer of information", location-of-computing-facilities
+      disciplines). The row records that the economy HAS such a commitment;
+      the 6.5 score (1 = no binding agreement, 0 = at least one) is applied at
+      scoring time, not by your mapping decision.
+    positive_cues:
+      - "cross-border transfer of information by electronic means"
+      - "shall not prohibit or restrict the cross-border transfer of information"
+      - "shall allow the cross-border transfer of information"
+      - "transfer of information by electronic means where this activity is for the conduct of the business"
+    question: Has the economy joined NO agreement with binding cross-border data-transfer commitments?
+    sources:
+      - "CoE Convention 108 chart: https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=108"
+      - "Trade agreements with binding e-commerce/data chapters (check status pages)"
+    scoring:
+      "1": No binding data-transfer agreement.
+      "0": At least one binding agreement.

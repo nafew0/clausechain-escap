@@ -1,0 +1,179 @@
+jurisdiction: MY
+source_format: pdf        # statute PDFs (native/OCR) -> extractors/pdf_act.py  # declaration-only (P3.6): which format extractor this pack uses
+name: Malaysia
+un_name: Malaysia
+languages: { primary: en, supported: [en, ms] }
+section_grammars: [malay]   # Seksyen/Perkara headings in official bilingual PDFs (rerun-fix #6)
+
+whitelist_source: data/official_domains.json   # mined from ESCAP References — see sg.yaml note
+official_sources:
+  - { name: MITI FTA portal, domain: fta.miti.gov.my, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: Laws of Malaysia (AGC), domain: lom.agc.gov.my, source_type: official_statute_database, authority_rank: 100 }
+  - { name: Federal Gazette, domain: federalgazette.agc.gov.my, source_type: official_gazette, authority_rank: 100 }
+  - { name: Personal Data Protection Department, domain: pdp.gov.my, source_type: regulator_guidance, authority_rank: 60 }
+  - { name: MCMC, domain: mcmc.gov.my, source_type: sectoral_regulator, authority_rank: 60 }
+  # added 7-Jul from ESCAP-citation mining (NOTE: ESCAP cites MY regulator sites MORE than lom.agc —
+  # regulator PDFs are where their MY evidence actually lives):
+  - { name: Bank Negara Malaysia, domain: bnm.gov.my, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Companies Commission (SSM), domain: ssm.com.my, source_type: statutory_body, authority_rank: 55 }
+  - { name: MyIPO, domain: myipo.gov.my, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: Royal Malaysian Customs, domain: customs.gov.my, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: Malaysia SST (Royal Customs), domain: mysst.customs.gov.my, source_type: official_statute_database, authority_rank: 90 }
+  - { name: Inland Revenue (LHDN), domain: hasil.gov.my, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: MITI, domain: miti.gov.my, source_type: ministry, authority_rank: 50 }
+  - { name: Ministry of Finance, domain: mof.gov.my, source_type: ministry, authority_rank: 50 }
+  - { name: Dept of Standards, domain: jsm.gov.my, source_type: agency, authority_rank: 40 }
+  - { name: Royal Malaysia Police (CCID), domain: ccid.rmp.gov.my, source_type: enforcement_agency, authority_rank: 40 }
+  - { name: National Cyber Security Agency, domain: nacsa.gov.my, source_type: official_statute_database, authority_rank: 100 }
+
+portal_search:
+  engine: https://lom.agc.gov.my (act search) + regulator-site search per domain above
+  method: keyword_fulltext
+  notes: "MY evidence is scattered across regulator PDFs — search BNM/MCMC/PDP sites directly, not only the statute portal."
+
+citation_patterns:
+  section: ["s. {n}", "section {n}", "Section {n}"]
+  paragraph_required: true
+connector: my_lom
+notes:
+  - "Priority economy (weight 20 vs 10) + planted-error audit pass confirmed (4-Jul gap analysis)."
+  - "Scanned gazettes -> OCR path, CER < 5%."
+  - "Government procurement governed by Treasury instructions/circulars, not one act (5-Jun lesson; record subsidiary instruments)."
+  - "ESCAP's MY rows cite 26 NON-official domains (most of any R1 economy — incl. law-firm sites) — the biggest source-upgrade opportunity of the three."
+known_index: data/known_index.json
+seeds: data/seeds.json
+rdtii_bindings: { pillars: [6, 7] }
+
+anchor_instruments:
+  - "Personal Data Protection Act 2010 (Act 709) — retention LIMIT in s.10 is NOT P7-I3; hunt minimum-retention in sectoral law (AML, companies, tax)"
+  - "Cyber Security Act 2024 (Act 854)"
+  - "Communications and Multimedia Act 1998 (gov-access hunting ground for P7-I5)"
+
+hunt_instruments:
+  P7-I5:   # government access (warrantless-access test)
+    - "Communications and Multimedia Act 1998 (Act 588) — s. 252 interception, s. 263 licensee assistance"
+    - "Criminal Procedure Code (Act 593) — search/seizure of computerized data"
+    - "Security Offences (Special Measures) Act 2012 (SOSMA) — s. 6 interception without warrant"
+    - "Anti-Money Laundering, Anti-Terrorism Financing Act 2001 (Act 613) — examination powers"
+    - "Income Tax Act 1967 (Act 53) — DG access powers"
+  P7-I3:   # minimum retention
+    - "AMLA 2001 (Act 613) — record retention not less than 6 years"
+    - "Companies Act 2016 (Act 777) — s. 245 accounting records 7 years"
+    - "Income Tax Act 1967 — s. 82 records 7 years"
+    - "BNM AML/CFT policy documents (sectoral retention)"
+  P6-I2_I3:
+    - "BNM Outsourcing / Risk Management in Technology (RMiT) policy — data-residency conditions"
+    - "Financial Services Act 2013 (Act 758) — customer information provisions"
+
+# A3 (P3.5): governing instrument for absence rows — never corpus[0].
+governing_instruments:
+  default: { law: "Personal Data Protection Act 2010 (Act 709)", url: "https://lom.agc.gov.my/act-detail.php?act=709" }
+  P7-I2:   { law: "Cyber Security Act 2024 (Act 854)", url: "https://lom.agc.gov.my/act-detail.php?act=854" }
+
+# A2: explicit official currentness facts. Absence from this registry means
+# `unknown` and blocks retrieval/export; a live URL alone is never a status fact.
+status_assertions:
+  "PDP Commissioner Circular 1/2025 - Appointment of Data Protection Officer":
+    status: in_force
+    fact_url: "https://www.pdp.gov.my/ppdpv1/en/pekeliling-pesuruhjaya/"
+    fact_text: "Issued by the Personal Data Protection Commissioner under Act 709; published on the Commissioner's official circulars register, effective 2025 alongside the A1727 DPO obligations."
+    effective_date: "2025-06-01"
+  "PDP Commissioner Circular 2/2025 - Personal Data Breach Notification":
+    status: in_force
+    fact_url: "https://www.pdp.gov.my/ppdpv1/en/pekeliling-pesuruhjaya/"
+    fact_text: "Issued by the Personal Data Protection Commissioner under Act 709; published on the Commissioner's official circulars register, operationalising the s. 12B breach-notification duty commenced 1 June 2025."
+    effective_date: "2025-06-01"
+  "PDP Data Protection Impact Assessment Guideline 2026":
+    status: in_force
+    fact_url: "https://www.pdp.gov.my/ppdpv1/en/garis-panduan/"
+    fact_text: "Commissioner-issued guideline on the official PDP guidance register, current publication (2026)."
+  "PDPA (Amendment) Act 2024 Commencement Order P.U.(B) 522/2024":
+    status: in_force
+    fact_url: "https://www.pdp.gov.my/ppdpv1/wp-content/uploads/2024/12/PENETAPAN-TARIKH-PERMULAAN-KUAT-KUASA.pdf"
+    fact_text: "Federal Gazette P.U. (B) 522/2024 is itself the commencement instrument appointing 1 January, 1 April and 1 June 2025 for Act A1727."
+    effective_date: "2024-12-17"
+  "Cyber Security (Risk Assessment and Audit) Regulations 2024":
+    status: in_force
+    fact_url: "https://nacsa.gov.my/act854.php"
+    fact_text: "NACSA's official Act 854 page publishes the subsidiary regulations gazetted with the Act's commencement (26 August 2024)."
+    effective_date: "2024-08-26"
+  "Cyber Security (Notification of Incident) Regulations 2024":
+    status: in_force
+    fact_url: "https://nacsa.gov.my/act854.php"
+    fact_text: "NACSA's official Act 854 page publishes the subsidiary regulations gazetted with the Act's commencement (26 August 2024)."
+    effective_date: "2024-08-26"
+  "Cyber Security (Licensing of Service Provider) Regulations 2024":
+    status: in_force
+    fact_url: "https://nacsa.gov.my/act854.php"
+    fact_text: "NACSA's official Act 854 page publishes the subsidiary regulations gazetted with the Act's commencement (26 August 2024)."
+    effective_date: "2024-08-26"
+  "613":
+    status: in_force
+    fact_url: "https://lom.agc.gov.my/act-detail.php?type=principal&act=613"
+    fact_text: "Laws of Malaysia official portal lists the Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 (Act 613) as a principal act in force."
+  "777":
+    status: in_force
+    fact_url: "https://lom.agc.gov.my/act-detail.php?type=principal&act=777"
+    fact_text: "Laws of Malaysia official portal lists the Companies Act 2016 (Act 777) as a principal act in force."
+
+  "CPTPP Chapter 14 (Malaysia MITI text)":
+    status: in_force
+    fact_url: "https://fta.miti.gov.my/index.php/pages/view/CPTPP"
+    fact_text: "MITI's FTA portal lists the CPTPP as in force for Malaysia since 29 November 2022 and publishes the authentic chapter texts."
+    effective_date: "2022-11-29"
+  "RCEP Chapter 12 (Malaysia MITI text)":
+    status: in_force
+    fact_url: "https://fta.miti.gov.my/index.php/pages/view/rcep"
+    fact_text: "MITI's FTA portal lists RCEP as in force for Malaysia since 18 March 2022 and publishes the authentic chapter texts."
+    effective_date: "2022-03-18"
+  "709":
+    status: in_force
+    fact_url: "https://www.pdp.gov.my/ppdpv1/en/akta/pdp-act-2010-en/"
+    fact_text: "The current official Personal Data Protection Commissioner legislation directory publishes the Personal Data Protection Act 2010 (Act 709), its operative regulations, current amendments and enforcement materials."
+    quotation_url: "https://www.pdp.gov.my/ppdpv1/wp-content/uploads/2024/07/UNDANG-UNDANG-MALAYSIA_AKTA_PERLINDUNGAN_DATA_PERIBADI_2010_709_MALAY_AND-ENG_V2022.pdf"
+  A1727:
+    status: in_force
+    fact_url: "https://www.pdp.gov.my/ppdpv1/wp-content/uploads/2024/12/PENETAPAN-TARIKH-PERMULAAN-KUAT-KUASA.pdf"
+    fact_text: "Federal Gazette P.U. (B) 522 appoints commencement dates of 1 January, 1 April and 1 June 2025 for every section of Act A1727."
+    effective_date: "2025-06-01"
+  "854":
+    status: in_force
+    fact_url: "https://nacsa.gov.my/act854.php"
+    fact_text: "NACSA states that Act 854 was gazetted on 26 June 2024 and came into operation on 26 August 2024."
+    effective_date: "2024-08-26"
+    quotation_url: "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/2177706_BI/Act%20854.pdf"
+  "593":
+    status: in_force
+    fact_url: "https://ccid.rmp.gov.my/Laws/Act_593_-_Criminal_Procedure_Code_(CPC).pdf"
+    fact_text: "The Royal Malaysia Police Commercial Crime Investigation Department publishes the Criminal Procedure Code (Act 593) in its official legislation library."
+    quotation_url: "https://ccid.rmp.gov.my/Laws/Act_593_-_Criminal_Procedure_Code_(CPC).pdf"
+  "747":
+    status: in_force
+    fact_url: "https://lom.agc.gov.my/act-detail.php?language=BI&act=747"
+    fact_text: "The current official Laws of Malaysia register publishes the Security Offences (Special Measures) Act 2012 (Act 747) and its subsidiary legislation."
+    quotation_url: "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/20120622_747_BI_Act%20747%20BI.pdf"
+  "563":
+    status: in_force
+    fact_url: "https://lom.agc.gov.my/act-detail.php?language=BI&act=563"
+    fact_text: "The current official Laws of Malaysia register publishes the Computer Crimes Act 1997 (Act 563) and its subsidiary legislation."
+    quotation_url: "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/575_BI/ACT%20563%20-%20WARTA%20ASAL.pdf"
+  "53":
+    status: in_force
+    fact_url: "https://www.hasil.gov.my/en/legislation/act/"
+    fact_text: "The current official HASiL Act directory lists Income Tax Act 1967 (Act 53), As at 21 May 2024, as its Income Tax Act text."
+    current_as_at: "2024-05-21"
+    quotation_url: "https://www.hasil.gov.my/media/hbej3mxa/20240521-akta-cukai-pendapatan-1967-akta-53.pdf"
+  "807":
+    status: in_force
+    fact_url: "https://mysst.customs.gov.my/assets/document/SST%20Act/act_BI.html"
+    fact_text: "The current official Royal Malaysian Customs MySST legislation directory lists the Service Tax Act 2018 and amendments through 2024."
+    current_as_at: "2026-07-11"
+    quotation_url: "https://mysst.customs.gov.my/assets/document/SST%20Act/Service%20Tax%20Act%202018.pdf"
+  "Personal Data Protection Code Of Practice For Banking Sector And Financial Institutions 2017":
+    status: in_force
+    fact_url: "https://www.pdp.gov.my/ppdpv1/en/akta709/"
+    fact_text: "The current official PDP Commissioner Act 709 directory lists the Banking Sector and Financial Institutions Code of Practice."
+  "Personal Data Protection Code Of Practice For Licensees Under The Communications And Multimedia (Act 1998) Of 2017":
+    status: in_force
+    fact_url: "https://www.pdp.gov.my/ppdpv1/en/akta709/"
+    fact_text: "The current official PDP Commissioner Act 709 directory lists the Communications Sector Code of Practice."

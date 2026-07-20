@@ -1,0 +1,138 @@
+[
+ {
+  "recall_key": "67ec7992e4fd303d56fc61636b37e6f383bff37e4b6cb6c518bdb3100402d78b",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "be0d1cc89ca4f580416bf8667888ec5351be3b96f20df355f344e0a156fceebb",
+  "verdict": "GOLD_WRONG",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Act 709 contains no decimal-numbered clause 4.11; CoP-style numbering misattributed to the Act (planted-error class)."
+ },
+ {
+  "recall_key": "ea7a3726a61583f3335a5856dd2ab4c4740ed1bf9936dbc6393f362eef8dd7af",
+  "verdict": "GOLD_WRONG",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "'s. 1.1(38)' is a Code of Practice definitions clause, not an Act provision; misattributed citation."
+ },
+ {
+  "recall_key": "739c90b6df20932e99e271950e58b41e7ad89bd7fafe533b1bcd32eaa0bb85c4",
+  "verdict": "GOLD_AMBIGUOUS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Act 709 Schedule 1 exists but the master's link to P6-I4 is unverifiable from its prose; [verify] — to be resolved in tonight's rerun."
+ },
+ {
+  "recall_key": "76c478364997b00ca629854e6b1890ee01c7de0ccc023ddb2069419eedb7eb5c",
+  "verdict": "CORRECT_ABSTENTION",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "CoP clause 1.1 is introductory/definitions material, not operative transfer evidence; engine abstention correct."
+ },
+ {
+  "recall_key": "f06d2ed93e4e4a97e23c4c9371835b311e5e82fed6b4f60690eea7dbc82232e4",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "3b0bfccc641c3b94e72268baa528d0424369f84497623618a66aa98cdb6d3779",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "127c22eff8ab6688dc4ff6c4a4ba8368b772b10ee8eb8ce68c86ff76c875ed4e",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "21c246fb54df07eebf042093097e22e74028bf4e8f45b24c4f3c3497f97a5e29",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "905e485c7f68ef136f82332cc333174129ce13b513601594a6ab2695f0d32a8d",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "64639c5f0540f517e7c061602cc358adb42a63a12136a68b0ed06f4fbcb7e102",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "59e2cbb31532094a2795669da4509d426c92a98983dac88a0d58cb1e421b82a1",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "779e6d653ba68c4a0849a72b9778ff1efac5ae5856c99909653a44dda847c37d",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "e96fbe886cc01ec86e90cba5063f2908a210fbd8241e0c04b5f082cab1967fb8",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "222614d509139ba8acef9d0dff3cd87e0c6c193db3a0a9573af9647fcff2ea79",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "753a0a4d64d5a610d801c408bec4fcbd5fdcdec13839515e6631d3dbe9319a40",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ },
+ {
+  "recall_key": "0e438b99ffa0e7f2a9eab41323925999d1f2382ce881047a4efc0457579d0b6e",
+  "verdict": "REAL_MISS",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "Team Lead, Team zAI BD",
+  "reviewed_at": "2026-07-19T12:50:04+00:00",
+  "note": "Engine-side gap (mapping/parse/acquisition per technical class); targeted in the 19 Jul night rerun."
+ }
+]

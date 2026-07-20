@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+node_modules/
+.next/
+.env
+*.db
+*.db-wal
+*.db-shm
+engine/data/raw/
+engine/data/cache/
+staticfiles/
+.DS_Store

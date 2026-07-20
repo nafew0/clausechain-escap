@@ -1,0 +1,88 @@
+from django.urls import path
+
+from .views import (
+    CorrectionRequestView,
+    EvidenceDetailView,
+    EvidenceListView,
+    EngineActionsView,
+    EngineRefreshView,
+    EngineReplayView,
+    EngineRunView,
+    ProofAssetView,
+    DecisionHistoryView,
+    FindingBulkDecisionView,
+    FindingDecisionView,
+    RecallDecisionView,
+    ReviewContextView,
+    ReviewQueueView,
+    RunsView,
+    SummaryView,
+    OpsStatsView,
+    WorkspaceConfigView,
+    LedgerView,
+    RawArtifactListView,
+    RawArtifactDetailView,
+    RawArtifactDownloadView,
+    KnowledgeGraphView,
+    KnowledgeGraphSubgraphView,
+    SourceMatchView,
+    SubmissionView,
+    Zone3DecisionView,
+)
+
+
+app_name = "workspace"
+
+urlpatterns = [
+    path("summary/", SummaryView.as_view(), name="summary"),
+    path("ops-stats/", OpsStatsView.as_view(), name="ops_stats"),
+    path("config/", WorkspaceConfigView.as_view(), name="config"),
+    path("ledger/", LedgerView.as_view(), name="ledger"),
+    path("raw/", RawArtifactListView.as_view(), name="raw_artifacts"),
+    path("raw/<slug:artifact_key>/", RawArtifactDetailView.as_view(), name="raw_artifact"),
+    path("raw/<slug:artifact_key>/download/", RawArtifactDownloadView.as_view(), name="raw_artifact_download"),
+    path("knowledge-graph/", KnowledgeGraphView.as_view(), name="knowledge_graph"),
+    path("knowledge-graph/subgraph/", KnowledgeGraphSubgraphView.as_view(), name="knowledge_graph_subgraph"),
+    path("review/<str:queue>/", ReviewQueueView.as_view(), name="review_queue"),
+    path(
+        "review-context/<str:queue>/<str:stable_key>/",
+        ReviewContextView.as_view(),
+        name="review_context",
+    ),
+    path("evidence/", EvidenceListView.as_view(), name="evidence"),
+    path(
+        "evidence/<str:finding_key>/",
+        EvidenceDetailView.as_view(),
+        name="evidence_detail",
+    ),
+    path(
+        "source-match/<str:finding_key>/",
+        SourceMatchView.as_view(),
+        name="source_match",
+    ),
+    path(
+        "proof/<str:filename>/",
+        ProofAssetView.as_view(),
+        name="proof_asset",
+    ),
+    path("runs/", RunsView.as_view(), name="runs"),
+    path("submission/", SubmissionView.as_view(), name="submission"),
+    path("engine/actions/", EngineActionsView.as_view(), name="engine_actions"),
+    path("engine/refresh/", EngineRefreshView.as_view(), name="engine_refresh"),
+    path("engine/replay/", EngineReplayView.as_view(), name="engine_replay"),
+    path("engine/run/", EngineRunView.as_view(), name="engine_run"),
+    path("decisions/findings/", FindingDecisionView.as_view(), name="finding_decision"),
+    path(
+        "decisions/findings/bulk/",
+        FindingBulkDecisionView.as_view(),
+        name="finding_bulk_decision",
+    ),
+    path(
+        "decisions/<str:domain>/<str:key>/history/",
+        DecisionHistoryView.as_view(),
+        name="decision_history",
+    ),
+    path("decisions/recall/", RecallDecisionView.as_view(), name="recall_decision"),
+    path("decisions/zone3/", Zone3DecisionView.as_view(), name="zone3_decision"),
+    path("corrections/", CorrectionRequestView.as_view(), name="correction_request"),
+]

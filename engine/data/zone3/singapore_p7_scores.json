@@ -1,0 +1,149 @@
+{
+ "economy": "Singapore",
+ "pillar": 7,
+ "run": "run-sg-p7-1784114798",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The cited Personal Data Protection Act 2012 s. 26(1) imposes a horizontal cross-border transfer rule, but the evidence provided does not show a comprehensive ho"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The Personal Data Protection Act 2012 contains horizontal cross-border transfer restrictions (e.g., s.26(1)), but the provided evidence does not show a comprehe"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The cited Personal Data Protection Act 2012 provision is horizontal and addresses cross-border transfers, but the evidence provided does not demonstrate a compr"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited Cybersecurity Act 2018 provisions (e.g., s. 19(1)) indicate a dedicated horizontal cybersecurity framework rather than relying solely on non-dedicated"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The Cybersecurity Act 2018 contains horizontal provisions (e.g., s.19(1) empowering the Commissioner to act on cybersecurity threats/incidents), indicating a de"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence cites a Cybersecurity Act 2018 with horizontal provisions (e.g., s.19(1) empowering the Commissioner to act on cybersecurity threats/incidents), in"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited provisions across the economy plainly specify minimum data retention periods (e.g., not less than 5 years, 3 years, 7 years, and at least 5 years), so"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Multiple laws explicitly specify minimum data retention periods (e.g., Companies Act 1967 s.199(2) and s.138(1A) at not less than 5 years, Income Tax Act 1947 s"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Multiple statutes explicitly specify minimum retention periods (e.g., 3 years under the Cybersecurity Act and 5\u20137 years under the Companies and Income Tax Acts)"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited provisions only require designation of responsible individuals and allow delegation, but they do not plainly state any DPO or DPIA requirement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence only shows designation of a compliance-responsible individual under PDPA s.11(3)-(6) and delegation, with no requirement for a Data Protec"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The cited provisions establish designation/delegation of compliance responsibility (s.11) but do not require a DPO or mandate DPIA/DPO processes across sectors,"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited provisions allow police or an authorised person to issue orders and access/inspect computer data in investigating arrestable offences without any plai"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Criminal Procedure Code 2010 grants police/authorised persons powers to order authentication and production of data and to access/inspect computer data for "
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The cited Criminal Procedure Code provisions allow police or an authorised person to issue written orders to require authentication/production and to access/ins"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

@@ -1,0 +1,3050 @@
+{
+  "run_id": "run-sg-p6-1784507972",
+  "generated_at": "2026-07-20T00:46:03.594818Z",
+  "country": "SG",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "findings": [
+    {
+      "Economy": "Singapore",
+      "Law Name": "Personal Data Protection Act 2012",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I1",
+      "Article / Section": "n/a",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "n/a",
+      "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW",
+      "Mapping Rationale": "No qualifying provision found for P6-I1 after a full-corpus sweep. The configured governing law is cited as the reference basis (score-0 pattern, A3).",
+      "Source URL": "https://sso.agc.gov.sg/Act/PDPA2012",
+      "Confidence": 0.6,
+      "Notes": "Absence row (NO_EVIDENCE_FOUND_PENDING_REVIEW): human approval required before this becomes a score-0 final row (P3.5 A3).",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": null,
+      "access_date": null,
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Singapore Statutes Online current version as at 07 Jul 2026",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://sso.agc.gov.sg/Act/PDPA2012",
+        "fact_text": "Singapore Statutes Online current version as at 07 Jul 2026",
+        "checked_at": "2026-07-19T23:08:26.490909Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official current/latest compilation assertion plus date",
+        "conflicting": false
+      },
+      "citation_tier": null,
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+      "citation_proof": null,
+      "search_coverage_manifest": {
+        "economy": "Singapore",
+        "indicator_id": "P6-I1",
+        "portals": [
+          "Singapore Government treaty texts (MTI/isomer)",
+          "Enterprise Singapore",
+          "Singapore Statutes Online",
+          "PDPC",
+          "IMDA",
+          "MAS",
+          "Ministry of Trade & Industry",
+          "Ministry of Home Affairs",
+          "Singapore Police Force",
+          "Singapore Customs",
+          "IPOS",
+          "Enterprise Singapore"
+        ],
+        "instruments": [
+          "Digital Economy Partnership Agreement",
+          "Singapore-Australia Digital Economy Agreement",
+          "Korea-Singapore Digital Partnership Agreement",
+          "RCEP Chapter 12 (Enterprise Singapore text)",
+          "Personal Data Protection Act 2012",
+          "Companies Act 1967",
+          "Banking Act 1970",
+          "Cybersecurity Act 2018",
+          "Telecommunications Act 1999",
+          "Income Tax Act 1947",
+          "Employment Act 1968",
+          "Criminal Procedure Code 2010",
+          "Computer Misuse Act 1993",
+          "Personal Data Protection Regulations 2021",
+          "Personal Data Protection (Notification of Data Breaches) Regulations 2021",
+          "Cybersecurity (Provider-Owned Critical Information Infrastructure) Regulations 2018",
+          "Cybersecurity (Systems of Temporary Cybersecurity Concern) Regulations 2025",
+          "Cybersecurity (Providers of Essential Service Responsible for Cybersecurity of Third-Party-Owned Critical Information Infrastructure) Regulations 2026",
+          "Accountants (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Rules 2023",
+          "Legal Profession (Prevention of Money Laundering, Financing of Terrorism and Proliferation Financing) Rules 2015",
+          "Estate Agents (Prevention of Money Laundering, Proliferation Financing and Terrorism Financing) Regulations 2021",
+          "Casino Control (Credit) Regulations 2010",
+          "Employment (Employment Records, Key Employment Terms and Pay Slips) Regulations 2016",
+          "Platform Workers (Platform Worker Records and Earnings Slips) Regulations 2024",
+          "Platform Workers (Platform Work Associations) Regulations 2024",
+          "Health Products (Therapeutic Products) Regulations 2016",
+          "Health Products (Clinical Research Materials) Regulations 2016",
+          "Trustees (Transparency and Effective Control) Regulations 2017",
+          "Securities and Futures (Central Depository System) Regulations 2015",
+          "Customs Act 1960"
+        ],
+        "queries": [
+          "Does the law BAN cross-border transfer OR require data to be PROCESSED domestically?",
+          "Ban and local processing requirements",
+          "shall not transfer",
+          "must not be transferred",
+          "must be processed within",
+          "shall be processed only in",
+          "may not be sent abroad"
+        ],
+        "searched_at": "2026-07-20T00:46:03.251197Z",
+        "exclusions": [],
+        "caps": [
+          "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+          "P6-I2: screened top 200 of 299 retrieval candidates (cap logged, not silent)",
+          "P6-I3: screened top 200 of 275 retrieval candidates (cap logged, not silent)",
+          "P6-I4: screened top 200 of 334 retrieval candidates (cap logged, not silent)"
+        ],
+        "unresolved_failures": [],
+        "instrument_results": [
+          {
+            "instrument": "Digital Economy Partnership Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Singapore-Australia Digital Economy Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:ee973daac741a0f3e4016d5d97883f539f937d41a646ef2301104521a5312183",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Korea-Singapore Digital Partnership Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:10c6009bc25463bd6e2657a277169cb9800ae8bd556970e1abe7ec11866753b8",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "RCEP Chapter 12 (Enterprise Singapore text)",
+            "searched": true,
+            "source_artifact_id": "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection Act 2012",
+            "searched": true,
+            "source_artifact_id": "sha256:bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Companies Act 1967",
+            "searched": true,
+            "source_artifact_id": "sha256:a9277e6f28fb02eaf94c5fb7b5d3a885f8869da9214fb7d514769a04611d1cca",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Banking Act 1970",
+            "searched": true,
+            "source_artifact_id": "sha256:1f7d9e43dcff5246ae48edb11bf81569416dc8090849c379c8c5c381a51a9ff2",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity Act 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:9634aee10f785ea35371a63ddab319a851728b6334120c570fb626283ef18a6c",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications Act 1999",
+            "searched": true,
+            "source_artifact_id": "sha256:260b5d46847f82435efca3a7e4d93fc56856c03d0cd3742028c65877e426ce89",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Income Tax Act 1947",
+            "searched": true,
+            "source_artifact_id": "sha256:35d6268af8bf67587556f08649fa4832579feece863b7fa55e757884c6c1d73c",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Employment Act 1968",
+            "searched": true,
+            "source_artifact_id": "sha256:ebefaeb3207cb030747f6873721540de0b05a59dc18b38bf661b80bd7e175b96",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Criminal Procedure Code 2010",
+            "searched": true,
+            "source_artifact_id": "sha256:5d889c6ed79f77da0b7358a57493aac9f70aef77293309547c4ec7bd65049adc",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Computer Misuse Act 1993",
+            "searched": true,
+            "source_artifact_id": "sha256:011ea58b2eba522d98dd047b471e43dcf2c09c814f81cb10633cb0919caae6dd",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection (Notification of Data Breaches) Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:403da1496866655d755cf0e787140b9a5ce0737f8e41b6b2bc37e39df4b2a153",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Provider-Owned Critical Information Infrastructure) Regulations 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:584ac18eb58339bdc68820afb56cbc725e777be7befbe71891fceaf6ad676627",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Systems of Temporary Cybersecurity Concern) Regulations 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:2468694e97d7757d7287de9b60d19ff8b04ef3534f224a4ca1452f490b65c16d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Providers of Essential Service Responsible for Cybersecurity of Third-Party-Owned Critical Information Infrastructure) Regulations 2026",
+            "searched": true,
+            "source_artifact_id": "sha256:af84e03ed1fcddeb3b7fed8c44874904e5d44604e97739046f6a0ba152ede456",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Accountants (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Rules 2023",
+            "searched": true,
+            "source_artifact_id": "sha256:5c18c43fc7e583670dc59a20ff5d1071249706d05a67e92bb0e7589278255d43",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Legal Profession (Prevention of Money Laundering, Financing of Terrorism and Proliferation Financing) Rules 2015",
+            "searched": true,
+            "source_artifact_id": "sha256:65a91af6c0e13aaaa874f0382d6efcd977f36e7a5d1bbe3baf35ce65b939ef9e",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Estate Agents (Prevention of Money Laundering, Proliferation Financing and Terrorism Financing) Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:1a57e01aa60adf6ddf97d1012515542de6fd1c82eda6c6be4c9d75e9df5c91b4",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Casino Control (Credit) Regulations 2010",
+            "searched": true,
+            "source_artifact_id": "sha256:8790f3a58ea20175189afce770af1c3273cb13d07ad4c7800216d417064633ca",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Employment (Employment Records, Key Employment Terms and Pay Slips) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:a261bdd38401cece9e1e71e20d94572a70cf2c967ddc5a20774bb029c8176e4b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Platform Workers (Platform Worker Records and Earnings Slips) Regulations 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:934466411645cfdd0dda22af4c69971ad7f23643277558c2923236ee95b3758d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Platform Workers (Platform Work Associations) Regulations 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:1120de5ade11efbfebf14e968053722b72177ffe91f8c36fa1c2a0a442fd852f",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Health Products (Therapeutic Products) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:4faa95ccb78fa68872a953131415d43d5d9369254e4a8c614165f94df91ee59b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Health Products (Clinical Research Materials) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:f4b6b4c41fccd21341e92e0993eaf47e1416ca0c09aed4a8b7641042af1cff91",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Trustees (Transparency and Effective Control) Regulations 2017",
+            "searched": true,
+            "source_artifact_id": "sha256:7bf05ddb3754349463a8967d5a0d06ab25e9bf41724d080f0d018b89f438a8f1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Securities and Futures (Central Depository System) Regulations 2015",
+            "searched": true,
+            "source_artifact_id": "sha256:9f0c318acdd738feb2a3ea383548b2e3f9e60b5916e5d074cbe5fd6ad25ac531",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Customs Act 1960",
+            "searched": true,
+            "source_artifact_id": "sha256:793c78ae18f090aa4dd49018de993265745284f1fff506372ed04ce2a1c16aa1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          }
+        ],
+        "query_result_counts": {
+          "Does the law BAN cross-border transfer OR require data to be PROCESSED domestically?": 0,
+          "Ban and local processing requirements": 0,
+          "shall not transfer": 0,
+          "must not be transferred": 0,
+          "must be processed within": 0,
+          "shall be processed only in": 0,
+          "may not be sent abroad": 0
+        }
+      },
+      "review": null,
+      "raw_context": null
+    },
+    {
+      "Economy": "Singapore",
+      "Law Name": "Personal Data Protection Act 2012",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I2",
+      "Article / Section": "n/a",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "n/a",
+      "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW",
+      "Mapping Rationale": "No qualifying provision found for P6-I2 after a full-corpus sweep. The configured governing law is cited as the reference basis (score-0 pattern, A3).",
+      "Source URL": "https://sso.agc.gov.sg/Act/PDPA2012",
+      "Confidence": 0.6,
+      "Notes": "Absence row (NO_EVIDENCE_FOUND_PENDING_REVIEW): human approval required before this becomes a score-0 final row (P3.5 A3).",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": null,
+      "access_date": null,
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Singapore Statutes Online current version as at 07 Jul 2026",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://sso.agc.gov.sg/Act/PDPA2012",
+        "fact_text": "Singapore Statutes Online current version as at 07 Jul 2026",
+        "checked_at": "2026-07-19T23:08:26.490909Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official current/latest compilation assertion plus date",
+        "conflicting": false
+      },
+      "citation_tier": null,
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+      "citation_proof": null,
+      "search_coverage_manifest": {
+        "economy": "Singapore",
+        "indicator_id": "P6-I2",
+        "portals": [
+          "Singapore Government treaty texts (MTI/isomer)",
+          "Enterprise Singapore",
+          "Singapore Statutes Online",
+          "PDPC",
+          "IMDA",
+          "MAS",
+          "Ministry of Trade & Industry",
+          "Ministry of Home Affairs",
+          "Singapore Police Force",
+          "Singapore Customs",
+          "IPOS",
+          "Enterprise Singapore"
+        ],
+        "instruments": [
+          "Digital Economy Partnership Agreement",
+          "Singapore-Australia Digital Economy Agreement",
+          "Korea-Singapore Digital Partnership Agreement",
+          "RCEP Chapter 12 (Enterprise Singapore text)",
+          "Personal Data Protection Act 2012",
+          "Companies Act 1967",
+          "Banking Act 1970",
+          "Cybersecurity Act 2018",
+          "Telecommunications Act 1999",
+          "Income Tax Act 1947",
+          "Employment Act 1968",
+          "Criminal Procedure Code 2010",
+          "Computer Misuse Act 1993",
+          "Personal Data Protection Regulations 2021",
+          "Personal Data Protection (Notification of Data Breaches) Regulations 2021",
+          "Cybersecurity (Provider-Owned Critical Information Infrastructure) Regulations 2018",
+          "Cybersecurity (Systems of Temporary Cybersecurity Concern) Regulations 2025",
+          "Cybersecurity (Providers of Essential Service Responsible for Cybersecurity of Third-Party-Owned Critical Information Infrastructure) Regulations 2026",
+          "Accountants (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Rules 2023",
+          "Legal Profession (Prevention of Money Laundering, Financing of Terrorism and Proliferation Financing) Rules 2015",
+          "Estate Agents (Prevention of Money Laundering, Proliferation Financing and Terrorism Financing) Regulations 2021",
+          "Casino Control (Credit) Regulations 2010",
+          "Employment (Employment Records, Key Employment Terms and Pay Slips) Regulations 2016",
+          "Platform Workers (Platform Worker Records and Earnings Slips) Regulations 2024",
+          "Platform Workers (Platform Work Associations) Regulations 2024",
+          "Health Products (Therapeutic Products) Regulations 2016",
+          "Health Products (Clinical Research Materials) Regulations 2016",
+          "Trustees (Transparency and Effective Control) Regulations 2017",
+          "Securities and Futures (Central Depository System) Regulations 2015",
+          "Customs Act 1960"
+        ],
+        "queries": [
+          "Must a COPY of the data be stored domestically (transfer may still be allowed)?",
+          "Local storage requirements",
+          "shall be stored in",
+          "stored and located in the territory",
+          "maintain a copy within"
+        ],
+        "searched_at": "2026-07-20T00:42:16.203621Z",
+        "exclusions": [],
+        "caps": [
+          "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+          "P6-I2: screened top 200 of 299 retrieval candidates (cap logged, not silent)"
+        ],
+        "unresolved_failures": [],
+        "instrument_results": [
+          {
+            "instrument": "Digital Economy Partnership Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Singapore-Australia Digital Economy Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:ee973daac741a0f3e4016d5d97883f539f937d41a646ef2301104521a5312183",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Korea-Singapore Digital Partnership Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:10c6009bc25463bd6e2657a277169cb9800ae8bd556970e1abe7ec11866753b8",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "RCEP Chapter 12 (Enterprise Singapore text)",
+            "searched": true,
+            "source_artifact_id": "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection Act 2012",
+            "searched": true,
+            "source_artifact_id": "sha256:bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Companies Act 1967",
+            "searched": true,
+            "source_artifact_id": "sha256:a9277e6f28fb02eaf94c5fb7b5d3a885f8869da9214fb7d514769a04611d1cca",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Banking Act 1970",
+            "searched": true,
+            "source_artifact_id": "sha256:1f7d9e43dcff5246ae48edb11bf81569416dc8090849c379c8c5c381a51a9ff2",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity Act 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:9634aee10f785ea35371a63ddab319a851728b6334120c570fb626283ef18a6c",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications Act 1999",
+            "searched": true,
+            "source_artifact_id": "sha256:260b5d46847f82435efca3a7e4d93fc56856c03d0cd3742028c65877e426ce89",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Income Tax Act 1947",
+            "searched": true,
+            "source_artifact_id": "sha256:35d6268af8bf67587556f08649fa4832579feece863b7fa55e757884c6c1d73c",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Employment Act 1968",
+            "searched": true,
+            "source_artifact_id": "sha256:ebefaeb3207cb030747f6873721540de0b05a59dc18b38bf661b80bd7e175b96",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Criminal Procedure Code 2010",
+            "searched": true,
+            "source_artifact_id": "sha256:5d889c6ed79f77da0b7358a57493aac9f70aef77293309547c4ec7bd65049adc",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Computer Misuse Act 1993",
+            "searched": true,
+            "source_artifact_id": "sha256:011ea58b2eba522d98dd047b471e43dcf2c09c814f81cb10633cb0919caae6dd",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection (Notification of Data Breaches) Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:403da1496866655d755cf0e787140b9a5ce0737f8e41b6b2bc37e39df4b2a153",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Provider-Owned Critical Information Infrastructure) Regulations 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:584ac18eb58339bdc68820afb56cbc725e777be7befbe71891fceaf6ad676627",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Systems of Temporary Cybersecurity Concern) Regulations 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:2468694e97d7757d7287de9b60d19ff8b04ef3534f224a4ca1452f490b65c16d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Providers of Essential Service Responsible for Cybersecurity of Third-Party-Owned Critical Information Infrastructure) Regulations 2026",
+            "searched": true,
+            "source_artifact_id": "sha256:af84e03ed1fcddeb3b7fed8c44874904e5d44604e97739046f6a0ba152ede456",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Accountants (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Rules 2023",
+            "searched": true,
+            "source_artifact_id": "sha256:5c18c43fc7e583670dc59a20ff5d1071249706d05a67e92bb0e7589278255d43",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Legal Profession (Prevention of Money Laundering, Financing of Terrorism and Proliferation Financing) Rules 2015",
+            "searched": true,
+            "source_artifact_id": "sha256:65a91af6c0e13aaaa874f0382d6efcd977f36e7a5d1bbe3baf35ce65b939ef9e",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Estate Agents (Prevention of Money Laundering, Proliferation Financing and Terrorism Financing) Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:1a57e01aa60adf6ddf97d1012515542de6fd1c82eda6c6be4c9d75e9df5c91b4",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Casino Control (Credit) Regulations 2010",
+            "searched": true,
+            "source_artifact_id": "sha256:8790f3a58ea20175189afce770af1c3273cb13d07ad4c7800216d417064633ca",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Employment (Employment Records, Key Employment Terms and Pay Slips) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:a261bdd38401cece9e1e71e20d94572a70cf2c967ddc5a20774bb029c8176e4b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Platform Workers (Platform Worker Records and Earnings Slips) Regulations 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:934466411645cfdd0dda22af4c69971ad7f23643277558c2923236ee95b3758d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Platform Workers (Platform Work Associations) Regulations 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:1120de5ade11efbfebf14e968053722b72177ffe91f8c36fa1c2a0a442fd852f",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Health Products (Therapeutic Products) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:4faa95ccb78fa68872a953131415d43d5d9369254e4a8c614165f94df91ee59b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Health Products (Clinical Research Materials) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:f4b6b4c41fccd21341e92e0993eaf47e1416ca0c09aed4a8b7641042af1cff91",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Trustees (Transparency and Effective Control) Regulations 2017",
+            "searched": true,
+            "source_artifact_id": "sha256:7bf05ddb3754349463a8967d5a0d06ab25e9bf41724d080f0d018b89f438a8f1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Securities and Futures (Central Depository System) Regulations 2015",
+            "searched": true,
+            "source_artifact_id": "sha256:9f0c318acdd738feb2a3ea383548b2e3f9e60b5916e5d074cbe5fd6ad25ac531",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Customs Act 1960",
+            "searched": true,
+            "source_artifact_id": "sha256:793c78ae18f090aa4dd49018de993265745284f1fff506372ed04ce2a1c16aa1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          }
+        ],
+        "query_result_counts": {
+          "Must a COPY of the data be stored domestically (transfer may still be allowed)?": 69,
+          "Local storage requirements": 74,
+          "shall be stored in": 80,
+          "stored and located in the territory": 77,
+          "maintain a copy within": 79
+        }
+      },
+      "review": null,
+      "raw_context": null
+    },
+    {
+      "Economy": "Singapore",
+      "Law Name": "Personal Data Protection Act 2012",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I3",
+      "Article / Section": "n/a",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "n/a",
+      "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW",
+      "Mapping Rationale": "No qualifying provision found for P6-I3 after a full-corpus sweep. The configured governing law is cited as the reference basis (score-0 pattern, A3).",
+      "Source URL": "https://sso.agc.gov.sg/Act/PDPA2012",
+      "Confidence": 0.6,
+      "Notes": "Absence row (NO_EVIDENCE_FOUND_PENDING_REVIEW): human approval required before this becomes a score-0 final row (P3.5 A3).",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": null,
+      "access_date": null,
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Singapore Statutes Online current version as at 07 Jul 2026",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://sso.agc.gov.sg/Act/PDPA2012",
+        "fact_text": "Singapore Statutes Online current version as at 07 Jul 2026",
+        "checked_at": "2026-07-19T23:08:26.490909Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official current/latest compilation assertion plus date",
+        "conflicting": false
+      },
+      "citation_tier": null,
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+      "citation_proof": null,
+      "search_coverage_manifest": {
+        "economy": "Singapore",
+        "indicator_id": "P6-I3",
+        "portals": [
+          "Singapore Government treaty texts (MTI/isomer)",
+          "Enterprise Singapore",
+          "Singapore Statutes Online",
+          "PDPC",
+          "IMDA",
+          "MAS",
+          "Ministry of Trade & Industry",
+          "Ministry of Home Affairs",
+          "Singapore Police Force",
+          "Singapore Customs",
+          "IPOS",
+          "Enterprise Singapore"
+        ],
+        "instruments": [
+          "Digital Economy Partnership Agreement",
+          "Singapore-Australia Digital Economy Agreement",
+          "Korea-Singapore Digital Partnership Agreement",
+          "RCEP Chapter 12 (Enterprise Singapore text)",
+          "Personal Data Protection Act 2012",
+          "Companies Act 1967",
+          "Banking Act 1970",
+          "Cybersecurity Act 2018",
+          "Telecommunications Act 1999",
+          "Income Tax Act 1947",
+          "Employment Act 1968",
+          "Criminal Procedure Code 2010",
+          "Computer Misuse Act 1993",
+          "Personal Data Protection Regulations 2021",
+          "Personal Data Protection (Notification of Data Breaches) Regulations 2021",
+          "Cybersecurity (Provider-Owned Critical Information Infrastructure) Regulations 2018",
+          "Cybersecurity (Systems of Temporary Cybersecurity Concern) Regulations 2025",
+          "Cybersecurity (Providers of Essential Service Responsible for Cybersecurity of Third-Party-Owned Critical Information Infrastructure) Regulations 2026",
+          "Accountants (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Rules 2023",
+          "Legal Profession (Prevention of Money Laundering, Financing of Terrorism and Proliferation Financing) Rules 2015",
+          "Estate Agents (Prevention of Money Laundering, Proliferation Financing and Terrorism Financing) Regulations 2021",
+          "Casino Control (Credit) Regulations 2010",
+          "Employment (Employment Records, Key Employment Terms and Pay Slips) Regulations 2016",
+          "Platform Workers (Platform Worker Records and Earnings Slips) Regulations 2024",
+          "Platform Workers (Platform Work Associations) Regulations 2024",
+          "Health Products (Therapeutic Products) Regulations 2016",
+          "Health Products (Clinical Research Materials) Regulations 2016",
+          "Trustees (Transparency and Effective Control) Regulations 2017",
+          "Securities and Futures (Central Depository System) Regulations 2015",
+          "Customs Act 1960"
+        ],
+        "queries": [
+          "Are local servers / data centres / facilities required AS A CONDITION of providing the service?",
+          "Infrastructure requirements",
+          "maintain at least one local server",
+          "server located within the territory",
+          "establish a data centre in"
+        ],
+        "searched_at": "2026-07-20T00:43:34.948454Z",
+        "exclusions": [],
+        "caps": [
+          "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+          "P6-I2: screened top 200 of 299 retrieval candidates (cap logged, not silent)",
+          "P6-I3: screened top 200 of 275 retrieval candidates (cap logged, not silent)"
+        ],
+        "unresolved_failures": [],
+        "instrument_results": [
+          {
+            "instrument": "Digital Economy Partnership Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Singapore-Australia Digital Economy Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:ee973daac741a0f3e4016d5d97883f539f937d41a646ef2301104521a5312183",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Korea-Singapore Digital Partnership Agreement",
+            "searched": true,
+            "source_artifact_id": "sha256:10c6009bc25463bd6e2657a277169cb9800ae8bd556970e1abe7ec11866753b8",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "RCEP Chapter 12 (Enterprise Singapore text)",
+            "searched": true,
+            "source_artifact_id": "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection Act 2012",
+            "searched": true,
+            "source_artifact_id": "sha256:bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Companies Act 1967",
+            "searched": true,
+            "source_artifact_id": "sha256:a9277e6f28fb02eaf94c5fb7b5d3a885f8869da9214fb7d514769a04611d1cca",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Banking Act 1970",
+            "searched": true,
+            "source_artifact_id": "sha256:1f7d9e43dcff5246ae48edb11bf81569416dc8090849c379c8c5c381a51a9ff2",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity Act 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:9634aee10f785ea35371a63ddab319a851728b6334120c570fb626283ef18a6c",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications Act 1999",
+            "searched": true,
+            "source_artifact_id": "sha256:260b5d46847f82435efca3a7e4d93fc56856c03d0cd3742028c65877e426ce89",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Income Tax Act 1947",
+            "searched": true,
+            "source_artifact_id": "sha256:35d6268af8bf67587556f08649fa4832579feece863b7fa55e757884c6c1d73c",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Employment Act 1968",
+            "searched": true,
+            "source_artifact_id": "sha256:ebefaeb3207cb030747f6873721540de0b05a59dc18b38bf661b80bd7e175b96",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Criminal Procedure Code 2010",
+            "searched": true,
+            "source_artifact_id": "sha256:5d889c6ed79f77da0b7358a57493aac9f70aef77293309547c4ec7bd65049adc",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Computer Misuse Act 1993",
+            "searched": true,
+            "source_artifact_id": "sha256:011ea58b2eba522d98dd047b471e43dcf2c09c814f81cb10633cb0919caae6dd",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Personal Data Protection (Notification of Data Breaches) Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:403da1496866655d755cf0e787140b9a5ce0737f8e41b6b2bc37e39df4b2a153",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Provider-Owned Critical Information Infrastructure) Regulations 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:584ac18eb58339bdc68820afb56cbc725e777be7befbe71891fceaf6ad676627",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Systems of Temporary Cybersecurity Concern) Regulations 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:2468694e97d7757d7287de9b60d19ff8b04ef3534f224a4ca1452f490b65c16d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cybersecurity (Providers of Essential Service Responsible for Cybersecurity of Third-Party-Owned Critical Information Infrastructure) Regulations 2026",
+            "searched": true,
+            "source_artifact_id": "sha256:af84e03ed1fcddeb3b7fed8c44874904e5d44604e97739046f6a0ba152ede456",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Accountants (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Rules 2023",
+            "searched": true,
+            "source_artifact_id": "sha256:5c18c43fc7e583670dc59a20ff5d1071249706d05a67e92bb0e7589278255d43",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Legal Profession (Prevention of Money Laundering, Financing of Terrorism and Proliferation Financing) Rules 2015",
+            "searched": true,
+            "source_artifact_id": "sha256:65a91af6c0e13aaaa874f0382d6efcd977f36e7a5d1bbe3baf35ce65b939ef9e",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Estate Agents (Prevention of Money Laundering, Proliferation Financing and Terrorism Financing) Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:1a57e01aa60adf6ddf97d1012515542de6fd1c82eda6c6be4c9d75e9df5c91b4",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Casino Control (Credit) Regulations 2010",
+            "searched": true,
+            "source_artifact_id": "sha256:8790f3a58ea20175189afce770af1c3273cb13d07ad4c7800216d417064633ca",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Employment (Employment Records, Key Employment Terms and Pay Slips) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:a261bdd38401cece9e1e71e20d94572a70cf2c967ddc5a20774bb029c8176e4b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Platform Workers (Platform Worker Records and Earnings Slips) Regulations 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:934466411645cfdd0dda22af4c69971ad7f23643277558c2923236ee95b3758d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Platform Workers (Platform Work Associations) Regulations 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:1120de5ade11efbfebf14e968053722b72177ffe91f8c36fa1c2a0a442fd852f",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Health Products (Therapeutic Products) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:4faa95ccb78fa68872a953131415d43d5d9369254e4a8c614165f94df91ee59b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Health Products (Clinical Research Materials) Regulations 2016",
+            "searched": true,
+            "source_artifact_id": "sha256:f4b6b4c41fccd21341e92e0993eaf47e1416ca0c09aed4a8b7641042af1cff91",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Trustees (Transparency and Effective Control) Regulations 2017",
+            "searched": true,
+            "source_artifact_id": "sha256:7bf05ddb3754349463a8967d5a0d06ab25e9bf41724d080f0d018b89f438a8f1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Securities and Futures (Central Depository System) Regulations 2015",
+            "searched": true,
+            "source_artifact_id": "sha256:9f0c318acdd738feb2a3ea383548b2e3f9e60b5916e5d074cbe5fd6ad25ac531",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Customs Act 1960",
+            "searched": true,
+            "source_artifact_id": "sha256:793c78ae18f090aa4dd49018de993265745284f1fff506372ed04ce2a1c16aa1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          }
+        ],
+        "query_result_counts": {
+          "Are local servers / data centres / facilities required AS A CONDITION of providing the service?": 71,
+          "Infrastructure requirements": 68,
+          "maintain at least one local server": 76,
+          "server located within the territory": 68,
+          "establish a data centre in": 73
+        }
+      },
+      "review": null,
+      "raw_context": null
+    },
+    {
+      "Economy": "Singapore",
+      "Law Name": "Personal Data Protection Act 2012",
+      "Law Number / Ref": "No. 26 of 2012",
+      "Last Amended": null,
+      "Indicator ID": "P6-I4",
+      "Article / Section": "s. 26(1)",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "#pr26-",
+      "Verbatim Snippet": "An organisation must not transfer any personal data to a country or territory outside Singapore except in accordance with requirements prescribed under this Act to ensure that organisations provide a standard of protection to personal data so transferred that is comparable to the protection under this Act.",
+      "Mapping Rationale": "This section prohibits organisations from transferring personal data outside Singapore except where prescribed requirements are met. Maps to P6-I4 because it establishes a conditional cross-border transfer regime: transfer is permitted only if conditions are satisfied.",
+      "Source URL": "https://sso.agc.gov.sg/Act/PDPA2012#pr26-",
+      "Confidence": 0.99,
+      "Notes": "Discovery: master dataset already records s. 26 of this law. Modality: must not ... except; exceptions: except in accordance with requirements prescribed under this Act",
+      "Coverage": "Sectoral (Personal data protection)",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": "data/raw/sg/PDPA2012.full.bed2802e36cd.html",
+      "access_date": "2026-07-08",
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Singapore Statutes Online current version as at 07 Jul 2026",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://sso.agc.gov.sg/Act/PDPA2012",
+        "fact_text": "Singapore Statutes Online current version as at 07 Jul 2026",
+        "checked_at": "2026-07-19T23:08:26.490909Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official current/latest compilation assertion plus date",
+        "conflicting": false
+      },
+      "citation_tier": "[verify-pinpoint]",
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+      "citation_proof": {
+        "source_artifact_id": "sha256:bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+        "source_sha256": "bed2802e36cdf40f39c5b14dc97a284e1ac5c82af24011b5ac4240709698491a",
+        "page_number": null,
+        "anchor": "#pr26-",
+        "article_path": [
+          "section 26",
+          "item (1)"
+        ],
+        "span_ids": [
+          "span:b4b3ac3cfe5c10170434e54fcd25f7d0340eff038c2d45236eaee377ca1d919b"
+        ],
+        "bboxes": [],
+        "exact_snippet": "An organisation must not transfer any personal data to a country or territory outside Singapore except in accordance with requirements prescribed under this Act to ensure that organisations provide a standard of protection to personal data so transferred that is comparable to the protection under this Act.",
+        "normalized_snippet": "an organisation must not transfer any personal data to a country or territory outside singapore except in accordance with requirements prescribed under this act to ensure that organisations provide a standard of protection to personal data so transferred that is comparable to the protection under this act.",
+        "alignment_status": "anchor",
+        "alignment_score": 1.0,
+        "gate_results": [
+          {
+            "gate_id": "G1",
+            "status": "PASS",
+            "reason": "verbatim snippet found in extracted source text",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G3",
+            "status": "PASS",
+            "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G4",
+            "status": "PASS",
+            "reason": "official portal asserts current version as at 2026-07-07",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G7",
+            "status": "PASS",
+            "reason": "P6-I4 legal-fit checks passed",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G2",
+            "status": "PASS",
+            "reason": "anchor '#pr26-' matches s. 26",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G5",
+            "status": "PASS",
+            "reason": "rule and exception captured together",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G6",
+            "status": "PASS",
+            "reason": "rationale modality supported by the text",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G8",
+            "status": "PASS",
+            "reason": "no dangling same-act references; no repeal language detected",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G9",
+            "status": "PASS",
+            "reason": "snippet within export budget (307 chars)",
+            "evidence_reference": "P6-I4 s. 26(1)",
+            "metadata": {}
+          }
+        ],
+        "verified_at": "2026-07-20T00:45:26.718118Z"
+      },
+      "search_coverage_manifest": null,
+      "review": null,
+      "raw_context": "(1) An organisation must not transfer any personal data to a country or territory outside Singapore except in accordance with requirements prescribed under this Act to ensure that organisations provide a standard of protection to personal data so transferred that is comparable to the protection under this Act.\n(2) The Commission may, on the application of any organisation, by written notice exempt the organisation from any requirement prescribed pursuant to subsection (1) in respect of any transfer of personal data by that organisation.\n(3) An exemption under subsection (2) — ( a ) may be granted subject to such conditions as the Commission may specify in writing; and ( b ) need not be published in the Gazette and may be revoked at any time by the Commission.\n(4) The Commission may at any time add to, vary or revoke any condition imposed under this section. PART 6A NOTIFICATION OF DATA BREACHES"
+    },
+    {
+      "Economy": "Singapore",
+      "Law Name": "Personal Data Protection Regulations 2021",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I4",
+      "Article / Section": "s. 12(1)",
+      "Discovery Tag": "NEW",
+      "Location Reference": "#pr12-",
+      "Verbatim Snippet": "a recipient of an individual’s personal data in a country or territory outside Singapore is taken to be bound by legally enforceable obligations to provide a standard of protection for the transferred personal data that is at least comparable to the protection under the Act if the recipient holds a specified certification that is granted or recognised under the law of that country or territory to which the personal data is transferred.",
+      "Mapping Rationale": "This regulation deems an overseas recipient bound to provide comparable protection for transferred personal data if they hold specified certification. Maps to P6-I4 because it sets a conditional transfer-flow compliance pathway (consent/adequacy-like certification) for cross-border personal data.",
+      "Source URL": "https://sso.agc.gov.sg/SL/PDPA2012-S63-2021#pr12-",
+      "Confidence": 0.86,
+      "Notes": "Discovery: instrument not in the master dataset for Singapore. Modality: conditional (if/then deeming obligation); exceptions: none",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": "data/raw/sg/PDPA2012-S63-2021.full.340462113eb5.html",
+      "access_date": "2026-07-20",
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Singapore Statutes Online current version as at 20 Jul 2026",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://sso.agc.gov.sg/SL/PDPA2012-S63-2021",
+        "fact_text": "Singapore Statutes Online current version as at 20 Jul 2026",
+        "checked_at": "2026-07-19T23:14:39.117080Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official current/latest compilation assertion plus date",
+        "conflicting": false
+      },
+      "citation_tier": "[verify-pinpoint]",
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+      "citation_proof": {
+        "source_artifact_id": "sha256:340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+        "source_sha256": "340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+        "page_number": null,
+        "anchor": "#pr12-",
+        "article_path": [
+          "section 12",
+          "item (1)"
+        ],
+        "span_ids": [
+          "span:284142452de4bfa13fce81b7b86302adf80ca162e4e0d692728ced573d067401"
+        ],
+        "bboxes": [],
+        "exact_snippet": "a recipient of an individual’s personal data in a country or territory outside Singapore is taken to be bound by legally enforceable obligations to provide a standard of protection for the transferred personal data that is at least comparable to the protection under the Act if the recipient holds a specified certification that is granted or recognised under the law of that country or territory to which the personal data is transferred.",
+        "normalized_snippet": "a recipient of an individual’s personal data in a country or territory outside singapore is taken to be bound by legally enforceable obligations to provide a standard of protection for the transferred personal data that is at least comparable to the protection under the act if the recipient holds a specified certification that is granted or recognised under the law of that country or territory to which the personal data is transferred.",
+        "alignment_status": "anchor",
+        "alignment_score": 1.0,
+        "gate_results": [
+          {
+            "gate_id": "G1",
+            "status": "PASS",
+            "reason": "verbatim snippet found in extracted source text",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G3",
+            "status": "PASS",
+            "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G4",
+            "status": "PASS",
+            "reason": "official portal asserts current version as at 2026-07-20",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G7",
+            "status": "PASS",
+            "reason": "P6-I4 legal-fit checks passed",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G2",
+            "status": "PASS",
+            "reason": "anchor '#pr12-' matches s. 12",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G5",
+            "status": "PASS",
+            "reason": "rule and exception captured together",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G6",
+            "status": "PASS",
+            "reason": "rationale modality supported by the text",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G8",
+            "status": "PASS",
+            "reason": "no dangling same-act references; no repeal language detected",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G9",
+            "status": "PASS",
+            "reason": "snippet within export budget (439 chars)",
+            "evidence_reference": "P6-I4 s. 12(1)",
+            "metadata": {}
+          }
+        ],
+        "verified_at": "2026-07-20T00:45:26.793210Z"
+      },
+      "search_coverage_manifest": null,
+      "review": null,
+      "raw_context": "(1) For the purposes of regulation 10(1), a recipient of an individual’s personal data in a country or territory outside Singapore is taken to be bound by legally enforceable obligations to provide a standard of protection for the transferred personal data that is at least comparable to the protection under the Act if the recipient holds a specified certification that is granted or recognised under the law of that country or territory to which the personal data is transferred.\n(2) In this regulation, “specified certification”, in relation to a recipient of an individual’s personal data, means a certification under — ( a ) where the recipient is a data intermediary — (i) the Asia-Pacific Economic Cooperation Privacy Recognition for Processors System; (ii) the Asia-Pacific Economic Cooperation Cross-Border Privacy Rules System; (iii) the Global Privacy Recognition for Processors System; or (iv) the Global Cross-Border Privacy Rules System; or [S 86/2026 wef 02/03/2026] ( b ) in any other case — the Asia‑Pacific Economic Cooperation Cross-Border Privacy Rules System or the Global Cross-Border Privacy Rules System. [S 86/2026 wef 02/03/2026] PART 4 DEEMED CONSENT BY NOTIFICATION AND LEGITIMATE INTERESTS"
+    },
+    {
+      "Economy": "Singapore",
+      "Law Name": "Personal Data Protection Regulations 2021",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I4",
+      "Article / Section": "s. 10(2)",
+      "Discovery Tag": "NEW",
+      "Location Reference": "#pr10-",
+      "Verbatim Snippet": "A transferring organisation is taken to have satisfied the requirements of paragraph (1) in respect of an individual’s personal data which it transfers to a recipient in a country or territory outside Singapore if — ( a ) subject to paragraph (3), the individual consents to the transfer of the individual’s personal data to that recipient in that country or territory;",
+      "Mapping Rationale": "This section establishes conditional compliance requirements for cross-border transfer of personal data. Maps to P6-I4 because transfer outside Singapore is permitted when specified conditions are met (consent, deemed consent, necessity, transit, or public availability). Function: conditional flow r",
+      "Source URL": "https://sso.agc.gov.sg/SL/PDPA2012-S63-2021#pr10-",
+      "Confidence": 0.98,
+      "Notes": "Discovery: instrument not in the master dataset for Singapore. Modality: is taken to have satisfied the requirements; exceptions: subject to paragraph (3)",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [
+        "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+      ],
+      "archived_copy": "data/raw/sg/PDPA2012-S63-2021.full.340462113eb5.html",
+      "access_date": "2026-07-20",
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Singapore Statutes Online current version as at 20 Jul 2026",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://sso.agc.gov.sg/SL/PDPA2012-S63-2021",
+        "fact_text": "Singapore Statutes Online current version as at 20 Jul 2026",
+        "checked_at": "2026-07-19T23:14:39.117080Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official current/latest compilation assertion plus date",
+        "conflicting": false
+      },
+      "citation_tier": "[verify-pinpoint]",
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+      "citation_proof": {
+        "source_artifact_id": "sha256:340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+        "source_sha256": "340462113eb5031ff63fe1bb3a90e77be5a185d7423daff5384df83dc314d4d4",
+        "page_number": null,
+        "anchor": "#pr10-",
+        "article_path": [
+          "section 10",
+          "item (2)"
+        ],
+        "span_ids": [
+          "span:1a58d8598972dfc0a86b81cdb116b9114d88cd11640f10420a8f5ebfef6c030b"
+        ],
+        "bboxes": [],
+        "exact_snippet": "A transferring organisation is taken to have satisfied the requirements of paragraph (1) in respect of an individual’s personal data which it transfers to a recipient in a country or territory outside Singapore if — ( a ) subject to paragraph (3), the individual consents to the transfer of the individual’s personal data to that recipient in that country or territory;",
+        "normalized_snippet": "a transferring organisation is taken to have satisfied the requirements of paragraph (1) in respect of an individual’s personal data which it transfers to a recipient in a country or territory outside singapore if — ( a ) subject to paragraph (3), the individual consents to the transfer of the individual’s personal data to that recipient in that country or territory;",
+        "alignment_status": "anchor",
+        "alignment_score": 1.0,
+        "gate_results": [
+          {
+            "gate_id": "G1",
+            "status": "PASS",
+            "reason": "verbatim snippet found in extracted source text",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G3",
+            "status": "PASS",
+            "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G4",
+            "status": "PASS",
+            "reason": "official portal asserts current version as at 2026-07-20",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G7",
+            "status": "PASS",
+            "reason": "P6-I4 legal-fit checks passed",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G2",
+            "status": "PASS",
+            "reason": "anchor '#pr10-' matches s. 10",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G5",
+            "status": "PASS",
+            "reason": "rule and exception captured together",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G6",
+            "status": "WARN",
+            "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G8",
+            "status": "PASS",
+            "reason": "no dangling same-act references; no repeal language detected",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G9",
+            "status": "PASS",
+            "reason": "snippet within export budget (369 chars)",
+            "evidence_reference": "P6-I4 s. 10(2)",
+            "metadata": {}
+          }
+        ],
+        "verified_at": "2026-07-20T00:45:26.857094Z"
+      },
+      "search_coverage_manifest": null,
+      "review": null,
+      "raw_context": "(1) For the purposes of section 26 of the Act, a transferring organisation must, before transferring an individual’s personal data to a country or territory outside Singapore on or after 1 February 2021, take appropriate steps to ascertain whether, and to ensure that, the recipient of the personal data is bound by legally enforceable obligations (in accordance with regulation 11) to provide to the transferred personal data a standard of protection that is at least comparable to the protection under the Act.\n(2) A transferring organisation is taken to have satisfied the requirements of paragraph (1) in respect of an individual’s personal data which it transfers to a recipient in a country or territory outside Singapore if — ( a ) subject to paragraph (3), the individual consents to the transfer of the individual’s personal data to that recipient in that country or territory; ( b ) the individual is deemed to have consented to the disclosure by the transferring organisation of the individual’s personal data to that recipient under section 15(3), (4), (5), (6), (7) or (8) of the Act; ( c ) the transfer of the personal data to the recipient is necessary for the personal data to be used or disclosed under Part 1 or paragraph 2 of Part 2 of the First Schedule to the Act, and the transferring organisation has taken reasonable steps to ensure that the personal data so transferred will not be used or disclosed by the recipient for any other purpose; ( d ) the personal data is data in transit; or ( e ) the personal data is publicly available in Singapore.\n(3) For the purposes of paragraph (2)( a ), an individual is not taken to have consented to the transfer of the individual’s personal data to a country or territory outside Singapore if — ( a ) the individual was not, before giving his or her consent, given a reasonable summary in writing of the extent to which the personal data to be transferred to that country or territory will be protected to a standard comparable to the protection under the Act; ( b ) the transferring organisation required the individual to consent to the transfer as a condition of providing a product or service, unless the transfer is reasonably necessary to provide the product or service to the individual; or ( c ) the transferring organisation obtained or attempted to obtain the individual’s consent for the transfer by providing false or misleading information about the transfer, or by using other deceptive or misleading practices.\n(4) This Part does not prevent an individual from withdrawing any consent given for the transfer of the personal data to a country or territory outside Singapore."
+    },
+    {
+      "Economy": "Singapore",
+      "Law Name": "Digital Economy Partnership Agreement",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I5",
+      "Article / Section": "Art. 4.3",
+      "Discovery Tag": "NEW",
+      "Location Reference": "page 16",
+      "Verbatim Snippet": "Each Party shall allow the cross-border transfer of information by electronic means, including personal information, when this activity is for the conduct of the business of a covered person.",
+      "Mapping Rationale": "This Article requires each Party to allow cross-border electronic transfer of information (including personal data) for covered persons’ business. Maps to P6-I5 because it establishes a binding cross-border data-transfer commitment.",
+      "Source URL": "https://isomer-user-content.by.gov.sg/166/9f2ab40f-0ad1-4925-b8d5-03bdb2dda5eb/Digital%20Economy%20Partnership%20Agreement.pdf",
+      "Confidence": 0.93,
+      "Notes": "Discovery: instrument is known but s. 4.3 is not among its recorded provisions (none recorded). Modality: shall (binding obligation); exceptions: Nothing in this Article shall prevent a Party from adopting or maintaining measures inconsistent with paragraph 2 to achieve a legitimate public policy objective, subject to (a) no arbitrary/unjustifiable discrimination or disguised restriction on trade and (b) no restrictions greater than required.",
+      "Coverage": "Sectoral (Covered persons (as defined in the agreement))",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [
+        "no current-version assertion found on the source page",
+        "exception language exists outside the snippet — reviewer should read the full section"
+      ],
+      "archived_copy": "data/raw/sg/seed_a44a45b42532.pdf",
+      "access_date": "2026-07-20",
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "MTI records DEPA as in force for Singapore since 7 January 2021.",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://www.mti.gov.sg/Trade/Digital-Economy-Agreements/The-Digital-Economy-Partnership-Agreement",
+        "fact_text": "MTI records DEPA as in force for Singapore since 7 January 2021.",
+        "checked_at": "2026-07-19T20:09:03.334768Z",
+        "effective_date": "2021-01-07",
+        "end_date": null,
+        "resolution_rule": "official structured status field",
+        "conflicting": false
+      },
+      "citation_tier": "[verify]",
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf",
+      "citation_proof": {
+        "source_artifact_id": "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf",
+        "source_sha256": "a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf",
+        "page_number": 16,
+        "anchor": null,
+        "article_path": [
+          "article 4.3"
+        ],
+        "span_ids": [
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s0",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s1",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s2",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s3",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s4",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s5",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s6",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s7",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s8",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s9",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s10",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s11",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s12",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s13",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s14",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s15",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s16",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s17",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s18",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s19",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s20",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s21",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s22",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s23",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s24",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s25",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s26",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s27",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s28",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s29",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s30",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s31",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s32",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s33",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s34",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s35",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s36",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s37",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s38",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s39",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s40",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s41",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s42",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s43",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s44",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s45",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s46",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s47",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s48",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s49",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s50",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s51",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s52",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s53",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s54",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s55",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s56",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s57",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s58",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s59",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s60",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s61",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s62",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s63",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s64",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s65",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s66",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s67",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s68",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s69",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s70",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s71",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s72",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s73",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s74",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s75",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s76",
+          "sha256:a44a45b4253202e6e76350824dd75002bbc15791252927c087de07b6aa2542bf:p16:s77"
+        ],
+        "bboxes": [],
+        "exact_snippet": "Each Party shall allow the cross-border transfer of information by electronic means, including personal information, when this activity is for the conduct of the business of a covered person.",
+        "normalized_snippet": "each party shall allow the cross-border transfer of information by electronic means, including personal information, when this activity is for the conduct of the business of a covered person.",
+        "alignment_status": "unaligned",
+        "alignment_score": 0.0,
+        "gate_results": [
+          {
+            "gate_id": "G1",
+            "status": "PASS",
+            "reason": "verbatim snippet found in extracted source text",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G3",
+            "status": "PASS",
+            "reason": "source domain 'isomer-user-content.by.gov.sg' is on the official whitelist",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G4",
+            "status": "WARN",
+            "reason": "no current-version assertion found on the source page",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G7",
+            "status": "PASS",
+            "reason": "P6-I5 legal-fit checks passed",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G2",
+            "status": "PASS",
+            "reason": "page-level location 'page 16' recorded from the source parse",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G5",
+            "status": "WARN",
+            "reason": "exception language exists outside the snippet — reviewer should read the full section",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G6",
+            "status": "PASS",
+            "reason": "rationale modality supported by the text",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G8",
+            "status": "PASS",
+            "reason": "no dangling same-act references; no repeal language detected",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G9",
+            "status": "PASS",
+            "reason": "snippet within export budget (191 chars)",
+            "evidence_reference": "P6-I5 Art. 4.3",
+            "metadata": {}
+          }
+        ],
+        "verified_at": "2026-07-20T00:46:03.222638Z"
+      },
+      "search_coverage_manifest": null,
+      "review": null,
+      "raw_context": "Article 4.3: Cross-Border Transfer of Information by Electronic Means The Parties affirm their level of commitments relating to cross-border transfer of information by electronic means, in particular, but not exclusively: “1. The Parties recognise that each Party may have its own regulatory requirements concerning the transfer of information by electronic means. 4-3 2. Each Party shall allow the cross-border transfer of information by electronic means, including personal information, when this activity is for the conduct of the business of a covered person. 3. Nothing in this Article shall prevent a Party from adopting or maintaining measures inconsistent with paragraph 2 to achieve a legitimate public policy objective, provided that the measure: (a) is not applied in a manner which would constitute a means of arbitrary or unjustifiable discrimination or a disguised restriction on trade; and (b) does not impose restrictions on transfers of information greater than are required to achieve the objective.”"
+    },
+    {
+      "Economy": "Singapore",
+      "Law Name": "RCEP Chapter 12 (Enterprise Singapore text)",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I5",
+      "Article / Section": "Art. 12.15",
+      "Discovery Tag": "NEW",
+      "Location Reference": "page 10",
+      "Verbatim Snippet": "A Party shall not prevent cross-border transfer of information by electronic means where such activity is for the conduct of the business of a covered person.",
+      "Mapping Rationale": "This Article establishes a binding obligation not to prevent cross-border transfer of information by electronic means for covered persons’ business. Maps to P6-I5 because it is a binding cross-border data-transfer commitment.",
+      "Source URL": "https://www.enterprisesg.gov.sg/-/media/ESG/Files/Non-Financial-Assistance/For-Companies/Free-Trade-Agreements/RCEP/RCEP_Chapter_12.pdf",
+      "Confidence": 0.9,
+      "Notes": "Discovery: instrument not in the master dataset for Singapore. Modality: shall not (binding prohibition on preventing); exceptions: A Party may adopt or maintain measures inconsistent with paragraph 2 necessary for a legitimate public policy objective (not arbitrary/unjustifiable discrimination or disguised restriction on trade); measures necessary for the protection of essential security interests",
+      "Coverage": "Sectoral (Enterprise / covered persons (business activities))",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [
+        "no current-version assertion found on the source page",
+        "exception language exists outside the snippet — reviewer should read the full section"
+      ],
+      "archived_copy": "data/raw/sg/seed_dde52c5c5c97.pdf",
+      "access_date": "2026-07-20",
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Enterprise Singapore publishes the RCEP legal text; RCEP entered into force for Singapore on 1 January 2022.",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://www.enterprisesg.gov.sg/regional-comprehensive-economic-partnership",
+        "fact_text": "Enterprise Singapore publishes the RCEP legal text; RCEP entered into force for Singapore on 1 January 2022.",
+        "checked_at": "2026-07-19T20:09:36.484279Z",
+        "effective_date": "2022-01-01",
+        "end_date": null,
+        "resolution_rule": "official structured status field",
+        "conflicting": false
+      },
+      "citation_tier": "[verify]",
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91",
+      "citation_proof": {
+        "source_artifact_id": "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91",
+        "source_sha256": "dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91",
+        "page_number": 10,
+        "anchor": null,
+        "article_path": [
+          "article 12.15"
+        ],
+        "span_ids": [
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s0",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s1",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s2",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s3",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s4",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s5",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s6",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s7",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s8",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s9",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s10",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s11",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s12",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s13",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s14",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s15",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s16",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s17",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s18",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s19",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s20",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s21",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s22",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s23",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s24",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s25",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s26",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s27",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s28",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s29",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s30",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s31",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s32",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s33",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s34",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s35",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s36",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s37",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s38",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s39",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s40",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s41",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s42",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s43",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s44",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s45",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s46",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s47",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s48",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s49",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s50",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s51",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s52",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s53",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s54",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s55",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s56",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s57",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s58",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s59",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s60",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s61",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s62",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s63",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s64",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s65",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s66",
+          "sha256:dde52c5c5c97a99bd03db93ffe7ffca1daffda030fdecde016945b4361d01f91:p10:s67"
+        ],
+        "bboxes": [],
+        "exact_snippet": "A Party shall not prevent cross-border transfer of information by electronic means where such activity is for the conduct of the business of a covered person.",
+        "normalized_snippet": "a party shall not prevent cross-border transfer of information by electronic means where such activity is for the conduct of the business of a covered person.",
+        "alignment_status": "unaligned",
+        "alignment_score": 0.0,
+        "gate_results": [
+          {
+            "gate_id": "G1",
+            "status": "PASS",
+            "reason": "verbatim snippet found in extracted source text",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G3",
+            "status": "PASS",
+            "reason": "source domain 'www.enterprisesg.gov.sg' is on the official whitelist",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G4",
+            "status": "WARN",
+            "reason": "no current-version assertion found on the source page",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G7",
+            "status": "PASS",
+            "reason": "P6-I5 legal-fit checks passed",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G2",
+            "status": "PASS",
+            "reason": "page-level location 'page 10' recorded from the source parse",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G5",
+            "status": "WARN",
+            "reason": "exception language exists outside the snippet — reviewer should read the full section",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G6",
+            "status": "PASS",
+            "reason": "rationale modality supported by the text",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G8",
+            "status": "PASS",
+            "reason": "no dangling same-act references; no repeal language detected",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          },
+          {
+            "gate_id": "G9",
+            "status": "PASS",
+            "reason": "snippet within export budget (158 chars)",
+            "evidence_reference": "P6-I5 Art. 12.15",
+            "metadata": {}
+          }
+        ],
+        "verified_at": "2026-07-20T00:46:03.239823Z"
+      },
+      "search_coverage_manifest": null,
+      "review": null,
+      "raw_context": "Article 12.15: Cross-border Transfer of Information by Electronic Means 1. The Parties recognise that each Party may have its own regulatory requirements concerning the transfer of information by electronic means. 2. A Party shall not prevent cross-border transfer of information by electronic means where such activity is for the conduct of the business of a covered person.13 3. Nothing in this Article shall prevent a Party from adopting or maintaining: (a) any measure inconsistent with paragraph 2 that it considers necessary to achieve a legitimate public policy objective,14 provided that the measure is not applied in a manner which would constitute a means of arbitrary or unjustifiable discrimination or a disguised restriction on trade; or (b) any measure that it considers necessary for the protection of its essential security interests. Such measures shall not 12 For the purposes of this subparagraph, the Parties affirm that the necessity behind the implementation of such legitimate public policy shall be decided by the implementing Party. 13 Cambodia, Lao PDR, and Myanmar shall not be obliged to apply this paragraph for a period of five years after the date of entry into force of this Agreement, with an additional three years if necessary. Viet Nam shall not be obliged to apply this paragraph for a period of five years after the date of entry into force of this Agreement. 14 For the purposes of this subparagraph, the Parties affirm that the necessity behind the implementation of such legitimate public policy shall be decided by the implementing Party. 12-11 be disputed by other Parties. SECTION E OTHER PROVISIONS"
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-07",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I1 legal-fit checks passed",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr26-' matches s. 26",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (307 chars)",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-08",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I3 requires local infrastructure as a mandatory service condition",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr7-' matches s. 7",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (73 chars)",
+      "evidence_reference": "P6-I3 s. 7(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-08",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I3 requires local infrastructure as a mandatory service condition",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr25-' matches s. 25",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (308 chars)",
+      "evidence_reference": "P6-I3 s. 25(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-08",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I3 requires local infrastructure as a mandatory service condition",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr25-' matches s. 25",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (289 chars)",
+      "evidence_reference": "P6-I3 s. 25(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-07",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I4 legal-fit checks passed",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr26-' matches s. 26",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (307 chars)",
+      "evidence_reference": "P6-I4 s. 26(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-07",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I4 requires CROSS-BORDER data transfer language; generic processing/disclosure does not qualify",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr26-' matches s. 26",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (226 chars)",
+      "evidence_reference": "P6-I4 s. 26(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-07",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I4 requires CROSS-BORDER data transfer language; generic processing/disclosure does not qualify",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr26-' matches s. 26",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (83 chars)",
+      "evidence_reference": "P6-I4 s. 26(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-07",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I4 requires CROSS-BORDER data transfer language; generic processing/disclosure does not qualify",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr26-' matches s. 26",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (95 chars)",
+      "evidence_reference": "P6-I4 s. 26(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-20",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I4 legal-fit checks passed",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr10-' matches s. 10",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "WARN",
+      "reason": "exception language exists outside the snippet — reviewer should read the full section",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (409 chars)",
+      "evidence_reference": "P6-I4 s. 10(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-20",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I4 requires CROSS-BORDER data transfer language; generic processing/disclosure does not qualify",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr11-' matches s. 11",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (283 chars)",
+      "evidence_reference": "P6-I4 s. 11(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-20",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I4 legal-fit checks passed",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr10-' matches s. 10",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (158 chars)",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-20",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I4 legal-fit checks passed",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr12-' matches s. 12",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (439 chars)",
+      "evidence_reference": "P6-I4 s. 12(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-20",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I4 legal-fit checks passed",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr10-' matches s. 10",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "WARN",
+      "reason": "references section(s) ['26'] not found in the parsed act — possible repealed/renumbered target (dangling reference); reviewer check",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (465 chars)",
+      "evidence_reference": "P6-I4 s. 10(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-07",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I4 requires CROSS-BORDER data transfer language; generic processing/disclosure does not qualify",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr10-' matches s. 10",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (489 chars)",
+      "evidence_reference": "P6-I4 s. 10(4)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'sso.agc.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-20",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I4 legal-fit checks passed",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "anchor '#pr10-' matches s. 10",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (369 chars)",
+      "evidence_reference": "P6-I4 s. 10(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'isomer-user-content.by.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "WARN",
+      "reason": "no current-version assertion found on the source page",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I5 legal-fit checks passed",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "page-level location 'page 16' recorded from the source parse",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "WARN",
+      "reason": "exception language exists outside the snippet — reviewer should read the full section",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (191 chars)",
+      "evidence_reference": "P6-I5 Art. 4.3",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'www.enterprisesg.gov.sg' is on the official whitelist",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "WARN",
+      "reason": "no current-version assertion found on the source page",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "PASS",
+      "reason": "P6-I5 legal-fit checks passed",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "page-level location 'page 10' recorded from the source parse",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "WARN",
+      "reason": "exception language exists outside the snippet — reviewer should read the full section",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (158 chars)",
+      "evidence_reference": "P6-I5 Art. 12.15",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "Personal Data Protection Act 2012 s. 26(1): also maps to P6-I4 — a provision with a compliance path is a CONDITIONAL regime, not a ban; 6.1 row dropped (DoDont §6 disambiguation, applied as code)",
+      "evidence_reference": "P6-I1 s. 26(1)",
+      "metadata": {}
+    }
+  ],
+  "warnings": [
+    "P6-I1: retrieval union capped at 400 of 426 candidates (cap logged, not silent)",
+    "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+    "P6-I2: screened top 200 of 299 retrieval candidates (cap logged, not silent)",
+    "P6-I3: screened top 200 of 275 retrieval candidates (cap logged, not silent)",
+    "REJECTED by gates: P6-I3 s. 7(1) (['G7'])",
+    "REJECTED by gates: P6-I3 s. 25(1) (['G7'])",
+    "REJECTED by gates: P6-I3 s. 25(2) (['G7'])",
+    "P6-I4: screened top 200 of 334 retrieval candidates (cap logged, not silent)",
+    "REJECTED by gates: P6-I4 s. 26(2) (['G7'])",
+    "REJECTED by gates: P6-I4 s. 26(3) (['G7'])",
+    "REJECTED by gates: P6-I4 s. 26(4) (['G7'])",
+    "REJECTED by gates: P6-I4 s. 11(2) (['G7'])",
+    "REJECTED by gates: P6-I4 s. 10(4) (['G7'])"
+  ],
+  "metadata": {
+    "corpus_provisions": 10494,
+    "corpus_fingerprint": "47d2bcdc175d072d71a27a5bda08e92b0188c903bcc3d215eca913dea92a484d",
+    "known_index_sha256": "1b275d7028f153498b63730a834a6f6b5c751387a3618e5d1e30dd976000286f",
+    "pipeline_stats": {
+      "candidates": 1385,
+      "screened_in": 31,
+      "mapped": 9,
+      "gate_rejected": 8,
+      "nano_mappings": 21,
+      "mini_escalations": 10,
+      "escalation_reasons": {
+        "ban-vs-condition-ambiguity": 5,
+        "snippet-not-source-locatable": 2,
+        "low-confidence-positive": 2,
+        "low-confidence-known-anchor": 1,
+        "known-anchor-rejected": 1
+      },
+      "by_indicator": {
+        "P6-I1": {
+          "candidate_count": 400,
+          "resolved_known_anchors": 0,
+          "candidate_recall": null,
+          "screen_survival_recall": null,
+          "mapper_survival_recall": null,
+          "gate_survival_recall": null,
+          "injected_anchor_count": 0,
+          "caps": [
+            {
+              "stage": "retrieval_union",
+              "limit": 400,
+              "input_count": 426
+            },
+            {
+              "stage": "screen",
+              "limit": 200,
+              "input_count": 400
+            }
+          ]
+        },
+        "P6-I2": {
+          "candidate_count": 299,
+          "resolved_known_anchors": 0,
+          "candidate_recall": null,
+          "screen_survival_recall": null,
+          "mapper_survival_recall": null,
+          "gate_survival_recall": null,
+          "injected_anchor_count": 0,
+          "caps": [
+            {
+              "stage": "screen",
+              "limit": 200,
+              "input_count": 299
+            }
+          ]
+        },
+        "P6-I3": {
+          "candidate_count": 275,
+          "resolved_known_anchors": 0,
+          "candidate_recall": null,
+          "screen_survival_recall": null,
+          "mapper_survival_recall": null,
+          "gate_survival_recall": null,
+          "injected_anchor_count": 0,
+          "caps": [
+            {
+              "stage": "screen",
+              "limit": 200,
+              "input_count": 275
+            }
+          ]
+        },
+        "P6-I4": {
+          "candidate_count": 332,
+          "resolved_known_anchors": 1,
+          "candidate_recall": 1.0,
+          "screen_survival_recall": 1.0,
+          "mapper_survival_recall": 1.0,
+          "gate_survival_recall": 1.0,
+          "injected_anchor_count": 0,
+          "caps": [
+            {
+              "stage": "screen",
+              "limit": 200,
+              "input_count": 334
+            }
+          ]
+        },
+        "P6-I5": {
+          "candidate_count": 77,
+          "resolved_known_anchors": 0,
+          "candidate_recall": null,
+          "screen_survival_recall": null,
+          "mapper_survival_recall": null,
+          "gate_survival_recall": null,
+          "injected_anchor_count": 0,
+          "caps": []
+        }
+      },
+      "anchors_retrieved_organically": 1,
+      "anchors_injection_saved": 0,
+      "known_anchors": 4,
+      "curation": {
+        "excluded_count": 3,
+        "excluded": [
+          {
+            "economy": "Singapore",
+            "indicator_id": "P6-I4",
+            "law_name": "Personal Data Protection Regulations 2021",
+            "article_section": "s. 10(3)",
+            "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+            "legal_function": "controls",
+            "confidence": 0.95,
+            "verifier_risks": [
+              "exception language exists outside the snippet — reviewer should read the full section",
+              "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+            ]
+          },
+          {
+            "economy": "Singapore",
+            "indicator_id": "P6-I4",
+            "law_name": "Personal Data Protection Regulations 2021",
+            "article_section": "s. 10(4)",
+            "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+            "legal_function": "retention",
+            "confidence": 0.78,
+            "verifier_risks": [
+              "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)"
+            ]
+          },
+          {
+            "economy": "Singapore",
+            "indicator_id": "P6-I4",
+            "law_name": "Personal Data Protection Regulations 2021",
+            "article_section": "s. 10(1)",
+            "reason": "redundant NEW evidence after precision curation; retained at most 2 functionally distinct provisions for this law/indicator",
+            "legal_function": "controls",
+            "confidence": 0.93,
+            "verifier_risks": [
+              "references section(s) ['26'] not found in the parsed act — possible repealed/renumbered target (dangling reference); reviewer check"
+            ]
+          }
+        ]
+      }
+    },
+    "elapsed_seconds": 390.8,
+    "live_llm_calls": true,
+    "graph_backend": "SqliteGraphStore",
+    "cost_report": {
+      "run_id": "run-sg-p6-1784507972",
+      "at": "2026-07-20T00:46:03.358817+00:00",
+      "models": {
+        "text-embedding-3-small": {
+          "input_tokens": 223,
+          "cached_input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 29,
+          "usd": 0.0,
+          "priced": true
+        },
+        "gpt-5.4-nano": {
+          "input_tokens": 187123,
+          "cached_input_tokens": 0,
+          "output_tokens": 38720,
+          "calls": 106,
+          "usd": 0.0858,
+          "priced": true
+        },
+        "gpt-5.4-mini": {
+          "input_tokens": 13980,
+          "cached_input_tokens": 0,
+          "output_tokens": 1792,
+          "calls": 10,
+          "usd": 0.0185,
+          "priced": true
+        }
+      },
+      "total_usd": 0.1044,
+      "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+      "economy": "Singapore",
+      "pillar": 6,
+      "elapsed_seconds": 390.6
+    }
+  }
+}

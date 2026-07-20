@@ -1,0 +1,102 @@
+jurisdiction: AU
+source_format: epub+pdf   # XHTML structure oracle + authorised-PDF pages -> extractors/epub_act.py + pdf_align.py  # declaration-only (P3.6): which format extractor this pack uses
+name: Australia
+un_name: Australia
+languages: { primary: en, supported: [en] }
+
+whitelist_source: data/official_domains.json   # mined from ESCAP References — see sg.yaml note
+official_sources:
+  - { name: DFAT treaty portal, domain: www.dfat.gov.au, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: NSW legislation, domain: legislation.nsw.gov.au, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: Victorian legislation, domain: www.legislation.vic.gov.au, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: Federal Register of Legislation, domain: legislation.gov.au, source_type: official_statute_database, authority_rank: 100 }
+  - { name: OAIC, domain: oaic.gov.au, source_type: regulator_guidance, authority_rank: 60 }
+  # added 7-Jul from ESCAP-citation mining:
+  - { name: DFAT, domain: dfat.gov.au, source_type: ministry, authority_rank: 50 }
+  - { name: Treasury, domain: treasury.gov.au, source_type: ministry, authority_rank: 50 }
+  - { name: Australian Cyber Security Centre, domain: cyber.gov.au, source_type: agency, authority_rank: 50 }
+  - { name: Standards Australia, domain: standards.org.au, source_type: statutory_body, authority_rank: 40 }
+  - { name: NIAA, domain: niaa.gov.au, source_type: agency, authority_rank: 30 }
+
+portal_search:
+  engine: https://www.legislation.gov.au/search
+  method: keyword_fulltext
+  notes: "Cleanest portal — structured HTML, 'latest version' metadata, powerful native search. Run the rubric-cue query sets here first; it is the cheapest portal to mine for NEW."
+
+citation_patterns:
+  section: ["s {n}", "section {n}", "s. {n}"]
+  schedule: ["Sch {n}", "Schedule {n}"]
+  paragraph_required: true
+connector: au_legislation
+notes:
+  - "Cleanest portal — fast breadth economy; reuse the SG path."
+  - "Australian Privacy Principles live in Schedule 1 of the Privacy Act — exceptions hide in Schedules (Gao's warning)."
+known_index: data/known_index.json
+seeds: data/seeds.json
+rdtii_bindings: { pillars: [6, 7] }
+
+anchor_instruments:
+  - "Privacy Act 1988 (C2004A03712) incl. APP 8 (cross-border disclosure) in Schedule 1"
+  - "My Health Records Act 2012 (sectoral localization — P6-I1/I2 per portals CSV)"
+  - "Telecommunications (Interception and Access) Act 1979 (gov-access hunting ground for P7-I5)"
+
+hunt_instruments:
+  P7-I5:   # government access (warrantless-access test)
+    - "Telecommunications (Interception and Access) Act 1979 — Ch 4 metadata access WITHOUT warrant (authorised officers)"
+    - "Telecommunications and Other Legislation Amendment (Assistance and Access) Act 2018 (TOLA) — technical assistance/capability notices"
+    - "Surveillance Legislation Amendment (Identify and Disrupt) Act 2021 — data disruption/account takeover warrants"
+    - "Crimes Act 1914 — s. 3LA assistance orders"
+    - "Anti-Money Laundering and Counter-Terrorism Financing Act 2006 — AUSTRAC information powers"
+  P7-I3:   # minimum retention
+    - "Telecommunications (Interception and Access) Act 1979 — Part 5-1A: 2-year metadata retention MANDATE"
+    - "Corporations Act 2001 — s. 286 financial records 7 years"
+    - "AML/CTF Act 2006 — s. 107 records 7 years"
+    - "Taxation Administration Act 1953 (record-keeping)"
+  P6-I2_I3:
+    - "My Health Records Act 2012 — s. 77 prohibition on holding/processing records outside Australia (strong 6.1/6.2 evidence)"
+    - "Security of Critical Infrastructure Act 2018 (SOCI) — data-storage/processing sector obligations"
+
+# Gold act-name aliases (4 Jul audit class: ESCAP's act column sometimes names a
+# CONCEPT, not the statute). Maps gold acts_norm -> the statute holding the provision.
+gold_aliases:
+  "privacy impact assessment 2020": "Privacy Act 1988"
+  "telecommunications interception and access regulations 2021": "Telecommunications Regulations 2021"
+
+# A3 (P3.5): governing instrument for absence rows — never corpus[0].
+governing_instruments:
+  default: { law: "Privacy Act 1988", url: "https://www.legislation.gov.au/C2004A03712/latest" }
+  P7-I2:   { law: "Security of Critical Infrastructure Act 2018", url: "https://www.legislation.gov.au/C2018A00029/latest" }
+
+status_assertions:   # non-Federal-Register seeds (state portals, DFAT treaties) — 19 Jul
+  "CPTPP official documents (DFAT)":
+    status: in_force
+    fact_url: "https://www.dfat.gov.au/trade/agreements/in-force/cptpp"
+    fact_text: "DFAT lists the CPTPP under agreements in force; it entered into force for Australia on 30 December 2018."
+    effective_date: "2018-12-30"
+  "RCEP text (DFAT)":
+    status: in_force
+    fact_url: "https://www.dfat.gov.au/trade/agreements/in-force/rcep"
+    fact_text: "DFAT lists RCEP under agreements in force; it entered into force for Australia on 1 January 2022."
+    effective_date: "2022-01-01"
+  "Australia-Singapore Digital Economy Agreement":
+    status: in_force
+    fact_url: "https://www.dfat.gov.au/trade/services-and-digital-trade/australia-and-singapore-digital-economy-agreement"
+    fact_text: "DFAT records the Australia-Singapore Digital Economy Agreement as in force since 8 December 2020."
+    effective_date: "2020-12-08"
+  "Australia-UK FTA Chapter 14":
+    status: in_force
+    fact_url: "https://www.dfat.gov.au/trade/agreements/in-force/aukfta"
+    fact_text: "DFAT lists the Australia-UK FTA under agreements in force; it entered into force on 31 May 2023."
+    effective_date: "2023-05-31"
+  "Health Records and Information Privacy Act 2002 (NSW)":
+    status: in_force
+    fact_url: "https://legislation.nsw.gov.au/view/whole/html/inforce/current/act-2002-071"
+    fact_text: "NSW legislation portal serves this as the whole act, in-force current view."
+  "Surveillance Devices Act 2007 (NSW)":
+    status: in_force
+    fact_url: "https://legislation.nsw.gov.au/view/whole/html/inforce/current/act-2007-064"
+    fact_text: "NSW legislation portal serves this as the whole act, in-force current view."
+  "Health Records Act 2001 (Vic)":
+    status: in_force
+    fact_url: "https://www.legislation.vic.gov.au/in-force/acts/health-records-act-2001"
+    fact_text: "Victorian legislation portal lists the Health Records Act 2001 among Acts in force."

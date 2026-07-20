@@ -1,0 +1,321 @@
+{
+  "source": "mined from ESCAP References (R1 master + inventory + R2 DB)",
+  "economies": {
+    "Australia": {
+      "official_whitelist": {
+        "legislation.gov.au": 177,
+        "treasury.gov.au": 5,
+        "oaic.gov.au": 3,
+        "standards.org.au": 3,
+        "cyber.gov.au": 3,
+        "niaa.gov.au": 2,
+        "ablis.business.gov.au": 2,
+        "homeaffairs.gov.au": 2,
+        "dfat.gov.au": 2
+      },
+      "upgrade_targets_nonofficial": {
+        "auda.org.au": 2
+      }
+    },
+    "China": {
+      "official_whitelist": {
+        "flk.npc.gov.cn": 16,
+        "cac.gov.cn": 10,
+        "mofcom.gov.cn": 5,
+        "npc.gov.cn": 4,
+        "moj.gov.cn": 3,
+        "beijing.gov.cn": 3,
+        "samr.gov.cn": 2,
+        "sac.gov.cn": 2,
+        "trb.mofcom.gov.cn": 1,
+        "ndrc.gov.cn": 1,
+        "pbc.gov.cn": 1,
+        "openstd.samr.gov.cn": 1,
+        "xzfg.moj.gov.cn": 1,
+        "images.mofcom.gov.cn": 1,
+        "chongqing.customs.gov.cn": 1,
+        "chinafilm.gov.cn": 1,
+        "most.gov.cn": 1,
+        "fgw.sh.gov.cn": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "gov.cn": 53,
+        "chinaunicom.com.cn": 1,
+        "newamerica.org": 1,
+        "freedomhouse.org": 1
+      }
+    },
+    "India": {
+      "official_whitelist": {
+        "meity.gov.in": 31,
+        "pib.gov.in": 6,
+        "dpiit.gov.in": 6,
+        "dot.gov.in": 6,
+        "ifsca.gov.in": 6,
+        "mca.gov.in": 5,
+        "ipindia.gov.in": 5,
+        "content.dgft.gov.in": 5,
+        "eprocure.gov.in": 4,
+        "tec.gov.in": 3,
+        "copyright.gov.in": 3,
+        "taxinformation.cbic.gov.in": 2,
+        "msme.gov.in": 2,
+        "irdai.gov.in": 2,
+        "bis.gov.in": 2,
+        "dgtr.gov.in": 1,
+        "doe.gov.in": 1,
+        "cgishanghai.gov.in": 1,
+        "egazette.gov.in": 1,
+        "dpe.gov.in": 1,
+        "mofpi.gov.in": 1,
+        "trai.gov.in": 1,
+        "dst.gov.in": 1,
+        "wipo.int": 1,
+        "sebi.gov.in": 1,
+        "dgft.gov.in": 1,
+        "courier.cbic.gov.in": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "rbi.org.in": 15,
+        "indiacode.nic.in": 6,
+        "pfrda.org.in": 4,
+        "indiankanoon.org": 3,
+        "thc.nic.in": 2,
+        "cis-india.org": 2,
+        "rbidocs.rbi.org.in": 2,
+        "consumeraffairs.nic.in": 2,
+        "docs.wto.org": 1,
+        "csir.org.gh": 1,
+        "prsindia.org": 1,
+        "bsnl.co.in": 1,
+        "mtnl.in": 1,
+        "myvi.in": 1,
+        "upload.indiacode.nic.in": 1,
+        "timesofindia.indiatimes.com": 1,
+        "economictimes.indiatimes.com": 1,
+        "business-standard.com": 1,
+        "saarc-sec.org": 1,
+        "pdicai.org": 1,
+        "web.archive.org": 1
+      }
+    },
+    "Indonesia": {
+      "official_whitelist": {
+        "peraturan.bpk.go.id": 134,
+        "jdih.kominfo.go.id": 8,
+        "ojk.go.id": 5,
+        "jdih.kemendag.go.id": 3,
+        "jdih.kemenkeu.go.id": 3,
+        "bpbj.batam.go.id": 2,
+        "postel.go.id": 2,
+        "jdih.kkp.go.id": 2,
+        "peraturan.go.id": 1,
+        "wipo.int": 1,
+        "jdih.komdigi.go.id": 1,
+        "iru.ojk.go.id": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "pandi.id": 7,
+        "makna.co": 5,
+        "flevin.com": 2,
+        "de.scribd.com": 2,
+        "perpajakan.ddtc.co.id": 2,
+        "aseanconsumer.org": 2,
+        "dimulti.id": 2,
+        "gadjian.com": 1,
+        "indonesia-investments.com": 1,
+        "assets.tobaccocontrollaws.org": 1,
+        "peraturanpedia.id": 1,
+        "regulasip.id": 1,
+        "asean.org": 1,
+        "csagroup.org": 1
+      }
+    },
+    "Lao PDR": {
+      "official_whitelist": {
+        "laotradeportal.gov.la": 46,
+        "laoofficialgazette.gov.la": 15,
+        "lsp.moic.gov.la": 4,
+        "ppmd.mof.gov.la": 3,
+        "erm.gov.la": 3,
+        "laocert.gov.la": 2,
+        "db.investlaos.gov.la": 1,
+        "bol.gov.la": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "wipolex-resources-eu-central-1-358922420655.s3.amazonaws.com": 6,
+        "laolandinfo.org": 3,
+        "dataguidance.com": 2,
+        "vertic.org": 2,
+        "docs.wto.org": 1,
+        "investmentpolicy.unctad.org": 1,
+        "euipoeuf.eu": 1,
+        "telecomtrainer.com": 1,
+        "wto.org": 1
+      }
+    },
+    "Malaysia": {
+      "official_whitelist": {
+        "mcmc.gov.my": 38,
+        "pdp.gov.my": 37,
+        "myipo.gov.my": 21,
+        "bnm.gov.my": 17,
+        "ssm.com.my": 12,
+        "hasil.gov.my": 8,
+        "customs.gov.my": 8,
+        "investmalaysia.gov.my": 6,
+        "miti.gov.my": 5,
+        "ccid.rmp.gov.my": 5,
+        "mof.gov.my": 4,
+        "jsm.gov.my": 4,
+        "mida.gov.my": 2,
+        "mti.gov.sg": 2,
+        "st.gov.my": 1,
+        "mylvg.customs.gov.my": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "mohre.um.edu.my": 25,
+        "commonlii.org": 14,
+        "cyrilla.org": 11,
+        "f.datasrvr.com": 10,
+        "vertic.org": 8,
+        "tcclaw.com.my": 7,
+        "lokekinggoh.com": 5,
+        "umresearch.um.edu.my": 5,
+        "contentforum.my": 3,
+        "aseanconsumer.org": 3,
+        "tm.listedcompany.com": 2,
+        "asean.org": 2,
+        "members.wto.org": 2,
+        "cybersecurity.my": 2,
+        "global-express.org": 2,
+        "docs.wto.org": 2,
+        "mynic.my": 2,
+        "viatris.com": 2,
+        "mfat.govt.nz": 2,
+        "uncitral.un.org": 1,
+        "ccs-co.com": 1,
+        "policy.asiapacificenergy.org": 1,
+        "dataguidance.com": 1,
+        "digital-nasional.com.my": 1,
+        "maxis.listedcompany.com": 1,
+        "djsp1avzs99jk.cloudfront.net": 1
+      }
+    },
+    "Mongolia": {
+      "official_whitelist": {
+        "crc.gov.mn": 7,
+        "burtgel.gov.mn": 1,
+        "itu.int": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "legalinfo.mn": 63,
+        "gic.mn": 5,
+        "rti-rating.org": 1,
+        "mobicom.mn": 1,
+        "unitel.mn": 1,
+        "univision.mn": 1,
+        "skytel.mn": 1,
+        "gmobile.mn": 1,
+        "icn.mn": 1,
+        "mongolpost.mn": 1,
+        "telecommongolia.mn": 1,
+        "web.archive.org": 1,
+        "frc.mn": 1
+      }
+    },
+    "Russian Federation": {
+      "official_whitelist": {
+        "wipolex.wipo.int": 1,
+        "publication.pravo.gov.ru": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "base.garant.ru": 68,
+        "consultant.ru": 14,
+        "docs.cntd.ru": 6,
+        "alta.ru": 2,
+        "wto.org": 2,
+        "static.government.ru": 1,
+        "company.rt.ru": 1,
+        "ru-ikt.ru": 1,
+        "cctld.ru": 1
+      }
+    },
+    "Singapore": {
+      "official_whitelist": {
+        "sso.agc.gov.sg": 171,
+        "imda.gov.sg": 29,
+        "pdpc.gov.sg": 19,
+        "ipos.gov.sg": 7,
+        "enterprisesg.gov.sg": 7,
+        "mti.gov.sg": 6,
+        "customs.gov.sg": 4,
+        "dfat.gov.au": 4,
+        "police.gov.sg": 3,
+        "mha.gov.sg": 3,
+        "mas.gov.sg": 2,
+        "iras.gov.sg": 2,
+        "judiciary.gov.sg": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "asas.org.sg": 3,
+        "wto.org": 2,
+        "temasek.com.sg": 2,
+        "singtel.com": 2,
+        "importlicensing.wto.org": 2,
+        "asean.org": 2,
+        "sgnic.sg": 2,
+        "rcepsec.org": 2,
+        "aanzfta.asean.org": 2,
+        "apec.org": 2,
+        "i-tip.wto.org": 1,
+        "intellectual-property-helpdesk.ec.europa.eu": 1,
+        "sttelemedia.com": 1,
+        "temasekreview.com.sg": 1,
+        "uncitral.un.org": 1
+      }
+    },
+    "Thailand": {
+      "official_whitelist": {
+        "mdes.go.th": 30,
+        "ipthailand.go.th": 15,
+        "ratchakitcha.soc.go.th": 13,
+        "searchlaw.ocs.go.th": 11,
+        "broadcast.nbtc.go.th": 9,
+        "dbd.go.th": 7,
+        "boi.go.th": 7,
+        "gprocurement.go.th": 4,
+        "nbtc.go.th": 4,
+        "ddc.moph.go.th": 4,
+        "wipo.int": 3,
+        "ocpb.go.th": 3,
+        "customs.go.th": 3,
+        "infocenter.oic.go.th": 2,
+        "bb.go.th": 2,
+        "laws.md.go.th": 2,
+        "tisi.go.th": 2,
+        "alro.go.th": 1,
+        "ic.nbtc.go.th": 1,
+        "infocenter.nbtc.go.th": 1,
+        "dl.parliament.go.th": 1,
+        "cdc.parliament.go.th": 1,
+        "lawforasean.krisdika.go.th": 1,
+        "dsi.go.th": 1
+      },
+      "upgrade_targets_nonofficial": {
+        "bot.or.th": 11,
+        "etda.or.th": 10,
+        "data.thailand.opendevelopmentmekong.net": 9,
+        "drive.ncsa.or.th": 8,
+        "data.opendevelopmentmekong.net": 3,
+        "cyrilla.org": 3,
+        "nic.scb": 3,
+        "pdpc.or.th": 2,
+        "ncsa.or.th": 2,
+        "infocenter.nationalhealth.or.th": 1,
+        "docs.wto.org": 1,
+        "thailandlawonline.com": 1
+      }
+    }
+  }
+}

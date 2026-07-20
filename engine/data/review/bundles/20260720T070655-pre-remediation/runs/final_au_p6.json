@@ -1,0 +1,1835 @@
+{
+  "run_id": "run-au-p6-1784508745",
+  "generated_at": "2026-07-20T00:58:29.644549Z",
+  "country": "AU",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "findings": [
+    {
+      "Economy": "Australia",
+      "Law Name": "Privacy Act 1988",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I1",
+      "Article / Section": "n/a",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "n/a",
+      "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW",
+      "Mapping Rationale": "No qualifying provision found for P6-I1 after a full-corpus sweep. The configured governing law is cited as the reference basis (score-0 pattern, A3).",
+      "Source URL": "https://www.legislation.gov.au/C2004A03712/latest",
+      "Confidence": 0.6,
+      "Notes": "Absence row (NO_EVIDENCE_FOUND_PENDING_REVIEW): human approval required before this becomes a score-0 final row (P3.5 A3).",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": null,
+      "access_date": null,
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://www.legislation.gov.au/C2004A03712/latest",
+        "fact_text": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+        "checked_at": "2026-07-19T18:56:02.210143Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official structured status field",
+        "conflicting": false
+      },
+      "citation_tier": null,
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+      "citation_proof": null,
+      "search_coverage_manifest": {
+        "economy": "Australia",
+        "indicator_id": "P6-I1",
+        "portals": [
+          "DFAT treaty portal",
+          "NSW legislation",
+          "Victorian legislation",
+          "Federal Register of Legislation",
+          "OAIC",
+          "DFAT",
+          "Treasury",
+          "Australian Cyber Security Centre",
+          "Standards Australia",
+          "NIAA"
+        ],
+        "instruments": [
+          "Telecommunications Act 1997",
+          "Security of Critical Infrastructure Act 2018",
+          "Privacy Act 1988",
+          "Telecommunications Regulations 2021",
+          "My Health Records Act 2012",
+          "Criminal Code Act 1995",
+          "Telecommunications (Interception and Access) Act 1979",
+          "Australian Security Intelligence Organisation Act 1979",
+          "Data Availability and Transparency Act 2022",
+          "Cyber Security Act 2024",
+          "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+          "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+          "Cyber Security (Cyber Incident Review Board) Rules 2025",
+          "Privacy and Other Legislation Amendment Act 2024",
+          "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+          "Corporations Act 2001",
+          "Taxation Administration Act 1953",
+          "Fair Work Act 2009",
+          "National Anti-Corruption Commission Act 2022",
+          "Crimes Act 1914",
+          "Surveillance Devices Act 2004"
+        ],
+        "queries": [
+          "Does the law BAN cross-border transfer OR require data to be PROCESSED domestically?",
+          "Ban and local processing requirements",
+          "shall not transfer",
+          "must not be transferred",
+          "must be processed within",
+          "shall be processed only in",
+          "may not be sent abroad"
+        ],
+        "searched_at": "2026-07-20T00:58:28.929593Z",
+        "exclusions": [],
+        "caps": [
+          "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+          "P6-I2: screened top 200 of 317 retrieval candidates (cap logged, not silent)",
+          "P6-I3: screened top 200 of 349 retrieval candidates (cap logged, not silent)",
+          "P6-I4: screened top 200 of 400 retrieval candidates (cap logged, not silent)"
+        ],
+        "unresolved_failures": [],
+        "instrument_results": [
+          {
+            "instrument": "Telecommunications Act 1997",
+            "searched": true,
+            "source_artifact_id": "sha256:7fd3fc9570cfc621e6244e92de3c881f54912c83b75d6faa87594855b1f904dd",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Security of Critical Infrastructure Act 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:3a0a2c0a2b49efe9cd30072d7a5c2c177b8ebac2ab17e363bb152e7d831115af",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy Act 1988",
+            "searched": true,
+            "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:34378ea21f5b1b31304eb74982c090a544cb971adb35a36462eea2cbcaaabd87",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "My Health Records Act 2012",
+            "searched": true,
+            "source_artifact_id": "sha256:e2825669bacd4ef86d1870360cce6b71f4f6605888476d8d06757e15bb2ec7a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Criminal Code Act 1995",
+            "searched": true,
+            "source_artifact_id": "sha256:6ca6f8a62447e7f4eaca0246c404d968ca0d369349b403a4df895b85c8203b6d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications (Interception and Access) Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:a1e0ef3a6913e3a9211e19480f9d4bc8ab447c95b5c54023cfa9c147cdc8e473",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Australian Security Intelligence Organisation Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:f39bd9a329e04b2c6302bab7a65d507be03aac7392a559b2aa2c45e433ffc4a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Data Availability and Transparency Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:460b62505ec8e42d6b8ee54d82cf395ad20567bb0a2aceb63d589115fdfb0220",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:7a5b36ae6bdfe85d47ff137e3936ad7de16ac750d4be0e563f93766bfc792b40",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:bc50f2cf3fa0221b3c91bc5487667a876deb3212903399198ce80bd27d2ca92b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:5b5b3664d6adbde9880972f7878e955cff974a890cd24fa9d40bdbe5f2b44205",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy and Other Legislation Amendment Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:fcddc902d749191f617afe640f320d7d4b53d339680839fb61de2a7a5608c6ed",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+            "searched": true,
+            "source_artifact_id": "sha256:85235a4f427ecbacb886aaa44d5c0826844ab1c8e7cf627fb8ca0ccdf0a81c15",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Corporations Act 2001",
+            "searched": true,
+            "source_artifact_id": "sha256:1c0b055852df29de2d01e897e2b37f5ceaeac6ce3a3c8549d1e4dd76d4299627",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Taxation Administration Act 1953",
+            "searched": true,
+            "source_artifact_id": "sha256:5d3fe7cbc16dc3b82275591ebe5add58c83401a4498053d2ded878982f2e1124",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Fair Work Act 2009",
+            "searched": true,
+            "source_artifact_id": "sha256:28613eeacb9c9a5606b8a883e9543477c44dc182849de43dac64e785cbc1c4e2",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "National Anti-Corruption Commission Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:c526891b116bb61c6da81bcc0c6e0f1fd99bff88f0734b235443956612cd8599",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Crimes Act 1914",
+            "searched": true,
+            "source_artifact_id": "sha256:1684f4ebfd730713c0a0918d622068b47a64e376e44c9a367c166e2d4f6eecc6",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Surveillance Devices Act 2004",
+            "searched": true,
+            "source_artifact_id": "sha256:4691d8b1f80fea849ce0ba6b33606ab704d91d6347deec1505639a68e4612ffa",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          }
+        ],
+        "query_result_counts": {
+          "Does the law BAN cross-border transfer OR require data to be PROCESSED domestically?": 0,
+          "Ban and local processing requirements": 0,
+          "shall not transfer": 0,
+          "must not be transferred": 0,
+          "must be processed within": 0,
+          "shall be processed only in": 0,
+          "may not be sent abroad": 0
+        }
+      },
+      "review": null,
+      "raw_context": null
+    },
+    {
+      "Economy": "Australia",
+      "Law Name": "Privacy Act 1988",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I2",
+      "Article / Section": "n/a",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "n/a",
+      "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW",
+      "Mapping Rationale": "No qualifying provision found for P6-I2 after a full-corpus sweep. The configured governing law is cited as the reference basis (score-0 pattern, A3).",
+      "Source URL": "https://www.legislation.gov.au/C2004A03712/latest",
+      "Confidence": 0.6,
+      "Notes": "Absence row (NO_EVIDENCE_FOUND_PENDING_REVIEW): human approval required before this becomes a score-0 final row (P3.5 A3).",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": null,
+      "access_date": null,
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://www.legislation.gov.au/C2004A03712/latest",
+        "fact_text": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+        "checked_at": "2026-07-19T18:56:02.210143Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official structured status field",
+        "conflicting": false
+      },
+      "citation_tier": null,
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+      "citation_proof": null,
+      "search_coverage_manifest": {
+        "economy": "Australia",
+        "indicator_id": "P6-I2",
+        "portals": [
+          "DFAT treaty portal",
+          "NSW legislation",
+          "Victorian legislation",
+          "Federal Register of Legislation",
+          "OAIC",
+          "DFAT",
+          "Treasury",
+          "Australian Cyber Security Centre",
+          "Standards Australia",
+          "NIAA"
+        ],
+        "instruments": [
+          "Telecommunications Act 1997",
+          "Security of Critical Infrastructure Act 2018",
+          "Privacy Act 1988",
+          "Telecommunications Regulations 2021",
+          "My Health Records Act 2012",
+          "Criminal Code Act 1995",
+          "Telecommunications (Interception and Access) Act 1979",
+          "Australian Security Intelligence Organisation Act 1979",
+          "Data Availability and Transparency Act 2022",
+          "Cyber Security Act 2024",
+          "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+          "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+          "Cyber Security (Cyber Incident Review Board) Rules 2025",
+          "Privacy and Other Legislation Amendment Act 2024",
+          "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+          "Corporations Act 2001",
+          "Taxation Administration Act 1953",
+          "Fair Work Act 2009",
+          "National Anti-Corruption Commission Act 2022",
+          "Crimes Act 1914",
+          "Surveillance Devices Act 2004"
+        ],
+        "queries": [
+          "Must a COPY of the data be stored domestically (transfer may still be allowed)?",
+          "Local storage requirements",
+          "shall be stored in",
+          "stored and located in the territory",
+          "maintain a copy within"
+        ],
+        "searched_at": "2026-07-20T00:56:09.772622Z",
+        "exclusions": [],
+        "caps": [
+          "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+          "P6-I2: screened top 200 of 317 retrieval candidates (cap logged, not silent)"
+        ],
+        "unresolved_failures": [],
+        "instrument_results": [
+          {
+            "instrument": "Telecommunications Act 1997",
+            "searched": true,
+            "source_artifact_id": "sha256:7fd3fc9570cfc621e6244e92de3c881f54912c83b75d6faa87594855b1f904dd",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Security of Critical Infrastructure Act 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:3a0a2c0a2b49efe9cd30072d7a5c2c177b8ebac2ab17e363bb152e7d831115af",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy Act 1988",
+            "searched": true,
+            "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:34378ea21f5b1b31304eb74982c090a544cb971adb35a36462eea2cbcaaabd87",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "My Health Records Act 2012",
+            "searched": true,
+            "source_artifact_id": "sha256:e2825669bacd4ef86d1870360cce6b71f4f6605888476d8d06757e15bb2ec7a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Criminal Code Act 1995",
+            "searched": true,
+            "source_artifact_id": "sha256:6ca6f8a62447e7f4eaca0246c404d968ca0d369349b403a4df895b85c8203b6d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications (Interception and Access) Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:a1e0ef3a6913e3a9211e19480f9d4bc8ab447c95b5c54023cfa9c147cdc8e473",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Australian Security Intelligence Organisation Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:f39bd9a329e04b2c6302bab7a65d507be03aac7392a559b2aa2c45e433ffc4a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Data Availability and Transparency Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:460b62505ec8e42d6b8ee54d82cf395ad20567bb0a2aceb63d589115fdfb0220",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:7a5b36ae6bdfe85d47ff137e3936ad7de16ac750d4be0e563f93766bfc792b40",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:bc50f2cf3fa0221b3c91bc5487667a876deb3212903399198ce80bd27d2ca92b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:5b5b3664d6adbde9880972f7878e955cff974a890cd24fa9d40bdbe5f2b44205",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy and Other Legislation Amendment Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:fcddc902d749191f617afe640f320d7d4b53d339680839fb61de2a7a5608c6ed",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+            "searched": true,
+            "source_artifact_id": "sha256:85235a4f427ecbacb886aaa44d5c0826844ab1c8e7cf627fb8ca0ccdf0a81c15",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Corporations Act 2001",
+            "searched": true,
+            "source_artifact_id": "sha256:1c0b055852df29de2d01e897e2b37f5ceaeac6ce3a3c8549d1e4dd76d4299627",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Taxation Administration Act 1953",
+            "searched": true,
+            "source_artifact_id": "sha256:5d3fe7cbc16dc3b82275591ebe5add58c83401a4498053d2ded878982f2e1124",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Fair Work Act 2009",
+            "searched": true,
+            "source_artifact_id": "sha256:28613eeacb9c9a5606b8a883e9543477c44dc182849de43dac64e785cbc1c4e2",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "National Anti-Corruption Commission Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:c526891b116bb61c6da81bcc0c6e0f1fd99bff88f0734b235443956612cd8599",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Crimes Act 1914",
+            "searched": true,
+            "source_artifact_id": "sha256:1684f4ebfd730713c0a0918d622068b47a64e376e44c9a367c166e2d4f6eecc6",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Surveillance Devices Act 2004",
+            "searched": true,
+            "source_artifact_id": "sha256:4691d8b1f80fea849ce0ba6b33606ab704d91d6347deec1505639a68e4612ffa",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          }
+        ],
+        "query_result_counts": {
+          "Must a COPY of the data be stored domestically (transfer may still be allowed)?": 75,
+          "Local storage requirements": 72,
+          "shall be stored in": 76,
+          "stored and located in the territory": 77,
+          "maintain a copy within": 79
+        }
+      },
+      "review": null,
+      "raw_context": null
+    },
+    {
+      "Economy": "Australia",
+      "Law Name": "Privacy Act 1988",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I3",
+      "Article / Section": "n/a",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "n/a",
+      "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW",
+      "Mapping Rationale": "No qualifying provision found for P6-I3 after a full-corpus sweep. The configured governing law is cited as the reference basis (score-0 pattern, A3).",
+      "Source URL": "https://www.legislation.gov.au/C2004A03712/latest",
+      "Confidence": 0.6,
+      "Notes": "Absence row (NO_EVIDENCE_FOUND_PENDING_REVIEW): human approval required before this becomes a score-0 final row (P3.5 A3).",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": null,
+      "access_date": null,
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://www.legislation.gov.au/C2004A03712/latest",
+        "fact_text": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+        "checked_at": "2026-07-19T18:56:02.210143Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official structured status field",
+        "conflicting": false
+      },
+      "citation_tier": null,
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+      "citation_proof": null,
+      "search_coverage_manifest": {
+        "economy": "Australia",
+        "indicator_id": "P6-I3",
+        "portals": [
+          "DFAT treaty portal",
+          "NSW legislation",
+          "Victorian legislation",
+          "Federal Register of Legislation",
+          "OAIC",
+          "DFAT",
+          "Treasury",
+          "Australian Cyber Security Centre",
+          "Standards Australia",
+          "NIAA"
+        ],
+        "instruments": [
+          "Telecommunications Act 1997",
+          "Security of Critical Infrastructure Act 2018",
+          "Privacy Act 1988",
+          "Telecommunications Regulations 2021",
+          "My Health Records Act 2012",
+          "Criminal Code Act 1995",
+          "Telecommunications (Interception and Access) Act 1979",
+          "Australian Security Intelligence Organisation Act 1979",
+          "Data Availability and Transparency Act 2022",
+          "Cyber Security Act 2024",
+          "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+          "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+          "Cyber Security (Cyber Incident Review Board) Rules 2025",
+          "Privacy and Other Legislation Amendment Act 2024",
+          "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+          "Corporations Act 2001",
+          "Taxation Administration Act 1953",
+          "Fair Work Act 2009",
+          "National Anti-Corruption Commission Act 2022",
+          "Crimes Act 1914",
+          "Surveillance Devices Act 2004"
+        ],
+        "queries": [
+          "Are local servers / data centres / facilities required AS A CONDITION of providing the service?",
+          "Infrastructure requirements",
+          "maintain at least one local server",
+          "server located within the territory",
+          "establish a data centre in"
+        ],
+        "searched_at": "2026-07-20T00:57:17.906776Z",
+        "exclusions": [],
+        "caps": [
+          "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+          "P6-I2: screened top 200 of 317 retrieval candidates (cap logged, not silent)",
+          "P6-I3: screened top 200 of 349 retrieval candidates (cap logged, not silent)"
+        ],
+        "unresolved_failures": [],
+        "instrument_results": [
+          {
+            "instrument": "Telecommunications Act 1997",
+            "searched": true,
+            "source_artifact_id": "sha256:7fd3fc9570cfc621e6244e92de3c881f54912c83b75d6faa87594855b1f904dd",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Security of Critical Infrastructure Act 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:3a0a2c0a2b49efe9cd30072d7a5c2c177b8ebac2ab17e363bb152e7d831115af",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy Act 1988",
+            "searched": true,
+            "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:34378ea21f5b1b31304eb74982c090a544cb971adb35a36462eea2cbcaaabd87",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "My Health Records Act 2012",
+            "searched": true,
+            "source_artifact_id": "sha256:e2825669bacd4ef86d1870360cce6b71f4f6605888476d8d06757e15bb2ec7a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Criminal Code Act 1995",
+            "searched": true,
+            "source_artifact_id": "sha256:6ca6f8a62447e7f4eaca0246c404d968ca0d369349b403a4df895b85c8203b6d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications (Interception and Access) Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:a1e0ef3a6913e3a9211e19480f9d4bc8ab447c95b5c54023cfa9c147cdc8e473",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Australian Security Intelligence Organisation Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:f39bd9a329e04b2c6302bab7a65d507be03aac7392a559b2aa2c45e433ffc4a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Data Availability and Transparency Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:460b62505ec8e42d6b8ee54d82cf395ad20567bb0a2aceb63d589115fdfb0220",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:7a5b36ae6bdfe85d47ff137e3936ad7de16ac750d4be0e563f93766bfc792b40",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:bc50f2cf3fa0221b3c91bc5487667a876deb3212903399198ce80bd27d2ca92b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:5b5b3664d6adbde9880972f7878e955cff974a890cd24fa9d40bdbe5f2b44205",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy and Other Legislation Amendment Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:fcddc902d749191f617afe640f320d7d4b53d339680839fb61de2a7a5608c6ed",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+            "searched": true,
+            "source_artifact_id": "sha256:85235a4f427ecbacb886aaa44d5c0826844ab1c8e7cf627fb8ca0ccdf0a81c15",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Corporations Act 2001",
+            "searched": true,
+            "source_artifact_id": "sha256:1c0b055852df29de2d01e897e2b37f5ceaeac6ce3a3c8549d1e4dd76d4299627",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Taxation Administration Act 1953",
+            "searched": true,
+            "source_artifact_id": "sha256:5d3fe7cbc16dc3b82275591ebe5add58c83401a4498053d2ded878982f2e1124",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Fair Work Act 2009",
+            "searched": true,
+            "source_artifact_id": "sha256:28613eeacb9c9a5606b8a883e9543477c44dc182849de43dac64e785cbc1c4e2",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "National Anti-Corruption Commission Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:c526891b116bb61c6da81bcc0c6e0f1fd99bff88f0734b235443956612cd8599",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Crimes Act 1914",
+            "searched": true,
+            "source_artifact_id": "sha256:1684f4ebfd730713c0a0918d622068b47a64e376e44c9a367c166e2d4f6eecc6",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Surveillance Devices Act 2004",
+            "searched": true,
+            "source_artifact_id": "sha256:4691d8b1f80fea849ce0ba6b33606ab704d91d6347deec1505639a68e4612ffa",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          }
+        ],
+        "query_result_counts": {
+          "Are local servers / data centres / facilities required AS A CONDITION of providing the service?": 76,
+          "Infrastructure requirements": 74,
+          "maintain at least one local server": 77,
+          "server located within the territory": 77,
+          "establish a data centre in": 78
+        }
+      },
+      "review": null,
+      "raw_context": null
+    },
+    {
+      "Economy": "Australia",
+      "Law Name": "Privacy Act 1988",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I4",
+      "Article / Section": "n/a",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "n/a",
+      "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW",
+      "Mapping Rationale": "No qualifying provision found for P6-I4 after a full-corpus sweep. The configured governing law is cited as the reference basis (score-0 pattern, A3).",
+      "Source URL": "https://www.legislation.gov.au/C2004A03712/latest",
+      "Confidence": 0.6,
+      "Notes": "Absence row (NO_EVIDENCE_FOUND_PENDING_REVIEW): human approval required before this becomes a score-0 final row (P3.5 A3).",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": null,
+      "access_date": null,
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://www.legislation.gov.au/C2004A03712/latest",
+        "fact_text": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+        "checked_at": "2026-07-19T18:56:02.210143Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official structured status field",
+        "conflicting": false
+      },
+      "citation_tier": null,
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+      "citation_proof": null,
+      "search_coverage_manifest": {
+        "economy": "Australia",
+        "indicator_id": "P6-I4",
+        "portals": [
+          "DFAT treaty portal",
+          "NSW legislation",
+          "Victorian legislation",
+          "Federal Register of Legislation",
+          "OAIC",
+          "DFAT",
+          "Treasury",
+          "Australian Cyber Security Centre",
+          "Standards Australia",
+          "NIAA"
+        ],
+        "instruments": [
+          "Telecommunications Act 1997",
+          "Security of Critical Infrastructure Act 2018",
+          "Privacy Act 1988",
+          "Telecommunications Regulations 2021",
+          "My Health Records Act 2012",
+          "Criminal Code Act 1995",
+          "Telecommunications (Interception and Access) Act 1979",
+          "Australian Security Intelligence Organisation Act 1979",
+          "Data Availability and Transparency Act 2022",
+          "Cyber Security Act 2024",
+          "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+          "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+          "Cyber Security (Cyber Incident Review Board) Rules 2025",
+          "Privacy and Other Legislation Amendment Act 2024",
+          "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+          "Corporations Act 2001",
+          "Taxation Administration Act 1953",
+          "Fair Work Act 2009",
+          "National Anti-Corruption Commission Act 2022",
+          "Crimes Act 1914",
+          "Surveillance Devices Act 2004"
+        ],
+        "queries": [
+          "Is transfer permitted IF conditions are met (consent / adequacy / contractual safeguards / approval)?",
+          "Conditional flow regimes",
+          "shall not transfer ... unless",
+          "may transfer ... provided that",
+          "ensures an adequate level of protection",
+          "with the consent of"
+        ],
+        "searched_at": "2026-07-20T00:58:28.532915Z",
+        "exclusions": [],
+        "caps": [
+          "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+          "P6-I2: screened top 200 of 317 retrieval candidates (cap logged, not silent)",
+          "P6-I3: screened top 200 of 349 retrieval candidates (cap logged, not silent)",
+          "P6-I4: screened top 200 of 400 retrieval candidates (cap logged, not silent)"
+        ],
+        "unresolved_failures": [],
+        "instrument_results": [
+          {
+            "instrument": "Telecommunications Act 1997",
+            "searched": true,
+            "source_artifact_id": "sha256:7fd3fc9570cfc621e6244e92de3c881f54912c83b75d6faa87594855b1f904dd",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Security of Critical Infrastructure Act 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:3a0a2c0a2b49efe9cd30072d7a5c2c177b8ebac2ab17e363bb152e7d831115af",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy Act 1988",
+            "searched": true,
+            "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:34378ea21f5b1b31304eb74982c090a544cb971adb35a36462eea2cbcaaabd87",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "My Health Records Act 2012",
+            "searched": true,
+            "source_artifact_id": "sha256:e2825669bacd4ef86d1870360cce6b71f4f6605888476d8d06757e15bb2ec7a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Criminal Code Act 1995",
+            "searched": true,
+            "source_artifact_id": "sha256:6ca6f8a62447e7f4eaca0246c404d968ca0d369349b403a4df895b85c8203b6d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications (Interception and Access) Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:a1e0ef3a6913e3a9211e19480f9d4bc8ab447c95b5c54023cfa9c147cdc8e473",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Australian Security Intelligence Organisation Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:f39bd9a329e04b2c6302bab7a65d507be03aac7392a559b2aa2c45e433ffc4a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Data Availability and Transparency Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:460b62505ec8e42d6b8ee54d82cf395ad20567bb0a2aceb63d589115fdfb0220",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:7a5b36ae6bdfe85d47ff137e3936ad7de16ac750d4be0e563f93766bfc792b40",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:bc50f2cf3fa0221b3c91bc5487667a876deb3212903399198ce80bd27d2ca92b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:5b5b3664d6adbde9880972f7878e955cff974a890cd24fa9d40bdbe5f2b44205",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy and Other Legislation Amendment Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:fcddc902d749191f617afe640f320d7d4b53d339680839fb61de2a7a5608c6ed",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+            "searched": true,
+            "source_artifact_id": "sha256:85235a4f427ecbacb886aaa44d5c0826844ab1c8e7cf627fb8ca0ccdf0a81c15",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Corporations Act 2001",
+            "searched": true,
+            "source_artifact_id": "sha256:1c0b055852df29de2d01e897e2b37f5ceaeac6ce3a3c8549d1e4dd76d4299627",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Taxation Administration Act 1953",
+            "searched": true,
+            "source_artifact_id": "sha256:5d3fe7cbc16dc3b82275591ebe5add58c83401a4498053d2ded878982f2e1124",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Fair Work Act 2009",
+            "searched": true,
+            "source_artifact_id": "sha256:28613eeacb9c9a5606b8a883e9543477c44dc182849de43dac64e785cbc1c4e2",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "National Anti-Corruption Commission Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:c526891b116bb61c6da81bcc0c6e0f1fd99bff88f0734b235443956612cd8599",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Crimes Act 1914",
+            "searched": true,
+            "source_artifact_id": "sha256:1684f4ebfd730713c0a0918d622068b47a64e376e44c9a367c166e2d4f6eecc6",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Surveillance Devices Act 2004",
+            "searched": true,
+            "source_artifact_id": "sha256:4691d8b1f80fea849ce0ba6b33606ab704d91d6347deec1505639a68e4612ffa",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          }
+        ],
+        "query_result_counts": {
+          "Is transfer permitted IF conditions are met (consent / adequacy / contractual safeguards / approval)?": 68,
+          "Conditional flow regimes": 42,
+          "shall not transfer ... unless": 75,
+          "may transfer ... provided that": 72,
+          "ensures an adequate level of protection": 71,
+          "with the consent of": 71
+        }
+      },
+      "review": null,
+      "raw_context": null
+    },
+    {
+      "Economy": "Australia",
+      "Law Name": "Privacy Act 1988",
+      "Law Number / Ref": null,
+      "Last Amended": null,
+      "Indicator ID": "P6-I5",
+      "Article / Section": "n/a",
+      "Discovery Tag": "KNOWN",
+      "Location Reference": "n/a",
+      "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW",
+      "Mapping Rationale": "No qualifying provision found for P6-I5 after a full-corpus sweep. The configured governing law is cited as the reference basis (score-0 pattern, A3).",
+      "Source URL": "https://www.legislation.gov.au/C2004A03712/latest",
+      "Confidence": 0.6,
+      "Notes": "Absence row (NO_EVIDENCE_FOUND_PENDING_REVIEW): human approval required before this becomes a score-0 final row (P3.5 A3).",
+      "Coverage": "Horizontal",
+      "Verbatim Snippet (English)": null,
+      "Status": "in_force",
+      "model_version": "gpt-5.4-nano/escalate:gpt-5.4-mini+text-embedding-3-small",
+      "graph_path": [],
+      "verifier_risks": [],
+      "archived_copy": null,
+      "access_date": null,
+      "mean_ocr_confidence": null,
+      "ocr_quality_cer": null,
+      "status_evidence": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+      "status_evidence_record": {
+        "status": "in_force",
+        "fact_url": "https://www.legislation.gov.au/C2004A03712/latest",
+        "fact_text": "Federal Register of Legislation latest in-force compilation C2026C00227 commencing 2026-06-04",
+        "checked_at": "2026-07-19T18:56:02.210143Z",
+        "effective_date": null,
+        "end_date": null,
+        "resolution_rule": "official structured status field",
+        "conflicting": false
+      },
+      "citation_tier": null,
+      "reviewer_decision": "pending",
+      "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+      "citation_proof": null,
+      "search_coverage_manifest": {
+        "economy": "Australia",
+        "indicator_id": "P6-I5",
+        "portals": [
+          "DFAT treaty portal",
+          "NSW legislation",
+          "Victorian legislation",
+          "Federal Register of Legislation",
+          "OAIC",
+          "DFAT",
+          "Treasury",
+          "Australian Cyber Security Centre",
+          "Standards Australia",
+          "NIAA"
+        ],
+        "instruments": [
+          "Telecommunications Act 1997",
+          "Security of Critical Infrastructure Act 2018",
+          "Privacy Act 1988",
+          "Telecommunications Regulations 2021",
+          "My Health Records Act 2012",
+          "Criminal Code Act 1995",
+          "Telecommunications (Interception and Access) Act 1979",
+          "Australian Security Intelligence Organisation Act 1979",
+          "Data Availability and Transparency Act 2022",
+          "Cyber Security Act 2024",
+          "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+          "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+          "Cyber Security (Cyber Incident Review Board) Rules 2025",
+          "Privacy and Other Legislation Amendment Act 2024",
+          "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+          "Corporations Act 2001",
+          "Taxation Administration Act 1953",
+          "Fair Work Act 2009",
+          "National Anti-Corruption Commission Act 2022",
+          "Crimes Act 1914",
+          "Surveillance Devices Act 2004"
+        ],
+        "queries": [
+          "Has the economy joined NO agreement with binding cross-border data-transfer commitments?",
+          "Not in agreement with binding commitments on data transfer",
+          "cross-border transfer of information by electronic means",
+          "shall not prohibit or restrict the cross-border transfer of information",
+          "shall allow the cross-border transfer of information",
+          "transfer of information by electronic means where this activity is for the conduct of the business"
+        ],
+        "searched_at": "2026-07-20T00:58:28.786766Z",
+        "exclusions": [],
+        "caps": [
+          "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+          "P6-I2: screened top 200 of 317 retrieval candidates (cap logged, not silent)",
+          "P6-I3: screened top 200 of 349 retrieval candidates (cap logged, not silent)",
+          "P6-I4: screened top 200 of 400 retrieval candidates (cap logged, not silent)"
+        ],
+        "unresolved_failures": [
+          "ACQUISITION_UNRESOLVED P6-I5: Australia-Singapore Digital Economy Agreement | status=dead; error=Server disconnected without sending a response. | https://www.dfat.gov.au/sites/default/files/australia-singapore-digital-economy-agreement.pdf",
+          "ACQUISITION_UNRESOLVED P6-I5: Australia-UK FTA Chapter 14 | status=dead; error=Server disconnected without sending a response. | https://www.dfat.gov.au/trade/agreements/in-force/aukfta/official-text/australia-uk-fta-chapter-14-digital-trade",
+          "ACQUISITION_UNRESOLVED P6-I5: CPTPP official documents (DFAT) | status=dead; error=Server disconnected without sending a response. | https://www.dfat.gov.au/trade/agreements/in-force/cptpp/official-documents",
+          "ACQUISITION_UNRESOLVED P6-I5: RCEP text (DFAT) | status=dead; error=Server disconnected without sending a response. | https://www.dfat.gov.au/trade/agreements/in-force/rcep/rcep-text",
+          "ACQUISITION_UNRESOLVED P6-I5: Singapore-Australia Free Trade Agreement//Australia-Peru Free Trade Agreement//Comprehensive And Progressive Agreement For Trans-Pacific Partnership/ /Indonesia - Australia Comprehensive Economic Partnership Agreement/ /Australia-Hong Kong Free Trade Agreement And Associated Investment Agreement/ /Australia-United Kingdom Free Trade Agreement/ /Australia-United States Cloud Act Agreement/ /Australia-Singapore Digital Economy Agreement//Apec Cross-Border Privacy Rules (Cbpr) | status=dead; error=Server disconnected without sending a response. | https://www.dfat.gov.au/trade/agreements/in-force/safta/singapore-australia-fta"
+        ],
+        "instrument_results": [
+          {
+            "instrument": "Telecommunications Act 1997",
+            "searched": true,
+            "source_artifact_id": "sha256:7fd3fc9570cfc621e6244e92de3c881f54912c83b75d6faa87594855b1f904dd",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Security of Critical Infrastructure Act 2018",
+            "searched": true,
+            "source_artifact_id": "sha256:3a0a2c0a2b49efe9cd30072d7a5c2c177b8ebac2ab17e363bb152e7d831115af",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy Act 1988",
+            "searched": true,
+            "source_artifact_id": "sha256:443e895f1e1536763af78e4553d469b0857a84553ca0c011ed796a623f954e38",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications Regulations 2021",
+            "searched": true,
+            "source_artifact_id": "sha256:34378ea21f5b1b31304eb74982c090a544cb971adb35a36462eea2cbcaaabd87",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "My Health Records Act 2012",
+            "searched": true,
+            "source_artifact_id": "sha256:e2825669bacd4ef86d1870360cce6b71f4f6605888476d8d06757e15bb2ec7a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Criminal Code Act 1995",
+            "searched": true,
+            "source_artifact_id": "sha256:6ca6f8a62447e7f4eaca0246c404d968ca0d369349b403a4df895b85c8203b6d",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Telecommunications (Interception and Access) Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:a1e0ef3a6913e3a9211e19480f9d4bc8ab447c95b5c54023cfa9c147cdc8e473",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Australian Security Intelligence Organisation Act 1979",
+            "searched": true,
+            "source_artifact_id": "sha256:f39bd9a329e04b2c6302bab7a65d507be03aac7392a559b2aa2c45e433ffc4a1",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Data Availability and Transparency Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:da565980978dda9db943a70df2b24eba54f98777062cebf74557bea5676c0bd0",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:460b62505ec8e42d6b8ee54d82cf395ad20567bb0a2aceb63d589115fdfb0220",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Ransomware Payment Reporting) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:7a5b36ae6bdfe85d47ff137e3936ad7de16ac750d4be0e563f93766bfc792b40",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Security Standards for Smart Devices) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:bc50f2cf3fa0221b3c91bc5487667a876deb3212903399198ce80bd27d2ca92b",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Cyber Security (Cyber Incident Review Board) Rules 2025",
+            "searched": true,
+            "source_artifact_id": "sha256:5b5b3664d6adbde9880972f7878e955cff974a890cd24fa9d40bdbe5f2b44205",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Privacy and Other Legislation Amendment Act 2024",
+            "searched": true,
+            "source_artifact_id": "sha256:fcddc902d749191f617afe640f320d7d4b53d339680839fb61de2a7a5608c6ed",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Anti-Money Laundering and Counter-Terrorism Financing Act 2006",
+            "searched": true,
+            "source_artifact_id": "sha256:85235a4f427ecbacb886aaa44d5c0826844ab1c8e7cf627fb8ca0ccdf0a81c15",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Corporations Act 2001",
+            "searched": true,
+            "source_artifact_id": "sha256:1c0b055852df29de2d01e897e2b37f5ceaeac6ce3a3c8549d1e4dd76d4299627",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Taxation Administration Act 1953",
+            "searched": true,
+            "source_artifact_id": "sha256:5d3fe7cbc16dc3b82275591ebe5add58c83401a4498053d2ded878982f2e1124",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Fair Work Act 2009",
+            "searched": true,
+            "source_artifact_id": "sha256:28613eeacb9c9a5606b8a883e9543477c44dc182849de43dac64e785cbc1c4e2",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "National Anti-Corruption Commission Act 2022",
+            "searched": true,
+            "source_artifact_id": "sha256:c526891b116bb61c6da81bcc0c6e0f1fd99bff88f0734b235443956612cd8599",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Crimes Act 1914",
+            "searched": true,
+            "source_artifact_id": "sha256:1684f4ebfd730713c0a0918d622068b47a64e376e44c9a367c166e2d4f6eecc6",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          },
+          {
+            "instrument": "Surveillance Devices Act 2004",
+            "searched": true,
+            "source_artifact_id": "sha256:4691d8b1f80fea849ce0ba6b33606ab704d91d6347deec1505639a68e4612ffa",
+            "legal_status": "in_force",
+            "evidence_eligible": true
+          }
+        ],
+        "query_result_counts": {
+          "Has the economy joined NO agreement with binding cross-border data-transfer commitments?": 0,
+          "Not in agreement with binding commitments on data transfer": 0,
+          "cross-border transfer of information by electronic means": 0,
+          "shall not prohibit or restrict the cross-border transfer of information": 0,
+          "shall allow the cross-border transfer of information": 0,
+          "transfer of information by electronic means where this activity is for the conduct of the business": 0
+        }
+      },
+      "review": null,
+      "raw_context": null
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'www.legislation.gov.au' is on the official whitelist",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-01",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I2 requires a mandatory domestic-copy/storage duty",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "WARN",
+      "reason": "unrecognized location format 'unaligned'",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (155 chars)",
+      "evidence_reference": "P6-I2 s. 77(1)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'www.legislation.gov.au' is on the official whitelist",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-01",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I2 requires a mandatory domestic-copy/storage duty",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "page-level location 'page 102' recorded from the source parse",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (91 chars)",
+      "evidence_reference": "P6-I2 s. 77(2)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'www.legislation.gov.au' is on the official whitelist",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-01",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I2 requires a mandatory domestic-copy/storage duty",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "page-level location 'page 102' recorded from the source parse",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (70 chars)",
+      "evidence_reference": "P6-I2 s. 77(2A)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "FAIL",
+      "reason": "snippet NOT found in source — hallucinated or edited quote",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'www.legislation.gov.au' is on the official whitelist",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-01",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I2 requires a mandatory domestic-copy/storage duty",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "PASS",
+      "reason": "page-level location 'page 102' recorded from the source parse",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (57 chars)",
+      "evidence_reference": "P6-I2 s. 77(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'www.legislation.gov.au' is on the official whitelist",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-06-04",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I2 requires a mandatory domestic-copy/storage duty",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "WARN",
+      "reason": "unrecognized location format 'unaligned'",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "PASS",
+      "reason": "rationale modality supported by the text",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (253 chars)",
+      "evidence_reference": "P6-I2 s. 20Q(3)",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G1",
+      "status": "PASS",
+      "reason": "verbatim snippet found in extracted source text",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G3",
+      "status": "PASS",
+      "reason": "source domain 'www.legislation.gov.au' is on the official whitelist",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G4",
+      "status": "PASS",
+      "reason": "official portal asserts current version as at 2026-07-01",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "P6-I3 requires local infrastructure as a mandatory service condition",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G2",
+      "status": "WARN",
+      "reason": "unrecognized location format 'unaligned'",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G5",
+      "status": "PASS",
+      "reason": "rule and exception captured together",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G6",
+      "status": "WARN",
+      "reason": "rationale claims a mandatory rule but the text shows no must/shall modality (permissive 'may' misread as mandatory?)",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G8",
+      "status": "PASS",
+      "reason": "no dangling same-act references; no repeal language detected",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G9",
+      "status": "PASS",
+      "reason": "snippet within export budget (247 chars)",
+      "evidence_reference": "P6-I3 s. 48",
+      "metadata": {}
+    },
+    {
+      "gate_id": "G7",
+      "status": "FAIL",
+      "reason": "Privacy Act 1988 n/a: also maps to P6-I4 — a provision with a compliance path is a CONDITIONAL regime, not a ban; 6.1 row dropped (DoDont §6 disambiguation, applied as code)",
+      "evidence_reference": "P6-I1 n/a",
+      "metadata": {}
+    }
+  ],
+  "warnings": [
+    "P6-I1: retrieval union capped at 400 of 463 candidates (cap logged, not silent)",
+    "P6-I1: screened top 200 of 400 retrieval candidates (cap logged, not silent)",
+    "P6-I2: screened top 200 of 317 retrieval candidates (cap logged, not silent)",
+    "REJECTED by gates: P6-I2 s. 77(1) (['G7'])",
+    "REJECTED by gates: P6-I2 s. 77(2) (['G7'])",
+    "REJECTED by gates: P6-I2 s. 77(2A) (['G7'])",
+    "REJECTED by gates: P6-I2 s. 77(3) (['G1', 'G7'])",
+    "REJECTED by gates: P6-I2 s. 20Q(3) (['G7'])",
+    "P6-I3: screened top 200 of 349 retrieval candidates (cap logged, not silent)",
+    "REJECTED by gates: P6-I3 s. 48 (['G7'])",
+    "P6-I4: retrieval union capped at 400 of 445 candidates (cap logged, not silent)",
+    "P6-I4: screened top 200 of 400 retrieval candidates (cap logged, not silent)"
+  ],
+  "metadata": {
+    "corpus_provisions": 39787,
+    "corpus_fingerprint": "c60570e4764f49762117375b7c675d30ddba34968469d0431482cefb2ef7dd92",
+    "known_index_sha256": "1b275d7028f153498b63730a834a6f6b5c751387a3618e5d1e30dd976000286f",
+    "pipeline_stats": {
+      "candidates": 1466,
+      "screened_in": 16,
+      "mapped": 0,
+      "gate_rejected": 6,
+      "nano_mappings": 11,
+      "mini_escalations": 5,
+      "escalation_reasons": {
+        "low-confidence-positive": 2,
+        "low-confidence-known-anchor": 1,
+        "known-anchor-rejected": 3
+      },
+      "by_indicator": {
+        "P6-I1": {
+          "candidate_count": 400,
+          "resolved_known_anchors": 0,
+          "candidate_recall": null,
+          "screen_survival_recall": null,
+          "mapper_survival_recall": null,
+          "gate_survival_recall": null,
+          "injected_anchor_count": 0,
+          "caps": [
+            {
+              "stage": "retrieval_union",
+              "limit": 400,
+              "input_count": 463
+            },
+            {
+              "stage": "screen",
+              "limit": 200,
+              "input_count": 400
+            }
+          ]
+        },
+        "P6-I2": {
+          "candidate_count": 312,
+          "resolved_known_anchors": 1,
+          "candidate_recall": 0.0,
+          "screen_survival_recall": 1.0,
+          "mapper_survival_recall": 1.0,
+          "gate_survival_recall": 0.0,
+          "injected_anchor_count": 1,
+          "caps": [
+            {
+              "stage": "screen",
+              "limit": 200,
+              "input_count": 317
+            }
+          ]
+        },
+        "P6-I3": {
+          "candidate_count": 349,
+          "resolved_known_anchors": 0,
+          "candidate_recall": null,
+          "screen_survival_recall": null,
+          "mapper_survival_recall": null,
+          "gate_survival_recall": null,
+          "injected_anchor_count": 0,
+          "caps": [
+            {
+              "stage": "screen",
+              "limit": 200,
+              "input_count": 349
+            }
+          ]
+        },
+        "P6-I4": {
+          "candidate_count": 400,
+          "resolved_known_anchors": 0,
+          "candidate_recall": null,
+          "screen_survival_recall": null,
+          "mapper_survival_recall": null,
+          "gate_survival_recall": null,
+          "injected_anchor_count": 0,
+          "caps": [
+            {
+              "stage": "retrieval_union",
+              "limit": 400,
+              "input_count": 445
+            },
+            {
+              "stage": "screen",
+              "limit": 200,
+              "input_count": 400
+            }
+          ]
+        },
+        "P6-I5": {
+          "candidate_count": 0,
+          "resolved_known_anchors": 0,
+          "candidate_recall": null,
+          "screen_survival_recall": null,
+          "mapper_survival_recall": null,
+          "gate_survival_recall": null,
+          "injected_anchor_count": 0,
+          "caps": []
+        }
+      },
+      "anchors_retrieved_organically": 0,
+      "anchors_injection_saved": 1,
+      "known_anchors": 5,
+      "curation": {
+        "excluded_count": 0,
+        "excluded": []
+      }
+    },
+    "elapsed_seconds": 364.4,
+    "live_llm_calls": true,
+    "graph_backend": "SqliteGraphStore",
+    "cost_report": {
+      "run_id": "run-au-p6-1784508745",
+      "at": "2026-07-20T00:58:29.081393+00:00",
+      "models": {
+        "text-embedding-3-small": {
+          "input_tokens": 157,
+          "cached_input_tokens": 0,
+          "output_tokens": 0,
+          "calls": 23,
+          "usd": 0.0,
+          "priced": true
+        },
+        "gpt-5.4-nano": {
+          "input_tokens": 150281,
+          "cached_input_tokens": 0,
+          "output_tokens": 32463,
+          "calls": 84,
+          "usd": 0.0706,
+          "priced": true
+        },
+        "gpt-5.4-mini": {
+          "input_tokens": 6141,
+          "cached_input_tokens": 0,
+          "output_tokens": 796,
+          "calls": 5,
+          "usd": 0.0082,
+          "priced": true
+        }
+      },
+      "total_usd": 0.0788,
+      "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+      "economy": "Australia",
+      "pillar": 6,
+      "elapsed_seconds": 363.8
+    }
+  }
+}

@@ -1,0 +1,106 @@
+jurisdiction: SG
+source_format: sso_html   # anchored portal HTML -> extractors/html_act.py  # declaration-only (P3.6): which format extractor this pack uses
+name: Singapore
+un_name: Singapore
+languages: { primary: en, supported: [en] }
+
+# Whitelist policy: hand-ranked entries below + the FULL mined union in
+# data/official_domains.json (derived from ESCAP's own References — provably
+# at least as broad as their practice). Crawler accepts a domain if it is in
+# EITHER. Non-official domains are never evidence (G3) — only upgrade targets.
+whitelist_source: data/official_domains.json
+official_sources:
+  - { name: Singapore Government treaty texts (MTI/isomer), domain: isomer-user-content.by.gov.sg, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: Enterprise Singapore, domain: www.enterprisesg.gov.sg, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: Singapore Statutes Online, domain: sso.agc.gov.sg, source_type: official_statute_database, authority_rank: 100 }
+  - { name: PDPC, domain: pdpc.gov.sg, source_type: regulator_guidance, authority_rank: 60 }
+  - { name: IMDA, domain: imda.gov.sg, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: MAS, domain: mas.gov.sg, source_type: sectoral_regulator, authority_rank: 60 }
+  # added 7-Jul from ESCAP-citation mining:
+  - { name: Ministry of Trade & Industry, domain: mti.gov.sg, source_type: ministry, authority_rank: 50 }
+  - { name: Ministry of Home Affairs, domain: mha.gov.sg, source_type: ministry, authority_rank: 50 }
+  - { name: Singapore Police Force, domain: police.gov.sg, source_type: enforcement_agency, authority_rank: 40 }
+  - { name: Singapore Customs, domain: customs.gov.sg, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: IPOS, domain: ipos.gov.sg, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: Enterprise Singapore, domain: enterprisesg.gov.sg, source_type: agency, authority_rank: 40 }
+
+portal_search:            # L3 weapon: query the portal's own full-text search with rubric-cue query sets
+  engine: https://sso.agc.gov.sg/Search/Content
+  method: keyword_fulltext
+  notes: "Generate queries from pillar YAML positive_cues via bulk LLM; every hit must stay on-whitelist."
+
+citation_patterns:
+  section: ["s. {n}", "s {n}", "section {n}"]
+  paragraph_required: true        # always cite to s. 26(1) depth, never bare s. 26
+connector: sg_sso
+notes:
+  - "Anti-bot protection observed on sso.agc.gov.sg (1-Jun workshop) — httpx first, Playwright fallback; handling it is a scored differentiator."
+  - "ESCAP's SG rows cite 15 NON-official domains (see upgrade_targets in official_domains.json) — each is a chance to upgrade a row to an official source."
+known_index: data/known_index.json     # built by scripts/build_known_index.py (master = primary)
+seeds: data/seeds.json                 # ESCAP-provided only (provenance kept clean; our additions live below)
+rdtii_bindings: { pillars: [6, 7] }
+
+# Corpus acts: fetched whole via the SSO print view (slug = /Act/{ref}).
+# Chosen to cover EVERY act ESCAP's SG gold cites for P6+P7, plus CMA (7.5 NEW vein).
+corpus_acts:
+  - { ref: PDPA2012, number: "No. 26 of 2012", why: "P6 core (s.26 -> 6.4); 7.1/7.3/7.4" }
+  - { ref: CoA1967,  number: "Act 42 of 1967", why: "6.2 gold (s.199 copy in SG) + 7.3 retention" }
+  - { ref: BA1970,   number: "Act 41 of 1970", why: "7.1 sectoral (s.47 banking secrecy)" }
+  - { ref: CA2018,   number: "No. 9 of 2018",  why: "7.2 dedicated cybersecurity framework" }
+  - { ref: TA1999,   number: "Act 43 of 1999", why: "7.3 telecom retention; 7.5 licensee duties" }
+  - { ref: ITA1947,  number: "Act 39 of 1947", why: "7.3 gold (s.67 records)" }
+  - { ref: EmA1968,  number: "Act 17 of 1968", why: "7.3 gold (s.95 employee records)" }
+  - { ref: CPC2010,  number: "Act 15 of 2010", why: "7.5 gold (s.39, s.20 computer access powers — court-order test)" }
+  - { ref: CMA1993,  number: "Act 19 of 1993", why: "7.5 NEW-evidence hunting ground" }
+
+anchor_instruments:
+  - "Personal Data Protection Act 2012 (No. 26 of 2012) — https://sso.agc.gov.sg/Act/PDPA2012"
+  - "Cybersecurity Act 2018 — https://sso.agc.gov.sg/Act/CA2018"
+  - "Criminal Procedure Code 2010 (gov-access hunting ground for P7-I5)"
+
+# Curated NEW-evidence hunting grounds (our additions beyond ESCAP's seed list;
+# every competitor has seeds.json — these are where off-list points live).
+hunt_instruments:
+  P7-I5:   # government access — the richest NEW vein (warrantless-access test)
+    - "Criminal Procedure Code 2010 (s. 39 computer access powers)"
+    - "Computer Misuse Act 1993"
+    - "Telecommunications Act 1999 (licensee obligations)"
+    - "Internal Security Act 1960"
+    - "Police Force Act 2004"
+    - "Income Tax Act 1947 (Comptroller access powers)"
+  P7-I3:   # minimum retention — lives in sectoral law
+    - "Companies Act 1967 (s. 199 accounting records, 5 years)"
+    - "Income Tax Act 1947 (record-keeping)"
+    - "MAS notices on record retention (e.g. MAS 626 AML/CFT)"
+    - "Corruption, Drug Trafficking and Other Serious Crimes (Confiscation of Benefits) Act 1992"
+  P6-I2_I3: # storage/infrastructure — sectoral localization
+    - "Banking Act 1970 (s. 47 customer information; outsourcing notices)"
+    - "MAS Technology Risk Management notices"
+    - "Healthcare Services Act 2020 (health-data rules)"
+
+# A3 (P3.5): governing instrument for absence rows — never corpus[0].
+governing_instruments:
+  default: { law: "Personal Data Protection Act 2012", url: "https://sso.agc.gov.sg/Act/PDPA2012" }
+  P7-I2:   { law: "Cybersecurity Act 2018", url: "https://sso.agc.gov.sg/Act/CA2018" }
+
+status_assertions:   # treaty seeds on official SG-government file hosts — 19 Jul
+  "Digital Economy Partnership Agreement":
+    status: in_force
+    fact_url: "https://www.mti.gov.sg/Trade/Digital-Economy-Agreements/The-Digital-Economy-Partnership-Agreement"
+    fact_text: "MTI records DEPA as in force for Singapore since 7 January 2021."
+    effective_date: "2021-01-07"
+  "Singapore-Australia Digital Economy Agreement":
+    status: in_force
+    fact_url: "https://www.mti.gov.sg/Trade/Digital-Economy-Agreements/The-Singapore-Australia-Digital-Economy-Agreement"
+    fact_text: "MTI records the Singapore-Australia Digital Economy Agreement as in force since 8 December 2020."
+    effective_date: "2020-12-08"
+  "Korea-Singapore Digital Partnership Agreement":
+    status: in_force
+    fact_url: "https://www.mti.gov.sg/Trade/Digital-Economy-Agreements/The-Korea-Singapore-Digital-Partnership-Agreement"
+    fact_text: "MTI records the Korea-Singapore Digital Partnership Agreement as in force since 14 January 2023."
+    effective_date: "2023-01-14"
+  "RCEP Chapter 12 (Enterprise Singapore text)":
+    status: in_force
+    fact_url: "https://www.enterprisesg.gov.sg/regional-comprehensive-economic-partnership"
+    fact_text: "Enterprise Singapore publishes the RCEP legal text; RCEP entered into force for Singapore on 1 January 2022."
+    effective_date: "2022-01-01"
