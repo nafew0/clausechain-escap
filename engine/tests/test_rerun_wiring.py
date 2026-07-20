@@ -143,8 +143,8 @@ def test_final_snippet_constructed_first_then_gated():
               "(2) Subsection (1) does not apply to anonymised statistics.")
     claimed = "must not disclose any protected information to a foreign"
     final = finalize_snippet(claimed, source)
-    # extended to the clause boundary, never mid-phrase
-    assert final.endswith("order of the court;")
+    # extended to the genuine sentence boundary, never a semicolon/list fragment
+    assert final.endswith("any such disclosure must be recorded.")
     # the SAME final text passes verbatim + whole-rule gates
     assert g1_span_exists(final, source).status == "PASS"
     assert g5_whole_rule("P7-I1", final, source).status != "FAIL"
@@ -152,12 +152,12 @@ def test_final_snippet_constructed_first_then_gated():
     assert finalize_snippet(final, source) == final
 
 
-def test_finalize_snippet_length_cap_respects_boundaries():
+def test_finalize_snippet_soft_limit_never_cuts_selected_legal_text():
     clause = "The data user shall protect the personal data from loss. "
     source = clause * 30  # 58 chars * 30 >> 700
-    # source-exact but over-long claim: capped to <=700 ON a clause boundary
+    # source-exact but over-long claim: finish the selected sentence; 700 is soft
     final = finalize_snippet(source[:720], source)
-    assert len(final) <= 700
+    assert len(final) > 700
     assert final.endswith(".")
     assert g1_span_exists(final, source).status == "PASS"
     # a claim that is NOT source-exact comes back unchanged so G1 rejects the
@@ -482,12 +482,12 @@ def test_expected_evidence_fails_closed():
 
 
 def test_long_span_flagged_not_truncated():
-    from packages.verifier.gates import g9_span_length
+    from packages.verifier.gates import finalize_snippet_result, g9_structural_closure
 
     # one giant clause with NO internal boundary: kept whole + WARN flag
     source = "the data user shall " + "and ".join(f"obligation {i} " for i in range(80))
-    final = finalize_snippet(source, source)
-    assert len(final) > 700  # never character-truncated
-    flag = g9_span_length(final)
-    assert flag.status == "WARN" and "REVIEW_REQUIRED_LONG_SPAN" in flag.reason
-    assert g9_span_length("short snippet.").status == "PASS"
+    final = finalize_snippet_result(source, source)
+    assert len(final.text) > 700  # never character-truncated
+    flag = g9_structural_closure(final)
+    assert flag.status == "FAIL"
+    assert "FAIL_" in flag.reason

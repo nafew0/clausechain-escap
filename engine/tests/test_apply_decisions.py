@@ -13,6 +13,7 @@ def _seed_root(tmp_path: Path) -> Path:
     (tmp_path / "submission/review").mkdir(parents=True)
     (tmp_path / "data/review").mkdir(parents=True)
     template = [{"finding_key": f"{i:02d}" * 32,
+                 "review_subject_hash": f"{i + 10:02d}" * 32,
                  "review": {"decision": "rejected", "reviewer_name": "", "reviewer_role": "",
                             "reviewed_at": "", "citation_checked": False, "mapping_checked": False,
                             "status_checked": False, "citation_reviewer_name": "",
@@ -31,7 +32,9 @@ def _run(root: Path, domain: str, batch: dict, extra: list[str] = []):
 
 
 def _approval(key: str) -> dict:
-    return {"finding_key": key, "review": {
+    index = int(key[:2])
+    return {"finding_key": key, "review_subject_hash": f"{index + 10:02d}" * 32,
+            "review": {
         "decision": "approved", "reviewer_name": "Nafew", "reviewer_role": "Team Lead",
         "reviewed_at": "2026-07-18T12:00:00Z", "citation_checked": True,
         "mapping_checked": True, "status_checked": True,

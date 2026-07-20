@@ -120,6 +120,7 @@ def review_item_payload(item):
         "row": item.row_json,
         "stable_key": item.stable_key,
         "finding_key": item.finding_key or None,
+        "review_subject_hash": item.review_subject_hash or None,
         "blocked": item.blocked,
         "block_reason": item.block_reason,
         "source_hash": item.source_hash,
@@ -129,7 +130,9 @@ def review_item_payload(item):
         ReviewItem.Queue.KNOWN,
         ReviewItem.Queue.ABSENCE,
     ):
-        result["review_state"] = effective_finding_review(item.finding_key)
+        result["review_state"] = effective_finding_review(
+            item.finding_key, review_subject_hash=item.review_subject_hash
+        )
         eligibility_reason = finding_ineligibility(item, item.snapshot)
         result["approval_eligibility"] = {
             "eligible": not bool(eligibility_reason),
@@ -169,7 +172,9 @@ def item_is_decided(item):
         ReviewItem.Queue.KNOWN,
         ReviewItem.Queue.ABSENCE,
     ):
-        return effective_finding_review(item.finding_key)["decision"] is not None
+        return effective_finding_review(
+            item.finding_key, review_subject_hash=item.review_subject_hash
+        )["decision"] is not None
     model, key_name = (
         (RecallDecision, "recall_key")
         if item.queue == ReviewItem.Queue.RECALL
@@ -543,7 +548,9 @@ def serialize_source_match(evidence, *, navigation):
             "citation_tier": row.get("citation_tier"),
             "source_artifact_id": row.get("source_artifact_id"),
         },
-        "review_state": effective_finding_review(evidence.finding_key),
+        "review_state": effective_finding_review(
+            evidence.finding_key, review_subject_hash=evidence.review_subject_hash
+        ),
         "navigation": navigation,
     }
 
@@ -560,7 +567,9 @@ class EvidenceDetailView(APIView):
                 "blocked": row.blocked,
                 "proof_asset_url": proof_url(row.proof_asset),
                 "source_hash": row.source_hash,
-                "review_state": effective_finding_review(row.finding_key),
+                "review_state": effective_finding_review(
+                    row.finding_key, review_subject_hash=row.review_subject_hash
+                ),
             }
         )
 
@@ -693,7 +702,9 @@ def serialize_submission_row(evidence):
             "gates_pass": bool(gates) and all(gate.get("status") == "PASS" for gate in gates),
             "blocked": source_match_mode(evidence) == "blocked",
         },
-        "review_state": effective_finding_review(evidence.finding_key),
+        "review_state": effective_finding_review(
+            evidence.finding_key, review_subject_hash=evidence.review_subject_hash
+        ),
     }
 
 
@@ -765,7 +776,10 @@ class SubmissionView(APIView):
             rows = [
                 evidence
                 for evidence in rows
-                if str(effective_finding_review(evidence.finding_key).get("decision") or "pending").casefold()
+                if str(effective_finding_review(
+                    evidence.finding_key,
+                    review_subject_hash=evidence.review_subject_hash,
+                ).get("decision") or "pending").casefold()
                 == review_filter
             ]
         paginator = self.pagination_class()
@@ -868,6 +882,12 @@ class EngineRunView(EngineActionCreateView):
 class DecisionHistoryView(APIView):
     def get(self, request, domain, key):
         if domain == "findings":
+            current_evidence = EvidenceRow.objects.filter(
+                snapshot=active_snapshot(), finding_key=key
+            ).first()
+            current_subject = (
+                current_evidence.review_subject_hash if current_evidence else None
+            )
             rows = FindingDecision.objects.filter(finding_key=key).order_by(
                 "created_at"
             )
@@ -889,6 +909,8 @@ class DecisionHistoryView(APIView):
                         str(row.supersedes_id) if row.supersedes_id else None
                     ),
                     "authoritative_file_hash": row.authoritative_file_hash,
+                    "review_subject_hash": row.review_subject_hash,
+                    "current_subject": row.review_subject_hash == current_subject,
                 }
                 for row in rows
             ]
@@ -913,7 +935,9 @@ class DecisionHistoryView(APIView):
                     "key": key,
                     "results": results,
                     "corrections": corrections,
-                    "effective_review": effective_finding_review(key),
+                    "effective_review": effective_finding_review(
+                        key, review_subject_hash=current_subject
+                    ),
                 }
             )
         if domain == "recall":
@@ -970,13 +994,15 @@ def writer_or_503(domain, decisions):
 
 
 def engine_finding_decisions(
-    finding_key, effective, *, reviewer_name, reviewer_role, reviewed_at, note=""
+    finding_key, review_subject_hash, effective, *, reviewer_name, reviewer_role,
+    reviewed_at, note=""
 ):
     if not effective.get("decision"):
         return []
     return [
         {
             "finding_key": finding_key,
+            "review_subject_hash": review_subject_hash,
             "review": {
                 "decision": effective["decision"],
                 "reviewer_name": reviewer_name,
@@ -1203,6 +1229,7 @@ class FindingDecisionView(APIView):
         prospective = {
             **data,
             "id": "prospective",
+            "review_subject_hash": item.review_subject_hash,
             "reviewer_name": reviewer_name,
             "reviewed_at": reviewed_at,
             "created_by_id": request.user.pk,
@@ -1211,20 +1238,24 @@ class FindingDecisionView(APIView):
         with decision_domain_lock("findings"):
             latest_stage = (
                 FindingDecision.objects.filter(
-                    finding_key=data["finding_key"], review_stage=stage
+                    finding_key=data["finding_key"],
+                    review_subject_hash=item.review_subject_hash,
+                    review_stage=stage,
                 )
                 .order_by("-created_at")
                 .first()
             )
             concurrency_check(latest_stage, data.pop("expected_latest_decision_id"))
             effective = effective_finding_review(
-                data["finding_key"], prospective=prospective
+                data["finding_key"], review_subject_hash=item.review_subject_hash,
+                prospective=prospective
             )
             validate_distinct_stage_reviewer(
                 data["finding_key"], stage, data["decision"], request.user, effective
             )
             engine_decisions = engine_finding_decisions(
                 data["finding_key"],
+                item.review_subject_hash,
                 effective,
                 reviewer_name=reviewer_name,
                 reviewer_role=stage,
@@ -1237,6 +1268,7 @@ class FindingDecisionView(APIView):
             )
             row = FindingDecision.objects.create(
                 **data,
+                review_subject_hash=item.review_subject_hash,
                 reviewer_name=reviewer_name,
                 reviewer_role=stage,
                 reviewed_at=reviewed_at,
@@ -1249,7 +1281,9 @@ class FindingDecisionView(APIView):
             {
                 "decision_id": str(row.pk),
                 "authoritative_file_hash": receipt["sha256"],
-                "review_state": effective_finding_review(row.finding_key),
+                "review_state": effective_finding_review(
+                    row.finding_key, review_subject_hash=row.review_subject_hash
+                ),
                 "reviewer_id": reviewer_id,
                 "outcome": (
                     "engine_decision_written" if engine_decisions else "stage_recorded"
@@ -1340,9 +1374,14 @@ class FindingBulkDecisionView(APIView):
         with decision_domain_lock("findings"):
             engine_decisions = []
             latest_by_key = {}
+            items_by_key = {item.finding_key: item for item in items}
             for key in finding_keys:
                 latest_stage = (
-                    FindingDecision.objects.filter(finding_key=key, review_stage=stage)
+                    FindingDecision.objects.filter(
+                        finding_key=key,
+                        review_subject_hash=items_by_key[key].review_subject_hash,
+                        review_stage=stage,
+                    )
                     .order_by("-created_at")
                     .first()
                 )
@@ -1352,13 +1391,18 @@ class FindingBulkDecisionView(APIView):
                     **data,
                     "id": "prospective",
                     "finding_key": key,
+                    "review_subject_hash": items_by_key[key].review_subject_hash,
                     "queue": ReviewItem.Queue.KNOWN,
                     "decision": FindingDecision.Verdict.APPROVED,
                     "reviewer_name": reviewer_name,
                     "reviewed_at": reviewed_at,
                     "created_by_id": request.user.pk,
                 }
-                effective = effective_finding_review(key, prospective=prospective)
+                effective = effective_finding_review(
+                    key,
+                    review_subject_hash=items_by_key[key].review_subject_hash,
+                    prospective=prospective,
+                )
                 validate_distinct_stage_reviewer(
                     key,
                     stage,
@@ -1369,6 +1413,7 @@ class FindingBulkDecisionView(APIView):
                 engine_decisions.extend(
                     engine_finding_decisions(
                         key,
+                        items_by_key[key].review_subject_hash,
                         effective,
                         reviewer_name=reviewer_name,
                         reviewer_role=stage,
@@ -1383,6 +1428,7 @@ class FindingBulkDecisionView(APIView):
             rows = [
                 FindingDecision.objects.create(
                     finding_key=key,
+                    review_subject_hash=items_by_key[key].review_subject_hash,
                     queue=ReviewItem.Queue.KNOWN,
                     review_stage=stage,
                     decision=FindingDecision.Verdict.APPROVED,
@@ -1410,7 +1456,9 @@ class FindingBulkDecisionView(APIView):
                 ),
                 "engine_exported": bool(engine_decisions),
                 "review_states": {
-                    row.finding_key: effective_finding_review(row.finding_key)
+                    row.finding_key: effective_finding_review(
+                        row.finding_key, review_subject_hash=row.review_subject_hash
+                    )
                     for row in rows
                 },
             },

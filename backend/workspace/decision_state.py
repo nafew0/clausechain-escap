@@ -1,7 +1,7 @@
 from .models import CorrectionRequest, FindingDecision
 
 
-def latest_finding_stages(finding_key, *, prospective=None):
+def latest_finding_stages(finding_key, *, review_subject_hash=None, prospective=None):
     stages = {}
     correction = (
         CorrectionRequest.objects.filter(finding_key=finding_key)
@@ -12,6 +12,8 @@ def latest_finding_stages(finding_key, *, prospective=None):
         queryset = FindingDecision.objects.filter(
             finding_key=finding_key, review_stage=stage
         )
+        if review_subject_hash:
+            queryset = queryset.filter(review_subject_hash=review_subject_hash)
         if correction:
             queryset = queryset.filter(created_at__gt=correction.requested_at)
         row = queryset.order_by("-created_at").first()
@@ -28,13 +30,15 @@ def _value(row, name, default=None):
     return getattr(row, name, default)
 
 
-def effective_finding_review(finding_key, *, prospective=None):
+def effective_finding_review(finding_key, *, review_subject_hash=None, prospective=None):
     correction = (
         CorrectionRequest.objects.filter(finding_key=finding_key)
         .order_by("-requested_at")
         .first()
     )
-    stages = latest_finding_stages(finding_key, prospective=prospective)
+    stages = latest_finding_stages(
+        finding_key, review_subject_hash=review_subject_hash, prospective=prospective
+    )
     rejected = next(
         (
             row

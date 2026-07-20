@@ -106,6 +106,7 @@ class ReviewItem(models.Model):
     row_json = models.JSONField()
     stable_key = models.CharField(max_length=64, blank=True, default="")
     finding_key = models.CharField(max_length=64, blank=True, default="")
+    review_subject_hash = models.CharField(max_length=64, blank=True, default="")
     blocked = models.BooleanField(default=False)
     block_reason = models.TextField(blank=True, default="")
     source_hash = models.CharField(max_length=64)
@@ -132,6 +133,7 @@ class EvidenceRow(models.Model):
     position = models.PositiveIntegerField()
     row_json = models.JSONField()
     finding_key = models.CharField(max_length=64)
+    review_subject_hash = models.CharField(max_length=64)
     proof_asset = models.CharField(max_length=500, blank=True, default="")
     blocked = models.BooleanField(default=False)
     source_hash = models.CharField(max_length=64)
@@ -193,6 +195,7 @@ class FindingDecision(SupersedingDecision):
         REJECTED = "rejected", "Rejected"
 
     finding_key = models.CharField(max_length=64)
+    review_subject_hash = models.CharField(max_length=64)
     queue = models.CharField(
         max_length=16,
         choices=(

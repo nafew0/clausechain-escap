@@ -45,6 +45,8 @@ def main() -> int:
 
     store = SqliteGraphStore()
     current_known_hash = hashlib.sha256(Path("data/known_index.json").read_bytes()).hexdigest()
+    expected_ledger_path = Path("configs/expected_anchors.json")
+    current_expected_hash = hashlib.sha256(expected_ledger_path.read_bytes()).hexdigest()
     for run_path in RUNS:
         path = Path(run_path) / "output.json"
         if not path.is_file():
@@ -64,6 +66,15 @@ def main() -> int:
                 "recorded": recorded_known_hash, "current": current_known_hash,
                 "status": "STALE"}
             failures.append(f"{run_path} is stale against the current KNOWN baseline")
+        recorded_expected_hash = (envelope.get("metadata") or {}).get(
+            "expected_anchor_ledger_sha256"
+        )
+        if recorded_expected_hash != current_expected_hash:
+            report["runs"].setdefault(run_path, {})["expected_anchor_ledger_sha256"] = {
+                "recorded": recorded_expected_hash, "current": current_expected_hash,
+                "status": "STALE",
+            }
+            failures.append(f"{run_path} is stale against the expected-anchor ledger")
 
     gold_path = Path("tests/fixtures/extraction_gold_v1.json")
     draft_path = Path("tests/fixtures/extraction_gold_v1.draft.json")
@@ -85,11 +96,38 @@ def main() -> int:
 
     recall_path = Path("data/review/recall_adjudication.json")
     recall = json.loads(recall_path.read_text()) if recall_path.is_file() else {"misses": []}
-    pending_adjudications = [m for m in recall.get("misses", []) if not m.get("reviewer_verdict")]
+    decision_path = Path("data/review/recall_decisions.json")
+    recall_decisions = ({d["recall_key"]: d for d in json.loads(decision_path.read_text())}
+                        if decision_path.is_file() else {})
+    pending_adjudications = []
+    unresolved_real_misses = []
+    adjudicated_gold_issues = []
+    for miss in recall.get("misses", []):
+        import hashlib as _recall_hash
+
+        key = miss.get("recall_key") or _recall_hash.sha256("\x1f".join((
+            str(miss.get("economy")), str(miss.get("gold_indicator")),
+            str(miss.get("act")), str(miss.get("ref")),
+        )).encode()).hexdigest()
+        verdict = (recall_decisions.get(key) or {}).get("verdict") \
+            or miss.get("reviewer_verdict")
+        if not verdict:
+            pending_adjudications.append(miss)
+        elif verdict in {"REAL_MISS", "NEEDS_CORRECTION"}:
+            unresolved_real_misses.append({"recall_key": key, "verdict": verdict,
+                                           "economy": miss.get("economy"),
+                                           "indicator": miss.get("gold_indicator"),
+                                           "act": miss.get("act"), "ref": miss.get("ref")})
+        else:
+            adjudicated_gold_issues.append({"recall_key": key, "verdict": verdict})
     report["recall"] = {"stats": recall.get("stats", {}), "misses": len(recall.get("misses", [])),
-                        "pending_adjudications": len(pending_adjudications)}
+                        "pending_adjudications": len(pending_adjudications),
+                        "unresolved_real_misses": unresolved_real_misses,
+                        "adjudicated_gold_or_abstention": adjudicated_gold_issues}
     if pending_adjudications:
-        failures.append(f"{len(pending_adjudications)} recall misses await adjudication/repair")
+        failures.append(f"{len(pending_adjudications)} recall misses await adjudication")
+    if unresolved_real_misses:
+        failures.append(f"{len(unresolved_real_misses)} unresolved REAL_MISS recall gaps remain")
 
     candidate_path = Path("submission/consolidated.json")
     candidates = json.loads(candidate_path.read_text()).get("rows", []) if candidate_path.is_file() else []
@@ -106,8 +144,27 @@ def main() -> int:
         "absence_manifest_rows": len(absence_rows),
         "complete_evidence_contract": len(candidates) - len(incomplete_evidence),
         "in_force": sum(r.get("Status", r.get("status")) == "in_force" for r in candidates)}
+    closure_failures = []
+    for row in citation_rows:
+        proof = row.get("citation_proof") or {}
+        g9 = [gate for gate in proof.get("gate_results", []) if gate.get("gate_id") == "G9"]
+        code = (g9[-1].get("metadata", {}).get("closure_code") if g9 else None)
+        offsets_ok = (
+            isinstance(proof.get("source_start_char"), int)
+            and isinstance(proof.get("source_end_char"), int)
+            and proof["source_end_char"] > proof["source_start_char"]
+        )
+        if code not in {"PASS_CLOSED", "PASS_LONG_BUT_CLOSED"} or not offsets_ok:
+            closure_failures.append({
+                "economy": row.get("Economy"), "indicator": row.get("Indicator ID"),
+                "law": row.get("Law Name"), "article": row.get("Article / Section"),
+                "closure_code": code, "offsets_ok": offsets_ok,
+            })
+    report["candidates"]["snippet_closure_failures"] = closure_failures
     if incomplete_evidence:
         failures.append(f"{len(incomplete_evidence)} candidates lack CitationProof or an absence manifest")
+    if closure_failures:
+        failures.append(f"{len(closure_failures)} citation snippets lack structural closure proof")
     if report["candidates"]["pending_review"]:
         failures.append("candidate findings still require named human decisions")
 

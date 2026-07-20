@@ -10,7 +10,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from packages.core.finalization import apply_decision, finding_key, validate_final_finding  # noqa: E402
+from packages.core.finalization import (apply_decision, finding_key, review_subject_hash,
+                                        validate_final_finding)  # noqa: E402
 from packages.core.schemas import MappedFinding, ReviewDecision, SourceArtifact, TextSpan  # noqa: E402
 from packages.export.csv_writer import write_csv  # noqa: E402
 
@@ -30,7 +31,11 @@ def main() -> int:
     candidate_bytes, decision_bytes = candidate_path.read_bytes(), decision_path.read_bytes()
     candidates = [MappedFinding.model_validate(r) for r in json.loads(candidate_bytes)["rows"]]
     decision_items = json.loads(decision_bytes)
-    decisions = {d["finding_key"]: ReviewDecision.model_validate(d["review"]) for d in decision_items}
+    decisions = {
+        d["finding_key"]: (d.get("review_subject_hash"),
+                           ReviewDecision.model_validate(d["review"]))
+        for d in decision_items
+    }
     candidate_keys = {finding_key(f) for f in candidates}
     unknown = sorted(set(decisions) - candidate_keys)
     if unknown:
@@ -42,18 +47,27 @@ def main() -> int:
              for row in conn.execute("SELECT id,payload FROM text_spans")}
     approved = []
     for finding in candidates:
-        decision = decisions.get(finding_key(finding))
-        if not decision or decision.decision != "approved":
+        decision_item = decisions.get(finding_key(finding))
+        if not decision_item:
+            continue
+        subject_hash, decision = decision_item
+        current_subject_hash = review_subject_hash(finding)
+        if subject_hash != current_subject_hash:
+            raise SystemExit(
+                f"stale approval subject for {finding_key(finding)}: proof/status/rationale changed"
+            )
+        if decision.decision != "approved":
             continue
         finding = apply_decision(finding, decision)
         validate_final_finding(finding, artifacts, spans)
+        immutable_review_id = f"{finding_key(finding)}:{current_subject_hash}"
         existing = conn.execute("SELECT payload FROM review_decisions WHERE finding_id=?",
-                                (finding_key(finding),)).fetchone()
+                                (immutable_review_id,)).fetchone()
         payload_json = decision.model_dump_json()
         if existing and existing[0] != payload_json:
             raise SystemExit(f"immutable ReviewDecision conflict for {finding_key(finding)}")
         conn.execute("INSERT OR IGNORE INTO review_decisions(finding_id,payload) VALUES (?,?)",
-                     (finding_key(finding), payload_json))
+                     (immutable_review_id, payload_json))
         approved.append(finding)
     conn.commit()
     approved.sort(key=lambda f: (f.economy, f.indicator_id, f.law_name, f.article_section,
@@ -64,6 +78,7 @@ def main() -> int:
         "candidate_sha256": hashlib.sha256(candidate_bytes).hexdigest(),
         "decisions_sha256": hashlib.sha256(decision_bytes).hexdigest(),
         "approved_finding_keys": [finding_key(f) for f in approved],
+        "approved_review_subject_hashes": [review_subject_hash(f) for f in approved],
     }, "rows": [f.model_dump(mode="json", by_alias=True) for f in approved]}
     (out / "consolidated_final.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
     print(f"submission replay: {len(approved)} explicitly approved rows")

@@ -18,7 +18,7 @@ def test_snippet_extends_to_operative_object_phrase():
            "search warrant, search or cause a search to be made")
     extended = extend_to_clause_boundary(cut, source)
     assert "for a document or other thing" in extended
-    assert extended.endswith(";") or extended.endswith("located;")
+    assert extended.endswith("such search must be recorded.")
     # already-complete snippets are untouched
     done = "The record must be retained for 3 years."
     assert extend_to_clause_boundary(done, done + " (2) More text.") == done

@@ -215,6 +215,11 @@ def load_seed_documents(stores, generation: str, loaded_refs: set[str]) -> int:
         if missing:
             print(f"  FAILED EXPECTED_EVIDENCE {act_name[:45]}: missing {missing}")
             continue
+        from packages.extractors.pdf_align import align_and_bind_pdf_evidence
+
+        aligned, unit_count = align_and_bind_pdf_evidence(units, [file], [text_spans])
+        if aligned != unit_count:
+            print(f"  ALIGNMENT REVIEW {act_name[:45]}: {aligned}/{unit_count} exact")
         for unit in units:
             unit.metadata["archived_copy"] = file
             unit.metadata["access_date"] = entry.get("access_date")
@@ -227,12 +232,6 @@ def load_seed_documents(stores, generation: str, loaded_refs: set[str]) -> int:
             unit.metadata["status_evidence"] = status.model_dump(mode="json")
             unit.source_artifact_id = artifact.id
             unit.raw_context = unit.raw_context or unit.text
-            import re as _re
-
-            pm = _re.search(r"page\s+(\d+)", unit.location_reference, _re.I)
-            page_no = int(pm.group(1)) if pm else None
-            unit.linked_span_ids = ([s.id for s in text_spans if s.page_number == page_no]
-                                    if page_no else [])
         for st in stores:
             if hasattr(st, "upsert_source_artifact"):
                 st.upsert_source_artifact(artifact)

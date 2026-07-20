@@ -23,6 +23,7 @@ Usage: .venv/bin/python scripts/adjudicate_recall.py \
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 import sys
@@ -39,6 +40,10 @@ from packages.graph.sqlite_graph import SqliteGraphStore  # noqa: E402
 from packages.ingest.known_index import base_ref, expected_anchors  # noqa: E402
 
 ECONOMY_OF = {"si": "Singapore", "ma": "Malaysia", "au": "Australia"}
+
+
+def recall_key(economy: str, indicator: str, act: str, ref: str) -> str:
+    return hashlib.sha256("\x1f".join((economy, indicator, act, ref)).encode()).hexdigest()
 
 
 def corpus_units(store, economy: str) -> list[dict]:
@@ -60,6 +65,9 @@ def main() -> int:
     previous = json.loads(previous_path.read_text()).get("misses", []) if previous_path.is_file() else []
     previous_by_key = {(m.get("economy"), str(m.get("pillar")), m.get("gold_indicator"),
                         m.get("act"), m.get("ref")): m for m in previous}
+    decision_path = Path("data/review/recall_decisions.json")
+    decisions = ({d["recall_key"]: d for d in json.loads(decision_path.read_text())}
+                 if decision_path.is_file() else {})
     misses = []
     stats: dict[str, dict[str, int]] = {}
     for run in run_dirs:
@@ -160,12 +168,21 @@ def main() -> int:
                                         "failure_taxonomy": failure_class},
                            "reviewer_verdict": "",  # REAL_MISS | GOLD_WRONG | GOLD_AMBIGUOUS | CORRECT_ABSTENTION
                            "reviewer_note": ""}
+            item["recall_key"] = recall_key(
+                economy, g["indicator"], g["act_display"], g["ref"]
+            )
             old = previous_by_key.get((economy, str(pillar), g["indicator"], g["act_display"], g["ref"]))
             if old:
                 item["reviewer_verdict"] = old.get("reviewer_verdict", "")
                 item["reviewer_note"] = old.get("reviewer_note", "")
                 if old.get("review"):
                     item["review"] = old["review"]
+            authoritative = decisions.get(item["recall_key"])
+            if authoritative:
+                item["reviewer_verdict"] = authoritative.get("verdict", "")
+                item["reviewer_note"] = (authoritative.get("reasoning")
+                                         or authoritative.get("note") or "")
+                item["review"] = authoritative
             misses.append(item)
         stats[f"{economy} P{pillar}"] = run_stats
         print(f"{economy} P{pillar}: {run_stats}")

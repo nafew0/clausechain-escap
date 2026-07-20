@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 import unicodedata
 
-from packages.core.schemas import RuleUnit
+from packages.core.schemas import RuleUnit, TextSpan
 
 MAX_ALIGNMENT_PAGES = 6
 
@@ -103,7 +103,20 @@ def align_to_pdf(units: list[RuleUnit], pdf_paths: list[str]) -> tuple[int, int]
     cursor = 0
     window_cache: dict[tuple[int, int], tuple[str, str, list[int]]] = {}
     for unit in units:
-        target = _norm(unit.text)
+        # Align the full structural context where available. RuleUnit.text can be
+        # a shortened subsection/retrieval view; raw_context carries its list
+        # children, exceptions and continuation paragraphs.
+        # XHTML already gives a complete subsection plus its semantic children;
+        # aligning the whole section-level raw_context is unnecessarily brittle
+        # across PDF page furniture. Native regex parsing is the opposite case:
+        # its unit text may be shortened, so align the full section context.
+        structural_source = (
+            unit.text
+            if unit.metadata.get("extraction") == "xhtml_oracle"
+            else (unit.raw_context or unit.text)
+        )
+        target = _norm(structural_source)
+        unit_target = _norm(unit.text)
         probe = target[:120]
         if len(probe) < 25:
             continue
@@ -141,7 +154,17 @@ def align_to_pdf(units: list[RuleUnit], pdf_paths: list[str]) -> tuple[int, int]
         if hit_index is not None and hit_window is not None:
             raw_text, offsets, matched_pages, pos = hit_window
             start, end = offsets[pos], offsets[pos + len(target) - 1] + 1
-            unit.text = raw_text[start:end]
+            exact_context = raw_text[start:end]
+            unit.raw_context = exact_context
+            # Preserve the unit boundary, but recover its characters from the
+            # same PDF window rather than retaining XHTML/normalized parser text.
+            unit_pos = normalized.find(unit_target, pos, pos + len(target))
+            if unit_pos >= 0:
+                unit_start = offsets[unit_pos]
+                unit_end = offsets[unit_pos + len(unit_target) - 1] + 1
+                unit.text = raw_text[unit_start:unit_end]
+            else:
+                unit.text = exact_context
             first_page, last_page = matched_pages[0], matched_pages[-1]
             unit.location_reference = first_page["location"]
             unit.metadata["pdf_alignment"] = "exact"
@@ -197,6 +220,7 @@ def align_to_pdf(units: list[RuleUnit], pdf_paths: list[str]) -> tuple[int, int]
                 first_index, last_index = block_hits[0][0], block_hits[-1][0]
                 first_page, last_page = pages[first_index], pages[last_index]
                 unit.text = "\n".join(text for _, text in block_hits)
+                unit.raw_context = unit.text
                 unit.location_reference = first_page["location"]
                 unit.metadata["pdf_alignment"] = "exact"
                 unit.metadata["alignment_mode"] = "exact-semantic-spans"
@@ -218,3 +242,33 @@ def align_to_pdf(units: list[RuleUnit], pdf_paths: list[str]) -> tuple[int, int]
                 unit.metadata["alignment_score"] = (len(block_hits) / len(semantic)
                                                     if semantic else 0.0)
     return aligned, len(units)
+
+
+def align_and_bind_pdf_evidence(
+    units: list[RuleUnit],
+    pdf_paths: list[str],
+    spans_by_volume: list[list[TextSpan]],
+) -> tuple[int, int]:
+    """Shared PDF route for every economy: align text, then bind proof spans.
+
+    ``spans_by_volume`` follows ``pdf_paths`` order.  This single route keeps SG,
+    MY and AU from drifting into different alignment/proof contracts.
+    """
+    if len(pdf_paths) != len(spans_by_volume):
+        raise ValueError("each PDF volume requires its own immutable TextSpan collection")
+    aligned, total = align_to_pdf(units, pdf_paths)
+    for unit in units:
+        volume = int(unit.metadata.get("alignment_volume") or 1)
+        if not 1 <= volume <= len(spans_by_volume):
+            unit.metadata["pdf_alignment"] = "unaligned-review"
+            unit.metadata["alignment_score"] = 0.0
+            unit.linked_span_ids = []
+            continue
+        spans = spans_by_volume[volume - 1]
+        start_page = int(unit.metadata.get("alignment_start_page") or 0)
+        end_page = int(unit.metadata.get("alignment_end_page") or start_page)
+        selected = [span for span in spans
+                    if start_page and start_page <= span.page_number <= end_page]
+        unit.linked_span_ids = [span.id for span in selected]
+        unit.metadata["pdf_span_boxes"] = [list(span.bbox) for span in selected]
+    return aligned, total

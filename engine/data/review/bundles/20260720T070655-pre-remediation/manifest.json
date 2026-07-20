@@ -1,0 +1,26 @@
+{
+  "bundle_id": "20260720T070655-pre-remediation",
+  "purpose": "Immutable archive of the last complete six-run output before paragraph-closure remediation invalidated finding identities.",
+  "created_at": "2026-07-20T07:06:55+06:00",
+  "artifacts": {
+    "champion_validation.json": "803bd6e09454df183266a0a397d1f6e805d65c7c3a5740ac34eb06e8def336e8",
+    "consolidated.csv": "c4823a93dfbd8433844bf51563b364f5b1e21395a1651371428c46117db02aeb",
+    "consolidated.json": "6a5fd7c65b9f92d6538908e1565a5527162297fb4700439f5eeed44faf59accc",
+    "decisions.json": "5a85b3b438e9da1d1930e8d1a75ad9b9e5227648126b82df360dfe87e754fbc3",
+    "graph_validation.json": "1b31af916c32823b2bb1d8652ea6e573e04a0d8c363b34303c6c7f8f78d47ac",
+    "recall_adjudication.json": "15032ba2b30b80e9fa64ffcf3c872685230713fe97fbe22d89b6b52db71d2e0e",
+    "recall_decisions.json": "711bc540bc4ed5c18c99ca9d3ad28948ab8d59eb20a93b9635010e3715c3478e",
+    "runs/final_au_p6.json": "9535400453dc7c85d2dc06d33c03073a63bf8ab59d4b864c99065d9750a18b0d",
+    "runs/final_au_p7.json": "07fd86531a9404f9dbe79e7ab5a200007707fae1845e2b67eb43371781f30075",
+    "runs/final_ma_p6.json": "4807ea121cc45da462c0fca8908a6da1ef8bdb14398627dbbd96648b2273c99f",
+    "runs/final_ma_p7.json": "c1233d4a956833854448fa9153cb9d35ecbdd8960ff5bcfe9156f928804d25f4",
+    "runs/final_si_p6.json": "d4425542061d90407afd40697391386691ae16b2eb3ee03ecc37cd6e2a1e7019",
+    "runs/final_si_p7.json": "cb0a1f884ece2625012723926a8210ccac6fd32f15c27f2c8e5be42ec4780191",
+    "refuter/refutation_final_au_p6.json": "4f53cd909de7da06606fc427da256ae43c5e4a97b700d1c0a4d21ea8d2b7f80ea",
+    "refuter/refutation_final_au_p7.json": "ab10b0243cc553ea76a90a163850fb1b2f3fe20e6cc16c74e05f282940fe014a",
+    "refuter/refutation_final_ma_p6.json": "1b9017cbde216614fc12eb9134d29ce0e1915675224e92cc8efbd52aa192300d",
+    "refuter/refutation_final_ma_p7.json": "b3e0d722d7d9b024349917f3fae9023ea8c5893eab5d39199a0898178d22af2c",
+    "refuter/refutation_final_si_p6.json": "235e80e86171ee07b88db69b1f85730132437f00b73832e56302eb92abe0e89d",
+    "refuter/refutation_final_si_p7.json": "6e15c641dc5449c78e9a40ec7188a4c78894e7c7fe5ef6bb8284eef29d6aacd2"
+  }
+}

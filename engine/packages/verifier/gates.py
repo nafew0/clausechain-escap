@@ -64,8 +64,8 @@ def _is_real_sentence_stop(source: str, index: int) -> bool:
         prefix = source[max(0, index - 16):index + 1]
         if _LEGISLATIVE_ABBREVIATION.search(prefix):
             return False
-        token = re.search(r"([A-Za-z])\.$", prefix)
-        if token and token.group(1).isupper():
+        token = re.search(r"(?:^|\s)([A-Z])\.$", prefix)
+        if token:
             return False  # an initial such as "A. Smith"
     suffix = source[index + 1:index + 8]
     return not suffix or bool(re.match(r"^[\]\)\}\"'’”]*\s", suffix))
@@ -94,12 +94,68 @@ def _open_ending_code(text: str) -> str | None:
     return None
 
 
+_LIST_CHILD = re.compile(r"\(\s*(?:[a-z]|[ivxlcdm]{1,6})\s*\)", re.IGNORECASE)
+
+
+def _list_has_later_child(source: str, start: int, stop: int) -> bool:
+    """Do not close at an early child sentence of a colon-introduced list."""
+    passage = source[start:stop]
+    colon = passage.find(":")
+    if colon < 0 or not _LIST_CHILD.search(passage[colon + 1:]):
+        return False
+    lookahead = source[stop:stop + 800]
+    if re.match(r"\s*(?:Explanation|Note|Example)\b", lookahead, re.IGNORECASE):
+        return False
+    return bool(_LIST_CHILD.search(lookahead))
+
+
+def _semantic_child_end(
+    claimed: str, source: str, claimed_end: int, semantic_blocks: list[dict] | None
+) -> int:
+    """Return the minimum source offset needed to include immediate child blocks."""
+    if not semantic_blocks:
+        return claimed_end
+    normalized_claim = _normalize(claimed)
+    ranks = {"section": 0, "subsection": 1, "paragraph": 2,
+             "subparagraph": 3, "subsubparagraph": 4, "item": 2}
+    owner = None
+    for index, block in enumerate(semantic_blocks):
+        text = str(block.get("text") or "")
+        if normalized_claim in _normalize(text) or _normalize(text) in normalized_claim:
+            owner = index
+            break
+    if owner is None:
+        return claimed_end
+    owner_block = semantic_blocks[owner]
+    owner_text = str(owner_block.get("text") or "")
+    if ":" not in owner_text and not claimed.rstrip().endswith(":"):
+        return claimed_end
+    owner_rank = ranks.get(str(owner_block.get("class") or "").casefold(), 1)
+    children: list[dict] = []
+    for block in semantic_blocks[owner + 1:]:
+        css = str(block.get("class") or "").casefold()
+        rank = ranks.get(css)
+        text = str(block.get("text") or "")
+        if rank is not None and rank <= owner_rank:
+            break
+        if rank is None and not _LIST_CHILD.match(text.strip()):
+            break
+        children.append(block)
+    if not children:
+        return claimed_end
+    tail = source[claimed_end:]
+    last_text = str(children[-1].get("text") or "")
+    located = source_exact_span(last_text, tail)
+    return claimed_end + located[2] if located else claimed_end
+
+
 def finalize_snippet_result(
     claimed: str,
     source_text: str,
     *,
     soft_limit: int = SNIPPET_SOFT_LIMIT,
     hard_limit: int = SNIPPET_HARD_LIMIT,
+    semantic_blocks: list[dict] | None = None,
 ) -> FinalizedSnippet:
     """Close a mapper quote at a genuine source sentence/paragraph boundary.
 
@@ -116,15 +172,19 @@ def finalize_snippet_result(
             "mapper quote is not source-locatable; structural closure cannot be proven",
         )
     _, start, claimed_end = located
+    minimum_end = _semantic_child_end(
+        claimed, source_text, claimed_end, semantic_blocks
+    )
 
     # A mapper may stop in the middle of a word (the CPC "an or" failure).  We
     # deliberately begin the boundary search at its exact end and only accept a
     # real sentence stop, so the rest of that word and all list children travel.
     stop: int | None = None
-    for index in range(max(start, claimed_end - 1), len(source_text)):
+    for index in range(max(start, minimum_end - 1), len(source_text)):
         if _is_real_sentence_stop(source_text, index):
             candidate = source_text[start:index + 1]
-            if _balanced_structure(candidate):
+            if (_balanced_structure(candidate)
+                    and not _list_has_later_child(source_text, start, index + 1)):
                 stop = index + 1
                 break
 

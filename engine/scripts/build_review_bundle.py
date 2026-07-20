@@ -11,7 +11,7 @@ from pathlib import Path
 import fitz
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from packages.core.finalization import finding_key  # noqa: E402
+from packages.core.finalization import finding_key, review_subject_hash  # noqa: E402
 from packages.core.schemas import MappedFinding, SourceArtifact  # noqa: E402
 
 
@@ -27,7 +27,8 @@ def main() -> int:
     cards, decisions = [], []
     expected_assets: set[Path] = set()
     for i, finding in enumerate(findings, 1):
-        key = finding_key(finding); proof = finding.citation_proof; artifact = artifacts.get(finding.source_artifact_id or "")
+        key = finding_key(finding); subject_hash = review_subject_hash(finding)
+        proof = finding.citation_proof; artifact = artifacts.get(finding.source_artifact_id or "")
         image_rel = None
         if artifact and proof and proof.page_number and Path(artifact.local_path).suffix.lower() == ".pdf":
             with fitz.open(artifact.local_path) as doc:
@@ -45,7 +46,7 @@ def main() -> int:
         coverage = (finding.search_coverage_manifest.model_dump(mode="json")
                     if finding.search_coverage_manifest else None)
         cards.append(f"""<article><h2>{i}. {html.escape(finding.indicator_id)} · {html.escape(finding.article_section)}</h2>
-<p><b>Finding key:</b> <code>{key}</code></p><p><b>Law:</b> {html.escape(finding.law_name)} · <b>Tag:</b> {finding.discovery_tag}</p>
+<p><b>Finding key:</b> <code>{key}</code></p><p><b>Review subject:</b> <code>{subject_hash}</code></p><p><b>Law:</b> {html.escape(finding.law_name)} · <b>Tag:</b> {finding.discovery_tag}</p>
 <p><a href="{html.escape(finding.source_url)}">Official source</a> · <b>Status:</b> {finding.status}</p>
 <blockquote>{html.escape(finding.verbatim_snippet)}</blockquote>
 <p><b>Context:</b> {html.escape(finding.raw_context or '')}</p><p><b>Rationale:</b> {html.escape(finding.mapping_rationale)}</p>
@@ -54,7 +55,8 @@ def main() -> int:
 <details><summary>Status evidence</summary><pre>{html.escape(json.dumps(status, indent=2))}</pre></details>
 <details><summary>Search coverage / absence proof</summary><pre>{html.escape(json.dumps(coverage, indent=2))}</pre></details>
 <details><summary>Deterministic gates</summary><pre>{html.escape(json.dumps(gates, indent=2))}</pre></details></article>""")
-        decisions.append({"finding_key": key, "review": {"decision": "rejected",
+        decisions.append({"finding_key": key, "review_subject_hash": subject_hash,
+            "review": {"decision": "rejected",
             "reviewer_name": "", "reviewer_role": "", "reviewed_at": "",
             "citation_checked": False, "mapping_checked": False, "status_checked": False,
             "citation_reviewer_name": "", "mapping_reviewer_name": "",

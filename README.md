@@ -13,9 +13,9 @@ Last updated: 2026-07-20
 - **One command**: `python run.py --economy Singapore --pillar 6` → template-exact CSV + JSON.
 - **Corpus**: 53,969 provisions across Singapore, Malaysia and Australia, parsed into statute-structure RuleUnits (never fixed-size chunks), each carrying its archived source bytes + SHA-256.
 - **Every exported row** passes **9 deterministic gates** — including byte-exact snippet verification against the archived official copy — then an adversarial refuter, then **named, role-separated human review**. The final file is regenerated from approvals alone by a deterministic replay.
-- **74 provision-level NEW findings** beyond the sample kit in the final sweep, including the first treaty-evidenced P6-I5 rows (CPTPP Art. 14.11, DEPA Art. 4.3, RCEP Art. 12.15) parsed from official state registers.
+- **74 provision-level NEW findings** discovered independently beyond the provided reference dataset in the final sweep, including the first treaty-evidenced P6-I5 rows (CPTPP Art. 14.11, DEPA Art. 4.3, RCEP Art. 12.15) parsed from official state registers.
 - **Measured cost**: the entire 6-run sweep (3 economies × 2 pillars) cost **US$1.16** on the default cloud profile; the bundled Path A profile runs **fully key-free** on local models.
-- We also **audit the provided gold data**: the engine detected the planted Malaysia errors — including master citations to clauses that do not exist — and filed corrections with receipts.
+- The engine **audits its own reference data**: it detected citation errors in the dataset it was given — including references to statutory clauses that do not exist in the official text — and recorded corrections with evidence.
 
 Skip to [Quick Start](#quick-start) to run it in under 10 minutes.
 
@@ -29,16 +29,16 @@ This tool automates the two tasks required by the UN Regional Digital Trade Inte
 Given an economy and pillar, ClauseChain acquires legislation from official government portals (including subsidiary legislation, scanned gazettes and treaty registers), archives every source with content hashes and access dates, and extracts clean structured text — with no manual steps. Anti-bot walls are handled with a polite-backoff + real-browser fallback; a dead or blocked link becomes a recorded `ACQUISITION_UNRESOLVED` fact, never a silent gap.
 
 **Task 2 — Intelligent Mapping & Categorization.**
-Extracted provisions are mapped to RDTII indicator IDs (P6-I1…P6-I5, P7-I1…P7-I5) through hybrid retrieval and LLM reasoning constrained by a rubric-as-code layer (indicator polarity, 0.5 tiers, the 7.5 court-order test, exclusions — all in YAML data). Each matched provision is recorded with an exact article-level citation, a byte-exact verbatim snippet, and a Discovery Tag (**NEW** = found independently / **KNOWN** = matches the sample kit).
+Extracted provisions are mapped to RDTII indicator IDs (P6-I1…P6-I5, P7-I1…P7-I5) through hybrid retrieval and LLM reasoning constrained by a rubric-as-code layer (indicator polarity, 0.5 tiers, the 7.5 court-order test, exclusions — all in YAML data). Each matched provision is recorded with an exact article-level citation, a byte-exact verbatim snippet, and a Discovery Tag (**NEW** = found independently / **KNOWN** = matches the provided reference dataset).
 
 **Mandatory scope:** Pillar 6 (Cross-border Data Flows) and Pillar 7 (Domestic Data Protection)
-**Economies covered:** Singapore, Malaysia, Australia (Round 1). Adding an economy is a data change, not a code change — see [Scaling](#supported-economies--portals).
+**Economies covered:** Singapore, Malaysia, Australia. Adding an economy is a data change, not a code change — see [Scaling](#supported-economies--portals).
 
 ---
 
 ## Quick Start
 
-⚠ **Required for Round 1.** A reviewer with basic Python knowledge can run this in under 10 minutes.
+Anyone with basic Python knowledge can run this in under 10 minutes.
 
 ### 1. Clone the repository
 
@@ -107,16 +107,16 @@ python run.py --economy "Malaysia" --pillar 7 --out outputs/my_p7
 # --mode             : live (default) | offline-eval | submission-replay
 ```
 
-Run the full Round-1 sweep and consolidate to one submission file:
+Run the full three-economy sweep and consolidate to one dataset:
 
 ```bash
 for eco in Singapore Malaysia Australia; do
   for p in 6 7; do python run.py --economy $eco --pillar $p --out outputs/final_$(echo $eco | cut -c1-2 | tr A-Z a-z)_p$p; done
 done
 python scripts/refute_new.py outputs/final_*            # adversarial refuter on every NEW row
-python scripts/consolidate_submission.py outputs/final_*  # -> submission/consolidated.csv + .json
+python scripts/consolidate_submission.py outputs/final_*  # -> submission/consolidated.csv + .json (final dataset)
 python scripts/validate_graph.py                          # graph/source-artifact integrity report
-python scripts/champion_validate.py                       # submission-readiness contract
+python scripts/champion_validate.py                       # release-readiness contract (names every failure)
 ```
 
 Regenerate the final artifacts purely from human approvals (deterministic, no LLM):
@@ -240,7 +240,7 @@ Change `.env` — no code changes. Per-page OCR confidence and citation-token di
 | Malaysia | lom.agc.gov.my · Federal Gazette · pdp.gov.my · NACSA · fta.miti.gov.my | English/Malay | Bilingual PDFs; Malay grammar profile ("Seksyen/Perkara"); OCR path |
 | Australia | legislation.gov.au API (authorised PDF + EPUB); DFAT treaty portal | English | Multi-volume compilations; EPUB↔PDF span alignment |
 
-**Adding an economy = data, not code:** a jurisdiction YAML (portals, whitelist, citation grammar, status assertions) + seed rows. Grammar profiles are named data ("Pasal", "Статья", "มาตรา" next); the government-verified Round-2 gold database is already ingested as the finals evaluation baseline.
+**Adding an economy = data, not code:** a jurisdiction YAML (portals, whitelist, citation grammar, status assertions) + seed rows. Grammar profiles are named data ("Pasal", "Статья", "มาตรา" next); a government-verified reference dataset for seven further economies (CN·IN·ID·LA·MN·RU·TH) is already ingested as the expansion evaluation baseline.
 
 ---
 
@@ -251,17 +251,17 @@ Each run writes CSV + JSON. **CSV columns are byte-identical to `OUTPUT_TEMPLATE
 | # | Column | Notes |
 | :---- | :---- | :---- |
 | 1–13 | Economy · Law Name · Law Number / Ref · Last Amended · Indicator ID · Article / Section · Discovery Tag · Location Reference · Verbatim Snippet · Mapping Rationale · Source URL · Confidence · Notes | Exact template order |
-| 14+ | Coverage · Verbatim Snippet (English) · Status (+ status evidence) | Appended columns, allowed per the 15-Jun Q&A |
+| 14+ | Coverage · Verbatim Snippet (English) · Status (+ status evidence) | Additional columns, appended after the 13 standard ones |
 
 The JSON carries the same fields plus: `source_artifact_id`, `content_sha256`, `citation_proof` (span ids, page, alignment status, gate results), `status_evidence_record`, `search_coverage_manifest` (absence rows), `mean_ocr_confidence`, `model_version`, `raw_context`, and run metadata (`corpus_fingerprint`, `pipeline_stats`, `cost_report`, `elapsed_seconds`).
 
-Final Round-1 artifact: `submission/consolidated.csv` + `submission/consolidated.json` (one consolidated file across all six runs, per the 15-Jun ruling).
+Final artifact: `submission/consolidated.csv` + `submission/consolidated.json` — one consolidated dataset across all six economy-pillar runs.
 
 ---
 
 ## Verification: the Proof Chain
 
-What makes a ClauseChain row trustworthy (and what judges can independently check):
+What makes a ClauseChain row trustworthy — and what anyone can independently check:
 
 1. **Archived source** — every document's exact bytes are stored with SHA-256 + access date; the citation names the official URL we archived.
 2. **G1 byte-exactness** — the exported snippet is constructed *first* (source-exact slice → clause-boundary extension) and the gates verify that exact final text. A quote that is not in the source cannot be exported.
@@ -270,13 +270,13 @@ What makes a ClauseChain row trustworthy (and what judges can independently chec
 5. **Named human review** — citation reviewer ≠ mapping reviewer, enforced at write time; append-only receipts; every batch exports a content-hashed bundle.
 6. **Deterministic replay** — `submission_replay.py` regenerates the final CSV/JSON from approvals alone; run it twice, get identical bytes.
 7. **Honest absence** — "no provision found" rows carry a search-coverage manifest; an unresolved configured acquisition (e.g. a geo-blocked treaty register) **blocks** the absence conclusion.
-8. **Gold auditing** — master-known anchors are tracked per run; misses are adjudicated (`REAL_MISS` / `GOLD_WRONG` / `CORRECT_ABSTENTION`) with receipts. This pass caught the planted Malaysia errors in the provided gold data.
+8. **Reference-data auditing** — known reference anchors are tracked per run; misses are adjudicated (`REAL_MISS` / `GOLD_WRONG` / `CORRECT_ABSTENTION`) with receipts. This pass surfaced citation errors inside the reference data itself.
 
 ---
 
 ## Actual Cost Per Document
 
-Measured from real runs (`logs/cost_report.json` is written by every run; judges can verify against code).
+Measured from real runs (`logs/cost_report.json` is written by every run; the numbers are verifiable against the code).
 
 **Full Round-1 sweep (3 economies × 2 pillars, 53,969-provision corpus, final run of 20 Jul 2026):**
 
@@ -299,7 +299,7 @@ Measured from real runs (`logs/cost_report.json` is written by every run; judges
 Honesty section — these are recorded in the tool's own reports, not hidden:
 
 - **Geo/TLS-blocked portals:** dfat.gov.au (Akamai) rejects non-browser TLS from our region; the Playwright fallback did not clear it either. The four AU treaty seeds are recorded as `ACQUISITION_UNRESOLVED`, which deliberately blocks the AU P6-I5 absence conclusion. NSW/Vic state registers (403 bot-walls) are deferred the same way.
-- **Master-gold recall:** a minority of master-known anchors are still missed; each miss is adjudicated with receipts (two were traced to errors in the provided gold itself). Repairs are per-anchor work, tracked in the recall report.
+- **Reference-dataset recall:** a minority of known reference anchors are still missed; each miss is adjudicated with receipts (two were traced to errors in the reference data itself). Repairs are per-anchor work, tracked in the recall report.
 - **Delegated-legislation following:** cross-references from acts to subordinate instruments are captured as graph edges and seeded subsidiary legislation is ingested, but the engine does not yet auto-crawl every referenced instrument.
 - **Confidence calibration:** confidence values are relative, not calibrated probabilities; rows under 0.80 are flagged for human review (and all NEW rows get human review regardless).
 - **Long-span snippets:** provisions with no clause boundary inside the export budget are flagged `REVIEW_REQUIRED_LONG_SPAN` rather than truncated; a handful of list-introduced provisions await the structural-closure improvement.
@@ -323,12 +323,12 @@ cd engine && python -m pytest tests/     # 148 tests
 
 ---
 
-## Reproducing the Sample Kit Results
+## Reproducing the Benchmark Results
 
 ```bash
-python scripts/eval_vs_master.py         # recall vs the provided master database
+python scripts/eval_vs_master.py         # recall vs the provided reference database
 python scripts/validate_graph.py         # source-artifact + provision integrity
-python scripts/champion_validate.py      # full submission-readiness contract
+python scripts/champion_validate.py      # full release-readiness contract
 ```
 
 These print which known provisions were matched, which NEW ones were discovered, and every integrity failure by name.
@@ -349,7 +349,7 @@ These print which known provisions were matched, which NEW ones were discovered,
 
 ## License
 
-Released under the **Apache License 2.0** in accordance with the hackathon submission requirements. See [LICENSE](LICENSE).
+Released under the **Apache License 2.0**. See [LICENSE](LICENSE).
 
 Third-party licences: Python (PSF), httpx/pydantic/numpy/pytest (BSD/MIT), pymupdf (AGPL — unmodified library use), SQLite/FTS5 (public domain), Neo4j Community (GPLv3, optional), Django/DRF (BSD), Next.js/React (MIT), BGE-M3 (MIT), Ollama-served open-weight models per their model licences.
 
@@ -359,7 +359,7 @@ Third-party licences: Python (PSF), httpx/pydantic/numpy/pytest (BSD/MIT), pymup
 
 | Date | Milestone |
 | :---- | :---- |
-| **20 July 2026** | **Round 1 submission (this repository)** |
+| **20 July 2026** | **Round 1 entry (this repository)** |
 | 31 July 2026 | Shortlist announced |
 | 3 August 2026 | Live online pitching |
 | 5 August 2026 | Finalists announced |

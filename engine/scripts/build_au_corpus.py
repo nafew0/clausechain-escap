@@ -148,7 +148,7 @@ def load_au_seed_document(url: str, entry: dict, stores, generation: str,
     archived official document through the generic extractors, profile-driven.
     Returns unit count (0 = recorded skip; the reconciliation report keeps it visible)."""
     from packages.core.legal_controls import content_eligibility
-    from packages.extractors.pdf_align import align_to_pdf
+    from packages.extractors.pdf_align import align_and_bind_pdf_evidence
     from packages.ingest.seed_profiles import seed_fingerprint_config, seed_parse_profile
     from packages.extractors.pdf_act import parse_act_text
     from urllib.parse import urlparse
@@ -228,7 +228,7 @@ def load_au_seed_document(url: str, entry: dict, stores, generation: str,
         return 0
     # The parsed text IS the official PDF — verify and stamp exact alignment the
     # same way the EPUB oracle path does (AU evidence must be PDF-aligned).
-    align_to_pdf(units, [file])
+    align_and_bind_pdf_evidence(units, [file], [text_spans])
     for unit in units:
         unit.metadata["archived_copy"] = file
         unit.metadata["access_date"] = entry.get("access_date")
@@ -242,11 +242,6 @@ def load_au_seed_document(url: str, entry: dict, stores, generation: str,
         unit.metadata["status_evidence"] = status.model_dump(mode="json")
         unit.source_artifact_id = artifact.id
         unit.raw_context = unit.raw_context or unit.text
-        import re as _re4
-        pm = _re4.search(r"page\s+(\d+)", unit.location_reference, _re4.I)
-        page_no = int(pm.group(1)) if pm else None
-        unit.linked_span_ids = ([s.id for s in text_spans if s.page_number == page_no]
-                                if page_no else [])
     for st in stores:
         if hasattr(st, "upsert_source_artifact"):
             st.upsert_source_artifact(artifact)
@@ -401,24 +396,29 @@ def main() -> int:
                 if meta.get("epub"):
                     # P3.5 R3/R4-lite: XHTML structure oracle + authorised-PDF alignment
                     from packages.extractors.epub_act import parse_epub_act
-                    from packages.extractors.pdf_align import align_to_pdf
+                    from packages.extractors.pdf_align import align_and_bind_pdf_evidence
 
                     units = parse_epub_act(Path(meta["epub"]).read_bytes(), "Australia",
                                            meta["name"] or act_name, meta["register_id"],
                                            meta["source_url"])
-                    aligned, n_units = align_to_pdf(units, [p for _, p in meta["pdfs"]])
+                    aligned, n_units = align_and_bind_pdf_evidence(
+                        units,
+                        [p for _, p in meta["pdfs"]],
+                        [evidence_by_index[i][1] for i in sorted(evidence_by_index)],
+                    )
                     print(f"    xhtml oracle: {n_units} units, {aligned} PDF-aligned")
                 if not units:  # fallback: regex parse of the authorised PDF
-                    from packages.extractors.pdf_align import align_to_pdf as _align
+                    from packages.extractors.pdf_align import align_and_bind_pdf_evidence as _align
 
-                    for vol, pdf in meta["pdfs"]:
+                    for pdf_index, (vol, pdf) in enumerate(meta["pdfs"], start=1):
                         vol_units = extract_act_pdf(pdf, economy="Australia",
                                                     act_name=meta["name"] or act_name,
                                                     act_ref=f"{meta['register_id']}v{vol}" if vol else meta["register_id"],
                                                     source_url=meta["source_url"])
                         # text originates from this authorised PDF — verify + stamp
                         # exact alignment so the AU aligned-evidence gate applies uniformly
-                        _align(vol_units, [pdf])
+                        span_group = evidence_by_index[pdf_index][1]
+                        _align(vol_units, [pdf], [span_group])
                         if vol:
                             for u in vol_units:
                                 u.location_reference = f"vol {vol}, {u.location_reference}"

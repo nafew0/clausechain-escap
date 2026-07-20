@@ -104,7 +104,7 @@ def test_citation_hierarchy_and_ineligible_sources():
 
 
 def test_finalization_requires_proof_status_hash_and_named_approval(tmp_path):
-    pdf = tmp_path / "x.pdf"; snippet = "Exact PDF source characters"; _pdf(pdf, snippet)
+    pdf = tmp_path / "x.pdf"; snippet = "Exact PDF source characters."; _pdf(pdf, snippet)
     artifact = source_artifact_from_file(pdf, original_url="https://official.example/x",
         source_type="act", status_evidence=_status(), official_domains={"official.example"},
         expected_mime="application/pdf")
@@ -113,14 +113,17 @@ def test_finalization_requires_proof_status_hash_and_named_approval(tmp_path):
         status_checked=True)
     proof = CitationProof(source_artifact_id=artifact.id, source_sha256=artifact.sha256,
         page_number=1, article_path=["section 1"], span_ids=["s1"], bboxes=[(1, 1, 2, 2)],
-        exact_snippet=snippet, normalized_snippet=snippet.lower(), alignment_status="exact",
-        alignment_score=1, gate_results=[{"gate_id": "G1", "status": "PASS"}])
+        exact_snippet=snippet, normalized_snippet=snippet.lower(),
+        source_start_char=0, source_end_char=len(snippet), alignment_status="exact",
+        alignment_score=1, gate_results=[{"gate_id": "G1", "status": "PASS"},
+            {"gate_id": "G9", "status": "PASS",
+             "metadata": {"closure_code": "PASS_CLOSED"}}])
     finding = MappedFinding(Economy="Australia", **{"Law Name": "X Act", "Indicator ID": "P7-I1",
         "Article / Section": "s. 1", "Discovery Tag": "KNOWN", "Location Reference": "page 1",
         "Verbatim Snippet": snippet, "Mapping Rationale": "Maps exactly", "Source URL": artifact.retrieved_url,
         "Confidence": .9, "Status": "in_force"}, source_artifact_id=artifact.id,
         status_evidence_record=_status(), citation_proof=proof, review=review,
-        reviewer_decision="approved")
+        reviewer_decision="approved", raw_context=snippet)
     validate_final_finding(finding, {artifact.id: artifact})
     finding.review = None; finding.reviewer_decision = "pending"
     with pytest.raises(FinalizationError, match="human approval"):
@@ -133,7 +136,7 @@ def test_finalization_requires_proof_status_hash_and_named_approval(tmp_path):
     (lambda f: setattr(f, "source_artifact_id", None), "missing SourceArtifact"),
 ])
 def test_end_to_end_final_gate_blocks_unsafe_rows(tmp_path, mutation, message):
-    pdf = tmp_path / "x.pdf"; snippet = "Exact source text"; _pdf(pdf, snippet)
+    pdf = tmp_path / "x.pdf"; snippet = "Exact source text."; _pdf(pdf, snippet)
     artifact = source_artifact_from_file(pdf, original_url="https://official.example/x",
         source_type="act", status_evidence=_status(), official_domains={"official.example"},
         expected_mime="application/pdf")
@@ -142,14 +145,16 @@ def test_end_to_end_final_gate_blocks_unsafe_rows(tmp_path, mutation, message):
         status_checked=True)
     proof = CitationProof(source_artifact_id=artifact.id, source_sha256=artifact.sha256,
         page_number=1, article_path=["section 1"], span_ids=["s1"], bboxes=[(1,1,2,2)],
-        exact_snippet=snippet, normalized_snippet=snippet.lower(), alignment_status="exact",
-        alignment_score=1, gate_results=[])
+        exact_snippet=snippet, normalized_snippet=snippet.lower(),
+        source_start_char=0, source_end_char=len(snippet), alignment_status="exact",
+        alignment_score=1, gate_results=[{"gate_id": "G9", "status": "PASS",
+            "metadata": {"closure_code": "PASS_CLOSED"}}])
     finding = MappedFinding(Economy="Australia", **{"Law Name":"X Act","Indicator ID":"P7-I1",
         "Article / Section":"s. 1","Discovery Tag":"KNOWN","Location Reference":"page 1",
         "Verbatim Snippet":snippet,"Mapping Rationale":"exact","Source URL":artifact.retrieved_url,
         "Confidence":.9,"Status":"in_force"}, source_artifact_id=artifact.id,
         status_evidence_record=_status(), citation_proof=proof, review=review,
-        reviewer_decision="approved")
+        reviewer_decision="approved", raw_context=snippet)
     mutation(finding)
     with pytest.raises(FinalizationError, match=message):
         validate_final_finding(finding, {artifact.id: artifact})

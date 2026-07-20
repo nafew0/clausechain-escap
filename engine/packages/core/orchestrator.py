@@ -255,6 +255,9 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
     embedder = resolve_embedding(provider_profile)
     cache = EmbeddingCache(embedder, f"data/cache/embeddings_{code.lower()}.json")
     known = KnownIndex()
+    from packages.ingest.expected_anchors import load_expected_anchors
+
+    expected_anchor_ledger = load_expected_anchors()
     model_version = (f"{getattr(llm_high.primary, 'model', 'llm')}"
                      f"/escalate:{getattr(llm_escalation.primary, 'model', 'llm')}"
                      f"+{getattr(embedder, 'model', 'emb')}")
@@ -293,7 +296,12 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
                       if str(r.get("pillar")) == str(pillar)
                       and r.get("indicator_code") == indicator_id]
         gold_anchor_ids: set[str] = set()
+        research_anchor_ids: set[str] = set()
         anchor_matches: dict[str, set[str]] = {}
+        research_matches: dict[str, set[str]] = {}
+        research_rows = [row for row in expected_anchor_ledger
+                         if row.get("economy") == economy
+                         and row.get("indicator_id") == indicator_id]
         from packages.ingest.known_index import expected_anchors
         for krow in known_rows:
             for anchor in expected_anchors(krow):
@@ -325,6 +333,35 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
                         candidates.append(_Cand(m["provision_id"], m["text"], m["props"],
                                                 matched_queries=["known-injection"]))
                         have_ids.add(m["provision_id"])
+        # Verified research expectations use the same generic law+hierarchy
+        # resolver and bypass retrieval screening, but remain NEW unless the
+        # ESCAP master independently records them.
+        for expected in research_rows:
+            expected_base = _sb(expected.get("citation", ""))
+            matches = [c for c in corpus
+                       if _lm(expected.get("instrument", ""),
+                              c["props"].get("law_name", ""))
+                       and _section_matches(
+                           expected_base,
+                           _sb(c["props"].get("article_section", "")),
+                       )]
+            anchor_id = expected["anchor_id"]
+            research_matches[anchor_id] = {m["provision_id"] for m in matches}
+            if not matches:
+                warnings.append(
+                    f"EXPECTED ANCHOR HOLE {indicator_id}: "
+                    f"{expected.get('instrument', '')[:45]} {expected.get('citation', '')} "
+                    "not in corpus"
+                )
+            for match in matches:
+                research_anchor_ids.add(match["provision_id"])
+                if match["provision_id"] not in have_ids:
+                    from packages.retrieval.hybrid import Candidate as _Cand
+                    candidates.append(_Cand(
+                        match["provision_id"], match["text"], match["props"],
+                        matched_queries=["expected-anchor-injection"],
+                    ))
+                    have_ids.add(match["provision_id"])
         # L2 (P3.5): measurable retrieval stats — how many master-known anchors
         # retrieval found on its own vs. how many only the injection saved.
         organic_anchor_count = sum(bool(ids & organic_ids) for ids in anchor_matches.values())
@@ -351,21 +388,30 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
         # Bypass screening only for anchors recorded under THIS indicator.
         # Using every section known anywhere in the master dataset caused a broad
         # parent ref to bypass hundreds of unrelated descendants under every indicator.
-        anchors, rest = _partition_current_anchors(candidates, gold_anchor_ids)
+        protected_anchor_ids = gold_anchor_ids | research_anchor_ids
+        anchors, rest = _partition_current_anchors(candidates, protected_anchor_ids)
         survivors = anchors + screen_candidates(llm_bulk, indicator_id, cfg, rest)
         survivor_ids = {c.provision_id for c in survivors}
         indicator_stats["screen_survival_recall"] = (
             sum(bool(ids & survivor_ids) for ids in anchor_matches.values()) / len(anchor_matches)
             if anchor_matches else None)
         stats["screened_in"] += len(survivors)
-        stats["known_anchors"] = stats.get("known_anchors", 0) + len(anchors)
+        stats["known_anchors"] = stats.get("known_anchors", 0) + sum(
+            c.provision_id in gold_anchor_ids for c in anchors
+        )
+        stats["research_expected_anchors"] = (
+            stats.get("research_expected_anchors", 0) + len(research_rows)
+        )
 
         indicator_rows = 0
         mapped_anchor_ids: set[str] = set()
         passed_anchor_ids: set[str] = set()
+        mapped_research_ids: set[str] = set()
+        passed_research_ids: set[str] = set()
         mapping_decisions = map_candidates(
             llm_high, indicator_id, cfg, survivors, gold_anchor_ids,
             llm_escalation=llm_escalation,
+            expected_anchor_ids=research_anchor_ids,
         )
         for candidate, decision in zip(survivors, mapping_decisions, strict=True):
             if decision._model_route == "mini-escalation":
@@ -379,6 +425,8 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
                 continue
             if candidate.provision_id in gold_anchor_ids:
                 mapped_anchor_ids.add(candidate.provision_id)
+            if candidate.provision_id in research_anchor_ids:
+                mapped_research_ids.add(candidate.provision_id)
             props = candidate.props
             # RuleUnit.text may be a shortened retrieval view.  The legal proof
             # contract is the canonical structural context, including immediate
@@ -387,7 +435,10 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
             from packages.verifier.gates import finalize_snippet_result
 
             finalized = finalize_snippet_result(
-                decision.verbatim_snippet, source_context)
+                decision.verbatim_snippet,
+                source_context,
+                semantic_blocks=(props.get("metadata") or {}).get("semantic_blocks"),
+            )
             decision.verbatim_snippet = finalized.text
             gate_results, ok = run_gates(
                 snippet=decision.verbatim_snippet,
@@ -514,6 +565,8 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
             )
             if candidate.provision_id in gold_anchor_ids:
                 passed_anchor_ids.add(candidate.provision_id)
+            if candidate.provision_id in research_anchor_ids:
+                passed_research_ids.add(candidate.provision_id)
             indicator_rows += 1
             stats["mapped"] += 1
 
@@ -523,6 +576,26 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
         indicator_stats["gate_survival_recall"] = (
             sum(bool(ids & passed_anchor_ids) for ids in anchor_matches.values()) / len(anchor_matches)
             if anchor_matches else None)
+        indicator_stats["expected_anchor_trace"] = []
+        for expected in research_rows:
+            matched_ids = research_matches.get(expected["anchor_id"], set())
+            if not matched_ids:
+                outcome = "ACQUISITION_OR_STRUCTURE_MISS"
+            elif not (matched_ids & survivor_ids):
+                outcome = "SCREEN_MISS"
+            elif not (matched_ids & mapped_research_ids):
+                outcome = "MAPPING_MISS"
+            elif not (matched_ids & passed_research_ids):
+                outcome = "GATE_MISS"
+            else:
+                outcome = "PASS"
+            indicator_stats["expected_anchor_trace"].append({
+                "anchor_id": expected["anchor_id"],
+                "instrument": expected["instrument"],
+                "citation": expected["citation"],
+                "matched_provision_ids": sorted(matched_ids),
+                "outcome": outcome,
+            })
         stats["by_indicator"][indicator_id] = indicator_stats
 
         if indicator_rows == 0 and not any(f.indicator_id == indicator_id for f in findings):
@@ -589,6 +662,8 @@ def run(country: str, pillar: int, provider_profile: str = "hybrid_accuracy") ->
             "corpus_fingerprint": corpus_fingerprint(corpus),
             "known_index_sha256": __import__("hashlib").sha256(
                 Path("data/known_index.json").read_bytes()).hexdigest(),
+            "expected_anchor_ledger_sha256": __import__("hashlib").sha256(
+                Path("configs/expected_anchors.json").read_bytes()).hexdigest(),
             "pipeline_stats": stats,
             "elapsed_seconds": round(time.time() - started, 1),
             "live_llm_calls": True,

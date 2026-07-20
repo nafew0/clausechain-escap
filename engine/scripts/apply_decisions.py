@@ -56,13 +56,18 @@ def _atomic_write(path: Path, payload) -> str:
     return digest
 
 
-def _validate_findings(items: list[dict], template_keys: set[str]) -> None:
+def _validate_findings(items: list[dict], template_subjects: dict[str, str]) -> None:
     from packages.core.schemas import ReviewDecision
 
     for item in items:
         key, review = item.get("finding_key"), item.get("review") or {}
-        if key not in template_keys:
+        if key not in template_subjects:
             raise ValueError(f"unknown finding_key {str(key)[:16]}…")
+        subject_hash = item.get("review_subject_hash")
+        if subject_hash != template_subjects[key]:
+            raise ValueError(
+                f"{str(key)[:12]}: stale or missing review_subject_hash; refresh authoritative evidence"
+            )
         decision = review.get("decision")
         if decision not in {"approved", "rejected"}:
             raise ValueError(f"{str(key)[:12]}: decision must be approved|rejected "
@@ -113,17 +118,24 @@ def apply(root: Path, domain: str, decisions: list[dict],
             current = json.loads(path.read_text()) if path.is_file() else template
             if expected_sha and path.is_file() and _sha(path.read_bytes()) != expected_sha:
                 return {"ok": False, "conflict": True, "sha256": _sha(path.read_bytes())}
-            _validate_findings(decisions, {t["finding_key"] for t in template})
+            template_subjects = {
+                t["finding_key"]: t["review_subject_hash"] for t in template
+            }
+            _validate_findings(decisions, template_subjects)
             # Template-refresh migration: seed from the CURRENT template (new keys
             # start as pending template rows), overlay any existing decisions whose
             # keys survive, then apply this batch. Rows for keys no longer in the
             # template drop out of the live file — their receipts are preserved in
             # the exported bundles (append-only history).
             by_key = {t["finding_key"]: t for t in template}
-            by_key.update({d["finding_key"]: d for d in current
-                           if d.get("finding_key") in by_key})
+            by_key.update({
+                d["finding_key"]: d for d in current
+                if d.get("finding_key") in by_key
+                and d.get("review_subject_hash") == template_subjects[d["finding_key"]]
+            })
             for item in decisions:  # latest-wins supersession (append-only history lives in the DB)
                 by_key[item["finding_key"]] = {"finding_key": item["finding_key"],
+                                               "review_subject_hash": item["review_subject_hash"],
                                                "review": item["review"]}
             merged = [by_key[t["finding_key"]] for t in template]  # template order + completeness
         else:

@@ -24,7 +24,7 @@ def main() -> int:
     parser.add_argument("--out", default="finding_key_map.json")
     args = parser.parse_args()
 
-    from packages.core.finalization import finding_key
+    from packages.core.finalization import finding_key, review_subject_hash
     from packages.core.schemas import MappedFinding
 
     # the bundle names proof pages assets/{finding_key}.png (build_review_bundle.py)
@@ -42,6 +42,7 @@ def main() -> int:
                        or str(proof_status or "").startswith("unaligned"))
             rows.append({
                 "finding_key": key,
+                "review_subject_hash": review_subject_hash(finding),
                 "run": run,
                 "economy": finding.economy,
                 "indicator": finding.indicator_id,

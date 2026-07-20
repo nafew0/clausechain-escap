@@ -19,6 +19,45 @@ def finding_key(finding: MappedFinding) -> str:
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
+def review_subject_payload(finding: MappedFinding) -> dict:
+    """Material facts a legal approval actually attests to.
+
+    Finding keys identify rows; this payload additionally binds approval to the
+    complete proof, status fact, rationale and absence coverage.  Volatile model
+    object formatting is removed by canonical JSON serialization, but evidence
+    timestamps remain material: refreshed currentness/coverage requires review.
+    """
+    proof = (finding.citation_proof.model_dump(mode="json", exclude={"verified_at"})
+             if finding.citation_proof else None)
+    return {
+        "contract": "clausechain-review-subject-v1",
+        "finding_key": finding_key(finding),
+        "economy": finding.economy,
+        "indicator_id": finding.indicator_id,
+        "law_name": finding.law_name,
+        "article_section": finding.article_section,
+        "verbatim_snippet": finding.verbatim_snippet,
+        "mapping_rationale": finding.mapping_rationale,
+        "source_url": finding.source_url,
+        "source_artifact_id": finding.source_artifact_id,
+        "citation_proof": proof,
+        "status_evidence": (finding.status_evidence_record.model_dump(mode="json")
+                            if finding.status_evidence_record else None),
+        "search_coverage_manifest": (
+            finding.search_coverage_manifest.model_dump(mode="json")
+            if finding.search_coverage_manifest else None
+        ),
+    }
+
+
+def review_subject_hash(finding: MappedFinding) -> str:
+    encoded = json.dumps(
+        review_subject_payload(finding), sort_keys=True, separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+
 def validate_final_finding(finding: MappedFinding,
                            artifacts: dict[str, SourceArtifact],
                            spans: dict[str, TextSpan] | None = None) -> None:
@@ -67,6 +106,14 @@ def validate_final_finding(finding: MappedFinding,
                 errors.append("CitationProof hash does not match SourceArtifact")
             if proof.exact_snippet != finding.verbatim_snippet:
                 errors.append("CitationProof exact snippet differs from export")
+            if proof.source_start_char is None or proof.source_end_char is None:
+                errors.append("CitationProof lacks canonical source offsets")
+            elif proof.source_end_char <= proof.source_start_char:
+                errors.append("CitationProof source offsets are invalid")
+            elif not finding.raw_context:
+                errors.append("finding lacks canonical raw_context for proof replay")
+            elif finding.raw_context[proof.source_start_char:proof.source_end_char] != proof.exact_snippet:
+                errors.append("CitationProof offsets do not reproduce the exact export snippet")
             if proof.alignment_status not in {"exact", "anchor"}:
                 errors.append("citation is unresolved")
             if not proof.page_number and not proof.anchor:
@@ -88,6 +135,14 @@ def validate_final_finding(finding: MappedFinding,
                         errors.append("exported snippet is not an exact stored TextSpan slice")
             if any(g.get("status") == "FAIL" for g in proof.gate_results):
                 errors.append("CitationProof contains a failed gate")
+            closure_gates = [g for g in proof.gate_results if g.get("gate_id") == "G9"]
+            if not closure_gates:
+                errors.append("CitationProof lacks structural closure gate G9")
+            elif closure_gates[-1].get("metadata", {}).get("closure_code") not in {
+                    "PASS_CLOSED", "PASS_LONG_BUT_CLOSED"}:
+                errors.append("CitationProof does not prove a structurally closed snippet")
+            if not proof.exact_snippet.rstrip().endswith((".", "!", "?")):
+                errors.append("exported snippet does not end at a sentence/paragraph boundary")
     if errors:
         raise FinalizationError(f"{finding_key(finding)}: " + "; ".join(errors))
 

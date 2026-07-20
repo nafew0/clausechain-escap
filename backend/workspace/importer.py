@@ -276,6 +276,11 @@ def _finding_lookup(key_map):
             raise SnapshotImportError(
                 f"Missing or duplicate finding_key: {finding_key!r}"
             )
+        review_subject_hash = str(item.get("review_subject_hash") or "")
+        if len(review_subject_hash) != 64:
+            raise SnapshotImportError(
+                f"Missing review_subject_hash for finding {finding_key[:12]}"
+            )
         by_key[finding_key] = item
         identity = tuple(
             " ".join(str(item.get(key) or "").split()).casefold()
@@ -560,6 +565,9 @@ def import_snapshot(artifacts=None, *, keep=5):
                         row_json=row,
                         stable_key=stable_key,
                         finding_key=finding_key,
+                        review_subject_hash=str(
+                            (key_item or {}).get("review_subject_hash") or ""
+                        ),
                         blocked=bool(reason),
                         block_reason=reason,
                         source_hash=content_hash(row),
@@ -584,6 +592,7 @@ def import_snapshot(artifacts=None, *, keep=5):
                     position=position,
                     row_json=row,
                     finding_key=key_item["finding_key"],
+                    review_subject_hash=key_item["review_subject_hash"],
                     proof_asset=str(key_item.get("proof_asset") or ""),
                     blocked=bool(key_item.get("blocked")),
                     source_hash=content_hash(row),

@@ -76,13 +76,16 @@ def _candidate_context(candidate) -> str:
 
 
 def escalation_reasons(decision: MapDecision, indicator_id: str, candidate,
-                       gold_anchor: bool = False) -> list[str]:
+                       gold_anchor: bool = False,
+                       expected_anchor: bool = False) -> list[str]:
     """Deterministic mini boundary: only material ambiguity or malformed evidence."""
     reasons: list[str] = []
     context = _candidate_context(candidate)
     text = context.casefold()
     if gold_anchor and not decision.applies:
         reasons.append("known-anchor-rejected")
+    elif expected_anchor and not decision.applies:
+        reasons.append("expected-anchor-rejected")
     if decision.applies and not _snippet_locatable(decision.verbatim_snippet, context):
         reasons.append("snippet-not-source-locatable")
     if decision.applies and decision.confidence < 0.72:
@@ -159,7 +162,8 @@ Return one decision per candidate, using each candidate's index number."""
 
 
 def _mapping_prompt(indicator_id: str, cfg: dict, candidate,
-                    gold_anchor: bool = False) -> str:
+                    gold_anchor: bool = False,
+                    expected_anchor: bool = False) -> str:
     props = candidate.props
     canonical_context = _candidate_context(candidate)
     return f"""You are a legal analyst applying the ESCAP RDTII 2.1 methodology.
@@ -169,6 +173,7 @@ def _mapping_prompt(indicator_id: str, cfg: dict, candidate,
 {GOLDEN_RULES}
 
 {"GOLD ANCHOR: ESCAP's master dataset records THIS provision under THIS indicator (KNOWN baseline). Reproducing it proves recall — unless the text PLAINLY contradicts the legal test, set applies=true and extract the operative quote." if gold_anchor else ""}
+{"VERIFIED RESEARCH EXPECTATION: an official-source research report expects this provision to be assessed under this indicator. Do not assume it qualifies; make the legal-test decision explicitly and preserve a diagnostic reason if it does not." if expected_anchor and not gold_anchor else ""}
 
 PROVISION UNDER ANALYSIS
 Law: {props.get('law_name', '')}
@@ -192,12 +197,15 @@ TASK
 
 
 def map_candidate(llm_primary, indicator_id: str, cfg: dict, candidate,
-                  gold_anchor: bool = False, llm_escalation=None) -> MapDecision:
+                  gold_anchor: bool = False, llm_escalation=None,
+                  expected_anchor: bool = False) -> MapDecision:
     """Nano-first mapping; mini is restricted to deterministic escalation cases."""
-    prompt = _mapping_prompt(indicator_id, cfg, candidate, gold_anchor)
+    prompt = _mapping_prompt(indicator_id, cfg, candidate, gold_anchor, expected_anchor)
     decision = _complete(llm_primary, prompt, MapDecision,
                          f"clausechain:map:v3:{indicator_id}")
-    reasons = escalation_reasons(decision, indicator_id, candidate, gold_anchor)
+    reasons = escalation_reasons(
+        decision, indicator_id, candidate, gold_anchor, expected_anchor
+    )
     decision._model_route = "nano"
     decision._escalation_reasons = reasons
     if reasons and llm_escalation is not None:
@@ -216,12 +224,17 @@ Independently correct the decision. Do not defer to the provisional answer."""
 
 
 def map_candidates(llm_primary, indicator_id: str, cfg: dict, candidates: list,
-                   gold_anchor_ids: set[str], llm_escalation=None) -> list[MapDecision]:
+                   gold_anchor_ids: set[str], llm_escalation=None,
+                   expected_anchor_ids: set[str] | None = None) -> list[MapDecision]:
     """Map an indicator pool together so final sweeps can use the 50%-off Batch API."""
     if not candidates:
         return []
-    prompts = [_mapping_prompt(indicator_id, cfg, candidate,
-                               candidate.provision_id in gold_anchor_ids)
+    expected_anchor_ids = expected_anchor_ids or set()
+    prompts = [_mapping_prompt(
+                   indicator_id, cfg, candidate,
+                   candidate.provision_id in gold_anchor_ids,
+                   candidate.provision_id in expected_anchor_ids,
+               )
                for candidate in candidates]
     keys = [f"clausechain:map:v3:{indicator_id}"] * len(prompts)
     if hasattr(llm_primary, "complete_many"):
@@ -236,7 +249,10 @@ def map_candidates(llm_primary, indicator_id: str, cfg: dict, candidates: list,
     for index, (candidate, decision, prompt) in enumerate(
             zip(candidates, decisions, prompts, strict=True)):
         reasons = escalation_reasons(
-            decision, indicator_id, candidate, candidate.provision_id in gold_anchor_ids)
+            decision, indicator_id, candidate,
+            candidate.provision_id in gold_anchor_ids,
+            candidate.provision_id in expected_anchor_ids,
+        )
         decision._model_route = "nano"
         decision._escalation_reasons = reasons
         if reasons and llm_escalation is not None:

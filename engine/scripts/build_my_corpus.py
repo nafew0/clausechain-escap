@@ -276,6 +276,11 @@ def main() -> int:
                   f"({len(units)} units/{len(pages)} pages)")
             build_complete = False
             continue
+        from packages.extractors.pdf_align import align_and_bind_pdf_evidence
+
+        aligned, unit_count = align_and_bind_pdf_evidence(units, [file], [text_spans])
+        if aligned != unit_count:
+            print(f"  ALIGNMENT REVIEW {act_name[:45]}: {aligned}/{unit_count} exact")
         for unit in units:
             unit.metadata["archived_copy"] = file
             unit.metadata["access_date"] = entry.get("access_date")
@@ -288,12 +293,9 @@ def main() -> int:
             unit.metadata["build_generation"] = generation
             unit.metadata["status_evidence"] = status.model_dump(mode="json")
             unit.source_artifact_id = artifact.id
-            unit.raw_context = unit.text
+            unit.raw_context = unit.raw_context or unit.text
             try:
                 page_no = int(unit.location_reference.rsplit(" ", 1)[-1])
-                unit.linked_span_ids = [s.id for s in text_spans if s.page_number == page_no]
-                unit.metadata["citation_span_boxes"] = [list(s.bbox) for s in text_spans
-                    if s.page_number == page_no and s.text.strip() and s.text.strip() in unit.text]
                 page_record = next((p for p in pages if p.page_number == page_no), None)
                 unit.metadata["ocr_citation_disagreement"] = bool(
                     page_record and page_record.metadata.get("citation_token_disagreement"))
