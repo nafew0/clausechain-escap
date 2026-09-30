@@ -1,0 +1,261 @@
+{
+ "_doc": "Engine-action allowlist (App Dev Plan Rev B #4). The worker executes ONLY these actions, argv built from the template with validated params, shell=False, cwd=ENGINE_ROOT, stdout/stderr captured to the EngineAction row with a SHA-256 of each produced artifact. Anything not listed is refused.",
+ "actions": {
+  "refresh_payload": {
+   "_doc": "Refresh snapshot for one model backend: rebuilds its review inputs (refuter, consolidation, recall, zone-3, review bundle, champion report) for runs newer than its consolidated set, with that backend's models, then the worker imports that mode's snapshot. mode=local writes only the separate Local files.",
+   "argv": [
+    ".venv/bin/python",
+    "scripts/prepare_review_inputs.py",
+    "--mode",
+    "{mode}",
+    "--out",
+    "ui_export.zip"
+   ],
+   "params": {
+    "mode": {
+     "enum": [
+      "hybrid",
+      "local"
+     ]
+    }
+   },
+   "timeout_s": 3600,
+   "exclusive": true
+  },
+  "apply_decisions": {
+   "argv": [
+    ".venv/bin/python",
+    "scripts/apply_decisions.py",
+    "--domain",
+    "{domain}",
+    "--input",
+    "{input_file}"
+   ],
+   "params": {
+    "domain": {
+     "enum": [
+      "findings",
+      "recall",
+      "zone3"
+     ]
+    },
+    "input_file": {
+     "pattern": "^/srv/clausechain/backend/var/decision_batches/[A-Za-z0-9_.-]+\\.json$"
+    }
+   },
+   "optional_flags": {
+    "expected_sha": [
+     "--expected-sha",
+     "{expected_sha}"
+    ],
+    "bundle_after": [
+     "--bundle-after"
+    ]
+   },
+   "timeout_s": 60
+  },
+  "export_bundle": {
+   "argv": [
+    ".venv/bin/python",
+    "-c",
+    "import sys; sys.path.insert(0,'.'); from scripts.apply_decisions import export_bundle; from pathlib import Path; import json; print(json.dumps(export_bundle(Path('.'))))"
+   ],
+   "params": {},
+   "timeout_s": 60
+  },
+  "replay": {
+   "argv": [
+    ".venv/bin/python",
+    "scripts/submission_replay.py"
+   ],
+   "params": {
+    "mode": {
+     "enum": [
+      "hybrid",
+      "local"
+     ]
+    }
+   },
+   "optional_flags": {
+    "bundle": [
+     "--bundle",
+     "{bundle}"
+    ]
+   },
+   "param_constraints": {
+    "bundle": {
+     "pattern": "^data/review/bundles/[A-Za-z0-9-]+$"
+    }
+   },
+   "timeout_s": 300,
+   "_doc": "Approval-only replay of one model backend's decisions (the worker sets CLAUSECHAIN_REVIEW_MODE from mode)."
+  },
+  "champion_validate": {
+   "argv": [
+    ".venv/bin/python",
+    "scripts/champion_validate.py"
+   ],
+   "params": {},
+   "timeout_s": 900
+  },
+  "run_pipeline": {
+   "_doc": "superuser-only at the API layer (G4); spend cap is the backstop. provider_profile/out_prefix come from the app's run mode: hybrid -> hybrid_accuracy/final (final_r2 for the round-2 economies the snapshot imports as final_r2_*), local -> local_openweights/local",
+   "argv": [
+    ".venv/bin/python",
+    "run.py",
+    "--economy",
+    "{economy}",
+    "--pillar",
+    "{pillar}",
+    "--provider-profile",
+    "{provider_profile}",
+    "--out",
+    "outputs/{out_prefix}_{cc}_p{pillar}"
+   ],
+   "params": {
+    "economy": {
+     "enum": [
+      "Singapore",
+      "Malaysia",
+      "Australia",
+      "Thailand",
+      "India",
+      "Indonesia",
+      "Russian Federation",
+      "Mongolia",
+      "Lao PDR",
+      "Timor-Leste"
+     ]
+    },
+    "pillar": {
+     "enum": [
+      "2",
+      "6",
+      "7"
+     ]
+    },
+    "cc": {
+     "enum": [
+      "si",
+      "ma",
+      "au",
+      "th",
+      "in",
+      "id",
+      "ru",
+      "mn",
+      "la",
+      "tl"
+     ]
+    },
+    "provider_profile": {
+     "enum": [
+      "hybrid_accuracy",
+      "local_openweights"
+     ]
+    },
+    "out_prefix": {
+     "enum": [
+      "final",
+      "final_r2",
+      "local"
+     ]
+    }
+   },
+   "timeout_s": 3600,
+   "exclusive": true
+  },
+  "build_sg_corpus": {
+   "argv": [
+    ".venv/bin/python",
+    "scripts/build_sg_corpus.py"
+   ],
+   "params": {},
+   "timeout_s": 3600,
+   "exclusive": true
+  },
+  "build_my_corpus": {
+   "argv": [
+    ".venv/bin/python",
+    "scripts/build_my_corpus.py"
+   ],
+   "params": {},
+   "timeout_s": 3600,
+   "exclusive": true
+  },
+  "build_au_corpus": {
+   "argv": [
+    ".venv/bin/python",
+    "scripts/build_au_corpus.py"
+   ],
+   "params": {},
+   "timeout_s": 3600,
+   "exclusive": true
+  },
+  "build_r2_corpus": {
+   "_doc": "Build sources from the web app (Runs → Sources): download the economy's seed documents for the chosen pillar(s) or indicators, then read, parse and index them. Every download is streamed to the live console and listed for the Run Record.",
+   "argv": [
+    ".venv/bin/python",
+    "scripts/build_seeds_corpus.py",
+    "--economy",
+    "{economy}"
+   ],
+   "params": {
+    "economy": {
+     "enum": [
+      "Thailand",
+      "India",
+      "Indonesia",
+      "Russian Federation",
+      "Mongolia",
+      "Lao PDR",
+      "Timor-Leste",
+      "Singapore",
+      "Malaysia",
+      "Australia"
+     ]
+    }
+   },
+   "timeout_s": 7200,
+   "exclusive": true,
+   "optional_flags": {
+    "pillars": [
+     "--pillars",
+     "{pillars}"
+    ]
+   },
+   "param_constraints": {
+    "pillars": {
+     "pattern": "^P(1[0-2]|[1-9])(-I[0-9]{1,2})?(,P(1[0-2]|[1-9])(-I[0-9]{1,2})?)*$"
+    }
+   }
+  },
+  "archive_sources": {
+   "_doc": "Clear downloads (Runs → Sources): move an economy's downloaded sources and embedding caches to data/archive/<cc>-<time>/ so the next build fetches every document again. Nothing is deleted.",
+   "argv": [
+    ".venv/bin/python",
+    "scripts/archive_sources.py",
+    "--economy",
+    "{economy}"
+   ],
+   "params": {
+    "economy": {
+     "enum": [
+      "Thailand",
+      "India",
+      "Indonesia",
+      "Russian Federation",
+      "Mongolia",
+      "Lao PDR",
+      "Timor-Leste",
+      "Singapore",
+      "Malaysia",
+      "Australia"
+     ]
+    }
+   },
+   "timeout_s": 300,
+   "exclusive": true
+  }
+ }
+}

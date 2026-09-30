@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 
-from pydantic import BaseModel, Field, PrivateAttr
+from pydantic import BaseModel, Field, PrivateAttr, model_validator
 
 SCREEN_BATCH_SIZE = 12
 import os as _os
@@ -24,6 +24,28 @@ GOLDEN_RULES = """LEGAL RULES (ESCAP RDTII methodology — binding):
 - One provision can satisfy several indicators; judge THIS indicator's legal test only.
 - If the legal test is not met, say applies=false — never force a mapping."""
 
+
+def _null_to_default(*string_fields: str):
+    """A local model occasionally emits an explicit `null` for a field that has
+    a string default (verified 28 Sep 2026: qwen3:8b returned coverage=null and
+    crashed the run — pydantic only applies a field default when the key is
+    ABSENT, not when it's present and null). Treat null the same as absent for
+    these fields rather than failing validation outright; every field named
+    here already has a real default in the class body below."""
+    def _coerce(cls, data):
+        if isinstance(data, dict):
+            for field in string_fields:
+                if data.get(field) is None:
+                    data.pop(field, None)
+        return data
+    return model_validator(mode="before")(classmethod(_coerce))
+
+
+
+def golden_rules(cfg: dict) -> str:
+    """The pillar's binding rules: a rubric may carry its own (Pillar 2 has no
+    transfer/storage semantics); P6/P7 rubrics fall back to GOLDEN_RULES."""
+    return str(cfg.get("golden_rules") or GOLDEN_RULES).strip()
 
 class ScreenDecision(BaseModel):
     candidate_index: int
@@ -49,6 +71,8 @@ class MapDecision(BaseModel):
     exceptions: list[str] = Field(default_factory=list)
     _model_route: str = PrivateAttr(default="nano")
     _escalation_reasons: list[str] = PrivateAttr(default_factory=list)
+
+    _coerce_nulls = _null_to_default("verbatim_snippet", "rationale", "coverage")
 
 
 def _complete(llm, prompt: str, schema: type[BaseModel], cache_key: str):
@@ -154,8 +178,10 @@ def screen_candidates(llm_bulk, indicator_id: str, cfg: dict, candidates: list) 
     """Cheap relevance screen over retrieval candidates. Returns the surviving subset."""
     survivors = []
     pool = candidates[:SCREEN_CAP_PER_INDICATOR]
-    for start in range(0, len(pool), SCREEN_BATCH_SIZE):
-        batch = pool[start:start + SCREEN_BATCH_SIZE]
+    batches = [pool[start:start + SCREEN_BATCH_SIZE]
+               for start in range(0, len(pool), SCREEN_BATCH_SIZE)]
+    prompts = []
+    for batch in batches:
         listing = "\n\n".join(
             f"[{i}] ({c.props.get('article_section', '?')} — {c.props.get('heading', '')}) {c.text[:900]}"
             for i, c in enumerate(batch)
@@ -164,7 +190,7 @@ def screen_candidates(llm_bulk, indicator_id: str, cfg: dict, candidates: list) 
 
 {_indicator_brief(indicator_id, cfg)}
 
-{GOLDEN_RULES}
+{golden_rules(cfg)}
 
 For EACH numbered candidate below, decide if it PLAUSIBLY satisfies the indicator's legal test
 (err on the side of relevant=true when unsure — a later stage decides precisely; but apply the
@@ -174,11 +200,25 @@ CANDIDATES:
 {listing}
 
 Return one decision per candidate, using each candidate's index number."""
-        result = _complete(llm_bulk, prompt, ScreenBatch,
-                           f"clausechain:screen:v2:{indicator_id}")
-        for decision in result.decisions:
-            if decision.relevant and 0 <= decision.candidate_index < len(batch):
-                survivors.append(batch[decision.candidate_index])
+        prompts.append(prompt)
+    # Batches are independent: send them concurrently (the provider's bounded
+    # pool, CLAUSECHAIN_LLM_CONCURRENCY) exactly like the mapping stage. Results
+    # come back in input order, so survivors match the sequential screen.
+    cache_key = f"clausechain:screen:v2:{indicator_id}"
+    if len(prompts) > 1 and hasattr(llm_bulk, "complete_many"):
+        results = llm_bulk.complete_many(prompts, ScreenBatch,
+                                         prompt_cache_keys=[cache_key] * len(prompts))
+    else:
+        results = [_complete(llm_bulk, prompt, ScreenBatch, cache_key) for prompt in prompts]
+    from packages.core import progress
+
+    for number, (batch, result) in enumerate(zip(batches, results, strict=True), start=1):
+        kept = [batch[d.candidate_index] for d in result.decisions
+                if d.relevant and 0 <= d.candidate_index < len(batch)]
+        survivors.extend(kept)
+        progress.emit("screen", f"batch {number}/{len(batches)}: {len(kept)} of {len(batch)} kept",
+                      detail="\n".join(f"{c.props.get('law_name', '')[:60]} {c.props.get('article_section', '')}"
+                                       for c in kept))
     return survivors
 
 
@@ -191,7 +231,7 @@ def _mapping_prompt(indicator_id: str, cfg: dict, candidate,
 
 {_indicator_brief(indicator_id, cfg)}
 
-{GOLDEN_RULES}
+{golden_rules(cfg)}
 
 {"GOLD ANCHOR: ESCAP's master dataset records THIS provision under THIS indicator (KNOWN baseline). Reproducing it proves recall — unless the text PLAINLY contradicts the legal test, set applies=true and extract the operative quote." if gold_anchor else ""}
 {"VERIFIED RESEARCH EXPECTATION: an official-source research report expects this provision to be assessed under this indicator. Do not assume it qualifies; make the legal-test decision explicitly and preserve a diagnostic reason if it does not." if expected_anchor and not gold_anchor else ""}

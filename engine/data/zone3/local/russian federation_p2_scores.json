@@ -1,0 +1,102 @@
+{
+ "economy": "Russian Federation",
+ "pillar": 2,
+ "run": "run-ru-p2-1790693921",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Government Resolution No. 1875 establishes a general prohibition on the procurement of foreign goods, works, and services for state and municipal needs, which c"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites Federal Law No. 44-FZ and Government Resolution No. 1875, which establish a general prohibition on the procurement of foreign goods, works, a"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence cites Government Resolution No. 1875 and Federal Law 44-FZ, which establish a general prohibition on the procurement of foreign goods, works, and s"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 1.0,
+   "deterministic_reason": "source-code/IP surrender as a tender condition -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Article 1240.1(1) of the Civil Code explicitly states that the right to obtain a patent and the exclusive right to the result of intellectual activity directly "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Civil Code provisions (Art. 1240.1) mandate that the right to obtain a patent and exclusive rights to intellectual property results created under state or m"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence from the Civil Code (Art. 1240.1) and Federal Law 44-FZ (Art. 110.2) explicitly mandates that the state acquires exclusive rights to intellectual p"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence cites Government Resolution No. 1875, which explicitly establishes measures to provide national treatment and defines origin documents, constitutin"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites Government Resolution No. 1875 and Federal Law 44-FZ provisions that establish measures providing national treatment and restricting the repl"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence cites Government Resolution No. 1875, which explicitly establishes measures to provide national treatment and defines origin verification procedure"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

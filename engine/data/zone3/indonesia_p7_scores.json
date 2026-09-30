@@ -1,0 +1,164 @@
+{
+ "economy": "Indonesia",
+ "pillar": 7,
+ "run": "run-id-p7-1785608288",
+ "krippendorff_alpha": 0.079,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The cited provisions establish a horizontal personal-data-protection law with several rights and obligations, but the excerpts do not plainly establish that the"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "Law No. 27 of 2022 establishes a comprehensive horizontal personal-data-protection framework, including data-subject rights, consent withdrawal, security obliga"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "Law No. 27 of 2022 establishes a comprehensive horizontal data-protection framework, including data-subject rights, consent withdrawal, security obligations, pr"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited BSSN Regulations 1/2024, 2/2024, and 5/2024 are identified as horizontal cybersecurity instruments covering cyber incident management, cyber crisis ma"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "Dedicated horizontal cybersecurity frameworks exist through BSSN Regulations 1/2024 and 2/2024 covering national cyber incident and crisis management, reinforce"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The BSSN 2024 regulations establish dedicated, horizontal cybersecurity provisions covering cyber incident management, cyber crisis management, and a national c"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No verified evidence states a minimum data retention period."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence specifies a minimum data retention period."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No verified evidence specifies a minimum data retention period."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Article 34 imposes a horizontal DPIA obligation on controllers whenever processing poses a high risk, with no sector limitation, satisfying the across-all-secto"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The PDP Law requires DPIAs for high-risk processing and appointing a data-protection officer under specified criteria, but neither obligation applies across all"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence shows only a horizontal high-risk DPIA obligation and does not establish a DPO requirement; since the guide-only DPIA-only tier is not scored, this"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no government-access measure found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited evidence contains no verified text establishing a government access measure without independent judicial authorization."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No gate-verified evidence establishes a measure allowing government access to personal data without independent judicial authorization."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No verified evidence establishes any government access measure lacking independent judicial authorization."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

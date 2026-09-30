@@ -1,0 +1,58 @@
+{
+ "384567514a68ac7c": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 17 expressly governs sending or transferring electronic data, requiring owner authorization, recipient protection, encryption for important data, contractual consistency, and cessation upon refusal. It also addresses cross-border transfer of personal and government data outside Lao PDR. Article 25 supports encryption and an approved electronic certificate requirement."
+ },
+ "f6e5bf56cb8643eb": {
+  "supports_claim": "no",
+  "citation_matches": "yes",
+  "score_consistent": "no",
+  "issue": "claim_not_in_text",
+  "explanation": "Article 21 grants users a right to keep their information confidential and lists related duties; it does not require consent or safeguards for cross-border transfers. Article 30 concerns the Bank of Lao PDR’s regulatory coordination. No transfer condition appears, so the score should be 0."
+ },
+ "bf01af123df32fb2": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "unclear",
+  "issue": "claim_not_in_text",
+  "explanation": "Article 8 states only that electronic data comprises “two types”: general and specific. It does not establish that Lao PDR lacks a comprehensive horizontal personal-data-protection law, nor address the framework’s completeness. The citation is the correct provision, but the broader indicator conclusion is not shown by this text."
+ },
+ "ea9a869fa0624768": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "no",
+  "issue": "score_inconsistent",
+  "explanation": "Article 6 supports broad application to “person, legal entity and organizations” operating computer systems, while Article 3 supplies definitions. However, these excerpts do not establish a comprehensive horizontal cybersecurity framework or the claimed principles and measures. The stated lack of comprehensiveness conflicts with score 0, which requires such a framework."
+ },
+ "c99dd4a91901e26b": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 40(1) prohibits service providers from “deleting computer traffic data before ninety days” with a connection system and before “three hundred sixty five days” without one. This clearly establishes minimum retention periods, supporting score 1 and the Article 40 citation."
+ },
+ "fee2174c3ca756e7": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "no",
+  "issue": "score_inconsistent",
+  "explanation": "Article 29 grants the controller the right to “create [a] unit” for inspection, monitoring and security; it does not mandate a DPO. Article 46 refers to inspecting the responsibilities and methods of data-protection personnel, but requires neither a DPO nor DPIA. Thus score 1 is unsupported; the text fits score 0."
+ },
+ "f981c8a6de2d80a5": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "no",
+  "issue": "score_inconsistent",
+  "explanation": "Article 30(4) requires the data administrator to “provide data ... to relevant authorities” to identify offenders, without stating owner consent or a court order. Article 29(1) concerns blocking access or disclosure affecting national security and public order, not an interception power. Thus the text supports access without judicial authorization and score 1."
+ },
+ "bc8a8932501fc2a5": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "claim_not_in_text",
+  "explanation": "Articles 40 and 45 support retention/protection obligations and an investigation ordinance, but do not state that authorities may access personal data. Article 45 assigns the ordinance to the police investigation head or public prosecutor, not an independent judicial body; judicial oversight is not established in the cited text."
+ }
+}

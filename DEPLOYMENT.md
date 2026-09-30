@@ -1,0 +1,213 @@
+# ClauseChain — Deployment Guide
+
+ClauseChain runs on your own machine with **one command**. Docker is the only
+thing you install; Python, Node, PostgreSQL and every library are pinned inside
+the images, so the result is the same on macOS, Windows and Linux.
+
+The first run takes **20–40 minutes**, mostly downloading and building. After
+that, starting and stopping take seconds.
+
+- [1. What you need](#1-what-you-need)
+- [2. Install and start](#2-install-and-start)
+- [3. API keys](#3-api-keys)
+- [4. First five minutes in the app](#4-first-five-minutes-in-the-app)
+- [5. Everyday commands](#5-everyday-commands)
+- [6. Troubleshooting](#6-troubleshooting)
+- [7. For maintainers](#7-for-maintainers)
+
+---
+
+## 1. What you need
+
+| | |
+| :--- | :--- |
+| **Docker** | macOS / Windows: [Docker Desktop](https://docs.docker.com/desktop/). Linux: [Docker Engine](https://docs.docker.com/engine/install/) with the compose plugin. Start it before you begin. |
+| **Disk** | **30 GB free** with the full data: the download (3.3 GB), the unpacked data (15.5 GB), the images (about 5 GB) and Docker's build cache (about 6 GB, reclaimable afterwards). The partial data needs about 8 GB less. |
+| **Memory for Docker** | **8 GB** or more. Docker Desktop gives itself half of the computer's memory by default, so a 16 GB machine is fine as it is; on an 8 GB machine raise it in Docker Desktop → Settings → Resources → Memory. Re-running Australia loads a 4 GB embedding cache. |
+| **Internet** | For the first run only (images and the data bundle). |
+| **API keys** | Only for starting new runs. Browsing, review and every result work without them. See [section 3](#3-api-keys). |
+
+---
+
+## 2. Install and start
+
+### macOS and Linux
+
+```bash
+git clone https://github.com/nafew0/clausechain-escap.git
+cd clausechain-escap
+./deploy.sh --env-file /path/to/keys.env
+```
+
+### Windows (PowerShell)
+
+```powershell
+git clone https://github.com/nafew0/clausechain-escap.git
+cd clausechain-escap
+powershell -ExecutionPolicy Bypass -File .\deploy.ps1 -EnvFile C:\path\to\keys.env
+```
+
+WSL 2 and Git Bash users can run `./deploy.sh` instead.
+
+Leave out `--env-file` / `-EnvFile` if you have no keys yet; you can add them
+later ([section 3](#3-api-keys)).
+
+### What the script does
+
+| Step | What happens |
+| :--- | :--- |
+| 1. Prerequisites | Finds Docker (even if this terminal was opened before Docker was installed), checks that it is running, checks disk space. |
+| 2. Settings | Creates `.env` with fresh random secrets, and `engine/.env` from your keys file. |
+| 3. Data | Asks for the full (3.3 GB) or partial (1.3 GB) data bundle, downloads it, verifies its SHA-256 and unpacks it: the built corpus, every downloaded source document and every run (full also has the embedding caches for both models and the run logs). An interrupted download resumes when you run the script again. |
+| 4. Build and start | Builds the images, prepares the database and starts the app. |
+| 5. Wait | Waits until the website and the API answer. |
+| 6. Import | Loads the Hybrid and Local results and the signed review decisions into the database. |
+| 7. Admin account | Creates the `admin` account and saves its password to `.deploy-credentials.txt`. |
+
+When it finishes it prints:
+
+```
+ClauseChain is running:  http://localhost:8080
+  Sign in:   Username: admin Password: …   (saved in .deploy-credentials.txt)
+```
+
+Open **http://localhost:8080** and sign in.
+
+The script is safe to run again at any time: finished steps are skipped, and
+nothing you did in the app is overwritten.
+
+### Options
+
+| macOS / Linux | Windows | Use |
+| :--- | :--- | :--- |
+| `--data full` | `-Data full` | Full data bundle, 3.3 GB: corpus, source downloads, run outputs, embedding caches and run logs. Re-runs need no re-embedding. The script asks if you leave this out. |
+| `--data partial` | `-Data partial` | Partial data bundle, 1.3 GB: corpus, source downloads and run outputs. A re-run first re-embeds the corpus (needs the keys). |
+| `--env-file FILE` | `-EnvFile FILE` | Install the engine keys from FILE. |
+| `--port 9090` | `-Port 9090` | Serve on another port (default 8080). |
+| `--data-file FILE` | `-DataFile FILE` | Use a data bundle you already downloaded. |
+| `--data-url URL` | `-DataUrl URL` | Download the data bundle from another location. |
+| `--skip-data` | `-SkipData` | Start without the data (empty workspace). |
+| `--no-build` | `-NoBuild` | Start the existing images without rebuilding. |
+
+---
+
+## 3. API keys
+
+Keys live in one file, **`engine/.env`**. It is never in git or in the
+images; the containers read it read-only. Every setting is described in
+`engine/.env.example`.
+
+| Engine | Settings |
+| :--- | :--- |
+| **Engine A — commercial hosted** (the **Hybrid** tab) | `OPENAI_API_KEY`. The model is `HYBRID_LLM_PROVIDER=openai`, `HYBRID_LLM_MODEL=gpt-6-luna` (OpenAI API); embeddings use `text-embedding-3-small` with the same key. To go through OpenRouter instead: `HYBRID_LLM_PROVIDER=openrouter`, `HYBRID_LLM_MODEL=openai/gpt-6-luna`, `OPENROUTER_API_KEY`. |
+| **Engine B — open weights** (the **Local** tab) | Any OpenAI-compatible server (vLLM, Ollama `/v1`, a hosted open-weights API): `LOCALAI_ENDPOINT`, `LOCALAI_API_KEY`, `LOCALAI_MODEL` (the id the server expects), `LOCALAI_MODEL_LABEL` (the real weights, recorded on every finding), and `LOCALAI_EMBED_ENDPOINT` for the bge-m3 embeddings (`LOCALAI_EMBED_API_KEY` may stay blank to reuse `LOCALAI_API_KEY`). |
+| **OCR** (scanned PDFs only) | `OCR_PROVIDER`, `OCR_ENDPOINT`, `OCR_API_KEY`. Text PDFs and web pages need no OCR. |
+
+**Adding or changing keys later:** edit `engine/.env`, then restart the two
+services that run the engine:
+
+```bash
+docker compose restart engine-worker backend
+```
+
+Write one setting per line. A comment after a value (`KEY=value  # note`) is
+ignored.
+
+---
+
+## 4. First five minutes in the app
+
+| To do this | Go here |
+| :--- | :--- |
+| Switch between Engine A and Engine B | The **Hybrid \| Local** tabs at the top of every page. The two workspaces are kept fully separate. |
+| See every finding with its citation, quote and source link | **RDTII Dataset** |
+| Review and sign findings | **Review**: the NEW, Absence, Recall, Zone-3 and KNOWN queues. Select a finding and press **Source Match** to see the quote beside the official source it came from. |
+| See the scores per economy and indicator | **RDTII Matrix** |
+| Compare Engine A with Engine B | **Model Comparison** |
+| Start a run | **Runs** → choose the economy and pillar → **Build sources** (downloads the official sources; documents already downloaded are reused, so a second pass fetches nothing new) → **Queue run**. Progress appears in plain words while it runs. |
+| Bring finished runs into review | **Runs** → **Refresh snapshot** (on the Local tab: **Refresh Local snapshot**). |
+
+---
+
+## 5. Everyday commands
+
+Run these in the `clausechain-escap` folder.
+
+| | |
+| :--- | :--- |
+| Stop | `docker compose stop` |
+| Start again | `docker compose start` |
+| Status | `docker compose ps` |
+| Logs | `docker compose logs -f backend engine-worker` |
+| Update to a newer version | `git pull`, then `./deploy.sh` (Windows: `.\deploy.ps1`) |
+| Remove the containers (keeps data and database) | `docker compose down` |
+| Remove everything, including the database | `docker compose down -v` |
+| Reclaim the download and build cache | Delete `.deploy-cache/`, then `docker builder prune` |
+
+---
+
+## 6. Troubleshooting
+
+| Symptom | Fix |
+| :--- | :--- |
+| `Docker is installed but not running` | Start Docker Desktop, wait until it says it is running, run the script again. |
+| `docker: command not found` in your own terminal | Open a new terminal window. Docker Desktop adds itself to the PATH only for terminals opened after it was installed. The deploy scripts find it either way. |
+| `port is already allocated` | Another program uses port 8080: `./deploy.sh --port 9090`. |
+| The download stopped | Run the script again; it resumes. |
+| `Checksum mismatch` | Delete the file in `.deploy-cache/` and run the script again. |
+| `snapshot import failed` | Read `.deploy-import-hybrid.log` or `.deploy-import-local.log`, then run the script again. |
+| Review queues show 0 decided | Run the script again; step 6 loads the signed decisions (log: `.deploy-import-decisions.log`). |
+| A run fails with `OPENAI_API_KEY is not set` (or `LOCALAI_ENDPOINT is not set`) | Add the key to `engine/.env`, then `docker compose restart engine-worker backend`. |
+| A run stops suddenly with no error, or `docker compose logs engine-worker` shows exit code 137 | Docker ran out of memory: raise it to 8 GB or more (section 1). |
+| `required variable … is missing a value` from `docker compose` | Run `./deploy.sh` first; it creates the `.env` those commands need. |
+| Windows: `running scripts is disabled on this system` | Use the `powershell -ExecutionPolicy Bypass -File .\deploy.ps1` form shown above. |
+
+---
+
+## 7. For maintainers
+
+### What comes from where
+
+| Content | Source |
+| :--- | :--- |
+| Code, review decisions, Zone-3 scores, review bundles, proof images | Git |
+| Built corpus (`engine/data/graph_v2.db`), source downloads (`engine/data/raw/`), embedding caches (`engine/data/cache/`), run outputs (`engine/outputs/`), run logs | The data bundle |
+| Secrets (`.env`) and admin password (`.deploy-credentials.txt`) | Generated by the deploy script |
+| Model keys (`engine/.env`) | Supplied privately, never committed |
+
+### Publishing a new data bundle
+
+Rebuild it whenever runs, sources or the corpus change:
+
+```bash
+deploy/make_data_bundle.sh
+```
+
+It snapshots the corpus safely while the app runs, refuses to pack if an API
+key appears in the logs, outputs or corpus, and prints the SHA-256 (about 6
+minutes). Upload `dist/clausechain-data-YYYYMMDD.tar.gz`, then put the direct
+download link and the SHA-256 into `deploy/data_bundle.cfg`
+(`CLAUSECHAIN_DATA_FULL_*`, or `CLAUSECHAIN_DATA_PARTIAL_*` for the smaller
+bundle) and commit it.
+
+### Testing a fresh install
+
+```bash
+git clone https://github.com/nafew0/clausechain-escap.git /tmp/cc-test
+cd /tmp/cc-test
+./deploy.sh --port 8090 --data-file /path/to/clausechain-data-YYYYMMDD.tar.gz
+```
+
+The Review page should show the same decided counts as your own workspace.
+Remove it afterwards with `docker compose down -v` in that folder.
+
+### Files
+
+| File | Purpose |
+| :--- | :--- |
+| `deploy.sh`, `deploy.ps1` | The one-command installers (same steps). |
+| `docker-compose.yml` | The seven services: postgres, redis, migrate, backend, engine-worker, frontend, nginx (plus an optional `ollama` profile). |
+| `backend/Dockerfile`, `backend/constraints.txt`, `engine/uv.lock` | The pinned backend and engine environment. |
+| `deploy/data_bundle.cfg` | Where the data bundle is downloaded from, and its SHA-256. |
+| `deploy/make_data_bundle.sh` | Builds the data bundle. |
+| `deploy/DEPLOY.md` | Production server without Docker (systemd + nginx). |

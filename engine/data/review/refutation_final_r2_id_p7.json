@@ -1,0 +1,758 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Law No. 27 of 2022 on Personal Data Protection (official BPK",
+  "article": "Art. 58(1)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "Article 58(1) merely assigns the Government a role in administering personal-data protection; its reference to protection under the Law does not establish that the law is horizontal and comprehensive for P7-I1."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Under P7-I1, the evidence must support scoring the existence and completeness of a horizontal framework. The rubric has no required hunt_in fields, but this institutional-administration provision does not establish either comprehensive coverage (score 0) or sectoral/thin coverage (score 0.5); it evidences governance arrangements instead."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The quoted text establishes only that the Government has a role under the Law and that an administering institution will be created. Neither the quotation nor the surrounding context states that the framework is horizontal, comprehensive, or complete."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Law No.27 on Personal Data Protection 2022",
+  "article": "Art. 16",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 16 performs a data-protection function by defining controllers and processors and applies across individuals, corporations, public bodies, and international organizations. That is not a keyword-only or sector-specific mismatch, and the supplied horizontal Law No. 27/2022 supports the claimed scope."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 has an empty hunt_in and expressly allows a framework-evidencing provision as an evidence row for an absence-scored indicator. The law's stated horizontal coverage supports a framework-present outcome, ordinarily score 0 if comprehensive; the excerpt need not itself enumerate every element of comprehensiveness to be valid evidence."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes controller and processor roles, permitted processing arrangements, and broad applicability to private, public, and international actors. It does not alone prove every aspect of comprehensiveness, but in context it directly evidences a horizontal personal-data-protection framework, which the rubric permits for P7-I1."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Omnibus Health Law No.17 2023 (UU Kesehatan)",
+  "article": "Art. 351(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 351(1) imposes a mandatory protection duty on health-information-system providers, and the mapping expressly treats it as sectoral evidence. Under P7-I1, sectoral-only evidence is relevant and may support the intermediate 0.5 outcome; the text is not being misread as a comprehensive horizontal law."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has an empty hunt_in and expressly records sectoral data-protection laws for P7-I1. This provision supplies sectoral health-data protection evidence and is consistent with the 0.5 sectoral-only category, although it cannot alone prove that no horizontal framework exists. The mandatory term wajib supports the stated duty; the WARN does not invalidate the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text actually requires health-information-system providers to protect each individual's health data and information. The surrounding text confirms consent or another lawful basis and certain data-subject rights. It establishes a health-sector protection regime, not a comprehensive horizontal law, which is exactly the limited proposition used in the rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PBI 23/6/PBI/2021 Payment Service Providers",
+  "article": "Art. 257(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision expressly governs PJP and payment-system data processing, so it supports sectoral data-protection evidence. Under P7-I1, sectoral-only laws are an expressly recognized scoring category and are not a scope defect merely because they are not horizontal."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has an empty hunt_in and expressly scores sectoral-only laws at 0.5. The surrounding text uses mandatory 'wajib' language, so the G6 warning does not defeat the mapping; the provision is valid evidence of a sectoral framework, subject to confirming that no comprehensive horizontal framework exists."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted context establishes mandatory personal-data-protection principles for payment-service providers and related parties, including consent, rights, security, and retention-related deletion. It does not itself establish the absence of a horizontal law, but the mapping claims only sectoral coverage, which is consistent with the supplied P7-I1 scoring rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PBI 23/7/PBI/2021 Payment System Infrastructure",
+  "article": "Art. 222(2)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes mandatory duties on payment-system entities through “wajib” and expressly concerns personal-data-protection principles. Its sectoral scope is not a defect because the rubric records sectoral laws as evidence for the 0.5 sectoral-only outcome."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I1, this is sectoral-only evidence and supports a score of 0.5, not 0. The rubric has no hunt_in requirement, and the text’s “wajib” supplies mandatory modality; the G6 warning does not invalidate the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The citation identifies Article 222(2), but the operative personal-data obligations and sectoral scope appear in Article 222(1); paragraph (2) only qualifies their application by public-interest and authority requirements. Thus the exact cited subsection alone does not establish the claimed sectoral core framework, although the surrounding excerpt does."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "POJK 27/2024 Digital Financial Asset Trading incl. Crypto (A",
+  "article": "Art. 119(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 119 is expressly limited to digital-financial-asset trading providers and imposes personal-data obligations, so it is a valid sectoral-framework evidence row. The mapping does not rely on confidentiality as localization or otherwise misstate the legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I1, hunt_in is unrestricted and the rubric expressly records sectoral laws; this provision supports the sectoral-only outcome corresponding to score 0.5, not a claim of no framework or score 1. The text uses mandatory 'wajib' (must), so G6's warning does not create a refutation."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text requires covered providers to preserve the integrity and availability of personal, transaction, and financial data from acquisition until destruction, while the surrounding text adds confidentiality, security, consent, and disclosure duties. It establishes a sector-specific personal-data obligation, not a comprehensive horizontal law; that distinction is consistent with the claimed sectoral mapping and the rubric's 0.5 treatment."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Regulation of Financial Service Authority Regulation No. 11/",
+  "article": "Art. 45(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision performs a sectoral personal-data-protection function: it requires commercial banks to establish specified safeguards for personal-data exchanges. Sectoral scope is expressly relevant to P7-I1 and is not itself a defect; the wording \"wajib menetapkan paling sedikit\" supports a mandatory minimum rule."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I1, sectoral-only laws are recorded and support the intermediate 0.5 outcome when the broader inventory shows no comprehensive horizontal framework. The provision is therefore a valid evidence row for the absence-scored framework indicator; it need not alone prove economy-wide absence. Hunt_in is empty, and the G6 warning does not apply because \"wajib\" is mandatory."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly requires a bank, in personal-data exchanges, to establish at least data classification, party rights and obligations, an exchange agreement, exchange means, and data security, with consent addressed in paragraph (2). In the supplied commercial-banking regulation, that supports a sectoral framework; it does not claim or need to establish a comprehensive horizontal law, consistent with the rubric's treatment of sectoral evidence."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Regulation of Financial Services Authority No.11/POJK.03/202",
+  "article": "Art. 45(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 45(1) expressly requires banks to establish personal-data-exchange controls, and its banking scope is consistent with the rubric's treatment of sectoral laws. It does not purport to be a comprehensive horizontal framework, so no legal-function or scope defect is shown."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I1, hunt_in is empty and sectoral-only laws score 0.5. This provision is valid evidence of a sectoral personal-data-protection framework; the absence-scored indicator may record the framework outcome separately. 'Wajib' supplies mandatory modality, so G6 does not establish a refutation."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text requires a bank to establish classification, party rights and duties, an exchange agreement, exchange facilities, and data security for personal-data exchange; paragraph (2) adds a consent condition. It does not establish a horizontal comprehensive law, but it does support the claimed sectoral-framework evidence row, which the rubric permits."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 1/2024 Cyber Incident Management",
+  "article": "Art. 21(3)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Article 21(3) establishes only that an information-distribution code appears in an annex; even with the surrounding context, it does not establish that the regulation is a dedicated horizontal cybersecurity framework. The claimed framework scope and legal function are therefore unsupported."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "Under P7-I2, a dedicated horizontal cybersecurity framework would produce a score of 0, while a provision must actually evidence that framework to support the outcome. The quoted text evidences an incident-information dissemination mechanism, but not dedicated horizontal coverage; the rubric's empty hunt_in does not eliminate that substantive requirement."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The exact text says only that the information-distribution code required for cyber-incident dissemination is set out in an annex. It does not say the regulation is horizontal, applies across sectors, or creates a dedicated cybersecurity framework, so the stated rationale exceeds what the quotation and context establish."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 1/2024 Cyber Incident Management",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping is legally relevant under P7-I2: the instrument concerns cybersecurity and critical information infrastructure. Its sectoral scope does not itself defeat the mapping because the rubric expressly scores a dedicated sectoral-only framework at 0.5; the record does not claim that this instrument is a horizontal framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, the supplied definitions and context are sufficient as an evidence row for a cybersecurity framework directed at critical infrastructure. Under the rubric, this supports the sectoral-only outcome of 0.5 if no horizontal act exists, but it cannot alone establish score 1 or prove that no horizontal framework exists."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly defines cybersecurity, cyber incidents, incident-response teams, critical information infrastructure, and security controls, while the surrounding context identifies the regulated IIV operators. It supports the instrument's cybersecurity and sectoral critical-infrastructure function; a better operative provision is not required where the rubric accepts framework evidence rows."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 2/2024 Cyber Crisis Management",
+  "article": "Art. 12(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision expressly assigns the national Cyber Incident Response Team assessment of Cyber Incidents and Cyber Events and addresses disruption of electronic-system services, supporting a cybersecurity-specific framework function. Its lack of must/shall wording is not a defect because the passive formulation states how the assessment is conducted."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I2, a dedicated cybersecurity instrument may be valid framework evidence even though the indicator is absence-scored. This regulation is specifically directed to cyber-crisis management, and the quoted provision supplies incident-assessment evidence; the national scope is not limited to a sector or government data. The appropriate outcome would turn on whether the instrument is accepted as a dedicated horizontal framework, not on the provision being operational."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text actually establishes that the national Cyber Incident Response Team assesses potential cyber crises arising from cyber incidents or events, considering impacts on electronic-system services and vital information infrastructure. It does not itself recite comprehensive economy-wide coverage, but the quoted context supports a cybersecurity-specific national crisis-management function and does not contradict the claimed horizontal characterization."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 2/2024 Cyber Crisis Management",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No clear scope defect is shown. The regulation is expressly directed to cyber-crisis management, and the surrounding definitions cover PSEs broadly, supporting a horizontal rather than sector-only cybersecurity framework under P7-I2."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has no hunt_in restriction and accepts evidence of a framework from a provision in the instrument. The dedicated cyber-crisis subject matter and broad PSE definition support a horizontal framework, yielding score 0 rather than the absence score; the G4 WARN does not alter that result."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text defines cybersecurity as protecting the entire cyberspace from cyber threats and attacks, while the surrounding context defines incidents, crisis management, teams, stakeholders, and broadly covered PSEs. Together with the identified regulation's subject, this supports a dedicated horizontal framework, although Article 1 is definitional rather than an operative duty."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 5/2024 National Cybersecurity Action Plan",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is not merely a generic security clause: it identifies a national cybersecurity action plan implementing the national cybersecurity strategy, while the surrounding definition covers the entire cyberspace. That supplies the dedicated, horizontal framework function required by P7-I2; no localization, sectoral-only, or other listed defect is shown."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Because hunt_in is empty, no particular operative provision is required. Applying the rubric, the regulation is cybersecurity-specific and national in scope, so it evidences a dedicated horizontal framework and supports score 0 rather than the high absence score. The indicator's absence polarity does not bar this evidence row."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly defines cybersecurity as protecting the entire cyberspace and defines RAN Kamsiber as a national action plan containing planned, measurable efforts to implement the national cybersecurity strategy. It establishes the existence and horizontal character of the framework claimed; the rubric does not require this excerpt to enumerate particular incident-response duties."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 5/2024 National Cybersecurity Action Plan",
+  "article": "Art. 11",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The regulation is expressly dedicated to a national cybersecurity action plan and describes horizontal governance across state institutions with participation by business, academia, and communities. Its planning and guidance function is sufficient to evidence a dedicated horizontal cybersecurity framework under this rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, the quoted official text is usable evidence. It identifies an instrument specifically devoted to cybersecurity, covering governance, risk management, resilience, critical infrastructure, cryptography, capability, policy, and international cooperation. That supports the rubric's dedicated-horizontal-framework outcome and therefore score 0; G4's WARN does not refute it."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text expressly says RAN Kamsiber guides implementation and effectiveness of eight national cybersecurity strategy areas and involves multiple stakeholder groups. Although it is an action-plan regulation rather than a statute imposing detailed duties, the quoted context establishes a dedicated cybersecurity governance framework and does not require a cybersecurity act or operative sanctions for this indicator."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Bank Indonesia Regulation No. 22/23/PBI/2020 on Payment Syst",
+  "article": "Art. 41",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 41 expressly requires cybersecurity standards, information/data security, and periodic information-system audits in the commercial-banking sector. Under the rubric, sectoral-only or non-dedicated cybersecurity frameworks score 0.5; sectoral scope is not itself a defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet is an official, citation-aligned, sectoral provision and the rubric has no hunt_in requirement. It supports a non-dedicated or sectoral cybersecurity framework, which is the rubric's 0.5 category, while not purporting to establish a horizontal framework scoring 0."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text actually requires application of cybersecurity standards and related security controls within information-system standards, including audits, for the covered banking context. It does not establish a horizontal cybersecurity act, but the claimed sectoral classification and resulting 0.5 mapping are consistent with the supplied rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Bank Indonesia Regulation No. 22/23/PBI/2020 on Payment Syst",
+  "article": "Art. 34",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision addresses cybersecurity standards, information-system security, data protection, and periodic audits for commercial banks. Its sectoral scope is not a defect because the rubric expressly assigns a sectoral-only cybersecurity framework a score of 0.5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I2, Article 34 is valid sectoral evidence of a cybersecurity framework and supports the 0.5 outcome where no horizontal framework controls. The rubric does not require mandatory wording for this framework-presence evidence, and the G6 WARN is not a refutation."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly requires application of cybersecurity standards and related security measures within the commercial-banking information-system regime. In context it establishes sectoral cybersecurity regulation, without purporting to be horizontal; that fits the rubric's sectoral-only category."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "PBI 23/6/PBI/2021 Payment Service Providers",
+  "article": "Art. 72(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision performs the relevant cybersecurity function by requiring payment service providers to apply governance, prevention, monitoring, and incident-response standards. Its sectoral scope is not a defect because the rubric expressly recognizes a dedicated sectoral-only framework and assigns it 0.5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The evidence fits P7-I2 despite hunt_in being empty: it is a cybersecurity-specific sectoral framework, not merely a scattered security clause. Under the supplied scoring rubric, it supports the 0.5 outcome for a dedicated sectoral-only framework, not 0 or 1. The text also uses mandatory 'wajib memastikan' modality."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text and surrounding context require PJP to implement cybersecurity standards through governance, prevention, and incident handling, and detail risk, monitoring, capability, and incident functions. They establish a dedicated sectoral cybersecurity framework, but do not establish a horizontal framework or justify a score of 0; that is precisely the rubric's 0.5 category."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "PBI 23/6/PBI/2021 Payment Service Providers",
+  "article": "Art. 47(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 47(1) functionally requires payment service providers to maintain information-system and cybersecurity standards, including security, data protection, audits, and fraud controls. Its payment-services scope supports a sectoral cybersecurity framework; confidentiality is only one component and is not misread as localization."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I2, the provision is valid evidence of a non-dedicated and sectoral-only cybersecurity framework, supporting the 0.5 category rather than 0. The rubric expressly calls for and accepts sectoral evidence. The obligation is conveyed by 'Pemenuhan kewajiban' and 'paling sedikit meliputi'; G6 is therefore only a WARN, not a refutation."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted context expressly requires payment service providers to apply cybersecurity standards and related security controls under Article 47. It establishes a sector-specific cybersecurity obligation, which supports the claimed sectoral characterization; it need not itself prove the nonexistence of a separate horizontal act to serve as a valid evidence row for this absence-scored indicator."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "PBI 23/7/PBI/2021 Payment System Infrastructure",
+  "article": "Art. 89(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Although the quoted text is from Article 89(1), not Article 89(2), the surrounding Article 89 text clearly requires payment-system infrastructure providers to apply cybersecurity standards covering governance, prevention, and incident handling. That supports a sectoral cybersecurity framework under the rubric and does not make the P7-I2 mapping substantively wrong."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has an empty hunt_in, and its scoring expressly recognizes a dedicated sectoral-only cybersecurity framework as score 0.5. Article 89 supplies evidence of such a sectoral framework, and framework-absence indicators may use framework evidence as an evidence row. The provision should not score 0 absent a horizontal framework, but its sectoral character is not a defect."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text expressly makes PIPs wajib memastikan, or required to ensure, cybersecurity standards using governance, prevention, and handling approaches, with further requirements for cyber-risk governance and incident handling. It establishes a payment-system-sector framework, not a horizontal economy-wide act; that distinction matches the rubric's 0.5 category rather than defeating the mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "PBI 23/7/PBI/2021 Payment System Infrastructure",
+  "article": "Art. 88(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is sector-specific, but that is not a defect under P7-I2: the rubric expressly assigns 0.5 where a dedicated sectoral-only or non-dedicated cybersecurity framework exists. Its information-security, cyber-resilience, penetration-testing, and disaster-recovery controls support that characterization."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, no particular source type is required. Applying the rubric, Article 88 evidences a payment-sector cybersecurity and information-security framework, but not a dedicated horizontal cybersecurity law, supporting score 0.5 rather than 1 or 0. The G6 warning does not refute the mapping because the surrounding text frames the listed controls as fulfillment of an existing obligation."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The surrounding text expressly requires PSPS and PSPK to meet risk-management and information-system-security standards and lists cyber-resilience simulations, penetration tests, audits, and security certification. It establishes sectoral cybersecurity controls, not a horizontal cybersecurity act; the incomplete extracted snippet and subsection-label issue do not defeat the supported Article 88 context."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "POJK 4/POJK.05/2021 NBFI IT Risk",
+  "article": "Art. 17",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 17 functionally requires LJKNB to implement information security based on risk and maintain incident-management capability. That is cybersecurity-related sectoral regulation, not merely confidentiality or generic processing, and the rubric expressly recognizes dedicated sectoral-only frameworks."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I2, the provision is valid sectoral evidence within the rubric's framework test: it addresses risk-based information security and incident response for non-bank financial institutions. With no horizontal dedicated cybersecurity act shown, it supports score 0.5, not score 1; sectoral coverage is expressly scored rather than disqualifying. The text also contains the mandatory term 'wajib'."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted context expressly requires LJKNB to ensure effective information security, including confidentiality, integrity, availability, technology, personnel, process, risk assessment, and incident-management arrangements. Read with the identified IT-risk regulation and sectoral coverage, it establishes a dedicated sectoral IT-security framework, which the rubric treats as a 0.5 outcome; it does not establish a horizontal framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Perpres 47/2023 National Cybersecurity Strategy",
+  "article": "Art. 4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is expressly a national cybersecurity strategy and its stated purposes concern cybersecurity and the national digital ecosystem. Under P7-I2, a dedicated horizontal cybersecurity framework is relevant evidence; the fact that it would produce a score of 0 rather than a high absence score does not make the mapping wrong."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has no hunt_in restriction and permits a dedicated framework evidenced by a legal instrument. Perpres 47/2023 is specifically directed to cybersecurity and nationally framed, so it is evidence of the framework-present outcome and should support P7-I2 score 0, not score 1 or 0.5."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 4 expressly identifies the National Cybersecurity Strategy and Cyber Crisis Management and states purposes including realizing cybersecurity, protecting the national digital ecosystem, and strengthening cyber capabilities. Although the excerpt is a purpose clause rather than detailed operative duties, it supports the claimed strategy/framework function and does not establish a different legal function."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Perpres 47/2023 National Cybersecurity Strategy",
+  "article": "Art. 10(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision expressly concerns protection and oversight of vital information infrastructure. Because the rubric assigns 0.5 to a sectoral-only cybersecurity framework, its sectoral scope is not a defect and the mapping is legally functional."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I2, sectoral cybersecurity provisions are relevant evidence for the 0.5 outcome even though hunt_in is empty; the text supports a non-horizontal critical-infrastructure framework. It does not establish a horizontal framework warranting 0, nor justify the absence score of 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 10(1) establishes strengthening, protection, and oversight of vital information infrastructure, while Article 10(2) subjects implementation to other laws. The quoted context supports a sectoral or non-dedicated framework and does not claim more than the text establishes."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Law No.27 on Personal Data Protection 2022",
+  "article": "Art. 50",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text uses mandatory modality ('wajib menunjuk') and requires a person or function-holder for specified circumstances. Although the materials identify the provision as Article 53 rather than the claimed Article 50, that citation discrepancy does not negate the supported DPO legal function or create a rubric-level scope defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I4, the text expressly requires appointment of a person responsible for the data-protection function. The requirement is conditional and sector/circumstance-specific, so it supports a score of 0.5, not 1. The empty hunt_in does not preclude this direct statutory evidence, and no DPIA is necessary because DPO-only requirements qualify."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text says controllers and processors 'wajib menunjuk' a person or officer performing the personal-data-protection function, subject to the listed public-service, large-scale monitoring, or large-scale sensitive/criminal-data circumstances. It establishes a conditional DPO-type requirement, not a universal requirement and not a DPIA obligation; that matches the claimed sectoral mapping and 0.5 tier."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Law No.27 on Personal Data Protection 2022",
+  "article": "Art. 64",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the cited provision",
+    "reason": "The quoted text and surrounding context identify Pasal 34, while the mapping cites Article 64. Although the text supports a conditional DPIA duty, the stated citation does not accurately identify the provision supplying that rule."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The empty hunt_in does not bar this evidence. The text uses wajib and expressly requires a DPIA for high-risk processing, satisfying the DPIA function under P7-I4. It does not establish a DPO duty or an all-sector unconditional requirement, so it cannot support a score of 1; the evidence row and conditional mapping remain valid."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text actually establishes a mandatory DPIA duty when processing has high-risk potential and lists the relevant criteria. It does not establish a DPO requirement or a universal DPIA duty, but the rationale expressly characterizes the rule as conditional and DPIA-only."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Regulation of Financial Service Authority Regulation No. 11/",
+  "article": "Art. 44(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 44(2) expressly uses “Bank wajib melakukan penilaian dampak,” establishing a mandatory impact-assessment duty for commercial banks when specified higher-risk conditions exist. It does not misread confidentiality, transfer, or another legal function, and the conditional trigger is not a lost exception or a general-data obligation mischaracterized as DPIA."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I4, the text is a DPIA requirement, and the rubric expressly scores a sector-specific DPO/DPIA requirement at 0.5. The condition that certain risk-increasing circumstances exist limits when the assessment is required but does not make it permissive; “wajib” means mandatory. The empty hunt_in does not exclude this evidence, and sectoral coverage is expressly contemplated by the scoring rubric."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted Indonesian text, read with Article 44(1), requires the bank to conduct an impact assessment of applying personal-data-protection principles when certain conditions potentially increase risk to data owners. It establishes a conditional, mandatory bank-sector DPIA obligation, not a DPO appointment or an all-sector requirement; that supports a 0.5 mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Regulation of Financial Services Authority No.11/POJK.03/202",
+  "article": "Art. 44(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 44(2) uses the mandatory term “wajib” and requires banks, when specified higher-risk conditions exist, to conduct an impact assessment concerning personal-data-protection principles. That is the DPIA function, and the rubric expressly accepts a sector-specific requirement for a 0.5 score."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision supplies a positive rubric cue: a mandatory data-protection impact assessment. It applies only to banks and only in specified risk conditions, so it supports the sector-specific tier (0.5), not the all-sector tier (1). The empty hunt_in does not exclude sectoral evidence, and no DPO requirement is needed for the 0.5 outcome."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text and context establish that a bank must perform an impact assessment when certain conditions potentially increase risks to personal-data owners. They do not establish an all-sector duty or a DPO obligation, but they do establish a conditional, sector-specific DPIA requirement matching the claimed rationale and rubric."
+   }
+  ]
+ }
+]

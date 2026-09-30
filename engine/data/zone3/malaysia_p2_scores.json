@@ -1,0 +1,102 @@
+{
+ "economy": "Malaysia",
+ "pillar": 2,
+ "run": "run-my-p2-1790692151",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited provisions govern the management and withdrawal of public funds and state no exclusion of foreign firms from public procurement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The cited provisions govern public funds and withdrawals and contain no measure excluding foreign firms from public procurement."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The cited provisions govern management and withdrawal of public funds and contain no measure excluding foreign firms from public procurement."
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence contains no verified text requiring source-code, patent, or trade-secret surrender or use of a specific encryption to win procurement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The gate-verified evidence contains no requirement to surrender patents, source code or trade secrets, or to use specific encryption to win procurement."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No verified evidence shows procurement requires surrendering source code, patents, or trade secrets, or mandates specific encryption to win."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The text gives procurement preference to Bumiputera companies, including joint ventures with foreign companies, directly favoring them over foreign bidders with"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The policy gives procurement preference to Bumiputera companies, including qualifying joint ventures, directly disadvantaging foreign bidders that do not meet t"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The mandatory preference for Bumiputera companies across all procurement categories directly disadvantages foreign bidders."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

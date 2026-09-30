@@ -1,0 +1,30 @@
+[
+ {
+  "indicator": "P2-I1",
+  "law": "Commonwealth Procurement Rules 17 November 2025",
+  "article": "para. 5.4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Paragraph 5.4 is an operative procurement rule, not merely an enabling clause: within its stated value band, entities must invite only Australian businesses. Its exceptions qualify the rule but do not erase the exclusion it imposes when applicable."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P2-I1 expressly covers exclusions for a threshold band. The Australian-business-only invitation rule is evidence of an operative exclusion, so it supports a score of 1 under the rubric; the standing-offer carveout and documented inapplicability exception do not negate that measure."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the entities “must invite only Australian businesses” for the specified procurements, directly establishing restricted invitation eligibility. It does not establish a foreign-ownership ban, but P2-I1 does not require one; the rule concerns who may be invited to public procurement."
+   }
+  ]
+ }
+]

@@ -1,0 +1,20 @@
+[Unit]
+Description=ClauseChain engine-action worker (single instance; claims EngineAction rows via DB lease)
+After=network.target clausechain-api.service
+
+[Service]
+# Separate OS user: an API compromise must not expose engine/model credentials.
+User=clausechain-engine
+Group=clausechain-engine
+WorkingDirectory=/srv/clausechain/backend
+EnvironmentFile=/srv/clausechain/backend/.env
+Environment=ENGINE_ROOT=/srv/clausechain/engine
+Environment=ENGINE_ALLOWLIST=/srv/clausechain/deploy/engine_allowlist.json
+ExecStart=/srv/clausechain/backend/venv/bin/python manage.py run_engine_worker
+Restart=on-failure
+RestartSec=5
+# One worker, ever — concurrency is the DB lease's job, not systemd's.
+ExecStartPre=/bin/sh -c 'test ! -f /run/clausechain-engine.pid || exit 1'
+
+[Install]
+WantedBy=multi-user.target

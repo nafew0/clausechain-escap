@@ -1,0 +1,58 @@
+[
+ {
+  "indicator": "P6-I3",
+  "law": "Regulation on registration and use of domain names (consolid",
+  "article": "cl. 7.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that registrars must have servers and databases located in Mongolia (cl. 7.1.2) and specifically within the 'National Data Center' (cl. 7.1.3) as a condition for registration. This constitutes a clear infrastructure precondition for providing the service, satisfying the legal function of P6-I3. The sectoral scope (domain names) is acceptable as the rubric does not exclude sectoral evidence, and the requirement is not merely a rule for already-established centers"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text matches positive cues 'server located within the territory' and 'maintain at least one local server'. The scoring rubric defines '1' as any infrastructure requirement existing where local data centre/server is a precondition of service. Clauses 7.1.2 and 7.1.3 impose a mandatory location requirement for the registrar's infrastructure. This is not a rule for already-established data centres (which would score 0) but a requirement for the registrars to possess such infrastructure to opera"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states 'Монгол Улсад байрлах... сервер, системтэй байх' (to have... server, system located in Mongolia) and 'Үндэсний дата төв... т байрлах' (to be located in the National Data Center). The context 'Бүртгэгч нь дараах техникийн шаардлагыг хангасан байна' (The registrar shall meet the following technical requirements) establishes a mandatory obligation. The text clearly establishes a local infrastructure requirement as a condition for the registrar's status, supporting the mapping "
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Regulation on storage and protection of credit information b",
+  "article": "cl. 7.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that the main and backup servers for credit information databases be located within Mongolia. This constitutes a clear infrastructure requirement (localization) that is a condition of operating the credit information service, fitting the legal function of P6-I3. The sectoral nature (credit information) does not invalidate the mapping as the rubric accepts sectoral evidence for infrastructure preconditions."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet matches positive cues ('server located within the territory', 'maintain... local server'). It is not a rulebook (exclusion 1), not a cybersecurity measure (exclusion 2), not a copy on rented capacity (exclusion 3), not a rule on already-established centers (exclusion 4), and not a licensing regime (exclusion 5). It is a precondition for the service infrastructure, scoring 1.0."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Mongolian text 'байршина' (is located) in the context of a regulatory clause for 'main and backup centers' establishes a mandatory location requirement. While G6 flags a lack of explicit 'must' modality, the declarative statement of location for required infrastructure components in a regulation is legally interpreted as a binding requirement, not a permissive option. The text supports the rationale that local infrastructure is required."
+   }
+  ]
+ }
+]

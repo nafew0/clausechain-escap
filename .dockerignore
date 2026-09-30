@@ -1,0 +1,42 @@
+.git
+.gitignore
+graphify-out
+docs
+reports
+finding_key_map.json
+
+# Python
+**/__pycache__
+**/*.pyc
+**/*.egg-info
+**/.venv
+**/venv
+backend/var
+backend/staticfiles
+backend/media
+backend/db.sqlite3
+
+# engine runtime artifacts (bind-mounted, not baked into the image)
+engine/data
+engine/outputs
+engine/logs
+engine/submission
+engine/reports
+engine/.venv
+
+# frontend
+frontend/node_modules
+frontend/.next
+frontend/out
+
+# env / secrets — in every folder (a backend/.env or engine/.env must never be
+# baked into an image; engine/.env is mounted at runtime instead)
+**/.env
+**/*.env
+**/.env.*
+!**/.env.example
+!**/*.env.example
+
+# misc
+*.log
+.DS_Store

@@ -1,0 +1,4070 @@
+{
+ "source": "ESCAP Round-2 gold References (P6/P7 rows) + deep-research 31-Jul-2026 (TH/IN/ID) and 28-Sep-2026 (RU/MN/LA/TL) verified instruments + Pillar 2 (public procurement) deep-research 29-Sep-2026 verified instruments",
+ "economies": {
+  "Thailand": [
+   {
+    "act": "Credit Information Business Operation Act B.E.2545 (พระราชบัญญัติการประกอบธุรกิจข้อมูลเครดิต พ.ศ. 2545); Bank of Thailand Notification Regarding Services related to Debit Cards Issued and Used Domesti",
+    "url": "https://www.bot.or.th/content/dam/bot/documents/th/laws-and-rules/laws-and-regulations/legal-department/7-ncb-act/7-1-ncb-act/7.1.2-Law_TH_CreditBureau%20Updated-2559.pdf",
+    "coverage": "Credit information, Information of debit card transaction",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Personal Data Protection Act B.E.2562 (พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562)",
+    "url": "http://www.ratchakitcha.soc.go.th/DATA/PDF/2562/A/069/T_0052.PDF",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the Personal Data Protection Committee on Criteria for the Protection of Personal Data Sent or Transferred to a Foreign Country pursuant to Section 28 of the Personal Data Protection A",
+    "url": "https://www.pdpc.or.th/2500/",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the Personal Data Protection Committee on Criteria for the Protection of Personal Data Sent or Transferred to a Foreign Country pursuant to Section 29 of the Personal Data Protection A",
+    "url": "https://www.pdpc.or.th/2507/",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "National Health Act B.E.2550 (พระราชบัญญัติสุขภาพแห่งชาติ พ.ศ.2550); Regulation of the Ministry of Public Health regarding the Protection and Management of Personal Health Information B.E.2561 (ระเบีย",
+    "url": "https://infocenter.nationalhealth.or.th/knowledge-base/พระราชบัญญัติสุขภาพแห่/",
+    "coverage": "Personal health information/ Personal Health Record (PHR)",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Telecommunications Business Act B.E.2544 (พระราชบัญญัติ การประกอบกิจการโทรคมนาคม พ.ศ. 2544); Notification of the National Telecommunications Commission regarding Telecommunications Service Users' Righ",
+    "url": "https://www.mdes.go.th/content/download-detail/2473",
+    "coverage": "Personal information in telecommunications sector",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Organization to Assign Frequency Waves and to Regulate the Radio Broadcasting, Radio Television and Telecommunications Services Act B.E.2553 (พระราชบัญญัติองค์กรจัดสรรคลื่นความถี่และกำกับการประกอบกิจก",
+    "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/NUo1d0JLRHhydnFEbGNnRVhBMHkrZz09",
+    "coverage": "Personal information in telecommunications sector",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Cyber Security Maintenance Act B.E.2562 (พระราชบัญญัติ การรักษาความมั่นคงปลอดภัยไซเบอร์ พ.ศ.2562)",
+    "url": "https://www.ncsa.or.th/กฏหมาย-ข้อบังคับ-และประก.html",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Computer-Related Crime Act B.E.2550 (พระราชบัญญัติ ว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์ พ.ศ.2550)",
+    "url": "https://www.mdes.go.th/law/detail/3516-พระราชบัญญัติว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์-พ-ศ--๒๕๕๐",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the National Cybersecurity Committee Regarding Standards and Guidelines for Promoting the Development of Cybersecurity Service Systems B.E. 2566 (ประกาศคณะกรรมการการรักษาความมั่นคงปลอด",
+    "url": "https://drive.ncsa.or.th/s/ySHdf5rHLJH5BjJ",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the National Cyber Security Committee Regarding tandards for Defining the Security Category for Data or Information Systems B.E.2566 (ประกาศคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห",
+    "url": "https://drive.ncsa.or.th/s/SqiggiSrFcyHE2e",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the National Cyber Security Committee Regarding Characteristics, Duties, and Responsibilities of the Computer Emergency Response Team for Organizations of Critical Information Infrastr",
+    "url": "https://drive.ncsa.or.th/s/Y4JJQL3Kofg5Mg7",
+    "coverage": "Critical Information Infrastructure",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the National Cyber Security Committee Regarding Establishment, Duties, and Powers of the Thailand Computer Emergency Response Team (ThaiCERT) B.E.2564 (ประกาศคณะกรรมการการรักษาความมั่น",
+    "url": "https://drive.ncsa.or.th/s/DXs7pjtjFS5R2Zc",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the National Cyber Security Committee Regarding Characteristics and Measures for Prevention, Response, Assessment, Eradication, and Containment of Cyber Incidents at Each Level B.E. 25",
+    "url": "https://drive.ncsa.or.th/s/YyyzPzcR2DbgxTw",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the National Telecommunications Commission regarding Telecommunications Service Users' Rights Concerning Personal Information Rights to Privacy and Freedom of Communication B.E.2566 (ป",
+    "url": "https://dl.parliament.go.th/backoffice/viewer2300/web/previewer.php",
+    "coverage": "Personal information in telecommunications sector",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification of the Ministry of Information and Communications Technology Regarding Computer Traffic Data Retention Criterias of Service Providers B.E.2564",
+    "url": "https://www.mdes.go.th/law/detail/4727-ประกาศกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม-เรื่อง-หลักเกณฑ์การเก็บรักษาข้อมูลจราจรทางคอมพิวเตอร์ของผู้ให้บริการ-พ-ศ--๒๕๖๔",
+    "coverage": "Service providers",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "National Intelligence Act B.E.2562 (พระราชบัญญัติข่าวกรองแห่งชาติ พ.ศ.2562)",
+    "url": "https://www.ratchakitcha.soc.go.th/DATA/PDF/2562/A/050/T_0022.PDF",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Personal Data Protection Act B.E. 2562 (2019)",
+    "url": "https://ratchakitcha.soc.go.th/DATA/PDF/2562/A/069/T_0052.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PDPC Notification on Security Measures of Controllers B.E. 2565",
+    "url": "https://ratchakitcha.soc.go.th/DATA/PDF/2565/E/140/T_0028.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PDPC Notification on Personal Data Breach Notification B.E. 2565",
+    "url": "https://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/292/T_0007.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PDPC Notification on Processor Records of Processing B.E. 2565",
+    "url": "https://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/140/T_0026.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "MDES Notification on Computer Traffic Data Retention B.E. 2564",
+    "url": "http://www.ratchakitcha.soc.go.th/DATA/PDF/2564/E/188/T_0009.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Anti-Money Laundering Act B.E. 2542",
+    "url": "https://ratchakitcha.soc.go.th/DATA/PDF/2542/A/029/45.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Accounting Act B.E. 2543",
+    "url": "https://ratchakitcha.soc.go.th/DATA/PDF/2543/A/041/1.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Labour Protection Act B.E. 2541",
+    "url": "https://www.ratchakitcha.soc.go.th/DATA/PDF/2541/A/008/1.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PDPC DPO Notification B.E. 2566",
+    "url": "https://ratchakitcha.soc.go.th/documents/140D226S0000000001200.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PDPC State-Agency DPO Notification B.E. 2566",
+    "url": "https://ratchakitcha.soc.go.th/documents/140D174S0000000006400.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PDPC State-Agency DPO Notification No. 2 B.E. 2568",
+    "url": "https://ratchakitcha.soc.go.th/documents/88831.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Special Case Investigation Act B.E. 2547",
+    "url": "https://ratchakitcha.soc.go.th/DATA/PDF/2547/A/008/1.PDF",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Criminal Procedure Code (consolidated)",
+    "url": "https://ratchakitcha.soc.go.th/documents/1100264.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Computer Crime Act B.E. 2550 as amended B.E. 2560 (ETDA consolidated)",
+    "url": "https://www.etda.or.th/getattachment/9d647b89-540f-421f-b031-d18e7c4f16c1/Computer-Crimes-Act-BE-2550-and-BE-2560.aspx",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PDPC BCR Certification Regulation B.E. 2568",
+    "url": "https://ratchakitcha.soc.go.th/documents/103274.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "OIC Notification: Customer Personal Data Guidelines (non-life)",
+    "url": "https://ratchakitcha.soc.go.th/documents/140D098S0000000001600.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "BOT Notification FPG 8/2557 Outsourcing",
+    "url": "https://www.bot.or.th/content/dam/bot/fipcs/documents/FPG/2558/EngPDF/25580002.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Non-Life Insurance Act B.E. 2535",
+    "url": "https://oiceservice.oic.or.th/document/Law/file/00516/00516_aef1f2fa4a7ea760a8d84a23b325cff0.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "RCEP Chapter 12 (official text)",
+    "url": "https://www.mfat.govt.nz/assets/Trade-agreements/RCEP/RECP-Agreement-112020/Chapter-12.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I5",
+    "cluster": "deep-research 31-Jul-2026",
+    "source_type": "treaty"
+   },
+   {
+    "act": "AANZFTA Second Protocol Chapter 10 (E-Commerce)",
+    "url": "https://www.dfat.gov.au/trade/agreements/in-force/aanzfta/official-documents/agreement-establishing-asean-australia-new-zealand-free-trade-area-aanzfta/chapter-10-electronic-commerce",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I5",
+    "cluster": "deep-research 31-Jul-2026",
+    "source_type": "treaty"
+   },
+   {
+    "act": "BOT Notification: Debit Card Services (domestic issuance/use)",
+    "url": "https://www.bot.or.th/content/dam/bot/documents/th/laws-and-rules/laws-and-regulations/notification/2559/n-2559-06-debitcard.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "gold-gap round-2"
+   },
+   {
+    "act": "CIC Notification: data processing duration",
+    "url": "https://www.bot.or.th/content/dam/bot/documents/th/laws-and-rules/laws-and-regulations/notification/cic-retention.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "gold-gap round-2"
+   },
+   {
+    "act": "Public Procurement and Supplies Administration Act B.E.2560 (พระราชบัญญัติ การจัดซื้อจัดจ้างและการบริหารพัสดุภาครัฐ พ.ศ. 2560)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/f764eeef-c414-45cc-8e84-5cbf8eb398ca/%E0%B8%9E%E0%B8%A3%E0%B8%9A+%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%87+%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%88%E0%B8%B2+24+%E0%B8%81%E0%B8%9E+2560.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-f764eeef-c414-45cc-8e84-5cbf8eb398ca-mLvSM52",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "s. {label}",
+    "expected_citations": [
+     "s. 73"
+    ]
+   },
+   {
+    "act": "Public Procurement and Supplies Administration Act B.E.2560 (พระราชบัญญัติ การจัดซื้อจัดจ้างและการบริหารพัสดุภาครัฐ พ.ศ. 2560)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/f764eeef-c414-45cc-8e84-5cbf8eb398ca/%E0%B8%9E%E0%B8%A3%E0%B8%9A+%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%87+%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%88%E0%B8%B2+24+%E0%B8%81%E0%B8%9E+2560.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-f764eeef-c414-45cc-8e84-5cbf8eb398ca-mLvSM52",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "s. {label}",
+    "expected_citations": [
+     "s. 73"
+    ]
+   },
+   {
+    "act": "Public Procurement and Supplies Administration Act B.E. 2560 (2017) - official English translation by the Office of the Council of State",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/cb6ae8e9-ddb3-4640-9393-04d9fc09b5af/PUBLIC%2BPROCUREMENT%2BAND%2BSUPPLIES%2BADMINISTRATION%2BACT%2C%2BB.E.%2B2560%2B%282017%29.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-cb6ae8e9-ddb3-4640-9393-04d9fc09b5af-mLvSLpp",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "s. {label}",
+    "expected_citations": [
+     "s. 73"
+    ]
+   },
+   {
+    "act": "Public Procurement and Supplies Administration Act B.E. 2560 (2017) - official English translation by the Office of the Council of State",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/cb6ae8e9-ddb3-4640-9393-04d9fc09b5af/PUBLIC%2BPROCUREMENT%2BAND%2BSUPPLIES%2BADMINISTRATION%2BACT%2C%2BB.E.%2B2560%2B%282017%29.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-cb6ae8e9-ddb3-4640-9393-04d9fc09b5af-mLvSLpp",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "s. {label}",
+    "expected_citations": [
+     "s. 73"
+    ]
+   },
+   {
+    "act": "Regulation of the Ministry of Finance regarding Public Procurement and Supplies Administration B.E.2560 (ระเบียบกระทรวงการคลังว่าด้วยการจัดซื้อจัดจ้างและการบริหารพัสดุภาครัฐ พ.ศ. 2560)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/04245445-9e18-49c6-bb05-dca65ecbaffe/%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B8%87+%E0%B8%9E%E0%B8%A82560.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-04245445-9e18-49c6-bb05-dca65ecbaffe-mvEEpo-",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 101"
+    ]
+   },
+   {
+    "act": "Regulation of the Ministry of Finance regarding Public Procurement and Supplies Administration B.E. 2560 (2017) - English translation hosted by the Comptroller General's Department",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/eda28405-bf05-4684-91db-3daa2c859b2f/1_Regulation+of+the+Ministry+of+Finance_on+Public+Procurement+and+Supplies+Administration+%281%29.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-eda28405-bf05-4684-91db-3daa2c859b2f-mvEFIoZ",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 101"
+    ]
+   },
+   {
+    "act": "Ministerial Regulation Prescribing Criteria, Procedures and Conditions for Registration as Consultants B.E.2560 (กฎกระทรวงกำหนดหลักเกณฑ์ วิธีการ และเงื่อนไขการขึ้นทะเบียนที่ปรึกษา พ.ศ. 2560)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/adbbb1f2-397b-474e-9372-72e873da7ff5/%E0%B8%81%E0%B8%8E%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B5%E0%B9%88+5_%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9B%E0%B8%A3%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2.PDF?MOD=AJPERES&CACHEID=ROOTWORKSPACE-adbbb1f2-397b-474e-9372-72e873da7ff5-lZtQ2qF",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 4",
+     "cl. 5"
+    ]
+   },
+   {
+    "act": "Ministerial Regulation Prescribing Criteria, Procedures and Conditions for Registration as Consultants B.E.2560 (กฎกระทรวงกำหนดหลักเกณฑ์ วิธีการ และเงื่อนไขการขึ้นทะเบียนที่ปรึกษา พ.ศ. 2560)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/adbbb1f2-397b-474e-9372-72e873da7ff5/%E0%B8%81%E0%B8%8E%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B5%E0%B9%88+5_%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9B%E0%B8%A3%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2.PDF?MOD=AJPERES&CACHEID=ROOTWORKSPACE-adbbb1f2-397b-474e-9372-72e873da7ff5-lZtQ2qF",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 4",
+     "cl. 5"
+    ]
+   },
+   {
+    "act": "Ministerial Regulation Prescribing Criteria, Procedures and Conditions for Registration as Consultants B.E. 2560 (2017) - English translation hosted by the Comptroller General's Department",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/3c1ec767-101e-4231-8322-d692851318b2/7_Ministerial+Regulation_Prescribing+of+Criteria%2C+Procedures+and+Conditions+for+Registration+as+Consultants.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-3c1ec767-101e-4231-8322-d692851318b2-mvAC4MC",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 4",
+     "cl. 5"
+    ]
+   },
+   {
+    "act": "Ministerial Regulation Prescribing Supplies and Procurement Methods for Supplies that the State Must Promote or Support B.E.2563 (กฎกระทรวงกำหนดพัสดุและวิธีการจัดซื้อจัดจ้างพัสดุที่รัฐต้องการส่งเสริมหรือสนับสนุน พ.ศ. 2563)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/2ed2d1bb-a83b-4607-b5c9-f69dbb04cb01/%E0%B8%81%E0%B8%8E%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B8%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A3%E0%B8%B1%E0%B8%90%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%AA%E0%B8%99%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%99%E0%B8%B8%E0%B8%99+%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B5%E0%B9%88+2.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-2ed2d1bb-a83b-4607-b5c9-f69dbb04cb01-n0ZSWo-",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 13"
+    ]
+   },
+   {
+    "act": "Ministerial Regulation Prescribing Supplies and Procurement Methods for Supplies that the State Must Promote or Support (No.2) B.E.2563 (กฎกระทรวงกำหนดพัสดุและวิธีการจัดซื้อจัดจ้างพัสดุที่รัฐต้องการส่งเสริมหรือสนับสนุน ฉบับที่ 2 พ.ศ. 2563)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/fea11f2b-f607-4c84-8400-c0c9cb0b03ad/%E0%B8%81%E0%B8%8E%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87+%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%9E%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B8.PDF?MOD=AJPERES&CACHEID=ROOTWORKSPACE-fea11f2b-f607-4c84-8400-c0c9cb0b03ad-nqeA3WO",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 27/3"
+    ],
+    "section_grammars": [
+     "thai_inserted_clause"
+    ]
+   },
+   {
+    "act": "Ministerial Regulation Prescribing Supplies and Procurement Methods for Supplies that the State Must Promote or Support (No.2) B.E.2563 (กฎกระทรวงกำหนดพัสดุและวิธีการจัดซื้อจัดจ้างพัสดุที่รัฐต้องการส่งเสริมหรือสนับสนุน ฉบับที่ 2 พ.ศ. 2563)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/fea11f2b-f607-4c84-8400-c0c9cb0b03ad/%E0%B8%81%E0%B8%8E%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87+%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%9E%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B8.PDF?MOD=AJPERES&CACHEID=ROOTWORKSPACE-fea11f2b-f607-4c84-8400-c0c9cb0b03ad-nqeA3WO",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 27/3"
+    ],
+    "section_grammars": [
+     "thai_inserted_clause"
+    ]
+   },
+   {
+    "act": "Ministerial Regulation Prescribing Supplies and Procurement Methods for Supplies that the State Must Promote or Support (No.3) B.E.2564 (กฎกระทรวงกำหนดพัสดุและวิธีการจัดซื้อจัดจ้างพัสดุที่รัฐต้องการส่งเสริมหรือสนับสนุน ฉบับที่ 3 พ.ศ. 2564)",
+    "url": "http://www.gprocurement.go.th/wps/wcm/connect/d15ba78a-7a81-4b9c-9480-26c1737b92e6/%E0%B8%81%E0%B8%8E%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87_%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B5%E0%B9%88+3+%E0%B8%9E.%E0%B8%A8.+2564_%E0%B8%81%E0%B8%8E%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%9E%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B8%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AF.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-d15ba78a-7a81-4b9c-9480-26c1737b92e6-nO20nAI",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "policy": null,
+    "citation_template": "cl. {label}"
+   },
+   {
+    "act": "Ministerial Regulation Prescribing Supplies and Procurement Methods for Supplies that the State Must Promote or Support (No.4) B.E.2566 (กฎกระทรวงกำหนดพัสดุและวิธีการจัดซื้อจัดจ้างพัสดุที่รัฐต้องการส่งเสริมหรือสนับสนุน ฉบับที่ 4 พ.ศ. 2566)",
+    "url": "https://ratchakitcha.soc.go.th/documents/140A054N0000000000100.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "cl. {label}",
+    "expected_citations": [
+     "cl. 27/8"
+    ],
+    "section_grammars": [
+     "thai_inserted_clause"
+    ]
+   },
+   {
+    "act": "Notification of the Public Procurement and Supplies Administration Policy Committee on Standard Contract Forms B.E.2561 (ประกาศคณะกรรมการนโยบายการจัดซื้อจัดจ้างและการบริหารพัสดุภาครัฐ เรื่อง แบบสัญญาเกี่ยวกับการจัดซื้อจัดจ้าง)",
+    "url": "https://ratchakitcha.soc.go.th/documents/2133647.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "policy": null,
+    "citation_template": "cl. {label}"
+   },
+   {
+    "act": "Procurement of Computer Programs Guidelines: Software and the use of licensed software by the Governmental Agencies issued by the Department of Intellectual Property (แนวทางการจัดซื้อจัดจ้าง โปรแกรมคอมพิวเตอร์ (Software: ซอฟต์แวร์)และการใช้งานซอฟต์แวร์ที่มีลิขสิทธิ์สำหรับหน่วยงานภาครัฐ)",
+    "url": "https://www.ipthailand.go.th/images/3534/2564/Copyright/software_program_20201027.pdf",
+    "coverage": "Software procurement (government agencies)",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null
+   },
+   {
+    "act": "Protection of Layout Designs of Integrated Circuits Act B.E. 2543",
+    "url": "https://www.ipthailand.go.th/images/781/id_032.pdf",
+    "coverage": "Integrated circuits",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null,
+    "citation_template": "s. {label}"
+   }
+  ],
+  "India": [
+   {
+    "act": "Government of India, Ministry of Science and Technology, National Data Sharing and Accessibility Policy 2012",
+    "url": "https://dst.gov.in/national-data-sharing-and-accessibility-policy-0",
+    "coverage": "Data generated using public funds",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Digital Personal Data Protection Act No. 22 2023",
+    "url": "https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Government of India, Ministry of Electronics and Information Technology (MeitY), Guidelines for Government Departments On Contractual Terms Related to Cloud Services 2015",
+    "url": "http://meity.gov.in/writereaddata/files/Guidelines-Contractual_Terms.pdf",
+    "coverage": "Cloud computing",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Reserve Bank of India Directive 2018",
+    "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11244&Mode=0",
+    "coverage": "Payment data",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Government of India Ministry of Electronics and Information Technology (MeitY) Indian Computer Emergency Response Team (CERT-In) No. 20(3)/2022-CERT-In Directions under sub-section (6) of section 70B ",
+    "url": "https://www.pfrda.org.in/writereaddata/links/cert%201-2%20pages8112e879-dd34-4486-ace1-df7af3f458dc.pdf",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Insurance Regulatory and Development Authority of India (Maintenance of Insurance Records) Regulations, 2015; Insurance Regulatory and Development Authority of India (Outsourcing of Activities by Indi",
+    "url": "https://irdai.gov.in/document-detail?documentId=604674",
+    "coverage": "Insurance Services",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Companies Act No.18 2013",
+    "url": "https://www.mca.gov.in/Ministry/pdf/CompaniesAct2013.pdf",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Insurance Regulatory and Department Authority of India (Maintenance of Insurance Records) Regulations, 2015",
+    "url": "https://irdai.gov.in/document-detail?documentId=604674",
+    "coverage": "Insurance Services",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Ministry of Electronics and Information Technology Cyber Security Direction 2022",
+    "url": "https://www.pfrda.org.in/writereaddata/links/cert%201-2%20pages8112e879-dd34-4486-ace1-df7af3f458dc.pdf",
+    "coverage": "Cyber Security",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules 2011; Clarification on Information Technology (Reasonable security practices and ",
+    "url": "http://www.wipo.int/wipolex/en/text.jsp?file_id=338328",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Master Direction on Information Technology Governance, Risk, Controls and Assurance Practices 2023",
+    "url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=12562",
+    "coverage": "Banking sector",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Government of India, Ministry of Communication and Information Technology, National Cyber Security Policy 2013",
+    "url": "https://www.meity.gov.in/sites/upload_files/dit/files/National%20Cyber%20Security%20Policy%20%281%29.pdf",
+    "coverage": "Cyber security",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Information Technology Act No.21 2000",
+    "url": "https://www.meity.gov.in/writereaddata/files/itbill2000.pdf",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Comprehensive Cyber Security Framework for Primary (Urban) Cooperative Banks (UCBs) – A Graded Approach 2019",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Mode=0&Id=11772",
+    "coverage": "Primary (Urban) Cooperative Banks (UCBs)",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Government of India, Ministry of Communications and IT, License Agreement for Provision of Internet Services 2013; Government of India, Ministry of Communications and IT, License Agreement for Provisi",
+    "url": "https://dot.gov.in/sites/default/files/Amendment%20in%20Internet%20Service%20Provider%20.pdf?download=1",
+    "coverage": "Internet Service Providers",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Prevention of Money-laundering (Maintenance of Records of the Nature and Value of Transactions, the Procedure and Manner of Maintaining and Time for Furnishing Information and Verification and Mainten",
+    "url": "https://upload.indiacode.nic.in/showfile?actid=AC_CEN_2_2_00035_200315_1517807326550&type=rule&filename=The%20Prevention%20of%20Money-laundering%20(Maintenance%20of%20Records",
+    "coverage": "Banking companies and financial institutions",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations 2015",
+    "url": "https://www.sebi.gov.in/legal/regulations/sep-2023/securities-and-exchange-board-of-india-listing-obligations-and-disclosure-requirements-regulations-2015-last-amended-on-september-20-2023-_77239.html",
+    "coverage": "Listed (Public) Companies",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Reserve Bank of India Master Direction on Issuance and Operation of Prepaid Payment Instruments (PPI)",
+    "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=11142",
+    "coverage": "Prepaid Payment Instruments",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Reserve Bank of India (Know Your Customer (KYC)) Directions 2016",
+    "url": "https://www.rbi.org.in/CommonPerson/english/scripts/notification.aspx?id=2607",
+    "coverage": "All entities regulated by Reserve Bank of India",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021",
+    "url": "https://www.meity.gov.in/writereaddata/files/Information%20Technology%20%28Intermediary%20Guidelines%20and%20Digital%20Media%20Ethics%20Code%29%20Rules%2C%202021%20%28updated%2006.04.2023%29-.pdf",
+    "coverage": "Internet Intermediaries",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Notification 20-271/2010 AS-I (Vol.-III) Amendment in Unified License (UL) Agreement for Change in Time Period of Storage of Call Detail Record (CDR)/ Exchange Detail Record (EDR)/ IP Detail Record (I",
+    "url": "https://dot.gov.in/sites/default/files/21122021%20UL%20CDR%20two%20years.pdf",
+    "coverage": "Call Detail Record (CDR)/ Exchange Detail Record (EDR)/ IP Detail Record (IPDR)",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Information Technology (Guidelines for Cyber Café) Rules 2011",
+    "url": "https://www.meity.gov.in/sites/upload_files/dit/files/RNUS_CyberLaw_15411.pdf",
+    "coverage": "Cyber Cafes",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "International Financial Services Centres Authority (Market Infrastructure Institutions) Regulations 2021; Securities Contracts (Regulation) Rules, 1957",
+    "url": "https://ifsca.gov.in/Legal/Index?MId=MMc3uVo6gKc=",
+    "coverage": "Stock exchange",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations 2021",
+    "url": "https://ifsca.gov.in/Document/Legal/ifsca-capital-market-intermediaries-regulations-2021-as-amended-up-to-july-3-202320072023040848.pdf",
+    "coverage": "Banking companies and financial institutions",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "International Financial Services Centres Authority (Fund Management) Regulations 2022",
+    "url": "https://ifsca.gov.in/Document/Legal/ifsca-fund-management-regulations-2022-as-amended-upto-april-11-202324042023105305.pdf",
+    "coverage": "Banking companies and financial institutions",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "International Financial Services Centres Authority (Maintenance of Insurance Records and Submission of Requisite Information for Investigation and Inspection) Regulations 2022",
+    "url": "https://ifsca.gov.in/Legal/Index?MId=gPMqPzkjcD4=",
+    "coverage": "Banking companies and financial institutions",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "International Financial Services Centres Authority (Anti Money Laundering, Counter Terrorist-Financing and Know Your Customer) Guidelines 2022",
+    "url": "https://ifsca.gov.in/Viewer?Path=Document%2FLegal%2Fifsca-aml-cft-kyc-guidelines-202229052023021818.pdf&Title=IFSCA%20%28Anti%20Money%20Laundering%2C%20Counter%20Terrorist-Financing%20and%20Know%20Your%20Customer%29%20Guidelines%2C%202022&Date=01%2F11%2F2022",
+    "coverage": "Banking companies and financial institutions",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "International Financial Services Centres Authority Banking Handbook on Conduct of Business Directions 2023",
+    "url": "https://ifsca.gov.in/Document/Legal/the-ifsca-banking-handbook-conduct-of-business-directions13082021060337.pdf",
+    "coverage": "Banking companies and financial institutions",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Companies Act No.18 2013",
+    "url": "http://www.mca.gov.in/Ministry/pdf/General_Circular_25_2014.pdf",
+    "coverage": "Banking companies and financial institutions",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Government of India, Ministry of Corporate Affairs, Companies (Management and Administration) Rules 2014",
+    "url": "https://thc.nic.in/Central%20Governmental%20Rules/Companies%20(Management%20and%20Administration",
+    "coverage": "Banking companies and financial institutions",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Government of India, Ministry of Communications and IT, License Agreement for Provision of Internet Services; Government of India, Ministry of Communications and IT, License Agreement for Provision of",
+    "url": "http://cis-india.org/internet-governance/blog/data-retention-in-india#fn8",
+    "coverage": "Internet Service Providers",
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Information Technology Act No.21 2000",
+    "url": "https://eprocure.gov.in/cppp/rulesandprocs/kbadqkdlcswfjdelrquehwuxcfmijmuixngudufgbuubgubfugbububjxcgfvsbdihbgfGhdfgFHytyhRtMTk4NzY=",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Information Technology (Procedure and Safeguards for Interception, Monitoring and Decryption of Information) Rules 2009",
+    "url": "https://www.meity.gov.in/writereaddata/files/Information%20Technology%20%28Procedure%20and%20Safeguards%20for%20Interception%2C%20Monitoring%20and%20Decryption%20of%20Information%29%20Rules%2C%202009.pdf",
+    "coverage": "Intermediaries",
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "The Telecommunications Act No. 44 2023",
+    "url": "https://dot.gov.in/sites/default/files/Telecommunications%20Act%202023_1.pdf?download=1",
+    "coverage": "Telecommunication Sector",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Digital Personal Data Protection Act 2023",
+    "url": "https://www.indiacode.nic.in/handle/123456789/22037",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "DPDP Rules 2025 (G.S.R. 846(E))",
+    "url": "https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "DPDP Commencement Order (G.S.R. 843(E))",
+    "url": "https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "CERT-In Directions 28 Apr 2022",
+    "url": "https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Prevention of Money-laundering Act 2002",
+    "url": "https://www.indiacode.nic.in/handle/123456789/2036",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Bharatiya Nagarik Suraksha Sanhita 2023",
+    "url": "https://www.indiacode.nic.in/handle/123456789/21920?locale=en",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Aadhaar Act 2016",
+    "url": "https://www.indiacode.nic.in/handle/123456789/21583",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Telecom (Authorisation for Telecommunication Network) Rules 2026 G.S.R. 644(E)",
+    "url": "https://www.dot.gov.in/static/uploads/2026/07/c396e4c7175a1895d74c836343e03e96.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Telecom (Principal Telecommunication Services) Rules 2026",
+    "url": "https://eservices.dot.gov.in/sites/default/files/circular-notifications/principal-telecom-services-rule-2026.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Telecom (Miscellaneous Telecommunication Services) Rules 2026",
+    "url": "https://eservices.dot.gov.in/sites/default/files/circular-notifications/misc-telecom-services-rules-2026.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "DST Geospatial Guidelines 2021",
+    "url": "https://dst.gov.in/sites/default/files/Final%20Approved%20Guidelines%20on%20Geospatial%20Data.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "RBI Payment Data Storage FAQs 2019",
+    "url": "https://www.rbi.org.in/commonman/english/scripts/FAQs.aspx?Id=2995",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "RBI Digital Lending Directions 2025",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=12848&Mode=0",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "RBI Payment Aggregators Directions 2025",
+    "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12896",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "RBI IT Outsourcing Directions 2023",
+    "url": "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=12486",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "NBFC Outsourcing Directions 2017",
+    "url": "https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=2646",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Companies (Accounts) Rules 2014 (as amended 2022)",
+    "url": "https://thc.nic.in/Central%20Governmental%20Rules/Companies%20(Accounts)%20Rules,%202014..pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "SEBI CSCRF 2024",
+    "url": "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2024/1724326790365.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "SEBI Cloud Framework 2023",
+    "url": "https://www.sebi.gov.in/sebi_data/attachdocs/mar-2023/1678112480131.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Public Records Act 1993",
+    "url": "https://www.indiacode.nic.in/bitstream/123456789/1921/1/a1993___69.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Telecommunications (Authorisation for Provision of Principal Telecommunication Services) Rules 2026 (G.S.R. 513(E), official Gazette CG-DL-E-24062026-273774)",
+    "url": "https://egazette.gov.in/WriteReadData/2026/273774.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "egazette-direct"
+   },
+   {
+    "act": "Telecommunications (Authorisation for Provision of Miscellaneous Telecommunication Services) Rules 2026 (G.S.R. 512(E), official Gazette CG-DL-E-23062026-273770)",
+    "url": "https://egazette.gov.in/WriteReadData/2026/273770.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "egazette-direct"
+   },
+   {
+    "act": "Telecommunications (Authorisation for Captive Telecommunication Services) Rules 2026 (official Gazette CG-DL-E-23062026-273771)",
+    "url": "https://egazette.gov.in/WriteReadData/2026/273771.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "egazette-direct"
+   },
+   {
+    "act": "Telecommunications (Terms and Conditions for Migration) Rules 2026 (official Gazette CG-DL-E-23062026-273763)",
+    "url": "https://egazette.gov.in/WriteReadData/2026/273763.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "egazette-direct"
+   },
+   {
+    "act": "PFRDA CERT-In advisory pages",
+    "url": "https://www.pfrda.org.in/writereaddata/links/cert%201-2%20pages8112e879-dd34-4486-ace1-df7af3f4a4a1.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "gold-gap round-2"
+   },
+   {
+    "act": "DoT ISP License Agreement (data retention clauses)",
+    "url": "https://dot.gov.in/sites/default/files/Amendment%20in%20Internet%20Service%20Provider%20license.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "gold-gap round-2"
+   },
+   {
+    "act": "Public Procurement (Preference to Make in India) Order 2017 (DPIIT, revised 19 July 2024)",
+    "url": "https://www.dpiit.gov.in/static/uploads/2025/07/458478309ccf301ceb58f63d02646f42.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "cl. 3"
+    ],
+    "citation_template": "cl. {label}",
+    "policy": null
+   },
+   {
+    "act": "Public Procurement (Preference to Make in India) Order 2017 (DPIIT, revised 19 July 2024)",
+    "url": "https://www.dpiit.gov.in/static/uploads/2025/07/458478309ccf301ceb58f63d02646f42.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "cl. 3A",
+     "cl. 6"
+    ],
+    "citation_template": "cl. {label}",
+    "policy": null
+   },
+   {
+    "act": "General Financial Rules 2017 (consolidated up to 31 January 2026)",
+    "url": "https://doe.gov.in/files/circulars_document/GFRupdatedupto31012026.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "r. {label}",
+    "section_grammars": [
+     "india_rule"
+    ],
+    "policy": null
+   },
+   {
+    "act": "General Financial Rules 2017 (consolidated up to 31 January 2026)",
+    "url": "https://doe.gov.in/files/circulars_document/GFRupdatedupto31012026.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "citation_template": "r. {label}",
+    "section_grammars": [
+     "india_rule"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Department of Expenditure Order (Public Procurement No. 4) 2023 on Restrictions under Rule 144(xi) of the General Financial Rules 2017",
+    "url": "https://doe.gov.in/files/circulars_document/Order_Public_Procurement_No_4_Restrictions_under_Rule_144_xi_of_the_General_Financial_Rules_GFRs_2017.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "DoT Notification of Telecom Products, Services or Works under the Public Procurement (Preference to Make in India) Order 2017 (F.No. 18-10/2017-IP, 21 October 2024)",
+    "url": "https://egazette.gov.in/WriteReadData/2024/258138.pdf#page=14",
+    "coverage": "Telecommunications (ICT goods)",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 14"
+    ],
+    "page_range": [
+     14,
+     21
+    ],
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "DoT Notification of Telecom Products, Services or Works under the Public Procurement (Preference to Make in India) Order 2017 (F.No. 18-10/2017-IP, 21 October 2024)",
+    "url": "https://egazette.gov.in/WriteReadData/2024/258138.pdf#page=14",
+    "coverage": "Telecommunications (ICT goods)",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "page_range": [
+     14,
+     21
+    ],
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Public Procurement Policy for Micro and Small Enterprises (MSEs) Order 2012 (S.O. 581(E))",
+    "url": "https://www.dcmsme.gov.in/notification.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Public Procurement Policy for Micro and Small Enterprises (MSEs) Order 2012 (S.O. 581(E))",
+    "url": "https://www.dcmsme.gov.in/notification.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Public Procurement (Preference to Make in India) Order 2019 for Cyber Security Products (MeitY)",
+    "url": "https://www.dot.gov.in/static/uploads/2026/04/5cd74d7ff79cf32947dcc7ae6dad175d.pdf",
+    "coverage": "Cyber security products",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Public Procurement (Preference to Make in India) Order 2019 for Cyber Security Products (MeitY)",
+    "url": "https://www.dot.gov.in/static/uploads/2026/04/5cd74d7ff79cf32947dcc7ae6dad175d.pdf",
+    "coverage": "Cyber security products",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Policy on Collaborative Application Development by Opening the Source Code of Government Applications 2015",
+    "url": "https://egazette.gov.in/WriteReadData/2015/164611.pdf#page=6",
+    "coverage": "Digital services (custom-built government software)",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "page_range": [
+     6,
+     9
+    ],
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Policy on Adoption of Open Source Software for Government of India 2015",
+    "url": "https://www.meity.gov.in/static/uploads/2024/05/policy_on_adoption_of_oss.pdf",
+    "coverage": "Digital services (government software)",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "MeitY Inviting Application for Empanelment of Cloud Services of Cloud Service Providers (July 2026)",
+    "url": "https://www.meity.gov.in/static/uploads/2026/07/c3cbbbbe793deb83de3b3d7151aa94c3.pdf",
+    "coverage": "Cloud services",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "MeitY Guidelines for Procurement of Cloud Services v2.0 (18 March 2026)",
+    "url": "https://www.meity.gov.in/static/uploads/2026/03/fea54ec9e544c77abbdb48d0f1da6264.pdf",
+    "coverage": "Cloud services",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Manual for Procurement of Goods 2024 (Second Edition, Department of Expenditure)",
+    "url": "https://doe.gov.in/files/circulars_document/Manual_Goods_2024.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "para. {label}",
+    "policy": null
+   }
+  ],
+  "Indonesia": [
+   {
+    "act": "Regulation of Financial Services Authority No.11/POJK.03/2022 on the Implementation of Information Technology by Commercial Banks 2022 ; Bank Indonesia Regulation No. 22/23/PBI/2020 on Payment Systems",
+    "url": "https://peraturan.bpk.go.id/Details/227376/peraturan-ojk-no-11pojk032022-tahun-2022",
+    "coverage": "Financial sector",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.71 on the Provision of Electronic System and Transaction 2019",
+    "url": "https://peraturan.bpk.go.id/Details/122030/pp-no-71-tahun-2019",
+    "coverage": "Electronic systems operators for public scope, Electronic systems operators for private scope",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law No.27 on Personal Data Protection 2022",
+    "url": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.46 on Health Information System 2014; Regulation of the Minister of Health of the Republic of Indonesia No.18 on the Implementation of One ",
+    "url": "http://jdih.kkp.go.id/peraturan/pp-46-2014.pdf",
+    "coverage": "Health Sector",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of Financial Service Authority Regulation No. 11/POJK.03/2022 on Implementation of Information Technology by Commercial Banks 2022 ; Regulation of Financial Services Authority No.4/POJK.05/",
+    "url": "https://ojk.go.id/id/regulasi/Documents/Pages/Penyelenggaraan-Teknologi-Informasi-Oleh-Bank-Umum/POJK%2011%20-%2003%20-%202022.pdf",
+    "coverage": "Financial sector",
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of the Minister of Communication and Informatics of the Republic of Indonesia No.20 on Protection of Personal Data in Electronic Systems 2016",
+    "url": "http://makna.co/wp-content/uploads/2018/01/MOCI-Regulation-No-20-of-2016-Makna-Eng.pdf",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.71 on the Provision of Electronic System and Transaction 2019",
+    "url": "https://peraturan.bpk.go.id/Home/Details/122030/pp-no-71-tahun-2019",
+    "coverage": "Electronic systems and transactions",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law No.27 on Personal Data Protection 2022",
+    "url": "https://peraturan.bpk.go.id/Home/Details/229798/uu-no-27-tahun-2022",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.80 on Trading Through the Electronic System (E-commerce Law) 2019",
+    "url": "https://perpajakan.ddtc.co.id/peraturan-pajak/read/peraturan-pemerintah-80-tahun-2019",
+    "coverage": "E-commerce",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Financial Service Authority Circular Letter POJK 6/POJK.07/2022 concerning Consumer and Community Protection in the Financial Services Sector",
+    "url": "https://www.ojk.go.id/id/regulasi/Documents/Pages/POJK-44-Tahun-2024-Rahasia-Bank-/POJK%2044%20Tahun%202024%20Rahasia%20Bank.pdf",
+    "coverage": "Financial sector",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Bank Indonesia Regulation No. 22/23/PBI/2020 on Payment Systems 2020 ; Regulation of Financial Services Authority No.11/POJK.03/2022 on the Implementation of Information Technology by Commercial Banks",
+    "url": "https://peraturan.bpk.go.id/Details/219277/peraturan-bi-no-2223pbi2020",
+    "coverage": "Financial sector",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No. 17 on the Governance of Electronic System Operations for Child Protection 2025",
+    "url": "https://jdih.komdigi.go.id/produk_hukum/view/id/965/t/peraturan%2Bpemerintah%2Bnomor%2B17%2Btahun%2B2025",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law No.11 on Information and Electronic Transactions 2008 ; Law No.19 on Amendments to Law Number 11 of 2008 on Electronic Information and Transactions 2016 ; Law No.1 on the Second Amendment to Law N",
+    "url": "https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008",
+    "coverage": "Electronic Transactions",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.80 on Trading Through the Electronic System (E-commerce Law) 2019",
+    "url": "https://peraturan.bpk.go.id/Details/126143/pp-no-80-tahun-2019",
+    "coverage": "E-commerce",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Presidential Regulation No.53 on the National Cyber and Encryption Agency 2021",
+    "url": "https://peraturan.bpk.go.id/Details/165493/perpres-no-28-tahun-2021?utm_source=chatgpt.com",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Regulation of Financial Services Authority No.27 on the Implementation of Financial Sector Technology Innovation, Digital Financial Assets, and Crypto Assets 2024",
+    "url": "https://iru.ojk.go.id/iru/policy/detailpolicy/13208/ojk-issues-regulation-concerning-the-implementation-of-digital-financial-asset-trading-including-cryptocurrency?utm_source=chatgpt.com",
+    "coverage": "Digital Financial Asset",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law No. 8 on Company Documents 1997 ; Law No. 7 on Banking 1992",
+    "url": "https://peraturan.bpk.go.id/Details/45929",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law No.17 on State Intelligence 2011 ; Regulation of the Minister of Communication and Informatics of the Republic of Indonesia No.20 on Protection of Personal Data in Electronic Systems 2016",
+    "url": "https://peraturan.bpk.go.id/Details/39236",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "UU 27/2022 Personal Data Protection",
+    "url": "https://jdih.komdigi.go.id/produk_hukum/view/id/832/t/undangundang%2Bnomor%2B27%2Btahun%2B2022",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Perpres 47/2023 National Cybersecurity Strategy",
+    "url": "https://peraturan.bpk.go.id/Details/255542/perpres-no-47-tahun-2023",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "BSSN Regulation 1/2024 Cyber Incident Management",
+    "url": "https://peraturan.bpk.go.id/Details/291240/peraturan-bssn-no-1-tahun-2024",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "BSSN Regulation 2/2024 Cyber Crisis Management",
+    "url": "https://peraturan.bpk.go.id/Details/291245/peraturan-bssn-no-2-tahun-2024",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "BSSN Regulation 5/2024 National Cybersecurity Action Plan",
+    "url": "https://peraturan.bpk.go.id/Details/309728/peraturan-bssn-no-5-tahun-2024",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "UU 8/2010 Anti-Money Laundering",
+    "url": "https://peraturan.bpk.go.id/Details/38547/uu-no-8-tahun-2010",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "UU 6/1983 KUP (as amended)",
+    "url": "https://peraturan.bpk.go.id/Details/77227/uu-no-6-tahun-1983",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Permenkes 24/2022 Medical Records",
+    "url": "https://peraturan.bpk.go.id/Details/245544/permenkes-no-24-tahun-2022",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Permenkominfo 5/2020 Private-Scope ESOs (as amended)",
+    "url": "https://jdih.komdigi.go.id/produk_hukum/view/id/759/t/peraturan%2Bmenteri%2Bkomunikasi%2Bdan%2Binformatika%2Bnomor%2B5%2Btahun%2B2020",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "UU 17/2011 State Intelligence",
+    "url": "https://jdih.komdigi.go.id/produk_hukum/view/id/123/t/undangundang%2Bnomor%2B17%2Btahun%2B%2B2011%2Btanggal%2B7%2Bnovember%2B2011",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "UU 20/2025 KUHAP (new Criminal Procedure Code)",
+    "url": "https://peraturan.bpk.go.id/Details/337302/uu-no-20-tahun-2025",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "KUP Law full text (Kemenkeu JDIH)",
+    "url": "https://jdih.kemenkeu.go.id/dok/uu-28-tahun-2007",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "POJK 3/2024 ITSK",
+    "url": "https://ojk.go.id/id/regulasi/Pages/POJK-3-2024-Penyelenggaraan-Inovasi-Teknologi-Sektor-Keuangan.aspx",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "POJK 4/POJK.05/2021 NBFI IT Risk",
+    "url": "https://ojk.go.id/id/regulasi/Pages/Penerapan-Manajemen-Risiko-dalam-Penggunaan-Teknologi-Informasi-oleh-Lembaga-Jasa-Keuangan-Nonbank.aspx",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "POJK 69/POJK.05/2016 Insurance Business",
+    "url": "https://ojk.go.id/id/regulasi/Documents/Pages/POJK-tentang--Penyelenggaraan-Usaha-Perusahaan-Asuransi,-Asuransi-Syariah,-Reasuransi,-dan-Reasuransi-Syariah/pojk%2069-2016.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "POJK 38/POJK.05/2020 (inserts Pasal 49A)",
+    "url": "https://www.ojk.go.id/id/regulasi/Documents/Pages/Perubahan-Atas-Peraturan-Otoritas-Jasa-Keuangan-Nomor-69-tentang-Penyelenggaraan-Usaha-Perusahaan-Asuransi/pojk%2038-2020.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "POJK 75/POJK.03/2016 Rural Bank IT",
+    "url": "https://www.ojk.go.id/id/regulasi/Documents/Pages/POJK-tentang-Standar-Penyelenggaraan-Teknologi-Informasi-bagi-Bank-Perkreditan-Rakyat-dan-Bank-Pembiayaan-Rakyat-Syariah/pojk%2075-2016.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PBI 23/6/PBI/2021 Payment Service Providers",
+    "url": "https://www.bi.go.id/id/publikasi/peraturan/Documents/PBI_230621.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "PBI 23/7/PBI/2021 Payment System Infrastructure",
+    "url": "https://www.bi.go.id/id/publikasi/peraturan/Documents/PBI_230721.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "POJK 22/2023 Consumer Protection",
+    "url": "https://ojk.go.id/id/regulasi/Pages/Pelindungan-Konsumen-dan-Masyarakat-di-Sektor-Jasa-Keuangan.aspx",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "POJK 11/POJK.03/2022 Commercial Bank IT",
+    "url": "https://ojk.go.id/id/regulasi/Pages/Penyelenggaraan-Teknologi-Informasi-Oleh-Bank-Umum.aspx",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "Permen ESDM 7/2019 Oil and Gas Data",
+    "url": "https://jdih.esdm.go.id/dokumen/download?id=Permen+ESDM+Nomor+7+Tahun+2019.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 31-Jul-2026"
+   },
+   {
+    "act": "IA-CEPA Chapter 13 (E-Commerce)",
+    "url": "https://www.dfat.gov.au/sites/default/files/iacepa-chapter-13-electronic-commerce.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I5",
+    "cluster": "deep-research 31-Jul-2026",
+    "source_type": "treaty"
+   },
+   {
+    "act": "RCEP Chapter 12 (official text)",
+    "url": "https://www.mfat.govt.nz/assets/Trade-agreements/RCEP/RECP-Agreement-112020/Chapter-12.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I5",
+    "cluster": "deep-research 31-Jul-2026",
+    "source_type": "treaty"
+   },
+   {
+    "act": "UU 4/2021 ASEAN E-Commerce ratification",
+    "url": "https://jdih.kemendag.go.id/peraturan/undang-undang-nomor-4-tahun-2021-tentang-pengesahan-asean-agreement-on-electronic-commerce-persetujuan-asean-tentang-perdagangan-melalui-sistem-elektronik",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I5",
+    "cluster": "deep-research 31-Jul-2026",
+    "source_type": "treaty"
+   },
+   {
+    "act": "Permenkominfo 10/2021 (amends Permenkominfo 5/2020)",
+    "url": "https://jdih.komdigi.go.id/produk_hukum/view/id/779/t/peraturan+menteri+komunikasi+dan+informatika+nomor+10+tahun+2021",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "gold-gap round-2"
+   },
+   {
+    "act": "PP 40/2019 (Adminduk implementing regulation)",
+    "url": "https://peraturan.bpk.go.id/Details/108801/pp-no-40-tahun-2019",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "gold-gap round-2"
+   },
+   {
+    "act": "UU 10/1998 Banking (amends UU 7/1992)",
+    "url": "https://peraturan.bpk.go.id/Details/45486/uu-no-10-tahun-1998",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "gold-gap round-2"
+   },
+   {
+    "act": "POJK 8/2023 AML-CFT implementation",
+    "url": "https://ojk.go.id/id/regulasi/Pages/POJK-8-2023.aspx",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "gold-gap round-2"
+   },
+   {
+    "act": "Presidential Regulation No.16 on Government Procurement of Goods and Services 2018",
+    "url": "https://peraturan.bpk.go.id/Download/64076/Perpres%20Nomor%2016%20Tahun%202018.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 63"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Presidential Regulation No.16 on Government Procurement of Goods and Services 2018",
+    "url": "https://peraturan.bpk.go.id/Download/64076/Perpres%20Nomor%2016%20Tahun%202018.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 65",
+     "Art. 67"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Presidential Regulation No. 46 of 2025 on the Second Amendment of the Government Procurement of Goods/Services Regulation",
+    "url": "https://peraturan.bpk.go.id/Download/380134/Peraturan%20Presiden%20Nomor%2046%20Tahun%202025.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "policy": null
+   },
+   {
+    "act": "Presidential Regulation No. 46 of 2025 on the Second Amendment of the Government Procurement of Goods/Services Regulation",
+    "url": "https://peraturan.bpk.go.id/Download/380134/Peraturan%20Presiden%20Nomor%2046%20Tahun%202025.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "policy": null
+   },
+   {
+    "act": "Presidential Instruction No. 2 of 2022 on Accelerating the Increase in the Use of Domestic Products and Products from Micro, Small Enterprises, and Cooperatives (Bangga Buatan Indonesia) in Government Procurement of Goods and Services",
+    "url": "https://peraturan.bpk.go.id/Download/198318/Inpres%20Nomor%202%20Tahun%202022.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null
+   },
+   {
+    "act": "Presidential Instruction No. 2 of 2022 on Accelerating the Increase in the Use of Domestic Products and Products from Micro, Small Enterprises, and Cooperatives (Bangga Buatan Indonesia) in Government Procurement of Goods and Services",
+    "url": "https://peraturan.bpk.go.id/Download/198318/Inpres%20Nomor%202%20Tahun%202022.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 8",
+     "Art. 15"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.29 on Industrial Empowerment 2018",
+    "url": "https://peraturan.bpk.go.id/Download/80065/PP%20Nomor%2029%20Tahun%202018.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 57",
+     "Art. 61"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.29 on Industrial Empowerment 2018",
+    "url": "https://peraturan.bpk.go.id/Download/80065/PP%20Nomor%2029%20Tahun%202018.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 63",
+     "Art. 64"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.28 on the Implementation of the Industrial Sector 2021",
+    "url": "https://peraturan.bpk.go.id/Download/154538/PP%20Nomor%2028%20Tahun%202021.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.28 on the Implementation of the Industrial Sector 2021",
+    "url": "https://peraturan.bpk.go.id/Download/154538/PP%20Nomor%2028%20Tahun%202021.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 174"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.71 on the Provision of Electronic System and Transaction 2019",
+    "url": "https://peraturan.bpk.go.id/Details/122030/pp-no-71-tahun-2019",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 9"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No.71 on the Provision of Electronic System and Transaction 2019",
+    "url": "https://peraturan.bpk.go.id/Details/122030/pp-no-71-tahun-2019",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Minister of Communication and Informatics of the Republic of Indonesia No.41/PER/M.KOMINFO/10/2009 on Procedures for Assessing the Achievement of Domestic Component Levels in the Implementation of Telecommunications 2009",
+    "url": "https://peraturan.bpk.go.id/Download/151518/Permen%20Kominfo%20Nomor%2041%20Tahun%202009.pdf",
+    "coverage": "Telecommunications",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 3"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Minister of Communication and Informatics of the Republic of Indonesia No.41/PER/M.KOMINFO/10/2009 on Procedures for Assessing the Achievement of Domestic Component Levels in the Implementation of Telecommunications 2009",
+    "url": "https://peraturan.bpk.go.id/Download/151518/Permen%20Kominfo%20Nomor%2041%20Tahun%202009.pdf",
+    "coverage": "Telecommunications",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Minister of Finance Regulation No.115/PMK.06/2020 on the Utilization of State-Owned Assets 2020",
+    "url": "https://peraturan.bpk.go.id/Download/136379/115_PMK.06_2020.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 74"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Minister of Industry No. 35 of 2025 on Provisions and Procedures for Certification of Domestic Component Level (TKDN) and Company Benefit Weight (BMP)",
+    "url": "https://peraturan.bpk.go.id/Download/395179/permenperin-no-35-tahun-2025.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 74"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Law No. 3 of 2014 on Industry",
+    "url": "https://peraturan.bpk.go.id/Download/27824/UU%20Nomor%2003%20Tahun%202014.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 86"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Regulation of the Government of the Republic of Indonesia No. 7 of 2021 on Ease, Protection and Empowerment of Cooperatives and Micro, Small and Medium Enterprises",
+    "url": "https://peraturan.bpk.go.id/Download/154506/PP%20Nomor%207%20Tahun%202021.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "policy": null
+   }
+  ],
+  "Russian Federation": [
+   {
+    "act": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108261&rdk=38",
+    "expected_citations": [
+     "Art. 12",
+     "Art. 18",
+     "Art. 22.1"
+    ]
+   },
+   {
+    "act": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108261&rdk=38",
+    "expected_citations": [
+     "Art. 12",
+     "Art. 18",
+     "Art. 22.1"
+    ]
+   },
+   {
+    "act": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108261&rdk=38",
+    "expected_citations": [
+     "Art. 12",
+     "Art. 18",
+     "Art. 22.1"
+    ]
+   },
+   {
+    "act": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108261&rdk=38",
+    "expected_citations": [
+     "Art. 12",
+     "Art. 18",
+     "Art. 22.1"
+    ]
+   },
+   {
+    "act": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108261&rdk=38",
+    "expected_citations": [
+     "Art. 12",
+     "Art. 18",
+     "Art. 22.1"
+    ]
+   },
+   {
+    "act": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I4",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108261&rdk=38",
+    "expected_citations": [
+     "Art. 12",
+     "Art. 18",
+     "Art. 22.1"
+    ]
+   },
+   {
+    "act": "Government Resolution No. 6 of 10.01.2023 on decisions prohibiting or restricting cross-border transfer of personal data",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603690533",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=603690533&rdk=0"
+   },
+   {
+    "act": "Government Resolution No. 24 of 16.01.2023 on restricting cross-border transfer of personal data to protect public interests",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603754886",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=603754886&rdk=2"
+   },
+   {
+    "act": "Federal Law No. 572-FZ of 29.12.2022 On identification and authentication using biometric personal data",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603637578",
+    "coverage": "Biometric data",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=603637578&rdk=3"
+   },
+   {
+    "act": "Federal Law No. 149-FZ of 27.07.2006 On Information, Information Technologies and Protection of Information (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108264",
+    "coverage": "Internet information-dissemination organisers",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108264&rdk=94"
+   },
+   {
+    "act": "Federal Law No. 149-FZ of 27.07.2006 On Information, Information Technologies and Protection of Information (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108264",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108264&rdk=94"
+   },
+   {
+    "act": "Federal Law No. 149-FZ of 27.07.2006 On Information, Information Technologies and Protection of Information (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108264",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108264&rdk=94"
+   },
+   {
+    "act": "Federal Law No. 126-FZ of 07.07.2003 On Communications (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102082548",
+    "coverage": "Communications operators",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102082548&rdk=122"
+   },
+   {
+    "act": "Federal Law No. 126-FZ of 07.07.2003 On Communications (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102082548",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102082548&rdk=122"
+   },
+   {
+    "act": "Federal Law No. 126-FZ of 07.07.2003 On Communications (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102082548",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102082548&rdk=122"
+   },
+   {
+    "act": "Federal Law No. 161-FZ of 27.06.2011 On the National Payment System (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102148779",
+    "coverage": "Payment systems",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102148779&rdk=61"
+   },
+   {
+    "act": "Federal Law No. 187-FZ of 26.07.2017 On Security of Critical Information Infrastructure",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102439340",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102439340&rdk=1"
+   },
+   {
+    "act": "Presidential Decree No. 646 of 05.12.2016 Information Security Doctrine of the Russian Federation",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102417017",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102417017&rdk=0"
+   },
+   {
+    "act": "Presidential Decree No. 250 of 01.05.2022 On additional measures to ensure information security",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603015160",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=603015160&rdk=1"
+   },
+   {
+    "act": "Government Resolution No. 127 of 08.02.2018 Rules for categorising critical information infrastructure objects",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102460750",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102460750&rdk=7"
+   },
+   {
+    "act": "Government Resolution No. 1119 of 01.11.2012 Requirements for protection of personal data in information systems",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102160483",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102160483&rdk=0"
+   },
+   {
+    "act": "Government Resolution No. 687 of 15.09.2008 Regulation on processing personal data without automation tools",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102124251",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102124251&rdk=1"
+   },
+   {
+    "act": "Government Resolution No. 445 of 12.04.2018 Rules for storage of users' messages by communications operators",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102467196",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102467196&rdk=5"
+   },
+   {
+    "act": "Federal Law No. 115-FZ of 07.08.2001 On Countering Money Laundering and Terrorist Financing (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102072376",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102072376&rdk=151"
+   },
+   {
+    "act": "Federal Law No. 115-FZ of 07.08.2001 On Countering Money Laundering and Terrorist Financing (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102072376",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102072376&rdk=151"
+   },
+   {
+    "act": "Federal Law No. 402-FZ of 06.12.2011 On Accounting (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102152685",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102152685&rdk=22"
+   },
+   {
+    "act": "Tax Code of the Russian Federation Part One No. 146-FZ of 31.07.1998 (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102054722",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102054722&rdk=255"
+   },
+   {
+    "act": "Tax Code of the Russian Federation Part One No. 146-FZ of 31.07.1998 (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102054722",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102054722&rdk=255"
+   },
+   {
+    "act": "Criminal Procedure Code of the Russian Federation No. 174-FZ of 18.12.2001 (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102073942",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102073942&rdk=380"
+   },
+   {
+    "act": "Federal Law No. 3-FZ of 07.02.2011 On Police (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102145133",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102145133&rdk=77"
+   },
+   {
+    "act": "Federal Law No. 5-FZ of 10.01.1996 On Foreign Intelligence (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102039044",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102039044&rdk=18"
+   },
+   {
+    "act": "Federal Law No. 144-FZ of 12.08.1995 On Operational-Search Activity (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102037058",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102037058&rdk=39"
+   },
+   {
+    "act": "Labor Code of the Russian Federation No. 197-FZ of 30.12.2001 (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102074279",
+    "coverage": "Employee personal data (Chapter 14)",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102074279&rdk=192"
+   },
+   {
+    "act": "Federal Law No. 323-FZ of 21.11.2011 On the Fundamentals of Protection of the Health of Citizens (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102152259",
+    "coverage": "Health data",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102152259&rdk=129"
+   },
+   {
+    "act": "Federal Law No. 38-FZ of 13.03.2006 On Advertising (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102105292",
+    "coverage": "Advertising",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102105292&rdk=110"
+   },
+   {
+    "act": "RSFSR Law No. 395-I of 02.12.1990 On Banks and Banking Activities (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102010268",
+    "coverage": "Banking secrecy",
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102010268&rdk=186"
+   },
+   {
+    "act": "Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data (ETS No. 108)",
+    "url": "https://rm.coe.int/1680078b37",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "source_type": "treaty"
+   },
+   {
+    "act": "Federal Law No. 44-FZ of 05.04.2013 On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102164547",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 14",
+     "Art. 24.2"
+    ],
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102164547&rdk=157",
+    "policy": null
+   },
+   {
+    "act": "Federal Law No. 44-FZ of 05.04.2013 On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102164547",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 5"
+    ],
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102164547&rdk=157",
+    "policy": null
+   },
+   {
+    "act": "Federal Law No. 44-FZ of 05.04.2013 On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102164547",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 14",
+     "Art. 30"
+    ],
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102164547&rdk=157",
+    "policy": null
+   },
+   {
+    "act": "Government Resolution No. 1875 of 23.12.2024 On measures to provide national treatment in procurement of goods, works and services for state and municipal needs and procurement by certain types of legal entities",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=608103683",
+    "coverage": "Software, cloud/IT services and ICT goods",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=608103683&rdk=18",
+    "policy": null
+   },
+   {
+    "act": "Government Resolution No. 1875 of 23.12.2024 On measures to provide national treatment in procurement of goods, works and services for state and municipal needs and procurement by certain types of legal entities",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=608103683",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=608103683&rdk=18",
+    "policy": null
+   },
+   {
+    "act": "Federal Law No. 223-FZ of 18.07.2011 On Procurement of Goods, Works and Services by Certain Types of Legal Entities (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102149420",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102149420&rdk=57",
+    "policy": null
+   },
+   {
+    "act": "Federal Law No. 223-FZ of 18.07.2011 On Procurement of Goods, Works and Services by Certain Types of Legal Entities (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102149420",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102149420&rdk=57",
+    "policy": null
+   },
+   {
+    "act": "Federal Law No. 223-FZ of 18.07.2011 On Procurement of Goods, Works and Services by Certain Types of Legal Entities (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102149420",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102149420&rdk=57",
+    "policy": null
+   },
+   {
+    "act": "Federal Law No. 149-FZ of 27.07.2006 On Information, Information Technologies and Protection of Information (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108264",
+    "coverage": "Messenger Services",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 10"
+    ],
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108264&rdk=94",
+    "policy": null
+   },
+   {
+    "act": "Federal Law No. 149-FZ of 27.07.2006 On Information, Information Technologies and Protection of Information (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108264",
+    "coverage": "Software",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 12.1"
+    ],
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102108264&rdk=94",
+    "policy": null
+   },
+   {
+    "act": "Government Resolution No. 1352 of 11.12.2014 On the specifics of participation of small and medium-sized enterprises in procurement of goods, works and services by certain types of legal entities",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102363323",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102363323&rdk=29",
+    "policy": null
+   },
+   {
+    "act": "Government Resolution No. 1442 of 25.12.2015 On procurement of innovative products and high-tech products by certain types of legal entities",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102387796",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102387796&rdk=1",
+    "policy": null
+   },
+   {
+    "act": "Civil Code of the Russian Federation Part Four No. 230-FZ of 18.12.2006 (consolidated)",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102110716",
+    "coverage": "Software created under state contracts",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 1240.1"
+    ],
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102110716&rdk=48",
+    "policy": null
+   },
+   {
+    "act": "Government Resolution No. 2338 of 16.12.2022 Regulation on the unified digital platform of the Russian Federation GosTech",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603603626",
+    "coverage": "State information systems developed on GosTech",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=603603626&rdk=4",
+    "policy": null
+   },
+   {
+    "act": "Presidential Decree No. 166 of 30.03.2022 On measures to ensure technological independence and security of the critical information infrastructure",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=602954165",
+    "coverage": "Software for significant CII of 223-FZ state customers",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=602954165&rdk=2",
+    "policy": null
+   },
+   {
+    "act": "Government Resolution No. 1478 of 22.08.2022 Requirements for software used on significant critical information infrastructure objects and rules for approving its procurement",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603212184",
+    "coverage": "Software for significant CII of 223-FZ state customers",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=603212184&rdk=1",
+    "policy": null
+   },
+   {
+    "act": "Presidential Decree No. 250 of 01.05.2022 On additional measures to ensure information security",
+    "url": "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603015160",
+    "coverage": "Information-security tools and services",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "acquire": "html_render",
+    "render_url": "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=603015160&rdk=1",
+    "policy": null
+   }
+  ],
+  "Mongolia": [
+   {
+    "act": "Law of Mongolia on Protection of Personal Information (2021)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16390288615991",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export",
+    "expected_citations": [
+     "Art. 14"
+    ]
+   },
+   {
+    "act": "Law of Mongolia on Protection of Personal Information (2021)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16390288615991",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export",
+    "expected_citations": [
+     "Art. 14"
+    ]
+   },
+   {
+    "act": "Law of Mongolia on Protection of Personal Information (2021)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16390288615991",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export",
+    "expected_citations": [
+     "Art. 14"
+    ]
+   },
+   {
+    "act": "Law of Mongolia on Protection of Personal Information (2021)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16390288615991",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export",
+    "expected_citations": [
+     "Art. 14"
+    ]
+   },
+   {
+    "act": "Law of Mongolia on Protection of Personal Information (2021)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16390288615991",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export",
+    "expected_citations": [
+     "Art. 14"
+    ]
+   },
+   {
+    "act": "Law of Mongolia on Protection of Personal Information (2021)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16390288615991",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I4",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export",
+    "expected_citations": [
+     "Art. 14"
+    ]
+   },
+   {
+    "act": "Technology security requirements for processing sensitive, genetic and biometric personal data (Order No. A/90 regulation, 2023)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16760452348261",
+    "coverage": "Sensitive, genetic and biometric data",
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "citation_template": "cl. {label}"
+   },
+   {
+    "act": "Regulation on storage and protection of credit information by credit information service providers (2020)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=211161",
+    "coverage": "Credit information",
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "legalinfo_pdf_export",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "citation_template": "cl. {label}"
+   },
+   {
+    "act": "Regulation on over-the-counter market activities (2020)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=211423",
+    "coverage": "Securities (OTC trading systems)",
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "legalinfo_pdf_export",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "citation_template": "cl. {label}"
+   },
+   {
+    "act": "Conditions and requirements for establishing and operating telecommunications networks (2020, amended 2023)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=211125",
+    "coverage": "Telecommunications network licensees",
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "legalinfo_pdf_export",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "citation_template": "cl. {label}"
+   },
+   {
+    "act": "Regulation on registration and use of domain names (consolidated 2026)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=17355454497221",
+    "coverage": ".MN/.МОН registrars",
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "legalinfo_pdf_export",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "citation_template": "cl. {label}"
+   },
+   {
+    "act": "Law of Mongolia on Public Information Transparency (2021)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16390263044601",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export"
+   },
+   {
+    "act": "Law of Mongolia on Cybersecurity (2021)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16390365491061",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export"
+   },
+   {
+    "act": "Law of Mongolia on Credit Information (2011)",
+    "url": "https://legalinfo.mn/mn/detail/9175",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "legalinfo_pdf_export"
+   },
+   {
+    "act": "Law of Mongolia on Accounting (2015)",
+    "url": "https://legalinfo.mn/mn/detail/11191",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "acquire": "legalinfo_pdf_export"
+   },
+   {
+    "act": "Law of Mongolia on Communications (2001)",
+    "url": "https://legalinfo.mn/mn/detail/523",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export"
+   },
+   {
+    "act": "Law of Mongolia on Communications (2001)",
+    "url": "https://legalinfo.mn/mn/detail/523",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export"
+   },
+   {
+    "act": "Banking Law of Mongolia (2010)",
+    "url": "https://legalinfo.mn/mn/detail/108",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export"
+   },
+   {
+    "act": "Law on the Procurement of Goods, Works and Services by State and Local Property Assets (revised, 2023)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16760359992351",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 8",
+     "Art. 18",
+     "Art. 26"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "policy": null
+   },
+   {
+    "act": "Law on the Procurement of Goods, Works and Services by State and Local Property Assets (revised, 2023)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16760359992351",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 11"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Law on the Procurement of Goods, Works and Services by State and Local Property Assets (revised, 2023)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16760359992351",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 8"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Resolution of the Government of Mongolia No. 90 (2019) on the Update and Approval of the List of goods to be procured from domestic producers",
+    "url": "https://legalinfo.mn/mn/detail?lawId=209518",
+    "coverage": "Listed domestic-production goods (electrical items, cables, toner)",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "cl. 14.9"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Law of Mongolia on Organization Secret (1995)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=102",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "acquire": "legalinfo_pdf_export",
+    "policy": null
+   },
+   {
+    "act": "Standard Bidding Document for Goods (Minister of Finance Order No. A/103, 2025)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=17432054681622",
+    "coverage": "Horizontal (goods incl. ICT hardware and off-the-shelf software)",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "cl. 1.3",
+     "cl. 17.11"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Standard Bidding Document for Goods (Minister of Finance Order No. A/103, 2025)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=17432054681622",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "cl. 17.8",
+     "cl. 17.10"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Standard Bidding Document for Services (Minister of Finance Order No. A/105, 2025)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=17432054939232",
+    "coverage": "Horizontal (services incl. IT and digital services)",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "cl. 6.3"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Standard Bidding Document for Services (Minister of Finance Order No. A/105, 2025)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=17432054939232",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "cl. 1.5"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Tender Evaluation and Preference Methodology (Minister of Finance Order No. A/255, 2023)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16960747212831",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "acquire": "legalinfo_pdf_export",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Tender Evaluation and Preference Methodology (Minister of Finance Order No. A/255, 2023)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=16960747212831",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "cl. 8.1",
+     "cl. 8.6"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Law of Mongolia on Supporting Small and Medium Enterprises and Services (revised, 2019)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=14525",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 3"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "policy": null
+   },
+   {
+    "act": "Law of Mongolia on Supporting Information Technology Production (2024)",
+    "url": "https://legalinfo.mn/mn/detail?lawId=17140722436571",
+    "coverage": "Software / IT services procurement",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 7"
+    ],
+    "acquire": "legalinfo_pdf_export",
+    "policy": null
+   }
+  ],
+  "Lao PDR": [
+   {
+    "act": "Law on Electronic Data Protection No. 25/NA (2017)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Electronic Data Protection No. 25/NA (2017)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Electronic Data Protection No. 25/NA (2017)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Electronic Data Protection No. 25/NA (2017)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Electronic Data Protection No. 25/NA (2017)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Electronic Data Protection No. 25/NA (2017)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Electronic Data Protection No. 25/NA (2017)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Electronic Data Protection No. 25/NA (2017)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Instruction No. 2426/MPT (2018) on the Implementation of the Law on Electronic Data Protection",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/Introduction%20on%20Implementation%20of%20Data%20Protection%20Law.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Instruction No. 2426/MPT (2018) on the Implementation of the Law on Electronic Data Protection",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/Introduction%20on%20Implementation%20of%20Data%20Protection%20Law.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Law on Electronic Transactions No. 20/NA (2012)",
+    "url": "http://laoofficialgazette.gov.la/kcfinder/upload/files/Law%20on%20Electronic%20Transactions%20.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Electronic Transactions No. 20/NA (2012)",
+    "url": "http://laoofficialgazette.gov.la/kcfinder/upload/files/Law%20on%20Electronic%20Transactions%20.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Amended Law on Electronic Transactions No. 31/NA (2022)",
+    "url": "https://www.laotradeportal.gov.la/upload/files/Legal_1679902214lo_LA.pdf",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Amended Law on Electronic Transactions No. 31/NA (2022)",
+    "url": "https://www.laotradeportal.gov.la/upload/files/Legal_1679902214lo_LA.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Decree on Financial Consumer Protection No. 225/GOL (2020)",
+    "url": "https://laotradeportal.gov.la/upload/files/Legal_1614311323lo_LA.pdf",
+    "coverage": "Financial services",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Lao Securities Commission Decision No. 11 on ICT Systems of Securities Companies (Amended, 2021)",
+    "url": "https://lsc2.gov.la/Doc_legal/%E0%BA%A5%E0%BA%B0%E0%BA%9A%E0%BA%BB%E0%BA%9A%E0%BB%80%E0%BA%95%E0%BA%B1%E0%BA%81%E0%BB%82%E0%BA%99%202021.pdf",
+    "coverage": "Securities companies",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Lao Securities Commission Decision No. 11 on ICT Systems of Securities Companies (Amended, 2021)",
+    "url": "https://lsc2.gov.la/Doc_legal/%E0%BA%A5%E0%BA%B0%E0%BA%9A%E0%BA%BB%E0%BA%9A%E0%BB%80%E0%BA%95%E0%BA%B1%E0%BA%81%E0%BB%82%E0%BA%99%202021.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Bank of the Lao PDR Decision No. 511 on the Payment Service System (2025)",
+    "url": "https://www.bol.gov.la/fileupload/30-06-2025_1751250479.pdf",
+    "coverage": "Payment service providers",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Bank of the Lao PDR Decision No. 819 on the General Payment System (2026)",
+    "url": "https://www.bol.gov.la/fileupload/02-09-2026_1788322426.pdf",
+    "coverage": "Retail payment system operators",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+    "url": "https://www.bol.gov.la/en/fileupload/18-12-2025_1766032569.pdf",
+    "coverage": "Foreign commercial bank branches",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+    "url": "https://www.bol.gov.la/en/fileupload/18-12-2025_1766032569.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Ministry of Technology and Communications Decision No. 3643 on Digital Technology Business (2025)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/3643,29,9,2025.pdf",
+    "coverage": "Cloud and blockchain services",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Ministry of Technology and Communications Decision No. 3643 on Digital Technology Business (2025)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/3643,29,9,2025.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Ministry of Technology and Communications Decision No. 3648 on Digital Platforms (2025)",
+    "url": "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/3648,29,9,2025.pdf",
+    "coverage": "Digital platforms",
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Bank of the Lao PDR Decision No. 696 on IT System Management of Financial Service Providers (2021)",
+    "url": "https://www.bol.gov.la/fileupload/20-12-2021_1639971641.pdf",
+    "coverage": "Financial service providers",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Ministry of Posts and Telecommunications Decision No. 143 on Software Business and Internet Data Centre Services (2017)",
+    "url": "https://www.laotradeportal.gov.la/upload/files/MPT_Decision-143_20012017-EN.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Ministry of Posts and Telecommunications Decision No. 143 on Software Business and Internet Data Centre Services (2017)",
+    "url": "https://www.laotradeportal.gov.la/upload/files/MPT_Decision-143_20012017-EN.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)",
+    "url": "https://laocert.gov.la/ftp_upload/Cyber_Crime_Law_EnVersion.pdf",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)",
+    "url": "https://laocert.gov.la/ftp_upload/Cyber_Crime_Law_EnVersion.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)",
+    "url": "https://laocert.gov.la/ftp_upload/Cyber_Crime_Law_EnVersion.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "R2 gold KNOWN baseline"
+   },
+   {
+    "act": "Law on Anti-Money Laundering and Counter-Financing of Terrorism (Amended) No. 64/NA (2024)",
+    "url": "http://laoofficialgazette.gov.la/kcfinder/upload/files/01%20JULY%202024%20Law%20on%20AML%20-%20CFT%20(Amended)%20-%20No%2064%20-%20NA.pdf",
+    "coverage": "Reporting entities",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Law on Anti-Money Laundering and Counter-Financing of Terrorism (Amended) No. 64/NA (2024)",
+    "url": "http://laoofficialgazette.gov.la/kcfinder/upload/files/01%20JULY%202024%20Law%20on%20AML%20-%20CFT%20(Amended)%20-%20No%2064%20-%20NA.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "RCEP Chapter 12 Electronic Commerce (Lao PDR deferral, footnote 13)",
+    "url": "https://www.mfat.govt.nz/assets/Trade-agreements/RCEP/RECP-Agreement-112020/Chapter-12.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "source_type": "treaty"
+   },
+   {
+    "act": "Law on Public Procurement No. 30/NA (2017)",
+    "url": "http://ppmd.mof.gov.la/storage/1632981237.Laos%20PDR%20Public%20Procurement%20Law_English%5B23%5D.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 6",
+     "Art. 19",
+     "Art. 36"
+    ],
+    "section_grammars": [
+     "article"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Law on Public Procurement No. 30/NA (2017)",
+    "url": "http://ppmd.mof.gov.la/storage/1632981237.Laos%20PDR%20Public%20Procurement%20Law_English%5B23%5D.pdf",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 49"
+    ],
+    "section_grammars": [
+     "article"
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Law on Public Procurement No. 30/NA (2017)",
+    "url": "http://ppmd.mof.gov.la/storage/1632981237.Laos%20PDR%20Public%20Procurement%20Law_English%5B23%5D.pdf",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "Art. 45"
+    ],
+    "section_grammars": [
+     "article"
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Instruction No. 0477/MOF (2019) on Implementation of the Law on Public Procurement",
+    "url": "http://ppmd.mof.gov.la/storage/1632981293.Loas%20PDR%20Public%20Instruction%20on%20Implementation%20of%20the%20Procurement%20Law_English%5B25%5D.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "article"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Instruction No. 0477/MOF (2019) on Implementation of the Law on Public Procurement",
+    "url": "http://ppmd.mof.gov.la/storage/1632981293.Loas%20PDR%20Public%20Instruction%20on%20Implementation%20of%20the%20Procurement%20Law_English%5B25%5D.pdf",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "article"
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Instruction No. 0477/MOF (2019) on Implementation of the Law on Public Procurement",
+    "url": "http://ppmd.mof.gov.la/storage/1632981293.Loas%20PDR%20Public%20Instruction%20on%20Implementation%20of%20the%20Procurement%20Law_English%5B25%5D.pdf",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "cl. 14.1.1",
+     "cl. 14.2.1"
+    ],
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "article"
+    ],
+    "coverage": null,
+    "policy": null
+   }
+  ],
+  "Timor-Leste": [
+   {
+    "act": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervision",
+    "url": "https://www.mj.gov.tl/jornal/lawsTL/UNTAET-Law/Regulations%20English/Reg2000-08.pdf",
+    "coverage": "Banking",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "citation_template": "s. {label}"
+   },
+   {
+    "act": "Lei n.º 13/2005 Lei das Actividades Petrolíferas (Petroleum Activities Law)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2002_2005/leis_parlamento_nacional/13_2005.pdf",
+    "coverage": "Petroleum data",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Lei n.º 12/2021 Código Mineiro (Mining Code)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2021/serie_1/SERIE_I_NO_27.pdf#page=3",
+    "coverage": "Mining data",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     3,
+     48
+    ]
+   },
+   {
+    "act": "Lei n.º 6/2005 Regime do Licenciamento, Supervisão e Regulação de Companhias de Seguros (Insurance Law)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2002_2005/leis_parlamento_nacional/6_2005.pdf#page=4",
+    "coverage": "Insurance",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     4,
+     62
+    ]
+   },
+   {
+    "act": "Lei n.º 10/2026 Regime geral do sistema financeiro e da atividade bancária",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_32.pdf#page=1",
+    "coverage": "Banking",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     1,
+     94
+    ]
+   },
+   {
+    "act": "Lei n.º 10/2026 Regime geral do sistema financeiro e da atividade bancária",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_32.pdf#page=1",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     1,
+     94
+    ]
+   },
+   {
+    "act": "Constitution of the Democratic Republic of Timor-Leste (2002)",
+    "url": "https://timor-leste.gov.tl/wp-content/uploads/2010/03/Constitution_RDTL_ENG.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 28-Sep-2026",
+    "citation_template": "s. {label}"
+   },
+   {
+    "act": "Constitution of the Democratic Republic of Timor-Leste (2002)",
+    "url": "https://timor-leste.gov.tl/wp-content/uploads/2010/03/Constitution_RDTL_ENG.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I1",
+    "cluster": "deep-research 28-Sep-2026",
+    "citation_template": "s. {label}"
+   },
+   {
+    "act": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf#page=21",
+    "coverage": "Horizontal",
+    "policy": null,
+    "indicator_code": "P6-I1",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     21,
+     40
+    ]
+   },
+   {
+    "act": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf#page=21",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     21,
+     40
+    ]
+   },
+   {
+    "act": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf#page=21",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I4",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     21,
+     40
+    ]
+   },
+   {
+    "act": "Decreto-Lei n.º 15/2012 Regulamentação do Sector das Telecomunicações",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2012/serie_1/serie1_no12.pdf#page=9",
+    "coverage": "Telecommunications",
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     9,
+     43
+    ]
+   },
+   {
+    "act": "Decreto-Lei n.º 15/2012 Regulamentação do Sector das Telecomunicações",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2012/serie_1/serie1_no12.pdf#page=9",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     9,
+     43
+    ]
+   },
+   {
+    "act": "Decreto-Lei n.º 15/2012 Regulamentação do Sector das Telecomunicações",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2012/serie_1/serie1_no12.pdf#page=9",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     9,
+     43
+    ]
+   },
+   {
+    "act": "Decreto-Lei n.º 31/2024 Primeira alteração ao Decreto-Lei n.º 15/2012 (Telecomunicações)",
+    "url": "https://anc.tl/media/2025/01/Decreto-Lei-N.31-2024-15-2012-SERIE_I_NO_36_C-ANC.pdf",
+    "coverage": "Telecommunications",
+    "policy": null,
+    "indicator_code": "P6-I3",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "Decreto do Governo n.º 9/2008 Prestação de serviços de telecomunicações na rede móvel",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2008/serie_1/serie1_no14.pdf#page=5",
+    "coverage": "Mobile operators",
+    "policy": null,
+    "indicator_code": "P6-I2",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     5,
+     7
+    ]
+   },
+   {
+    "act": "Decreto do Governo n.º 9/2008 Prestação de serviços de telecomunicações na rede móvel",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2008/serie_1/serie1_no14.pdf#page=5",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     5,
+     7
+    ]
+   },
+   {
+    "act": "ANC Guidelines on the Registration of SIM Cards for Prepaid Mobile Services",
+    "url": "https://anc.tl/media/2020/06/ANC-Guidelines-on-the-Registration-of-SIM-Cards-for-Prepaid-Mobile-Services.pdf",
+    "coverage": "Mobile operators",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "source_type": "official_instrument",
+    "citation_template": "cl. {label}",
+    "section_grammars": [
+     "numbered_clause"
+    ]
+   },
+   {
+    "act": "Lei n.º 17/2011 Regime Jurídico da Prevenção e do Combate ao Branqueamento de Capitais e ao Financiamento do Terrorismo",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2011/serie_1/SERIE1_NO_46.pdf#page=3",
+    "coverage": "Reporting entities",
+    "policy": null,
+    "indicator_code": "P7-I3",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     3,
+     12
+    ]
+   },
+   {
+    "act": "Lei n.º 17/2011 Regime Jurídico da Prevenção e do Combate ao Branqueamento de Capitais e ao Financiamento do Terrorismo",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2011/serie_1/SERIE1_NO_46.pdf#page=3",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "page_range": [
+     3,
+     12
+    ]
+   },
+   {
+    "act": "Decreto-Lei n.º 13/2005 Código de Processo Penal",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2002_2005/decreto_lei_governo/13_2005.pdf",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P7-I5",
+    "cluster": "deep-research 28-Sep-2026"
+   },
+   {
+    "act": "ASEAN Trade in Services Agreement (ATISA) — Annex on Financial Services and Annex on Telecommunication Services",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_42_A4.pdf#page=5",
+    "coverage": null,
+    "policy": null,
+    "indicator_code": "P6-I5",
+    "cluster": "deep-research 28-Sep-2026",
+    "source_type": "treaty",
+    "page_range": [
+     5,
+     35
+    ]
+   },
+   {
+    "act": "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Contratos Públicos (Public Procurement and Public Contracts Code)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_2.pdf#page=4",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 4",
+     "Art. 23",
+     "Art. 28",
+     "Art. 41",
+     "Art. 42",
+     "Art. 77",
+     "Art. 86",
+     "Art. 87",
+     "Art. 88"
+    ],
+    "page_range": [
+     4,
+     45
+    ],
+    "policy": null
+   },
+   {
+    "act": "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Contratos Públicos (Public Procurement and Public Contracts Code)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_2.pdf#page=4",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 4",
+     "Art. 23",
+     "Art. 28",
+     "Art. 41",
+     "Art. 42",
+     "Art. 77",
+     "Art. 86",
+     "Art. 87",
+     "Art. 88"
+    ],
+    "page_range": [
+     4,
+     45
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Contratos Públicos (Public Procurement and Public Contracts Code)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_2.pdf#page=4",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 4",
+     "Art. 23",
+     "Art. 28",
+     "Art. 41",
+     "Art. 42",
+     "Art. 77",
+     "Art. 86",
+     "Art. 87",
+     "Art. 88"
+    ],
+    "page_range": [
+     4,
+     45
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Decreto do Governo n.º 1/2026 Regulamento para a aplicação do Código do Aprovisionamento e dos Contratos Públicos (Anexo I)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_3_B_LOOS.pdf#page=3",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 5",
+     "Art. 11",
+     "Art. 21",
+     "Art. 33"
+    ],
+    "page_range": [
+     3,
+     30
+    ],
+    "policy": null
+   },
+   {
+    "act": "Decreto do Governo n.º 1/2026 Regulamento para a aplicação do Código do Aprovisionamento e dos Contratos Públicos (Anexo I)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_3_B_LOOS.pdf#page=3",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 5",
+     "Art. 11",
+     "Art. 21",
+     "Art. 33"
+    ],
+    "page_range": [
+     3,
+     30
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Decreto do Governo n.º 1/2026 Visão geral do quadro legal para contratação pública em Timor-Leste (Anexo II)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_3_B_LOOS.pdf#page=42",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.7.1",
+     "para. 2.7.2",
+     "para. 2.7.3"
+    ],
+    "page_range": [
+     42,
+     65
+    ],
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Decreto do Governo n.º 1/2026 Visão geral do quadro legal para contratação pública em Timor-Leste (Anexo II)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_3_B_LOOS.pdf#page=42",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.7.1",
+     "para. 2.7.2",
+     "para. 2.7.3"
+    ],
+    "page_range": [
+     42,
+     65
+    ],
+    "citation_template": "para. {label}",
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Decreto-Lei n.º 30/2023 Medidas de apoio às micro, pequenas e médias empresas (MSME support measures)",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2023/serie_1/SERIE%20I%20N.%2020%20NORMAL.pdf#page=90",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "Art. 2",
+     "Art. 6"
+    ],
+    "page_range": [
+     90,
+     93
+    ],
+    "policy": null
+   },
+   {
+    "act": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas",
+    "url": "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf#page=21",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "page_range": [
+     21,
+     40
+    ],
+    "coverage": null,
+    "policy": null
+   },
+   {
+    "act": "Report of the Working Party on the Accession of the Democratic Republic of Timor-Leste (WT/ACC/TLS/34)",
+    "url": "https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=q:/WT/ACC/TLS34.pdf&Open=True",
+    "indicator_code": "P2-I4",
+    "cluster": "deep-research 29-Sep-2026",
+    "source_type": "treaty",
+    "expected_citations": [
+     "para. 255"
+    ],
+    "citation_template": "para. {label}",
+    "coverage": null,
+    "policy": null
+   }
+  ],
+  "Singapore": [
+   {
+    "act": "Government Procurement Act 1997",
+    "url": "https://sso.agc.gov.sg/Act/GPA1997?ViewType=Pdf&_=20240620030538",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "s. 2"
+    ],
+    "citation_template": "s. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement Act 1997",
+    "url": "https://sso.agc.gov.sg/Act/GPA1997?ViewType=Pdf&_=20240620030538",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "s. 2"
+    ],
+    "citation_template": "s. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement Act 1997",
+    "url": "https://sso.agc.gov.sg/Act/GPA1997?ViewType=Pdf&_=20240620030538",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "s. 2"
+    ],
+    "citation_template": "s. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement Regulations 2014",
+    "url": "https://sso.agc.gov.sg/SL/GPA1997-RG2?DocDate=20251216&ViewType=Pdf&_=20251229202538",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "reg. 6"
+    ],
+    "citation_template": "reg. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement Regulations 2014",
+    "url": "https://sso.agc.gov.sg/SL/GPA1997-RG2?DocDate=20251216&ViewType=Pdf&_=20251229202538",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "reg. 6"
+    ],
+    "citation_template": "reg. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement Regulations 2014",
+    "url": "https://sso.agc.gov.sg/SL/GPA1997-RG2?DocDate=20251216&ViewType=Pdf&_=20251229202538",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "reg. 6"
+    ],
+    "citation_template": "reg. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement (Application) Order 2002",
+    "url": "https://sso.agc.gov.sg/SL/GPA1997-OR1?DocDate=20260914&ViewType=Pdf&_=20260914205633",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 6"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement (Application) Order 2002",
+    "url": "https://sso.agc.gov.sg/SL/GPA1997-OR1?DocDate=20260914&ViewType=Pdf&_=20260914205633",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 6"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement (Application) Order 2002",
+    "url": "https://sso.agc.gov.sg/SL/GPA1997-OR1?DocDate=20260914&ViewType=Pdf&_=20260914205633",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 6"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Government Procurement (Challenge Proceedings) Regulations 2002",
+    "url": "https://sso.agc.gov.sg/SL/GPA1997-RG1?DocDate=20251216&ViewType=Pdf&_=20251213023113",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "reg. 2"
+    ],
+    "citation_template": "reg. {label}",
+    "section_grammars": [
+     "sg_emdash"
+    ],
+    "policy": null
+   },
+   {
+    "act": "IMDA Accreditation Guidelines Version 6.0 (June 2026)",
+    "url": "https://www.imda.gov.sg/assets/8d5dc494-12b4-4414-9acc-5a7beb57975a.pdf",
+    "coverage": "ICT",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 3.1",
+     "para. 7.1"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "numbered_clause"
+    ],
+    "policy": null
+   },
+   {
+    "act": "IMDA Spark Guidelines Version 2.0 (June 2026)",
+    "url": "https://www.imda.gov.sg/assets/cc029d7d-6d5b-4700-a0ab-15a4f2437e6f.pdf",
+    "coverage": "ICT",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.1",
+     "para. 5.7"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "numbered_clause"
+    ],
+    "policy": null
+   },
+   {
+    "act": "MOF Conditions of Contract for Tender Lite (Goods and/or Services)",
+    "url": "https://www.gebiz.gov.sg/docs/Tender_Lite_COCs_Supplier.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "cl. 9",
+     "cl. 25"
+    ],
+    "citation_template": "cl. {label}",
+    "policy": null
+   },
+   {
+    "act": "MOF Conditions of Contract for Tender Lite (Goods and/or Services)",
+    "url": "https://www.gebiz.gov.sg/docs/Tender_Lite_COCs_Supplier.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "cl. 9",
+     "cl. 25"
+    ],
+    "citation_template": "cl. {label}",
+    "policy": null
+   },
+   {
+    "act": "CSA Cybersecurity Certification Guide (NITES and SCCS)",
+    "url": "https://isomer-user-content.by.gov.sg/36/ebb979b3-d1df-4305-bd85-f9b717cecc29/CSA-Cybersecurity-Certification-Guide.pdf",
+    "coverage": "ICT",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "citation_template": "para. {label}",
+    "policy": null
+   }
+  ],
+  "Malaysia": [
+   {
+    "act": "Financial Procedure Act 1957 (Act 61)",
+    "url": "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/1827016_BI/Act%2061%20-%20Final%20(15.11.2023).pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "s. 6",
+     "s. 13"
+    ],
+    "citation_template": "s. {label}",
+    "policy": null
+   },
+   {
+    "act": "Financial Procedure Act 1957 (Act 61)",
+    "url": "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/1827016_BI/Act%2061%20-%20Final%20(15.11.2023).pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "s. 6",
+     "s. 13"
+    ],
+    "citation_template": "s. {label}",
+    "policy": null
+   },
+   {
+    "act": "Government Contracts Act 1949 (Act 120)",
+    "url": "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/2717482_BI/Act%20120.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "citation_template": "s. {label}",
+    "section_grammars": [
+     "bare_number_dot"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Official Secrets Act 1972 (Act 88)",
+    "url": "https://lom.agc.gov.my/ilims/upload/portal/akta/outputaktap/2222512_BI/Act%2088%20Reprint%202006.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "s. 2",
+     "s. 8"
+    ],
+    "citation_template": "s. {label}",
+    "section_grammars": [
+     "bare_number_dot"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Instructions (Arahan Perbendaharaan) 2023 Amendment",
+    "url": "https://mof.gov.my/portal/pdf/arahan-perbendaharaan/ap2023/ap20203.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 169B",
+     "para. 178A"
+    ],
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Treasury Instructions (Arahan Perbendaharaan) 2023 Amendment",
+    "url": "https://mof.gov.my/portal/pdf/arahan-perbendaharaan/ap2023/ap20203.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 169B",
+     "para. 178A"
+    ],
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 1.4 Local Materials, Goods and Services in Government Procurement Policy (2025)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/b8bcceb6-4660-4122-a766-5e5cfb212d72",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.5",
+     "para. 3.2"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 1.4 Local Materials, Goods and Services in Government Procurement Policy (2025)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/b8bcceb6-4660-4122-a766-5e5cfb212d72",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.5",
+     "para. 3.2"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 1.5 Bumiputera Company Preference Policy (2024)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/4bfef1e0-6738-4771-b647-b21348b94e3d",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 6.1",
+     "para. 6.2"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 1.5 Bumiputera Company Preference Policy (2024)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/4bfef1e0-6738-4771-b647-b21348b94e3d",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 6.1",
+     "para. 6.2"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 2.1 General Provisions (2024)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/ca83adb6-31db-422c-9d59-3a3dcdd104a4",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.10",
+     "para. 3.1"
+    ],
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 2.1 General Provisions (2024)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/ca83adb6-31db-422c-9d59-3a3dcdd104a4",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.10",
+     "para. 3.1"
+    ],
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 2.2 Open Tender (2024)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/5dbdb686-9349-4a56-a2dc-6b22934eb7ed",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.1"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 2.2 Open Tender (2024)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/5dbdb686-9349-4a56-a2dc-6b22934eb7ed",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.1"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 2.2 Open Tender (2024)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/5dbdb686-9349-4a56-a2dc-6b22934eb7ed",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 2.1"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 7.6 ICT and Internet Network Procurement (2022)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/84eb0663-0aaf-4275-9ac7-fd860d7837ad",
+    "coverage": "ICT",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 1.2",
+     "para. 3.3"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "numbered_clause"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 7.6 ICT and Internet Network Procurement (2022)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/84eb0663-0aaf-4275-9ac7-fd860d7837ad",
+    "coverage": "ICT",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "expected_citations": [
+     "para. 1.2",
+     "para. 3.3"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "numbered_clause"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 2.9 Quotations (2025)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/76cfb925-dc36-48d7-9e57-27cb40944ccf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "deep-research 29-Sep-2026",
+    "citation_template": "para. {label}",
+    "policy": null
+   },
+   {
+    "act": "Treasury Circular PK 1.7 Industrial Collaboration Programme (ICP) in Government Procurement (2025)",
+    "url": "https://ppp.treasury.gov.my/loadpdf/pindaan/7a17fb59-8869-4935-b387-cf8bcd634539",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "deep-research 29-Sep-2026",
+    "citation_template": "para. {label}",
+    "policy": null
+   }
+  ],
+  "Australia": [
+   {
+    "act": "Commonwealth Procurement Rules 17 November 2025",
+    "url": "https://www.legislation.gov.au/F2025L01263/2025-10-22/2025-10-22/text/original/pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 10.2"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "decimal_clause"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Commonwealth Procurement Rules 17 November 2025",
+    "url": "https://www.legislation.gov.au/F2025L01263/2025-10-22/2025-10-22/text/original/pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I2",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 10.2"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "decimal_clause"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Commonwealth Procurement Rules 17 November 2025",
+    "url": "https://www.legislation.gov.au/F2025L01263/2025-10-22/2025-10-22/text/original/pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 10.2"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "decimal_clause"
+    ],
+    "policy": null
+   },
+   {
+    "act": "Public Governance, Performance and Accountability Rule 2014",
+    "url": "https://www.legislation.gov.au/F2014L00911/2026-07-01/2026-07-01/text/original/pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I1",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "s. 4",
+     "s. 30"
+    ],
+    "citation_template": "s. {label}",
+    "policy": null
+   },
+   {
+    "act": "Australian Jobs Act 2013",
+    "url": "https://www.legislation.gov.au/C2013A00069/2024-10-14/2024-10-14/text/original/pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "s. 4"
+    ],
+    "citation_template": "s. {label}",
+    "policy": null
+   },
+   {
+    "act": "Indigenous Procurement Policy (May 2026)",
+    "url": "https://www.niaa.gov.au/sites/default/files/documents/2026-05/IPP-Guidelines-12-May-2026.pdf",
+    "coverage": "Horizontal",
+    "indicator_code": "P2-I3",
+    "cluster": "R2 gold KNOWN baseline",
+    "expected_citations": [
+     "para. 1.8",
+     "para. 3.3"
+    ],
+    "citation_template": "para. {label}",
+    "section_grammars": [
+     "mongolian_regulation"
+    ],
+    "policy": null
+   }
+  ]
+ }
+}

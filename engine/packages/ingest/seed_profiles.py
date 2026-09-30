@@ -31,7 +31,9 @@ def seed_parse_profile(entry: dict,
     (treaty -> Article grammar + "Art. {label}" citations)."""
     source_type = seed_source_type(entry)
     patterns: list[re.Pattern] = []
-    for name in jurisdiction_grammars or []:
+    # A seed may opt into extra named grammars (`section_grammars: [numbered_clause]`)
+    # for one document whose layout the jurisdiction grammar does not cover.
+    for name in [*(entry.get("section_grammars") or []), *(jurisdiction_grammars or [])]:
         patterns.extend(SECTION_GRAMMARS.get(str(name).strip().lower(), []))
     if source_type in SECTION_GRAMMARS:
         patterns.extend(SECTION_GRAMMARS[source_type])
@@ -67,8 +69,15 @@ def seed_fingerprint_config(entry: dict) -> dict:
     added fail-closed expected citation/phrase merely because source bytes stayed
     unchanged.
     """
-    return {
+    config = {
         "expected_citations": sorted(str(v) for v in entry.get("expected_citations") or []),
         "expected_phrases": sorted(str(v) for v in entry.get("expected_phrases") or []),
-        "citation_template": seed_parse_profile(entry)["citation_template"],
+        "citation_template": (entry.get("citation_template")
+                              or seed_parse_profile(entry)["citation_template"]),
     }
+    # Keys only when declared, so every pre-existing seed keeps its fingerprint.
+    if entry.get("page_range"):
+        config["page_range"] = [int(v) for v in entry["page_range"]]
+    if entry.get("section_grammars"):
+        config["section_grammars"] = [str(v) for v in entry["section_grammars"]]
+    return config

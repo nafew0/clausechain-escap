@@ -1,0 +1,164 @@
+{
+ "economy": "Malaysia",
+ "pillar": 7,
+ "run": "run-my-p7-1790722594",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence cites the Personal Data Protection Act 2010 as a horizontal framework establishing general principles and data subject rights, indicating the exist"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The economy has a comprehensive horizontal framework, the Personal Data Protection Act 2010, which establishes general principles and rights applicable to all d"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The existence of the Personal Data Protection Act 2010, which establishes horizontal principles and data subject rights (including rectification and cessation o"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence cites the 'Cyber Security Act (Act 854) 2024' with explicit 'Horizontal' tags, indicating the existence of a dedicated horizontal cybersec"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence cites the Cyber Security Act (Act 854) 2024, which is explicitly tagged as a 'Horizontal' framework, satisfying the criterion for a dedicated horiz"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence cites the Cyber Security Act (Act 854) 2024, which is explicitly labeled as a horizontal framework, indicating the existence of a dedicated nationa"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The Companies Act 2016 s. 341(5) explicitly specifies that records shall be kept for at least seven years, clearly defining a minimum retention period."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Companies Act 2016 s. 341(5) clearly specifies a minimum retention period of at least seven years for corporate records."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Companies Act 2016 explicitly specifies a minimum retention period of 'at least seven years' for corporate records, satisfying the requirement for a clearly"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The text explicitly mandates that a data controller ('pengawal data') must appoint a data protection officer ('pegawai perlindungan data') without specifying an"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Personal Data Protection (Amendment) Act 2024 mandates the appointment of a Data Protection Officer for all data controllers (horizontal application) withou"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Personal Data Protection (Amendment) Act 2024 explicitly mandates the appointment of a Data Protection Officer for data controllers across all sectors, sati"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": 0.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Sections 114 of the Personal Data Protection Act and 40 of the Cyber Security Act explicitly authorize officers to access data without a warrant when delay in o"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Section 114 of the Personal Data Protection Act and Section 40 of the Cyber Security Act explicitly authorize government officers to access data without a judic"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Personal Data Protection Act (s. 114) and Cyber Security Act (s. 40) explicitly authorize government officers to access data without a warrant if they are s"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

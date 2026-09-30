@@ -10,8 +10,10 @@ const NO_NAVBAR_PATHS = [
   // ClauseChain workspace — has its own sidebar + topbar
   '/dashboard',
   '/review',
+  '/evidence-updates',
   '/benchmark',
   '/matrix',
+  '/comparison',
   '/ledger',
   '/source-status',
   '/jurisdictions',

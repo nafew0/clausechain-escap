@@ -5,6 +5,7 @@ import json
 
 from packages.core.evidence import verify_artifact
 from packages.core.legal_controls import evidence_eligibility
+from packages.core.review_layout import namespaced
 from packages.core.schemas import MappedFinding, ReviewDecision, SourceArtifact, TextSpan
 
 
@@ -16,7 +17,9 @@ def finding_key(finding: MappedFinding) -> str:
     payload = "\x1f".join((finding.economy, finding.indicator_id, finding.law_name,
                             finding.article_section, finding.source_artifact_id or "",
                             finding.verbatim_snippet))
-    return hashlib.sha256(payload.encode()).hexdigest()
+    # Local-mode review scripts salt the key (hybrid keys are unchanged), so the
+    # same provision found by both model backends is two separately reviewed rows.
+    return hashlib.sha256(namespaced(payload).encode()).hexdigest()
 
 
 def review_subject_payload(finding: MappedFinding) -> dict:
@@ -70,7 +73,10 @@ def validate_final_finding(finding: MappedFinding,
     if finding.discovery_tag == "NEW" and review:
         if not review.citation_reviewer_name or not review.mapping_reviewer_name:
             errors.append("NEW row lacks named independent citation and mapping checks")
-        elif review.citation_reviewer_name == review.mapping_reviewer_name:
+        elif (review.citation_reviewer_name == review.mapping_reviewer_name
+              and str(review.reviewer_role or "").strip().lower() != "admin"):
+            # Mirror of the writer's single-admin override: the admin role in the
+            # receipt is the recorded, visible waiver of pen separation.
             errors.append("NEW row citation and mapping checks are not independent")
     status = finding.status_evidence_record
     if finding.status != "in_force" or not status or status.status != "in_force" or status.conflicting:
@@ -147,7 +153,14 @@ def validate_final_finding(finding: MappedFinding,
             elif closure_gates[-1].get("metadata", {}).get("closure_code") not in {
                     "PASS_CLOSED", "PASS_LONG_BUT_CLOSED"}:
                 errors.append("CitationProof does not prove a structurally closed snippet")
-            if not proof.exact_snippet.rstrip().endswith((".", "!", "?")):
+            trailing = proof.exact_snippet.rstrip()
+            # The sentence-punctuation tail check is a Latin-script heuristic.
+            # Thai carries no sentence-final punctuation at all: for Thai-dominant
+            # snippets the closure proof is structural and lives in G9 (checked
+            # above). Devanagari sentences end with the danda "।".
+            thai_chars = sum(1 for ch in trailing if "ก" <= ch <= "๛")
+            thai_dominant = thai_chars > len(trailing) * 0.25
+            if not (thai_dominant or trailing.endswith((".", "!", "?", "।"))):
                 errors.append("exported snippet does not end at a sentence/paragraph boundary")
     if errors:
         raise FinalizationError(f"{finding_key(finding)}: " + "; ".join(errors))

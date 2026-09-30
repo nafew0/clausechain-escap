@@ -1,0 +1,114 @@
+[
+ {
+  "indicator": "P6-I4",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 15(5)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text (s. 16(5)) grants the Committee the administrative power to 'announce and establish criteria' for cross-border transfers. It does not itself impose a legal condition on the data controller (e.g., 'shall not transfer unless...'). It is a mandate to create the regime, not the operative conditional flow provision. The actual conditional regime is found in s. 28 (which requires compliance with criteria established under s. 16(5)). Mapping the enabling power to the conditional flow ind"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "P6-I4 asks if transfer is permitted IF conditions are met. The snippet describes the Committee's duty to 'establish criteria'. While this supports the existence of a framework, it does not directly evidence the conditional permission structure ('transfer permitted if...'). The rubric's positive cues ('shall not transfer... unless', 'may transfer... provided that') are absent. The provision is better suited to P6-I1 (existence of a transfer regime/framework) or as supporting context, but as a pri"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states the Committee shall 'establish criteria for providing protection of Personal Data which is sent or transferred to a foreign country.' This textually establishes that cross-border transfers are subject to established protection criteria. While it is an enabling provision, the text does establish that the flow is conditional on the criteria established by the Committee. Under a strict textualist view, the existence of 'criteria for... transferred to a foreign country' su"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "AANZFTA Second Protocol Chapter 10 (E-Commerce)",
+  "article": "s. 17",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a binding negative obligation ('No Party shall require...') regarding the location of computing facilities. This is a recognized legal function for cross-border data transfer frameworks (preventing localization requirements that would impede cross-border flows). The exception in Article 17(3) is a standard carve-out for legitimate public policy and does not negate the binding nature of the core commitment in 17(2). The mapping correctly identifies a binding commitment."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's legal_test explicitly lists 'location-of-computing-facilities disciplines' as an example of a binding cross-border data-transfer commitment. The snippet matches this criterion. The indicator P6-I5 scores the presence/absence of such agreements. Since this is a binding agreement (AANZFTA Second Protocol) containing such a discipline, it is a valid evidence row for the indicator. The polarity 'framework_absent_scores_high' means the score will be 0 (at least one binding agreement), wh"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'No Party shall require a covered person to use or locate computing facilities in that Party's territory as a condition for conducting business' is a clear, binding prohibition on localization requirements. It does not merely recognize a right or permit a choice; it imposes a duty on the Parties not to impose such requirements. This textual evidence directly supports the rationale that it is a binding commitment on the location of computing facilities, which the rubric accepts as a comp"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "RCEP Chapter 12 (official text)",
+  "article": "s. 12.15",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision creates a binding obligation ('shall not prevent') for cross-border data transfer, which is the core legal function required by P6-I5. The existence of exceptions (paragraph 3) or transitional periods (footnote 13) does not negate the existence of the binding commitment itself; rather, it defines the scope of the commitment. The mapping correctly identifies the presence of a binding agreement, which is the prerequisite for the indicator's scoring logic."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet matches the positive cue 'shall allow the cross-border transfer of information' (via the negative formulation 'shall not prevent') and 'transfer of information by electronic means where this activity is for the conduct of the business'. The indicator P6-I5 asks if the economy has joined NO agreement; this evidence proves the economy HAS joined an agreement with binding commitments. Therefore, this is valid evidence for the indicator, leading to a score of 0 (at least one binding agre"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'A Party shall not prevent cross-border transfer of information by electronic means where such activity is for the conduct of the business of a covered person' explicitly establishes a binding cross-border data-transfer commitment. The context confirms this is Article 12.15 of the RCEP. The text does not merely describe a possibility or a non-binding aspiration; it uses mandatory language ('shall not prevent'). Thus, the text actually establishes the fact claimed in the map"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "RCEP Chapter 12 (official text)",
+  "article": "s. 12.14",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a binding obligation ('No Party shall require...') regarding the location of computing facilities. The rubric's legal_test explicitly lists 'location-of-computing-facilities disciplines' as a valid example of a binding cross-border data-transfer commitment. The mapping correctly identifies this as a commitment that the economy has, which is the required evidence for the indicator, regardless of the final score."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's legal_test explicitly includes 'location-of-computing-facilities disciplines' as a qualifying commitment. The snippet contains the operative binding language ('No Party shall require...'). The presence of exceptions in the surrounding context (G5 WARN) does not negate the existence of the binding commitment itself; it merely defines the scope of the obligation. The mapping aligns with the positive cues and legal test provided."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'No Party shall require a covered person to use or locate computing facilities in that Party's territory as a condition for conducting business in that Party's territory' is a binding negative obligation. It directly matches the rubric's example of 'location-of-computing-facilities disciplines'. The text does not merely recognize a right but imposes a duty not to impose localization requirements, which constitutes a binding commitment on data transfer infrastructure."
+   }
+  ]
+ }
+]

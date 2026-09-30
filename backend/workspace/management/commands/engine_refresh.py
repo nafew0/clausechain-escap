@@ -10,10 +10,12 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("--keep", type=int, default=5)
+        parser.add_argument("--mode", choices=("hybrid", "local"), default="hybrid",
+                            help="which model backend's review files to import")
 
     def handle(self, *args, **options):
         try:
-            snapshot, created = import_snapshot(keep=max(1, options["keep"]))
+            snapshot, created = import_snapshot(keep=max(1, options["keep"]), mode=options["mode"])
         except SnapshotImportError as exc:
             raise CommandError(str(exc)) from exc
         self.stdout.write(

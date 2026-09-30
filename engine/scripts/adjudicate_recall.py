@@ -43,7 +43,9 @@ ECONOMY_OF = {"si": "Singapore", "ma": "Malaysia", "au": "Australia"}
 
 
 def recall_key(economy: str, indicator: str, act: str, ref: str) -> str:
-    return hashlib.sha256("\x1f".join((economy, indicator, act, ref)).encode()).hexdigest()
+    from packages.core.review_layout import namespaced
+
+    return hashlib.sha256(namespaced("\x1f".join((economy, indicator, act, ref))).encode()).hexdigest()
 
 
 def corpus_units(store, economy: str) -> list[dict]:
@@ -61,11 +63,14 @@ def main() -> int:
     raw = json.loads(Path("data/known_index.json").read_text())["economies"]
     store = SqliteGraphStore()
 
-    previous_path = Path("data/review/recall_adjudication.json")
+    from packages.core import review_layout
+
+    review_dir = review_layout.current().review_dir
+    previous_path = review_dir / "recall_adjudication.json"
     previous = json.loads(previous_path.read_text()).get("misses", []) if previous_path.is_file() else []
     previous_by_key = {(m.get("economy"), str(m.get("pillar")), m.get("gold_indicator"),
                         m.get("act"), m.get("ref")): m for m in previous}
-    decision_path = Path("data/review/recall_decisions.json")
+    decision_path = review_dir / "recall_decisions.json"
     decisions = ({d["recall_key"]: d for d in json.loads(decision_path.read_text())}
                  if decision_path.is_file() else {})
     misses = []
@@ -187,7 +192,7 @@ def main() -> int:
         stats[f"{economy} P{pillar}"] = run_stats
         print(f"{economy} P{pillar}: {run_stats}")
 
-    out_dir = Path("data/review")
+    out_dir = review_dir
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "recall_adjudication.json").write_text(json.dumps(
         {"stats": stats, "misses": misses}, indent=1))
@@ -210,7 +215,7 @@ def main() -> int:
         lines.append(f"| {m['economy']} | {m['gold_indicator']} | {m['act'][:45]} | "
                      f"{m['ref']} | {m['class']} | {', '.join(m['emitted_under']) or '—'} |  |  |")
     (out_dir / "recall_adjudication.md").write_text("\n".join(lines) + "\n")
-    print(f"\nwrote data/review/recall_adjudication.md ({len(misses)} misses to adjudicate)")
+    print(f"\nwrote {out_dir}/recall_adjudication.md ({len(misses)} misses to adjudicate)")
     return 0
 
 

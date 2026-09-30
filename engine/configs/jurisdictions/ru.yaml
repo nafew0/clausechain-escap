@@ -1,0 +1,277 @@
+jurisdiction: RU
+source_format: pdf        # pravo.gov.ru ИПС consolidated HTML -> Chromium print-to-PDF (seed acquire: html_render) -> extractors/pdf_act.py
+name: Russian Federation
+un_name: Russian Federation
+languages: { primary: ru, supported: [ru, en] }
+section_grammars: [russian]   # "Статья N." (inserted articles "Статья 18¹" -> label 18.1)
+citation_template: "Art. {label}"
+
+whitelist_source: data/official_domains.json
+official_sources:
+  # ranks follow the sg/my convention: 100 statute DB / gazette, 90 treaty register, 60 regulator
+  - { name: Official legal information portal (ИПС Законодательство России), domain: pravo.gov.ru, source_type: official_statute_database, authority_rank: 100 }
+  - { name: Official publication portal, domain: publication.pravo.gov.ru, source_type: official_gazette, authority_rank: 100 }
+  - { name: Government of the Russian Federation, domain: government.ru, source_type: ministry, authority_rank: 70 }
+  - { name: Government static files, domain: static.government.ru, source_type: ministry, authority_rank: 70 }
+  - { name: President of Russia (acts bank), domain: kremlin.ru, source_type: official_gazette, authority_rank: 90 }
+  - { name: Roskomnadzor, domain: rkn.gov.ru, source_type: regulator_guidance, authority_rank: 60 }
+  - { name: Roskomnadzor personal-data portal, domain: pd.rkn.gov.ru, source_type: regulator_guidance, authority_rank: 60 }
+  - { name: Council of Europe treaty office, domain: rm.coe.int, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: Council of Europe, domain: coe.int, source_type: official_treaty_or_state_register, authority_rank: 90 }
+
+portal_search:
+  engine: pravo.gov.ru/proxy/ips (ИПС) — list search by number (a8) + date (a7date), cp1251 parameters
+  method: number_date_lookup
+  notes: >-
+    Resolve a law's nd id with ?list_itself=&bpas=cd00000&a8=<№>&a8type=1&a7type=1&a7date=<dd.mm.yyyy>.
+    The print view ?docview&page=1&print=1&nd=<nd>&rdk=<revision> carries the WHOLE consolidated text
+    (verified: CPC 560 articles, Tax Code Part One 275) and rdk pins the revision. Use http:// —
+    https://government.ru and kremlin.ru time out from outside Russia and government.ru 403s after a
+    few requests; base.garant.ru / consultant.ru are private databases (never evidence, leads only).
+
+citation_patterns:
+  section: ["Art. {n}", "Статья {n}", "ст. {n}"]
+  paragraph_required: false
+connector: generic_seeds
+gold_anchor_roles: [operative, supporting]   # inject the master's supporting refs as candidates too
+legal_fit_reads_translation: true   # G7 patterns are English; also read the mapper's English account
+notes:
+  - "HTML-ONLY ECONOMY: the official consolidated texts exist only as pravo.gov.ru ИПС HTML. seeds_fetch acquire=html_render prints the pinned-revision print view to PDF (raw HTML archived beside it, sha256 in the manifest). Only DOM change: <sup>digits</sup> -> Unicode superscripts so 'Статья 18¹' survives the text layer."
+  - "Inserted articles are superscripts (18¹, 22¹, 10.1 of 149-FZ is 'Статья 10¹'); pdf_act normalises the label to 18.1 — matching the ESCAP gold's 'Art. 18.5'/'Art. 22.1' style."
+  - "Each part ('1.', '1¹.', '2.') of an article is its own unit — Art. 12(4), Art. 64(1.1) — and a part longer than 8,000 chars splits into its list items (Police Law Art. 13(1)(4)). Whole consolidated articles otherwise exceed the aligner's 6-page window and become unaligned (not citable)."
+  - "Polarity (research 22-Aug-2026): P6-I1 0 (Art. 12 preserves a transfer path; 18(5) is localisation not a ban), P6-I2 1 (152-FZ Art. 18(5), reworded 2025 by No. 23-FZ to prohibit foreign databases for the listed operations), P6-I3 0, P6-I4 1 (Art. 12(3) notification + Roskomnadzor restriction regime, Res. 6/24 of 2023), P6-I5 0 (Convention 108 ratified 2013)."
+  - "ESCAP gold (R2) scores P6-I1 = 1 on 152-FZ 12.7/18.5 and P6-I3 = 1 on 18.5 — the research reads 18(5) as localisation (P6-I2) not ban/infrastructure. Divergence is for the Zone-3 panel, not the engine."
+  - "P7: I1 0 (152-FZ), I2 0 (187-FZ + Doctrine No. 646 + Decree 250; ESCAP gold holds 0.5), I3 1 (126-FZ Art. 64 three-year metadata floor; 149-FZ Art. 10.1; 115-FZ; 402-FZ Art. 29; Tax Code Art. 23), I4 1 (152-FZ Art. 22.1 responsible person), I5 1 (126-FZ Art. 64(1), 149-FZ Art. 10.1(3.1)/(4.1), Police Law Art. 13 — CPC Arts. 29/165/182/186.1 are the court-gated counter-evidence)."
+  - "[GOV-ONLY] exclusions: Res. No. 2526 of 2022 (state-function transfers), CII/technological-independence decree No. 166 of 2022 — recorded by research, not seeded."
+open_verification:
+  - "No. 265-FZ of 26.07.2026 amends 152-FZ Art. 12 — consolidated rdk=38 lists it; confirm the effective date of each amended part before final export"
+  - "Roskomnadzor Order No. 180 (2022, notice forms) and No. 187 (2022, incident interaction) and FSTEC Order No. 239 (2017) — publication.pravo.gov.ru originals not seeded yet"
+  - "Russia's position on Convention 108 after its 16 Mar 2022 expulsion from the Council of Europe (treaty itself remains open to non-members; confirm no denunciation)"
+ocr: { provider: hybrid_script, route: vision-first, language_hints: [ru], expect_script: cyrillic }
+known_index: data/known_index_round2.json
+seeds: data/seeds_r2.json
+rdtii_bindings: { pillars: [2, 6, 7] }
+
+anchor_instruments:
+  - "Federal Law No. 152-FZ On Personal Data — Art. 12 cross-border regime (P6-I4), Art. 18(5) localisation (P6-I2), Art. 22.1 responsible person (P7-I4); horizontal framework (P7-I1 score-0 evidence)"
+  - "Federal Law No. 187-FZ On Security of CII — dedicated cybersecurity statute (P7-I2 score-0 evidence)"
+  - "Federal Law No. 126-FZ On Communications — Art. 64 retention floors and disclosure to authorised bodies (P7-I3, P7-I5)"
+  - "Federal Law No. 149-FZ On Information — Art. 10.1 organiser retention/disclosure/decryption keys (P7-I3, P7-I5)"
+
+hunt_instruments:
+  P6-I4:
+    - "Government Resolution No. 6 of 10.01.2023 — rules for prohibiting/restricting cross-border transfers"
+    - "Government Resolution No. 24 of 16.01.2023 (amended by No. 1371 of 2024) — public-interest restriction pathway"
+    - "Federal Law No. 572-FZ (2022) — biometric data transfer restriction (sectoral)"
+  P7-I3:
+    - "Government Resolution No. 445 of 12.04.2018 — six-month content storage by operators"
+    - "Federal Law No. 115-FZ Art. 7(4) — five-year AML records floor"
+    - "Federal Law No. 402-FZ Art. 29 — five-year accounting records floor"
+    - "Tax Code Part One Art. 23(1)(8) — five-year tax records floor"
+  P7-I5:
+    - "Federal Law No. 3-FZ On Police Art. 13(1)(4) — reasoned request, no court order"
+    - "Tax Code Art. 93.1 — tax authority demands"
+    - "Federal Law No. 144-FZ On Operational-Search Activity — court-gated vs own-authority measures"
+    - "Criminal Procedure Code Arts. 29(2), 165, 182, 186.1 — court-gated counter-evidence"
+
+# ESCAP master (known_index_round2) -> this corpus. The master writes parts as decimals
+# ("Art. 12.7" = part 7 of Art. 12, "Art. 10.1.3" = Art. 10¹ part 3) while "Art. 22.1" is the
+# inserted article 22¹: KnownIndex tries the ref as an article label first, then as a part.
+gold_ref_style: decimal_parts
+gold_aliases:
+  "Decree of the President of the Russian Federation No. 646 On Adopting the Doctrine of Information Security": "Presidential Decree No. 646 of 05.12.2016 Information Security Doctrine of the Russian Federation"
+  "Federal Law No. 5-FZ of January 10, 1996 On Foreign Intelligence": "Federal Law No. 5-FZ of 10.01.1996 On Foreign Intelligence (consolidated)"
+  "Federal Law No. 197-FZ on the Labor Code of the Russian Federation": "Labor Code of the Russian Federation No. 197-FZ of 30.12.2001 (consolidated)"
+  "Federal Law No. 323-FZ on the Fundamentals of Protection of the Health of Citizens in the Russian Federation": "Federal Law No. 323-FZ of 21.11.2011 On the Fundamentals of Protection of the Health of Citizens (consolidated)"
+  "Federal Law No. 38-FZ on Advertising": "Federal Law No. 38-FZ of 13.03.2006 On Advertising (consolidated)"
+  "Federal Law No. 395-1 on Banks and Banking Activities": "RSFSR Law No. 395-I of 02.12.1990 On Banks and Banking Activities (consolidated)"
+  # Amending laws the master cites; their text lives in the consolidated principal act.
+  "Federal Law No. 208-FZ On Amendments to the Federal Law On Information, Information Technologies and on the Protection of Information and the Code of the Russian Federation on Administrative Offenses": "Federal Law No. 149-FZ of 27.07.2006 On Information, Information Technologies and Protection of Information (consolidated)"
+  "Federal Law No. 319-FZ On Amendments to the Federal Law on the National Payment System and Certain Legislative Acts of the Russian Federation": "Federal Law No. 161-FZ of 27.06.2011 On the National Payment System (consolidated)"
+  # Pillar 2 (public procurement)
+  "Federal Law No. 44-Z \"On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs\"": "Federal Law No. 44-FZ of 05.04.2013 On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs (consolidated)"
+  "Federal Law No. 44-FZ and Resolution of the Government of the Russian Federation of 23 December 2024 No. 1875 “On measures to provide national treatment in the procurement of goods, works, and services for the needs of state and municipal entities, and procurement by certain types of legal entities.”": "Government Resolution No. 1875 of 23.12.2024 On measures to provide national treatment in procurement of goods, works and services for state and municipal needs and procurement by certain types of legal entities"
+  "Federal Law No. 223-FZ \"About purchases of goods, works, services as separate types of legal entities\"": "Federal Law No. 223-FZ of 18.07.2011 On Procurement of Goods, Works and Services by Certain Types of Legal Entities (consolidated)"
+  "Government Resolution of the Russian Federation No. 1442 \"On Procurement of Innovative Products and High-Tech Products by Certain Types of Legal Entities and on Amendments to Certain Acts of the Government of the Russian Federation\"": "Government Resolution No. 1442 of 25.12.2015 On procurement of innovative products and high-tech products by certain types of legal entities"
+  "Government Resolution of the Russian Federation No. 1352 \"On the Specifics of Participation of Small and Medium-Sized Enterprises in the Procurement of Goods, Works, and Services by Certain Types of Legal Entities\"": "Government Resolution No. 1352 of 11.12.2014 On the specifics of participation of small and medium-sized enterprises in procurement of goods, works and services by certain types of legal entities"
+  "Government of Russian Federation. Decree No. 486. \"On Amendments to Certain Acts of the Government of the Russian Federation\"": "Government Resolution No. 1875 of 23.12.2024 On measures to provide national treatment in procurement of goods, works and services for state and municipal needs and procurement by certain types of legal entities"
+  "Resolution of the Government of the Russian Federation No. 878 \"On Measures to Stimulate the Production of Radio-Electronic Products in the Russian Federation During the Procurement of Goods, Works, and Services to Meet State and Municipal Needs\"": "Government Resolution No. 1875 of 23.12.2024 On measures to provide national treatment in procurement of goods, works and services for state and municipal needs and procurement by certain types of legal entities"
+gold_ref_crosswalk:
+  # 208-FZ of 23.06.2016 Art. 1 item 10 inserted Art. 10.4 (news aggregators) into 149-FZ.
+  "Federal Law No. 208-FZ On Amendments to the Federal Law On Information, Information Technologies and on the Protection of Information and the Code of the Russian Federation on Administrative Offenses": { "Art. 1.10": "Art. 10.4" }
+
+# Provisional indicator scores from the deep-research reports (engine/docs, 22 Aug 2026 for P6,
+# 16 Aug for P7) — compared with the ESCAP master by scripts/gold_audit.py (H-score-divergence).
+research_scores: { P6-I1: 0, P6-I2: 1, P6-I3: 0, P6-I4: 1, P6-I5: 0, P7-I1: 0, P7-I2: 0, P7-I3: 1, P7-I4: 1, P7-I5: 1, P2-I1: 1, P2-I2: 1, P2-I3: 1, P2-I4: 1 }
+
+governing_instruments:
+  default: { law: "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)", url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261" }
+  P7-I2:   { law: "Federal Law No. 187-FZ of 26.07.2017 On Security of Critical Information Infrastructure", url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102439340" }
+  P6-I5:   { law: "Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data (ETS No. 108)", url: "https://rm.coe.int/1680078b37" }
+
+status_assertions:
+  "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261"
+    fact_text: "Official ИПС consolidated text, revision rdk=38, lists amendments through No. 265-FZ of 26.07.2026."
+  "Government Resolution No. 6 of 10.01.2023 on decisions prohibiting or restricting cross-border transfer of personal data":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603690533"
+    fact_text: "Official ИПС text; in force from 1 March 2023 (research 22-Aug-2026)."
+    effective_date: "2023-03-01"
+  "Government Resolution No. 24 of 16.01.2023 on restricting cross-border transfer of personal data to protect public interests":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603754886"
+    fact_text: "Official ИПС consolidated text (rdk=2, incl. Resolution No. 1371 of 14.10.2024); in force from 1 March 2023."
+    effective_date: "2023-03-01"
+  "Federal Law No. 572-FZ of 29.12.2022 On identification and authentication using biometric personal data":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603637578"
+    fact_text: "Official ИПС consolidated text, revision rdk=3."
+  "Federal Law No. 149-FZ of 27.07.2006 On Information, Information Technologies and Protection of Information (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108264"
+    fact_text: "Official ИПС consolidated text, revision rdk=94."
+  "Federal Law No. 126-FZ of 07.07.2003 On Communications (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102082548"
+    fact_text: "Official ИПС consolidated text, revision rdk=122."
+  "Federal Law No. 161-FZ of 27.06.2011 On the National Payment System (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102148779"
+    fact_text: "Official ИПС consolidated text, revision rdk=61."
+  "Federal Law No. 187-FZ of 26.07.2017 On Security of Critical Information Infrastructure":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102439340"
+    fact_text: "Official ИПС consolidated text, revision rdk=1; in force from 1 January 2018."
+    effective_date: "2018-01-01"
+  "Presidential Decree No. 646 of 05.12.2016 Information Security Doctrine of the Russian Federation":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102417017"
+    fact_text: "Official ИПС text (no amending revisions); in force from signature."
+    effective_date: "2016-12-05"
+  "Presidential Decree No. 250 of 01.05.2022 On additional measures to ensure information security":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=603015160"
+    fact_text: "Official ИПС consolidated text, revision rdk=1 (June 2024 amendment)."
+  "Government Resolution No. 127 of 08.02.2018 Rules for categorising critical information infrastructure objects":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102460750"
+    fact_text: "Official ИПС consolidated text, revision rdk=7."
+  "Government Resolution No. 1119 of 01.11.2012 Requirements for protection of personal data in information systems":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102160483"
+    fact_text: "Official ИПС text (no amending revisions)."
+  "Government Resolution No. 687 of 15.09.2008 Regulation on processing personal data without automation tools":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102124251"
+    fact_text: "Official ИПС consolidated text, revision rdk=1."
+  "Government Resolution No. 445 of 12.04.2018 Rules for storage of users' messages by communications operators":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102467196"
+    fact_text: "Official ИПС consolidated text, revision rdk=5 (incl. March 2022 amendments)."
+  "Federal Law No. 115-FZ of 07.08.2001 On Countering Money Laundering and Terrorist Financing (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102072376"
+    fact_text: "Official ИПС consolidated text, revision rdk=151 (incl. No. 172-FZ of 10.06.2026)."
+  "Federal Law No. 402-FZ of 06.12.2011 On Accounting (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102152685"
+    fact_text: "Official ИПС consolidated text, revision rdk=22."
+  "Tax Code of the Russian Federation Part One No. 146-FZ of 31.07.1998 (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102054722"
+    fact_text: "Official ИПС consolidated text, revision rdk=255."
+  "Criminal Procedure Code of the Russian Federation No. 174-FZ of 18.12.2001 (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102073942"
+    fact_text: "Official ИПС consolidated text, revision rdk=380."
+  "Federal Law No. 3-FZ of 07.02.2011 On Police (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102145133"
+    fact_text: "Official ИПС consolidated text, revision rdk=77 (Arts. 12-13 amended by No. 518-FZ of 28.12.2024)."
+  "Federal Law No. 5-FZ of 10.01.1996 On Foreign Intelligence (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102039044"
+    fact_text: "Official ИПС consolidated text, revision rdk=18."
+  "Federal Law No. 144-FZ of 12.08.1995 On Operational-Search Activity (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102037058"
+    fact_text: "Official ИПС consolidated text, revision rdk=39."
+  "Labor Code of the Russian Federation No. 197-FZ of 30.12.2001 (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102074279"
+    fact_text: "Official ИПС consolidated text, revision rdk=192."
+  "Federal Law No. 323-FZ of 21.11.2011 On the Fundamentals of Protection of the Health of Citizens (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102152259"
+    fact_text: "Official ИПС consolidated text, revision rdk=129."
+  "Federal Law No. 38-FZ of 13.03.2006 On Advertising (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102105292"
+    fact_text: "Official ИПС consolidated text, revision rdk=110."
+  "RSFSR Law No. 395-I of 02.12.1990 On Banks and Banking Activities (consolidated)":
+    status: in_force
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102010268"
+    fact_text: "Official ИПС consolidated text, revision rdk=186."
+  "Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data (ETS No. 108)":
+    status: in_force
+    fact_url: "https://www.coe.int/en/web/data-protection/russia"
+    fact_text: "Council of Europe treaty office: ratified by the Russian Federation 15 May 2013 (Federal Law No. 160-FZ of 19.12.2005)."
+    effective_date: "2013-09-01"
+  # Pillar 2 (public procurement), 29 Sep 2026
+  "Federal Law No. 44-FZ of 05.04.2013 On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs (consolidated)":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=102164547"
+    fact_text: "ИПС consolidated text as of 29.09.2026 (rdk=157); in force since 01.01.2014 (Art. 114); Art. 14 as reworded by 318-FZ of 08.08.2024, applicable from 01.01.2025"
+    effective_date: "2014-01-01"
+  "Government Resolution No. 1875 of 23.12.2024 On measures to provide national treatment in procurement of goods, works and services for state and municipal needs and procurement by certain types of legal entities":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=608103683"
+    fact_text: "ИПС consolidated as of 29.09.2026 (rdk=18); para 12: in force from 01.01.2025; repealed Res. 616/617/925/2014/878 para 3 and 1236 ban"
+    effective_date: "2025-01-01"
+  "Federal Law No. 223-FZ of 18.07.2011 On Procurement of Goods, Works and Services by Certain Types of Legal Entities (consolidated)":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=102149420"
+    fact_text: "ИПС consolidated as of 29.09.2026 (rdk=57); Art. 8: in force from 01.01.2012; Art. 3.1-4 national regime added by 318-FZ, applies from 01.01.2025"
+    effective_date: "2012-01-01"
+  "Government Resolution No. 1352 of 11.12.2014 On the specifics of participation of small and medium-sized enterprises in procurement of goods, works and services by certain types of legal entities":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=102363323"
+    fact_text: "ИПС consolidated as of 29.09.2026 (rdk=29), last amended 31.01.2024 No. 96; published 15.12.2014 (0001201412150022), in force 7 days after publication"
+    effective_date: "2014-12-23"
+  "Government Resolution No. 1442 of 25.12.2015 On procurement of innovative products and high-tech products by certain types of legal entities":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=102387796"
+    fact_text: "ИПС consolidated as of 29.09.2026 (rdk=1), no repeal marker; para 5: in force from 01.01.2016"
+    effective_date: "2016-01-01"
+  "Civil Code of the Russian Federation Part Four No. 230-FZ of 18.12.2006 (consolidated)":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=102110716"
+    fact_text: "ИПС consolidated as of 29.09.2026 (rdk=48); Part Four in force from 01.01.2008; Art. 1240.1 added by 456-FZ of 22.12.2020"
+    effective_date: "2008-01-01"
+  "Government Resolution No. 2338 of 16.12.2022 Regulation on the unified digital platform of the Russian Federation GosTech":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=603603626"
+    fact_text: "ИПС consolidated as of 29.09.2026 (rdk=4); para 6: in force from 01.01.2023; Regulation para 11 as amended by Res. 416 of 03.04.2024"
+    effective_date: "2023-01-01"
+  "Presidential Decree No. 166 of 30.03.2022 On measures to ensure technological independence and security of the critical information infrastructure":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=602954165"
+    fact_text: "ИПС consolidated as of 29.09.2026 (rdk=2); para 3: in force from signature 30.03.2022; para 1(а) as amended by Decree 887 of 22.11.2023"
+    effective_date: "2022-03-30"
+  "Government Resolution No. 1478 of 22.08.2022 Requirements for software used on significant critical information infrastructure objects and rules for approving its procurement":
+    status: "in_force"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=603212184"
+    fact_text: "ИПС consolidated as of 29.09.2026 (rdk=1); para 5: in force from official publication 26.08.2022 (0001202208260051)"
+    effective_date: "2022-08-26"
+  "Resolution of the Government of the Russian Federation No. 878 \"On Measures to Stimulate the Production of Radio-Electronic Products in the Russian Federation During the Procurement of Goods, Works, and Services to Meet State and Municipal Needs\"":
+    status: "superseded"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=102571587"
+    fact_text: "ИПС rdk=11: para 3 \"(Пункт утратил силу - Постановление ... от 23.12.2024 № 1875)\"; paras 3.1-3.3 (tiers added by Res. 486) repealed from 01.01.2025; only register rules survive"
+    effective_date: "2025-01-01"
+  "Government of Russian Federation. Decree No. 486. \"On Amendments to Certain Acts of the Government of the Russian Federation\"":
+    status: "superseded"
+    fact_url: "http://pravo.gov.ru/proxy/ips/?docbody=&nd=605440663"
+    fact_text: "Amending act (27.03.2023) whose amendments to Res. 878 para 3-3.3 were repealed by Res. 1875 from 01.01.2025"
+    effective_date: "2025-01-01"

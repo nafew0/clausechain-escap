@@ -1,0 +1,170 @@
+[
+ {
+  "indicator": "P2-I1",
+  "law": "Public Procurement (Preference to Make in India) Order 2017 ",
+  "article": "cl. 3B",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause is an operative bid-eligibility rule, not merely an enabling power: when sufficient local capacity and competition exist, only Class I local suppliers may bid. That fits P2-I1’s inclusion of procurement exclusions limited to a category or circumstance."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P2-I1, the clause excludes non-local suppliers from covered multi-award tenders when the stated local-capacity condition is met. It is an operative measure, so it supports score 1 as an exclusion under some circumstances; the surrounding provision preserves participation for non-local suppliers in other cases, which does not negate that result."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says only Class I local suppliers are eligible to bid when sufficient local capacity and competition exist, and the surrounding text says non-local suppliers may participate in other cases. It establishes a conditional procurement exclusion, not a blanket foreign-supplier ban, consistent with P2-I1’s scope."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I2",
+  "law": "MeitY Inviting Application for Empanelment of Cloud Services",
+  "article": "para. 30",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause assigns Government ownership of project-produced documents and bars CSP reproduction or retention. In this procurement-contract context, that supports the rationale’s claim of proprietary control over project deliverables; the rubric includes transfer of exclusive IP and covers performance of a procurement contract."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric’s procurement function is met by the project-specific ownership and restriction stated in the clause, which resembles its positive cues for customer-held rights. The absence of a specific encryption requirement is immaterial, and sectoral coverage is not disqualifying. The text supports the mapping, though it does not itself establish source-code transfer."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes that project-exclusive documents belong to the Government Department and may not be reproduced or retained by the CSP; the surrounding context requires delivery during, at the end of, or on termination of the contract. It does not expressly mention source code or IP rights, but its express ownership and control of project documents supports the rubric’s broader exclusive-IP limb without extending the claim beyond those documents."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "DoT Notification of Telecom Products, Services or Works unde",
+  "article": "para. 6",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The paragraph imposes a tender-stage duty to certify that offered items meet a minimum local-content requirement and to identify where value is added. That is procurement-bidding evidence of an LCR, not merely a legal power to create one; the rubric expressly accepts local-content thresholds applied to all bidders."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P2-I3, an operative local-content requirement applied to bidders is a 0.5 measure. The required certification links the requirement to tendering, so the mapping is supported even though this paragraph does not state the percentage. The rubric calls for sectoral procurement evidence and does not require the threshold to be nationality-based."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text establishes that a supplier at tender, bidding, or solicitation shall certify that offered items meet the minimum local-content requirement and disclose the locations of value addition. It does not establish the threshold’s numeric level or foreign-bidder discrimination, so it supports the local-content measure but not a score of 1."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "DoT Notification of Telecom Products, Services or Works unde",
+  "article": "para. 14",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause does more than authorize a future preference: it operatively classifies bidders offering imported products as non-local and bars listed services from being used to claim Class-I/II local-supplier status. In the Make-in-India procurement-preference context, that is an origin-linked eligibility limitation within P2-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P2-I3 has an empty hunt_in, and the clause supplies an operative local-content/status rule rather than only an empowering provision. It supports an origin-triggered procurement preference limitation; under the rubric this supports score 1 if the imported-product distinction is treated as discrimination by origin, not 0.5 for a measure applied to all bidders."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text expressly says imported-product bidders are non-local and cannot claim Class-I/II status using the listed services as local value addition. Read with the stated Make-in-India procurement-preference context, it establishes an origin-linked status condition relevant to preference eligibility; it need not state a preference percentage to evidence that limitation."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Public Procurement (Preference to Make in India) Order 2017 ",
+  "article": "cl. 3B",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Clause 3B is an operative procurement award preference, not merely authority to create one: it directs first purchase preference to a qualifying Class-I local supplier within the stated 20% margin. That fits P2-I3; the possibility that other bidders may still win does not defeat the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric’s hunt_in is empty, and the text matches its positive cue for a Make in India/local-content preference. This is an operative preference rather than only an empowering provision, so it is a valid P2-I3 evidence row. The excerpt supports at least a 0.5 measure based on local-supplier status; it does not by itself establish categorical exclusion of foreign bidders for a score of 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says first purchase preference must go to the lowest-quoting Class-I local supplier within the 20% margin, subject to award criteria and quantity constraints. The surrounding context confirms preference over Class-II and non-local suppliers. It establishes a conditional bidding preference, not a ban on other bidders, which is precisely within P2-I3."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Public Procurement (Preference to Make in India) Order 2017 ",
+  "article": "cl. 3A",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Clause 3A makes the preference operative and its procedures award quantity or the contract to Class-I local suppliers ahead of non-local suppliers. That is a procurement-bidding preference within P2-I3, not merely authority to create one."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, the supplied text is eligible evidence: it expressly gives Class-I local suppliers purchase preference and specifies how that affects awards. This is a measure covered by P2-I3; its score depends on whether the underlying status is discriminatory to foreign bidders or a local-content condition open to bidders generally."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted clause and surrounding procedures expressly distinguish Class-I local suppliers from non-local suppliers and confer preference in procurement awards, while allowing non-local bids to win in specified circumstances. That supports a limitation/preference under P2-I3 without establishing an outright exclusion."
+   }
+  ]
+ }
+]

@@ -1,0 +1,188 @@
+# ClauseChain — one-command local deployment (any OS with Docker).
+#
+#   ./deploy.sh            macOS / Linux / WSL2
+#   .\deploy.ps1           Windows PowerShell
+#
+# The deploy script downloads the data bundle, writes .env, runs this file and
+# imports the reviewed snapshots. Everything the app needs is pinned inside the
+# images (backend/constraints.txt, engine/uv.lock, frontend/package-lock.json).
+#
+# Default stack (5 services): postgres, redis, backend (API), engine-worker,
+# frontend, nginx on http://localhost:${CLAUSECHAIN_PORT:-8080}.
+# Optional: `--profile ollama` adds a local Ollama server (a key-free model).
+#
+# Model keys never live here. The engine reads engine/.env (mounted read-only);
+# setting an engine key in this file — even to "" — would hide the value there.
+
+x-backend-env: &backend_env
+  DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?run ./deploy.sh or set DJANGO_SECRET_KEY in .env}
+  JWT_SIGNING_KEY: ${JWT_SIGNING_KEY:?run ./deploy.sh or set JWT_SIGNING_KEY in .env}
+  DEBUG: "False"
+  ENVIRONMENT: ${ENVIRONMENT:-production}
+  APP_ORIGIN: ${APP_ORIGIN:-http://localhost:8080}
+  PUBLIC_APP_URL: ${APP_ORIGIN:-http://localhost:8080}
+  ALLOWED_HOSTS: ${ALLOWED_HOSTS:-localhost,127.0.0.1,[::1],backend}
+  CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-http://localhost:8080,http://127.0.0.1:8080}
+  # Plain http on this machine: cookies must not require https. Set these to
+  # True once a TLS proxy sits in front of nginx.
+  SECURE_SSL_REDIRECT: ${SECURE_SSL_REDIRECT:-False}
+  AUTH_REFRESH_COOKIE_SECURE: ${COOKIES_SECURE:-False}
+  CSRF_COOKIE_SECURE: ${COOKIES_SECURE:-False}
+  SESSION_COOKIE_SECURE: ${COOKIES_SECURE:-False}
+  TRUST_X_FORWARDED_PROTO: "1"
+  DB_NAME: ${POSTGRES_DB:-clausechain}
+  DB_USER: ${POSTGRES_USER:-clausechain}
+  DB_PASSWORD: ${POSTGRES_PASSWORD:?run ./deploy.sh or set POSTGRES_PASSWORD in .env}
+  DB_HOST: postgres
+  DB_PORT: "5432"
+  USE_REDIS: "1"
+  REDIS_HOST: redis
+  REDIS_PORT: "6379"
+  GRAPH_BACKEND: sqlite
+  # The worker runs as its own service; the API must not spawn another one.
+  ENGINE_WORKER_AUTOSTART: "False"
+
+x-engine-volumes: &engine_volumes
+  - backend_static:/srv/clausechain/backend/staticfiles
+  - backend_media:/srv/clausechain/backend/media
+  - backend_locks:/srv/clausechain/backend/var/locks
+  - ./engine/data:/srv/clausechain/engine/data
+  - ./engine/outputs:/srv/clausechain/engine/outputs
+  - ./engine/logs:/srv/clausechain/engine/logs
+  - ./engine/submission:/srv/clausechain/engine/submission
+  - ./engine/reports:/srv/clausechain/engine/reports
+  - ./engine/.env:/srv/clausechain/engine/.env:ro
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-clausechain}
+      POSTGRES_USER: ${POSTGRES_USER:-clausechain}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?run ./deploy.sh or set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-clausechain} -d ${POSTGRES_DB:-clausechain}"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  # One-shot: database schema, static files, the read-only demo viewer.
+  # The deploy script imports the reviewed snapshots afterwards (once).
+  migrate:
+    image: clausechain-backend:local
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: "no"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment: *backend_env
+    volumes: *engine_volumes
+    command:
+      - sh
+      - -c
+      - >
+        python manage.py migrate --noinput &&
+        python manage.py collectstatic --noinput &&
+        python manage.py ensure_demo_viewer
+
+  backend:
+    image: clausechain-backend:local
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    environment: *backend_env
+    volumes: *engine_volumes
+    healthcheck:
+      # 401 is the healthy answer: the API is up and asks for a login.
+      test: ["CMD-SHELL", "test \"$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8001/api/auth/user/)\" = 401"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+
+  engine-worker:
+    image: clausechain-backend:local
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    environment: *backend_env
+    volumes: *engine_volumes
+    command: ["python", "manage.py", "run_engine_worker"]
+    stop_grace_period: 30s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        BACKEND_URL: http://backend:8001
+        NEXT_PUBLIC_API_URL: /api
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      BACKEND_URL: http://backend:8001
+      NEXT_PUBLIC_API_URL: /api
+
+  nginx:
+    build:
+      context: ./deploy
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - backend
+      - frontend
+    ports:
+      - "${CLAUSECHAIN_PORT:-8080}:80"
+    volumes:
+      - backend_static:/srv/clausechain/backend/staticfiles:ro
+      - backend_media:/srv/clausechain/backend/media:ro
+      - ./engine/submission:/srv/clausechain/engine/submission:ro
+
+  # Optional key-free model server: `docker compose --profile ollama up -d`,
+  # then point LOCALAI_ENDPOINT in engine/.env at http://ollama:11434/v1.
+  ollama:
+    image: ollama/ollama:0.12.3
+    profiles: ["ollama"]
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  postgres_data:
+  redis_data:
+  backend_static:
+  backend_media:
+  backend_locks:
+  ollama_data:

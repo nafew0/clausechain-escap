@@ -1,0 +1,164 @@
+{
+ "economy": "Timor-Leste",
+ "pillar": 6,
+ "run": "run-tl-p6-1790700297",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW', indicating that no textual basis exists to establish the presence of ban or local pr"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence indicates no verified requirements for the horizontal scope, resulting in a score of 0 as the transfer is free of such requirements."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW', indicating that no verifiable requirements for bans or local processing were identif"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The text imposes a single local storage requirement for specific non-personal data (mining records and royalty calculations) within the mining sector, which doe"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence cites a single sectoral requirement (Mining Code) mandating the local storage of specific non-personal records (royalty calculations) for audit pur"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The provision mandates the local storage of specific non-personal data (mining royalty records) for audit purposes, which constitutes a single sectoral storage "
+    }
+   ],
+   "band": [
+    0.5,
+    0.5
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states NO_EVIDENCE_FOUND_PENDING_REVIEW, meaning no text plainly states an infrastructure requirement exists."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided legal text."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence indicates that no specific infrastructure requirements were found in the cited legislation, resulting in a score of 0."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the horizontal regime, indicating no conditions on transfer are present in the ve"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence indicates no conditions on data transfer were found, resulting in a score of 0."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW', indicating that no verifiable conditions on data transfer regimes were identified to"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no qualifying binding data-transfer agreement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the Constitution, and no other binding data-transfer agreements are cited, satisf"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "No evidence of a binding data-transfer agreement was found in the provided constitutional text, resulting in a score of 1 for the absence of such commitments."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The provided evidence explicitly states that no binding data-transfer agreement was found, which corresponds to a score of 1 on the scale where 1 indicates the "
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

@@ -49,7 +49,7 @@ class RefutationPanel(BaseModel):
 
 def _indicator_configs() -> dict[str, dict]:
     configs: dict[str, dict] = {}
-    for pillar in ("6", "7"):
+    for pillar in ("2", "6", "7"):
         path = Path(f"configs/rdtii/pillar_{pillar}.yaml")
         payload = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         scope_exclusions = payload.get("scope_exclusions") or []
@@ -153,7 +153,9 @@ def _normalise_votes(panel: RefutationPanel) -> list[dict]:
 def main() -> int:
     from packages.providers.model_router import resolve_llm
 
-    llm = resolve_llm("hybrid_accuracy", tier="high_reasoning")
+    from packages.core import review_layout
+
+    llm = resolve_llm(review_layout.current().provider_profile, tier="high_reasoning")
     configs = _indicator_configs()
     out_dir = Path("data/review")
     out_dir.mkdir(parents=True, exist_ok=True)

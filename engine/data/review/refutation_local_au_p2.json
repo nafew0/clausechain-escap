@@ -1,0 +1,30 @@
+[
+ {
+  "indicator": "P2-I1",
+  "law": "Commonwealth Procurement Rules 17 November 2025",
+  "article": "para. 5.4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively mandates that non-corporate Commonwealth entities 'invite only Australian businesses' for a specific value band ($10,000 to threshold). This is a direct exclusion of foreign suppliers from bid eligibility, not merely a preference or empowerment clause. The exceptions (5.4b, 5.4c) are conditional and do not negate the operative exclusionary function for the general case, which fits the P2-I1 legal test."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '1' for any measure excluding foreign firms under any circumstances, including restrictions to a threshold band. The text explicitly restricts participation to 'Australian businesses' in a defined value band, matching the positive cue 'domestic bidders only below the threshold'. It is not a local-content rule (P2-I3) because it bars foreign firms from making submissions entirely, rather than just imposing content requirements on winning bids."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states entities 'must invite only Australian businesses to make submissions.' This establishes a mandatory limitation on the pool of eligible bidders to domestic entities. The context confirms this applies to procurements above $10,000 and below the relevant threshold. The text does not merely empower exclusion but actively requires the exclusion of non-Australian businesses from the invitation process."
+   }
+  ]
+ }
+]

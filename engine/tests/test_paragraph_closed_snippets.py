@@ -149,4 +149,10 @@ def test_current_run_artifacts_never_emit_open_snippets():
             assert gates[-1].get("metadata", {}).get("closure_code") in {
                 "PASS_CLOSED", "PASS_LONG_BUT_CLOSED"
             }
-            assert snippet.rstrip().endswith((".", "!", "?"))
+            trailing = snippet.rstrip()
+            # Script-aware boundary rule (mirrors finalization): Thai-dominant
+            # snippets close structurally via G9 (asserted above); Latin/Hindi
+            # keep the sentence-punctuation tail check.
+            thai_chars = sum(1 for ch in trailing if "ก" <= ch <= "๛")
+            thai_dominant = thai_chars > len(trailing) * 0.25
+            assert thai_dominant or trailing.endswith((".", "!", "?", "।"))

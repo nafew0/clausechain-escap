@@ -34,11 +34,15 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--mode", choices=("live", "offline-eval", "submission-replay"),
                         default="live")
+    parser.add_argument("--verbose", action="store_true",
+                        help="Also print prompts, model replies and candidate lists under each progress line.")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    if args.verbose:
+        os.environ["CLAUSECHAIN_VERBOSE"] = "1"
     if args.mode == "submission-replay":
         raise SystemExit("Use scripts/submission_replay.py; run.py never creates final artifacts.")
     if args.mode == "offline-eval":

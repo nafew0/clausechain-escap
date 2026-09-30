@@ -1,0 +1,450 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Law of Mongolia on Protection of Personal Information (2021)",
+  "article": "Art. 8",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited law is the 'Law of Mongolia on Protection of Personal Information' (2021), which is a horizontal statute applicable to all data controllers, not a sectoral law. Article 8 establishes general consent requirements for processing, collection, and use, confirming the existence of a comprehensive framework. There is no legal-function defect; the provision correctly evidences the presence of the law required to score the indicator as 0 (framework exists)."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 asks if the economy LACKS a comprehensive framework. The presence of a horizontal law like the Mongolian 2021 Act means the answer is 'No, it does not lack one,' resulting in a score of 0. The mapping rationale correctly identifies that this provision evidences the existence of the framework. The rubric explicitly states that sectoral laws are recorded but do not make the framework comprehensive; however, this is a horizontal law, so it satisfies the 'comprehensive' criterio"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text is from Article 8 of the Law of Mongolia on Protection of Personal Information. The text explicitly regulates 'information controllers' (мэдээлэл хариуцагч) and 'information owners' (мэдээллийн эзэн) in a general manner, referencing the Civil Code for specific exceptions but establishing a general regime. The context confirms this is a standalone data protection law, not a cybersecurity or government-only statute. The text establishes the legal obligation of consent, which "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Technology security requirements for processing sensitive, g",
+  "article": "cl. 2.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly references the 'Law on Protection of Personal Data' (Хүний хувийн мэдээлэл хамгаалах тухай хууль) as the baseline for processing sensitive data. This confirms the existence of a horizontal legal framework, which is the core requirement for scoring P7-I1 as 0 (comprehensive framework exists). The sectoral nature of the specific regulation (Order A/90) does not negate the existence of the underlying horizontal law it relies upon."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 asks if the economy LACKS a comprehensive framework. The snippet provides evidence that a 'Law on Protection of Personal Data' exists and is being applied. Under the scoring rule '0: A comprehensive horizontal framework exists', this provision serves as valid evidence of the framework's presence. The 'hunt_in' is empty, so no specific sectoral exclusion applies to the evidence itself, and the positive cue 'data protection law' is present in the referenced title."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states that when collecting/processing sensitive data, one must follow the principles in Article 5.1 of the 'Law on Protection of Personal Data' PLUS additional principles. This textual dependency proves the existence of the cited horizontal law. It does not claim the Order itself is the comprehensive law, but rather evidences the framework's operation. The rationale correctly identifies this as evidence that a comprehensive horizontal legal framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Law of Mongolia on Cybersecurity (2021)",
+  "article": "Art. 10",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited Law of Mongolia on Cybersecurity (2021) is a dedicated statute specifically designed for cybersecurity, not a generic privacy or sectoral law. Article 10 assigns horizontal responsibilities to the Government (national strategy, incident response centers, critical infrastructure lists) that apply across the economy, satisfying the legal function required for a dedicated framework. No scope defect is found."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '0' for a dedicated HORIZONTAL cybersecurity framework. The evidence shows a law titled 'Law on Cybersecurity' with provisions for national strategy and incident response (Art 10.1.1, 10.1.4), which are horizontal measures. This aligns with the positive cue 'Cybersecurity Act' and the example of SG/MY acts. The mapping correctly identifies the presence of a dedicated horizontal framework, supporting a score of 0 (absence of lack)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text of Article 10.1 explicitly mandates the Government to implement a 'national cybersecurity strategy' (10.1.1) and establish 'national centers' for cyber attacks (10.1.4). These are horizontal, economy-wide functions. The text does not limit these duties to a specific sector (e.g., finance or government only) in a way that would negate the 'dedicated horizontal' classification. The snippet supports the rationale that a dedicated framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Law of Mongolia on Cybersecurity (2021)",
+  "article": "Art. 7",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly references 'general procedure' (нийтлэг журам) for cybersecurity, which aligns with the 'horizontal' scope claimed. There is no legal-function defect; the text supports the existence of a dedicated framework rather than a sectoral or generic privacy clause."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 0 for a dedicated horizontal cybersecurity framework. The cited law is the 'Law of Mongolia on Cybersecurity' (2021), a dedicated act. Article 7 establishes general procedures for prevention, detection, and response, satisfying the criteria for a horizontal framework. The mapping to score 0 (implied by the rationale 'evidences the existence of a dedicated horizontal cybersecurity framework') is consistent with the rubric's positive cues and scoring logic."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet states that the Government approves the 'general procedure' for ensuring, preventing, detecting, and responding to cybersecurity. This textually establishes a dedicated legal mechanism for cybersecurity management. It does not limit the scope to specific sectors or government data only, supporting the characterization of a horizontal framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Conditions and requirements for establishing and operating t",
+  "article": "cl. 10.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('хадгална' - shall keep) to retain control information for a minimum of 6 months. This fits the legal function of a minimum retention requirement. The sectoral nature (telecom) is explicitly permitted by the rubric's hunt_in criteria."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text '6 сараас доошгүй' translates to 'not less than 6 months', which matches the positive cue 'keep ... for a period of not less than'. This clearly specifies a minimum period, satisfying the scoring criterion for '1'. The G6 WARN regarding modality is a false positive; the imperative form in Mongolian legal text denotes obligation, not permission."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'Хяналтын мэдээллийг 6 сараас доошгүй хугацаагаар хадгална' explicitly establishes a floor of 6 months for retention. It is not a limit (ceiling) but a minimum, aligning with the indicator's definition. The context confirms this applies to control information within the telecom network, which is a valid data category under the rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law of Mongolia on Credit Information (2011)",
+  "article": "Art. 19",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates retention for 10 years ('10 жилийн хугацаанд хадгална'), which constitutes a clear minimum retention period. The sectoral nature (credit information) is expressly permitted by the rubric's hunt_in criteria. No legal-function defect exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text specifies '10 years' as the retention duration. This matches the positive cue 'for a period of [X] years' and satisfies the scoring criterion for score 1 (minimum retention period clearly specified). It is not a retention limit (data minimization) but a fixed duration requirement."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Mongolian text '10 жилийн хугацаанд хадгална' translates to 'shall be kept for a period of 10 years'. This establishes a mandatory minimum period. The G6 warning regarding modality is a false positive; the verb 'хадгална' in this legislative context is imperative/mandatory, not permissive. The text supports the rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law of Mongolia on Cybersecurity (2021)",
+  "article": "Art. 17",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision in Art. 17.1.3 imposes a mandatory duty ('хадгалах' - to keep/store) on legal entities to retain system operation logs. While the specific duration is delegated to 'common cybersecurity regulations' (нийтлэг журам), the legal function of a retention requirement is present. Under the rubric, a retention requirement without a specified minimum period in the primary text is still recorded and scored 0. The mapping correctly identifies this as a retention duty, not a limit or a differe"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 states that a retention requirement WITHOUT a specified minimum period is still RECORDED and scored 0. The snippet explicitly contains a retention obligation ('...бүртгэлийг ... хадгалах') but delegates the duration to secondary regulations ('...журамд заасан хугацаанд'). This fits the 'score 0' criteria perfectly. The hunt_in allows for sectoral/horizontal laws, and the text is from a cybersecurity law applying to legal entities. The mapping is valid evidence for the indica"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'мэдээллийн системийн үйлдлийн бүртгэлийг ... хадгалах' (keep the operation logs of the information system) establishes a duty to retain data. The text does not specify a numeric minimum (e.g., 'at least 6 months'), nor does it specify a maximum limit (e.g., 'no longer than necessary'). It references a period defined in regulations. Therefore, it is a retention requirement with an unspecified minimum in the primary text, which aligns with the rubric's instruction to record such pr"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Regulation on registration and use of domain names (consolid",
+  "article": "cl. 8.2",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The provision mandates the retention of a domain name registration status (to allow for restoration), not the retention of personal data or transaction records. P7-I3 targets data retention requirements (e.g., logs, transaction data). Retaining a domain name is a service continuity or contractual obligation, not a data protection retention duty. The legal function is distinct from data minimization/retention."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I3 asks if 'data' must be kept for a minimum period. The text specifies that the 'domain name' (домэйн нэр) must be kept/retained (хадгалах) for 65 days. A domain name is an identifier/resource, not 'data' in the context of data retention laws (like AML or tax records). This is a resource retention rule, not a data retention rule. Therefore, it does not satisfy the indicator's scope."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states '65-аас доошгүй хоногийн хугацаанд' (for a period of no less than 65 days) and 'хадгалах үүрэг хүлээнэ' (bears the obligation to retain). Textually, it establishes a minimum period of 65 days for retaining the subject (domain name). While the object is a domain name, the textual structure matches the 'minimum period' pattern. The refutation relies on semantic scope (data vs. resource), not textual absence of a minimum period. Thus, strictly textually, the minimum perio"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Regulation on storage and protection of credit information b",
+  "article": "cl. 12.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a specific duty on credit information service providers to maintain log records for a defined period. While the scope is sectoral (credit information), the rubric's hunt_in explicitly includes sectoral laws. The legal function is data retention, which aligns with the indicator's scope. No scope defect is found that would invalidate the mapping under the provided rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet 'сүүлийн 10 жилийн лог бүртгэлийн түүхийг хадгална' translates to 'shall keep the history of log records of the last 10 years'. This establishes a retention requirement for a specified period (10 years). Although the phrasing 'last 10 years' describes the scope of the records to be kept rather than a forward-looking 'keep for at least X', it functionally mandates the existence of 10 years of historical data, satisfying the 'minimum period' criterion for scoring purposes in this conte"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states '10 жилийн' (10 years) and 'хадгална' (will keep/maintain). The context confirms this is a mandatory obligation for the service provider. The text does not contain language indicating a maximum limit ('no longer than') or permissive modality ('may'). The specific duration of 10 years is clearly established in the text, supporting the rationale that a minimum retention period is specified."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Regulation on storage and protection of credit information b",
+  "article": "cl. 9.7",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that log records contain the last 10 years of data ('сүүлийн 10 жилийн мэдээллийг агуулах'). This constitutes a clear minimum retention period for the specified data type (log records/audit trails) within the sectoral scope of credit information, which the rubric's hunt_in expressly permits. There is no legal-function defect; it is a valid retention requirement."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 scores '1' when a minimum retention period is clearly specified. The text 'last 10 years' (сүүлийн 10 жилийн) establishes a floor of 10 years for the retention of log data. Although G6 flags a potential modality issue, the context of 'requirements' (шаардлагыг хангасан) and the imperative nature of the list items (9.7.1-9.7.5) support a mandatory interpretation. The sectoral nature (credit/AML-adjacent) is valid under hunt_in."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that the log record 'contains the last 10 years of information' (сүүлийн 10 жилийн мэдээллийг агуулах). This textually establishes a 10-year retention window for the logs. It is not a limit ('no longer than') but a scope definition that implies retention of that specific duration. The mapping to a minimum retention period is textually supported by the explicit duration mentioned."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Regulation on storage and protection of credit information b",
+  "article": "cl. 8.2",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates a 10-year retention period for credit information database logs ('10 жил хадгалах бодлого'). This constitutes a specific legal function of data retention with a defined minimum duration, satisfying the core requirement of the indicator without scope defects."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly includes 'Sectoral law: ... telecom, health, employment' and similar regulated sectors; credit information falls within this scope. The text specifies '10 years', which aligns with the positive cue 'for a period of seven years' (as a specific duration) and the scoring criterion 'keep >= X days/months/years'. It is not a retention limit (max), but a fixed period, thus scoring 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'зээлийн мэдээллийн сангийн аливаа лог бүртгэлийг 10 жил хадгалах бодлого' translates to 'policy to keep any log records of the credit information database for 10 years'. While framed as a 'policy' within a risk management list, in the context of regulatory compliance for credit bureaus, this establishes a mandatory retention standard. The text clearly establishes a 10-year duration, supporting the mapping to a minimum retention period."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Law of Mongolia on Protection of Personal Information (2021)",
+  "article": "Art. 23",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a mandatory assessment ('үнэлгээ хийнэ' - shall conduct assessment) for specific high-risk processing scenarios. While it is conditional (triggered by specific risks), it constitutes a valid sector-specific or risk-based DPIA requirement. It does not fail the legal function test as it is not a generic privacy law but a specific accountability mechanism."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 0.5 for 'Sector-specific DPO/DPIA requirement only'. The text in Art. 23.1 explicitly mandates an assessment ('үнэлгээ хийнэ') for automated processing involving significant rights impacts or sensitive data. This fits the 'DPIA' component of the indicator. The mapping to P7-I4 is correct as it evidences the presence of a DPIA mechanism, even if not universal across all sectors (which would be required for a score of 1)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'дараах тохиолдолд үнэлгээ хийнэ' translates to 'shall conduct an assessment in the following cases'. This is a mandatory obligation, not a permissive one. The G6 WARN regarding 'no must/shall modality' is a false positive from the automated gate; the Mongolian verb form 'хийнэ' in this legislative context denotes a legal duty. The text clearly establishes a requirement for impact assessment."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Banking Law of Mongolia (2010)",
+  "article": "Art. 39",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text (Art. 39) establishes a regulatory reporting and inspection duty owed to the Central Bank (Mongolbank) regarding financial reports and operational data. It does not establish a general power of government access to 'personal data' for law enforcement or national security purposes, which is the scope of P7-I5. While the Central Bank is a government body, this provision is a sectoral regulatory compliance mechanism (likely mapping to P7-I1 or similar regulatory oversight indicators)"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric for P7-I5 requires evidence of government access to *personal data* without independent judicial authorization. The snippet mandates the provision of 'financial reports,' 'primary financial documents,' and 'equipment/software details' to the Central Bank. It does not explicitly mention 'personal data' or 'customer data.' While banks hold personal data, the legal function here is financial reporting and regulatory oversight, not the specific act of accessing personal data for investiga"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly requires banks to provide 'documents, information, and data' ('баримт, мэдээ, мэдээлэл') to the Central Bank and its inspectors 'without hindrance' ('саадгүй'). The Central Bank is a state authority. The text does not mention any requirement for a court order or judicial warrant for this access. Therefore, strictly on the text, it describes a mechanism where a government body accesses data held by a private entity without judicial authorization. While the *type* of data is fi"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law of Mongolia on Cybersecurity (2021)",
+  "article": "Art. 15",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision grants the Police Agency the authority to 'obtain necessary information' from individuals and legal entities to fulfill its duties regarding cybercrime. This is a direct authorization for government access to data held by private parties. The text does not condition this access on a prior judicial warrant or court order, nor does it reference a separate procedural law that would impose such a gate. Therefore, it constitutes a valid instance of warrantless access power under the rub"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs reviewers to look beyond privacy statutes to surveillance and law enforcement laws. This provision from the Cybersecurity Law fits that scope. The positive cue 'shall provide access... upon request' is functionally equivalent to the text's 'obtain necessary information... from... individuals'. Since the access is not gated by a judicial body, it supports a score of 1 (warrantless access exists). The mapping is consistent with the scoring criteria."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states the Police Agency exercises the authority to 'obtain necessary information... from relevant state agencies, officials, individuals, and legal entities.' There is no textual qualifier such as 'upon court order' or 'with judicial approval' attached to this specific power. The text establishes a direct administrative power to compel data production from private entities for cybercrime investigation, which strictly satisfies the definition of access without independent judicial"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law of Mongolia on Protection of Personal Information (2021)",
+  "article": "Art. 10",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly authorizes 'authorized bodies' (10.1.3) to collect and use genetic/biometric data for crime prevention and investigation. It does not condition this specific access on a prior judicial warrant or court order, unlike the judicial expert body in 10.1.4 which is acting within its own judicial function. Therefore, it constitutes a valid instance of government access not gated by independent judicial authorization for each instance."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in directs reviewers to look beyond privacy statutes to surveillance and law enforcement contexts. This provision is a specific sectoral rule within the privacy law that defines the scope of state access to sensitive data. The rationale correctly identifies that the absence of a 'warrant' requirement in the text for the 'authorized bodies' (10.1.3) supports a score of 1 (warrantless access), whereas the judicial body (10.1.4) is a separate function. The mapping is consistent wi"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states that the listed state bodies 'collect and use' (цуглуулж, ашиглана) the data 'in accordance with the grounds and procedure specified by law' (хуульд заасан үндэслэл, журмын дагуу). It does not explicitly state 'without a warrant' or 'upon request' in the snippet itself, but it lists the entities and purposes without a judicial precondition clause (unlike 10.1.4 which is tied to the court's case handling). The rationale's claim that it authorizes access without a *specific* indepe"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law of Mongolia on Public Information Transparency (2021)",
+  "article": "Art. 9",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly grants government bodies the right to use restricted information without the data owner's consent when performing duties based on statutory grounds. This constitutes a legal function of access/usage that is not conditioned on independent judicial authorization (warrant/court order), which is the core defect sought by the opposing counsel lens for this indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the P7-I5 rubric, the indicator asks if government access can occur WITHOUT independent judicial authorization. The text in Art. 9.12 states that government bodies do not require the data owner's consent when using restricted information in the course of their duties according to law. It does not mention a requirement for a court order or warrant. Therefore, it fits the '1' scoring criterion: 'A measure allows government access WITHOUT independent judicial authorization.' The hunt_in in"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'мэдээллийн эзний зөвшөөрөл шаардахгүй' (does not require the data owner's consent) in the context of 'Төрийн байгууллага... чиг үүргээ хэрэгжүүлэхдээ' (Government bodies... when performing their duties) establishes that the legal basis for access is the performance of duty under statutory grounds, not judicial authorization. The text does not contain negative cues like 'only under a warrant' or 'pursuant to a court order'. Thus, the text strictly supports the rationale tha"
+   }
+  ]
+ }
+]

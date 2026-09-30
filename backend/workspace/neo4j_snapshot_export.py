@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -28,6 +29,20 @@ SAFE_PROPERTIES = {
     "law", "tag", "run", "official", "official_domain", "register_id",
     "version_id", "sha256", "text",
 }
+
+
+def _law_key(value: object) -> str:
+    """Conservative title key for official-title presentation variants."""
+    text = str(value or "").casefold()
+    text = re.sub(r"\bofficial\s+(?:english|en)\s+translation\b", "", text)
+    text = re.sub(r"\b(?:b\.e\.?\s*2562|2019)\b", "", text)
+    text = re.sub(r"[^0-9a-z]+", " ", text)
+    return " ".join(text.split())
+
+
+def _laws_match(left: object, right: object) -> bool:
+    a, b = _law_key(left), _law_key(right)
+    return bool(a and b and (a == b or (len(a) >= 18 and (a in b or b in a))))
 
 
 def clean_properties(props: dict) -> dict:
@@ -56,6 +71,7 @@ def main() -> int:
             "economy": row.get("Economy"),
             "law": row.get("Law Name"),
             "article": row.get("Article / Section"),
+            "source_artifact_id": row.get("source_artifact_id"),
             "finding_key": row.get("finding_key") or row.get("Finding key"),
         }
         for row in findings
@@ -93,14 +109,26 @@ def main() -> int:
                     "RETURN p.economy AS economy, count(*) AS count ORDER BY economy"
                 )
             }
-            matched = list(session.run(
+            candidates = list(session.run(
                 "UNWIND $refs AS ref "
                 "MATCH (i:Instrument)-[:HAS_SECTION]->(s:Section)-[:HAS_PROVISION]->(p:Provision) "
-                "WHERE p.economy = ref.economy AND p.law_name = ref.law "
-                "AND p.article_section = ref.article "
-                "RETURN DISTINCT ref.finding_key AS finding_key, i, s, p LIMIT 500",
+                "WHERE p.economy = ref.economy AND p.article_section = ref.article "
+                "RETURN ref.economy AS economy, ref.law AS requested_law, "
+                "ref.source_artifact_id AS requested_source_artifact_id, "
+                "ref.article AS article, ref.finding_key AS finding_key, i, s, p",
                 refs=refs,
             ))
+            matched_by_key = {}
+            for row in candidates:
+                finding_key = row["finding_key"]
+                requested_source = str(row["requested_source_artifact_id"] or "")
+                provision_source = str(row["p"].get("source_artifact_id") or "")
+                source_match = bool(requested_source and requested_source == provision_source)
+                if finding_key and (
+                    source_match or _laws_match(row["requested_law"], row["p"].get("law_name"))
+                ):
+                    matched_by_key.setdefault(finding_key, row)
+            matched = list(matched_by_key.values())
             for row in matched:
                 for name in ("i", "s", "p"):
                     node = row[name]
@@ -154,11 +182,38 @@ def main() -> int:
     expected_schema = int(validation.get("schema_version") or 0)
     expected_economies = validation.get("provisions") or {}
     resolved = len({row["finding_key"] for row in matched if row["finding_key"]})
+    expected_keys = {ref["finding_key"] for ref in refs if ref["finding_key"]}
+    resolved_keys = {row["finding_key"] for row in matched if row["finding_key"]}
+    expected_by_economy = {}
+    resolved_by_economy = {}
+    for ref in refs:
+        key = ref["finding_key"]
+        if not key:
+            continue
+        expected_by_economy.setdefault(str(ref["economy"]), set()).add(key)
+    for row in matched:
+        resolved_by_economy.setdefault(str(row["economy"]), set()).add(row["finding_key"])
+    provision_parity = {
+        str(economy): {
+            "expected": int(expected),
+            "actual": int(economy_counts.get(economy, 0)),
+            "delta": int(economy_counts.get(economy, 0)) - int(expected),
+        }
+        for economy, expected in expected_economies.items()
+    }
+    finding_parity = {
+        economy: {
+            "expected": len(keys),
+            "resolved": len(resolved_by_economy.get(economy, set())),
+            "unresolved": len(keys - resolved_by_economy.get(economy, set())),
+        }
+        for economy, keys in expected_by_economy.items()
+    }
     checks = {
         "schema": schema_version == expected_schema,
         "source_artifacts": label_counts.get("SourceArtifact", 0) == int(validation.get("source_artifacts") or 0),
         "economy_provisions": all(economy_counts.get(key) == int(value) for key, value in expected_economies.items()),
-        "finding_resolution": resolved == len({ref["finding_key"] for ref in refs if ref["finding_key"]}),
+        "finding_resolution": resolved_keys == expected_keys,
     }
     payload = {
         "status": "verified" if all(checks.values()) else "parity_failed",
@@ -169,7 +224,12 @@ def main() -> int:
         "counts": {"labels": label_counts, "relationships": relationship_counts, "economies": economy_counts},
         "expected": validation,
         "resolved_findings": resolved,
-        "expected_findings": len({ref["finding_key"] for ref in refs if ref["finding_key"]}),
+        "expected_findings": len(expected_keys),
+        "parity_details": {
+            "provisions": provision_parity,
+            "findings": finding_parity,
+            "unresolved_finding_keys": sorted(expected_keys - resolved_keys)[:100],
+        },
         "nodes": list(nodes.values())[:500],
         "edges": list(edges.values())[:1000],
     }

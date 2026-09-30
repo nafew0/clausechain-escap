@@ -1,0 +1,102 @@
+{
+ "economy": "Lao PDR",
+ "pillar": 2,
+ "run": "run-la-p2-1790692276",
+ "krippendorff_alpha": 0.652,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "National open bidding permits only local individuals and legal entities to participate, excluding foreign firms under that procurement procedure."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Article 19 defines national open bidding as limited to local individuals and legal entities, excluding foreign firms from that procurement proceeding."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "Article 19 reserves national open bidding to local individuals and entities, excluding foreign firms from that procurement modality but not establishing a blank"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence contains no verified requirement to surrender source code or trade secrets, or to use specific encryption, as a procurement condition."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found of a procurement requirement to surrender patents, source code, or trade secrets, or to use specific encryption."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The only gate-verified row reports no evidence of procurement requirements to surrender source code, patents, or trade secrets, or to use specific encryption."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The quoted provisions grant domestic preference to local contractors and domestically manufactured goods, directly disadvantaging foreign bidders."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Domestic preference for local contractors and domestically manufactured goods directly favors domestic bidders over foreign bidders."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Domestic preference for local contractors and domestically manufactured goods directly discriminates against foreign bidders."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

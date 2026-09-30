@@ -8,6 +8,7 @@ from pathlib import Path
 from django.conf import settings
 
 from .keys import canonical_json
+from .mode import current_mode, engine_env, review_dir, submission_dir
 
 
 class DecisionWriterError(RuntimeError):
@@ -29,7 +30,7 @@ def decision_domain_lock(domain):
     )
     lock_dir = Path(settings.WORKSPACE_LOCK_DIR)
     lock_dir.mkdir(parents=True, exist_ok=True)
-    lock_path = lock_dir / f"clausechain-{root_hash}-{domain}.lock"
+    lock_path = lock_dir / f"clausechain-{root_hash}-{current_mode()}-{domain}.lock"
     with lock_path.open("a+") as lock_file:
         fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX)
         try:
@@ -66,7 +67,8 @@ def apply_authoritative_decision(domain, decisions, *, expected_file_hash=None):
             capture_output=True,
             check=False,
             timeout=60,
-            env={**os.environ, "PYTHONUNBUFFERED": "1"},
+            # The writer targets the request's workspace (data/review or data/review/local).
+            env={**os.environ, "PYTHONUNBUFFERED": "1", **engine_env()},
         )
     except (OSError, subprocess.SubprocessError) as exc:
         stderr = getattr(locals().get("result", None), "stderr", "")
@@ -112,14 +114,9 @@ def current_authoritative_hash(domain):
         "recall": "recall_decisions.json",
         "zone3": "zone3_decisions.json",
     }[domain]
-    path = Path(settings.ENGINE_ROOT) / "data" / "review" / name
+    path = review_dir() / name
     if not path.is_file() and domain == "findings":
-        path = (
-            Path(settings.ENGINE_ROOT)
-            / "submission"
-            / "review"
-            / "decisions.template.json"
-        )
+        path = submission_dir() / "review" / "decisions.template.json"
     if not path.is_file():
         return __import__("hashlib").sha256(b"").hexdigest()
     return __import__("hashlib").sha256(path.read_bytes()).hexdigest()

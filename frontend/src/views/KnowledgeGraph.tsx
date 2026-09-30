@@ -39,19 +39,18 @@ export default function KnowledgeGraph() {
   return (
     <WorkspaceShell breadcrumbs={[{ label: 'Knowledge Graph' }]}>
       <div className="cc-page graph-page">
-        <div className="cc-page-header"><div><TruthBadge state="readonly" label={status === 'verified' ? 'READ-ONLY · VERIFIED NEO4J SNAPSHOT' : 'READ-ONLY · NEO4J SNAPSHOT'} /><h1 className="cc-page-title text-[32px] mt-3">Legal provenance knowledge graph</h1><p className="text-cc-ink-500 mt-1.5">Neo4j mirror for audit paths and cross-references—not an unmeasured retrieval-lift claim.</p></div></div>
+        <div className="cc-page-header"><div><div className="truth-chiprow"><TruthBadge state="readonly" label={status === 'verified' ? 'READ-ONLY · VERIFIED NEO4J SNAPSHOT' : 'READ-ONLY · NEO4J SNAPSHOT'} />{summary.data ? <SnapshotBanner snapshot={summary.data.snapshot} /> : null}</div><h1 className="cc-page-title text-[32px] mt-3">Legal provenance knowledge graph</h1><p className="text-cc-ink-500 mt-1.5">Neo4j mirror for audit paths and cross-references—not an unmeasured retrieval-lift claim.</p></div></div>
         {summary.isError || !summary.data ? (
           <PageUnavailable title={summary.isPending ? 'Loading Neo4j snapshot metadata…' : 'Knowledge graph metadata is unavailable'} />
         ) : (
           <>
-            <SnapshotBanner snapshot={summary.data.snapshot} />
-            <section className={`graph-verification ${status}`}><div>{status === 'verified' ? <ShieldCheck /> : <AlertTriangle />}<span><strong>{status === 'verified' ? 'Neo4j parity verified' : status === 'parity_failed' ? 'Neo4j parity failed' : 'Neo4j snapshot unavailable'}</strong><small>Schema {summary.data.schema_version ?? 'n/a'} · {summary.data.node_count} exported nodes · {summary.data.edge_count} relationships</small></span></div><code>{summary.data.artifact.sha256}</code>{summary.data.reason ? <p>{summary.data.reason}</p> : null}</section>
+            <section className={`graph-verification ${status}`}><div>{status === 'verified' ? <ShieldCheck /> : <AlertTriangle />}<span><strong>{status === 'verified' ? 'Neo4j parity verified' : status === 'parity_failed' ? 'Mirror reconciliation pending' : 'Neo4j snapshot unavailable'}</strong><small>Schema {summary.data.schema_version ?? 'n/a'} · {summary.data.node_count} exported nodes · {summary.data.edge_count} relationships</small></span></div><code>{summary.data.artifact.sha256}</code>{summary.data.reason ? <p>{summary.data.reason}</p> : null}</section>
             {status === 'unavailable' ? (
               <PageUnavailable title="Neo4j was unavailable during snapshot import" detail={summary.data.reason ?? undefined} />
             ) : (
               <>
                 <div className="graph-toolbar">
-                  <label>Economy<select value={economy} onChange={event => setEconomy(event.target.value)}><option value="">All</option><option>Singapore</option><option>Malaysia</option><option>Australia</option></select></label>
+                  <label>Economy<select value={economy} onChange={event => setEconomy(event.target.value)}><option value="">All</option><option>Singapore</option><option>Malaysia</option><option>Australia</option><option>Thailand</option><option>India</option><option>Indonesia</option><option>Russian Federation</option><option>Mongolia</option><option>Lao PDR</option><option>Timor-Leste</option></select></label>
                   <label>Indicator<input value={indicator} onChange={event => setIndicator(event.target.value)} placeholder="e.g. P6-I4" /></label>
                   <label>Instrument<input value={law} onChange={event => setLaw(event.target.value)} placeholder="Law title" /></label>
                   <label>Finding<input value={findingKey} onChange={event => setFindingKey(event.target.value)} placeholder="Finding key" /></label>
@@ -79,12 +78,25 @@ export default function KnowledgeGraph() {
 
 function useForceLayout(nodes: GraphNode[], edges: { id: string; source: string; target: string; type: string }[]) {
   return useMemo(() => {
-    const positioned: Positioned[] = nodes.map((node, index) => ({ ...node, x: 450 + Math.cos(index * 2.399) * (80 + index % 180), y: 280 + Math.sin(index * 2.399) * (80 + index % 180) }))
-    const links = edges.map(edge => ({ ...edge }))
+    const seenNodeIds = new Set<string>()
+    const closedNodes = nodes.filter((node) => {
+      if (!node.id || seenNodeIds.has(node.id)) return false
+      seenNodeIds.add(node.id)
+      return true
+    })
+    const seenEdgeIds = new Set<string>()
+    const closedEdges = edges.filter((edge) => {
+      if (!seenNodeIds.has(edge.source) || !seenNodeIds.has(edge.target)) return false
+      if (seenEdgeIds.has(edge.id)) return false
+      seenEdgeIds.add(edge.id)
+      return true
+    })
+    const positioned: Positioned[] = closedNodes.map((node, index) => ({ ...node, x: 450 + Math.cos(index * 2.399) * (80 + index % 180), y: 280 + Math.sin(index * 2.399) * (80 + index % 180) }))
+    const links = closedEdges.map(edge => ({ ...edge }))
     const simulation = forceSimulation<Positioned>(positioned).randomSource(() => 0.42).force('link', forceLink<Positioned, typeof links[number]>(links).id(node => node.id).distance(72).strength(.45)).force('charge', forceManyBody().strength(-150)).force('center', forceCenter(450, 280)).force('x', forceX(450).strength(.04)).force('y', forceY(280).strength(.04)).stop()
     for (let index = 0; index < 150; index += 1) simulation.tick()
     const byId = new Map(positioned.map(node => [node.id, node]))
-    return { nodes: positioned.map(node => ({ ...node, x: Math.max(25, Math.min(875, node.x ?? 450)), y: Math.max(25, Math.min(535, node.y ?? 280)) })), edges: edges.flatMap(edge => { const source = byId.get(edge.source); const target = byId.get(edge.target); return source && target ? [{ ...edge, source, target }] : [] }) }
+    return { nodes: positioned.map(node => ({ ...node, x: Math.max(25, Math.min(875, node.x ?? 450)), y: Math.max(25, Math.min(535, node.y ?? 280)) })), edges: closedEdges.flatMap(edge => { const source = byId.get(edge.source); const target = byId.get(edge.target); return source && target ? [{ ...edge, source, target }] : [] }) }
   }, [nodes, edges])
 }
 function nodeLabel(node: GraphNode) { const p = node.properties; return String(p.article_section ?? p.law_name ?? p.indicator ?? p.law ?? p.official_domain ?? node.id).slice(0, 60) }

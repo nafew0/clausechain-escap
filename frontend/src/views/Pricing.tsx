@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { Check, LoaderCircle } from 'lucide-react'
 import Link from 'next/link'
-import { useRouter, useSearchParams, usePathname } from 'next/navigation'
+import { useSearchParams, usePathname } from 'next/navigation'
 
 import PlanBadge from '@/components/subscription/PlanBadge'
 import { Badge } from '@/components/ui/badge'
@@ -70,7 +70,6 @@ function getPricingDetails(plan: Record<string, unknown>, { yearlyBilling, isBan
 export default function Pricing() {
   const { user, isAuthenticated } = useAuth()
   const { toast } = useToast()
-  const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const searchParamString = searchParams?.toString() ?? ''
@@ -109,8 +108,8 @@ export default function Pricing() {
       variant: 'warning',
     })
     nextParams.delete('canceled')
-    router.replace(`${pathname ?? ''}?${nextParams.toString()}`)
-  }, [searchParamString, router, pathname, toast])
+    window.history.replaceState(null, '', `${pathname ?? ''}?${nextParams.toString()}`)
+  }, [searchParamString, pathname, toast])
 
   const currentPlanSlug = user?.current_plan?.slug ?? 'free'
   const selectedBillingCycle = yearlyBilling ? 'yearly' : 'monthly'

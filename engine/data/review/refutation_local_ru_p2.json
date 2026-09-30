@@ -1,0 +1,450 @@
+[
+ {
+  "indicator": "P2-I1",
+  "law": "Government Resolution No. 1478 of 22.08.2022 Requirements fo",
+  "article": "Art. 5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively excludes foreign software not in the Russian or EAEU registries from procurement for Critical Information Infrastructure (CII). This fits the P2-I1 legal test for excluding foreign-origin goods/software from a specific category of public procurement. It is not merely an enabling clause, nor is it a local-content rule for the commercial market (Pillar 10.3) or a data residency rule (Pillar 6), as it directly conditions bid eligibility on registry inclusion."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's positive cues include 'prohibition on the procurement of foreign software' and 'restrictions on admission of goods of foreign origin for state procurement'. The cited text mandates that software used by state bodies on CII objects 'must be included' in specific registries, effectively barring non-registered foreign software. This constitutes a measure excluding foreign firms/goods under specific circumstances (CII sector), supporting a score of 1 or 0.5 depending on interpretation o"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that software used by state authorities and specific customers on CII objects 'must be included' (должно быть включено) in the Russian or EAEU registries. This is a mandatory requirement ('must'), not permissive. The context confirms this applies to procurement under the specified Federal Law. The text explicitly establishes a condition for procurement that excludes software not meeting the registry requirement, which includes most foreign software not registered in these s"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I1",
+  "law": "Government Resolution No. 1478 of 22.08.2022 Requirements fo",
+  "article": "Art. 10",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is not a mere enabling clause; it is an operative enforcement mechanism. It lists specific grounds (items 'g' and 'd') for a commission to *reject* a procurement approval if the quantity of foreign software exceeds the transition plan or if the justification for the 'ban on foreign software' is insufficient. This creates a de facto exclusion of foreign software from CII procurement unless strict conditions are met, which aligns with the legal test for 'operatively excludes foreign "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I1 scores '1' for 'Any measure excluding foreign firms under any circumstances (incl. 'foreign only if nationals cannot supply')'. The text explicitly references a 'ban on admission of software originating from foreign states' (запрет на допуск программного обеспечения, происходящего из иностранных государств) and requires justification for the 'impossibility of complying with the ban' (невозможности соблюдения запрета). This matches the positive cue 'prohibition on the procure"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states that a ground for refusal is the 'inconsistency of the justification of the impossibility of complying with the ban on admission of software originating from foreign states' (item 'd'). It also cites the specific government resolution (No. 1236) that establishes this ban. The text does not merely empower a body to restrict; it defines the conditions under which a procurement involving foreign software will be *rejected* by the approval commission. Therefore, the text e"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I1",
+  "law": "Government Resolution No. 1875 of 23.12.2024 On measures to ",
+  "article": "Art. 5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is an operative exception to a ban, not a mere enabling clause. It defines the specific conditions (absence of domestic production) under which the ban in Art. 1 does not apply. This fits the P2-I1 legal test for 'foreign only if nationals cannot supply' regimes. The sectoral nature (Annexes 1 & 2) is explicitly covered by the rubric's scope ('a category of goods/services'). No legal-function defect is found."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scoring for '1' includes measures excluding foreign firms under any circumstances, including 'foreign only if nationals cannot supply'. The snippet evidences this exact regime for listed goods. The G6 WARN regarding modality ('may' vs 'shall') is a false positive in this context: the text states the ban 'may not be applied' (i.e., is lifted) only when the condition is met. This confirms the default state is a ban (exclusion), which is the core of P2-I1. The mapping is consistent with "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states: 'The ban... may not be applied... in the following cases: a) absence of production... in the Russian Federation...'. This textually establishes that the default is a ban on foreign goods (for the listed items) and that foreign procurement is permitted only upon proof of domestic absence. This directly supports the rationale that it maps to P2-I1 as a 'foreign only if nationals cannot supply' regime. The text does not support a reading of open market access."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I1",
+  "law": "Government Resolution No. 1875 of 23.12.2024 On measures to ",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is an operative exclusion, not a mere enabling clause. It explicitly establishes a 'ban' (запрет) on the procurement of foreign-origin goods and services for state/municipal needs and the defense order, and a 'restriction' (ограничение) for other categories. This meets the legal test for P2-I1, which requires the provision to operatively exclude foreign suppliers. The presence of a 'preference' clause for Russian goods does not negate the exclusionary nature of the ban/restriction "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the scoring rubric. The text contains a 'ban' on foreign goods for a specific list (Appendix 1) and the entire defense sector, and a 'restriction' for another list (Appendix 2). Under the rubric, a measure excluding foreign firms under any circumstances (including category-specific bans) scores 1. The rationale correctly identifies that this operatively bars foreign suppliers for specific categories and the defense sector, which fits the '1' score criteria. The 'preferenc"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text explicitly states 'запрет закупок' (ban on procurement) of goods originating from foreign states and works/services performed by foreign persons for the lists in Appendix 1 and the state defense order. It also states 'ограничение закупок' (restriction on procurement) for Appendix 2. The text does not merely empower a body to restrict; it establishes the restriction/ban directly. The G6 WARN regarding modality is a false positive; 'Установить... запрет' (Establish... a ban) "
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I1",
+  "law": "Presidential Decree No. 166 of 30.03.2022 On measures to ens",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively restricts procurement of foreign software for Critical Information Infrastructure (CII) entities. While it applies to entities under 223-FZ (specific legal entities) rather than all state procurement under 44-FZ, the rubric explicitly accepts exclusions for 'a category of goods/services' or 'a threshold band'. The restriction is not merely an enabling clause but a substantive ban subject to a specific regulatory exception (approval), which fits the 'foreign only if... e"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the scoring rubric. The provision excludes foreign software (a specific category of goods/services) for a defined sector (CII). Under the scoring rules, a measure excluding a specific category or group of foreign firms/goods scores 0.5 or 1 depending on breadth. Here, it is a sectoral ban on foreign software, which is a concrete measure excluding foreign-origin goods. It is not a 'legal basis empowering exclusion' (score 0) because it directly prohibits the act without ap"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'не могут осуществлять закупки иностранного программного обеспечения... без согласования' (cannot carry out procurement of foreign software... without coordination/approval). This is a mandatory prohibition on unapproved procurement, not a permissive 'may'. The G6 WARN regarding modality is a false positive; 'не могут... без' is a standard Russian legal construction for a mandatory requirement with an exception. The text clearly establishes that foreign software procurement is ba"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I2",
+  "law": "Civil Code of the Russian Federation Part Four No. 230-FZ of",
+  "article": "Art. 1240.1(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly vests exclusive IP rights (including patents and software) in the state when created under government contracts funded by the budget, particularly for public services or functions. This constitutes a mandatory transfer of IP as a condition of the contract's performance/subject matter, fitting the legal function of P2-I2. It is not merely a permissive option or a confidentiality duty."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '1' for 'Requirement to surrender patents / source code / trade secrets (incl. escrow) as a tender condition.' The text mandates that IP rights 'belong to' (vest in) the Federation/Subject/Municipality under specific conditions (e.g., necessary for public services). This is a direct statutory requirement for the transfer of exclusive IP rights to the government, aligning with the positive cue 'intellectual property rights shall vest in the government' and the scoring criteria f"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states: 'Право на получение патента и исключительное право... принадлежат соответственно Российской Федерации...' (The right to obtain a patent and the exclusive right... belong to the Russian Federation...). This is a declarative statement of ownership transfer, not a permissive 'may'. The G6 warning regarding modality is incorrect; the text uses 'принадлежат' (belong to), which is a mandatory legal attribution, not a discretionary choice. The text clearly establishes the state's"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I2",
+  "law": "Civil Code of the Russian Federation Part Four No. 230-FZ of",
+  "article": "Art. 1240.1(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly vests exclusive IP rights in the Russian Federation for results created under government contracts for defense and security. This constitutes a mandatory transfer of exclusive IP as a condition of performing the contract, which aligns with the legal test for P2-I2. The sectoral nature (defense) does not exclude it from the indicator's scope, as the rubric does not limit P2-I2 to non-defense sectors."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text matches the positive cue 'intellectual property rights shall vest in the government' (translated from 'принадлежат Российской Федерации'). The scoring rubric assigns '1' for requirements to surrender/transfer exclusive IP as a tender/contract condition. Since the text mandates that IP belongs to the state for specific government contracts, it satisfies the criteria for a score of 1. The exclusion for 'optional or negotiated terms' does not apply because the default rule is state ownersh"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet states: 'The right to obtain a patent and the exclusive right to the result of intellectual activity... belong to the Russian Federation.' This is a declarative statement of ownership transfer. The context confirms this applies to results created under government contracts. The text does not merely permit but mandates this vesting ('belong to'), supporting the rationale that it is a condition of the contract performance. The G6 warning regarding modality is unfounded as 'belong"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I2",
+  "law": "Federal Law No. 44-FZ of 05.04.2013 On the Contract System i",
+  "article": "Art. 110.2(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that contracts for design documentation and engineering surveys 'must contain a condition' (должен содержать условие) whereby exclusive rights vest in the state. This constitutes a mandatory transfer of exclusive IP rights as a condition of the procurement contract, satisfying the legal function of P2-I2. The sectoral scope (construction/engineering) is not a defect as the rubric does not exclude sectoral procurement rules, and the transfer is not optional or me"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text aligns with the positive cue 'intellectual property rights shall vest in the government' (specifically 'exclusive rights... belong to the Russian Federation...'). The scoring rubric assigns '1' for a requirement to surrender exclusive IP rights as a tender condition. The provision makes this transfer a mandatory condition of the contract ('must contain a condition'), which fits the '1' score. It is not a generic confidentiality duty or a market-wide rule, but a specific procurement cont"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'The contract... must contain a condition, according to which from the date of acceptance... exclusive rights to the results of such works belong to the Russian Federation...'. This textually establishes a mandatory transfer of exclusive rights (IP) to the state entity acting as the customer. The modality is mandatory ('must contain'), not permissive. The G6 WARN regarding modality is incorrect because the Russian text 'должен содержать' is a strong obligation, not "
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Federal Law No. 223-FZ of 18.07.2011 On Procurement of Goods",
+  "article": "Art. 3.1(6)(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is operative, not merely empowering. It specifies a concrete 15% price adjustment mechanism for goods of Russian origin, which constitutes a direct legal limitation in procurement bidding. The conditionality (Government establishment of the preference) does not render it a mere legal basis, as the mechanism itself is defined and ready for application, fitting the 'operative' requirement of the rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the scoring rubric. The provision imposes a price preference/margin triggered by nationality/origin (Russian origin). According to the rubric, a measure directly discriminating against foreign bidders (or applying a preference based on origin) scores 1. The snippet explicitly details the 15% reduction/increase, which is a clear 'price preference' and 'evaluation bonus' as defined in the legal_test."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a 15% price adjustment for participants offering goods of 'Russian origin' (товар только российского происхождения). This text directly supports the rationale of a price preference triggered by origin. The context confirms this applies during the evaluation of bids ('при рассмотрении, оценке, сопоставлении заявок'), confirming it is a bidding limitation rather than a post-contractual or commercial market rule."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Federal Law No. 223-FZ of 18.07.2011 On Procurement of Goods",
+  "article": "Art. 4(3.3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory planning requirement ('must contain') for specific government customers to list innovative/high-tech products to be purchased from SMEs. This constitutes an operative set-aside or quota mechanism in public procurement bidding, which falls squarely within the scope of P2-I3. It is not a mere empowerment clause, nor is it a commercial market rule (Pillar 10.3), as it applies to government procurement plans."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines a score of 0.5 for measures applied to all bidders, such as SME set-asides. The text explicitly requires procurement from 'subjects of small and medium entrepreneurship' (SMEs). This matches the positive cue 'reserved for micro and small enterprises' and the legal test for a set-aside mechanism. The mapping correctly identifies this as a limitation/preference in procurement bidding."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states the procurement plan 'must contain a list of innovative... products purchased from subjects of small and medium entrepreneurship'. This is a mandatory directive for specific customers to source from SMEs. It does not merely empower a body to set preferences but requires the inclusion of SME-sourced items in the plan, thereby establishing a de facto set-aside or quota for SMEs in these specific procurements."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Federal Law No. 44-FZ of 05.04.2013 On the Contract System i",
+  "article": "Art. 28(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is an operative legal norm within the Federal Law on Procurement (44-FZ) that explicitly modifies the contract price by 15% for specific entities. It is not merely a sectoral policy statement but a binding rule in the public procurement code. The 'sectoral' nature (penal system) does not negate the legal function of imposing a price preference in government bidding, which is the core of P2-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I3 asks for 'quotas, set-asides, price preferences or margins... triggered by... other status'. The text provides a 15% price increase (margin) for 'учреждением или предприятием уголовно-исполнительной системы' (penal system entities). This fits the 'other status' trigger. The scoring guide allows 0.5 for measures applied to specific groups/statuses (like SMEs) or 1 for discriminatory measures. This is a clear operative preference, not just an empowerment clause. The mapping is"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet states: 'цена контракта... увеличивается на пятнадцать процентов' (the contract price... is increased by fifteen percent). This is a direct, operative instruction to adjust the price in favor of the specified bidder status. The context confirms this applies to 'участник закупки, являющимся учреждением или предприятием уголовно-исполнительной системы'. The text establishes a concrete financial advantage (price margin) in the procurement process, which is the exact subject of the"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Federal Law No. 44-FZ of 05.04.2013 On the Contract System i",
+  "article": "Art. 27(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively grants preferences to specific categories (SMEs, disabled organizations, etc.) in public procurement, which aligns with the legal test for P2-I3. It is not merely an empowering clause but a directive to apply preferences, satisfying the requirement for an operative limitation/preference."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly lists 'subjects of small entrepreneurship' (SMEs) and other status-based categories receiving preferences. This matches the positive cue 'reserved for micro and small enterprises' and the scoring criterion for measures applied to specific statuses (0.5 or 1 depending on discrimination, but clearly a valid evidence row for the indicator's presence)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'Preferences... are provided... to: ... subjects of small entrepreneurship'. This directly establishes the existence of a preference mechanism triggered by bidder status (SME), which is the core subject of P2-I3. The context confirms these are legal preferences within the procurement framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Government Resolution No. 1352 of 11.12.2014 On the specific",
+  "article": "Art. 5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory minimum quota (25%) for procurement from SMEs, which is an operative limitation on bidding eligibility based on SME status. This fits the P2-I3 definition of a set-aside or quota triggered by status. It is not an outright exclusion (P2-I1) as it applies to a portion of contracts, nor is it a commercial market rule (Pillar 10.3) as it governs government procurement by legal entities."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric explicitly identifies 'reserved for micro and small enterprises' and 'SME set-aside' as positive cues. The text establishes a minimum local-content/quota requirement (25%) applied to bidders with SME status. Under the scoring rubric, a measure applied to a specific status group (SME) that is not directly discriminatory against foreign bidders by nationality (but rather by size/status) typically scores 0.5 or 1 depending on the specific discrimination analysis, but the mapping to the i"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'The annual volume of procurement from small and medium-sized enterprises is established at a level of at least 25 percent...'. This textually establishes a mandatory minimum threshold (quota) for procurement from SMEs. The context confirms this is a binding requirement for the 'customers' (government entities) to meet this volume. The text does not merely empower a body to set preferences but imposes a specific numerical floor, satisfying the 'operative' requiremen"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Government Resolution No. 1352 of 11.12.2014 On the specific",
+  "article": "Art. 2",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory minimum volume (9% and 5%) of procurement contracts to be awarded to SMEs. This constitutes a 'set-aside' or quota triggered by SME status, which is explicitly listed in the P2-I3 legal test as an operative limitation in public procurement bidding. It is not a mere empowerment clause, nor is it an outright exclusion (P2-I1), as it sets a floor for SME participation rather than banning non-SMEs entirely."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines a score of 0.5 for measures applied to all bidders or specific statuses like SME set-asides. The text provides a concrete, operative quota ('not less than 9 percent') for SMEs, fitting the 'reserved for micro and small enterprises' positive cue. It is not a neutral reference price (0) nor a discriminatory measure against foreign bidders specifically (1), but a status-based limitation. The mapping correctly identifies this as a P2-I3 indicator instance."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that the annual volume of procurements by certain legal entities from SMEs is established at 'not less than 9 percent' (не менее чем 9 процентов). This is a binding quantitative threshold (quota) for a specific bidder category (SMEs). The text does not merely empower a body to set preferences but directly establishes the minimum percentage, satisfying the requirement for an operative provision evidencing a limitation in bidding."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Government Resolution No. 1875 of 23.12.2024 On measures to ",
+  "article": "Art. 4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively imposes a 'preference' (advantage) for bids containing only Russian-origin goods, which is a concrete legal function of a price/evaluation preference in procurement. It is not merely an empowerment clause or a generic disclosure rule. The scope is correctly identified as government procurement, not commercial market rules."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I3 scores 1 for measures directly discriminating against foreign bidders based on origin. The text explicitly grants a preference to 'Russian origin' goods, which discriminates against non-Russian (foreign) bidders. This fits the 'score 1' criteria perfectly. The hunt_in is empty, but the positive cues (e.g., 'price preference for goods of domestic origin') are strongly matched by the text 'товара российского происхождения... применяется... преимущество'."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that for bids containing 'only Russian origin' goods, the 'preference' (advantage) provided in point 1 applies. This is a direct textual establishment of a discriminatory advantage based on origin. The context confirms this is part of a resolution on national treatment in procurement. The text does not merely empower a body but specifies the condition under which the preference applies."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Government Resolution No. 1875 of 23.12.2024 On measures to ",
+  "article": "Art. 7",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The provision regulates the methodology for determining the initial maximum price (benchmarking) using the 'comparable market prices' method, specifically restricting the pool of reference goods to those in Appendices 1 and 2. It does not impose a price preference, margin, quota, set-aside, or minimum local-content requirement on the bid evaluation itself. P2-I3 requires an operative limitation in bidding (e.g., a bonus or threshold), not a restriction on the administrative calculation of the bu"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P2-I3 explicitly looks for 'price preference/margin, evaluation bonus, quota or set-aside, or a minimum local-content requirement'. The cited text (Art. 7, subpara v) addresses 'features of determining the initial (maximum) price' and 'identical and homogeneous goods' for the purpose of market analysis. It does not contain any operative clause granting a preference to domestic/EAEU bidders or penalizing foreign ones in the scoring or award phase. Therefore, it fails the legal_test"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the provision 'imposes a discriminatory pricing mechanism that disadvantages non-EAEU bidders by excluding their prices from the reference calculation.' However, the text states that when determining identity/homogeneity for the *comparable market price method*, one must account for goods in Appendices 1/2. It does not state that non-EAEU bidders are excluded from bidding, nor does it state that their bids receive a lower score. It merely defines the scope of goods considere"
+   }
+  ]
+ }
+]

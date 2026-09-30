@@ -1,0 +1,170 @@
+jurisdiction: TL
+source_format: pdf        # Jornal da República (JR) PDFs on mj.gov.tl -> extractors/pdf_act.py; native Portuguese text layers
+name: Timor-Leste
+un_name: Timor-Leste
+languages: { primary: pt, supported: [pt, en, tet] }
+section_grammars: [portuguese, article]   # "Artigo N.º" (JR) + "Article N" (ATISA English text); "Section N" (UNTAET/Constitution EN) is the default grammar
+citation_template: "Art. {label}"
+
+whitelist_source: data/official_domains.json
+official_sources:
+  # ranks follow the sg/my convention: 100 statute DB / gazette, 90 treaty register, 60 regulator
+  - { name: Jornal da República (Ministry of Justice), domain: mj.gov.tl, source_type: official_gazette, authority_rank: 100 }
+  - { name: Government of Timor-Leste, domain: timor-leste.gov.tl, source_type: ministry, authority_rank: 70 }
+  - { name: National Parliament, domain: parlamento.tl, source_type: official_gazette, authority_rank: 90 }
+  - { name: Autoridade Nacional de Comunicações (ANC), domain: anc.tl, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Banco Central de Timor-Leste, domain: bancocentral.tl, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Pillar 2 procurement source, domain: docs.wto.org, source_type: official_statute_database, authority_rank: 90 }
+
+portal_search:
+  engine: mj.gov.tl/jornal (JR Série I issue PDFs by year) + public/docs/2002_2005 per-diploma PDFs
+  method: listing_scan
+  notes: >-
+    A JR Série I issue bundles several diplomas in one PDF: seeds carry page_range (and a #page=N
+    fragment so each instrument keeps its own manifest entry). Approving laws print their own
+    "Artigo 1.º" before the annexed code (Mining Code, Insurance Law, CPP): page_range starts at the
+    annex. 2002-2005 diplomas are single-diploma PDFs; the DL 13/2005 CPP gazette original is a scan
+    (the court's bilingual Tetum/Portuguese edition at /jornal/files/Codigo_Processo_Penal.pdf is not used).
+
+citation_patterns:
+  section: ["Art. {n}", "Artigo {n}.º", "s. {n}"]
+  paragraph_required: false
+connector: generic_seeds
+legal_fit_reads_translation: true   # G7 patterns are English; also read the mapper's English account
+notes:
+  - "NO GOLD: the ESCAP Round-2 database has no Timor-Leste sheet, so every finding is NEW and every score is a first coding."
+  - "ABSENCE-HEAVY ECONOMY: no personal-data law, no cybersecurity law, no cybercrime law and no DPO rule is in force (P7-I1, P7-I2, P7-I4 absences). The Constitution s. 38 is the governing instrument cited by absence rows; the draft Personal Data Protection Law and the cybersecurity legislative-authorisation bill are watch items, not evidence."
+  - "Polarity (research 28-Sep-2026, status Aug 2026): P6-I1 0, P6-I2 1 (two+ sectoral copy/records rules: UNTAET 2000/8 s. 27.2 banking, Petroleum Law art. 25(2), Mining Code art. 55(1)(c) — insurance art. 26 weaker), P6-I3 0 (DL 12/2024 art. 8(2)(b) makes server location irrelevant), P6-I4 0, P6-I5 0 (ATISA FS Annex Art. 9(1)(a) — PANEL DECISION: alternative 1 if only horizontal/e-commerce commitments count)."
+  - "Lei n.º 10/2026 (financial system, JR 12-Aug-2026) enters into force one year after publication and then revokes UNTAET 2000/8 — seeded as not_yet_effective so it stays a lead, not evidence."
+  - "Commercial Companies Law (Lei 10/2017) art. 87(3) corporate books at the registered office: research recommends not scoring — not seeded."
+  - "P7: I3 1 (Lei 17/2011 AML art. 15(1)(a) five years; Decreto do Governo 9/2008 art. 6(1) five-year subscriber file), I5 split: CPP art. 56 warrantless urgent searches vs arts. 169, 177 court-gated. The P7 report's I4 row (Census Law 5/2010, 'maximum retention') applies the wrong rubric — P7-I4 is DPO/DPIA — and is not seeded."
+  - "[GOV-ONLY] DL 16/2014 FIU cooperation, DL 29/2017 TIC Timor, DL 4/2023 statistics; [OUT-OF-SCOPE-network] DL 17/2025 submarine cable company — recorded by research, not seeded."
+  - "page_range must start on the instrument's own first article page: a range that begins on the previous diploma's tail (JR 2008 N.º 14 p.4 = Lei 6/2008 arts. 21-26) makes the monotonic filter reject the real articles. Decreto do Governo 9/2008 = pp. 5-7; its art. 10 unit also carries the trailing Resolução 8/2008 text on p.7."
+  - "Older JR issues print ordinals as a letter ('Artigo 10.o'); the portuguese grammar accepts º ° ª o."
+  - "Changing a seed URL (e.g. its #page= fragment) leaves the old key in data/raw/tl/seeds_manifest.json; remove it by hand — the builder processes every ok manifest entry."
+open_verification:
+  - "ATISA: confirm it was among the instruments deposited on 24 Nov 2025 (AEM-58 says 51 ASEAN economic agreements, list unpublished)"
+  - "DL 13/2005 CPP: scanned gazette original -> Vision OCR; check art. 56 / 169 / 177 labels after the build (approving decree's own articles precede the code)"
+  - "Lei 17/2011 as amended by Lei 5/2013 — the 2013 amendment is not seeded; confirm art. 15 unchanged"
+ocr: { provider: hybrid_script, route: vision-first, language_hints: [pt] }
+known_index: data/known_index_round2.json
+seeds: data/seeds_r2.json
+rdtii_bindings: { pillars: [2, 6, 7] }
+
+anchor_instruments:
+  - "Constitution (2002) s. 38 — personal-data protection right with 'the law shall determine' (no implementing law yet: P7-I1 absence)"
+  - "Decreto-Lei n.º 12/2024 e-commerce and e-signatures — art. 8(2)(b) server location irrelevant to place of business (P6 negative evidence)"
+  - "Decreto-Lei n.º 15/2012 telecommunications (amended DL 31/2024) — art. 49 subscriber data consent/security (P6-I2/I3 score 0; sectoral security, not a cyber framework)"
+
+hunt_instruments:
+  P6-I2:
+    - "UNTAET Regulation 2000/8 s. 27.2 — credit documentation at the head office in East Timor"
+    - "Lei 13/2005 art. 25(2) — Ministry may require originals of petroleum data kept in Timor-Leste"
+    - "Lei 12/2021 Mining Code art. 55(1)(c), art. 110(1) — originals of mining records in Timor-Leste"
+    - "Lei 6/2005 insurance art. 26 — records at the insurer's premises"
+  P6-I5:
+    - "ATISA Annex on Financial Services Art. 9(1)(a); Annex on Telecommunication Services Art. 3(3)"
+  P7-I3:
+    - "Lei 17/2011 art. 15(1)(a) — customer identification copies at least five years"
+    - "Decreto do Governo 9/2008 art. 6(1) — subscriber file at least five years; art. 7(4) traffic data one year"
+    - "ANC SIM registration guidelines §5.1-5.5"
+  P7-I5:
+    - "CPP (DL 13/2005) art. 56 warrantless urgent searches (score 1) vs art. 169(1) searches authorised by the judge and art. 177(1) interception by judicial decision (score 0)"
+
+# Provisional indicator scores from the P6/P7 deep-research reports (no ESCAP master exists for TL).
+research_scores: { P6-I1: 0, P6-I2: 1, P6-I3: 0, P6-I4: 0, P6-I5: 0, P7-I3: 1, P7-I5: 1, P2-I1: 0, P2-I2: 0, P2-I3: 1, P2-I4: 1 }
+
+governing_instruments:
+  default: { law: "Constitution of the Democratic Republic of Timor-Leste (2002)", url: "https://timor-leste.gov.tl/wp-content/uploads/2010/03/Constitution_RDTL_ENG.pdf" }
+  P6-I1:   { law: "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas", url: "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf" }
+  P6-I3:   { law: "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas", url: "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf" }
+  P6-I4:   { law: "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas", url: "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf" }
+  P7-I2:   { law: "Decreto-Lei n.º 15/2012 Regulamentação do Sector das Telecomunicações", url: "https://www.mj.gov.tl/jornal/public/docs/2012/serie_1/serie1_no12.pdf" }
+
+status_assertions:
+  "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervision":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/lawsTL/UNTAET-Law/Regulations%20English/Reg2000-08.pdf"
+    fact_text: "JR archive of UNTAET law; in force until Lei n.º 10/2026 art. 285 revokes it (Lei 10/2026 enters into force one year after its 12 Aug 2026 publication)."
+  "Lei n.º 13/2005 Lei das Actividades Petrolíferas (Petroleum Activities Law)":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2002_2005/leis_parlamento_nacional/13_2005.pdf"
+    fact_text: "Jornal da República publication; in force (research 28-Sep-2026)."
+  "Lei n.º 12/2021 Código Mineiro (Mining Code)":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2021/serie_1/SERIE_I_NO_27.pdf"
+    fact_text: "Jornal da República Série I N.º 27, 30 June 2021; in force (research 28-Sep-2026)."
+  "Lei n.º 6/2005 Regime do Licenciamento, Supervisão e Regulação de Companhias de Seguros (Insurance Law)":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2002_2005/leis_parlamento_nacional/6_2005.pdf"
+    fact_text: "Jornal da República publication; in force (research 28-Sep-2026)."
+  "Lei n.º 10/2026 Regime geral do sistema financeiro e da atividade bancária":
+    status: not_yet_effective
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_32.pdf"
+    fact_text: "JR Série I N.º 32, 12 Aug 2026; art. 288(1): enters into force one year after publication."
+    effective_date: "2027-08-12"
+  "Constitution of the Democratic Republic of Timor-Leste (2002)":
+    status: in_force
+    fact_url: "https://timor-leste.gov.tl/wp-content/uploads/2010/03/Constitution_RDTL_ENG.pdf"
+    fact_text: "Official Government of Timor-Leste English text of the Constitution (in force since 20 May 2002)."
+    effective_date: "2002-05-20"
+  "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf"
+    fact_text: "Jornal da República Série I N.º 7, 13 Feb 2024; in force (research 28-Sep-2026)."
+  "Decreto-Lei n.º 15/2012 Regulamentação do Sector das Telecomunicações":
+    status: in_force
+    fact_url: "https://anc.tl/legislation/index.html"
+    fact_text: "ANC legislation register lists DL 15/2012 as the operative telecom law, first amended by DL 31/2024."
+  "Decreto-Lei n.º 31/2024 Primeira alteração ao Decreto-Lei n.º 15/2012 (Telecomunicações)":
+    status: in_force
+    fact_url: "https://anc.tl/media/2025/01/Decreto-Lei-N.31-2024-15-2012-SERIE_I_NO_36_C-ANC.pdf"
+    fact_text: "ANC publication of the JR text (Série I N.º 36 C); in force."
+  "Decreto do Governo n.º 9/2008 Prestação de serviços de telecomunicações na rede móvel":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2008/serie_1/serie1_no14.pdf"
+    fact_text: "Jornal da República Série I N.º 14, 16 Apr 2008; applied by the ANC SIM registration guidelines (2020)."
+  "ANC Guidelines on the Registration of SIM Cards for Prepaid Mobile Services":
+    status: in_force
+    fact_url: "https://anc.tl/media/2020/06/ANC-Guidelines-on-the-Registration-of-SIM-Cards-for-Prepaid-Mobile-Services.pdf"
+    fact_text: "ANC official guidelines (June 2020), current on the regulator's site."
+  "Lei n.º 17/2011 Regime Jurídico da Prevenção e do Combate ao Branqueamento de Capitais e ao Financiamento do Terrorismo":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2011/serie_1/SERIE1_NO_46.pdf"
+    fact_text: "Jornal da República Série I N.º 46, 28 Dec 2011; in force as amended by Lei 5/2013."
+  "Decreto-Lei n.º 13/2005 Código de Processo Penal":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2002_2005/decreto_lei_governo/13_2005.pdf"
+    fact_text: "Jornal da República publication of DL 13/2005 approving the CPP (in force January 2006)."
+    effective_date: "2006-01-01"
+  "ASEAN Trade in Services Agreement (ATISA) — Annex on Financial Services and Annex on Telecommunication Services":
+    status: in_force
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_42_A4.pdf"
+    fact_text: "Accession approved by Resolução do Parlamento Nacional n.º 45/2025 (JR Série I N.º 42, 15 Oct 2025); deposited 24 Nov 2025 (instrument list unpublished); transition from 1 Jan 2026."
+    effective_date: "2026-01-01"
+  # Pillar 2 (public procurement), 29 Sep 2026
+  "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Contratos Públicos (Public Procurement and Public Contracts Code)":
+    status: "in_force"
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_33.pdf#page=1"
+    fact_text: "JR Série I N.º 2, 8 Jan 2025; DL 25/2025 (JR N.º 33, 13 Aug 2025) Art. 2 rewrote DL 1/2025 Art. 5 so the Code enters into force 1 Jan 2026; it revokes DL 22/2022 for procedures started from that date (Art. 4)."
+    effective_date: "2026-01-01"
+  "Decreto do Governo n.º 1/2026 Regulamento para a aplicação do Código do Aprovisionamento e dos Contratos Públicos (Anexo I)":
+    status: "in_force"
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_3_B_LOOS.pdf#page=2"
+    fact_text: "Decreto do Governo 1/2026 (JR Série I N.º 3 B, 23 Jan 2026), approved by the Council of Ministers 22 Dec 2025; Art. 7: in force 1 Jan 2026. Anexo I = Regulation."
+    effective_date: "2026-01-01"
+  "Decreto do Governo n.º 1/2026 Visão geral do quadro legal para contratação pública em Timor-Leste (Anexo II)":
+    status: "in_force"
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2026/serie_1/SERIE_I_NO_3_B_LOOS.pdf#page=2"
+    fact_text: "Anexo II of Decreto do Governo 1/2026 (JR Série I N.º 3 B, 23 Jan 2026), approved 22 Dec 2025; decree Art. 7: in force 1 Jan 2026."
+    effective_date: "2026-01-01"
+  "Decreto-Lei n.º 30/2023 Medidas de apoio às micro, pequenas e médias empresas (MSME support measures)":
+    status: "in_force"
+    fact_url: "https://www.mj.gov.tl/jornal/public/docs/2023/serie_1/SERIE%20I%20N.%2020%20NORMAL.pdf#page=93"
+    fact_text: "JR Série I N.º 20, 31 May 2023, pp. 1091-1094; Art. 22: in force the day after publication; no revocation found (research 29-Sep-2026)."
+    effective_date: "2023-06-01"
+  "Report of the Working Party on the Accession of the Democratic Republic of Timor-Leste (WT/ACC/TLS/34)":
+    status: "in_force"
+    fact_url: "https://www.wto.org/english/thewto_e/acc_e/a1_timor_leste_e.htm"
+    fact_text: "Timor-Leste WTO member since 30 Aug 2024; para. 255 GPA commitment binding via the Accession Protocol; GPA observer since 27 Sep 2024, not a party (no offer as of 24 Jun 2026)."
+    effective_date: "2024-08-30"

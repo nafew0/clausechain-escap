@@ -1,0 +1,58 @@
+[
+ {
+  "indicator": "P6-I2",
+  "law": "Companies (Accounts) Rules 2014 (as amended 2022)",
+  "article": "s. 3(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 3(5) performs the relevant legal function: it requires electronic-accounting-record backups to be kept on servers physically located in India periodically. The rule is sectoral, but the rubric accepts a single specific-data storage rule; it is not merely a confidentiality, transfer-ban, or operational-server requirement."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying P6-I2, the backup is a domestic copy and the phrase \"shall be kept in servers physically located in India\" is a positive local-storage cue. Because this is one sectoral/specific-data requirement rather than personal-data or horizontal coverage, it scores 0.5. The rubric expressly permits sectoral evidence and does not require transfer to be prohibited."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that the backup of electronic books of account and other books and papers, including records maintained outside India, \"shall be kept\" on servers physically located in India on a periodic basis. In context, this establishes domestic storage of a backup copy, subject to the text's \"if any\" condition; it does not establish a transfer prohibition or an operational local-server precondition."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "Companies (Management and Administration) Rules 2014",
+  "article": "s. 7(8)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 7(8) performs the relevant storage function: it requires copies of entries in a foreign register to be sent to the registered office in India and a duplicate register to be kept there. This is a domestic-copy requirement, not merely confidentiality, business-transfer, or an operational data-centre requirement. Its conditional application to companies maintaining a foreign register does not defeat the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P6-I2, the rule supplies a single storage requirement for specific corporate register data, warranting score 0.5. The text expressly requires transmission of each entry to India and keeping a duplicate register there, satisfying the local-copy function. Sectoral coverage is permitted by the rubric, and the rule does not need to prohibit transfers. The empty hunt_in does not alter that scoring result."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text says the company shall transmit a copy of every foreign-register entry to its registered office in India and keep there a duplicate register. The surrounding provisions establish that a foreign register may be kept outside India, while section 7(8) requires a domestic duplicate when that regime is used. The text therefore establishes local storage of the duplicate register, but not a general personal-data rule or a transfer ban."
+   }
+  ]
+ }
+]

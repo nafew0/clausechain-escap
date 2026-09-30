@@ -19,7 +19,9 @@ import json
 # previous behavior can never satisfy an incremental rebuild.
 # 2026-07-20.1: shared SG/MY/AU PDF alignment, canonical paragraph context,
 #               proof-span binding and paragraph-closed snippet contract.
-EXTRACTION_VERSION = "2026-07-20.9"
+# 2026-09-27.1: bare "Section N" headings, Indonesian Pasal preamble/catchword guard,
+#               "Clause N" grammar (cl.), proof-span bracket spacing "16 ( 5 )".
+EXTRACTION_VERSION = "2026-09-27.1"
 
 
 def processing_fingerprint(content_sha256: str, source_type: str = "act",

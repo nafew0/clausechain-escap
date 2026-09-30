@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import {
   AlertTriangle,
   CheckCircle2,
@@ -21,11 +21,14 @@ import {
 import { AnimatePresence, LazyMotion, MotionConfig, domAnimation, m } from 'motion/react'
 
 import { useAuth } from '@/contexts/AuthContext'
+import { SnapshotBanner } from '@/components/workspace/SnapshotBanner'
+import { ModePageHeader } from '@/components/workspace/ModePageHeader'
 import { useEngineActions, useLaunchEngineAction, useSubmission } from '@/hooks/workspace'
 import { cn } from '@/lib/utils'
 import type { SubmissionParams, SubmissionRow } from '@/types/workspace'
+import { modeHref } from '@/lib/runMode'
 
-const ECONOMIES = ['', 'Singapore', 'Malaysia', 'Australia']
+const ECONOMIES = ['', 'Singapore', 'Malaysia', 'Australia', 'Thailand', 'India', 'Indonesia', 'Russian Federation', 'Mongolia', 'Lao PDR', 'Timor-Leste']
 const REVIEWS = ['', 'pending', 'approved', 'rejected'] as const
 
 function text(value: unknown, fallback = '—') {
@@ -64,12 +67,11 @@ function readParams(search: URLSearchParams): SubmissionParams {
 }
 
 function SubmissionDrawer({ item, close }: { item: SubmissionRow; close: () => void }) {
-  return <><m.button className="submission-scrim" aria-label="Close row details" onClick={close} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} /><m.aside className="submission-drawer" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', stiffness: 330, damping: 34 }}><header><div><span>PROVENANCE RECORD</span><h2>{text(item.row['Law Name'])}</h2><p>{text(item.row['Article / Section'])} · {text(item.row['Indicator ID'])}</p></div><button onClick={close} aria-label="Close"><X size={18} /></button></header><div className="submission-drawer-body"><section className="submission-quote"><span>Exact exported snippet</span><p>{text(item.row['Verbatim Snippet'])}</p></section><section><h3>Mapping rationale</h3><p>{text(item.row['Mapping Rationale'])}</p></section><dl><div><dt>Match</dt><dd>{item.verification.match_label}</dd></div><div><dt>Source domain</dt><dd>{text(item.verification.source_domain)}</dd></div><div><dt>Page / anchor</dt><dd>{text(item.verification.page_or_anchor)}</dd></div><div><dt>Access date</dt><dd>{text(item.verification.access_date)}</dd></div><div><dt>Status</dt><dd>{text(item.verification.status)}</dd></div><div><dt>Review</dt><dd>{item.review_state.decision ?? 'pending'}</dd></div></dl><section><h3>SHA-256</h3><code className="submission-full-hash">{item.verification.source_sha256}</code></section><section><h3>Deterministic gates</h3><div className="submission-gates">{item.verification.gates.length ? item.verification.gates.map((gate, index) => <span className={String(gate.status) === 'PASS' ? 'pass' : 'fail'} key={index}>{text(gate.gate_id)} · {text(gate.status)}</span>) : <span className="na">No affirmative citation gates</span>}</div></section><div className="submission-drawer-actions"><Link href={`/match/${item.finding_key}`}><FileCheck2 size={15} /> Open Source Match</Link>{item.row['Source URL'] ? <a href={text(item.row['Source URL'])} target="_blank" rel="noreferrer">Official source <ExternalLink size={14} /></a> : null}</div></div></m.aside></>
+  return <><m.button className="submission-scrim" aria-label="Close row details" onClick={close} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} /><m.aside className="submission-drawer" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', stiffness: 330, damping: 34 }}><header><div><span>PROVENANCE RECORD</span><h2>{text(item.row['Law Name'])}</h2><p>{text(item.row['Article / Section'])} · {text(item.row['Indicator ID'])}</p></div><button onClick={close} aria-label="Close"><X size={18} /></button></header><div className="submission-drawer-body"><section className="submission-quote"><span>Exact exported snippet</span><p>{text(item.row['Verbatim Snippet'])}</p></section><section><h3>Mapping rationale</h3><p>{text(item.row['Mapping Rationale'])}</p></section><dl><div><dt>Match</dt><dd>{item.verification.match_label}</dd></div><div><dt>Source domain</dt><dd>{text(item.verification.source_domain)}</dd></div><div><dt>Page / anchor</dt><dd>{text(item.verification.page_or_anchor)}</dd></div><div><dt>Access date</dt><dd>{text(item.verification.access_date)}</dd></div><div><dt>Status</dt><dd>{text(item.verification.status)}</dd></div><div><dt>Review</dt><dd>{item.review_state.decision ?? 'pending'}</dd></div></dl><section><h3>SHA-256</h3><code className="submission-full-hash">{item.verification.source_sha256}</code></section><section><h3>Deterministic gates</h3><div className="submission-gates">{item.verification.gates.length ? item.verification.gates.map((gate, index) => <span className={String(gate.status) === 'PASS' ? 'pass' : 'fail'} key={index}>{text(gate.gate_id)} · {text(gate.status)}</span>) : <span className="na">No affirmative citation gates</span>}</div></section><div className="submission-drawer-actions"><Link href={modeHref(`/match/${item.finding_key}`)}><FileCheck2 size={15} /> Open Source Match</Link>{item.row['Source URL'] ? <a href={text(item.row['Source URL'])} target="_blank" rel="noreferrer">Official source <ExternalLink size={14} /></a> : null}</div></div></m.aside></>
 }
 
 export default function SubmissionExplorer() {
   const search = useSearchParams()
-  const router = useRouter()
   const pathname = usePathname()
   const params = useMemo(() => readParams(search), [search])
   const query = useSubmission(params)
@@ -91,14 +93,21 @@ export default function SubmissionExplorer() {
       if (value === undefined || value === '') next.delete(key)
       else next.set(key, String(value))
     }
-    router.replace(`${pathname}?${next.toString()}`, { scroll: false })
+    // Same-page searchParams update: native History API (router.replace
+    // silently no-ops for query-only changes in production builds).
+    window.history.replaceState(null, '', `${pathname}?${next.toString()}`)
   }
   const replay = () => {
     if (!window.confirm('Queue deterministic submission replay from current named approvals? This does not approve any pending row.')) return
     launch.mutate({ kind: 'replay' })
   }
 
-  return <LazyMotion features={domAnimation}><MotionConfig reducedMotion="user"><div className="submission-explorer"><header className="submission-header"><div><span><FileCheck2 size={14} /> Aggregated evidence · all economies and pillars</span><h1>Consolidated RDTII dataset</h1><p>Final artifacts are produced only by deterministic engine replay—not by this table.</p>{query.data?.release ? <em className="submission-release-state">Release {query.data.release.state}</em> : null}</div>{user?.is_superuser ? <button onClick={replay} disabled={launch.isPending || ['queued', 'running'].includes(latestReplay?.status ?? '')}><Play size={15} /> Run approval replay</button> : null}</header>
+  return <LazyMotion features={domAnimation}><MotionConfig reducedMotion="user"><div className="cc-page submission-explorer"><ModePageHeader
+      eyebrow={<><span className="review-eyebrow"><FileCheck2 size={14} /> Aggregated evidence · all economies and pillars</span><SnapshotBanner /></>}
+      title="Consolidated RDTII dataset"
+      description="Final artifacts are produced only by deterministic engine replay—not by this table."
+      actions={user?.is_superuser ? <button className="submission-replay" onClick={replay} disabled={launch.isPending || ['queued', 'running'].includes(latestReplay?.status ?? '')}><Play size={15} /> Run approval replay</button> : null}
+    >{query.data?.release ? <em className="submission-release-state">Release {query.data.release.state}</em> : null}</ModePageHeader>
     {query.data?.final_artifacts.available ? <section className="submission-final-ready"><CheckCircle2 size={19} /><div><strong>Replayed artifacts available · {query.data.final_artifacts.rows} approved rows</strong><span>CSV {query.data.final_artifacts.csv_sha256?.slice(0, 12)}… · JSON {query.data.final_artifacts.json_sha256?.slice(0, 12)}…</span></div></section> : <section className="submission-final-pending"><AlertTriangle size={19} /><div><strong>No replayed final artifact is available</strong><span>The table below contains candidates; pending or rejected rows are not silently exported.</span></div></section>}
     {latestReplay ? <section className={cn('submission-replay-state', `state-${latestReplay.status}`)}>{latestReplay.status === 'failed' ? <XCircle size={18} /> : latestReplay.status === 'succeeded' ? <CheckCircle2 size={18} /> : <LoaderCircle size={18} />}<div><strong>Replay {latestReplay.status}</strong><span>{latestReplay.error || latestReplay.stdout || 'Waiting for the dedicated engine worker.'}</span></div></section> : null}
     <section className="submission-filters"><label className="submission-search"><Search size={15} /><input value={draftSearch} onChange={(event) => setDraftSearch(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') update({ q: draftSearch, page: 1 }) }} placeholder="Law, citation, indicator or quote…" /><button onClick={() => update({ q: draftSearch, page: 1 })}>Search</button></label><label><Filter size={14} /><select value={params.economy ?? ''} onChange={(event) => update({ economy: event.target.value, page: 1 })}>{ECONOMIES.map((value) => <option value={value} key={value}>{value || 'All economies'}</option>)}</select></label><label><select value={params.pillar ?? ''} onChange={(event) => update({ pillar: event.target.value, page: 1 })}><option value="">All pillars</option><option value="6">Pillar 6</option><option value="7">Pillar 7</option></select></label><label><select value={params.tag ?? ''} onChange={(event) => update({ tag: event.target.value, page: 1 })}><option value="">NEW + KNOWN</option><option value="NEW">NEW</option><option value="KNOWN">KNOWN</option></select></label><label><select value={params.review ?? ''} onChange={(event) => update({ review: event.target.value, page: 1 })}>{REVIEWS.map((value) => <option value={value} key={value}>{value || 'All review states'}</option>)}</select></label></section>

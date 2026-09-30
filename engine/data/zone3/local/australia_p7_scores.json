@@ -1,0 +1,164 @@
+{
+ "economy": "Australia",
+ "pillar": 7,
+ "run": "run-au-p7-1790724917",
+ "krippendorff_alpha": 0.72,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence cites the Privacy Act 1988 and its amendments, which constitute a comprehensive horizontal legal framework for data protection in Australia."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of the Privacy Act 1988, which establishes a comprehensive horizontal legal framework for data protection in Australia."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence cites the Privacy Act 1988 and its 2024 amendments, which constitute a comprehensive horizontal legal framework for data protection in Australia."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence explicitly cites the 'Cyber Security Act 2024' and multiple subordinate instruments labeled as 'Horizontal,' confirming the existence of a dedicate"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of the Cyber Security Act 2024, which is a dedicated horizontal framework governing cybersecurity incidents and standards ac"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence explicitly cites the 'Cyber Security Act 2024' and associated rules as 'Horizontal' instruments, confirming the existence of a dedicated horizontal"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The Anti-Money Laundering and Counter-Terrorism Financing Act 2006 explicitly specifies a minimum retention period of 7 years for records under sections 35F(2),"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Anti-Money Laundering and Counter-Terrorism Financing Act 2006 explicitly specifies a minimum retention period of 7 years for records held by reporting enti"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Anti-Money Laundering and Counter-Terrorism Financing Act 2006 explicitly specifies a minimum retention period of 7 years for records held by reporting enti"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no DPO/DPIA requirement found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states that no evidence was found for the Privacy Act 1988, meaning there is no textual basis to assert that DPO or DPIA requir"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of DPO or DPIA requirements was found in the provided data, resulting in a score of 0."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of DPO or DPIA requirements was found in the provided data, resulting in a score of 0."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The Anti-Money Laundering and Counter-Terrorism Financing Act 2006 s. 167(2) allows an authorised officer to require a person to provide information via written"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Anti-Money Laundering and Counter-Terrorism Financing Act 2006 s. 167(2) allows an authorised officer to require the production of personal data by written "
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence indicates that access to personal data under the Telecommunications and ASIO Acts requires warrants issued by the Attorney-General or othe"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

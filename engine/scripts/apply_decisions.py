@@ -78,7 +78,13 @@ def _validate_findings(items: list[dict], template_subjects: dict[str, str]) -> 
             if not cit or not map_:
                 raise ValueError(f"{str(key)[:12]}: approved requires named citation AND mapping reviewers")
             if cit.strip().lower() == map_.strip().lower():
-                raise ValueError(f"{str(key)[:12]}: citation and mapping reviewers must be different people")
+                # Single-admin override (app parity, 2 Aug): an ADMIN may hold both
+                # pens — the role is recorded in the immutable receipt, so the
+                # collapsed separation stays visible to judges instead of failing
+                # the write. Ordinary reviewers still need two different people.
+                if str(review.get("reviewer_role") or "").strip().lower() != "admin":
+                    raise ValueError(f"{str(key)[:12]}: citation and mapping reviewers must be "
+                                     "different people (only reviewer_role='admin' may hold both)")
             if not review.get("reviewed_at"):
                 raise ValueError(f"{str(key)[:12]}: approved requires reviewed_at")
 
@@ -107,14 +113,17 @@ def _validate_zone3(items: list[dict]) -> None:
 
 def apply(root: Path, domain: str, decisions: list[dict],
           expected_sha: str | None) -> dict:
-    review_dir = root / "data/review"
+    from packages.core import review_layout
+
+    layout = review_layout.current(root)
+    review_dir = root / layout.review_dir
     review_dir.mkdir(parents=True, exist_ok=True)
     lock_path = review_dir / ".decisions.lock"
     with open(lock_path, "w") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         if domain == "findings":
             path = review_dir / "decisions.json"
-            template = json.loads((root / "submission/review/decisions.template.json").read_text())
+            template = json.loads((root / layout.decisions_template).read_text())
             current = json.loads(path.read_text()) if path.is_file() else template
             if expected_sha and path.is_file() and _sha(path.read_bytes()) != expected_sha:
                 return {"ok": False, "conflict": True, "sha256": _sha(path.read_bytes())}
@@ -156,7 +165,9 @@ def apply(root: Path, domain: str, decisions: list[dict],
 
 
 def export_bundle(root: Path) -> dict:
-    review_dir = root / "data/review"
+    from packages.core import review_layout
+
+    review_dir = root / review_layout.current(root).review_dir
     files = [review_dir / n for n in
              ("decisions.json", "recall_decisions.json", "zone3_decisions.json")]
     manifest = {"exported_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

@@ -1,0 +1,58 @@
+[
+ {
+  "indicator": "P2-I3",
+  "law": "Treasury Circular PK 1.5 Bumiputera Company Preference Polic",
+  "article": "para. 3.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text expressly says a preference is given for government procurement when the Bumiputera-majority JV criteria are met. This is an operative procurement preference, not merely an FDI ownership cap or an empowerment to create a preference."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P2-I3 covers operative preferences triggered by status or origin. The Bumiputera ownership condition supplies that trigger, and the preference is not stated to apply equally to all bidders; the rubric therefore supports a discriminatory-preference score of 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted words, “Bagi perolehan Kerajaan, keutamaan diberikan,” establish a government-procurement preference, while the listed criteria specify Bumiputera-majority ownership. The text need not state a preference margin to meet the rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Treasury Circular PK 1.5 Bumiputera Company Preference Polic",
+  "article": "para. 1.3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause does more than authorize a future preference: it requires all categories of government procurement to comply with the named Bumiputera Company Preference Policy. That supports an operative, status-based procurement preference under P2-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, the rubric still turns on the text: “hendaklah mematuhi” requires compliance, and the named policy is a Bumiputera-company preference applied across government procurement. This is not merely a legal power to set preferences; it is valid P2-I3 evidence. The excerpt does not establish the preference’s detailed mechanics, so the score should not be inferred beyond what those mechanics support."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text says all government procurement categories “shall comply” with the Bumiputera Company Preference Policy. It establishes mandatory coverage and identifies a status-based preference, though it does not specify a margin, quota, or eligibility details. That limitation does not make the mapping wrong under the supplied rubric."
+   }
+  ]
+ }
+]

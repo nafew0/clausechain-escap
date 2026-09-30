@@ -1,0 +1,86 @@
+[
+ {
+  "indicator": "P6-I3",
+  "law": "Regulation on over-the-counter market activities (2020)",
+  "article": "cl. 5.3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Clause 5.3 makes the commercial software subject to technical requirements, including that its server’s data centre be in Mongolia. That is local infrastructure, not merely confidentiality, data transfer, or security controls; the sectoral coverage is not excluded by P6-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P6-I3 has no hunt_in terms, and its scoring assigns 1 when local infrastructure is a precondition of the regulated service. The introductory text requires the commercial software to meet the listed requirements, including the local data-centre requirement, supporting that score. This is not a rule on an already-established facility or a government-data-only measure. The WARN about modality does not refute the mapping: the introductory requirement supplies mandatory force."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted context says commercial software shall meet the listed technical requirements; clause 5.3.1 specifies that the data centre housing its server must be in Mongolia and meet Tier 2 or higher. Read together, the text supports a mandatory local-infrastructure requirement for the covered software, rather than merely describing an existing data centre."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Regulation on registration and use of domain names (consolid",
+  "article": "cl. 7.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause requires the registrar to satisfy listed technical requirements, including having the specified registration database and server in Mongolia and locating them at the National Data Center. This supports a local-infrastructure condition for the covered registration service."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P6-I3, a local server or facility required as a precondition to providing the service scores 1. The clause makes the server and database location part of the registrar’s technical requirements; sectoral coverage is acceptable. The introductory requirement language is mandatory, so G6’s permissive-modality concern does not establish a defect."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the registrar must meet the technical requirements and specifies that the relevant database and server are to be in Mongolia and at the National Data Center. Read in context, it establishes the local-infrastructure requirement claimed."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Regulation on storage and protection of credit information b",
+  "article": "cl. 7.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause requires the credit-information database’s primary and backup centres (servers) to be located in Mongolia. That is a local infrastructure requirement for the covered sector, not merely a confidentiality, transfer, or generic processing rule."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P6-I3, local servers are a positive cue and any such infrastructure requirement scores 1. The clause requires local server centres; sectoral coverage is not excluded, and the rule is not merely about controls on already-established data centres. No hunt_in term is required."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted sentence directly locates the database’s primary and backup centres (servers) within Mongolia. In the context of a registered regulation, it states a location requirement, not a permissive option; the WARN about modality does not defeat the text’s support for the mapping."
+   }
+  ]
+ }
+]

@@ -10,6 +10,7 @@ import {
   LoaderCircle,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
+import { LocalChip, useUrlMode, withMode } from '@/components/workspace/RunModeTabs'
 import { WORKSPACE_NAV_ITEMS, workspaceItemIsActive } from '@/lib/navigation'
 
 interface Crumb { label: string; href?: string }
@@ -22,6 +23,7 @@ interface WorkspaceShellProps {
 
 export default function WorkspaceShell({ children, breadcrumbs = [], contentMode = 'scroll' }: WorkspaceShellProps) {
   const pathname = usePathname() ?? ''
+  const mode = useUrlMode()
   const { user, logout, signingOut } = useAuth()
   const [cmdOpen, setCmdOpen] = useState(false)
   const comingSoonItems = WORKSPACE_NAV_ITEMS.filter(item => item.state === 'prototype')
@@ -52,6 +54,7 @@ export default function WorkspaceShell({ children, breadcrumbs = [], contentMode
             className="h-8 w-auto object-contain"
           />
         </div>
+        {mode === 'local' ? <div className="cc-sidebar-mode" title="Local workspace: evidence, review and ledger from the open-weights model, separate from the signed hybrid registry"><LocalChip label="Local workspace" /></div> : null}
 
         {/* Nav */}
         <nav className="flex flex-col gap-1 px-3">
@@ -63,7 +66,7 @@ export default function WorkspaceShell({ children, breadcrumbs = [], contentMode
             return (
               <Link
                 key={href}
-                href={href}
+                href={withMode(href, mode)}
                 title={label}
                 className={`cc-nav-link flex items-center gap-2.5 px-2.5 py-2 rounded-[10px] text-sm font-medium transition-colors ${
                   active
@@ -88,7 +91,7 @@ export default function WorkspaceShell({ children, breadcrumbs = [], contentMode
             return (
               <Link
                 key={href}
-                href={href}
+                href={withMode(href, mode)}
                 title={label}
                 className={`cc-nav-link flex items-center gap-2.5 px-2.5 py-2 rounded-[10px] text-sm font-medium transition-colors ${
                   active
@@ -122,7 +125,7 @@ export default function WorkspaceShell({ children, breadcrumbs = [], contentMode
             return (
               <Link
                 key={href}
-                href={href}
+                href={withMode(href, mode)}
                 title={`${label} — prototype sample data`}
                 className={`cc-nav-link flex items-center gap-2.5 px-2.5 py-2 rounded-[10px] text-sm font-medium transition-colors ${
                   active
@@ -251,7 +254,7 @@ export default function WorkspaceShell({ children, breadcrumbs = [], contentMode
               {WORKSPACE_NAV_ITEMS.map(({ href, icon: Icon, label }) => (
                 <Link
                   key={href}
-                  href={href}
+                  href={withMode(href, mode)}
                   onClick={() => setCmdOpen(false)}
                   className="flex items-center gap-3 px-3 py-2.5 rounded-[10px] cursor-pointer hover:bg-cc-teal-50 transition-colors"
                 >

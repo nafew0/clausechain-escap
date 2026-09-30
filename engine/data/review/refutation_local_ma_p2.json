@@ -1,0 +1,86 @@
+[
+ {
+  "indicator": "P2-I3",
+  "law": "Treasury Circular PK 1.5 Bumiputera Company Preference Polic",
+  "article": "para. 3.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly states 'keutamaan diberikan' (preference is given) for Bumiputera-foreign joint ventures meeting specific criteria in government procurement ('perolehan Kerajaan'). This is an operative limitation/preference in public bidding, not merely an empowerment clause or a commercial market rule. The 51% ownership threshold is a condition for the preference, fitting the legal test for P2-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's positive cues include 'bumiputera preference'. The snippet provides a concrete mechanism (51% Bumiputera equity in a JV) for receiving this preference. Under the scoring rubric, a measure directly discriminating against foreign bidders (or imposing nationality-based conditions for preference) scores 1. This provision imposes a nationality/origin-based condition (Bumiputera status) for the preference, aligning with the '1' score criteria. It is not a neutral reference price or a mere"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly links 'keutamaan' (preference) to 'perolehan Kerajaan' (government procurement) and sets a specific condition: 'Pemilikan ekuiti warganegara Malaysia Bumiputera tidak kurang 51%' (Bumiputera Malaysian citizen equity ownership not less than 51%). This textually establishes a local-content/ownership threshold triggered by nationality/origin in the context of public procurement, which is the exact subject of P2-I3."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Treasury Circular PK 1.5 Bumiputera Company Preference Polic",
+  "article": "para. 6.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a nationality-based restriction (Bumiputera only) on government procurement bidding for a specific value range. This fits the P2-I3 legal test for a 'set-aside' or 'limitation' triggered by origin/nationality. It is not an outright exclusion of all foreign firms from the entire procurement regime (which would be P2-I1), but a specific bidding limitation. The mapping is legally sound."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric explicitly lists 'bumiputera preference' as a positive cue. The provision requires invitations to be sent only to registered Bumiputera companies, which is a nationality-based set-aside. According to the scoring rubric, a measure directly discriminating against foreign bidders (or non-Bumiputera) scores 1. The mapping correctly identifies this as a P2-I3 indicator with a high score potential. The 'Horizontal' coverage is appropriate as it applies to general supplies/services."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'hendaklah dipelawa di kalangan syarikat Bumiputera' (shall be invited among Bumiputera companies). This is a mandatory directive ('shall') restricting the pool of invited bidders to a specific ethnic/national group. The rationale correctly interprets this as a limitation on who may bid. The G6 WARN regarding modality is incorrect because 'hendaklah' is a mandatory modal verb in Malay legal drafting, equivalent to 'shall'. The text clearly establishes a nationality-based bidding "
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Treasury Circular PK 2.1 General Provisions (2024)",
+  "article": "para. 9.12",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is not a mere empowerment clause; it mandates that procurement advertisements must state the implementation of Price Preference for Bumiputera companies (para 9.12(xi)) and restricts supply invitations to local manufacturers (para 9.12(xii)). This constitutes an operative limitation in bidding, satisfying the legal test for P2-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '1' for measures directly discriminating against foreign bidders or based on nationality/origin. The text explicitly references 'Keutamaan Harga kepada syarikat Bumiputera' (Price Preference for Bumiputera companies), which is a nationality-based preference. This aligns with the positive cue 'bumiputera preference' and the scoring criteria for discriminatory measures."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text in para 9.12(xi) requires the advertisement to include a 'Kenyataan pelaksanaan Keutamaan Harga kepada syarikat Bumiputera' (Statement of implementation of Price Preference to Bumiputera companies). This textually establishes the existence and application of a nationality-based price preference mechanism in the procurement process, supporting the mapping rationale."
+   }
+  ]
+ }
+]

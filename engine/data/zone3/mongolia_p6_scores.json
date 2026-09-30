@@ -1,0 +1,164 @@
+{
+ "economy": "Mongolia",
+ "pillar": 6,
+ "run": "run-mn-p6-1790670824",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence states that no requirement was found, so it does not establish a ban or local processing requirement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No ban or local processing requirement is evidenced in the gate-verified row, so the indicator scores 0."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The only listed horizontal law has no verified evidence of a ban or local-processing requirement, so no qualifying restriction is established."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence provides no verified text establishing a local-storage requirement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence establishes any local-storage requirement."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The only listed horizontal personal-information law has no verified evidence of a local-storage requirement."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "infrastructure requirement exists",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited rules require servers or credit-information centres to be located in Mongolia, establishing infrastructure requirements for the covered services."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Sectoral rules require servers or credit-information centres to be located in Mongolia, establishing infrastructure requirements as a precondition for the cover"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Several sectoral rules require servers or credit-information centers to be located in Mongolia, meeting the threshold for an infrastructure requirement."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Article 14 is identified as horizontal and governs transfers of personal information abroad, meeting the score-1 criterion for personal data coverage."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Article 14 imposes conditions on transferring personal information abroad, so the regime covers personal data."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Article 14 imposes conditions on transferring personal information abroad, including exceptions based on law, treaty, or the data subject\u2019s consent."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no qualifying binding data-transfer agreement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence identifies no binding data-transfer agreement, stating only that no evidence was found pending review."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "No binding data-transfer agreement is evidenced in the supplied record."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "No binding data-transfer agreement is evidenced in the verified record, which lists only a pending-review finding of no evidence."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

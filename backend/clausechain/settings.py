@@ -175,6 +175,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "clausechain.middleware.ContentSecurityPolicyMiddleware",
+    "workspace.mode.WorkspaceModeMiddleware",
 ]
 
 ROOT_URLCONF = "clausechain.urls"
@@ -284,6 +285,25 @@ WORKSPACE_LOCK_DIR = Path(
 ENGINE_ALLOWLIST = Path(
     os.environ.get("ENGINE_ALLOWLIST", BASE_DIR.parent / "deploy" / "engine_allowlist.json")
 ).resolve()
+# Queueing an engine action starts a background worker when none is alive.
+# On in development; off in production, where systemd runs the worker as the
+# separate clausechain-engine user (the API must not spawn it as itself).
+ENGINE_WORKER_AUTOSTART = env_bool("ENGINE_WORKER_AUTOSTART", not IS_PRODUCTION and not TESTING)
+ENGINE_WORKER_LOG = Path(
+    os.environ.get("ENGINE_WORKER_LOG", BASE_DIR / "var" / "logs" / "engine_worker.log")
+).resolve()
+# Display-only descriptions of the models behind each run mode (the engine's
+# configs/models.yaml profiles are authoritative for what actually runs).
+ENGINE_MODE_LABELS = {
+    "hybrid": os.environ.get(
+        "ENGINE_MODE_LABEL_HYBRID",
+        "Commercial hosted: OpenAI GPT-6 luna (runs before 30 Sep via OpenRouter; earlier GPT-5.6 luna/terra) + text-embedding-3-small",
+    ),
+    "local": os.environ.get(
+        "ENGINE_MODE_LABEL_LOCAL",
+        "Open weights, self-hosted: Qwen3.8-27B (vLLM, OpenAI-compatible) + BGE-M3 embeddings",
+    ),
+}
 
 # Simple JWT
 SIMPLE_JWT = {

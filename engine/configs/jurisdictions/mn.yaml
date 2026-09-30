@@ -1,0 +1,172 @@
+jurisdiction: MN
+source_format: pdf        # legalinfo.mn official "Pdf" export (seed acquire: legalinfo_pdf_export) -> extractors/pdf_act.py
+name: Mongolia
+un_name: Mongolia
+languages: { primary: mn, supported: [mn, en] }
+section_grammars: [mongolian]   # "14 дүгээр зүйл.Title" / "2 дугаар зүйл.Title"
+citation_template: "Art. {label}"
+
+whitelist_source: data/official_domains.json
+official_sources:
+  # ranks follow the sg/my convention: 100 statute DB / gazette, 90 treaty register, 60 regulator
+  - { name: LegalInfo (Unified Legal Information System, Ministry of Justice), domain: legalinfo.mn, source_type: official_statute_database, authority_rank: 100 }
+  - { name: State Great Khural (parliament), domain: parliament.mn, source_type: official_gazette, authority_rank: 90 }
+  - { name: Communications Regulatory Commission, domain: crc.gov.mn, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Ministry of Digital Development and Communications, domain: mddc.gov.mn, source_type: ministry, authority_rank: 60 }
+  - { name: Bank of Mongolia, domain: mongolbank.mn, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Financial Regulatory Commission, domain: frc.mn, source_type: sectoral_regulator, authority_rank: 60 }
+
+portal_search:
+  engine: legalinfo.mn detail pages (server-rendered HTML) + /mn/pdfExport
+  method: keyword_fulltext
+  notes: >-
+    Every law/regulation has /mn/detail?lawId=<id> (or /mn/detail/<id>); the page's Pdf button calls
+    downloadlaw('1', '<fileid>') which POSTs fileid + page layout to /mn/pdfExport and returns the
+    portal-generated PDF with a clean Cyrillic text layer (verified 29-Sep-2026: PDPL 10 pages, 33
+    article headings). Export bytes carry a generation timestamp, so the manifest keeps the first
+    archived copy (static-document policy). English pages under /en/edtl/ are unofficial translations.
+
+citation_patterns:
+  section: ["Art. {n}", "{n} дүгээр зүйл", "{n} дугаар зүйл"]
+  paragraph_required: false
+connector: generic_seeds
+gold_anchor_roles: [operative, supporting]   # inject the master's supporting refs as candidates too
+legal_fit_reads_translation: true   # G7 patterns are English; also read the mapper's English account
+notes:
+  - "NATIVE-LANGUAGE ECONOMY: evidence is the Mongolian (Cyrillic) original; Verbatim Snippet stays Mongolian, English quote goes in the translation column with [OWN-TRANSLATION]."
+  - "Paragraph numbering is decimal ('14.1.', '20.1.5.'); units are article-level (14, 20, 22) and the decimal pinpoint lives in the snippet — the ESCAP gold cites 'Art. 14.1', 'Art. 20.1.5', 'Art. 22.1'."
+  - "Regulations (журам) have no 'N дүгээр зүйл' articles: chapters in words ('Нэг.', 'ГУРАВ.') and clauses '3.2.' — their seeds opt into section_grammars [mongolian_regulation] and cite 'cl. 3.2' (sub-clauses 3.2.1-3.2.2 stay inside cl. 3.2)."
+  - "The pdfExport flattens superscript article numbers ('4¹ дүгээр зүйл' -> '41'); pdf_act recovers N.d when the flattened label sits between N and N+1 (Accounting Law Art. 4.1)."
+  - "Polarity (research 26-Aug-2026): P6-I1 0, P6-I2 0, P6-I3 1 (A/90 regulation 3.2.1-3.2.2: sensitive/biometric processing server in Mongolia; credit-info, OTC, network-licence and .MN registrar infrastructure rules corroborate), P6-I4 1 (PDPL 14.1 transfer only under law, treaty or consent), P6-I5 1 (no binding data-transfer commitment)."
+  - "ESCAP's 2025 narrative said no private-sector local-server rule; its RDTII 2.1 guide and the gold row on A/90 (P6-I3 = 1) supersede that."
+  - "[GOV-ONLY] Public Information Transparency Law 18.12 (main system in Mongolia) and the State XUR exchange technical conditions are state-system rules — recorded, not scored. The draft Data Law (2026) is not in force."
+  - "P7: I1 0 (PDPL 2021), I2 0 (Cybersecurity Law 2021), I3 1 (Credit Information Law 11.1 five years; Accounting Law 11.1 ten years; ESCAP gold also PDPL 20.1.5), I4 0 per ESCAP gold (PDPL Art. 22), I5 0 per ESCAP gold (Banking Law 7.2)."
+open_verification:
+  - "Mongolia P7-I4/P7-I5: the 28-Sep research report covered only I1-I3; confirm the PDPL Art. 22 reading (gold 0) and search the Criminal Procedure Law (2017) and the Law on Intelligence for non-judicial access (gold holds Banking Law 7.2 only)"
+  - "Order A/90: the research cites the approving order (lawId=16760452305271) and the gold the regulation text (lawId=16760452348261); only the regulation text is seeded"
+ocr: { provider: hybrid_script, route: vision-first, language_hints: [mn, ru], expect_script: cyrillic }
+known_index: data/known_index_round2.json
+seeds: data/seeds_r2.json
+rdtii_bindings: { pillars: [2, 6, 7] }
+
+anchor_instruments:
+  - "Law on Protection of Personal Information (2021) — horizontal DP law (P7-I1 score-0 evidence); 14.1 conditional transfer (P6-I4); 20.1.5 retention (P7-I3); Art. 22 (P7-I4)"
+  - "Law on Cybersecurity (2021) — dedicated horizontal cybersecurity framework (P7-I2 score-0 evidence)"
+  - "Order A/90 technology security requirements (2023) — 3.2.1-3.2.2 server located and accessible only in Mongolia (P6-I3)"
+
+hunt_instruments:
+  P6-I3:
+    - "Credit-information storage and protection regulation (2020) — 7.1, 14.1.7 primary and backup centres in Mongolia"
+    - "OTC market regulation (2020) — 5.3.1 data centre in Mongolia, Tier 2+"
+    - "Telecom network conditions (2020, amended 2023) — 13.1.11 NMS/NOC/SOC in Mongolia"
+    - "Domain name regulation (consolidated 2026) — 7.1.2-7.1.3 .MN registry database/server in Mongolia"
+  P7-I3:
+    - "Law on Credit Information (2011) 11.1 — five-year credit history"
+    - "Law on Accounting (2015) 11.1 — ten-year retention"
+    - "Law on Communications 25.2.4 (ESCAP gold, score 0)"
+  P7-I5:
+    - "Banking Law 7.2 (ESCAP gold, score 0) — confidentiality exceptions"
+
+# ESCAP master (known_index_round2) -> this corpus. The master cites paragraphs as decimals
+# ("Art. 14.1", "Art. 20.1.5") against article-level units (Art. 14, Art. 20).
+gold_ref_style: decimal_parts
+gold_aliases:
+  "Law on Personal Data Protection": "Law of Mongolia on Protection of Personal Information (2021)"
+  "Attachment to the Order of the Minister of Electronic Development and Communications No. A/90 on Regulation on Technical Requirements for Processing Sensitive, Biometric and Genetic Data": "Technology security requirements for processing sensitive, genetic and biometric personal data (Order No. A/90 regulation, 2023)"
+
+# Provisional indicator scores from the deep-research reports (engine/docs; P7 covered I1-I3 only)
+# — compared with the ESCAP master by scripts/gold_audit.py (H-score-divergence).
+research_scores: { P6-I1: 0, P6-I2: 0, P6-I3: 1, P6-I4: 1, P6-I5: 1, P7-I1: 0, P7-I2: 0, P7-I3: 1, P2-I1: 1, P2-I2: 0, P2-I3: 1, P2-I4: 1 }
+
+governing_instruments:
+  default: { law: "Law of Mongolia on Protection of Personal Information (2021)", url: "https://legalinfo.mn/mn/detail?lawId=16390288615991" }
+  P7-I2:   { law: "Law of Mongolia on Cybersecurity (2021)", url: "https://legalinfo.mn/mn/detail?lawId=16390365491061" }
+
+status_assertions:
+  "Law of Mongolia on Protection of Personal Information (2021)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=16390288615991"
+    fact_text: "legalinfo.mn current consolidated text (adopted 17 Dec 2021; in force 1 May 2022)."
+    effective_date: "2022-05-01"
+  "Technology security requirements for processing sensitive, genetic and biometric personal data (Order No. A/90 regulation, 2023)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=16760452348261"
+    fact_text: "legalinfo.mn registered regulation (approved by Minister of Digital Development and Communications Order No. A/90, 2023); ESCAP Round-2 gold cites it as current P6-I3 evidence."
+  "Regulation on storage and protection of credit information by credit information service providers (2020)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=211161"
+    fact_text: "legalinfo.mn registered regulation (3 July 2020), current on the portal."
+  "Regulation on over-the-counter market activities (2020)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=211423"
+    fact_text: "legalinfo.mn registered regulation (9 December 2020), current on the portal."
+  "Conditions and requirements for establishing and operating telecommunications networks (2020, amended 2023)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=211125"
+    fact_text: "legalinfo.mn registered regulation (28 Feb 2020, amended 31 May 2023), current on the portal."
+  "Regulation on registration and use of domain names (consolidated 2026)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=17355454497221"
+    fact_text: "legalinfo.mn consolidated regulation, current version dated 7 May 2026."
+  "Law of Mongolia on Public Information Transparency (2021)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=16390263044601"
+    fact_text: "legalinfo.mn current consolidated text (adopted 17 Dec 2021; latest amendment 3 July 2026)."
+  "Law of Mongolia on Cybersecurity (2021)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=16390365491061"
+    fact_text: "legalinfo.mn current consolidated text (adopted 17 Dec 2021; in force 1 May 2022)."
+    effective_date: "2022-05-01"
+  "Law of Mongolia on Credit Information (2011)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail/9175"
+    fact_text: "legalinfo.mn current consolidated text."
+  "Law of Mongolia on Accounting (2015)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail/11191"
+    fact_text: "legalinfo.mn current consolidated text."
+  "Law of Mongolia on Communications (2001)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail/523"
+    fact_text: "legalinfo.mn current consolidated text (adopted 18 Oct 2001; latest amendment 5 June 2024)."
+  "Banking Law of Mongolia (2010)":
+    status: in_force
+    fact_url: "https://legalinfo.mn/mn/detail/108"
+    fact_text: "legalinfo.mn current consolidated text (adopted 28 Jan 2010, amended)."
+  # Pillar 2 (public procurement), 29 Sep 2026
+  "Law on the Procurement of Goods, Works and Services by State and Local Property Assets (revised, 2023)":
+    status: "in_force"
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=16760359992351"
+    fact_text: "Revised law adopted 16.06.2023; Art. 62.1 (as amended 10.11.2023) applies it from 01.01.2024; amended 2024-2026 but Art. 8 / 8.3 untouched; legalinfo consolidated text current (research 29-Sep-2026)."
+    effective_date: "2024-01-01"
+  "Resolution of the Government of Mongolia No. 90 (2019) on the Update and Approval of the List of goods to be procured from domestic producers":
+    status: "in_force"
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=209518"
+    fact_text: "Government Resolution No. 90 of 27.02.2019 (annex list) listed in force on legalinfo; annex amended by Res. 381/2022 and 113/2023; no replacement list under 2023 PL Art. 8.2 found (research 29-Sep-2026)."
+    effective_date: "2019-02-27"
+  "Law of Mongolia on Organization Secret (1995)":
+    status: "in_force"
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=102"
+    fact_text: "Law of 16.05.1995, in force from 01.07.1995 (Art. 10); consolidated legalinfo text carries amendments of 2011, 2015 and 2016, no repeal (checked 29-Sep-2026)."
+    effective_date: "1995-07-01"
+  "Standard Bidding Document for Goods (Minister of Finance Order No. A/103, 2025)":
+    status: "in_force"
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=17432054681622"
+    fact_text: "Minister of Finance Order A/103 of 26.05.2025 approving the goods SBD (replaced A/258 of 25.12.2023); annex listed 'Хүчинтэй' (in force) on legalinfo."
+  "Standard Bidding Document for Services (Minister of Finance Order No. A/105, 2025)":
+    status: "in_force"
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=17432054939232"
+    fact_text: "Minister of Finance Order A/105 of 26.05.2025 approving the services SBD (replaced A/260 of 25.12.2023); listed in force on legalinfo."
+  "Tender Evaluation and Preference Methodology (Minister of Finance Order No. A/255, 2023)":
+    status: "in_force"
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=16960747200361"
+    fact_text: "Minister of Finance Order A/255 of 25.12.2023 approving the tender evaluation and preference methodology, applied from 01.01.2024 (order item 4); listed in force on legalinfo."
+    effective_date: "2024-01-01"
+  "Law of Mongolia on Supporting Small and Medium Enterprises and Services (revised, 2019)":
+    status: "in_force"
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=14525"
+    fact_text: "Revised SME and Services Support Law of 06.06.2019, listed in force on legalinfo; Art. 3.1-3.2 limit it to domestic entities (foreign legal entities excluded)."
+  "Law of Mongolia on Supporting Information Technology Production (2024)":
+    status: "in_force"
+    fact_url: "https://legalinfo.mn/mn/detail?lawId=17140722436571"
+    fact_text: "Law of 05.06.2024 listed in force on legalinfo (no entry-into-force article in the text)."

@@ -183,6 +183,9 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "httpx" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "openpyxl" },
     { name = "pydantic" },
     { name = "pymupdf" },
     { name = "pyyaml" },
@@ -212,6 +215,8 @@ pdf-advanced = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.27,<1" },
+    { name = "numpy", specifier = ">=1.26,<3" },
+    { name = "openpyxl", specifier = ">=3.1,<4" },
     { name = "pydantic", specifier = ">=2.7,<3" },
     { name = "pymupdf", specifier = ">=1.24,<2" },
     { name = "pyyaml", specifier = ">=6.0,<7" },

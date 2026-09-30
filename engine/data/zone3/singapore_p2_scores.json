@@ -1,0 +1,102 @@
+{
+ "economy": "Singapore",
+ "pillar": 2,
+ "run": "run-sg-p2-1790690766",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no foreign exclusion found (enabling clauses alone score 0)",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence contains no identified measure excluding foreign firms, only a pending-review no-evidence finding."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of a measure excluding foreign firms from public procurement was found."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence indicates that foreign firms are excluded from public procurement."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence contains no verified requirement to surrender source code or trade secrets, or to use specific encryption in procurement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found of a procurement requirement to surrender patents, source code, or trade secrets, or to use specific encryption."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence establishes a procurement requirement to surrender source code, patents, or trade secrets, or to use specific encryption."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no bidding limitation found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The only listed row reports no evidence found, so the provided text establishes no procurement-bidding limitation."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No qualifying procurement-bidding limitation is evidenced in the provided row."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No qualifying procurement-bidding limitation or absence of institutional transparency is evidenced in the provided row."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

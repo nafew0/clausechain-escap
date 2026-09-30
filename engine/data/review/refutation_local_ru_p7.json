@@ -1,0 +1,1122 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Federal Law No. 149-FZ of 27.07.2006 On Information, Informa",
+  "article": "Art. 15.5",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited provision (Art. 15.5 of Law 149-FZ) establishes a specific enforcement mechanism (a registry of violators and access restriction procedure) for the Information Law. It does not constitute the comprehensive horizontal data protection law itself (which is Law 152-FZ). Citing a procedural enforcement tool from a different statute as evidence of the existence of the primary horizontal framework is a scope defect; the provision evidences the *application* of the framework, not the framework"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I1 asks whether a comprehensive horizontal law *exists*. The positive cues are 'Personal Data Protection Act', 'Privacy Act', etc. The supplied snippet is from the 'Law on Information' (149-FZ), not the 'Personal Data Protection Law' (152-FZ). While it references personal data legislation, it is a sectoral/informational law provision dealing with internet access restrictions. Using this as the primary evidence row for the existence of the horizontal framework is a misalignment "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states 'in violation of the legislation of the Russian Federation in the field of personal data' (законодательства Российской Федерации в области персональных данных). This textual reference confirms the existence of a distinct body of legislation governing personal data. While it is not the primary law itself, the text establishes that such a legal regime exists and is being enforced. Under a strict textualist view, the reference to 'legislation... in the field of personal d"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (conso",
+  "article": "Art. 4(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited provision (Art. 4(1) of 152-FZ) explicitly defines the scope of the Russian Federation's legislation on personal data, stating it consists of this Federal Law and other federal laws defining cases and features of processing. This establishes a horizontal, comprehensive legal framework applicable to all operators, not just specific sectors. There is no legal-function defect; the text correctly identifies the existence of the primary horizontal statute required by the indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The snippet from 152-FZ is the core horizontal data protection law in Russia. The mapping rationale correctly identifies this as evidence of the framework's existence. The indicator is absence-scored (high score = lack of framework), so providing evidence of the framework's existence supports a score of 0 (or low score), which is the correct direction for this mapping. The provision is not sectoral-only, nor is it "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'The legislation of the Russian Federation in the field of personal data... consists of this Federal Law and other federal laws defining cases and features of processing personal data.' This textually establishes that 152-FZ is the foundational component of the national legal regime for personal data. It does not limit the law to specific sectors or government data. The context confirms it is a general legislative framework. The text supports the claim that a compre"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Government Resolution No. 687 of 15.09.2008 Regulation on pr",
+  "article": "Art. 3",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited provision (Art. 3 of Regulation No. 687) is a subordinate regulation specifically governing 'non-automated' processing. It does not establish the existence of a comprehensive horizontal law (like the Federal Law 152-FZ) but rather details procedural rules for a specific subset of processing. Mapping this specific regulation to the high-level indicator of 'Lack of comprehensive legal framework' is a scope defect; it evidences the existence of detailed rules, not the comprehensive statut"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I1 asks if the economy LACKS a comprehensive horizontal law. The snippet provided is from a Government Resolution (subordinate legislation) detailing rules for non-automated processing. While it confirms data protection rules exist, it is not the primary evidence for the 'comprehensive horizontal framework' status. The rubric's positive cues (e.g., 'Personal Data Protection Act') point to primary legislation. Using a specific regulation on non-automated processing as the sole e"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states that rules for processing personal data (non-automated) must be applied in accordance with this Regulation. This textually establishes that a legal framework for personal data protection exists and is being enforced. While it is a specific regulation, the text itself supports the rationale that a legal framework is present, which is the core inquiry of P7-I1 (absence vs. presence). The text does not contradict the claim that a framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Federal Law No. 149-FZ of 27.07.2006 On Information, Informa",
+  "article": "Art. 1(1)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The cited text (Art. 1(1)) defines the scope of a general law on information and IT, specifically mentioning 'protection of information' (zashchita informatsii). It does not contain the specific legal functions required for a 'dedicated cybersecurity framework' such as network security, incident response, or critical infrastructure protection. Under the rubric's exclusion that 'Scattered security clauses inside a privacy/sectoral law do NOT make a dedicated framework,' this general information l"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The indicator P7-I2 asks if the economy LACKS a law specifically designed for cybersecurity. The scoring rubric distinguishes between 'No cybersecurity framework' (1), 'NON-DEDICATED framework' (0.5), and 'dedicated HORIZONTAL cybersecurity framework' (0). The cited law (149-FZ) is a general information law, not a 'Cybersecurity Act' or 'information security law' in the dedicated sense implied by the positive cues (e.g., SG Cybersecurity Act). By mapping this general law as the evidence for the "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text is present in the source. The text explicitly states that the law regulates relations arising from 'ensuring protection of information' (obespechenii zashchity informatsii). While it does not use the word 'cybersecurity' (bezopasnost' informatsii or kiberozashchita), the textualist view accepts that 'protection of information' in the context of IT application (point 2) is the textual basis for the law's scope. The rationale claims this defines the legal framework. The text "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Federal Law No. 187-FZ of 26.07.2017 On Security of Critical",
+  "article": "Art. 5",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The cited law (187-FZ) is explicitly titled 'On Security of Critical Information Infrastructure' and its scope is limited to 'subjects of critical information infrastructure' (Article 5, para 2.3). The rubric for P7-I2 distinguishes between a 'dedicated HORIZONTAL' framework (score 0) and a 'dedicated but SECTORAL-ONLY framework' (score 0.5). This law is sectoral (critical infrastructure), not horizontal (all entities). Mapping it as 'Horizontal' coverage is a legal-function defect; it does not "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I2 asks if the economy LACKS a law specifically designed for cybersecurity. The scoring key states: '0.5: A NON-DEDICATED framework... and/or a dedicated but SECTORAL-ONLY framework.' The cited law, 187-FZ, is a dedicated framework but is strictly sectoral (Critical Information Infrastructure). The mapping rationale asserts it is a 'dedicated horizontal legal framework.' This is a misapplication of the rubric's scoring logic. A sectoral-only framework maps to 0.5, not 0. By lab"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text of Article 5 explicitly establishes a 'State system for detection, prevention, and liquidation of consequences of computer attacks' and defines the 'National Coordination Center for Computer Incidents.' While the law is titled regarding Critical Information Infrastructure, the text of Article 5 itself describes a state-level incident response mechanism. The strict textualist view confirms that the snippet *does* establish a legal framework for cybersecurity incident response. The disput"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Federal Law No. 187-FZ of 26.07.2017 On Security of Critical",
+  "article": "Art. 9(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is from a dedicated federal law (187-FZ) specifically addressing Critical Information Infrastructure (CII) security. While it is sectoral in scope (limited to CII subjects), the rubric explicitly allows sectoral-only frameworks to score 0.5. The legal function (incident reporting and response) is clearly established, and there is no defect in the legal function or scope that would invalidate the mapping under the provided rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 defines a score of 0.5 for a 'dedicated but SECTORAL-ONLY framework'. The cited law is a dedicated act for CII security, which fits this category. The snippet provides concrete evidence of the framework's operation (obligations for incident reporting). Therefore, the mapping correctly identifies a valid evidence row for a score of 0.5, as opposed to 0 (horizontal) or 1 (none)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes obligations for 'subjects of critical information infrastructure' to report computer incidents and assist in detection/prevention. This textually confirms the existence of a legal regime governing cybersecurity for this specific sector. It does not claim to be a horizontal law, nor does it misrepresent its scope. The text supports the rationale that a specific legal framework for cybersecurity exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Government Resolution No. 127 of 08.02.2018 Rules for catego",
+  "article": "Art. 19",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly references the 'Federal Law on the Security of Critical Information Infrastructure of the Russian Federation' (FZ-187), which is a dedicated horizontal cybersecurity law. The mapping correctly identifies this as evidence of a dedicated framework, satisfying the legal function required by the indicator. There is no scope defect or misreading of the legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores '0' for a dedicated horizontal cybersecurity framework. The cited text is from a Government Resolution implementing the Federal Law on CII Security, confirming the existence of a dedicated, horizontal legal regime for critical infrastructure security. This aligns with the positive cue 'Cybersecurity Act' (or equivalent dedicated law) and supports a score of 0 (framework present). The evidence is valid for the indicator."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that the federal executive body verifies categorization results 'in the procedure provided for by parts 6-8 of Article 7 of the Federal Law on the Security of Critical Information Infrastructure of the Russian Federation.' This textually establishes the existence and operational application of the named Federal Law, which is a dedicated cybersecurity framework. The rationale that this evidences the framework is directly supported by the explicit citation within the s"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Government Resolution No. 127 of 08.02.2018 Rules for catego",
+  "article": "Art. 14",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is part of a Government Resolution implementing Federal Law No. 187-FZ, which is a dedicated horizontal cybersecurity law. The text describes the categorization of Critical Information Infrastructure (CII) objects, a core function of a horizontal cybersecurity framework. It does not suffer from a scope defect (e.g., it is not limited to a single sector like banking) nor a legal-function defect (it is not merely a privacy clause). The mapping correctly identifies this as evidence of"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores '0' for a dedicated horizontal cybersecurity framework. The cited text from Resolution No. 127 (implementing Law 187-FZ) details the mechanism for identifying and categorizing CII objects, which is a specific cybersecurity function (incident response/risk assessment for critical infrastructure). This is not a 'non-dedicated' framework (score 0.5) nor a 'sectoral-only' framework, as CII categorization under 187-FZ applies horizontally across multiple sectors. The evide"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text explicitly lists the duties of the 'Commission for categorization' regarding 'objects of critical information infrastructure' (объекты критической информационной инфраструктуры). It mentions analyzing threats, computer incidents, and assessing consequences of cyber attacks. This textually establishes the existence of a legal regime specifically designed for cybersecurity (CII protection), which aligns with the indicator's definition of a dedicated framework. The text does n"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Presidential Decree No. 250 of 01.05.2022 On additional meas",
+  "article": "Art. 2",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a general duty on heads of 'organs (organizations)' to ensure information security. This is a horizontal obligation applicable to the public sector and potentially broader entities, not limited to a specific industry or government data silo. It does not suffer from a scope defect that would disqualify it as evidence of a dedicated framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores 0 for a dedicated horizontal framework. Presidential Decree No. 250 is a dedicated act on information security. The cited article establishes a core accountability mechanism (personal responsibility of heads) which is a substantive element of such a framework. The mapping correctly identifies this as evidence of the framework's existence, supporting a score of 0 (or potentially 0.5 if deemed non-dedicated, but the lens checks for refutation of the mapping's validity, "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states 'personal responsibility... for ensuring information security'. This directly supports the rationale that the provision establishes a core obligation within the cybersecurity framework. The text does not contradict the claim that it is part of a dedicated framework; it is a specific operational rule within that framework. The mapping is textually supported."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Presidential Decree No. 250 of 01.05.2022 On additional meas",
+  "article": "Art. 5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision assigns the FSB the mandate to organize the state system for detecting and mitigating cyber attacks and to monitor the security of information resources of organs and organizations. This constitutes a legal function of incident response and risk management applicable to a broad class of entities (horizontal), not merely a sectoral or government-only measure. It does not suffer from a scope defect that would disqualify it as evidence of a cybersecurity framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores '0' for a dedicated horizontal cybersecurity framework. The cited Presidential Decree establishes a state-level system for cyber incident response and monitoring, which fits the definition of a dedicated framework. The rubric explicitly states that sectoral evidence is not a defect if the rubric calls for it, but here the evidence is horizontal (applying to 'organs and organizations'). The presence of this dedicated mechanism supports a score of 0 (framework exists), "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly mandates the FSB to 'organize accreditation of centers of the state system for detection, warning, and liquidation of consequences of computer attacks' and to 'determine the procedure for carrying out monitoring of the security of information resources.' These are concrete legal functions establishing a framework for cybersecurity incident response. The text does not merely permit but organizes and controls these activities, establishing the existence of the framework. The ra"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Presidential Decree No. 646 of 05.12.2016 Information Securi",
+  "article": "Art. 8",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited instrument is a Presidential Decree establishing the 'Information Security Doctrine,' which is a high-level strategic document rather than a statute. However, the rubric for P7-I2 asks if the economy LACKS a law specifically designed for cybersecurity. The existence of a dedicated, horizontal doctrine that defines national interests in information security, including critical infrastructure protection, serves as valid evidence that a dedicated framework exists (or at least that the sta"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 0 for a 'dedicated HORIZONTAL cybersecurity framework'. The snippet from the Information Security Doctrine explicitly lists 'ensuring the stable and uninterrupted functioning of the information infrastructure, primarily the critical information infrastructure' as a national interest. This is a horizontal scope (applying to the whole economy/critical infrastructure) and is dedicated to information security. The rubric's positive cues include 'Cybersecurity Act' or 'information s"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'National interests in the information sphere are: ... b) ensuring the stable and uninterrupted functioning of the information infrastructure, primarily the critical information infrastructure of the Russian Federation...'. This text explicitly establishes a national commitment to the security and stability of critical information infrastructure. It does not merely mention keywords; it defines the scope of national interest in information security. The context confi"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Presidential Decree No. 646 of 05.12.2016 Information Securi",
+  "article": "Art. 23",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited instrument is a Presidential Decree establishing the 'Information Security Doctrine'. While a doctrine is a policy document rather than a statute, it functions as a dedicated legal framework defining the state's approach to cybersecurity, including critical infrastructure and incident response. It is not a sectoral notice or a scattered clause within a privacy law. Therefore, it does not suffer from a scope defect that would disqualify it as evidence of a dedicated framework under the "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '0' for a dedicated horizontal framework. The snippet explicitly lists 'critical information infrastructure' (критической информационной инфраструктуры) and 'mechanisms for detection and warning of information threats' (механизмов обнаружения и предупреждения информационных угроз) as core directions. This aligns with the positive cues for a dedicated framework (network security, incident response, critical infrastructure). The presence of these elements in a horizontal decree s"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text from Article 23 of the Decree lists 'main directions of ensuring information security'. Item (в) specifically mentions 'increasing the protection of critical information infrastructure... development of mechanisms for detection and warning of information threats'. This text directly establishes the existence of a framework addressing critical infrastructure and incident response. The text does not limit these measures to a specific sector (like finance or government data on"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Criminal Procedure Code of the Russian Federation No. 174-FZ",
+  "article": "Art. 84(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a mandatory retention duty ('stored for the entire duration of the criminal case file') within the criminal justice sector. While the specific numeric period is not defined in this snippet, the rubric explicitly allows recording retention requirements without a specified minimum period as a score of 0. The mapping correctly identifies the legal function (retention) and does not misread a limit as a minimum."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 states that a retention requirement WITHOUT a specified minimum period is still RECORDED and scored 0. The snippet 'хранятся в течение всего срока его хранения' (stored for the entire duration of its storage) is a retention requirement. Although it lacks a numeric minimum (e.g., 'at least 5 years'), it is not a retention limit (like 'no longer than necessary'). Therefore, it is a valid evidence row for a score of 0, consistent with the 4-Jul internal-guide rule."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'документы... хранятся в течение всего срока его хранения' (documents... are stored for the entire duration of its storage) establishes a mandatory retention obligation tied to the case file's lifecycle. It does not contain the negative cue 'no longer than necessary' nor does it merely permit storage. The rationale correctly notes the absence of a numeric minimum, which aligns with the score 0 definition. The text supports the claim of a retention duty, even if the specific duration is "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 115-FZ of 07.08.2001 On Countering Money Lau",
+  "article": "Art. 7.9(1)(7)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory obligation ('обязан... сохранять') on the Digital Ruble Platform Operator to retain specific information for a minimum of five years. This falls squarely within the 'anti-money-laundering' sectoral scope explicitly listed in the rubric's hunt_in. There is no legal-function defect; the text establishes a clear retention duty, not merely a confidentiality or data minimization rule."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'подлежит хранению не менее пяти лет' (subject to storage for at least five years) matches the positive cue 'keep ... for a period of not less than'. The polarity is 'requirement_present_scores_high', and the presence of a specified minimum period (5 years) satisfies the scoring criteria for '1'. The G6 WARN regarding modality is a false positive; the Russian verb 'обязан' (is obliged) and the structure of Article 7.9(1) clearly establish a mandatory duty, not a permissive one."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states 'Такая информация подлежит хранению не менее пяти лет' (Such information is subject to storage for at least five years). This explicitly establishes a floor (minimum) retention period, not a ceiling. The context confirms this applies to information resulting from the implementation of the platform's policy, which is a valid data retention requirement under the AML framework. The text does not contain the negative cue 'no longer than necessary'."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 115-FZ of 07.08.2001 On Countering Money Lau",
+  "article": "Art. 7(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory retention duty ('подлежат хранению' - are subject to storage) for a specific minimum duration ('не менее пяти лет' - not less than five years). This fits the legal function of a minimum retention requirement. The sectoral scope (AML) is explicitly permitted by the rubric's hunt_in criteria."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a clearly specified minimum period. The text 'не менее пяти лет' (not less than five years) matches the positive cue 'keep ... for a period of not less than'. It is not a retention limit (which would be 'no longer than'), so it correctly scores as 1. The G6 WARN regarding modality is a false positive; 'подлежат' is a mandatory legal construction in Russian law, equivalent to 'shall'."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that documents containing specified information and identification data are subject to storage for not less than five years. This textually establishes a floor (minimum) for retention, not a ceiling. The context confirms the period starts from the termination of relations with the client, but the core obligation of a 5-year minimum remains intact and supports the mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 115-FZ of 07.08.2001 On Countering Money Lau",
+  "article": "Art. 6.1(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory obligation ('обязано хранить' - must retain) on legal entities to keep beneficial owner information. This is a clear legal function of data retention. The scope is horizontal as it applies to all legal entities, not just government data. There is no defect in the legal function or scope that would invalidate the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a minimum retention period ('keep >= X'). The text explicitly states 'не менее пяти лет' (not less than five years), which is a clear minimum period. The hunt_in list includes 'anti-money-laundering' sectoral law, and this is an AML law. The scoring rule '1' applies because a minimum retention period is clearly specified. The G6 WARN regarding modality is incorrect; 'обязано' is a mandatory 'shall/must' in Russian legal language, not permissive."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'хранить информацию... не менее пяти лет со дня получения такой информации' translates to 'retain information... for not less than five years from the date of receiving such information.' This textually establishes a minimum retention period of five years. It is not a retention limit (ceiling) but a floor, which aligns with the indicator's definition. The context confirms this is a duty of the legal entity."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 126-FZ of 07.07.2003 On Communications (cons",
+  "article": "Art. 43(4)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The provision mandates the retention of a 'conformity declaration' and its supporting evidentiary documents (technical documentation, test protocols) for telecommunications equipment. This is a regulatory compliance record-keeping requirement for product certification, not a data retention requirement for personal data or communications data. P7-I3 specifically asks if 'data' must be kept for a minimum period. Retaining a static certificate or technical dossier is legally distinct from retaining"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Applying the rubric's hunt_in and positive_cues, the text 'хранятся... в течение трех лет' (stored for three years) matches the structural pattern of a minimum retention period. However, the object of retention is 'Декларация о соответствии' (Conformity Declaration) and 'доказательственные материалы' (evidentiary materials). The indicator P7-I3 targets 'data retention requirements' in the context of data protection or sectoral data handling (e.g., AML, telecom traffic). A conformity declaration "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The exact text states: 'The conformity declaration and constituent evidentiary documents are stored by the applicant...'. The text explicitly identifies the objects as a 'declaration' and 'documents' serving as 'evidentiary materials' for compliance with technical requirements. It does not use the term 'data' (данные) nor does it refer to the processing or storage of information flows. The rationale claims this maps to P7-I3 (Minimum period of data retention), but the text establishes a retentio"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 161-FZ of 27.06.2011 On the National Payment",
+  "article": "Art. 9(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('обязан... хранить') on payment operators to retain specific notification data for a defined period. This falls squarely within the 'Payment services' sectoral scope explicitly listed in the rubric's hunt_in. There is no legal-function defect; it is a valid sectoral retention requirement."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'не менее трех лет' (not less than three years) clearly specifies a minimum retention period. This matches the positive cue 'keep ... for a period of not less than' and satisfies the scoring criterion for '1' (minimum retention period clearly specified). It is not a retention limit (ceiling), so the exclusion for data minimization does not apply."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet states the operator is obliged to store information 'not less than three years' (не менее трех лет). This textual evidence directly establishes a floor (minimum) for retention, not a ceiling. The G6 WARN regarding modality is a false positive; the Russian word 'обязан' (obliged) is a mandatory modality, not permissive. The text supports the rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 223-FZ of 18.07.2011 On Procurement of Goods",
+  "article": "Art. 3.2(12)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates the retention of specific procurement documents (protocols, applications, documentation) by the 'zakazchik' (customer/legal entity). This falls squarely within the 'companies/accounting' and 'public procurement' sectoral scope accepted by the rubric's hunt_in. There is no legal-function defect; it is a clear record-keeping obligation, not a data minimization limit or a government-only measure."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text contains the phrase 'хранятся... не менее трех лет' (stored... for at least three years). This matches the positive cue 'keep ... for a period of not less than' and satisfies the scoring criterion for '1' (minimum retention period clearly specified). The G6 WARN regarding modality is a false positive; 'хранятся' in this regulatory context is a mandatory imperative, not permissive. The mapping correctly identifies a minimum period, not a limit."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted snippet states that protocols, applications, and documentation 'are stored by the customer for at least three years' (хранятся заказчиком не менее трех лет). The text unambiguously establishes a floor (minimum) of three years for the retention of these specific records. It does not state 'no longer than' or 'as necessary,' thus avoiding the 'wrong direction' failure mode. The context confirms this is part of the procedure for competitive procurement, validating the sectoral clas"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 402-FZ of 06.12.2011 On Accounting (consolid",
+  "article": "Art. 29(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory retention duty ('подлежат хранению' = shall be kept) for accounting documents. While the scope is limited to accounting/financial records rather than all personal data, the rubric's hunt_in explicitly lists 'companies/accounting' as a valid sectoral source. The legal function of establishing a minimum retention period is present and correctly identified."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text contains 'не менее пяти лет' (not less than five years), which directly matches the positive cue 'keep ... for a period of not less than' and the scoring criterion for a score of 1 ('keep >= X days/months/years'). It is not a retention limit (data minimization) but a minimum floor. The sectoral nature (accounting) is expressly permitted by the hunt_in criteria."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that documents related to accounting policy and electronic document reproduction means 'подлежат хранению... не менее пяти лет' (are subject to storage... for not less than five years). This textually establishes a minimum retention period of 5 years. The G6 WARN regarding modality is a false positive; 'подлежат' is a mandatory legal term in Russian legislation equivalent to 'shall', not permissive."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 402-FZ of 06.12.2011 On Accounting (consolid",
+  "article": "Art. 7",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a mandatory organizational duty to store accounting documents ('хранение документов'), which falls within the scope of data retention requirements. While it lacks a specific numeric duration, the rubric explicitly allows recording retention requirements without a specified minimum period as a score of 0. The mapping is legally sound as a recordable evidence row for the indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's scoring rule states: 'A retention requirement WITHOUT a specified minimum period is still RECORDED, scored 0'. The snippet evidences a retention duty (storage of documents) but does not specify a minimum period (e.g., 'at least X years'). Therefore, it is a valid evidence row supporting a score of 0. The hunt_in includes 'companies/accounting', so the sectoral source is appropriate."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly mandates the organization of 'хранение документов бухгалтерского учета' (storage of accounting documents) by the head of the economic subject. It does not contain a numeric minimum period, nor does it contain a retention limit (like 'no longer than necessary'). It is a valid instance of a retention requirement lacking a specified minimum duration, consistent with the indicator's definition for a score of 0."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 402-FZ of 06.12.2011 On Accounting (consolid",
+  "article": "Art. 29(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision applies to 'economic subjects' (economic entities), which is a horizontal scope covering private and public entities, not limited to government data. The legal function is clearly data retention, and the text explicitly sets a floor ('not less than five years'), satisfying the requirement for a minimum period."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly includes 'companies/accounting' law. The text contains the positive cue 'not less than five years' (Russian: 'не менее пяти лет'), which directly satisfies the scoring criterion for a clearly specified minimum retention period (score 1). It is not a retention limit (ceiling), so it does not trigger the exclusion for data minimization."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that documents 'are subject to storage... for a period of not less than five years' ('подлежат хранению... но не менее пяти лет'). The phrase 'подлежат хранению' (are subject to storage) is a mandatory legal modality in Russian legislation, equivalent to 'shall be retained'. The text unambiguously establishes a minimum floor of 5 years, supporting the mapping rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 44-FZ of 05.04.2013 On the Contract System i",
+  "article": "Art. 5(8)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates storage ('хранятся') for a period of 'not less than six years' ('не менее шести лет') for procurement documents in the unified information system. This constitutes a clear legal obligation with a specified minimum duration, satisfying the legal function of a retention requirement without scope defects."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a minimum retention period ('keep >= X'). The text 'не менее шести лет' (not less than six years) directly matches the positive cue 'for a period of not less than'. Although the data is government procurement data, the rubric's hunt_in explicitly includes sectoral laws, and the pillar_scope_exclusion for 'government data only' is typically interpreted in the context of general data protection frameworks where private sector data is the norm; however, even if strictl"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that information and documents 'are stored... not less than six years after the completion of the procurement'. The phrase 'не менее' (not less than) unambiguously establishes a floor/minimum retention period, not a ceiling or limit. The text does not contain permissive modality regarding the duration; the storage is a factual/legal state mandated by the law for that duration."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Government Resolution No. 445 of 12.04.2018 Rules for storag",
+  "article": "Art. 5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a specific obligation ('обеспечивает хранение' - ensures storage) on communications operators for a defined duration. There is no scope defect; it applies to private sector operators (telecoms) rather than solely government data, satisfying the pillar scope. The legal function is clearly data retention, not a different function like confidentiality or localization."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a minimum retention period ('keep >= X'). The text specifies 'в течение 6 месяцев' (for 6 months). In the context of mandatory storage obligations for telecom operators, this is interpreted as a minimum retention requirement (operators must keep data for this period). It is not a retention limit ('no longer than necessary') but a fixed duration mandate. The sectoral nature (telecom) is explicitly listed in 'hunt_in'. Therefore, it scores 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states operators 'ensure storage... for 6 months from the date of completion of their receipt...'. While the modality 'ensure' (обеспечивает) is a present tense indicative rather than an explicit 'shall', in legal drafting of this type (Russian Government Resolution), it establishes a binding duty. The duration '6 months' is clearly specified. The text does not indicate this is a maximum limit (ceiling) but a period of required storage. The mapping to a minimum retention period is"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Government Resolution No. 445 of 12.04.2018 Rules for storag",
+  "article": "Art. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision correctly identifies the legal function of mandatory data retention for telecommunications operators. While the specific duration is absent, the rubric explicitly permits recording retention requirements without a specified minimum period (score 0). The mapping is legally sound as it captures the duty to retain, which is the prerequisite for the indicator, even if the specific 'at least X' condition is not met in this snippet."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 states that a retention requirement WITHOUT a specified minimum period is still RECORDED and scored 0. The snippet evidences a retention duty ('осуществляет хранение' - performs storage) in the telecom sector, which is a valid 'hunt_in' area. The absence of a numeric minimum does not invalidate the mapping; it simply dictates the score. The mapping correctly reflects the 'requirement_present_scores_high' polarity by identifying the presence of the duty, even if the score is "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'Оператор связи осуществляет хранение...' (The communications operator performs storage...) establishes a mandatory operational duty for the operator. It is not a permissive 'may' clause. The text explicitly mandates the storage of user messages on the territory of the Russian Federation. The rationale correctly notes that while the duty is established, the specific minimum duration is not specified in this text, aligning with the rubric's instruction to record such provisions with a sc"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Government Resolution No. 687 of 15.09.2008 Regulation on pr",
+  "article": "Art. 8",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The provision mandates the *documentation* of processing periods ('srok obrabotki') within an operator's act, not the *retention* of data for a minimum period. It is a procedural requirement for defining the scope of processing, not a substantive retention duty. Mapping this to P7-I3 (Minimum period of data retention) is a legal function defect; it evidences a different indicator (likely related to transparency or purpose specification) rather than a retention requirement."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric for P7-I3 requires a 'minimum retention period is clearly specified (keep >= X days/months/years)'. The snippet contains the keyword 'srok obrabotki' (processing period) but does not specify a numeric minimum duration (e.g., 'at least 6 months'). The rationale admits it 'does not itself define a numeric' period. Under the scoring rule, a retention requirement without a specified minimum period is scored 0, but the mapping claims to evidence the indicator's presence (score 1 logic) or "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the provision 'establishes a mandatory data retention duty'. The text states that the operator's act must contain 'srok obrabotki' (processing periods). It does not state that data *must be kept* for a specific time; it states that the *document* must specify the time. Furthermore, the context is limited to 'single entry' logs for 'one-time access' ('odnokratnogo propuska'), which inherently suggests ephemeral or very short-term retention, contradicting the concept of a 'min"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Labor Code of the Russian Federation No. 197-FZ of 30.12.200",
+  "article": "Art. 87",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a mandatory duty for employers to define the procedure for storing employee personal data. While it does not specify a numeric minimum period, the rubric explicitly allows recording retention requirements without a specified minimum period as a score of 0. The mapping correctly identifies this as a sectoral (labor) retention duty, which is within the scope of hunt_in. There is no legal function defect; it is a valid evidence row for the absence of a specific minimum per"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 states that a retention requirement WITHOUT a specified minimum period is still RECORDED and scored 0. The snippet 'Порядок хранения... устанавливается работодателем' (The procedure for storage... is established by the employer) constitutes a retention requirement framework. The mapping rationale correctly assigns a score of 0 because no numeric duration is present. This aligns with the '4-Jul internal-guide rule' mentioned in the scoring criteria. The sectoral nature (Labor"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that the procedure for storage and use of employee personal data is established by the employer in compliance with the Code and other federal laws. It does not contain a phrase like 'retain for at least X years'. Therefore, it does not meet the criteria for a score of 1 (clearly specified minimum period). However, it does establish a legal framework for retention. The mapping claims a score of 0, which is textually accurate as the text itself lacks the specific minimum peri"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "RSFSR Law No. 395-I of 02.12.1990 On Banks and Banking Activ",
+  "article": "Art. 40.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory obligation ('обязана') on credit organizations to retain data for a specified period. It is not a mere recommendation or a limit on maximum retention. The scope is sectoral (banking), which is explicitly permitted by the rubric's 'hunt_in' criteria. No legal function defect exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text contains 'не менее чем пять лет' (not less than five years), which directly matches the positive cue 'keep ... for a period of not less than' and satisfies the scoring criterion for a score of 1 (minimum retention period clearly specified). The G6 warning regarding modality is a false positive; the Russian word 'обязана' is a mandatory 'must/shall', not a permissive 'may'. The mapping correctly identifies a minimum retention requirement, not a limit."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that the organization is obliged to ensure storage of information 'not less than five years from the date of inclusion'. This textually establishes a floor (minimum) for retention, not a ceiling. The context confirms this is a requirement for credit organizations to maintain records of their operations. The text does not support a reading of 'no longer than necessary' or any other exclusion."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (conso",
+  "article": "Art. 18.1(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates legal entity operators to appoint a responsible person for data processing organization. This constitutes a valid DPO-like accountability mechanism. The mapping is not refuted because the legal function (appointment of a responsible officer) is present and applies to legal entities generally, satisfying the core requirement of the indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 1 for DPO required across ALL sectors and 0.5 for sector-specific. The text applies to 'operators, being legal entities' (юридическим лицом), which is a horizontal category covering private and public sectors alike, not a specific industry sector. Therefore, it does not fall into the 'sector-specific' exclusion. The presence of the appointment requirement supports a high score (1 or 0.5 depending on strict DPO definition, but certainly not 0). The mapping is valid evidence for "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'Оператор обязан принимать меры... К таким мерам, в частности, относятся: 1) назначение...'. The verb 'обязан' (obliged/must) governs the list of measures. Thus, the appointment is mandatory, not permissive. The G6 WARN regarding modality is a false positive because the obligation is established in the introductory clause of Article 18.1(1), which the snippet includes. The text clearly establishes a mandatory duty to appoint a responsible person."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Criminal Procedure Code of the Russian Federation No. 174-FZ",
+  "article": "Art. 186.1(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly restricts the investigator's access to subscriber connection data to cases where a court decision has been issued ('допускается на основании судебного решения'). This aligns with the legal function of requiring independent judicial authorization, which is the core requirement for a score of 0 under P7-I5. There is no defect in the legal function or scope; it correctly identifies a court-gated access power."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs reviewers to look beyond privacy statutes into criminal procedure codes. The snippet from the Criminal Procedure Code is therefore valid evidence. The scoring rubric states that access powers exercisable ONLY under a court order support a score of 0. Since the text mandates a court decision for this specific access, it correctly supports the claimed score of 0. The G7 WARN is a procedural flag for legal review, not a refutation, as the mapping is consisten"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that obtaining the information is permitted 'on the basis of a court decision' ('на основании судебного решения'). It does not contain language allowing access without such authorization. The context confirms this is a mandatory procedural step for the investigator. The text strictly establishes a judicial gate, which is the precise condition for a score of 0 in the absence of warrantless access provisions in this specific snippet."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Criminal Procedure Code of the Russian Federation No. 174-FZ",
+  "article": "Art. 186.1(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly conditions the investigator's access to subscriber connection data on a 'court decision' (судебное решение). This aligns with the legal function of judicial authorization required by the rubric. There is no scope defect; the provision correctly identifies a government access power that is judicially gated, which is the precise subject of P7-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the Court-Order Test: the text states access is permitted 'on the basis of a court decision' (на основании судебного решения). The rubric states that a power exercisable ONLY under a court order supports score 0. The mapping rationale correctly identifies this as evidence supporting score 0. The provision is a valid evidence row for the indicator, even if it does not drive a score of 1, as the rubric instructs to 'Record both kinds of provision'."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'получение следователем указанной информации допускается на основании судебного решения' (obtaining by the investigator of said information is permitted on the basis of a court decision) unambiguously establishes that independent judicial authorization is a prerequisite for this specific access. The context confirms this is a mandatory condition, not a permissive option. The text does not support a reading of warrantless access."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 115-FZ of 07.08.2001 On Countering Money Lau",
+  "article": "Art. 9",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates state bodies to provide information and ensure automated access to databases for the authorized AML body (Rosfinmonitoring) without any requirement for judicial authorization. This constitutes a concrete legal function of warrantless government access to personal data held by state entities, fitting the P7-I5 scope. The sectoral nature (AML) is not a defect as the rubric's hunt_in explicitly calls for looking beyond privacy statutes to sectoral laws like AML/fin"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the Court-Order Test: The text states that state bodies 'provide' (представляют) information and 'ensure automated access' (обеспечивают автоматизированный доступ) to the authorized body. There is no condition requiring a court order, warrant, or independent judicial authorization. This matches the positive cue 'shall provide access to ... upon request' (implied by the mandatory nature of the duty to the authorized body) and the absence of negative cues like 'only under a warrant'. Ther"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes that state authorities must provide information and automated database access to the 'authorized body' (уполномоченный орган) for the performance of its functions. It explicitly states this is done 'in the procedure established by the Government' and does not require judicial approval. The text further clarifies that such provision does not violate banking or personal data laws. This textual evidence directly supports the rationale that a warrantless access power exist"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 144-FZ of 12.08.1995 On Operational-Search A",
+  "article": "Art. 7(3)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text (Art. 7(3)) authorizes OSINT agencies to collect data for specific administrative purposes (security clearances, licensing, internal security) rather than granting a general power to access personal data held by third parties or for investigative purposes. This is an internal administrative data-gathering power, not a cross-border or general surveillance access power that would drive the P7-I5 score. The rationale mischaracterizes this as a general authorization for government acc"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric's legal_test focuses on whether the government can access personal data WITHOUT independent judicial authorization in the context of surveillance or general access powers. The snippet describes 'collecting data' (собирать данные) for administrative decisions (licensing, security clearance). This is not the same legal function as 'accessing' (доступ) personal data held by others or for investigative purposes. The positive cues like 'without a warrant' are not present; instead, the text"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The exact quoted text states that agencies have the right to 'collect data necessary for making decisions' regarding specific administrative items (1-8). It does not state that they may 'access' personal data generally, nor does it explicitly state that this is done 'without judicial authorization' (though it is implied by the administrative nature). The rationale claims it 'authorizes government access to personal data without independent judicial oversight,' but the text is limited to data col"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 144-FZ of 12.08.1995 On Operational-Search A",
+  "article": "Art. 7(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly lists 'existence of a criminal case' and 'information known to agencies' as independent grounds for Operational-Search Activities (OSM), distinct from the ground requiring a court decision (Art. 7(1)(3)). This demonstrates that executive agencies can initiate OSMs without prior judicial authorization, which is the core defect sought by the indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs reviewers to look beyond privacy statutes into surveillance/lawful-access laws. This law is the primary Russian statute governing OSMs. The text provides positive cues for warrantless access (executive grounds) and correctly distinguishes them from the judicial ground listed in the same article, supporting a score of 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text of Art. 7(1) enumerates grounds 1 and 2 (criminal case, known information) which do not contain the phrase 'court order' or 'judicial warrant'. Ground 3 explicitly mentions 'determination of the court', proving that grounds 1 and 2 are non-judicial. The text establishes that access can be triggered by executive findings alone."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 149-FZ of 27.07.2006 On Information, Informa",
+  "article": "Art. 10.2(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision grants a federal executive body the right to request information and access to technical means of recommender systems. The text does not condition this access on a court order or independent judicial authorization. While the scope is limited to compliance with recommender system regulations (sectoral), the rubric's hunt_in explicitly directs reviewers to look beyond the privacy statute to sectoral laws (like telecom/IT laws) for access powers. Therefore, the legal function of warra"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the P7-I5 rubric: The indicator asks if the government can access personal data WITHOUT independent judicial authorization. The snippet shows an executive body ('federal organ...') has the right ('is entitled to request') to access data/systems. There is no mention of a warrant, court order, or judicial gate. This fits the 'positive_cues' (e.g., 'shall provide access... upon request' / 'authorized officer may...') and supports a score of 1 (warrantless access exists). The sectoral natur"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that the federal executive body 'is entitled to request... information... as well as access to program-technical means' ('вправе запрашивать... а также доступ'). The subsequent sentence mandates the owner to provide this access within 10 days. The text contains no language restricting this power to cases where a judicial warrant has been issued. It establishes a direct executive power to access data/systems without judicial pre-authorization, which is the precise fac"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 3-FZ of 07.02.2011 On Police (consolidated)",
+  "article": "Art. 17(3.1)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The cited text (Art. 17(1)) grants the police the right to 'process' (обрабатывать) data and enter it into databases. It does not explicitly grant the power to 'access' (доступ) or 'search' (поиск) data held by third parties or other state bodies without a warrant. The indicator P7-I5 specifically asks about 'access' to personal data. While processing implies some form of access, the legal function of 'warrantless access' (e.g., to telecom records, private servers, or other agencies' databases) "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs to look at 'surveillance/lawful-access law' and 'telecom law' and notes that 'police officer may access' is a positive cue. The provision establishes a broad executive power for the police to handle personal data without judicial authorization. Even if the primary function is data retention/processing, the absence of a judicial gate for this executive data handling activity aligns with the 'warrantless' nature required for a score of 1. The provision evide"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The exact text states: 'The police has the right to process data... with subsequent entry... into databases.' This is a provision regarding data processing and retention (likely mapping to indicators related to data retention or police data practices), not a provision granting the power to 'access' data held by others. The indicator P7-I5 is defined by the question: 'Can the government access personal data WITHOUT authorization...?'. The text does not say 'The police may access data held by X wi"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 3-FZ of 07.02.2011 On Police (consolidated)",
+  "article": "Art. 15(4)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The provision authorizes physical entry and inspection of premises/objects ('осмотр... объектов'), not access to 'personal data' as defined in data protection contexts. P7-I5 specifically concerns government access to personal data (typically electronic or stored records). While physical search may incidentally reveal data, the legal function here is physical intrusion/search, not data access. Mapping a physical search power to a data access indicator is a functional mismatch."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I5 asks about access to 'personal data'. The cited text (Art. 15(4)) governs 'проникновение' (entry) and 'осмотр' (inspection) of physical spaces and vehicles. It does not explicitly mention data, databases, or electronic records. Therefore, it does not directly evidence the specific legal function of 'access to personal data' required by the indicator, but rather evidences physical search powers (which might map to a different indicator regarding physical privacy or search war"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the provision authorizes 'government access to personal data (via physical search)'. The text strictly authorizes 'взлом... и осмотр... объектов и транспортных средств' (breaking locks and inspecting objects and vehicles). It does not contain the words 'data', 'information', or 'records'. Inferring 'personal data' access from 'object inspection' is an interpretive leap not supported by the exact quoted text, which focuses on physical premises and tangible items."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 38-FZ of 13.03.2006 On Advertising (consolid",
+  "article": "Art. 34(1)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The provision mandates the provision of documents and data to the antimonopoly authority for the purpose of competition law enforcement (Article 34 of the Law on Advertising). It does not establish a general power of government access to personal data for law enforcement, national security, or criminal investigation. The 'access' here is a specific administrative compliance duty within a sectoral regulatory context, not the broad 'government access' power contemplated by P7-I5. Mapping this spec"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs to look beyond privacy statutes to other laws. The provision describes a power exercisable upon a 'reasoned request' (мотивированному требованию) without any mention of judicial authorization or a warrant. Under the Court-Order Test, access that does not require independent judicial authorization scores 1. The text supports the rationale that this is a warrantless access mechanism, even if sectoral."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that entities are 'obliged to present... upon its reasoned request' (обязаны представлять... по его мотивированному требованию). It explicitly includes 'information constituting commercial, service and other legally protected secrets' and 'electronic correspondence'. The text establishes a mandatory duty to provide data and access to the authority's officials based solely on the authority's request, with no textual condition of judicial oversight. This textual fact supports"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Tax Code of the Russian Federation Part One No. 146-FZ of 31",
+  "article": "Art. 93(1)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited provision (Art. 93(1) of the Tax Code) governs the administrative procedure for requesting documents during a tax audit. It does not establish a general power of government access to personal data for law enforcement or national security purposes, which is the scope of P7-I5. While tax data may contain personal data, this specific article is a procedural rule for tax administration, not a surveillance or data access law. Mapping this to P7-I5 conflates routine administrative compliance"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric for P7-I5 asks about government access to personal data without judicial authorization. The snippet shows a tax official demanding documents ('вправе истребовать... документы'). While this is an access power, the 'legal function' here is tax audit compliance, not the exercise of state power over personal data in the context of privacy/security. The rubric's 'hunt_in' directs to look at criminal procedure, surveillance, and national security laws. A tax audit document request is a dist"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states that a tax official 'has the right to demand... documents' ('вправе истребовать... документы') without mentioning any requirement for a court order or judicial warrant. Under the strict textualist lens, this is a provision that allows government access to data (documents containing personal data) without independent judicial authorization. Therefore, it technically fits the definition of a '1-type' evidence row (access without warrant) for the indicator, even if the co"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Tax Code of the Russian Federation Part One No. 146-FZ of 31",
+  "article": "Art. 93.1(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision grants tax officials the power to demand documents and information from third parties (including registries and banks) without any requirement for a judicial warrant or court order. This constitutes a legal function of government access to data held by private entities without independent judicial authorization, which is the core defect sought by the indicator. The scope is horizontal as it applies to third parties, not just government data."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs reviewers to look beyond privacy statutes into other laws, and the positive cues include 'shall provide access... upon request' or similar administrative demands. This text ('вправе истребовать' - has the right to demand) fits the pattern of administrative access without judicial gatekeeping. It supports a score of 1 (warrantless access exists). The G6 WARN regarding modality is a false positive; 'вправе' (has the right/authority) is the standard legal mod"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that a tax official conducting an audit 'has the right to demand' (вправе истребовать) documents from counterparties or other persons possessing information. There is no textual condition requiring a court order, judge's authorization, or warrant. The text establishes a direct administrative power to access information held by third parties, which strictly aligns with the definition of access without independent judicial authorization."
+   }
+  ]
+ }
+]

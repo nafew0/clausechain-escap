@@ -1,0 +1,198 @@
+[
+ {
+  "indicator": "P2-I1",
+  "law": "Standard Bidding Document for Goods (Minister of Finance Ord",
+  "article": "cl. 17.11",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause imposes a mandatory requirement for proof of Mongolian origin for goods specified in the Terms of Reference (TOR). Failure to provide this proof results in the bid being deemed non-compliant. This is an operative exclusion of foreign-origin goods from the specific tender, not merely an enabling clause or a preference point. It fits the legal test for P2-I1 by operatively excluding foreign suppliers/goods."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines a score of 1 for measures excluding foreign firms under any circumstances, including 'goods produced domestically shall be procured'. The snippet explicitly requires goods to be of Mongolian origin and rejects bids without proof. This is a direct match to the positive cue 'goods produced domestically shall be procured' and the exclusion of foreign-origin goods. It is not a local-content threshold (P2-I3) because it is a binary eligibility requirement (origin proof) rather than"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states: '...goods... shall be of Mongolian origin... If the documentary evidence is not submitted, the said goods shall be considered non-compliant.' The modality is mandatory ('shall be', 'shall be considered'). The G6 WARN regarding 'no must/shall modality' is incorrect based on the Mongolian text provided ('болохыг нотлох... ирүүлнэ' implies a requirement to submit, and 'хангаагүй гэж үзнэ' is a definitive consequence). The text establishes a hard requirement for domestic origin, sup"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I1",
+  "law": "Standard Bidding Document for Goods (Minister of Finance Ord",
+  "article": "cl. 1.3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively excludes foreign-origin goods from specific tenders when the contracting authority designates them as domestically producible. This fits the P2-I1 legal test for exclusion based on domestic availability/origin, and does not fall under the exclusions for mere empowerment or local-content preferences that still allow foreign firms to win."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the scoring rubric. The clause excludes foreign-origin goods for a category of goods (those designated as domestically producible), which constitutes a measure excluding foreign firms under specific circumstances. This supports a score of 1 (or at least 0.5 if viewed as specific goods), validating the mapping to P2-I1 rather than P2-I3."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'зөвхөн Монгол Улсын гарал үүсэлтэй бараа нийлүүлнэ' (only goods of Mongolian origin shall be supplied) is a mandatory directive ('shall') triggered by the condition 'Ийнхүү заасан бол' (if designated as such). It establishes an operative exclusion of foreign goods, not a permissive option, thus supporting the rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Law on the Procurement of Goods, Works and Services by State",
+  "article": "Art. 27",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The snippet (Art. 27.2.3) describes a general calculation method for 'comparative price' (харьцуулах үнэ) by reducing it to reflect a 'preference' (давуу эрх). However, it does not specify the *trigger* for this preference (e.g., nationality, SME status, local content). The rubric for P2-I3 requires the limitation to be 'triggered by nationality/origin, SME or other status, or local-content percentage'. Without the trigger, this is a procedural mechanism for applying *any* preference defined els"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric's legal_test requires the provision to 'OPERATIVELY impose a limitation... whether triggered by nationality/origin... or applied to all bidders'. The cited text (27.2.3) is a neutral arithmetic instruction ('reduce comparative price to reflect preference') that lacks the substantive content (the 'what' and 'who') required to score 0.5 or 1. It is a procedural step in the evaluation algorithm, not the substantive rule establishing the preference. Mapping this to P2-I3 fails the hunt_in"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the provision 'requires the contracting entity to reduce the comparative price of a bid to reflect a preference'. The text states: 'давуу эрх олгож харьцуулах үнийг хийсвэрээр бууруулах' (reduce the comparative price by a fixed amount to grant preference). It does not state *what* preference is being granted or *to whom*. The text establishes a calculation method, not a limitation on bidding based on status. The exact quoted text does not establish a nationality-based or SME"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Standard Bidding Document for Goods (Minister of Finance Ord",
+  "article": "cl. 17.10",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause operatively imposes a preference mechanism for goods of Mongolian origin in government procurement, which falls squarely within the scope of P2-I3 (limitations in procurement bidding). It is not a commercial market rule (Pillar 10.3) nor a foreign equity cap (Pillar 3). The text explicitly links the preference to the origin of the goods, satisfying the legal function requirement."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision matches positive cues such as 'price preference for goods of domestic origin' and 'domestic bidders shall be given a preference'. Under the rubric, a measure directly discriminating against foreign bidders based on origin scores 1. The snippet provides the operative mechanism for calculating this preference, validating the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that if documents proving Mongolian origin are submitted, the preference is calculated according to the Minister of Finance's methodology. This textually establishes a conditional preference based on origin, which is the core element of the indicator. The context confirms that without such proof, no preference is granted, reinforcing the discriminatory nature of the measure."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Standard Bidding Document for Goods (Minister of Finance Ord",
+  "article": "cl. 31.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively imposes a price preference for domestic goods in government procurement, which falls squarely within the scope of P2-I3. It is not a commercial market rule (Pillar 10.3) nor a foreign equity cap (Pillar 3). The legal function is correctly identified as a procurement limitation."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines a score of 1 for measures directly discriminating against foreign bidders via price preference/margin triggered by origin. The snippet explicitly grants a 'price preference' (discount) to 'domestic goods' (дотоодын бараан), satisfying the legal test for an operative limitation. The mapping aligns with the positive cue 'price preference for goods of domestic origin'."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states the purchaser 'grants' (олгож) a preference and 'calculates' (тооцно) the price reduction. While G6 flags a potential modality issue, the context of a Standard Bidding Document (SBD) implies these are mandatory procedural steps for the contracting authority, not permissive options. The text clearly establishes a mechanism for price adjustment based on domestic origin, supporting the rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Tender Evaluation and Preference Methodology (Minister of Fi",
+  "article": "cl. 9.4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively imposes a price preference (5% or 7.5% reduction) in government procurement bidding. While the specific trigger (domestic vs. SME) is defined in the referenced cl. 8.8, the current clause establishes the operative margin required by the P2-I3 legal test. It is not merely an empowering clause, nor is it a commercial market rule."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet matches positive cues for 'price preference' and 'margin of preference'. The rubric accepts measures applied to specific categories (like SMEs or domestic goods) as valid evidence for P2-I3. The scoring logic (1 for discriminatory, 0.5 for all bidders) depends on the trigger in 8.8, but the existence of the operative preference mechanism itself satisfies the indicator's requirement to record the operative preference/threshold provision."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states that if priority is granted under 8.8, the comparative price is reduced by 5% or 7.5%. This is a clear, operative modification of the bid evaluation price. It does not establish a ban, a retention period, or a data residency rule. It strictly establishes a financial advantage in the bidding process, which is the core of P2-I3."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Tender Evaluation and Preference Methodology (Minister of Fi",
+  "article": "cl. 8.5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is a specific, operative methodology for calculating price preferences in government procurement, not a generic commercial rule or a mere empowerment clause. It falls squarely within the scope of P2-I3 (Limitations in procurement bidding) and does not trigger exclusions for Pillar 10.3 (commercial market) or P2-I1 (outright exclusion)."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines a score of 1 for measures 'directly discriminating against foreign bidders' or involving 'price preference/margin... triggered by nationality/origin'. The snippet explicitly limits the discount base to 'domestic goods' (дотоодын бараа), creating a structural advantage for domestic content that foreign bidders cannot access for that portion of the bid. This matches the 'gold' example of Malaysia's locally made goods preference."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states the base price for calculating the discount is 'only the total price of domestic goods proposed in that tender' (зөвхөн... дотоодын барааны нийлбэр үнэ). This textually establishes a mechanism where the preference calculation is exclusive to domestic items, confirming the rationale that it creates a discriminatory evaluation advantage."
+   }
+  ]
+ }
+]

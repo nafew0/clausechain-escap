@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { currentRunMode } from '@/lib/runMode'
 
 declare module 'axios' {
   export interface AxiosRequestConfig {
@@ -114,6 +115,12 @@ api.interceptors.request.use(
     if (accessToken) {
       config.headers = config.headers || {}
       config.headers.Authorization = `Bearer ${accessToken}`
+    }
+    // Workspace calls read the Hybrid or the Local workspace, whichever tab is open.
+    // An explicit `mode` param wins; the comparison reads both workspaces itself.
+    if (config.url?.startsWith('/workspace/') && !config.url.startsWith('/workspace/comparison')
+      && currentRunMode() === 'local' && !(config.params && 'mode' in config.params)) {
+      config.params = { ...(config.params ?? {}), mode: 'local' }
     }
     return config
   },

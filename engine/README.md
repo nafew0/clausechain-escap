@@ -45,6 +45,35 @@ uv run python run.py --country SG --pillar 6 --out outputs/demo
 uv run python run.py --economy Singapore --pillar 6 --out outputs/demo
 ```
 
+## Round-2 economies (config packs)
+
+Thailand, India, Indonesia, Russian Federation, Mongolia, Lao PDR and Timor-Leste are
+configuration only: `configs/jurisdictions/<code>.yaml` plus their rows in
+`data/seeds_r2.json`. Every seed needs a matching `status_assertions` entry in its pack, or the
+builder records it as a `STATUS_UNKNOWN` lead instead of loading it.
+
+```bash
+# 1. archive the official sources (resumable; successes are never refetched)
+.venv/bin/python -m packages.connectors.seeds_fetch --economy "Timor-Leste" --seeds data/seeds_r2.json
+# 2. build the provision corpus (run.py also auto-builds when the corpus is empty)
+.venv/bin/python scripts/build_seeds_corpus.py --economy "Timor-Leste"
+# 3. hybrid run (Model A) -> where the snapshot import reads it; local (Model B) -> outputs/local_*
+.venv/bin/python run.py --economy "Timor-Leste" --pillar 6 --out outputs/final_r2_tl_p6
+.venv/bin/python run.py --economy "Timor-Leste" --pillar 6 --provider-profile local_openweights --out outputs/local_tl_p6
+```
+
+Run-folder codes: `th in id ru mn la tl`. RU/MN/LA/TL join the hybrid snapshot once their
+`outputs/final_r2_<code>_p<n>/output.json` exists (`review_layout.OPTIONAL_HYBRID_CODES`).
+
+Acquisition per economy (seed `acquire:` field):
+- **Russian Federation** `html_render`: official consolidated texts exist only as pravo.gov.ru
+  ИПС HTML. The pinned-revision print view is printed to PDF by Chromium (raw HTML archived beside
+  it); superscript article numbers (`Статья 18¹`) are kept as Unicode superscripts and cited `Art. 18.1`.
+- **Mongolia** `legalinfo_pdf_export`: legalinfo.mn's own "Pdf" export (POST `/mn/pdfExport`).
+- **Lao PDR**: gazette/BOL PDFs, mostly scans, so Vision OCR with Lao hints.
+- **Timor-Leste**: Jornal da República issues bundle several diplomas per PDF, so seeds carry
+  `page_range` plus a `#page=N` fragment to keep one manifest entry per instrument.
+
 ## Operating modes and finalization
 
 - `live`: official acquisition plus configured providers from `.env`.

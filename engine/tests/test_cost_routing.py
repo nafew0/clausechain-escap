@@ -71,3 +71,57 @@ def test_cost_report_prices_cached_and_batch_tokens_separately():
     assert report["models"]["gpt-5.4-nano"]["usd"] == 1.36
     assert report["models"]["gpt-5.4-nano [batch]"]["usd"] == 0.725
     assert report["total_usd"] == 2.085
+
+
+def test_screen_batches_go_out_concurrently_and_keep_sequential_order():
+    from packages.rdtii.mapper import SCREEN_BATCH_SIZE, ScreenBatch, screen_candidates
+
+    pool = [SimpleNamespace(provision_id=f"p{i}", text=f"Provision {i}.",
+                            props={"article_section": f"s {i}", "heading": ""})
+            for i in range(SCREEN_BATCH_SIZE * 2 + 3)]
+
+    class ScreenLLM:
+        def __init__(self):
+            self.calls = []
+
+        def complete_many(self, prompts, schema, *, prompt_cache_keys=None):
+            self.calls.append(len(prompts))
+            # keep the first and last candidate of every batch
+            return [ScreenBatch.model_validate({"decisions": [
+                {"candidate_index": index, "relevant": index in (0, prompt.count("Provision ") - 1)}
+                for index in range(prompt.count("Provision "))
+            ]}) for prompt in prompts]
+
+    llm = ScreenLLM()
+    survivors = screen_candidates(llm, "6.1", {"name": "Ban", "question": "Ban?"}, pool)
+    assert llm.calls == [3]  # all three batches in ONE concurrent call, not three sequential ones
+    assert [c.provision_id for c in survivors] == [
+        "p0", f"p{SCREEN_BATCH_SIZE - 1}", f"p{SCREEN_BATCH_SIZE}",
+        f"p{SCREEN_BATCH_SIZE * 2 - 1}", f"p{SCREEN_BATCH_SIZE * 2}", f"p{SCREEN_BATCH_SIZE * 2 + 2}",
+    ]
+
+
+def test_local_openweights_provider_disables_reasoning_by_default(monkeypatch):
+    from packages.providers.llm_providers import build_llm
+
+    monkeypatch.setenv("LOCALAI_ENDPOINT", "http://vllm.test/v1")
+    monkeypatch.delenv("LOCALAI_ENABLE_THINKING", raising=False)
+    provider = build_llm("openai_compatible:served-name")
+    assert provider.request_model == "served-name"
+    assert provider.extra_body == {"chat_template_kwargs": {"enable_thinking": False}}
+    monkeypatch.setenv("LOCALAI_ENABLE_THINKING", "1")
+    assert build_llm("openai_compatible:x").extra_body["chat_template_kwargs"]["enable_thinking"]
+    # Commercial providers never receive vLLM-only fields.
+    assert build_llm("openrouter:openai/gpt-5.6-luna").extra_body == {}
+
+
+def test_local_concurrency_is_separate_from_hybrid(monkeypatch):
+    from packages.providers.llm_providers import build_llm
+
+    monkeypatch.setenv("LOCALAI_ENDPOINT", "http://vllm.test/v1")
+    monkeypatch.delenv("LOCALAI_CONCURRENCY", raising=False)
+    assert build_llm("openai_compatible:m").concurrency == 3
+    monkeypatch.setenv("LOCALAI_CONCURRENCY", "2")
+    assert build_llm("openai_compatible:m").concurrency == 2
+    # Hybrid providers keep the global CLAUSECHAIN_LLM_CONCURRENCY (default 6).
+    assert build_llm("openrouter:openai/gpt-5.6-luna").concurrency is None

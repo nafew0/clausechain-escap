@@ -1,0 +1,898 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "PDP Data Protection Impact Assessment Guideline 2026",
+  "article": "s. 12(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet is from a Commissioner-issued guideline, which is subordinate legislation or guidance, not the primary statute. However, for an absence-scored framework indicator (P7-I1), the existence of a detailed, operational guideline for a core obligation (DPIA) is strong evidence that a comprehensive horizontal framework exists and is being implemented. It does not prove the framework is absent, nor does it misrepresent a sectoral law as horizontal. The legal function (evidencing the framework"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' if a comprehensive horizontal framework exists. The snippet describes a DPIA requirement for 'sensitive personal data' and 'automated decision-making' in an insurance context. While the example is sectoral (insurance), the obligation itself (DPIA for sensitive data/automated decisions) is a hallmark of a comprehensive horizontal framework (like the PDPA). The mapping rationale correctly identifies this as evidence of the framework's existence. The rubric allows fo"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states: 'The data controller shall conduct a DPIA because the processing involves sensitive personal data...'. This is a mandatory obligation ('shall') triggered by specific conditions (sensitive data, automated decision-making). It does not explicitly state 'this is a horizontal law,' but it establishes a legal duty applicable to 'data controllers' generally, not just a specific government body. The context is an 'Example 1' within a guideline, but the underlying rule it illustra"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Personal Data Protection (Amendment) Act 2024 (Act A1727)",
+  "article": "s. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet is from the Personal Data Protection (Amendment) Act 2024, which amends the Personal Data Protection Act 2010 (Act 709). The PDP Act 2010 is a horizontal, comprehensive data protection law applicable to all data controllers in Malaysia. The amendment confirms the continued existence and evolution of this horizontal framework. There is no scope defect; the law is not sectoral-only, nor is it a cybersecurity law. The mapping correctly identifies the presence of a comprehensive framewor"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The cited law is the PDP Act (amended), which is the primary horizontal data protection statute in Malaysia. The snippet shows amendments to core definitions (data controller, personal data, etc.), confirming the law's active status and comprehensive nature. This supports a score of 0 (framework present), which is the correct outcome for an economy with a horizontal law. The evidence is valid for the indicator."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly amends 'Akta ibu' (the principal Act) by updating definitions such as 'data biometrik', 'pelanggaran data peribadi', and 'subjek data'. These are core components of a comprehensive data protection regime. The text does not limit the scope to specific sectors or government data only. It establishes the legal definitions under which the horizontal framework operates. The text supports the rationale that a comprehensive framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Personal Data Protection Act (Act 709) 2010",
+  "article": "s. 93(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited provision (s. 93(1)) is part of the Personal Data Protection Act 2010 (Act 709), which is a horizontal statute. The existence of an appeal mechanism within this Act confirms the operational status of the law. There is no legal-function defect; the provision correctly evidences the existence of the framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The mapping identifies the PDPA 2010 as a horizontal law. The snippet, while specific to appeals, is from the main Act, not a sectoral law. Therefore, it supports the '0' score (framework present). The rationale correctly links the provision to the presence of the framework."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly references 'this Act' and lists matters such as 'registration of a data user' and 'enforcement notice' under the Act. It does not limit itself to a specific sector (e.g., banking or health). The text establishes the procedural machinery of the Act, which is consistent with the existence of a comprehensive legal framework. The snippet does not contradict the claim of horizontal coverage."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Personal Data Protection Code Of Practice For Banking Sector",
+  "article": "s. 4.3.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision correctly identifies the legal function as a scope-of-application clause for a sectoral data protection code. It does not misread a confidentiality rule as localization or a business transfer as data transfer. The mapping accurately reflects that this is a sectoral instrument, which is the correct legal characterization for the purpose of assessing the comprehensiveness of the framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 explicitly states that 'Sectoral DP laws are RECORDED but do not make the framework comprehensive' and that a score of 0.5 applies to 'Sectoral-only laws'. The mapping rationale correctly identifies the provision as evidence of a sectoral framework. Therefore, using this provision as an evidence row is methodologically sound and aligns with the scoring guidance for identifying the nature of the existing legal landscape."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'This Code shall apply to all personal data... that are in the possession or under the control of Data Users' establishes the applicability of the Code to personal data within the banking sector. The context confirms this is the 'PDP Code Of Practice For The Banking And Financial Sector'. The text supports the rationale that a data protection framework exists for this sector. There is no textual contradiction or misinterpretation of the scope defined in the snippet."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Cyber Security (Licensing of Service Provider) Regulations 2",
+  "article": "s. 6(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly references 'seksyen 28 Akta' (Section 28 of the Act) and the licensing of 'perkhidmatan keselamatan siber' (cybersecurity services). This confirms the regulation is subsidiary legislation under a parent Cyber Security Act. The indicator P7-I2 asks for the existence of a dedicated legal framework. The existence of a licensing regime for cybersecurity service providers is strong evidence of a dedicated, horizontal framework (as opposed to scattered clauses in privacy laws). "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '0' for a dedicated horizontal cybersecurity framework. The source is from NACSA (National Cyber Security Agency), the official body for Malaysia's Cyber Security Act 854. The snippet evidences a specific regulatory mechanism (licensing) within this dedicated act. This is not a 'non-dedicated' framework (0.5) nor a 'sectoral-only' framework (0.5) because it is part of the overarching Cyber Security Act which applies horizontally. The evidence aligns with the '0' score condition"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states that an application for a license to provide cybersecurity services must be made to the Executive Director under Section 28 of the Act. This textually establishes the existence of a statutory regime governing cybersecurity services. It does not merely describe a generic business license; it specifies 'perkhidmatan keselamatan siber' (cybersecurity services). Therefore, the text supports the rationale that a dedicated framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Cyber Security (Licensing of Service Provider) Regulations 2",
+  "article": "s. 6(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is a subsidiary regulation under the Cyber Security Act 2024 (Act 854). While it specifically addresses licensing of service providers, it is part of the broader dedicated horizontal legal framework established by the Act. The rubric allows for evidence of a dedicated framework; the existence of this regulation confirms the operationalization of the dedicated act, which is the primary requirement for a score of 0. It does not suffer from a scope defect that would invalidate the map"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P7-I2 scores '0' for a dedicated horizontal cybersecurity framework. The source is the 'Cyber Security (Licensing of Service Provider) Regulations 2024', which are subsidiary legislation to the Cyber Security Act 854. The Act is a dedicated, horizontal law. The snippet evidences the existence and implementation of this framework. The rubric's positive cues include 'Cyber Security Act'. This provision supports the presence of the dedicated framework, aligning with the scoring criter"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly references 'seksyen 28 Akta' (Section 28 of the Act) and 'perkhidmatan keselamatan siber' (cyber security services). It establishes a licensing requirement for cyber security service providers. This textual evidence confirms the existence of a legal regime specifically designed for cybersecurity services, which falls under the umbrella of the dedicated Cyber Security Act. The text does not contradict the claim that a dedicated framework exists; rather, it provides a specific "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Cyber Security (Notification of Incident) Regulations 2024",
+  "article": "s. 2(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited regulation is subsidiary legislation made under the Cyber Security Act 854 (Act 854), which is a dedicated horizontal cybersecurity law. The provision mandates incident notification for 'entiti infrastruktur maklumat kritikal negara' (critical information infrastructure entities), which falls within the scope of the horizontal framework's operational requirements. It does not suffer from a scope defect that would invalidate the mapping to the existence of a dedicated framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores '0' when a dedicated horizontal cybersecurity framework exists. The snippet evidences the operational machinery (incident notification) of the Cyber Security Act 854. While the indicator is absence-scored (high score for lack), the presence of this provision confirms the existence of the dedicated framework, supporting a score of 0. The rubric explicitly accepts sectoral evidence if it is part of a horizontal act, and this regulation is part of the horizontal Act 854."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly references 'seksyen 23 Akta' (Section 23 of the Act) and 'entiti infrastruktur maklumat kritikal negara' (critical information infrastructure entities). This confirms the provision is part of a broader statutory regime (the Act) dealing with cybersecurity incidents. The text establishes the existence of mandatory reporting obligations under a specific cybersecurity law, which directly supports the rationale that a dedicated framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Cyber Security (Notification of Incident) Regulations 2024",
+  "article": "s. 2(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited regulation is subsidiary legislation made under the Cyber Security Act 2024 (Act 854). While the specific provision mandates notification for 'critical infrastructure entities' (which is sectoral in scope), it is part of a broader statutory framework. The rubric allows for a score of 0.5 if a dedicated framework is sectoral-only, or 0 if a horizontal framework exists. The existence of this regulation confirms the presence of a dedicated cybersecurity legal regime. It does not refute th"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P7-I2 asks if the economy LACKS a dedicated legal framework. The scoring rubric assigns 0 to a dedicated horizontal framework and 0.5 to a non-dedicated or sectoral-only framework. The source text is from the 'Cyber Security (Notification of Incident) Regulations 2024', which are subsidiary regulations to the Cyber Security Act 2024. This clearly evidences the existence of a dedicated cybersecurity framework. The snippet specifically addresses incident response for critical infrast"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text is from Regulation 2(3) of the Cyber Security (Notification of Incident) Regulations 2024. The text mandates that authorized persons of critical infrastructure entities must provide additional information within 14 days of notification. This text explicitly references 'insiden keselamatan siber' (cyber security incident) and 'infrastruktur maklumat kritikal negara' (national critical information infrastructure). It establishes a legal obligation for incident reporting. This"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Cyber Security (Risk Assessment and Audit) Regulations 2024",
+  "article": "s. 3(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited regulation is a subsidiary instrument made under the Cyber Security Act 2024 [Act 854]. While the specific duties apply to 'national critical information infrastructure entities' (which could be argued as sectoral in scope), the regulation itself is part of the dedicated horizontal framework established by the Act. The indicator P7-I2 asks if a dedicated law exists. The existence of this regulation, derived from the Act, confirms the operationalization of the dedicated framework. It do"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores '0' if a dedicated HORIZONTAL cybersecurity framework exists. The source text explicitly cites the 'Cyber Security Act 2024 [Act 854]' as the enabling legislation. The example in the rubric explicitly states 'MY Cyber Security Act 854 (2024) -> 0'. The provided snippet is a regulation under this Act. Although the specific clause targets critical infrastructure, the rubric's exclusion for 'sectoral notices' applies when a horizontal act does *not* exist or when the evi"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact source snippet and surrounding context clearly state: 'IN exercise of the powers conferred by section 63 of the Cyber Security Act 2024 [Act 854]'. This textual evidence directly establishes the existence of the 'Cyber Security Act 2024'. The indicator P7-I2 is an absence-scored framework indicator (polarity: framework_absent_scores_high). The presence of this text confirms the framework is NOT absent. The rationale claims this satisfies the test for a dedicated law. The text supports "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Cyber Security (Risk Assessment and Audit) Regulations 2024",
+  "article": "s. 3(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies that the subsidiary regulation is made under the Cyber Security Act 2024 [Act 854], which is a dedicated horizontal framework. The regulation's scope covers 'national critical information infrastructure entities,' which aligns with the horizontal nature of the parent Act. There is no legal-function defect; the provision evidences the operationalization of the dedicated framework, supporting a score of 0 (framework exists)."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores 0 for a dedicated horizontal cybersecurity framework. The source text explicitly cites the 'Cyber Security Act 2024 [Act 854]' and the regulation is issued by the Minister under Section 63 of that Act. This confirms the existence of a dedicated horizontal law, not just sectoral or non-dedicated measures. The evidence supports the '0' score outcome (framework present), which is the correct application of the rubric's polarity (framework_absent_scores_high)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text and surrounding context explicitly state 'IN exercise of the powers conferred by section 63 of the Cyber Security Act 2024 [Act 854]'. This textual evidence directly establishes the existence of a dedicated Cyber Security Act. The snippet does not misrepresent the source; it accurately reflects a provision within the dedicated horizontal framework, thereby validating the mapping rationale that a dedicated framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Cyber Security Act (Act 854) 2024",
+  "article": "s. 5(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet from Act 854 (Malaysia's Cyber Security Act) establishes a National Cyber Security Committee with cross-ministerial membership (Finance, Defence, Home Affairs, etc.), which is characteristic of a horizontal, dedicated cybersecurity framework. This directly supports the claim that a dedicated horizontal framework exists, scoring 0 under P7-I2. There is no legal-function defect; the provision is not sectoral-only nor a generic privacy clause."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores 0 for a 'dedicated HORIZONTAL cybersecurity framework'. The cited law is the 'Cyber Security Act (Act 854) 2024', which matches the positive cue 'Cyber Security Act'. The snippet evidences the institutional structure of this dedicated act. The mapping correctly identifies the existence of the framework, leading to a score of 0 (absence of lack). The rationale is supported by the text."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'A committee by the name of “National Cyber Security Committee” is established' within the context of Act 854 explicitly establishes the creation of a national-level body. The surrounding context lists members from various government departments, confirming the horizontal scope. The text does not limit the committee to a specific sector, nor does it suggest the law is merely a sectoral notice. It substantiates the existence of the dedicated framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Cyber Security Act (Act 854) 2024",
+  "article": "s. 20(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is part of the Cyber Security Act 854, which is a dedicated horizontal cybersecurity law. The mapping correctly identifies the existence of this framework. There is no legal-function defect; the provision evidences the operational scope of the dedicated law, which is sufficient to refute the 'lack of framework' condition."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 0 for a dedicated horizontal cybersecurity framework. Act 854 is explicitly cited in the rubric's example as a valid horizontal act (MY Cyber Security Act 854 (2024) -> 0). The snippet from s. 20(1) is a valid evidence row for the existence of this framework. The sectoral nature of the specific clause (NCII) does not invalidate the horizontal nature of the Act itself, which is the controlling evidence for the indicator."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly references 'national critical information infrastructure' and 'cyber security' within the context of Act 854. The surrounding context confirms this is part of a broader statutory scheme (referencing Chief Executive, offences, etc.). The text establishes the existence of a specific legal regime for cybersecurity, supporting the rationale that a dedicated framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Anti-Money Laundering Act 2001 (Act 613)",
+  "article": "s. 17(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('shall maintain') on reporting institutions to keep records for 'at least six years'. This is a clear legal function of minimum retention, not a limit or permissive suggestion. The scope (financial sector) is explicitly permitted by the rubric's hunt_in criteria."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 scores '1' when a minimum retention period is clearly specified. The text 'for a period of at least six years' matches the positive cue 'for six years from' and the legal test 'keep >= X days/months/years'. The sectoral nature (AML) is a valid source per hunt_in. The mapping is correct."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states 'shall maintain... for a period of at least six years'. This textually establishes a floor (minimum) for retention, not a ceiling. The context confirms this applies to accounts, records, and transactions. The rationale that this maps to a minimum retention period is fully supported by the literal wording."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Anti-Money Laundering Act 2001 (Act 613)",
+  "article": "s. 17(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('shall maintain') on reporting institutions to keep records for 'at least six years'. This is a clear minimum retention period, not a limit or permissive option. The scope (financial sector) is explicitly permitted by the rubric's hunt_in criteria. No legal-function defect exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text matches the positive cue 'for a period of at least six years' and satisfies the scoring criterion for '1' (minimum retention period clearly specified). The rubric explicitly lists anti-money-laundering law as a valid source for this indicator. The mapping is consistent with the indicator's polarity and scoring rules."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states 'shall maintain... for a period of at least six years'. This textually establishes a floor (minimum) for retention, which directly answers the indicator question 'Must data be kept FOR AT LEAST a specified period?'. The context confirms this applies to accounts, records, and transactions, supporting the rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Anti-Money Laundering Act 2001 (Act 613)",
+  "article": "s. 17(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited provision (s. 17(1)) imposes a mandatory duty ('shall maintain') on reporting institutions to keep records for 'at least six years'. This is a clear legal function of minimum retention. The citation alignment is exact, and the scope (financial sector) is explicitly permitted by the rubric's hunt_in. No legal-function or scope defect exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a specified minimum period ('keep >= X'). The text states 'for a period of at least six years', which matches the positive cue 'for a period of... years' and the scoring criterion for score 1. The sectoral nature (AML) is expressly called for in hunt_in. The mapping correctly identifies a minimum retention requirement, not a limit."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted snippet contains the phrase 'for a period of at least six years'. This textually establishes a floor (minimum) for retention, not a ceiling. The context confirms this applies to accounts, records, and documents. The text does not support a reading of data minimization or a maximum limit. The mapping is textually accurate."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Companies Act 2016 (Act 777)",
+  "article": "s. 341(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('shall be kept') on companies to retain specific records for a defined duration. There is no legal-function defect; it is not a data minimization limit (which would be 'no longer than necessary') nor a government-only measure. The scope is corporate sectoral law, which is explicitly permitted under the rubric's hunt_in criteria."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet contains the exact positive cue 'shall be kept for at least seven years'. This satisfies the scoring criterion for '1' (A minimum retention period is clearly specified). The rubric explicitly lists 'companies/accounting' as a valid sectoral source for hunt_in. The mapping correctly identifies a minimum period rather than a maximum limit."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text 'The records shall be kept for at least seven years from the date of the resolution, meeting or decision' unambiguously establishes a floor (minimum) retention period of seven years. The context confirms this applies to company records (resolutions, minutes). The text does not contain language suggesting this is a ceiling or permissive option. The citation aligns with the provided snippet."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Companies Act 2016 (Act 777)",
+  "article": "s. 341(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('shall be kept') on companies to retain specific records for a defined duration. There is no legal-function defect; it is a clear retention obligation, not a data minimization limit or a government-only measure. The scope is horizontal as it applies to all companies under the Act."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a minimum retention period ('keep >= X'). The text states 'kept for at least seven years', which matches the positive cue 'for a period of seven years' and the scoring criterion for score 1. The hunt_in explicitly includes 'companies/accounting' law, so the sectoral nature is valid. The direction is correct (minimum, not maximum)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'The records shall be kept for at least seven years from the date of the resolution, meeting or decision, as the case may be' unambiguously establishes a minimum retention period of seven years. The context confirms these are company records (resolutions, minutes). The text does not contain language suggesting a ceiling or permissive option; 'at least' is a strict lower bound."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Companies Act 2016 (Act 777)",
+  "article": "s. 341(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('shall be kept') on companies to retain specific records for a defined duration. There is no legal-function defect; it is a clear retention obligation, not a data minimization limit or a government-only measure. The scope is corporate, which falls within the 'companies/accounting' sectoral law category explicitly listed in the rubric's hunt_in."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 scores '1' when a minimum retention period is clearly specified. The text 'kept for at least seven years' matches the positive cue 'for a period of seven years' and the semantic requirement of 'keep >= X years'. The direction is correct (minimum, not maximum), and the sectoral source (Companies Act) is valid per the hunt_in instructions."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states 'The records shall be kept for at least seven years'. This textually establishes a floor (minimum) of seven years for the retention of the specified records. It does not establish a ceiling or a permissive option. The context confirms this applies to resolutions and minutes, which are data records subject to the retention requirement."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Cyber Security Act (Act 854) 2024",
+  "article": "s. 32(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('shall be... retained') on licensees to keep records for a specific duration. There is no legal-function defect; it is a clear retention obligation, not a confidentiality or localization rule. The scope (Cyber Security Service Providers) is valid under the rubric's hunt_in for sectoral law."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'retained for a period of not less than six years' matches the positive cue 'keep ... for a period of not less than' and establishes a minimum period (>= 6 years). This satisfies the scoring criterion for '1' (minimum retention period clearly specified). It is not a retention limit (ceiling), so the exclusion for 'no longer than necessary' does not apply."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'retained for a period of not less than six years' explicitly establishes a floor for retention. The context confirms this applies to the records listed in subsection (1). The text does not establish a ceiling or a permissive option, but a mandatory minimum, which aligns perfectly with the indicator's definition."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Cyber Security Act (Act 854) 2024",
+  "article": "s. 32(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty on licensees to retain records for 'not less than six years.' This is a clear minimum retention period, not a limit or permissive suggestion. The scope (cyber security services) is a valid sectoral application under the rubric's hunt_in criteria. No legal function defect exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text matches the positive cue 'keep ... for a period of not less than'. The rubric scores '1' when a minimum retention period is clearly specified. The snippet explicitly states 'not less than six years', satisfying the scoring criterion for P7-I3. The sectoral nature (cyber security) is expressly permitted by the hunt_in list."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'retained for a period of not less than six years' establishes a floor for retention duration. It does not establish a ceiling (which would be a retention limit) nor is it conditional in a way that negates the minimum requirement. The context confirms this applies to the records listed in subsection (1), directly supporting the indicator's question about keeping data for at least a specified period."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Personal Data Protection Code Of Practice For Banking Sector",
+  "article": "s. 3.2.12",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to 'maintain records' of Privacy Notice communication. While it does not specify a duration, the rubric explicitly states that a retention requirement without a specified minimum period is still recorded and scored 0. The mapping correctly identifies this as a retention duty within the sectoral scope (Banking) permitted by the hunt_in criteria. There is no legal-function defect; it is a valid evidence row for the indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the P7-I3 rubric: The indicator asks if data must be kept for at least a specified period. The text mandates record maintenance but lacks a numeric duration (e.g., 'at least 6 years'). According to the scoring rule, 'No minimum period specified' results in a score of 0, but the provision is still 'RECORDED'. The mapping rationale correctly notes the absence of a specific minimum duration. The sectoral nature (Banking) is explicitly allowed by the 'hunt_in' field. Therefore, the mapping "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states: 'The Regulations require Data Users to maintain records...'. This is a clear affirmative obligation to retain specific records. It does not contain negative cues like 'do not keep longer than necessary' (which would be a retention limit/exclusion). It does not merely describe a process but imposes a duty ('require... to maintain'). The text establishes a retention obligation, which is the core subject of P7-I3, even if the duration is undefined. The mapping accurately refl"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "PDP Commissioner Circular 1/2025 - Appointment of Data Prote",
+  "article": "s. 10",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly states the circular's purpose is to explain the appointment of Data Protection Officers (DPOs) for data controllers and processors to ensure compliance with Act 709. This aligns with the legal function of P7-I4 (DPO requirements). The 'Horizontal' coverage claim is supported by the reference to 'pengawal data dan pemproses data' (data controllers and processors) generally, rather than limiting it to a specific sector, thus avoiding the 'sectoral evidence' defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '1' for DPO required across ALL sectors and '0.5' for sector-specific. The snippet confirms the existence of a DPO appointment mechanism under Act 709. While the snippet itself is a 'Purpose' clause, it validates the presence of the accountability mechanism. The mapping is valid as evidence of the framework. The rubric does not require the snippet to contain the specific verb 'shall appoint' if the context (a Commissioner's Circular on DPO appointment) establishes the requireme"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states the circular aims to explain the 'pelantikan pegawai perlindungan data' (appointment of data protection officers). This directly supports the rationale that the document establishes the DPO accountability mechanism. The text does not contradict the mapping; it confirms the subject matter is DPO appointment. The citation 's. 10' in the claim refers to the section number in the source document (visible as '10' in the context header), which aligns with the snippet's location. "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "PDP Commissioner Circular 1/2025 - Appointment of Data Prote",
+  "article": "s. 10(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited provision (s. 10(6) of the Circular, corresponding to paragraph 6(1) in the context) imposes a duty on data controllers and processors to ensure the DPO is involved. This establishes the operational existence and role of the DPO. While the specific snippet is about involvement rather than the act of appointment, the surrounding context (paragraph 4) confirms the appointment mechanism, and the circular as a whole mandates the DPO role for entities under Act 709. It does not suffer from "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '1' for DPO required across ALL sectors. The source is a Commissioner's Circular under Act 709 (Malaysia PDPA), which applies horizontally to all data controllers and processors. The text explicitly defines the duties of the 'Pegawai perlindungan data' (DPO) and mandates controller/processor support and non-termination, confirming the requirement is not sector-specific. The presence of the DPO framework and the mandatory nature of the controller's duty to support the DPO aligns"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet states: 'Pengawal data dan pemproses data hendaklah memastikan bahawa pegawai perlindungan data terlibat...' ('Data controllers and processors shall ensure that the data protection officer is involved...'). The use of 'hendaklah' (shall) creates a mandatory obligation for the controller/processor to maintain a DPO who is involved in data protection issues. This textual evidence supports the rationale that the circular mandates the operational requirement for a DPO. The G6 WARN "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "PDP Data Protection Impact Assessment Guideline 2026",
+  "article": "s. 12(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly states 'A DPIA is required' for high-risk scenarios (score 6-9). This establishes a mandatory legal function for Data Protection Impact Assessments. While the rubric distinguishes between DPO and DPIA, the indicator name is 'DPIA / DPO requirements' and the scoring allows for sector-specific or partial requirements. The text provides a concrete, mandatory trigger for DPIA, satisfying the core legal function of the indicator without relying on keyword matching alone."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's positive cues include 'data protection impact assessment'. The snippet contains the exact phrase 'A DPIA is required' and defines the risk matrix that triggers it. The mapping rationale correctly identifies this as a mandatory accountability mechanism. Although the source is a 'Guideline' rather than primary legislation, the status evidence confirms it is a Commissioner-issued guideline on the official register, which is valid evidence for the presence of the requirement. The scorin"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text '6-9 High Mandatory Action... A DPIA is required' unambiguously establishes a mandatory obligation to conduct a DPIA when the risk score falls in the 6-9 range. The surrounding context defines the criteria for 'High' risk. The text does not merely suggest or permit a DPIA; it uses the imperative 'is required' and 'shall be implemented' for risk treatment. This textual evidence directly supports the claim that the law/guideline mandates DPIAs for high-risk processing, aligni"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Computer Crimes Act (Act 563) 1997",
+  "article": "s. 10(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly grants police officers the power to exercise search and access powers 'in as full and ample a measure as if he were empowered to do so by warrant' when delay in obtaining a warrant would frustrate the object of the search. This is a clear legal function of warrantless access (exigent circumstances exception), which directly satisfies the P7-I5 requirement for government access without independent judicial authorization. There is no scope defect; the power is horizontal a"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the Court-Order Test: The text describes a scenario where a police officer acts 'by reason of the delay in obtaining a search warrant'. This confirms the access is NOT gated on a prior court order/warrant. The rubric states that access that does NOT require independent judicial authorization scores 1. This provision is a '1-type' evidence row. The G7 WARN is a correct flag for legal review to ensure the score reflects the presence of this warrantless power, but it does not constitute a "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'he may exercise... all the powers mentioned in subsection (1) in as full and ample a measure as if he were empowered to do so by warrant'. Subsection (1) defines the powers to 'have access to any program or data held in any computer'. Therefore, the text establishes that a police officer may access computer data without a warrant under specific conditions. This directly supports the rationale that the section permits access without independent judicial authorizatio"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Computer Crimes Act (Act 563) 1997",
+  "article": "s. 10(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly authorizes a police officer to exercise search and seizure powers 'in as full and ample a measure as if he were empowered to do so by warrant' when delay in obtaining a warrant would frustrate the object of the search. This constitutes a valid legal exception to the judicial warrant requirement, establishing a power of access without independent judicial authorization. The mapping correctly identifies this as a score 1 driver under the rubric's court-order test."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in directive explicitly calls for looking beyond privacy statutes to criminal procedure and surveillance laws. The Computer Crimes Act is a relevant criminal statute. The snippet contains positive cues ('police officer... may exercise... powers... as if he were empowered to do so by warrant') and describes a scenario where access occurs without the prior judicial authorization required in subsection (1). This aligns with the scoring criterion for score 1 (access without indepen"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text in subsection (2) states that a police officer 'may exercise... all the powers mentioned in subsection (1)' if delay in obtaining a warrant would frustrate the search. Subsection (1) grants powers to enter, search, and access data. Therefore, subsection (2) textually establishes that the police officer can access data without a warrant in specific exigent circumstances. This directly supports the rationale that the government can access data without independent judicial aut"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Criminal Procedure Code (Act 593) 2018",
+  "article": "s. 116(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly authorizes a police officer to search for documents 'in any place' based on their own consideration, without requiring a prior judicial warrant. While subsection (4) applies search warrant provisions 'so far as may be', the primary power in subsection (1) is warrantless, fitting the 'without independent judicial authorization' criterion for a score of 1."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs reviewers to look beyond privacy statutes to criminal procedure codes. The snippet matches positive cues ('police officer may... search') and lacks negative cues (no 'only under a warrant' or 'pursuant to a court order' as a precondition for the initial search power). The mapping correctly identifies this as evidence of warrantless access."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'the officer may search or cause search to be made for the same in any place' when a summons might not be effective. This establishes a direct power of access/search by the executive (police) without a judicial gate. The reference to search warrants in subsection (4) is a procedural application clause ('so far as may be'), not a condition precedent that negates the warrantless nature of the initial authorization in subsection (1)."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Criminal Procedure Code (Act 593) 2018",
+  "article": "s. 116(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly authorizes a police officer to search for documents 'in any place' when there is reason to believe a summons will not be obeyed or the item is not in known possession. This constitutes a power of access exercisable without prior independent judicial authorization (a warrant), which is the core defect sought by the opposing counsel lens for a score of 1. The mapping correctly identifies this as a warrantless access power."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs to look at criminal procedure codes. The legal_test states that access not requiring independent judicial authorization scores 1. The snippet shows a police officer may search 'in any place' based on their own consideration and belief, without mentioning a requirement for a prior court order or warrant for the search itself (unlike the specific warrant provisions referenced in s.116(4) which apply 'so far as may be' but do not negate the primary warrantles"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states 'the officer may search or cause search to be made for the same in any place.' It does not contain the negative cues 'only under a warrant' or 'pursuant to a court order' as a precondition for the search power itself. While s.116(4) mentions search warrants, the primary operative clause in s.116(1) grants the power to search based on the officer's consideration. The text establishes a mechanism for government access to documents (which may contain personal data) without the"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Official Secrets Act 1972 (Act 88)",
+  "article": "s. 19(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly grants a police officer (Inspector or above) the power to search and seize evidence 'in as full and ample a measure as if he were empowered to do so by warrant' when delay in obtaining a warrant would frustrate the search. This is a clear legal function of warrantless access by a government agent, satisfying the core requirement for P7-I5 evidence. The scope is horizontal as it applies to offences under the Act and prescribed offences, not limited to government data."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs to look beyond privacy statutes to criminal procedure and surveillance laws. The snippet matches the positive cue 'police officer may access' and the negative cue context 'without a warrant' (implied by the exception to the warrant requirement in s.19(1)). Although G7 flags a court-gated aspect, the text describes an exception where the officer acts *without* the warrant, which is the specific 'warrantless access' that drives the score to 1. The mapping co"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that the police officer 'may exercise... all the powers mentioned in subsection (1) in as full and ample a measure as if he were empowered to do so by warrant' when delay in obtaining a warrant would frustrate the search. This textually establishes that the officer is authorized to act without the warrant in that specific scenario. It does not establish that a warrant is required; rather, it establishes the power to bypass the warrant requirement under defined condit"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Official Secrets Act 1972 (Act 88)",
+  "article": "s. 20(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly grants the Public Prosecutor (an executive official) the power to authorize police investigation and access to bank accounts and documents 'notwithstanding anything in any other law.' This constitutes a clear legal function of warrantless government access, as the executive order is deemed 'sufficient authority' without reference to judicial approval. The scope is horizontal, applying to any person's data, not just government data."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I5 scores 1 when government access is allowed WITHOUT independent judicial authorization. The text states the Public Prosecutor's order is 'sufficient authority' and does not require a court order or warrant. This aligns with the positive cue 'police officer may access' and the negative cue absence (no 'pursuant to a court order'). The hunt_in instruction to look beyond privacy statutes (e.g., criminal procedure, specific acts) is satisfied by this specific act provision."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes that the Public Prosecutor may 'by order authorize any police officer... to make an investigation' and that such order 'shall be sufficient authority for the disclosure or production... of all or any information.' There is no textual condition requiring judicial authorization. The text explicitly overrides other laws ('Notwithstanding anything in any other law'), confirming the standalone nature of this executive power."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Personal Data Protection Act (Act 709) 2010",
+  "article": "s. 115(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly grants access to 'authorized officers' conducting searches under ss. 113/114. The rationale correctly identifies that the judicial safeguard (warrant) is located in the referenced sections, not in this snippet itself. This is a valid evidentiary row for the access power, and the mapping does not mischaracterize the legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs reviewers to look beyond the privacy statute for access powers. This provision is a clear access power. The scoring logic depends on whether the access is warrantless. The rationale correctly notes the judicial safeguard (ss. 113/114 warrants), which supports a score of 0 (or at least prevents a score of 1 if the warrants are mandatory). The mapping is consistent with the rubric's instruction to record both kinds of provisions, with the warrant requirement"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'An authorized officer... shall be given access'. It does not explicitly state 'without a warrant' in the snippet, nor does it explicitly state 'only with a warrant'. However, it references ss. 113/114. The rationale correctly interprets this reference as the source of the judicial safeguard. The text establishes the existence of the access power, which is the prerequisite for the P7-I5 analysis. The mapping is textually supported."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Personal Data Protection Act (Act 709) 2010",
+  "article": "s. 115(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly grants 'access to computerized data' to 'authorized officers' conducting searches. While the rationale notes that the judicial safeguard depends on ss. 113-114, the text of s. 115(1) itself is a mandatory access provision ('shall be given access'). Under the rubric, recording provisions that define the access power is required. The potential defect (whether the search itself is warrantless) is a matter of legal interpretation of the referenced sections, not a scope defec"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs reviewers to look beyond the privacy statute to criminal procedure and surveillance laws. This provision is part of the enforcement/search mechanism within the PDP Act, which functions as the primary legal framework for data protection in this jurisdiction. The snippet matches the positive cue 'authorized officer may ... search any data' (specifically 'authorized officer ... shall be given access'). The rationale correctly identifies that the score depends"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states: 'An authorized officer conducting a search under sections 113 and 114 shall be given access to computerized data'. This text establishes a mandatory right of access for government officers. It does not, in isolation, establish whether a warrant is required (that is in ss. 113-114), but it does establish the existence of the access power. The rubric requires recording both kinds of provisions (warrantless and warrant-gated) to determine the score. This provision is the 'acc"
+   }
+  ]
+ }
+]

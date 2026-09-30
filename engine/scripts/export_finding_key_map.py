@@ -15,8 +15,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-RUNS = ["final_si_p6", "final_si_p7", "final_ma_p6", "final_ma_p7",
-        "final_au_p6", "final_au_p7"]
+from packages.core import review_layout  # noqa: E402
+
+LAYOUT = review_layout.current()
+RUNS = list(LAYOUT.runs)
 
 
 def main() -> int:
@@ -28,7 +30,7 @@ def main() -> int:
     from packages.core.schemas import MappedFinding
 
     # the bundle names proof pages assets/{finding_key}.png (build_review_bundle.py)
-    assets_dir = Path("submission/review/assets")
+    assets_dir = LAYOUT.bundle_dir / "assets"
 
     rows = []
     for run in RUNS:
@@ -38,8 +40,10 @@ def main() -> int:
             key = finding_key(finding)
             proof = finding.citation_proof
             proof_status = getattr(proof, "alignment_status", None) if proof else None
-            blocked = (finding.verbatim_snippet == "NO_EVIDENCE_FOUND_PENDING_REVIEW"
-                       or str(proof_status or "").startswith("unaligned"))
+            # Only a technical fault blocks a finding. An absence placeholder has no
+            # citable snippet by design; `is_absence` marks it, and the app gates it on
+            # its search-coverage manifest. Flagging it blocked made it unapprovable.
+            blocked = str(proof_status or "").startswith("unaligned")
             rows.append({
                 "finding_key": key,
                 "review_subject_hash": review_subject_hash(finding),

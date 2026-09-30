@@ -32,7 +32,6 @@ interface UserRow {
 function updateSearchParams(
   searchParams: string,
   patch: Record<string, string>,
-  router: { replace(url: string): void },
   pathname: string
 ) {
   const next = new URLSearchParams(searchParams)
@@ -46,7 +45,7 @@ function updateSearchParams(
   if (patch.page === undefined) {
     next.set('page', '1')
   }
-  router.replace(`${pathname}?${next.toString()}`)
+  window.history.replaceState(null, '', `${pathname}?${next.toString()}`)
 }
 
 export default function AdminUsers() {
@@ -142,17 +141,17 @@ export default function AdminUsers() {
             placeholder="Search username or email"
             value={params.search}
             onChange={(event) =>
-              updateSearchParams(searchParamString, { search: event.target.value }, router, pathname)
+              updateSearchParams(searchParamString, { search: event.target.value }, pathname)
             }
           />
           <CustomSelect
             value={params.plan}
-            onChange={(value) => updateSearchParams(searchParamString, { plan: String(value) }, router, pathname)}
+            onChange={(value) => updateSearchParams(searchParamString, { plan: String(value) }, pathname)}
             options={planOptions}
           />
           <CustomSelect
             value={params.is_active}
-            onChange={(value) => updateSearchParams(searchParamString, { is_active: String(value) }, router, pathname)}
+            onChange={(value) => updateSearchParams(searchParamString, { is_active: String(value) }, pathname)}
             options={[
               { label: 'All statuses', value: '' },
               { label: 'Active', value: 'true' },
@@ -161,7 +160,7 @@ export default function AdminUsers() {
           />
           <CustomSelect
             value={params.ordering}
-            onChange={(value) => updateSearchParams(searchParamString, { ordering: String(value) }, router, pathname)}
+            onChange={(value) => updateSearchParams(searchParamString, { ordering: String(value) }, pathname)}
             options={[
               { label: 'Newest first', value: '-created_at' },
               { label: 'Oldest first', value: 'created_at' },
@@ -215,7 +214,7 @@ export default function AdminUsers() {
               className="rounded-xl"
               disabled={currentPage <= 1}
               onClick={() =>
-                updateSearchParams(searchParamString, { page: String(currentPage - 1) }, router, pathname)
+                updateSearchParams(searchParamString, { page: String(currentPage - 1) }, pathname)
               }
             >
               Previous
@@ -225,7 +224,7 @@ export default function AdminUsers() {
               className="rounded-xl"
               disabled={currentPage >= totalPages}
               onClick={() =>
-                updateSearchParams(searchParamString, { page: String(currentPage + 1) }, router, pathname)
+                updateSearchParams(searchParamString, { page: String(currentPage + 1) }, pathname)
               }
             >
               Next

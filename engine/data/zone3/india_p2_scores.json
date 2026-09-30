@@ -1,0 +1,102 @@
+{
+ "economy": "India",
+ "pillar": 2,
+ "run": "run-in-p2-1790692431",
+ "krippendorff_alpha": 0.6,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The clause limits eligibility to Class I local suppliers but does not state that foreign firms are excluded, since it imposes no nationality-based restriction."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The measure excludes foreign firms from bidding when sufficient local capacity and competition exist, allowing only Class I local suppliers to bid."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "When sufficient local capacity and competition exist, only Class I local suppliers may bid, excluding foreign suppliers that do not qualify as local suppliers u"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "specific-encryption tender condition only -> 0.5",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The clause assigns ownership of project-produced documents to the Government but does not require surrender of patents, source code, or trade secrets, or use of"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The clause assigns project-produced documents to the Government but does not require surrender of patents, source code, or trade secrets, nor use of specific en"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The clause transfers ownership of project documents but does not explicitly require surrender of source code, patents, or trade secrets, nor mandate specific en"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The procurement rules give purchase preference to Class-I local suppliers and classify bidders offering imported products as non-local, directly disadvantaging "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Make in India provisions give purchase preference to Class-I local suppliers and classify bidders offering imported products as non-local suppliers, directl"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Make in India rules give Class-I local suppliers purchase preference and classify bidders offering imported products as non-local, directly disadvantaging f"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

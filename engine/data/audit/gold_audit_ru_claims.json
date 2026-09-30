@@ -1,0 +1,100 @@
+{
+ "fd1a14151f01b2c6": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 12(7) states cross-border transfer “may be prohibited or restricted,” while Article 18(5) provides that specified processing operations using databases outside Russia “are not allowed,” subject to Article 6(1) exceptions. This is a personal-data domestic-processing requirement, supporting score 1."
+ },
+ "356fb23a748e0f04": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "no",
+  "issue": "score_inconsistent",
+  "explanation": "Article 64(1) expressly requires operators to “хранить на территории Российской Федерации” both (1) information about communications and (2) users’ messages. These are two separate storage requirements for sector-specific data, warranting score 1 under the rule."
+ },
+ "a14c337922bae21f": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "claim_not_in_text",
+  "explanation": "The provision requires an Internet information-dissemination organizer to store specified information “on the territory of the Russian Federation.” However, subparagraph 1 now specifies three years, not the gold statement’s one year. The six-month requirement in subparagraph 2 is accurately stated. The rule is a single specific-data storage requirement, supporting score 0.5."
+ },
+ "32c6652092c8147c": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 18(5) prohibits recording, systematization, storage, updating, and retrieval using databases “located outside the territory” of Russia, except Article 6(1) points 2, 3, 4, and 8. This substantively requires use of databases located in Russia and is an infrastructure precondition."
+ },
+ "53d580590d7ce477": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "claim_not_in_text",
+  "explanation": "Article 12 supports conditional cross-border transfers of personal data: notification is required under 12(3), adequate states are listed under 12(2), and transfers to listed states may occur “after” notification under 12(10). For non-listed states, 12(11) requires waiting until the statutory period expires, not necessarily “official approval”; it permits an exception for vital interests."
+ },
+ "6515b2d204193938": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "unclear",
+  "issue": "claim_not_in_text",
+  "explanation": "Article 1 establishes broad horizontal scope, covering state bodies, legal entities and individuals processing data, including non-automated processing. But it does not state that this is the primary instrument or establish that the framework is comprehensive; scope alone cannot determine the score."
+ },
+ "504cac80c656b192": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "claim_not_in_text",
+  "explanation": "Article 21(3.1) requires an operator to notify the personal-data protection authority within 24 and 72 hours after an unlawful or accidental transfer causing rights violations. This supports a sectoral incident-response obligation, but does not establish the broader information-security framework described in the gold statement."
+ },
+ "c0dc56cf1489ecb8": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "The provision requires news aggregators to \"хранить в течение шести месяцев\" the disseminated news, source information, and dissemination-period information, and paragraph 11 requires access for the regulator. This clearly specifies a six-month minimum retention period and supports the statement."
+ },
+ "0ecd3635be5a7e35": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "claim_not_in_text",
+  "explanation": "Article 10.1(3)(1) requires storage “в течение трех лет” (for three years), not one year as stated in the gold. Subparagraph (2) says “до шести месяцев” (up to six months). A specified retention period exists, so score 1 is consistent."
+ },
+ "c32ab4fcb492064d": {
+  "supports_claim": "partly",
+  "citation_matches": "no",
+  "score_consistent": "yes",
+  "issue": "wrong_article",
+  "explanation": "Article 64(1)(1) requires operators to retain facts of communications “в течение трех лет” (for three years) after completion, supporting a specified retention period and score 1. However, Article 56.2 contains no three-year retention obligation; its cited provisions concern technological networks, traffic exchange points, and reporting duties."
+ },
+ "3e69867933ebd55b": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 19(1) requires the operator to take necessary legal, organisational and technical measures to protect personal data. Article 22.1(1) requires every operator that is a legal entity to appoint a person responsible for organising personal-data processing; Article 22.1(4) assigns that person compliance-control duties. This is not sector-specific."
+ },
+ "4a333267e88ebfb2": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 6 permits the Foreign Intelligence Service to receive, free of charge, necessary information systems and databases from state bodies, including “remote access,” subject only to a statutory prohibition—not a court order. It also permits processing information in state information systems and databases. This supports an access power without stated judicial authorization."
+ },
+ "8a117295fc073d15": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 64(1.1) requires operators to provide user and service information to “authorized government agencies” conducting operational-search or security activities, “in cases established by federal laws.” It imposes no court decision, warrant, or other independent judicial authorization requirement for this access."
+ },
+ "4efceace25c8e417": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 10.1(3.1) requires organizers to provide stored information to authorized state bodies conducting operational-search activities or ensuring security, “in cases established by federal laws.” Article 10.1(4) also requires technical facilities for such measures. Neither provision requires a court order or independent judicial authorization."
+ }
+}

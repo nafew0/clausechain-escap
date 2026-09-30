@@ -1,0 +1,506 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Instruction No. 2426/MPT (2018) on the Implementation of the",
+  "article": "Art. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited law is the 'Law on Electronic Data Protection' (EDPL), which is a horizontal statute applicable to natural and legal persons, not limited to a specific sector. The provision defines 'special data' and restricts access without consent, which is a core legal function of a comprehensive data protection framework. There is no scope defect or mischaracterization of the legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P7-I1 scores the absence of a comprehensive framework. The presence of a horizontal law (EDPL) with substantive provisions like the definition of sensitive data and consent requirements supports a score of 0 (framework exists). The mapping correctly identifies this provision as evidence of the framework's existence, aligning with the rubric's positive cues for 'data protection law' and the example of SG PDPA."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly defines 'special data' (ຂໍ້ມູນສະເພາະ) and establishes a prohibition on access/use/disclosure without permission from the data owner. This text directly evidences a legal regime governing personal data processing. The rationale that this is a fundamental component of a comprehensive framework is supported by the text's regulatory nature and the law's title."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Law on Electronic Data Protection No. 25/NA (2017)",
+  "article": "Art. 5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited Law on Electronic Data Protection No. 25/NA (2017) is a horizontal statute applicable to the processing of electronic data generally, not limited to specific sectors or government data. Article 5 establishes general principles (security, rights of data owners, international compliance) that apply across the economy. While the law's title specifies 'Electronic Data,' it functions as the primary data protection framework in Laos. The mapping correctly identifies this as evidence of a com"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The provided snippet from Article 5 of the Law on Electronic Data Protection demonstrates the existence of such a framework by laying out fundamental principles for data protection activities. Although the law is titled 'Electronic Data Protection,' in the context of Lao legislation, it serves as the horizontal data protection law. The mapping rationale correctly asserts that this evidences the existence of the fra"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text in Lao (Article 5) explicitly lists principles for 'electronic data protection work' (ວຽກງານປົກປ້ອງຂໍ້ມູນເອເລັກໂຕຣນິກ), including ensuring security, protecting state/individual/organizational data, and guaranteeing rights of data owners. This text establishes the legal existence of a regulatory regime for data protection. The mapping rationale accurately reflects that this article defines the scope and guiding principles. The text does not contradict the claim that a legal "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Ministry of Technology and Communications Decision No. 3648 ",
+  "article": "Art. 18",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is a Ministry Decision (sub-legislative act) rather than a primary law, but the rubric for P7-I1 asks about the existence of a 'comprehensive legal framework' and explicitly allows sectoral laws to be recorded as evidence. The text establishes binding obligations for digital platforms, which constitutes a valid piece of the legal framework, even if it is not the horizontal statute itself. It does not fail the legal function test as it imposes concrete data protection duties."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric states that 'Sectoral DP laws are RECORDED but do not make the framework comprehensive.' This mapping correctly identifies the provision as 'Sectoral (Digital Platforms)'. For an absence-scored indicator (P7-I1), a provision evidencing the framework is a valid evidence row. The snippet contains specific data protection principles (purpose limitation, storage scope), which supports the rationale that a framework exists (or partially exists), allowing the scorer to determine if it is 'c"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text in Lao explicitly mandates the storage of personal data ('ການເກັບຮັກສາຂໍ້ມູນສ່ວນບຸກຄົນ') and lists specific obligations such as designing systems for necessary data only, defining scope, and accountability. The text directly supports the claim that this article establishes core data protection obligations. There is no textual mismatch between the snippet and the rationale provided."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)",
+  "article": "Art. 51",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited law is a dedicated statute specifically designed for 'preventing and combating cyber crime,' which aligns with the rubric's definition of a dedicated framework. The provision describes horizontal operational duties (incident reporting, coordination) applicable to local authorities, not a sectoral-only regime. No legal-function defect is found that would invalidate the mapping as evidence of a dedicated framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '0' for a dedicated HORIZONTAL cybersecurity framework. The Law on Prevention and Combating Cyber Crime is a dedicated act covering network security and incident response (via LaoCERT references) across the economy, not just a specific sector. The provision evidences the framework's existence and operational scope, supporting a score of 0 (framework present). The mapping correctly identifies this as horizontal coverage."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes the duties of District and Municipal Offices in managing cyber crime prevention and incident response. It explicitly references the 'Lao Computer Emergency Response Team' and 'computer system emergency incident,' confirming the law's scope includes cybersecurity incident response. The text supports the rationale that a dedicated legal framework exists. The G4 WARN regarding current version status does not refute the legal fit of the provision itself under the rubric's "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)",
+  "article": "Art. 49",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The law is titled 'Law on Prevention and Combating Cyber Crime' and Article 49 assigns the Ministry of Post and Telecommunication duties including 'surveillance, tracking, monitoring... and responding computer system emergency incident.' This constitutes a dedicated legal framework for cybersecurity (specifically incident response and monitoring) that is not limited to a single sector (e.g., finance or telecom only), but applies to 'computer system' generally. Therefore, it satisfies the definit"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores '0' for a dedicated HORIZONTAL cybersecurity framework. The cited law (No. 61/NA) is a standalone act specifically addressing cyber crime and security. Article 49 explicitly mandates incident response and monitoring duties for a central ministry, evidencing a horizontal framework rather than scattered clauses in a privacy law or a sectoral-only notice. The mapping correctly identifies this as evidence for a score of 0 (framework exists), which is the correct outcome f"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet 'Take leading role of surveillance, tracking, monitoring, advice, notification and responding computer system emergency incident' is verbatim from Article 49, Item 4. The surrounding context confirms this is a duty of the Ministry of Post and Telecommunication within the 'Law on Prevention and Combating Cyber Crime'. The text establishes a legal duty for incident response and monitoring, which directly supports the rationale that a dedicated framework exists. There is no textua"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Bank of the Lao PDR Decision No. 696 on IT System Management",
+  "article": "Art. 17",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The cited text (Art. 17) mandates security controls (encryption, authentication, access management) to maintain data integrity and completeness. It does not impose a legal duty to retain data for a specific minimum duration. The phrase 'until destruction' defines the scope of integrity maintenance, not a retention period. Mapping this to P7-I3 (Minimum period of data retention) confuses data security/integrity with data retention."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I3 requires a specified minimum period (e.g., 'at least X years'). The snippet provides no numeric or temporal minimum retention period. While the rationale admits it 'does not specify a numeric minimum period,' the provision itself is a data integrity/security requirement, not a retention requirement. Under the rubric, a retention requirement without a specified minimum is scored 0, but this provision is not even a retention requirement; it is a security control requirement. T"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The exact Lao text states that providers must have encryption, authentication, access control, and monitoring to maintain correctness, completeness, and integrity of data from system creation until destruction. It does not state that data must be 'kept' or 'retained' for a minimum period. The rationale's claim that it 'establishes a mandatory retention duty' is not supported by the text, which focuses on the quality and security of data during its lifecycle, not the obligation to preserve it for"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Decree on Financial Consumer Protection No. 225/GOL (2020)",
+  "article": "Art. 13",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies the provision as a sectoral financial services law (Decree on Financial Consumer Protection), which falls within the rubric's 'hunt_in' scope. The rationale accurately reflects the legal function: it establishes a duty to retain data but lacks a specific minimum duration, which aligns with the indicator's scoring rule for 'retention requirement WITHOUT a specified minimum period' (score 0). There is no defect in legal function or scope."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric explicitly states that a retention requirement without a specified minimum period is still recorded and scored 0. The snippet contains the imperative 'must retain' (ຕ້ອງຮັກສາ) but no numeric duration (e.g., 'at least X years'). Therefore, mapping this to P7-I3 with a score of 0 is methodologically correct. The absence of a duration is the expected outcome for this specific text, not a failure mode."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text in Lao ('ຜູ້ໃຫ້ບໍລິການຕ້ອງຮັກສາຂໍ້ມູນ...') translates to 'Service providers must retain data...'. The text establishes a mandatory retention duty ('must') but does not specify a time limit. The rationale correctly notes that no specific minimum duration is specified. The text does not contain a retention limit (like 'no longer than necessary') which would be an exclusion, nor does it misread a permissive clause as mandatory. The mapping is textually accurate."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Instruction No. 0477/MOF (2019) on Implementation of the Law",
+  "article": "cl. 18.3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory retention duty ('shall retain') for a specific class of documents (procurement contracts and related info). While it applies to public procurement, the rubric's hunt_in explicitly includes sectoral laws, and public procurement is a valid sectoral context for data retention requirements. There is no legal-function defect; it is a clear retention obligation, not a confidentiality or localization rule."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet 'shall retain at least ten (10) years period' matches the positive cue 'at least' and specifies a minimum period (10 years). This aligns with the scoring criterion for '1' (minimum retention period clearly specified). It is not a retention limit (e.g., 'no longer than'), so the exclusion for data minimization does not apply. The mapping is methodologically sound."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states 'shall retain at least ten (10) years period.' The phrase 'at least' establishes a floor, not a ceiling. The context confirms this applies to 'signed contract, documents and procurement related information.' The text explicitly establishes a minimum retention period, supporting the rationale for P7-I3."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Anti-Money Laundering and Counter-Financing of Terror",
+  "article": "Art. 25",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('must be kept') on reporting entities, which are private sector actors (financial institutions), not solely government data. The scope aligns with the indicator's hunt_in for sectoral laws (anti-money-laundering). There is no legal-function defect; the text clearly establishes a retention obligation."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a minimum retention period ('keep >= X'). The snippet states 'must be kept for at least ten years', which matches the positive cue 'shall be retained for at least' and the example structure. It is not a retention limit (e.g., 'no longer than'), so it correctly scores 1. The sectoral nature is explicitly permitted by the hunt_in criteria."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'must be kept for at least ten years' unambiguously establishes a minimum duration. The context confirms this applies to the information defined in the first paragraph (customer/transaction records). The text does not contain exceptions that would negate the minimum period, nor does it mischaracterize the direction of the requirement."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Anti-Money Laundering and Counter-Financing of Terror",
+  "article": "Art. 16",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly lists 'Record keeping' as a mandatory obligation for reporting entities. While it does not specify the duration, the rubric for P7-I3 explicitly states that a retention requirement without a specified minimum period is still recorded and scored 0. Therefore, the mapping is legally valid as evidence of the framework's existence, even if it scores 0 for the specific indicator of a defined minimum period."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in includes 'Sectoral law: anti-money-laundering'. The source is the AML/CFT Law. The scoring rule states: 'No minimum period specified. A retention requirement WITHOUT a specified minimum period is still RECORDED, scored 0'. The mapping rationale correctly identifies that the specific minimum duration is not specified in this text, aligning with the score 0 outcome. The provision evidences the record-keeping duty, which is the prerequisite for the indicator, even if the specif"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states reporting entities have the obligation of 'Record keeping'. It does not state a specific time period (e.g., 'at least 5 years'). The indicator asks 'Must data be kept FOR AT LEAST a specified period?'. The text establishes the duty to keep records but does not establish the specific period in this snippet. However, the rubric allows recording the requirement even if the period is unspecified (score 0). The mapping is not refuted because the text does support the existence of the "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 71",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('shall be kept') on commercial banks, a private sector entity, to retain specific transaction and customer records. This falls squarely within the 'Sectoral (Banking)' scope defined in the rubric's hunt_in. There is no legal-function defect; it is not a government-only measure, nor is it a data minimization limit."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states 'shall be kept at least ten years'. This matches the positive cue 'at least' and satisfies the scoring criterion for '1' (A minimum retention period is clearly specified). The direction is correct (minimum, not maximum), and the sectoral evidence is expressly called for by the rubric."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted snippet 'The documents, information, including electronic copies shall be kept at least ten years...' unambiguously establishes a floor for retention. The context confirms this applies to the records listed in the preceding paragraphs (including transaction data). The text does not contain exceptions that would negate the minimum period for the specified data types."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Electronic Data Protection No. 25/NA (2017)",
+  "article": "Art. 23",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a general duty on data controllers to store electronic data ('ຕ້ອງເກັບຮັກສາ' - must store). While it lacks a specific numeric minimum period, the rubric explicitly states that a retention requirement without a specified minimum period is still recorded and scored 0. Therefore, the mapping to P7-I3 with a score of 0 is legally sound and does not suffer from a scope or function defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the rubric: The indicator asks if data must be kept for AT LEAST a specified period. The text mandates storage but does not specify a duration (e.g., 'at least 6 years'). According to the scoring rule, 'No minimum period specified' results in a score of 0, and the requirement is still recorded. The mapping rationale correctly identifies this as a score 0 case. The hunt_in criteria are met as this is a horizontal data protection law. No methodological error is found."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'ຜູ້ຄຸ້ມຄອງຂໍ້ມູນ ຕ້ອງເກັບຮັກສາຂໍ້ມູນເອເລັກໂຕຣນິກ' translates to 'Data controllers must store electronic data'. The modality 'ຕ້ອງ' (must/should) confirms a mandatory duty, refuting the G6 warning about permissive language. The text establishes a retention duty but contains no temporal qualifier (minimum or maximum). Thus, the text strictly supports a 'retention requirement without a specified minimum period,' which aligns perfectly with the claimed score of 0."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Ministry of Technology and Communications Decision No. 3643 ",
+  "article": "Art. 25",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory obligation ('ຕ້ອງ' - must/shall) on digital technology businesses to maintain a data storage system for at least 90 days. This is a clear legal function of minimum data retention, not a mere technical standard or permissive guideline. The scope is sectoral (Digital Technology Business), which is explicitly permitted by the rubric's 'hunt_in' criteria."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'ຕ້ອງມີລະບົບເກັບຮັກສາຂໍ້ມູນທັງໝົດໄວ້ຢ່າງໜ້ອຍ ເກົ້າສິບ ວັນ' translates to 'Must have a system to store all data for at least ninety days.' This matches the positive cue 'keep ... for a period of not less than' and satisfies the scoring criterion for '1' (minimum retention period clearly specified). It is not a retention limit (data minimization) but a floor."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a requirement to maintain a data storage system for a minimum of 90 days ('at least ninety days'). The context confirms this is part of the technical and security standards for digital information services. The text does not establish a ceiling or a 'no longer than necessary' limit, nor does it refer to a different indicator. The mapping to P7-I3 is textually supported."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Ministry of Technology and Communications Decision No. 3648 ",
+  "article": "Art. 17",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory obligation ('must be performed as follows') on digital platforms to retain system usage history for at least 90 days. This is a clear legal function of minimum data retention, not a mere recommendation or a different legal concept like localization or security standards. The scope is horizontal (applying to digital platforms generally), fitting the indicator's scope."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a specified minimum period ('keep >= X days'). The text 'ຢ່າງໜ້ອຍ ເກົ້າສິບ ວັນ' translates to 'at least ninety days'. This matches the positive cue 'keep ... for a period of not less than' and the scoring criterion for '1'. The hunt_in allows for sectoral or horizontal laws, and this is a specific retention rule within a digital platform regulation. The G6 WARN regarding modality is a false positive because the Lao text 'ຕ້ອງປະຕິບັດ' (must be performed) and the cont"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'ການເກັບຮັກສາຂໍ້ມູນປະຫວັດການນໍາໃຊ້ລະບົບ ຢ່າງໜ້ອຍ ເກົ້າສິບ ວັນ' explicitly states 'Retention of system usage history data at least ninety days'. The phrase 'ຢ່າງໜ້ອຍ' (at least) establishes a floor, not a ceiling. This directly satisfies the indicator's question 'Must data be kept FOR AT LEAST a specified period?'. The text does not contain exclusions or conditions that negate the minimum period for the specified data type."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Instruction No. 2426/MPT (2018) on the Implementation of the",
+  "article": "Art. 9",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly creates an exception to the data subject's consent requirement when a 'state organization with relevant authority' (ອົງການຈັດຕັ້ງລັດ) requests data. The example clarifies this applies to law enforcement (fraud investigation) and mandates the data controller provide the data without notifying the subject. This constitutes a legal function of executive access without judicial gatekeeping, fitting the indicator's scope."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in directs reviewers to look beyond privacy statutes to surveillance/lawful-access laws. This implementation instruction defines the operational mechanism for such access. The text matches positive cues ('upon request', 'state organization') and lacks negative cues ('court order', 'warrant'). Under the court-order test, access not requiring independent judicial authorization scores 1. The mapping correctly identifies this as warrantless access evidence."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Lao text states that disclosure requires data owner consent 'except when there is a request from a state organization with relevant authority' (ເວັ້ນເສຍແຕ່ມີການສະເໜີຈາກອົງການຈັດຕັ້ງລັດ). The example confirms the controller 'must provide data... without needing to notify' the subject. The text establishes a mandatory executive access channel that bypasses both consent and any mentioned judicial authorization, strictly supporting the rationale of warrantless government access."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law on Anti-Money Laundering and Counter-Financing of Terror",
+  "article": "Art. 36",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The provision authorizes the seizure and freezing of funds (assets), which is a coercive measure against property, not 'access to personal data' in the sense of viewing, copying, or processing information. P7-I5 specifically targets the government's ability to access personal data (e.g., via surveillance, data retention, or search of digital records). While financial data is personal data, the act of freezing funds is a distinct legal function (asset forfeiture/interdiction) that does not inhere"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I5 asks whether the government can access personal data without judicial authorization. The cited text (Art. 36) governs the 'Seizure, Freezing of Funds.' This falls under the domain of financial crime enforcement and asset management, not data protection or surveillance. The 'hunt_in' for P7-I5 directs the reviewer to look for surveillance/lawful-access laws or criminal procedure codes regarding data search. This provision is a sectoral AML/CFT measure regarding asset interdic"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the text 'authorizes government access to personal data (financial assets)'. The text explicitly states authorities have the right to 'seize and freeze funds'. It does not state that authorities may 'access', 'view', 'copy', or 'inspect' the data associated with those funds. While seizure implies some level of interaction, the legal operation described is the immobilization of value, not the retrieval of information. The text also notes that applying these measures must be '"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 109",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The provision mandates the provision of 'documents and information on the business' to banking inspectors. This is a regulatory compliance and audit obligation concerning corporate business records, not a legal power to access 'personal data' for law enforcement or national security purposes. The rubric for P7-I5 targets government access to personal data (typically in surveillance/investigation contexts). Conflating a bank's duty to submit business documents to a regulator with a warrantless go"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric's hunt_in directs the reviewer to look for criminal procedure, surveillance, or national security laws that grant access powers. This provision is a sectoral banking regulation (Law on Commercial Bank) governing the relationship between a bank and its prudential regulator (Bank of Lao PDR). It evidences regulatory oversight and record-keeping duties (likely relevant to indicators on data retention or regulatory access, but not P7-I5). P7-I5 specifically asks about access to *personal "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The exact text states: 'The commercial bank shall provide accurate and completed documents and information on the business... to the inspectors of the Bank of the Lao PDR'. The rationale claims this authorizes 'government access to personal data... without requiring independent judicial authorization'. The text does not mention 'personal data'; it specifies 'information on the business'. Furthermore, the 'government' actor is the 'Bank of the Lao PDR' (a central bank/regulator), and the context "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 107",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision grants the central bank (a government body) the right to access and examine electronic data of commercial banks without any reference to judicial authorization. This constitutes a legal function of warrantless government access to data held by private entities, which is the core defect P7-I5 seeks to identify. The sectoral nature (banking) is explicitly permitted by the rubric's hunt_in instruction to look beyond privacy statutes into sectoral laws."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly directs reviewers to look at 'telecom law' and other sectoral laws as a 'richest NEW-evidence vein.' The snippet matches the positive cue 'shall provide access' (via 'To access and examine') and lacks negative cues like 'pursuant to a court order.' Although G6 flags a modality issue, the text 'Inspectors... have the following rights... To access' establishes a standing power, not a permissive option that requires judicial gatekeeping. It supports a score of 1 (war"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states inspectors have the right 'To access and examine... electronic data... of commercial bank.' It does not condition this access on a warrant or court order. While the data is held by a bank, the access is by a government inspector without judicial oversight, which fits the definition of 'government access to personal data WITHOUT authorization of an independent judicial body.' The text establishes the power directly; it does not merely reference a framework or exclude th"
+   }
+  ]
+ }
+]

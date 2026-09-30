@@ -1,22 +1,26 @@
 from decimal import Decimal
 import csv
 import hashlib
+import io
 import json
 import re
 from urllib.parse import urlparse
 
 from django.conf import settings
+from django.core.exceptions import ValidationError as DjangoValidationError
 from django.db import transaction
+from django.db.models import Q
 from django.http import FileResponse, Http404, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
+from django.utils.dateparse import parse_datetime
 from rest_framework import status
 from rest_framework.exceptions import APIException, PermissionDenied, ValidationError
 from rest_framework.response import Response
 from rest_framework.permissions import BasePermission
 from rest_framework.views import APIView
 
-from .decision_state import effective_finding_review
+from .decision_state import bulk_effective_finding_decisions, effective_finding_review
 from .decision_writer import (
     DecisionWriterConflict,
     DecisionWriterError,
@@ -24,10 +28,19 @@ from .decision_writer import (
     current_authoritative_hash,
     decision_domain_lock,
 )
+from .engine_worker import EngineWorkerError, load_allowlist
+from .importer import ALL_HYBRID_RUN_NAMES
+from .mode import bundle_dir, current_mode, submission_dir
+from .worker_supervisor import ensure_worker, worker_status
 from .models import (
     CorrectionRequest,
     EngineSnapshot,
     EngineAction,
+    EvidenceChange,
+    EvidenceChangeDecision,
+    EvidenceChangeSet,
+    EvidenceRegistryEntry,
+    EvidenceRevision,
     EvidenceRow,
     FindingDecision,
     RecallDecision,
@@ -38,9 +51,16 @@ from .models import (
     Zone3Decision,
 )
 from .pagination import WorkspacePagination
-from .roles import has_review_role, reviewer_identity, reviewer_roles
+from .roles import (
+    decision_reviewer_role,
+    has_review_role,
+    reviewer_identity,
+    reviewer_roles,
+)
+from .registry import publish_change_set, technically_blocked
 from .serializers import (
     CorrectionRequestWriteSerializer,
+    EvidenceChangeDecisionWriteSerializer,
     FindingBulkDecisionWriteSerializer,
     FindingDecisionWriteSerializer,
     RecallDecisionWriteSerializer,
@@ -65,11 +85,15 @@ class IsSuperuserPermission(BasePermission):
         )
 
 
-def active_snapshot():
-    snapshot = EngineSnapshot.objects.filter(active=True).first()
+def active_snapshot(mode=None):
+    """The active snapshot of the request's model backend (?mode=, default hybrid)."""
+    mode = mode or current_mode()
+    snapshot = EngineSnapshot.objects.filter(active=True, mode=mode).first()
     if snapshot is None:
         raise APIException(
-            "No engine snapshot has been imported.", code="snapshot_unavailable"
+            "No Local snapshot yet: open Runs (Local tab) and click Refresh snapshot."
+            if mode == "local" else "No engine snapshot has been imported.",
+            code="snapshot_unavailable",
         )
     return snapshot
 
@@ -84,6 +108,7 @@ def snapshot_identity(snapshot):
         "bundle_hash": snapshot.bundle_hash,
         "engine_git_sha": snapshot.engine_git_sha,
         "stale": snapshot.stale,
+        "mode": snapshot.mode,
     }
 
 
@@ -133,13 +158,38 @@ def review_item_payload(item):
         result["review_state"] = effective_finding_review(
             item.finding_key, review_subject_hash=item.review_subject_hash
         )
+        revision = EvidenceRevision.objects.filter(
+            snapshot=item.snapshot,
+            finding_key=item.finding_key,
+            review_subject_hash=item.review_subject_hash,
+        ).first()
+        change = (
+            EvidenceChange.objects.filter(
+                change_set__snapshot=item.snapshot,
+                current_revision=revision,
+            ).first()
+            if revision
+            else None
+        )
+        result["registry_change"] = (
+            {
+                "kind": change.kind,
+                "invalidated_stages": change.invalidated_stages_json,
+                "identity_hash": change.identity.identity_hash,
+            }
+            if change
+            else None
+        )
         eligibility_reason = finding_ineligibility(item, item.snapshot)
         result["approval_eligibility"] = {
             "eligible": not bool(eligibility_reason),
             "reason": eligibility_reason,
         }
         correction = (
-            CorrectionRequest.objects.filter(finding_key=item.finding_key)
+            CorrectionRequest.objects.filter(
+                finding_key=item.finding_key,
+                review_subject_hash=item.review_subject_hash,
+            )
             .order_by("-requested_at")
             .first()
         )
@@ -183,14 +233,149 @@ def item_is_decided(item):
     return model.objects.filter(**{key_name: item.stable_key}).exists()
 
 
+def registry_summary(snapshot):
+    entries = list(
+        EvidenceRegistryEntry.objects.select_related("identity", "active_revision")
+        .filter(identity__mode=snapshot.mode)
+    )
+    current_revisions = [
+        entry.active_revision
+        for entry in entries
+        if entry.state == EvidenceRegistryEntry.State.CURRENT
+    ]
+    verdicts = bulk_effective_finding_decisions(current_revisions)
+    states = {
+        "approved": 0,
+        "rejected": 0,
+        "decision_unrecorded": 0,
+        "blocked": 0,
+    }
+    for entry in entries:
+        if entry.state != EvidenceRegistryEntry.State.CURRENT:
+            continue
+        revision = entry.active_revision
+        if technically_blocked(revision.blocked, revision.row_json):
+            states["blocked"] += 1
+            continue
+        decision = verdicts.get((revision.finding_key, revision.review_subject_hash))
+        if decision == "approved":
+            states["approved"] += 1
+        elif decision == "rejected":
+            states["rejected"] += 1
+        else:
+            states["decision_unrecorded"] += 1
+    try:
+        change_set = snapshot.evidence_change_set
+    except EvidenceChangeSet.DoesNotExist:
+        change_set = None
+    change_payload = None
+    if change_set:
+        actionable = list(
+            change_set.changes.exclude(kind=EvidenceChange.Kind.UNCHANGED)
+            .select_related("current_revision")
+            .prefetch_related("decisions")
+        )
+        candidate_verdicts = bulk_effective_finding_decisions(
+            change.current_revision
+            for change in actionable
+            if change.current_revision is not None
+        )
+        resolved = 0
+        for change in actionable:
+            if change.kind == EvidenceChange.Kind.NOT_REPRODUCED:
+                decision_rows = list(change.decisions.all())
+                resolution = decision_rows[-1] if decision_rows else None
+                resolved += int(
+                    resolution is not None
+                    and resolution.verdict
+                    in {
+                        EvidenceChangeDecision.Verdict.RETAIN,
+                        EvidenceChangeDecision.Verdict.RETIRE,
+                    }
+                )
+            elif change.current_revision:
+                decision = candidate_verdicts.get(
+                    (
+                        change.current_revision.finding_key,
+                        change.current_revision.review_subject_hash,
+                    )
+                )
+                resolved += int(decision is not None)
+        change_payload = {
+            "id": str(change_set.pk),
+            "state": change_set.state,
+            "scope": change_set.scope_json,
+            "counts": change_set.counts_json,
+            "attention": {"resolved": resolved, "total": len(actionable)},
+            "created_at": change_set.created_at.isoformat(),
+            "published_at": (
+                change_set.published_at.isoformat() if change_set.published_at else None
+            ),
+        }
+    return {
+        "total": len(entries),
+        "current": sum(
+            entry.state == EvidenceRegistryEntry.State.CURRENT for entry in entries
+        ),
+        "not_reproduced": sum(
+            entry.state == EvidenceRegistryEntry.State.NOT_REPRODUCED
+            for entry in entries
+        ),
+        "retired": sum(
+            entry.state == EvidenceRegistryEntry.State.RETIRED for entry in entries
+        ),
+        **states,
+        "change_set": change_payload,
+    }
+
+
 class SummaryView(APIView):
     def get(self, request):
         snapshot = active_snapshot()
+        all_items = list(snapshot.review_items.all())
+        revisions = list(snapshot.evidence_revisions.all())
+        finding_verdicts = bulk_effective_finding_decisions(revisions)
+        revision_by_key = {revision.finding_key: revision for revision in revisions}
+        recall_decided = set(
+            RecallDecision.objects.filter(
+                recall_key__in=[
+                    item.stable_key
+                    for item in all_items
+                    if item.queue == ReviewItem.Queue.RECALL
+                ]
+            ).values_list("recall_key", flat=True)
+        )
+        zone_decided = set(
+            Zone3Decision.objects.filter(
+                score_key__in=[
+                    item.stable_key
+                    for item in all_items
+                    if item.queue == ReviewItem.Queue.ZONE3
+                ]
+            ).values_list("score_key", flat=True)
+        )
+
+        def decided(item):
+            if item.queue in (
+                ReviewItem.Queue.NEW,
+                ReviewItem.Queue.KNOWN,
+                ReviewItem.Queue.ABSENCE,
+            ):
+                revision = revision_by_key.get(item.finding_key)
+                if revision is None:
+                    return item_is_decided(item)
+                return finding_verdicts.get(
+                    (revision.finding_key, revision.review_subject_hash)
+                ) is not None
+            if item.queue == ReviewItem.Queue.RECALL:
+                return item.stable_key in recall_decided
+            return item.stable_key in zone_decided
+
         progress = {}
         for queue in ReviewItem.Queue.values:
-            items = list(snapshot.review_items.filter(queue=queue))
+            items = [item for item in all_items if item.queue == queue]
             progress[queue] = {
-                "decided": sum(item_is_decided(item) for item in items),
+                "decided": sum(decided(item) for item in items),
                 "total": len(items),
             }
         return Response(
@@ -201,9 +386,149 @@ class SummaryView(APIView):
                 "champion": snapshot.champion_json,
                 "progress": progress,
                 "runs": [serialize_run(record) for record in snapshot.run_records.all()],
+                "registry": registry_summary(snapshot),
                 "reviewer_roles": reviewer_roles(request.user),
             }
         )
+
+
+def evidence_change_payload(change):
+    latest = change.decisions.order_by("-created_at").first()
+    revision = change.current_revision
+    row = revision.row_json if revision else {}
+    queue = None
+    if revision:
+        if change.identity.finding_type == "absence":
+            queue = ReviewItem.Queue.ABSENCE
+        elif str(row.get("Discovery Tag") or "").upper() == "NEW":
+            queue = ReviewItem.Queue.NEW
+        else:
+            queue = ReviewItem.Queue.KNOWN
+    review = (
+        effective_finding_review(
+            revision.finding_key, review_subject_hash=revision.review_subject_hash
+        )
+        if revision
+        else None
+    )
+    return {
+        "id": str(change.pk),
+        "kind": change.kind,
+        "invalidated_stages": change.invalidated_stages_json,
+        "identity": {
+            "id": str(change.identity_id),
+            "identity_hash": change.identity.identity_hash,
+            "economy": change.identity.economy,
+            "indicator_id": change.identity.indicator_id,
+            "law_name": change.identity.law_name,
+            "citation": change.identity.citation_key,
+            "finding_type": change.identity.finding_type,
+        },
+        "previous_finding_key": (
+            change.previous_revision.finding_key if change.previous_revision else None
+        ),
+        "current_finding_key": revision.finding_key if revision else None,
+        "review_queue": queue,
+        "review_state": review,
+        "latest_decision": (
+            {
+                "id": str(latest.pk),
+                "verdict": latest.verdict,
+                "comment": latest.comment,
+                "reviewer_name": latest.reviewer_name,
+                "created_at": latest.created_at.isoformat(),
+            }
+            if latest
+            else None
+        ),
+    }
+
+
+class EvidenceChangeSetView(APIView):
+    def get(self, request):
+        snapshot = active_snapshot()
+        try:
+            change_set = snapshot.evidence_change_set
+        except EvidenceChangeSet.DoesNotExist:
+            raise APIException(
+                "The active engine snapshot has not been reconciled into the evidence registry."
+            )
+        changes = change_set.changes.select_related(
+            "identity", "previous_revision", "current_revision"
+        ).prefetch_related("decisions")
+        kind = str(request.query_params.get("kind") or "")
+        economy = str(request.query_params.get("economy") or "")
+        if kind:
+            if kind not in EvidenceChange.Kind.values:
+                raise ValidationError({"kind": "Unknown evidence-change kind."})
+            changes = changes.filter(kind=kind)
+        if economy:
+            changes = changes.filter(identity__economy=economy)
+        return Response(
+            {
+                "snapshot": snapshot_identity(snapshot),
+                "change_set": registry_summary(snapshot)["change_set"],
+                "results": [evidence_change_payload(change) for change in changes],
+            }
+        )
+
+
+class EvidenceChangeDecisionView(APIView):
+    def post(self, request, change_id):
+        if not any(
+            has_review_role(request.user, role)
+            for role in ("citation", "mapping", "status")
+        ):
+            raise PermissionDenied("A reviewer role is required.")
+        serializer = EvidenceChangeDecisionWriteSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        data = serializer.validated_data
+        change = get_object_or_404(
+            EvidenceChange.objects.select_related("change_set"), pk=change_id
+        )
+        if change.change_set.snapshot_id != active_snapshot().pk:
+            raise ValidationError({"change": "This change is not in the active update."})
+        if change.change_set.state != EvidenceChangeSet.State.DRAFT:
+            raise ValidationError({"change": "This update has already been published."})
+        if change.kind != EvidenceChange.Kind.NOT_REPRODUCED:
+            raise ValidationError(
+                {"change": "New and revised evidence is decided in legal review."}
+            )
+        allowed = {
+            EvidenceChangeDecision.Verdict.RETAIN,
+            EvidenceChangeDecision.Verdict.RETIRE,
+            EvidenceChangeDecision.Verdict.INVESTIGATE,
+        }
+        if data["verdict"] not in allowed:
+            raise ValidationError({"verdict": "Choose retain, retire, or investigate."})
+        latest = change.decisions.order_by("-created_at").first()
+        concurrency_check(latest, data.pop("expected_latest_decision_id"))
+        reviewer_name, _ = reviewer_identity(request.user)
+        row = EvidenceChangeDecision.objects.create(
+            change=change,
+            reviewer_name=reviewer_name,
+            created_by=request.user,
+            supersedes=latest,
+            **data,
+        )
+        return Response(evidence_change_payload(change), status=status.HTTP_201_CREATED)
+
+
+class EvidenceChangeSetPublishView(APIView):
+    permission_classes = [IsSuperuserPermission]
+
+    def post(self, request):
+        snapshot = active_snapshot()
+        try:
+            change_set = snapshot.evidence_change_set
+        except EvidenceChangeSet.DoesNotExist:
+            raise ValidationError({"snapshot": "No reconciliation is available."})
+        try:
+            publish_change_set(change_set, request.user)
+        except DjangoValidationError as exc:
+            payload = exc.message_dict if hasattr(exc, "message_dict") else exc.messages
+            raise ValidationError(payload) from exc
+        return Response({"registry": registry_summary(snapshot)})
 
 
 def artifact_payload(artifact, *, include_content=False):
@@ -281,7 +606,8 @@ class LedgerView(APIView):
     pagination_class = WorkspacePagination
 
     def get(self, request):
-        rows = [*FindingDecision.objects.all(), *RecallDecision.objects.all(), *Zone3Decision.objects.all(), *CorrectionRequest.objects.all(), *Release.objects.all()]
+        mode = current_mode()
+        rows = [*FindingDecision.objects.filter(mode=mode), *RecallDecision.objects.filter(mode=mode), *Zone3Decision.objects.filter(mode=mode), *CorrectionRequest.objects.filter(mode=mode), *Release.objects.filter(snapshot__mode=mode)]
         rows.sort(key=lambda row: getattr(row, "reviewed_at", None) or getattr(row, "requested_at", None) or row.created_at, reverse=True)
         paginator = self.pagination_class()
         page = paginator.paginate_queryset(rows, request, view=self)
@@ -343,7 +669,34 @@ class KnowledgeGraphSubgraphView(APIView):
             nodes = [node for node in nodes if node.get("id") in seeds]
             node_ids = {node.get("id") for node in nodes}
             edges = [edge for edge in edges if edge.get("source") in node_ids and edge.get("target") in node_ids]
-        return Response({"snapshot": snapshot_identity(snapshot), "status": graph.get("status", "unavailable"), "nodes": nodes[:500], "edges": edges[:1000], "caps": {"nodes": 500, "edges": 1000}})
+
+        # A capped or filtered graph must be closed over its relationships.
+        # D3's forceLink throws when even one edge references a node omitted by
+        # the payload, so deduplicate nodes first and always remove orphan edges.
+        closed_nodes = []
+        node_ids = set()
+        for node in nodes[:500]:
+            node_id = node.get("id")
+            if not isinstance(node_id, str) or not node_id or node_id in node_ids:
+                continue
+            node_ids.add(node_id)
+            closed_nodes.append(node)
+        closed_edges = []
+        edge_ids = set()
+        for edge in edges:
+            source = edge.get("source")
+            target = edge.get("target")
+            edge_id = edge.get("id")
+            if source not in node_ids or target not in node_ids:
+                continue
+            if isinstance(edge_id, str) and edge_id in edge_ids:
+                continue
+            if isinstance(edge_id, str):
+                edge_ids.add(edge_id)
+            closed_edges.append(edge)
+            if len(closed_edges) == 1000:
+                break
+        return Response({"snapshot": snapshot_identity(snapshot), "status": graph.get("status", "unavailable"), "nodes": closed_nodes, "edges": closed_edges, "caps": {"nodes": 500, "edges": 1000}})
 
 
 class ReviewQueueView(APIView):
@@ -405,7 +758,7 @@ class EvidenceListView(APIView):
                     {
                         "finding_key": row.finding_key,
                         "row": row.row_json,
-                        "blocked": row.blocked,
+                        "blocked": technically_blocked(row.blocked, row.row_json),
                         "proof_asset_url": proof_url(row.proof_asset),
                         "source_hash": row.source_hash,
                     }
@@ -449,18 +802,28 @@ def filtered_evidence_rows(snapshot, params):
     for query_name, field_name in EVIDENCE_FILTERS.items():
         value = params.get(query_name)
         if value:
+            accepted = {
+                item.strip().casefold() for item in str(value).split(",") if item.strip()
+            }
             rows = [
                 row
                 for row in rows
-                if str(row.row_json.get(field_name) or "").casefold()
-                == value.casefold()
+                if str(row.row_json.get(field_name) or "").casefold() in accepted
             ]
     pillar = params.get("pillar")
     if pillar:
+        accepted_pillars = {
+            item.strip().casefold() for item in str(pillar).split(",") if item.strip()
+        }
         rows = [
             row
             for row in rows
-            if str(row.row_json.get("Indicator ID") or "").startswith(f"P{pillar}-")
+            if any(
+                str(row.row_json.get("Indicator ID") or "").casefold().startswith(
+                    f"p{value}-"
+                )
+                for value in accepted_pillars
+            )
         ]
     return rows
 
@@ -505,7 +868,7 @@ def source_match_block_reason(evidence):
     return "A complete citation proof is not available for this evidence row."
 
 
-def serialize_source_match(evidence, *, navigation):
+def serialize_source_match(evidence, *, navigation, review_item):
     row = evidence.row_json
     proof = row.get("citation_proof") or {}
     mode = source_match_mode(evidence)
@@ -518,7 +881,7 @@ def serialize_source_match(evidence, *, navigation):
         "proof_asset_url": asset_url,
         "proof_asset_available": bool(
             asset_url
-            and (settings.ENGINE_ROOT / "submission" / "review" / evidence.proof_asset).is_file()
+            and (bundle_dir() / evidence.proof_asset).is_file()
         ),
         "source_hash": evidence.source_hash,
         "source_sha256": source_sha256(row, evidence.source_hash),
@@ -551,6 +914,27 @@ def serialize_source_match(evidence, *, navigation):
         "review_state": effective_finding_review(
             evidence.finding_key, review_subject_hash=evidence.review_subject_hash
         ),
+        "review_queue": review_item.queue,
+        "stable_key": review_item.stable_key,
+        "approval_eligibility": {
+            "eligible": not bool(finding_ineligibility(review_item, evidence.snapshot)),
+            "reason": finding_ineligibility(review_item, evidence.snapshot),
+        },
+        "latest_correction": (
+            {
+                "id": str(correction.pk),
+                "explanation": correction.explanation,
+                "requested_by": correction.requested_by.full_name,
+                "requested_at": correction.requested_at.isoformat(),
+            }
+            if (
+                correction := CorrectionRequest.objects.filter(
+                    finding_key=evidence.finding_key,
+                    review_subject_hash=evidence.review_subject_hash,
+                ).order_by("-requested_at").first()
+            )
+            else None
+        ),
         "navigation": navigation,
     }
 
@@ -564,7 +948,7 @@ class EvidenceDetailView(APIView):
             {
                 "finding_key": row.finding_key,
                 "row": row.row_json,
-                "blocked": row.blocked,
+                "blocked": technically_blocked(row.blocked, row.row_json),
                 "proof_asset_url": proof_url(row.proof_asset),
                 "source_hash": row.source_hash,
                 "review_state": effective_finding_review(
@@ -580,6 +964,19 @@ class SourceMatchView(APIView):
         evidence = get_object_or_404(
             EvidenceRow, snapshot=snapshot, finding_key=finding_key
         )
+        requested_queue = str(request.query_params.get("queue") or "")
+        review_items = ReviewItem.objects.filter(
+            snapshot=snapshot,
+            finding_key=finding_key,
+            queue__in=(ReviewItem.Queue.NEW, ReviewItem.Queue.KNOWN, ReviewItem.Queue.ABSENCE),
+        )
+        review_item = (
+            review_items.filter(queue=requested_queue).first()
+            if requested_queue in (ReviewItem.Queue.NEW, ReviewItem.Queue.KNOWN, ReviewItem.Queue.ABSENCE)
+            else review_items.first()
+        )
+        if review_item is None:
+            raise Http404
         rows = filtered_evidence_rows(snapshot, request.query_params)
         keys = [row.finding_key for row in rows]
         try:
@@ -593,42 +990,137 @@ class SourceMatchView(APIView):
             "previous_key": keys[index - 1] if index > 0 else None,
             "next_key": keys[index + 1] if index + 1 < len(keys) else None,
         }
-        return Response(serialize_source_match(evidence, navigation=navigation))
+        return Response(
+            serialize_source_match(
+                evidence, navigation=navigation, review_item=review_item
+            )
+        )
 
 
 class ProofAssetView(APIView):
     def get(self, request, filename):
         if not PROOF_ASSET_PATTERN.fullmatch(filename):
             raise Http404
-        path = settings.ENGINE_ROOT / "submission" / "review" / "assets" / filename
+        path = bundle_dir() / "assets" / filename
         if not path.is_file():
             raise Http404
         return FileResponse(path.open("rb"), content_type="image/png")
 
 
+# One engine, two model backends. "hybrid" is the reviewed production path
+# (commercial hosted models, data via the imported snapshot); "local" runs the
+# same pipeline on the self-hosted open-weights model and is read straight from
+# the worker's captured run envelopes. Labels are display-only.
+RUN_MODES = {
+    "hybrid": {
+        "label": "Hybrid",
+        "provider_profile": "hybrid_accuracy",
+        "out_prefix": "final",
+        "models": settings.ENGINE_MODE_LABELS.get("hybrid", ""),
+    },
+    "local": {
+        "label": "Local",
+        "provider_profile": "local_openweights",
+        "out_prefix": "local",
+        "models": settings.ENGINE_MODE_LABELS.get("local", ""),
+    },
+}
+
+
+def request_mode(request, source=None):
+    value = str((source if source is not None else request.query_params).get("mode") or "hybrid")
+    if value not in RUN_MODES:
+        raise ValidationError({"mode": f"Choose one of: {', '.join(RUN_MODES)}."})
+    return value
+
+
+def action_mode(request):
+    """Mode of an engine action: the body's "mode", else ?mode=, else hybrid."""
+    return request_mode(request, {"mode": request.data.get("mode") or request.query_params.get("mode")})
+
+
+def actions_for_mode(mode):
+    """A mode's actions; source downloads (corpus) serve both models, so both tabs show them."""
+    queryset = EngineAction.objects.all()
+    if mode == "hybrid":
+        # A missing "mode" key (source downloads, older actions) must not read as
+        # "local": in SQL the comparison is NULL, and exclude() would drop the row.
+        return queryset.filter(~Q(arguments_json__mode="local") | Q(arguments_json__mode__isnull=True))
+    return queryset.filter(Q(arguments_json__mode=mode) | Q(kind=EngineAction.Kind.CORPUS))
+
+
+def serialize_modes():
+    return [
+        {"id": key, "label": value["label"], "models": value["models"]}
+        for key, value in RUN_MODES.items()
+    ]
+
+
 class RunsView(APIView):
     def get(self, request):
-        snapshot = active_snapshot()
-        records = RunRecord.objects.filter(snapshot=snapshot)
+        mode = request_mode(request)
+        if mode == "hybrid":
+            snapshot = active_snapshot()
+            results = [serialize_run(record) for record in RunRecord.objects.filter(snapshot=snapshot)]
+            champion = snapshot.champion_json
+        else:
+            results = [serialize_action_run(action) for action in local_run_actions(mode)]
+            champion = {}
         return Response(
             {
-                "results": [serialize_run(record) for record in records],
-                "champion": snapshot.champion_json,
+                "mode": mode,
+                "modes": serialize_modes(),
+                "results": results,
+                "champion": champion,
                 "actions": [
                     serialize_engine_action(action)
-                    for action in EngineAction.objects.all()[:20]
+                    for action in actions_for_mode(mode).filter(cleared_at__isnull=True)[:20]
                 ],
+                "worker": worker_status(),
                 "can_launch": request.user.is_superuser,
             }
         )
 
 
+def local_run_actions(mode):
+    """Succeeded run actions of a mode that captured an envelope, newest first."""
+    return [
+        action
+        for action in actions_for_mode(mode).filter(
+            kind=EngineAction.Kind.RUN, status=EngineAction.Status.SUCCEEDED
+        )
+        if action.result_json.get("findings") is not None
+    ]
+
+
+def serialize_action_run(action):
+    envelope = action.result_json
+    output = next(
+        (value for key, value in (action.result_hashes_json or {}).items()
+         if key.endswith("output.json")),
+        {},
+    )
+    arguments = action.arguments_json
+    return serialize_envelope(
+        f"{arguments.get('out_prefix', 'local')}_{arguments.get('cc')}_p{arguments.get('pillar')}"
+        f"@{action.finished_at.isoformat() if action.finished_at else action.pk}",
+        envelope,
+        {},
+        output.get("sha256") or "",
+    )
+
+
 def serialize_run(record):
-    envelope = record.envelope_json
+    return serialize_envelope(
+        record.run_name, record.envelope_json, record.cost_json, record.source_hash
+    )
+
+
+def serialize_envelope(run_name, envelope, cost_json, source_hash):
     findings = envelope.get("findings") or []
     warnings = envelope.get("warnings") or []
     metadata = envelope.get("metadata") or {}
-    cost = record.cost_json or metadata.get("cost_report") or {}
+    cost = cost_json or metadata.get("cost_report") or {}
     discovery = {"NEW": 0, "KNOWN": 0}
     for finding in findings:
         tag = str(finding.get("Discovery Tag") or "").upper()
@@ -642,8 +1134,9 @@ def serialize_run(record):
         }
     )
     return {
-        "run_name": record.run_name,
+        "run_name": run_name,
         "run_id": envelope.get("run_id") or cost.get("run_id"),
+        "provider_profile": envelope.get("provider_profile"),
         "country": envelope.get("country"),
         "pillar": envelope.get("pillar"),
         "generated_at": envelope.get("generated_at") or cost.get("at"),
@@ -656,7 +1149,7 @@ def serialize_run(record):
         "total_usd": cost.get("total_usd"),
         "models": cost.get("models") or {},
         "pipeline_stats": metadata.get("pipeline_stats") or {},
-        "source_hash": record.source_hash,
+        "source_hash": source_hash,
     }
 
 
@@ -717,7 +1210,7 @@ def file_sha256(path):
 
 
 def final_artifact_summary():
-    root = settings.ENGINE_ROOT / "submission"
+    root = submission_dir()
     csv_path = root / "consolidated_final.csv"
     json_path = root / "consolidated_final.json"
     if not csv_path.is_file() or not json_path.is_file():
@@ -794,7 +1287,7 @@ class SubmissionView(APIView):
                     "stale": snapshot.stale,
                 },
                 final_artifacts=final_artifact_summary(),
-                release=serialize_release(Release.objects.first()),
+                release=serialize_release(Release.objects.filter(snapshot__mode=current_mode()).first()),
             )
         )
 
@@ -805,6 +1298,7 @@ def serialize_engine_action(action):
         "kind": action.kind,
         "status": action.status,
         "arguments": action.arguments_json,
+        "mode": (action.arguments_json or {}).get("mode") or "hybrid",
         "requested_by": action.requested_by.full_name,
         "requested_at": action.requested_at.isoformat(),
         "started_at": action.started_at.isoformat() if action.started_at else None,
@@ -812,6 +1306,10 @@ def serialize_engine_action(action):
         "stdout": action.stdout,
         "result_hashes": action.result_hashes_json,
         "error": action.error,
+        "cancel_requested_at": (
+            action.cancel_requested_at.isoformat() if action.cancel_requested_at else None
+        ),
+        "cancelled_by": action.cancelled_by,
     }
 
 
@@ -836,28 +1334,232 @@ class EngineActionCreateView(APIView):
                 kind=self.kind,
                 status__in=(EngineAction.Status.QUEUED, EngineAction.Status.RUNNING),
             )
+            # The worker runs actions one at a time, in order, so several can wait
+            # in the queue. Only a true duplicate is refused: the same run (it would
+            # write the same output folder) or a second refresh/replay of one mode.
+            if self.kind == EngineAction.Kind.RUN:
+                active = active.filter(
+                    arguments_json__economy=arguments["economy"],
+                    arguments_json__pillar=arguments["pillar"],
+                    arguments_json__mode=arguments["mode"],
+                )
+                conflict = "This economy and pillar is already queued or running in this mode."
+            elif self.kind == EngineAction.Kind.CORPUS:
+                active = active.filter(
+                    arguments_json__economy=arguments["economy"],
+                    arguments_json__action=arguments["action"],
+                )
+                conflict = "This is already queued or running for this economy."
+            else:
+                active = active.filter(arguments_json__mode=arguments.get("mode", "hybrid"))
+                conflict = "This action is already queued or running for this mode."
             if active.exists():
-                raise DecisionConflict("An action of this type is already queued or running.")
+                raise DecisionConflict(conflict)
             action = EngineAction.objects.create(
                 kind=self.kind,
                 arguments_json=arguments,
                 requested_by=request.user,
             )
-        return Response(serialize_engine_action(action), status=status.HTTP_202_ACCEPTED)
+        # The action is committed and claimable; make sure something will run it.
+        try:
+            worker = ensure_worker()
+        except OSError as exc:
+            worker = worker_status() | {"started": False, "error": str(exc)[:300]}
+        return Response(
+            serialize_engine_action(action) | {"worker": worker},
+            status=status.HTTP_202_ACCEPTED,
+        )
+
+
+ACTIVE_STATUSES = (EngineAction.Status.QUEUED, EngineAction.Status.RUNNING)
+
+
+def worker_is_running(action, status):
+    """True only when a live worker reports THIS action as its current one."""
+    return bool(status.get("alive")) and status.get("current_action_id") == str(action.pk)
+
+
+def cancel_action(action, user, *, worker_running_it):
+    """Cancel one queued/running action (caller holds the row lock).
+
+    Queued -> cancelled now. Running -> a stop request the worker executing it
+    acts on within seconds. If no live worker is executing it (worker restarted
+    or crashed mid-run), nothing will ever act on a request, so it is closed
+    here instead of waiting for the lease to expire and the action to re-run."""
+    now = timezone.now()
+    action.cancelled_by = user.full_name or user.email
+    if action.status == EngineAction.Status.QUEUED or not worker_running_it:
+        action.status = EngineAction.Status.CANCELLED
+        action.finished_at = now
+        action.lease_expires_at = None
+        action.error = f"Cancelled by {action.cancelled_by} before it ran." if not action.started_at \
+            else f"Cancelled by {action.cancelled_by}; no worker was running it."
+        action.save(update_fields=("status", "finished_at", "lease_expires_at", "error", "cancelled_by"))
+    else:
+        action.cancel_requested_at = now
+        action.save(update_fields=("cancel_requested_at", "cancelled_by"))
+    return action
+
+
+class EngineActionCancelView(APIView):
+    permission_classes = [IsSuperuserPermission]
+
+    def post(self, request, action_id):
+        status_now = worker_status()
+        with transaction.atomic():
+            action = get_object_or_404(EngineAction.objects.select_for_update(), pk=action_id)
+            if action.status not in ACTIVE_STATUSES:
+                raise DecisionConflict(f"This action already {action.status}.")
+            cancel_action(action, request.user,
+                          worker_running_it=worker_is_running(action, status_now))
+        return Response(serialize_engine_action(action))
+
+
+class EngineActionCancelAllView(APIView):
+    """Cancel everything queued/running in one run mode and clear that mode's
+    finished actions from the list (rows are kept; results stay visible)."""
+
+    permission_classes = [IsSuperuserPermission]
+
+    def post(self, request):
+        mode = request_mode(request, request.data)
+        status_now = worker_status()
+        now = timezone.now()
+        with transaction.atomic():
+            active = list(actions_for_mode(mode).select_for_update().filter(status__in=ACTIVE_STATUSES))
+            for action in active:
+                cancel_action(action, request.user,
+                              worker_running_it=worker_is_running(action, status_now))
+            cleared = actions_for_mode(mode).filter(cleared_at__isnull=True).exclude(
+                status__in=ACTIVE_STATUSES
+            ).update(cleared_at=now)
+        return Response({
+            "mode": mode,
+            "cancelled": sum(1 for action in active if action.status == EngineAction.Status.CANCELLED),
+            "stopping": sum(1 for action in active if action.status == EngineAction.Status.RUNNING),
+            "cleared": cleared,
+        })
+
+
+class EngineActionEventsView(APIView):
+    """Live run console: events after ``?after=<seq>`` (max 500 per poll)."""
+
+    def get(self, request, action_id):
+        action = get_object_or_404(EngineAction, pk=action_id)
+        try:
+            after = int(request.query_params.get("after") or 0)
+        except ValueError:
+            raise ValidationError({"after": "Must be an integer sequence number."})
+        rows = list(action.events.filter(seq__gt=after).order_by("seq")[:500])
+        return Response({
+            "action_id": str(action.pk),
+            "status": action.status,
+            "cancel_requested_at": action.cancel_requested_at.isoformat() if action.cancel_requested_at else None,
+            "events": [
+                {"seq": row.seq, "ts": row.ts.isoformat(), "stage": row.stage, "label": row.label,
+                 "level": row.level, "message": row.message, "detail": row.detail}
+                for row in rows
+            ],
+            "last_seq": rows[-1].seq if rows else after,
+            "more": len(rows) == 500,
+        })
+
+
+SOURCE_PILLARS = ("2", "6", "7")
+
+
+class EngineSourcesView(EngineActionCreateView):
+    """Build sources (download + read + index) or Clear downloads for one economy."""
+
+    kind = EngineAction.Kind.CORPUS
+
+    def action_arguments(self, request):
+        economy = str(request.data.get("economy") or "")
+        operation = str(request.data.get("operation") or "build")
+        if operation not in ("build", "clear"):
+            raise ValidationError({"operation": "Choose build or clear."})
+        action = "build_r2_corpus" if operation == "build" else "archive_sources"
+        try:
+            spec = load_allowlist().get(action) or {}
+        except EngineWorkerError as exc:
+            raise APIException(str(exc), code="engine_allowlist_unavailable") from exc
+        economies = {str(value) for value in ((spec.get("params") or {}).get("economy") or {}).get("enum", [])}
+        if economy not in economies:
+            raise ValidationError({"economy": "Choose an economy configured in the engine action allowlist."})
+        arguments = {"action": action, "economy": economy, "operation": operation}
+        if operation == "build":
+            pillar = str(request.data.get("pillar") or "")
+            if pillar not in SOURCE_PILLARS:
+                raise ValidationError({"pillar": f"Choose pillar {', '.join(SOURCE_PILLARS)}."})
+            arguments["pillars"] = f"P{pillar}"
+            arguments["pillar"] = pillar
+        return arguments
+
+
+def fetch_documents(action):
+    """Documents an action downloaded: one entry per "fetch" event of kind download."""
+    documents = []
+    for event in action.events.filter(stage="fetch").order_by("seq"):
+        try:
+            detail = json.loads(event.detail or "{}")
+        except json.JSONDecodeError:
+            continue
+        if detail.get("kind") != "download":
+            continue
+        documents.append({
+            "url": detail.get("final_url") or detail.get("url"),
+            "seed_url": detail.get("url"),
+            "act": detail.get("act"),
+            "fetched_at": detail.get("fetched_at") or event.ts.isoformat(),
+            "size_kb": round((detail.get("bytes") or 0) / 1024, 1),
+            "file_type": detail.get("file_type"),
+            "sha256": detail.get("sha256"),
+        })
+    return documents
+
+
+class EngineActionDocumentsView(APIView):
+    """Every document an action downloaded (Run Record: URL, time, size, file type)."""
+
+    def get(self, request, action_id):
+        action = get_object_or_404(EngineAction, pk=action_id)
+        documents = fetch_documents(action)
+        if request.query_params.get("export") == "csv":
+            buffer = io.StringIO()
+            writer = csv.writer(buffer)
+            writer.writerow(["#", "Source URL", "Fetched during", "Time (hh:mm)", "Size (KB)",
+                             "File type", "Law", "SHA-256"])
+            pass_label = f"Sources · {(action.arguments_json or {}).get('economy', '')}"
+            for number, doc in enumerate(documents, 1):
+                fetched = parse_datetime(str(doc["fetched_at"]))
+                writer.writerow([number, doc["url"], pass_label,
+                                 timezone.localtime(fetched).strftime("%H:%M") if fetched else "",
+                                 doc["size_kb"], doc["file_type"], doc["act"] or "", doc["sha256"] or ""])
+            response = HttpResponse(("\ufeff" + buffer.getvalue()).encode("utf-8"),
+                                    content_type="text/csv; charset=utf-8")
+            response["Content-Disposition"] = f'attachment; filename="documents_downloaded_{action.pk}.csv"'
+            return response
+        return Response({"action_id": str(action.pk), "status": action.status,
+                         "count": len(documents), "documents": documents})
+
+
+class EngineWorkerStatusView(APIView):
+    def get(self, request):
+        return Response(worker_status())
 
 
 class EngineReplayView(EngineActionCreateView):
     kind = EngineAction.Kind.REPLAY
 
     def action_arguments(self, request):
-        return {"action": "replay"}
+        return {"action": "replay", "mode": action_mode(request)}
 
 
 class EngineRefreshView(EngineActionCreateView):
     kind = EngineAction.Kind.REFRESH
 
     def action_arguments(self, request):
-        return {"action": "refresh_payload"}
+        return {"action": "refresh_payload", "mode": action_mode(request)}
 
 
 class EngineRunView(EngineActionCreateView):
@@ -866,17 +1568,53 @@ class EngineRunView(EngineActionCreateView):
     def action_arguments(self, request):
         economy = str(request.data.get("economy") or "")
         pillar = str(request.data.get("pillar") or "")
-        aliases = {"Singapore": "si", "Malaysia": "ma", "Australia": "au"}
-        if economy not in aliases:
-            raise ValidationError({"economy": "Choose Singapore, Malaysia, or Australia."})
-        if pillar not in {"6", "7"}:
-            raise ValidationError({"pillar": "Choose pillar 6 or 7."})
+        try:
+            spec = load_allowlist().get("run_pipeline") or {}
+        except EngineWorkerError as exc:
+            raise APIException(str(exc), code="engine_allowlist_unavailable") from exc
+        params = spec.get("params") or {}
+        economies = {str(value) for value in (params.get("economy") or {}).get("enum", [])}
+        run_codes = {str(value) for value in (params.get("cc") or {}).get("enum", [])}
+        run_code = RUN_CODES.get(economy)
+        if economy not in economies or run_code not in run_codes:
+            raise ValidationError(
+                {"economy": "Choose an economy configured in the engine action allowlist."}
+            )
+        if pillar not in {"2", "6", "7"}:
+            raise ValidationError({"pillar": "Choose pillar 2, 6 or 7."})
+        mode = request_mode(request, request.data)
         return {
             "action": "run_pipeline",
             "economy": economy,
             "pillar": pillar,
-            "cc": aliases[economy],
+            "cc": run_code,
+            "mode": mode,
+            "provider_profile": RUN_MODES[mode]["provider_profile"],
+            "out_prefix": run_out_prefix(mode, run_code, pillar),
         }
+
+
+# Output-folder codes. Not derived from the name: "Indonesia"[:2] == "India"[:2].
+RUN_CODES = {
+    "Singapore": "si",
+    "Malaysia": "ma",
+    "Australia": "au",
+    "Thailand": "th",
+    "India": "in",
+    "Indonesia": "id",
+    "Russian Federation": "ru",
+    "Mongolia": "mn",
+    "Lao PDR": "la",
+    "Timor-Leste": "tl",
+}
+
+
+def run_out_prefix(mode, run_code, pillar):
+    """Hybrid runs write where the snapshot import reads them (final_r2_* for round 2)."""
+    prefix = RUN_MODES[mode]["out_prefix"]
+    if mode == "hybrid" and f"final_r2_{run_code}_p{pillar}" in ALL_HYBRID_RUN_NAMES:
+        return "final_r2"
+    return prefix
 
 
 class DecisionHistoryView(APIView):
@@ -924,6 +1662,8 @@ class DecisionHistoryView(APIView):
                         str(row.supersedes_id) if row.supersedes_id else None
                     ),
                     "authoritative_file_hash": row.authoritative_file_hash,
+                    "review_subject_hash": row.review_subject_hash,
+                    "current_subject": row.review_subject_hash == current_subject,
                 }
                 for row in CorrectionRequest.objects.filter(finding_key=key).order_by(
                     "requested_at"
@@ -1050,7 +1790,7 @@ def finding_ineligibility(item, snapshot):
     ).first()
     if not evidence:
         return "The finding has no consolidated evidence row."
-    if evidence.blocked:
+    if technically_blocked(evidence.blocked, evidence.row_json):
         return "The consolidated evidence row is technically blocked."
     row = evidence.row_json
     if str(row.get("Status") or "").strip() != "in_force":
@@ -1082,13 +1822,17 @@ def finding_ineligibility(item, snapshot):
             return "The finding lacks a complete citation proof."
         if proof.get("alignment_status") in ("unaligned", "ambiguous", "review", None):
             return "The source citation is unresolved or ambiguously aligned."
+        # Engine gate contract (gates.py / finalization.validate_final_finding):
+        # FAIL = the row can never ship; WARN = a signal the named reviewer must
+        # weigh individually. Only FAIL blocks approval here — WARN rows stay
+        # approvable one-by-one (bulk approval still excludes them).
         failed_gates = [
             gate.get("gate_id")
             for gate in proof.get("gate_results") or []
-            if gate.get("status") != "PASS"
+            if gate.get("status") == "FAIL"
         ]
         if failed_gates:
-            return f"Evidence gates are not passing: {', '.join(filter(None, failed_gates))}."
+            return f"Evidence gates are failing: {', '.join(filter(None, failed_gates))}."
     return ""
 
 
@@ -1139,7 +1883,7 @@ class ReviewContextView(APIView):
                     {
                         "finding_key": evidence.finding_key,
                         "row": row,
-                        "blocked": evidence.blocked,
+                        "blocked": technically_blocked(evidence.blocked, evidence.row_json),
                         "proof_asset_url": proof_url(evidence.proof_asset),
                         "same_law": same_law,
                         "same_indicator": same_indicator,
@@ -1225,12 +1969,14 @@ class FindingDecisionView(APIView):
             )
 
         reviewer_name, reviewer_id = reviewer_identity(request.user)
+        reviewer_role = decision_reviewer_role(request.user, stage)
         reviewed_at = timezone.now()
         prospective = {
             **data,
             "id": "prospective",
             "review_subject_hash": item.review_subject_hash,
             "reviewer_name": reviewer_name,
+            "reviewer_role": reviewer_role,
             "reviewed_at": reviewed_at,
             "created_by_id": request.user.pk,
         }
@@ -1258,7 +2004,7 @@ class FindingDecisionView(APIView):
                 item.review_subject_hash,
                 effective,
                 reviewer_name=reviewer_name,
-                reviewer_role=stage,
+                reviewer_role=reviewer_role,
                 reviewed_at=reviewed_at,
                 note=data["note"],
             )
@@ -1267,10 +2013,11 @@ class FindingDecisionView(APIView):
                 engine_decisions,
             )
             row = FindingDecision.objects.create(
+                mode=current_mode(),
                 **data,
                 review_subject_hash=item.review_subject_hash,
                 reviewer_name=reviewer_name,
-                reviewer_role=stage,
+                reviewer_role=reviewer_role,
                 reviewed_at=reviewed_at,
                 created_by=request.user,
                 supersedes=latest_stage,
@@ -1295,6 +2042,8 @@ class FindingDecisionView(APIView):
 
 
 def validate_distinct_stage_reviewer(finding_key, stage, decision, user, effective):
+    if "admin" in reviewer_roles(user):
+        return
     if (
         effective["decision"] == "approved"
         and effective["citation_reviewer_name"].strip().casefold()
@@ -1368,6 +2117,7 @@ class FindingBulkDecisionView(APIView):
             raise ValidationError({"ineligible": failures})
 
         reviewer_name, reviewer_id = reviewer_identity(request.user)
+        reviewer_role = decision_reviewer_role(request.user, stage)
         reviewed_at = timezone.now()
         expected = data.pop("expected_latest_decision_ids")
         finding_keys = data.pop("finding_keys")
@@ -1395,6 +2145,7 @@ class FindingBulkDecisionView(APIView):
                     "queue": ReviewItem.Queue.KNOWN,
                     "decision": FindingDecision.Verdict.APPROVED,
                     "reviewer_name": reviewer_name,
+                    "reviewer_role": reviewer_role,
                     "reviewed_at": reviewed_at,
                     "created_by_id": request.user.pk,
                 }
@@ -1416,7 +2167,7 @@ class FindingBulkDecisionView(APIView):
                         items_by_key[key].review_subject_hash,
                         effective,
                         reviewer_name=reviewer_name,
-                        reviewer_role=stage,
+                        reviewer_role=reviewer_role,
                         reviewed_at=reviewed_at,
                         note=data["note"],
                     )
@@ -1427,6 +2178,7 @@ class FindingBulkDecisionView(APIView):
             )
             rows = [
                 FindingDecision.objects.create(
+                mode=current_mode(),
                     finding_key=key,
                     review_subject_hash=items_by_key[key].review_subject_hash,
                     queue=ReviewItem.Queue.KNOWN,
@@ -1437,7 +2189,7 @@ class FindingBulkDecisionView(APIView):
                     status_checked=data["status_checked"],
                     note=data["note"],
                     reviewer_name=reviewer_name,
-                    reviewer_role=stage,
+                    reviewer_role=reviewer_role,
                     reviewed_at=reviewed_at,
                     created_by=request.user,
                     supersedes=latest_by_key[key],
@@ -1503,6 +2255,7 @@ class RecallDecisionView(APIView):
                 ],
             )
             row = RecallDecision.objects.create(
+                mode=current_mode(),
                 **data,
                 reviewer_name=reviewer_name,
                 reviewer_role="mapping",
@@ -1567,6 +2320,7 @@ class Zone3DecisionView(APIView):
                 [event],
             )
             row = Zone3Decision.objects.create(
+                mode=current_mode(),
                 **data,
                 reviewer_name=reviewer_name,
                 reviewer_role="mapping",
@@ -1586,6 +2340,115 @@ class Zone3DecisionView(APIView):
         )
 
 
+MATRIX_ECONOMY_ORDER = ["Singapore", "Malaysia", "Australia", "Thailand", "India", "Indonesia",
+                        "Russian Federation", "Mongolia", "Lao PDR", "Timor-Leste"]
+
+
+def zone3_matrix_payload(snapshot):
+    """Indicator-score matrix of one snapshot: engine Zone-3 proposals overlaid with
+    the attributable reviewer decisions of the same model backend, plus the
+    evidence rows each score rests on."""
+    mode = snapshot.mode
+
+    latest_decisions = {}
+    for decision in Zone3Decision.objects.filter(mode=mode).order_by("created_at"):
+        latest_decisions[decision.score_key] = decision
+
+    evidence_index = {}
+    evidence_queues = (ReviewItem.Queue.NEW, ReviewItem.Queue.KNOWN, ReviewItem.Queue.ABSENCE)
+    for item in ReviewItem.objects.filter(snapshot=snapshot, queue__in=evidence_queues).order_by("position"):
+        record = sheet_record({"headers": snapshot.headers_json.get(item.queue) or []}, item.row_json)
+        economy = str(record.get("Economy") or "").strip()
+        indicator = str(record.get("Indicator") or record.get("Indicator ID") or "").strip()
+        if not economy or not indicator:
+            continue
+        evidence_index.setdefault((economy.casefold(), indicator.casefold()), []).append({
+            "finding_key": item.finding_key,
+            "stable_key": item.stable_key,
+            "queue": item.queue,
+            "law": str(record.get("Law/instrument") or record.get("Law Name")
+                       or record.get("Configured governing instrument") or ""),
+            "article": str(record.get("Article/section") or record.get("Article / Section")
+                           or record.get("Master citation") or ""),
+            "tag": str(record.get("Discovery Tag") or ("ABSENCE" if item.queue == ReviewItem.Queue.ABSENCE else "")),
+            "blocked": item.blocked,
+        })
+
+    cells = []
+    economies, indicators = [], []
+    decided = 0
+    for item in ReviewItem.objects.filter(snapshot=snapshot, queue=ReviewItem.Queue.ZONE3).order_by("position"):
+        record = sheet_record({"headers": snapshot.headers_json.get(ReviewItem.Queue.ZONE3) or []}, item.row_json)
+        economy = str(record.get("Economy") or "").strip()
+        indicator = str(record.get("Indicator") or "").strip()
+        if economy not in economies:
+            economies.append(economy)
+        if indicator not in indicators:
+            indicators.append(indicator)
+        deterministic = record.get("Deterministic score")
+        decision = latest_decisions.get(item.stable_key)
+        state = "pending"
+        effective = None
+        if decision is not None:
+            # The engine ledger stores writer-style actions (approve/override);
+            # app-written rows store the model verdicts (approved/overridden).
+            state = "overridden" if str(decision.verdict) in ("override", "overridden") else "approved"
+            effective = float(decision.score) if decision.score is not None else deterministic
+            decided += 1
+        cells.append({
+            "economy": economy,
+            "indicator": indicator,
+            "score_key": item.stable_key,
+            "question": record.get("Indicator question"),
+            "deterministic": deterministic,
+            "deterministic_reason": record.get("Deterministic reason"),
+            "master_gold": record.get("Master gold score"),
+            "gold_divergence": (lambda value: value if value and value.casefold() not in ("agrees", "none", "n/a", "—") else None)(str(record.get("Gold divergence") or "").strip()),
+            "judge_scores": record.get("Judge scores"),
+            "judge_reasoning": record.get("Judge reasoning"),
+            "agreement_alpha": record.get("Agreement alpha"),
+            "score_band": record.get("Score band"),
+            "flagged": bool(record.get("Flagged for review")),
+            "state": state,
+            "effective": effective,
+            "reviewer_name": decision.reviewer_name if decision else "",
+            "reviewed_at": decision.reviewed_at.isoformat() if decision else None,
+            "reasoning": (decision.reasoning if decision and hasattr(decision, "reasoning") else "") or "",
+            "latest_decision_id": str(decision.pk) if decision else None,
+            "blocked": item.blocked,
+            "evidence": evidence_index.get((economy.casefold(), indicator.casefold()), []),
+        })
+
+    economies.sort(key=lambda name: (MATRIX_ECONOMY_ORDER.index(name) if name in MATRIX_ECONOMY_ORDER else 99, name))
+    indicators.sort()
+    return {
+        "mode": mode,
+        "modes": serialize_modes(),
+        "snapshot": snapshot_identity(snapshot),
+        "economies": economies,
+        "indicators": indicators,
+        "counts": {"total": len(cells), "decided": decided, "pending": len(cells) - decided},
+        "score_semantics": {
+            "explanation": "A cell is an indicator-level decision. The engine proposes a deterministic score with judge-panel context; only a named reviewer approval or override makes it effective.",
+            "allowed_scores": [0, 0.5, 1],
+        },
+        "cells": cells,
+    }
+
+
+class Zone3MatrixView(APIView):
+    def get(self, request):
+        mode = request_mode(request)
+        snapshot = EngineSnapshot.objects.filter(active=True, mode=mode).first()
+        if snapshot is None:
+            return Response({
+                "mode": mode, "modes": serialize_modes(), "snapshot": None, "economies": [],
+                "indicators": [], "counts": {"total": 0, "decided": 0, "pending": 0},
+                "score_semantics": {"explanation": "", "allowed_scores": [0, 0.5, 1]}, "cells": [],
+            })
+        return Response(zone3_matrix_payload(snapshot))
+
+
 class CorrectionRequestView(APIView):
     def post(self, request):
         serializer = CorrectionRequestWriteSerializer(data=request.data)
@@ -1600,7 +2463,7 @@ class CorrectionRequestView(APIView):
         snapshot = active_snapshot()
         if snapshot.stale:
             raise ValidationError({"snapshot": "The active snapshot is stale."})
-        get_object_or_404(
+        item = get_object_or_404(
             ReviewItem,
             snapshot=snapshot,
             queue=data["queue"],
@@ -1608,7 +2471,10 @@ class CorrectionRequestView(APIView):
         )
         with decision_domain_lock("findings"):
             latest = (
-                CorrectionRequest.objects.filter(finding_key=data["finding_key"])
+                CorrectionRequest.objects.filter(
+                    finding_key=data["finding_key"],
+                    review_subject_hash=item.review_subject_hash,
+                )
                 .order_by("-requested_at")
                 .first()
             )
@@ -1619,6 +2485,7 @@ class CorrectionRequestView(APIView):
                 [
                     {
                         "finding_key": data["finding_key"],
+                        "review_subject_hash": item.review_subject_hash,
                         "review": {
                             "decision": "rejected",
                             "reviewer_name": request.user.full_name,
@@ -1636,7 +2503,9 @@ class CorrectionRequestView(APIView):
                 ],
             )
             row = CorrectionRequest.objects.create(
+                mode=current_mode(),
                 **data,
+                review_subject_hash=item.review_subject_hash,
                 requested_by=request.user,
                 supersedes=latest,
                 authoritative_file_hash=receipt["sha256"],

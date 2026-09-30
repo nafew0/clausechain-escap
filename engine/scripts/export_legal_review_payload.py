@@ -24,6 +24,12 @@ from scripts.build_legal_workbook import (
     _recall_rationale,
     _surrounding_context,
 )
+from packages.core import review_layout  # noqa: E402
+
+# The runs and review inputs of the model backend being exported (hybrid by
+# default; CLAUSECHAIN_REVIEW_MODE=local builds the separate Local workspace).
+LAYOUT = review_layout.current()
+RUNS = list(LAYOUT.runs)  # noqa: F811
 
 REVIEW_FIELDS = [
     "Reviewer decision",
@@ -40,7 +46,7 @@ REVIEW_FIELDS = [
 
 def indicator_configs() -> dict[str, dict]:
     configs: dict[str, dict] = {}
-    for pillar in ("6", "7"):
+    for pillar in ("2", "6", "7"):
         payload = yaml.safe_load(Path(f"configs/rdtii/pillar_{pillar}.yaml").read_text()) or {}
         for indicator_id, cfg in (payload.get("indicators") or {}).items():
             item = dict(cfg or {})
@@ -207,7 +213,8 @@ def build_payload() -> dict:
         row = row + [_fkey(MappedFinding.model_validate(finding))]
         (new_rows if tag == "NEW" else known_rows).append(row)
 
-    misses = json.loads(Path("data/review/recall_adjudication.json").read_text())
+    misses = (json.loads(LAYOUT.recall_adjudication.read_text())
+              if LAYOUT.recall_adjudication.is_file() else {"misses": []})
     recall_headers = [
         "Miss ID", "Economy", "Indicator", "Indicator question", "Master act/instrument",
         "Master citation", "Technical class", "Emitted under", "Proposed verdict",
@@ -219,8 +226,9 @@ def build_payload() -> dict:
     for index, miss in enumerate(misses.get("misses", []), 1):
         cfg = configs.get(miss.get("gold_indicator", ""), {})
         import hashlib as _h
-        recall_key = _h.sha256("\x1f".join([str(miss.get("economy")), str(miss.get("gold_indicator")),
-                                             str(miss.get("act")), str(miss.get("ref"))]).encode()).hexdigest()
+        recall_key = _h.sha256(review_layout.namespaced("\x1f".join([
+            str(miss.get("economy")), str(miss.get("gold_indicator")),
+            str(miss.get("act")), str(miss.get("ref"))])).encode()).hexdigest()
         recall_rows.append([
             f"M{index:03d}", miss.get("economy"), miss.get("gold_indicator"), question(cfg),
             miss.get("act"), miss.get("ref"), miss.get("class"),
@@ -239,14 +247,11 @@ def build_payload() -> dict:
     zone_rows = []
     zone_index = 0
     zone_run_paths = {
-        "singapore_p6": Path("outputs/final_si_p6/output.json"),
-        "singapore_p7": Path("outputs/final_si_p7/output.json"),
-        "malaysia_p6": Path("outputs/final_ma_p6/output.json"),
-        "malaysia_p7": Path("outputs/final_ma_p7/output.json"),
-        "australia_p6": Path("outputs/final_au_p6/output.json"),
-        "australia_p7": Path("outputs/final_au_p7/output.json"),
+        f"{review_layout.ECONOMY_BY_CODE[review_layout.run_code(run)].lower()}_{run.rsplit('_', 1)[-1]}":
+            Path(f"outputs/{run}/output.json")
+        for run in RUNS
     }
-    for path in sorted(Path("data/zone3").glob("*_scores.json")):
+    for path in sorted(LAYOUT.zone3_dir.glob("*_scores.json")):
         payload = json.loads(path.read_text())
         run_path = zone_run_paths.get(path.stem.removesuffix("_scores"))
         fresh = bool(run_path and run_path.is_file()
@@ -291,7 +296,7 @@ def build_payload() -> dict:
     for economy in ("Singapore", "Malaysia", "Australia"):
         for entry in index.get(economy, []):
             indicator_id = str(entry.get("indicator_code", ""))
-            if entry.get("source") != "master" or not indicator_id.startswith(("P6", "P7")):
+            if entry.get("source") != "master" or not indicator_id.startswith(("P2", "P6", "P7")):
                 continue
             master_rows.append([
                 economy, indicator_id, entry.get("score", ""), entry.get("act", ""),
@@ -311,9 +316,9 @@ def build_payload() -> dict:
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "engine_git_sha": _engine_git_sha(),
         "artifact_hashes": {
-            "consolidated_json": _sha256_file("submission/consolidated.json"),
-            "decisions_template": _sha256_file("submission/review/decisions.template.json"),
-            "recall_adjudication": _sha256_file("data/review/recall_adjudication.json"),
+            "consolidated_json": _sha256_file(LAYOUT.consolidated),
+            "decisions_template": _sha256_file(LAYOUT.decisions_template),
+            "recall_adjudication": _sha256_file(LAYOUT.recall_adjudication),
         },
         "counts": {
             "new": len(new_rows), "known": len(known_rows), "absence": len(absence_rows),

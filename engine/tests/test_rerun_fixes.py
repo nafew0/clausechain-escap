@@ -125,3 +125,19 @@ def test_zone3_binding_agreement_inverse_polarity():
         0.0, "binding cross-border data-transfer agreement evidenced")
     assert deterministic_score("P6-I5", []) == (
         1.0, "no qualifying binding data-transfer agreement found")
+
+
+def test_proof_spans_locate_quote_when_pdf_splits_subreference_brackets():
+    # Thai PDPA s. 28: the PDF stores "16(5)" as separate runs, joined as
+    # "16 ( 5 )"; the quote "section 16(5), except" must still resolve to spans.
+    from packages.core.orchestrator import _participating_proof_spans
+
+    runs = ["as prescribed by the Committee in section 16", "(", "5", ")", ",",
+            "except in the following circumstances", ":"]
+    evidence = [{"id": f"s{i}", "page": 12, "text": text, "bbox": [0, i, 1, i + 1],
+                 "reading_order": i} for i, text in enumerate(runs)]
+    ids, boxes = _participating_proof_spans(
+        "prescribed by the Committee in section 16(5), except in the following circumstances:",
+        evidence)
+    assert ids == [f"s{i}" for i in range(len(runs))]
+    assert len(boxes) == len(runs)

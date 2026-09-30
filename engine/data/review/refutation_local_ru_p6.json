@@ -1,0 +1,114 @@
+[
+ {
+  "indicator": "P6-I2",
+  "law": "Government Resolution No. 445 of 12.04.2018 Rules for storag",
+  "article": "Art. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates storage 'on the territory of the Russian Federation' (на территории Российской Федерации) for user messages. This satisfies the legal function of local storage. The sectoral scope (telecommunications) is valid under the rubric's scoring rule which allows 0.5 for a single non-personal/specific-data rule or 1 if it covers personal data (user messages are personal data). No scope defect invalidates the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I2 asks if a copy must be stored domestically. The text 'Оператор связи осуществляет хранение на территории Российской Федерации...' (The communication operator carries out storage on the territory of the Russian Federation...) is a mandatory operational requirement for the operator. It is not a permissive 'may' but a description of the required mode of operation ('carries out storage'). The exceptions (zero volume for specific channels) are captured in the context and do not n"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that the operator 'carries out storage on the territory of the Russian Federation'. This is a direct statement of domestic storage location. It is distinct from P6-I3 (server location for operation) because it specifies the storage of the data itself ('messages'), not just the infrastructure. It is distinct from P6-I1 (transfer ban) because it does not prohibit transfer, only mandates where the storage copy resides. The text supports the rationale of mandatory domest"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "Government Resolution No. 445 of 12.04.2018 Rules for storag",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The cited text (Art. 1) merely approves the 'Rules for storage' (Правила хранения) but does not contain the substantive legal obligation to store data domestically. The phrase 'storage of users' messages' refers to the act of retaining data, not the geographic location of that storage. P6-I2 requires a requirement that a copy be stored *in the territory*. The snippet lacks any reference to domestic location, servers, or territory, thus failing the legal function test for local storage."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Applying the rubric, the indicator P6-I2 asks 'Must a COPY of the data be stored domestically?'. The provided snippet is a procedural enactment clause ('Approve the attached Rules...'). It does not state where the data must be stored. Even if the attached rules (not provided in the snippet) contained location requirements, this specific citation does not evidence them. Furthermore, the rubric's positive cues ('shall be stored in', 'located in the territory') are absent. The text evidences a rete"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The exact quoted text is 'Утвердить прилагаемые Правила хранения...' (Approve the attached Rules for storage...). It contains no words indicating domestic location (e.g., 'in the territory', 'on servers located in'). The rationale claims it 'establishes a local storage requirement', but the text only establishes the existence of rules regarding storage. There is no textual basis in the snippet to infer a geographic constraint on the storage location."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Federal Law No. 149-FZ of 27.07.2006 On Information, Informa",
+  "article": "Art. 13(2)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "pillar_scope_exclusions",
+    "reason": "The provision explicitly applies only to 'state bodies, local self-government bodies, state and municipal unitary enterprises, or state and municipal institutions.' The rubric's pillar_scope_exclusions state that 'Measures applying ONLY to government data are NOT scored for Pillar 6.' Since this is a sectoral restriction limited to the public sector, it falls outside the scope of Pillar 6 (Cross-Border Data Flows) which generally targets private sector or general data flows, and thus cannot be v"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "pillar_scope_exclusions",
+    "reason": "Applying the rubric's exclusions, the text is a sectoral requirement for government entities. The rubric explicitly excludes measures applying only to government data from Pillar 6 scoring. Therefore, even though the text describes an infrastructure requirement (local servers), it is excluded from the indicator's scope by the pillar-level exclusion rule, making the mapping invalid under the supplied rubric."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "pillar_scope_exclusions",
+    "reason": "The exact quoted text restricts the location of technical means for 'information systems used by state bodies...'. It does not impose a general precondition for providing services in the market, but rather a specific compliance requirement for the public sector. Given the rubric's explicit exclusion of government-only measures from Pillar 6, the text does not establish a valid P6-I3 mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "Convention for the Protection of Individuals with regard to ",
+  "article": "Art. 12",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision in Article 12(2) of ETS 108 creates a binding obligation ('shall not... prohibit or subject to special authorisation') regarding transborder flows of personal data. This fits the legal function of a binding cross-border data-transfer commitment. The exception in paragraph 3 is a standard derogation clause that does not negate the existence of the binding commitment itself, which is what the indicator seeks to identify."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet matches the positive cue 'shall not prohibit or restrict the cross-border transfer of information' (specifically 'shall not... prohibit... transborder flows of personal data'). The indicator P6-I5 asks if the economy has joined NO agreement with binding commitments. The presence of this binding commitment means the score would be 0 (at least one binding agreement). The mapping correctly identifies the provision as evidence of such a commitment, which is the required input for the sco"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states 'A Party shall not... prohibit... transborder flows of personal data'. This is a clear, binding legal norm concerning cross-border data transfer. The context confirms it applies to 'transfer across national borders'. The text establishes the existence of a binding commitment, which is exactly what the indicator's legal_test requires for the row to be valid."
+   }
+  ]
+ }
+]

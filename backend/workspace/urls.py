@@ -1,13 +1,23 @@
 from django.urls import path
 
+from . import comparison_views
 from .views import (
     CorrectionRequestView,
     EvidenceDetailView,
+    EvidenceChangeDecisionView,
+    EvidenceChangeSetPublishView,
+    EvidenceChangeSetView,
     EvidenceListView,
     EngineActionsView,
     EngineRefreshView,
     EngineReplayView,
     EngineRunView,
+    EngineWorkerStatusView,
+    EngineActionCancelView,
+    EngineActionCancelAllView,
+    EngineActionDocumentsView,
+    EngineActionEventsView,
+    EngineSourcesView,
     ProofAssetView,
     DecisionHistoryView,
     FindingBulkDecisionView,
@@ -28,6 +38,7 @@ from .views import (
     SourceMatchView,
     SubmissionView,
     Zone3DecisionView,
+    Zone3MatrixView,
 )
 
 
@@ -35,6 +46,17 @@ app_name = "workspace"
 
 urlpatterns = [
     path("summary/", SummaryView.as_view(), name="summary"),
+    path("registry/changes/", EvidenceChangeSetView.as_view(), name="evidence_changes"),
+    path(
+        "registry/changes/<uuid:change_id>/decision/",
+        EvidenceChangeDecisionView.as_view(),
+        name="evidence_change_decision",
+    ),
+    path(
+        "registry/publish/",
+        EvidenceChangeSetPublishView.as_view(),
+        name="evidence_registry_publish",
+    ),
     path("ops-stats/", OpsStatsView.as_view(), name="ops_stats"),
     path("config/", WorkspaceConfigView.as_view(), name="config"),
     path("ledger/", LedgerView.as_view(), name="ledger"),
@@ -71,6 +93,12 @@ urlpatterns = [
     path("engine/refresh/", EngineRefreshView.as_view(), name="engine_refresh"),
     path("engine/replay/", EngineReplayView.as_view(), name="engine_replay"),
     path("engine/run/", EngineRunView.as_view(), name="engine_run"),
+    path("engine/worker/", EngineWorkerStatusView.as_view(), name="engine_worker"),
+    path("engine/actions/cancel-all/", EngineActionCancelAllView.as_view(), name="engine_cancel_all"),
+    path("engine/actions/<uuid:action_id>/cancel/", EngineActionCancelView.as_view(), name="engine_cancel"),
+    path("engine/actions/<uuid:action_id>/events/", EngineActionEventsView.as_view(), name="engine_events"),
+    path("engine/actions/<uuid:action_id>/documents/", EngineActionDocumentsView.as_view(), name="engine_documents"),
+    path("engine/sources/", EngineSourcesView.as_view(), name="engine_sources"),
     path("decisions/findings/", FindingDecisionView.as_view(), name="finding_decision"),
     path(
         "decisions/findings/bulk/",
@@ -84,5 +112,9 @@ urlpatterns = [
     ),
     path("decisions/recall/", RecallDecisionView.as_view(), name="recall_decision"),
     path("decisions/zone3/", Zone3DecisionView.as_view(), name="zone3_decision"),
+    path("zone3-matrix/", Zone3MatrixView.as_view(), name="zone3_matrix"),
     path("corrections/", CorrectionRequestView.as_view(), name="correction_request"),
+    # Model A (hybrid) vs Model B (local): template "Engine Comparison" sheet.
+    path("comparison/", comparison_views.ComparisonView.as_view(), name="comparison"),
+    path("comparison/export/", comparison_views.ComparisonExportView.as_view(), name="comparison_export"),
 ]

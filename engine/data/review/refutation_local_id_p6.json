@@ -1,0 +1,58 @@
+[
+ {
+  "indicator": "P6-I5",
+  "law": "IA-CEPA Chapter 13 (E-Commerce)",
+  "article": "Art. 13.11",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is a binding treaty commitment ('shall allow') applicable to 'covered persons' (horizontal scope), not limited to government data. The exceptions in paragraph 3 are standard carve-outs that do not negate the existence of the binding commitment itself, which is what the indicator tests for."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet matches the positive cue 'cross-border transfer of information by electronic means' and the legal test for a binding commitment. The mapping correctly identifies the presence of a binding agreement, which corresponds to a score of 0 under the rubric's scoring logic (1 = no agreement, 0 = at least one). The polarity 'framework_absent_scores_high' is consistent with the indicator's design."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'Each Party shall allow the cross-border transfer of information by electronic means' explicitly establishes a binding obligation. The context confirms this is Article 13.11 of IA-CEPA. The text does not merely recognize the possibility of transfer but mandates it, satisfying the strict textual requirement for a binding commitment."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "UU 4/2021 ASEAN E-Commerce ratification",
+  "article": "Art. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited law (UU 4/2021) is the valid instrument of ratification for the ASEAN Agreement on Electronic Commerce. While the snippet itself is a ratification clause, it legally binds Indonesia to the treaty's terms. The rationale correctly identifies that the underlying agreement contains the binding commitments. There is no legal-function defect; the provision establishes the domestic legal status of the international commitment."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P6-I5 asks if the economy has joined NO agreement with binding cross-border data-transfer commitments. The rubric's legal_test states that the row records that the economy HAS such a commitment. The mapping provides evidence of a ratified agreement (ASEAN E-Commerce) which is known to contain such commitments. This is a valid evidence row for the 'presence' of the framework, which will result in a score of 0 (At least one binding agreement). The mapping aligns with the rubric's ins"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet 'Mengesahkan ASEAN Agreement on Electronic Commerce' explicitly establishes the ratification of the specific treaty. The surrounding context confirms this is a Law (Undang-Undang) passed by the President and DPR. The text does not contain the specific data transfer language itself, but it is the legal act that incorporates the treaty into domestic law. The rationale correctly interprets this as evidence of the binding agreement's existence, which is what the indicator requires "
+   }
+  ]
+ }
+]

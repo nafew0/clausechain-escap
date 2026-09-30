@@ -1,0 +1,58 @@
+[
+ {
+  "indicator": "P6-I3",
+  "law": "Ministry of Technology and Communications Decision No. 3643 ",
+  "article": "Art. 21",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text requires a backup-data system located in Lao PDR when foreign cloud infrastructure is used. In the context of cloud-service technical standards, that is a concrete local-system requirement attached to providing the service, not merely confidentiality or generic domestic processing."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, the rubric’s scoring controls: a local infrastructure requirement as a service precondition scores 1. The conditional foreign-cloud case requires an in-country backup system; the text says it must be present. This is more than merely recording a rule for an already-established data centre or a copy on rented capacity."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 21’s technical standards say that when foreign cloud infrastructure is used, a backup-data collection system must be located in Lao PDR. The text does not specify a data centre or server, but it supports a local-system requirement in that conditional service context; it does not establish a blanket localization duty."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "RCEP Chapter 12 Electronic Commerce (Lao PDR deferral, footn",
+  "article": "Art. 12.3",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Article 12.3(1) performs a chapter-scope function: it applies the Chapter to measures affecting electronic commerce. It does not itself impose a cross-border data-transfer commitment, so the claimed legal function is unsupported."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "snippet does not support the rationale",
+    "reason": "P6-I5 requires a treaty provision stating a binding cross-border transfer commitment. The quoted scope sentence does not do so; the score-at-scoring-time rule permits evidence of an existing commitment, but does not make this scope sentence evidence of one."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "snippet does not support the rationale",
+    "reason": "The exact quotation says only that the Chapter applies to measures affecting e-commerce. The surrounding text identifies Articles 12.14 and 12.15 and limits their application in specified circumstances, but does not supply the operative transfer commitment. The Article 12.15 title alone does not establish its terms."
+   }
+  ]
+ }
+]

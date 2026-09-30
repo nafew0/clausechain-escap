@@ -1,0 +1,450 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Law No. 27 of 2022 on Personal Data Protection (official BPK",
+  "article": "Art. 76(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited provision (Art. 76(3) Huruf f) is a definitional clause within Law No. 27 of 2022, which is a horizontal personal data protection law. While it defines specific data types, it is part of the comprehensive framework. The mapping to P7-I1 (Lack of comprehensive framework) is valid as evidence of the framework's existence, which would lead to a score of 0 (comprehensive framework exists). There is no legal-function defect; the law is indeed horizontal and comprehensive."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 asks if the economy LACKS a comprehensive framework. The evidence provided is from Law No. 27 of 2022, a horizontal PDPA. The rubric states 'A comprehensive horizontal framework exists' -> score 0. The snippet evidences the existence of this framework. The mapping is consistent with the rubric's logic for identifying the presence of a comprehensive law. The 'hunt_in' is empty, but the positive cues (Personal Data Protection Act) are matched by the source law title. The evide"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text is a definition of 'combined personal data' within the explanatory notes (Penjelasan) of Article 76. The surrounding context confirms this is part of the official law text (UU No. 27/2022). The text establishes the scope of data covered by the law. It does not contradict the claim that a comprehensive framework exists. The snippet is verbatim and supports the rationale that this is a controlling framework provision."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Law No.27 on Personal Data Protection 2022",
+  "article": "Art. 23(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited provision (Art. 51 of Law No. 27/2022) defines obligations for 'Prosesor Data Pribadi' (Data Processors) within the context of the 'Pengendali Data Pribadi' (Data Controller). This is a core structural element of a comprehensive horizontal data protection law, not a sectoral or government-only measure. It does not suffer from a scope defect or misread a specific legal function (like retention or cross-border transfer) as something else; it correctly identifies the existence of the regu"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P7-I1 asks if the economy LACKS a comprehensive framework. The rubric states that a comprehensive horizontal framework existing results in a score of 0. The snippet provides direct evidence of the existence of Law No. 27/2022, which is a horizontal personal data protection law. The rationale correctly identifies this as evidence of the framework's presence. The 'hunt_in' is empty, but the positive cues ('Personal Data Protection Act', 'data protection law') are satisfied by the sou"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact source snippet explicitly quotes 'Pasal 51 UU PDP' (Article 51 of the Personal Data Protection Law). The text establishes the obligations of data processors, which is a substantive component of the law. The context confirms this is part of Law No. 27/2022. The text does not contradict the claim that a comprehensive framework exists; rather, it provides a specific article from that framework. The citation alignment is exact, and the text supports the rationale that the law is in force a"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 1/2024 Cyber Incident Management",
+  "article": "Art. 5(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited regulation is issued by BSSN (National Cyber and Crypto Agency) and establishes a 'national' incident response team comprising government, critical infrastructure operators (IIV), and other electronic system operators. This structure evidences a horizontal, dedicated cybersecurity framework for incident management, which directly addresses the indicator's question regarding the existence of such a framework. There is no legal-function defect; the provision clearly serves the cybersecur"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '0' for a dedicated HORIZONTAL cybersecurity framework. The evidence provided (BSSN Regulation 1/2024) is a dedicated regulation specifically for cyber incident management (a core component of cybersecurity) and applies horizontally across sectors (government, IIV, other operators). Therefore, it supports a score of 0 (framework exists), which is the correct outcome for the indicator's polarity (framework_absent_scores_high). The mapping is consistent with the scoring criteria."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet 'Badan membentuk Tim Tanggap Insiden Siber nasional' (The Agency forms a National Cyber Incident Response Team) explicitly establishes the creation of a national-level body for cyber incident response. The surrounding context confirms its horizontal scope by listing members from various sectors (Ministries, IIV operators, other electronic system operators). The text directly supports the rationale that a dedicated horizontal framework for incident management exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 1/2024 Cyber Incident Management",
+  "article": "Art. 22(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies BSSN Regulation 1/2024 as a dedicated horizontal cybersecurity framework. The cited article (Art. 22) establishes the operational obligation for cyber incident preparedness, which is a core component of the 'incident response' scope defined in the indicator question. There is no legal-function defect; the provision evidences the existence of the framework required to score 0."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 0 for a 'dedicated HORIZONTAL cybersecurity framework'. BSSN Regulation 1/2024 is a horizontal act applicable to 'Penyelenggara IIV, Kementerian atau Lembaga, dan Badan' (critical infrastructure operators, ministries, and agencies), covering the entire economy's critical sectors rather than being sectoral-only. The provision supports the 'presence' of the framework, which aligns with the scoring logic where a dedicated horizontal framework results in a score of 0 (absence of th"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'Pelaksanaan kesiapan terhadap Insiden Siber... dilaksanakan oleh...' explicitly mandates the execution of cyber incident preparedness. This textual evidence directly supports the rationale that a specific legal framework for incident response exists. The text does not limit the scope to a single sector or exclude the horizontal nature implied by the broad list of obligated entities (Ministries, Agencies, IIV Operators)."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 2/2024 Cyber Crisis Management",
+  "article": "Art. 4(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is from a BSSN Regulation, which is a subordinate regulation (Peraturan) rather than a primary law (Undang-Undang). However, the rubric for P7-I2 asks for a 'legal framework' and does not explicitly restrict evidence to statutes only. The regulation establishes mandatory national-level procedures for cyber crisis management, which constitutes a component of a dedicated legal framework. It does not fail the 'keyword match without legal function' test because it defines substantive o"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '0' for a dedicated HORIZONTAL cybersecurity framework. The cited text (Art. 4) outlines the content of a 'National Cyber Crisis Contingency Plan' (Rencana kontingensi Krisis Siber) considering 'national cyber security risk assessment' (penilaian risiko Keamanan Siber nasional). This demonstrates a horizontal, national-level approach to incident response and crisis management, distinct from sectoral-only rules. The evidence supports the existence of a dedicated framework, align"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet and context establish that the National Cyber Crisis Contingency Plan is a planning document designed to improve readiness for Cyber Crises, taking into account national risk assessments. This textually confirms the existence of a structured, national-level mechanism for cyber incident response. It does not establish a ban or a sectoral limitation; rather, it evidences the operational framework for national cybersecurity, which is the core subject of P7-I2."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 2/2024 Cyber Crisis Management",
+  "article": "Art. 13(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is from a BSSN (National Cyber and Crypto Agency) regulation, which is the national authority for cybersecurity. The scope is horizontal (national crisis management), not sectoral. The legal function (crisis response) falls squarely within the rubric's definition of a dedicated framework for 'incident response' and 'cyber-risk'. No scope or function defect is found."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 0 for a 'dedicated HORIZONTAL cybersecurity framework'. BSSN Regulation 2/2024 is a dedicated act governing cyber crisis management at the national level. It is not a 'scattered clause' in a privacy law, nor is it a 'sectoral notice'. It evidences the presence of a dedicated framework, supporting a score of 0 (or 0.5 if the panel argues it is only incident-response and not full prevention, but the mapping to the indicator is valid as evidence of the framework's existence). The "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states the President forms a 'gugus tugas Krisis Siber' (Cyber Crisis Task Force) based on a determination of 'Krisis Siber' (Cyber Crisis). This textually establishes a mechanism for cyber incident response. It does not claim to be a data localization law or a retention limit. The text supports the rationale that a dedicated mechanism for cyber crisis exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 5/2024 National Cybersecurity Action Plan",
+  "article": "Art. 2(2)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text (BSSN Regulation 5/2024, Art. 2(2)) is a subordinate regulation establishing a National Action Plan (RAN Kamsiber) as part of a strategy. It is not a 'law specifically designed for cybersecurity' (an Act/Undang-Undang) but an administrative plan. The rubric's positive cues ('Cybersecurity Act', 'information security law') and the definition of a 'dedicated framework' imply a legislative act or comprehensive legal regime, not merely an action plan regulation. While it evidences the"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric for P7-I2 requires a 'dedicated legal framework' (law/act) for cybersecurity. The snippet is from a 'Peraturan Badan' (Agency Regulation) establishing a 'RAN' (Action Plan). The rubric's positive cues are 'Cybersecurity Act' or 'information security law'. An Action Plan is a strategic document, not a legal framework establishing rights, duties, or enforcement mechanisms. It lacks the legal function of a framework law. It is a component of the strategy, not the framework itself. Theref"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale states: 'This provision establishes the National Cybersecurity Action Plan (RAN Kamsiber) as part of the national cybersecurity strategy. It evidences the existence of a dedicated horizontal cybersecurity framework...'. The text says: 'RAN Kamsiber merupakan bagian dari strategi Keamanan Siber nasional' (The RAN Kamsiber is part of the national Cybersecurity strategy). It does not state that the RAN *is* the framework, nor does it establish a legal framework. It merely places the P"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "BSSN Regulation 5/2024 National Cybersecurity Action Plan",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text is from a BSSN Regulation (Peraturan Badan), which is an administrative regulation, not a Law (Undang-Undang). The indicator P7-I2 asks for a 'law specifically designed for cybersecurity'. While the regulation references a 'National Cybersecurity Action Plan', it does not itself constitute the dedicated legal framework (Act) required to score 0. It is evidence of implementation or planning, not the primary legal framework itself. Furthermore, the snippet is a definition clause, wh"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric requires a 'dedicated HORIZONTAL cybersecurity framework'. The snippet provided is merely a definition of 'Cybersecurity' and 'National Cybersecurity Action Plan' within a BSSN Regulation. It does not demonstrate the legal function of a framework (e.g., establishing duties, incident response mechanisms, or critical infrastructure protection). It is a definitional provision, not the framework itself. The presence of a definition does not equate to the existence of the dedicated legal f"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the provision 'evidences the existence of a dedicated horizontal legal framework'. The exact text only defines 'Cybersecurity' and 'RAN Kamsiber'. It does not state that a law exists, nor does it outline the horizontal scope of a legal framework. It defines terms for the purpose of the Action Plan. Therefore, the text does not establish the existence of a dedicated legal framework, only the existence of a plan and its definitions."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Perpres 47/2023 National Cybersecurity Strategy",
+  "article": "Art. 32(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited provision (Art. 32(2)) is part of Perpres 47/2023, which is a Presidential Decree establishing a National Cybersecurity Strategy. While a strategy is a policy document rather than a statute, it constitutes a dedicated legal framework for cybersecurity in Indonesia. The provision explicitly references 'Keamanan Siber' (Cybersecurity) policy, supporting the claim of a horizontal framework. No legal-function defect is found; the instrument is dedicated and horizontal."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores 0 for a 'dedicated HORIZONTAL cybersecurity framework'. Perpres 47/2023 is a dedicated national strategy covering the entire economy (horizontal), not sectoral-only. The snippet evidences the existence of this framework by detailing the policy feedback loop. This aligns with the scoring criteria for a score of 0 (framework present), refuting the indicator's premise of 'Lack of framework'. The mapping is valid."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'Hasil evaluasi... menjadi bahan pertimbangan dalam pengambilan kebijakan Keamanan Siber' confirms that the instrument governs 'Keamanan Siber' (Cybersecurity) policy. The context (Pasal 32) relates to crisis handling evaluation, which is a core component of a cybersecurity framework. The text does not limit the scope to a specific sector or government data only, supporting the 'Horizontal' coverage claim. The snippet accurately supports the rationale that a dedicated framework ex"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Perpres 47/2023 National Cybersecurity Strategy",
+  "article": "Art. 27(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited law, Perpres 47/2023, is the 'National Cybersecurity Strategy' (Strategi Nasional Keamanan Siber). While a Presidential Regulation is an executive instrument rather than a statute, it constitutes a dedicated legal framework specifically designed for cybersecurity. The rubric for P7-I2 asks if the economy LACKS a law specifically designed for cybersecurity. The existence of this dedicated, horizontal strategy satisfies the condition for a score of 0 (dedicated horizontal framework exist"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the rubric: The indicator P7-I2 scores 0 if a dedicated HORIZONTAL cybersecurity framework exists. Perpres 47/2023 is explicitly titled 'National Cybersecurity Strategy' and covers incident response (Krisis Siber) and critical infrastructure protection at the national level. It is not sectoral-only (which would score 0.5) nor is it a scattered clause within a privacy law (excluded). The snippet provided evidences the operational mechanism (reporting to the President) within this dedicat"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text in Art. 27(1) states: 'Pelaporan penanganan Krisis Siber... merupakan penyampaian laporan akhir penanganan Krisis Siber dari gugus tugas Krisis Siber kepada Presiden.' (Reporting on cyber crisis handling... is the submission of a final report on cyber crisis handling from the cyber crisis task force to the President.) This text explicitly establishes a formalized, high-level governance structure for 'Krisis Siber' (Cyber Crisis). It confirms the existence of a 'gugus tugas'"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Regulation of the Government of the Republic of Indonesia No",
+  "article": "Art. 94",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision (PP 71/2019 Art. 94) explicitly mandates the government's role in national cyber security strategy, information security standards, and incident response. This constitutes a dedicated legal framework for cybersecurity, not merely scattered clauses. The mapping correctly identifies this as evidence of a horizontal framework, refuting the 'absence' score. No legal function defect is found."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores '0' when a dedicated horizontal cybersecurity framework exists. PP 71/2019 is a Government Regulation (Peraturan Pemerintah) that applies to all electronic systems and transactions in Indonesia, establishing a horizontal regime for cyber security strategy and incident management. This fits the '0' score criteria (dedicated horizontal framework) rather than '0.5' (sectoral-only) or '1' (no framework). The evidence supports the presence of the framework."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text in Article 94(1) lists specific government roles including 'penetapan strategi keamanan siber nasional' (establishment of national cyber security strategy) and 'penanganan insiden keamanan informasi' (handling of information security incidents). These terms directly correspond to the rubric's definition of a cybersecurity framework (network security, incident response). The text establishes the existence of a dedicated legal mechanism for these functions, supporting the mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Law No. 27 of 2022 on Personal Data Protection (official BPK",
+  "article": "Art. 54(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision in Article 54(1) explicitly assigns mandatory duties ('memiliki tugas paling sedikit' / 'has at least the following duties') to officials performing data protection functions, including advising on impact assessments (DPIA) and monitoring compliance. This constitutes a clear legal function for a DPO-like role. The rationale correctly identifies this as a DPO/DPIA requirement. There is no scope defect; the law applies to 'Pengendali Data Pribadi' (Data Controllers) and 'Prosesor Dat"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '1' for DPO required across ALL sectors. Article 54 of Law No. 27/2022 applies to all data controllers and processors without sectoral exclusions, satisfying the 'all sectors' criterion. The text explicitly mentions 'penilaian dampak Pelindungan Data Pribadi' (Data Protection Impact Assessment) in point (c), aligning with the positive cue 'data protection impact assessment'. The mapping is consistent with the scoring rubric for a full score."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet provided is from Article 54(1), which lists the duties. The surrounding context confirms these are mandatory duties ('memiliki tugas paling sedikit'). The rationale claims the provision establishes mandatory functions. The text supports this: 'memiliki tugas' (has duties) is a statement of obligation, not permission. The G6 WARN regarding 'no must/shall modality' is a false positive in the context of Indonesian legal drafting where 'memiliki tugas' (has duties) is the standard "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Law No.27 on Personal Data Protection 2022",
+  "article": "Art. 26",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text is from the 'Penjelasan' (Explanatory Notes) of the law, specifically referencing Article 53, which governs the state-level Data Protection Agency (Badan Pelindungan Data Pribadi). It defines the 'PPDP' as a 'pejabat atau petugas' (official or officer) responsible for state-level compliance and risk mitigation. This is a definition of a public regulatory authority or state official, not a private-sector Data Protection Officer (DPO) required to be appointed by organizations. The r"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric's positive cues include 'shall appoint a data protection officer' and 'designate one or more individuals to be responsible'. The snippet provided is a definitional clause ('pada dasarnya PPDP merupakan...') describing the nature of the role, not a mandatory appointment requirement for data controllers/processors. It lacks the imperative legal function ('must appoint', 'shall designate') required to score high on P7-I4. Furthermore, the context indicates this refers to the state agency"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The exact source snippet states: 'Berdasarkan Penjelasan Pasal 53 ayat (1) UU PDP, pada dasarnya PPDP merupakan merupakan pejabat atau petugas yang melakukan fungsi pelindungan data pribadi...'. The text explicitly identifies the subject as 'pejabat atau petugas' (officials or officers) in the context of the Explanatory Notes for Article 53. Article 53 of Law No. 27/2022 establishes the 'Badan Pelindungan Data Pribadi' (Data Protection Agency), a state institution. The text defines the function "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Law No.27 on Personal Data Protection 2022",
+  "article": "Art. 31",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text (Art. 31) is part of a Ministerial Decision (Keputusan Menteri Ketenagakerjaan No. 103/2023) establishing the National Competency Standard (SKKNI) for the job role of 'PPDP' (Data Protection Officer). It lists 'Kriteria Kerja' (work criteria/competencies) such as 'Melakukan Penilaian Dampak' (Conducting Impact Assessment). This is a labor/competency standard, not a substantive legal obligation under Law No. 27/2022 that mandates organizations to appoint a DPO or perform a DPIA. Th"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric requires evidence that organizations 'shall appoint' a DPO or 'run' DPIAs. The snippet contains the keyword 'Penilaian Dampak' (Impact Assessment) but in the context of a competency list ('Kriteria Kerja') for a professional certification standard. It lacks the legal function of imposing a duty on the data controller/processor. The positive cue 'data protection impact assessment' is present, but the legal test 'Must organisations appoint... and/or run...' is not met by a competency st"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the provision 'legally mandates the DPIA function as a core duty of the appointed officer' and maps to P7-I4. However, the text explicitly states these are 'Dasar Kompetensi' (Basic Competencies) and 'Kriteria Kerja' (Work Criteria) for the SKKNI (National Competency Standard). It describes the *skills* required for the job title, not the *legal obligation* of the organization to perform the assessment. The text does not say 'The organization must conduct a DPIA' or 'The org"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Regulation of Financial Service Authority Regulation No. 11/",
+  "article": "Art. 44(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly imposes a mandatory duty ('wajib melakukan') on banks to conduct an impact assessment when specific risk conditions arise. This constitutes a valid legal function for a DPIA requirement within the banking sector, which the rubric accepts as a 0.5 score. There is no scope defect or mischaracterization of the legal obligation."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines a score of 0.5 for 'Sector-specific DPO/DPIA requirement only.' The snippet provides evidence of a sector-specific (Banking) DPIA requirement. Although G6 flags a modality warning, the Indonesian term 'wajib' is a mandatory modality equivalent to 'shall/must,' not permissive. The mapping correctly identifies the presence of the mechanism for the appropriate sectoral tier."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'Bank wajib melakukan penilaian dampak' (Banks must conduct an impact assessment). This directly supports the rationale that a mandatory DPIA mechanism exists. The context confirms this applies to 'pemrosesan data pribadi' (processing of personal data). The text establishes the specific accountability mechanism required by P7-I4, limited to the banking sector."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Regulation of Financial Services Authority No.11/POJK.03/202",
+  "article": "Art. 44(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly imposes a mandatory duty ('wajib' = shall/must) on banks to conduct an impact assessment ('penilaian dampak') when specific risk conditions arise. This constitutes a valid legal function for a Data Protection Impact Assessment (DPIA) requirement within the banking sector. The scope is correctly identified as sectoral, which aligns with the rubric's acceptance of sector-specific requirements."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I4 scores '0.5' for 'Sector-specific DPO/DPIA requirement only'. The cited text from OJK Regulation No.11/POJK.03/2022 applies specifically to 'Bank' (Commercial Banks), making it a sector-specific DPIA requirement. The positive cue 'data protection impact assessment' is semantically present via 'penilaian dampak atas penerapan prinsip pelindungan data pribadi'. The mapping correctly identifies this as a sectoral provision, supporting a score of 0.5 rather than 1.0 or 0. No fai"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact source snippet states: 'Bank wajib melakukan penilaian dampak...' (Banks shall conduct an impact assessment...). The word 'wajib' is the Indonesian legal term for 'mandatory' or 'shall', directly contradicting the G6 WARN which suggested a lack of mandatory modality. The text clearly establishes a conditional obligation to perform an impact assessment, which is the core of a DPIA requirement. The context confirms this applies to personal data processing risks."
+   }
+  ]
+ }
+]

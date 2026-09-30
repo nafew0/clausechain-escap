@@ -1,0 +1,102 @@
+{
+ "economy": "Lao PDR",
+ "pillar": 2,
+ "run": "run-la-p2-1790691818",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Article 19 explicitly defines 'National open bidding' as a proceeding where only local individuals and legal entities participate, which constitutes a measure e"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Article 19 explicitly defines 'National open bidding' as a procurement proceeding restricted to local individuals and legal entities, constituting a measure tha"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence explicitly defines 'National open bidding' as a procurement proceeding restricted to local individuals and legal entities, which constitutes a meas"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence indicates no evidence was found for the specified law, and no text plainly states a requirement to surrender source code, trade secrets, o"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of requirements to surrender source code, trade secrets, or use specific encryption was found in the provided data."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence indicates no data was found for the specified law, and no other evidence was presented to support requirements for source code surrender o"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly states that local bidders are considered awarded if their price is within 7.5% of an international bidder's price, which is a measure di"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites Instruction No. 0477/MOF cl. 14.1.1, which establishes a 7.5% price preference for local bidders over international bidders, constituting a m"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence cites Instruction No. 0477/MOF cl. 14.1.1, which explicitly grants a 7.5% price preference to local bidders over international bidders, constitutin"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

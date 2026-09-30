@@ -1,0 +1,164 @@
+{
+ "economy": "India",
+ "pillar": 7,
+ "run": "run-in-p7-1790727362",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence cites the Digital Personal Data Protection Act 2023, which is a horizontal statute governing the processing of personal data across sectors, indica"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of the Digital Personal Data Protection Act 2023, which is a comprehensive horizontal legal framework for data protection."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of the Digital Personal Data Protection Act 2023, which is a comprehensive horizontal legal framework for data protection."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The evidence cites a horizontal provision in the Information Technology Act that only mandates the constitution of an advisory committee, while the substantive "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence shows a dedicated but sectoral-only framework (SEBI CSCRF) and a general IT Act provision that does not constitute a comprehensive horizontal cyber"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence identifies the Information Technology Act as a horizontal framework, but the specific cited sections (s. 88) relate to the constitution of an advis"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provided evidence explicitly states that capital market intermediaries and fund management entities must maintain records for a minimum of ten years."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The International Financial Services Centres Authority Regulations explicitly specify a minimum data retention period of ten years for capital market intermedia"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The International Financial Services Centres Authority Regulations explicitly specify a minimum retention period of ten years for books of accounts and records."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sector-specific only",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The provided text explicitly limits the requirement to appoint a Data Protection Officer to 'Significant Data Fiduciaries,' which constitutes a sector-specific "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The Digital Personal Data Protection Act 2023 mandates the appointment of a Data Protection Officer only for 'Significant Data Fiduciaries,' which constitutes a"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence explicitly limits the Data Protection Officer requirement to 'Significant Data Fiduciaries,' which constitutes a sector-specific or entity-class-sp"
+    }
+   ],
+   "band": [
+    0.5,
+    0.5
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The Telecommunications Rules explicitly mandate that authorized entities provide access to user identity data to the Central Government or authorized agencies w"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Telecommunications Rules 2026 explicitly mandate that authorized entities provide access to user identity databases to the Central Government and authorized"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Telecommunications Rules explicitly mandate that authorized entities provide access to user identity and database records to the Central Government or autho"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

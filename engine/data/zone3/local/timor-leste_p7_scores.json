@@ -1,0 +1,164 @@
+{
+ "economy": "Timor-Leste",
+ "pillar": 7,
+ "run": "run-tl-p7-1790698447",
+ "krippendorff_alpha": 0.556,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The evidence shows only a constitutional mandate for future legislation and a sectoral telecommunications law, lacking a comprehensive horizontal data protectio"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence shows only a constitutional mandate for future legislation and a sectoral telecommunications law, lacking an enacted comprehensive horizontal data "
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Constitution mandates the creation of a legal framework but does not constitute one itself, and the only other evidence is a sectoral telecommunications law"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no cybersecurity framework evidence -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for a horizontal framework, and no other evidence of a dedicated or non-dedicated fra"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The provided evidence indicates no dedicated horizontal cybersecurity framework was found, and the cited telecommunications regulation is marked as having no ev"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The provided evidence is marked as 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for a horizontal framework, and the cited regulation is sectoral (Telecommunications), whi"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The ANC Guidelines on the Registration of SIM Cards for Prepaid Mobile Services, clause 5.2, explicitly specifies a minimum retention period of 12 months for su"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The ANC Guidelines on the Registration of SIM Cards for Prepaid Mobile Services explicitly specify a minimum retention period of 12 months for subscriber inform"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The ANC Guidelines on the Registration of SIM Cards explicitly specify a minimum retention period of 12 months for subscriber information following service deac"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no DPO/DPIA requirement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence indicates no data was found, and the absence of text plainly stating a requirement means neither DPO nor DPIA obligations are established."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of DPO or DPIA requirements was found in the provided data."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of DPO or DPIA requirements was found in the provided constitutional data, resulting in a score of zero."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Decreto-Lei n.\u00ba 13/2005 Art. 56 explicitly permits police to conduct searches and seizures without a judicial warrant in cases of flagrant crime or strong suspi"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Article 56 of the Code of Criminal Procedure explicitly permits police to conduct searches and seizures without a judicial warrant in cases of flagrant crime or"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Article 56 of the Code of Criminal Procedure explicitly permits police to conduct searches and seizures without a judicial warrant in cases of flagrant crime or"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

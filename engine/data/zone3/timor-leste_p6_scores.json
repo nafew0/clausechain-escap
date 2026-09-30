@@ -1,0 +1,164 @@
+{
+ "economy": "Timor-Leste",
+ "pillar": 6,
+ "run": "run-tl-p6-1790670452",
+ "krippendorff_alpha": 0.763,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The only gate-verified row reports no evidence of a ban or local processing requirement, so none is established by the supplied text."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No ban or local processing requirement is evidenced in the provided row."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The only listed horizontal instrument has no verified evidence of a ban or local-processing requirement, so the evidence does not support a positive score."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Three sectoral requirements mandate maintaining mining, insurance, and banking records at local offices or a local head office, meeting the threshold of two or "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "At least two sector-specific local-storage requirements apply to mining, insurance, and banking records."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "At least two sector-specific rules require records to be kept locally, covering mining and insurance records without being limited to personal data."
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited row reports no evidence found of an infrastructure requirement, so none is established."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No infrastructure requirement is evidenced in the gate-verified row."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The reviewed evidence identifies no requirement to establish local infrastructure or condition data transfers on infrastructure."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence states no conditions on data transfer."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No conditions on data transfers are evidenced in the provided row."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence row reports no verified evidence of transfer conditions, so the indicator scores 0."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no qualifying binding data-transfer agreement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The only row is marked NO_EVIDENCE_FOUND_PENDING_REVIEW, which establishes neither that a binding data-transfer agreement exists nor that none exists."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "No binding data-transfer agreement is identified in the supplied evidence."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "No binding data-transfer agreement is evidenced; the Constitution row is marked no evidence found pending review."
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

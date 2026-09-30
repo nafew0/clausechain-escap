@@ -1,0 +1,267 @@
+{
+ "stats": {
+  "Singapore P6": {
+   "gold": 1,
+   "matched": 1,
+   "NOT_IN_CORPUS": 0,
+   "IN_CORPUS_NOT_EMITTED": 0,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 0
+  },
+  "Singapore P7": {
+   "gold": 6,
+   "matched": 6,
+   "NOT_IN_CORPUS": 0,
+   "IN_CORPUS_NOT_EMITTED": 0,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 0
+  },
+  "Singapore P2": {
+   "gold": 0,
+   "matched": 0,
+   "NOT_IN_CORPUS": 0,
+   "IN_CORPUS_NOT_EMITTED": 0,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 0
+  },
+  "Malaysia P6": {
+   "gold": 9,
+   "matched": 2,
+   "NOT_IN_CORPUS": 5,
+   "IN_CORPUS_NOT_EMITTED": 2,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 0
+  },
+  "Malaysia P7": {
+   "gold": 12,
+   "matched": 11,
+   "NOT_IN_CORPUS": 1,
+   "IN_CORPUS_NOT_EMITTED": 0,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 0
+  },
+  "Malaysia P2": {
+   "gold": 4,
+   "matched": 4,
+   "NOT_IN_CORPUS": 0,
+   "IN_CORPUS_NOT_EMITTED": 0,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 0
+  },
+  "Australia P6": {
+   "gold": 1,
+   "matched": 1,
+   "NOT_IN_CORPUS": 0,
+   "IN_CORPUS_NOT_EMITTED": 0,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 0
+  },
+  "Australia P7": {
+   "gold": 4,
+   "matched": 4,
+   "NOT_IN_CORPUS": 0,
+   "IN_CORPUS_NOT_EMITTED": 0,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 0
+  },
+  "Australia P2": {
+   "gold": 1,
+   "matched": 0,
+   "NOT_IN_CORPUS": 0,
+   "IN_CORPUS_NOT_EMITTED": 0,
+   "EMITTED_OTHER_INDICATOR": 0,
+   "GOLD_REF_UNPARSEABLE": 1
+  }
+ },
+ "misses": [
+  {
+   "economy": "Malaysia",
+   "pillar": "6",
+   "run": "outputs/local_ma_p6",
+   "gold_indicator": "P6-I4",
+   "act": "Personal Data Protection Act (Act 709) 2010;\n\nPersonal Data Protection\n(Amendment) Bill (Act A1727) 2024",
+   "ref": "s. 4.11",
+   "base": "s. 4.11",
+   "class": "STRUCTURE",
+   "emitted_under": [],
+   "proposed_verdict": "REAL_MISS",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "NOT_IN_CORPUS",
+    "failure_taxonomy": "STRUCTURE"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "59d4e1a115c3e72f6714ea7df56e8aacebee78a80cb72675270e36aa861a5745"
+  },
+  {
+   "economy": "Malaysia",
+   "pillar": "6",
+   "run": "outputs/local_ma_p6",
+   "gold_indicator": "P6-I4",
+   "act": "Personal Data Protection Act (Act 709) 2010;\n\nPersonal Data Protection\n(Amendment) Bill (Act A1727) 2024",
+   "ref": "s. 1.1(38)",
+   "base": "s. 1.1",
+   "class": "MAPPING",
+   "emitted_under": [],
+   "proposed_verdict": "LEGAL_MAPPING_REVIEW",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "IN_CORPUS_NOT_EMITTED",
+    "failure_taxonomy": "MAPPING"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "4251089dc73184e0c406d54d37568b370ab9da905e3dc0e26d6bfbd043b0e26f"
+  },
+  {
+   "economy": "Malaysia",
+   "pillar": "6",
+   "run": "outputs/local_ma_p6",
+   "gold_indicator": "P6-I4",
+   "act": "Personal Data Protection Act (Act 709) 2010;\n\nPersonal Data Protection\n(Amendment) Bill (Act A1727) 2024",
+   "ref": "Sch. 1",
+   "base": "sch. 1",
+   "class": "STRUCTURE",
+   "emitted_under": [],
+   "proposed_verdict": "REAL_MISS",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "NOT_IN_CORPUS",
+    "failure_taxonomy": "STRUCTURE"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "453ec708e86deae56c517d48b618e57531265adfda1baef0f66025dd2cf61503"
+  },
+  {
+   "economy": "Malaysia",
+   "pillar": "6",
+   "run": "outputs/local_ma_p6",
+   "gold_indicator": "P6-I4",
+   "act": "Personal Data Protection Code of Practice For Banking Sector And Financial Institutions 2017",
+   "ref": "s. 1.1",
+   "base": "s. 1.1",
+   "class": "MAPPING",
+   "emitted_under": [],
+   "proposed_verdict": "LEGAL_MAPPING_REVIEW",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "IN_CORPUS_NOT_EMITTED",
+    "failure_taxonomy": "MAPPING"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "cca27b4c1f6b615035b4ce92b936c7143e83394d44074c9cda9e34e859ff5eaf"
+  },
+  {
+   "economy": "Malaysia",
+   "pillar": "6",
+   "run": "outputs/local_ma_p6",
+   "gold_indicator": "P6-I4",
+   "act": "Personal Data Protection Code of Practice For Banking Sector And Financial Institutions 2017",
+   "ref": "Sch. 1",
+   "base": "sch. 1",
+   "class": "STRUCTURE",
+   "emitted_under": [],
+   "proposed_verdict": "REAL_MISS",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "NOT_IN_CORPUS",
+    "failure_taxonomy": "STRUCTURE"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "8a72e2f8c8c10ee9fc24c5b23be6ff1be8b22cc2735b623898572dd9d1005f92"
+  },
+  {
+   "economy": "Malaysia",
+   "pillar": "6",
+   "run": "outputs/local_ma_p6",
+   "gold_indicator": "P6-I4",
+   "act": "Personal Data Protection Code of Practice for Licensees Under the Communications and Multimedia (Act 1998) of 2017",
+   "ref": "s. 4.7",
+   "base": "s. 4.7",
+   "class": "STRUCTURE",
+   "emitted_under": [],
+   "proposed_verdict": "REAL_MISS",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "NOT_IN_CORPUS",
+    "failure_taxonomy": "STRUCTURE"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "3c12ae4609003a1c12378d76656c2f917b5d06fdd067a7db36a0aae59d412eaf"
+  },
+  {
+   "economy": "Malaysia",
+   "pillar": "6",
+   "run": "outputs/local_ma_p6",
+   "gold_indicator": "P6-I4",
+   "act": "Personal Data Protection Code of Practice for Licensees Under the Communications and Multimedia (Act 1998) of 2017",
+   "ref": "s. 3.2(ii)",
+   "base": "s. 3.2",
+   "class": "STRUCTURE",
+   "emitted_under": [],
+   "proposed_verdict": "REAL_MISS",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "NOT_IN_CORPUS",
+    "failure_taxonomy": "STRUCTURE"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "a8447b565987c6c90de3144c8fe3b131e1784683f99c96f7f04a94f0e5cb6547"
+  },
+  {
+   "economy": "Malaysia",
+   "pillar": "7",
+   "run": "outputs/local_ma_p7",
+   "gold_indicator": "P7-I5",
+   "act": "Personal Data Protection Code of Practice for Licensees Under the Communications and Multimedia (Act 1998) of 2017",
+   "ref": "s. 7.4",
+   "base": "s. 7.4",
+   "class": "STRUCTURE",
+   "emitted_under": [],
+   "proposed_verdict": "REAL_MISS",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "NOT_IN_CORPUS",
+    "failure_taxonomy": "STRUCTURE"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "bf9c70315a8758ba2f4f57c20b558d4f26b7c26a4cdc4faa97602b407cfad1c6"
+  },
+  {
+   "economy": "Australia",
+   "pillar": "2",
+   "run": "outputs/local_au_p2",
+   "gold_indicator": "P2-I1",
+   "act": "Public Governance Performance and Accountability Rule 2014;\n\nCommonwealth Procurement Rules 2024;\n\nTelecommunications Act 1997;\n\nSecurity of Critical Infrastructure Act 2018",
+   "ref": "r. 2014",
+   "base": "r. 2014",
+   "class": "GOLD_ERROR",
+   "emitted_under": [],
+   "proposed_verdict": "GOLD_AMBIGUOUS",
+   "evidence": {
+    "corpus_checked": true,
+    "matched_output_rows": 0,
+    "technical_class": "GOLD_REF_UNPARSEABLE",
+    "failure_taxonomy": "GOLD_ERROR"
+   },
+   "reviewer_verdict": "",
+   "reviewer_note": "",
+   "recall_key": "f946e18fa3963e9619b04d1c2609401a8002974acae45de71d885f14d3081569"
+  }
+ ]
+}

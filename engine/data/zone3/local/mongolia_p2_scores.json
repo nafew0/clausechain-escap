@@ -1,0 +1,102 @@
+{
+ "economy": "Mongolia",
+ "pillar": 2,
+ "run": "run-mn-p2-1790692424",
+ "krippendorff_alpha": 0.652,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence contains a measure prohibiting foreign entities from participating in tenders exceeding specific monetary thresholds, which constitutes a measure e"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence contains two distinct measures (a prohibition on foreign participation in high-value tenders and a requirement for goods to be of Mongolian origin)"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence shows a specific measure requiring goods to be of Mongolian origin (excluding foreign firms from supplying those specific goods), which fits the de"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states that no evidence was found for the relevant legal framework, and the cited law concerns personal data protection rather "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of requirements to surrender source code, trade secrets, or use specific encryption was found in the provided data."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of requirements to surrender source code, trade secrets, or use specific encryption was found in the provided data."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly describes a preference mechanism that reduces the price of domestic goods by 10% (or 5% for services) to determine the winning bid, whic"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence confirms a direct measure discriminating against foreign bidders by granting a 10% price preference to domestic goods, which meets the criteria for"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence confirms a direct preference measure (10% price advantage) for domestic goods, which constitutes a measure directly discriminating against foreign "
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

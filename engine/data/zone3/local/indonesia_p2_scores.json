@@ -1,0 +1,102 @@
+{
+ "economy": "Indonesia",
+ "pillar": 2,
+ "run": "run-id-p2-1790694370",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly states that international tenders are conducted only in the case where there are no domestic business actors capable of supplying, which"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Presidential Regulation No. 16/2018 Article 63(3) mandates that foreign enterprises participating in international tenders must form a business cooperation with"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Presidential Regulation No. 16/2018 Article 63(3) mandates that foreign enterprises participating in international tenders must form a business cooperation with"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 1.0,
+   "deterministic_reason": "source-code/IP surrender as a tender condition -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The regulation explicitly mandates that developers providing software specifically developed for public electronic systems must surrender the source code and do"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence from Regulation No. 71/2019 explicitly mandates that developers providing software specifically developed for public electronic systems must surren"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The regulation explicitly mandates that developers providing software specifically developed for public electronic systems must surrender the source code and do"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly requires foreign business entities to form joint ventures or consortia with national businesses to participate in international tenders,"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence includes a measure requiring foreign bidders to form a consortium with a national business (Presidential Regulation No. 16 Art. 63), which is a dir"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The requirement for foreign enterprises to form a consortium or subcontract with a national enterprise for international tenders constitutes a direct measure di"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

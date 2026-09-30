@@ -1,6 +1,12 @@
 from rest_framework import serializers
 
-from .models import FindingDecision, RecallDecision, ReviewItem, Zone3Decision
+from .models import (
+    EvidenceChangeDecision,
+    FindingDecision,
+    RecallDecision,
+    ReviewItem,
+    Zone3Decision,
+)
 
 
 class ConcurrencySerializer(serializers.Serializer):
@@ -139,3 +145,9 @@ class CorrectionRequestWriteSerializer(serializers.Serializer):
     expected_latest_correction_id = serializers.UUIDField(
         required=True, allow_null=True
     )
+
+
+class EvidenceChangeDecisionWriteSerializer(serializers.Serializer):
+    verdict = serializers.ChoiceField(choices=EvidenceChangeDecision.Verdict.choices)
+    comment = serializers.CharField(min_length=3)
+    expected_latest_decision_id = serializers.UUIDField(required=True, allow_null=True)

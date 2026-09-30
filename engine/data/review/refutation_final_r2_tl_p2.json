@@ -1,0 +1,86 @@
+[
+ {
+  "indicator": "P2-I3",
+  "law": "Decreto do Governo n.º 1/2026 Visão geral do quadro legal pa",
+  "article": "para. 2.8.4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rule operates in public-procurement bidding: procuring entities must apply a preferential margin to national suppliers. National status triggers the preference, fitting P2-I3’s discriminatory measure and score 1; this is not merely an empowerment or a commercial-market condition."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The operative national-supplier preference matches the rubric’s domestic-preference cues and satisfies its test for a bidding-evaluation preference. Because it is triggered by national status, it is discriminatory and scores 1. The G6 concern does not defeat the mapping: the quoted Portuguese says entities “devem aplicar” (must apply), while “up to 10%” qualifies the margin’s amount."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text requires a preferential margin for national suppliers in specified procurement procedures. The surrounding text specifies a national-supplier scoring bonus or an evaluation increase to non-national prices, confirming an operative preference rather than a mere legal basis. That is the limitation P2-I3 covers."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Cont",
+  "article": "Art. 87",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text applies a capped score or price uplift to qualifying suppliers who are not national suppliers. That is an operative procurement preference, and the rubric expressly includes evaluation bonuses and nationality-triggered preferences; it is not merely an enabling power."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The capped uplift is operative, so it is valid P2-I3 evidence. The text establishes nationality-based differential treatment, but does not by itself establish discrimination against foreign bidders for score 1, nor a measure applied to all bidders for score 0.5; do not infer either score from this row alone."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 87 expressly extends the preceding regime to suppliers that do not qualify as national suppliers, subject to stated eligibility and a 5% cap on the increase in score or price. This supports the rationale's claim of a capped procurement uplift, without establishing the preceding regime's full criteria or a foreign-bidder disadvantage."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Cont",
+  "article": "Art. 86",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 86(1) directs the contracting authority to grant qualifying national suppliers a scoring or price advantage in public procurement. That is an operative bidding preference, not merely authority to adopt one, and the nationality trigger fits P2-I3's discriminatory measure scoring 1."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in is empty, and this is direct procurement evidence. Articles 86(1)–(3) require a preference and set its form and cap; the national-supplier trigger supports score 1 for discrimination against foreign bidders, rather than the 0.5 category for a measure applied to all bidders. The text's 'determina que' does not support G6's suggestion that the rule is merely permissive."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Read with paragraphs 2–4, paragraph 1 requires a preference for national suppliers meeting specified local-production, content, or workforce criteria; paragraph 3 requires the preference percentage to be stated for each procedure. The quotation and context therefore establish an operative nationality-linked procurement advantage, not merely a general local-content condition."
+   }
+  ]
+ }
+]

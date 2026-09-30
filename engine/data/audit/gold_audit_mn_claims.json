@@ -1,0 +1,65 @@
+{
+ "bbe0b691f3b9114f": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 20.2 authorizes the ministry to establish “requirements for ... storage technology” during data collection, processing, and use, but does not require a copy to be stored domestically. Thus no explicit local-storage rule appears in the cited text."
+ },
+ "adbf2db3806b8995": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 18.6 requires the controller’s system to comply with government ICT directions and information-security standards, not a local server or data centre. Article 18.12 locates the government “main system” in Mongolia, but does not impose a local processing-facility precondition on the service provider."
+ },
+ "b6eef356f8c677db": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Clause 3.2 expressly requires that the data-processing server “be located” in Mongolia, “be accessible only from Mongolia,” and be housed in a “dedicated technical room.” These are infrastructure preconditions for processing covered sensitive, genetic, and biometric data, supporting score 1."
+ },
+ "01b1b41631a470fb": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Article 14.1 prohibits giving information to persons, legal entities, or international organizations abroad except where permitted by law or treaty, or where the information owner consents. This establishes conditional cross-border transfer of personal information, consistent with score 1."
+ },
+ "a2fdebf878839aca": {
+  "supports_claim": "no",
+  "citation_matches": "no",
+  "score_consistent": "yes",
+  "issue": "wrong_article",
+  "explanation": "Article 13 is titled “Intelligence organization” and lists its powers, including organizing the state information network and “ensuring cybersecurity,” developing a national strategy and attack-response plan, and issuing recommendations to “persons and legal entities.” It does not state the quoted purpose or general scope; the citation is therefore wrong, although the dedicated law supports score 0."
+ },
+ "43ce695b4a6c94fc": {
+  "supports_claim": "no",
+  "citation_matches": "yes",
+  "score_consistent": "no",
+  "issue": "score_inconsistent",
+  "explanation": "Article 20.1.5 requires an evaluation “to ensure the security of information processing operations,” not a DPO or DPIA. Article 20.2 delegates requirements concerning storage technology, but specifies no minimum retention period. Therefore score 1 is inconsistent; the applicable score is 0."
+ },
+ "e2893602b78ea419": {
+  "supports_claim": "partly",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "claim_not_in_text",
+  "explanation": "Article 25.2.4 requires the provider to “maintain and protect the secrecy” of information transmitted through the network. This supports a confidentiality/protection duty, but specifies no data-retention obligation or minimum period; the score of 0 is therefore correct."
+ },
+ "ea80ecc45c46ac5d": {
+  "supports_claim": "yes",
+  "citation_matches": "yes",
+  "score_consistent": "yes",
+  "issue": "none",
+  "explanation": "Articles 22.1–22.4 concern breach notifications and complaints, while Article 20.1.5 requires an assessment “to ensure the security of data processing operations,” not a DPIA. The cited text contains no DPO appointment requirement or expressly required DPIA, so score 0 is consistent."
+ },
+ "00e309b04ca92142": {
+  "supports_claim": "partly",
+  "citation_matches": "no",
+  "score_consistent": "no",
+  "issue": "score_inconsistent",
+  "explanation": "Article 7.2 is correctly summarized, but it expressly permits disclosure on requests from Bank of Mongolia officials (7.2.2), tax/customs authorities (7.2.8), and others without independent judicial authorization. Thus the measure scores 1, not 0. The cited “s. 18.1.2” is not present; Article 18 contains only 18.1 and 18.2."
+ }
+}

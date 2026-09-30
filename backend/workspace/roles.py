@@ -37,3 +37,8 @@ def has_review_role(user, role):
 
 def reviewer_identity(user):
     return user.full_name, str(user.pk)
+
+
+def decision_reviewer_role(user, stage):
+    """Persist an admin override explicitly; otherwise retain the stage role."""
+    return "admin" if "admin" in reviewer_roles(user) else stage

@@ -1,0 +1,164 @@
+{
+ "economy": "Mongolia",
+ "pillar": 6,
+ "run": "run-mn-p6-1790693366",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence explicitly states NO_EVIDENCE_FOUND_PENDING_REVIEW, indicating no verified requirements exist to score."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found to confirm the existence of a ban or local processing requirement, resulting in a score of zero."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the horizontal application of the law, meaning there is no verified data to suppo"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the horizontal application of the law, meaning no local storage requirement is es"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence indicates that no local storage requirement was found for the cited law, resulting in a score of zero."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the horizontal personal data law, meaning no local storage requirement is confirm"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "infrastructure requirement exists",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly states that servers processing sensitive data and credit information must be located within the territory of Mongolia, constituting a lo"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence explicitly mandates that servers processing sensitive, genetic, and biometric data, as well as credit information databases, must be located within"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence explicitly mandates that servers processing sensitive, genetic, and biometric data, as well as credit information, must be located within the terri"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited Article 14 of the Law of Mongolia on Protection of Personal Information explicitly regulates the transfer of personal data to foreign entities, satisf"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites Article 14 of the Law on Protection of Personal Information, which is a horizontal law governing the transfer of personal data, satisfying th"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The cited Article 14 of the 2021 Law on Protection of Personal Information explicitly regulates the transfer of personal data to foreign entities, constituting "
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no qualifying binding data-transfer agreement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the relevant law, meaning no binding data-transfer agreement is established in th"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "No evidence of a binding data-transfer agreement was found in the provided gate-verified rows, resulting in a score of 1."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the relevant law, indicating that no binding data-transfer agreement was identifi"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

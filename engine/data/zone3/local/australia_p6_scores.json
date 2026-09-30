@@ -1,0 +1,164 @@
+{
+ "economy": "Australia",
+ "pillar": 6,
+ "run": "run-au-p6-1790534615",
+ "krippendorff_alpha": 0.774,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence explicitly states NO_EVIDENCE_FOUND for the Privacy Act 1988, indicating no textual basis for a ban or local processing requirement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of a ban or local processing requirement was found, indicating transfers are free of such requirements."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence explicitly states that no requirements were found for the horizontal application of the Privacy Act, indicating the absence of the specific ban or "
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "master_gold": 0.5,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The provided text identifies a specific sectoral entity (System Operator) holding records for a specific system (My Health Record), constituting a single non-pe"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence cites a single sectoral (health) provision regarding the holding of records, which constitutes a single non-personal/specific-data storage rule wit"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The My Health Records Act 2012 is a sectoral law governing personal health data, and the cited provision imposes storage obligations on operators holding such r"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided text."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided data, resulting in a score of 0."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided data, and the absence of evidence does not support a score of 1."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 1.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 1.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence explicitly states that no conditions on transfer were found for the Privacy Act 1988, resulting in a score of zero."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of conditions on data transfer was found in the provided gate-verified rows."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence explicitly states that no conditions were found for the Privacy Act 1988, resulting in a score of 0 as there is no verified coverage of personal da"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no qualifying binding data-transfer agreement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly states NO_EVIDENCE_FOUND for the Privacy Act 1988, indicating no binding data-transfer agreement exists."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "No evidence of a binding data-transfer agreement was found, resulting in a score of 1."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The absence of evidence for a binding data-transfer agreement results in a score of 1, as the indicator requires proof of at least one such agreement to award a"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

@@ -1,0 +1,164 @@
+{
+ "economy": "Thailand",
+ "pillar": 7,
+ "run": "run-th-p7-1790531993",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence cites the Personal Data Protection Committee (PDPC) and its notifications, which are established under a comprehensive horizontal data protection f"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence cites the Personal Data Protection Committee (PDPC) and its notifications, which are established under Thailand's comprehensive horizontal Personal"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence cites the Personal Data Protection Committee (PDPC) and specific provisions of the Personal Data Protection Act (e.g., cross-border notification, D"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The provided evidence consists of the Computer Crime Act (which addresses criminal liability for unauthorized access and service provider liability) and PDPC no"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence provided consists of the Computer Crime Act (which criminalizes specific acts but does not establish a comprehensive framework for incident monitor"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The provided evidence consists of the Computer Crime Act (criminal liability) and PDPC regulations (data privacy), which are non-dedicated frameworks that do no"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence mandates the maintenance of records but does not specify a minimum retention period in days, months, or years."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence mandates the maintenance of records of processing activities but does not specify a minimum retention period (e.g., days, months, or years"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence confirms the obligation to maintain records of processing activities but does not specify a minimum retention period (e.g., 'keep for at l"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "Section 41 explicitly limits the mandatory designation of a Data Protection Officer to specific circumstances such as public authorities and large-scale process"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "Section 41 of the Personal Data Protection Act B.E. 2562 mandates the designation of a Data Protection Officer only for public authorities, large-scale processo"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "Section 41 of the Personal Data Protection Act mandates the appointment of a Data Protection Officer only for specific sectors (public authorities, large-scale "
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no government-access measure found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence was found to support the existence of a measure allowing government access to personal data without independent judicial authorization."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found to support the existence of a measure allowing government access to personal data without independent judicial authorization."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states that no evidence was found for the Personal Data Protection Act, meaning there is no verified data to support a score of"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

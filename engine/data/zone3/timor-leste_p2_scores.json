@@ -1,0 +1,102 @@
+{
+ "economy": "Timor-Leste",
+ "pillar": 2,
+ "run": "run-tl-p2-1790692384",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no foreign exclusion found (enabling clauses alone score 0)",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence contains no verified measure excluding foreign firms from public procurement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No measure excluding foreign firms is evidenced; the sole row is marked NO_EVIDENCE_FOUND_PENDING_REVIEW."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of a measure excluding foreign firms from public procurement was found."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence contains no verified text requiring surrender of source code or trade secrets, or use of specific encryption, as a procurement condition."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence contains no documented requirement to surrender patents, source code, or trade secrets, or to use specific encryption to win procurement."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The verified evidence contains no requirement to surrender source code or trade secrets, use escrow, or use specific encryption to qualify for procurement."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The stated preferential margin for national suppliers directly favors them over foreign bidders."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "A preferential margin for national suppliers directly discriminates against foreign bidders."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The preferential margin for national suppliers directly disadvantages foreign bidders, constituting a discriminatory procurement measure."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

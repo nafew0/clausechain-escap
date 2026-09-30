@@ -1,0 +1,254 @@
+[
+ {
+  "indicator": "P2-I1",
+  "law": "Law No. 3 of 2014 on Industry",
+  "article": "Art. 86(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively mandates the use of domestic products ('wajib digunakan') by state agencies in procurement funded by state/regional budgets. This is a direct exclusion of foreign goods unless the exception in Art 86(4) applies. It is not merely an enabling clause or a local-content threshold for the commercial market, but a binding procurement rule. The mapping correctly identifies the operative exclusion."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I1 scores '1' for measures excluding foreign firms under any circumstances, including 'foreign only if nationals cannot supply'. The text in Art 86(1) combined with the exception in Art 86(4) ('kecualikan dalam hal produk dalam negeri belum tersedia atau belum mencukupi') fits this exact description. The rationale correctly identifies the conditional exclusion structure. The G6 WARN regarding modality is a false positive; 'wajib' is the Indonesian legal term for 'mandatory/shal"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text explicitly states 'Produk dalam negeri... wajib digunakan' (Domestic products... must be used) by state agencies. The surrounding context confirms the exception in paragraph (4). The text establishes a mandatory preference for domestic goods in government procurement, which is the core of the P2-I1 indicator. The snippet is verbatim and supports the rationale that foreign goods are admitted only when domestic ones are unavailable."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I2",
+  "law": "Law No. 3 of 2014 on Industry",
+  "article": "Art. 39(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates 'alih teknologi' (technology transfer) as a condition for technology providers in government 'proyek putar kunci' (turnkey projects). This aligns with the legal test for P2-I2, which covers requirements to surrender/transfer IP or knowledge as a condition of participating in or performing a government procurement contract. The exclusion for 'optional or negotiated terms' does not apply because the text uses 'wajib' (mandatory) and attaches administrative sanctio"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping scores 1 under the rubric because it requires the transfer of technology (which encompasses source code, patents, or trade secrets in the context of industrial technology) as a tender condition. The G6 WARN regarding modality is incorrect; the Indonesian word 'wajib' translates to 'must' or 'shall', indicating a mandatory obligation, not a permissive one. Therefore, the provision evidences a mandatory requirement, fitting the scoring criteria for '1'."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'wajib melakukan alih teknologi kepada pihak domestik' (must carry out technology transfer to domestic parties) establishes a mandatory condition for the technology provider. While 'technology transfer' is broader than 'source code escrow', the indicator P2-I2 explicitly includes 'surrender/transfer of... trade secrets or exclusive IP' and the example cites open-source/source code availability. In the context of industrial technology procurement, mandatory technology transfer is t"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Law No. 3 of 2014 on Industry",
+  "article": "Art. 86(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision in Art. 86(1) explicitly mandates the use of domestic products ('wajib digunakan') by state institutions and state-owned enterprises in procurement funded by state or regional budgets. This constitutes an operative limitation in public procurement bidding favoring domestic origin, which falls squarely within the scope of P2-I3. The exclusion for commercial market local content (Pillar 10.3) does not apply because the text specifies government procurement entities and budget sources"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines P2-I3 as including 'minimum local-content requirement' or 'price preference/margin' triggered by nationality/origin. The text imposes a mandatory use of domestic products, which is a form of local-content requirement or preference. Although the specific percentage or margin is not in this snippet, the operative mandate to use domestic products over foreign ones satisfies the legal test for a limitation. The scoring would likely be 1 (discriminatory against foreign bidders) or "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states 'Produk dalam negeri ... wajib digunakan' (Domestic products ... must be used) by listed government entities in procurement. This is a mandatory obligation ('wajib'), not a permissive one. The G6 WARN regarding modality is incorrect because 'wajib' is the Indonesian legal term for 'must/shall'. The text clearly establishes a requirement to use domestic products, supporting the rationale that it imposes a limitation favoring domestic origin."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Omnibus Health Law No.17 2023 (UU Kesehatan)",
+  "article": "Art. 328",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates ('harus mengutamakan') that government entities prioritize goods using domestic raw materials. This is an operative local-content preference in public procurement, not merely a commercial market rule or a generic empowerment clause. It fits the P2-I3 definition of a limitation triggered by origin/local content."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 0.5 for measures applied to all bidders (e.g., local-content thresholds anyone can meet) and 1 for discriminatory measures. This provision imposes a local-content preference ('mengutamakan... bahan baku produksi dalam negeri') which aligns with the positive cue 'domestic component level (local content)'. The mapping correctly identifies this as a P2-I3 indicator. The sectoral nature (Health) is not a defect as the rubric does not exclude sectoral procurement laws."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'harus mengutamakan' (must prioritize) establishes a mandatory preference for domestic raw materials in the procurement of medicines and health devices by government entities. This directly supports the rationale of a local-content preference in public procurement. The G6 WARN regarding modality is incorrect because 'harus' is a mandatory modal verb in Indonesian, equivalent to 'shall' or 'must', not permissive."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Instruction No. 2 of 2022 on Accelerating the I",
+  "article": "Art. 10",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is an operative mandate within a Presidential Instruction (Inpres) directed at government entities, imposing a specific local content threshold (TKDN 25% or TKDN+BMP 40%) for procurement. It is not merely an empowering clause or a commercial market rule, but a binding administrative requirement for public bidding, fitting the legal function of P2-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I3 explicitly includes 'minimum local-content requirement' as a valid limitation. The snippet provides a concrete threshold (25% TKDN) which is a positive cue ('domestic component level'). While the scoring might be debated (0.5 vs 1), the mapping to the indicator itself is correct as it evidences a local-content rule in government procurement, not a commercial market rule (Pillar 10.3) or an outright exclusion (P2-I1)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'Menggunakan produk dalam negeri yang memiliki nilai TKDN paling sedikit 25%' (Use domestic products having TKDN value of at least 25%) is an imperative instruction in the context of a Presidential Instruction. In Indonesian legal hierarchy, Inpres are binding directives to ministers and regional heads. The text establishes a mandatory condition for the use of domestic products in the specified procurement context, supporting the rationale that it imposes a local-content requirement."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Regulation No. 46 of 2025 on the Second Amendme",
+  "article": "Art. 67",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is not a mere empowerment clause; it defines the operative formula (HEA = (1 - KP) x HP) and specific percentages (25% max, 7.5% for international) that adjust bid prices. This constitutes an operative limitation in procurement bidding as required by the legal test, not just a legal basis."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text contains explicit positive cues: 'Preferensi harga' (price preference), 'tingkat komponen dalam negeri' (local content/TKDN), and 'badan usaha nasional' (national firms). The mechanism applies to all bidders meeting the criteria (local content threshold or nationality), which aligns with the rubric's definition of a measure applied to all bidders (score 0.5) or discriminatory measures (score 1). The mapping correctly identifies the operative preference mechanism."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text explicitly states that price preference is given based on 'komitmen untuk memenuhi ketentuan batasan minimum nilai tingkat komponen dalam negeri' (commitment to meet minimum local content value) and for international procurement, a 7.5% preference is given to 'badan usaha nasional' (national business entities). This text directly establishes the existence of price preferences and local content requirements in government procurement, supporting the P2-I3 mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Regulation No. 46 of 2025 on the Second Amendme",
+  "article": "Art. 64A",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision falls within the scope of government procurement (village level) and imposes a preference for local providers and materials. It is not a commercial market rule (Pillar 10.3) nor a foreign equity cap (Pillar 3). The legal function is a local-content preference, which fits P2-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines P2-I3 as including local-content requirements or preferences. The text 'mengutamakan Penyedia di desa setempat' (prioritize local providers) and 'penggunaan material yang ada di desa' (use of local materials) constitutes a local-content preference. While the modality is debated (G6 WARN), the presence of a preference mechanism for a specific status (local origin) aligns with the indicator's definition of a measure applied to bidders based on origin/status. It is not a neutral "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states that village authority 'prioritizes' (mengutamakan) local providers and materials. This is an operative statement of preference. Even if 'mengutamakan' is interpreted as a strong directive rather than a hard 'shall', it establishes a preference mechanism in procurement bidding, which is the core of P2-I3. The snippet supports the rationale that a local-content preference exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Regulation No.16 on Government Procurement of G",
+  "article": "Art. 67(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively imposes a price preference margin (up to 7.5%) for national enterprises in construction tenders, which is a concrete legal limitation in procurement bidding. It is not merely an empowering clause or a generic domestic disclosure rule. The scope is correctly identified as a discriminatory measure based on nationality/origin."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I3 explicitly calls for operative limitations such as price preferences or margins triggered by nationality. The snippet provides a specific margin (7.5%) for domestic bidders in construction, fitting the 'score 1' criterion for measures directly discriminating against foreign bidders. The hunt_in is empty, but the positive cues (e.g., 'price preference', 'domestic bidders') are strongly matched by the text."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states 'Preferensi harga untuk Pekerjaan Konstruksi yang dikerjakan oleh badan usaha nasional paling tinggi 7,5% ... di atas harga penawaran terendah dari badan usaha asing.' This textually establishes a price advantage for national enterprises over foreign ones in construction works, which directly supports the rationale of a discriminatory evaluation bonus based on origin."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Regulation No.16 on Government Procurement of G",
+  "article": "Art. 67(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is operative and imposes a specific price preference mechanism (HEA calculation) for domestic goods. It is not merely an empowering clause, nor is it a commercial market rule (Pillar 10.3) or an outright exclusion (P2-I1). The legal function of creating a bidding advantage based on origin is clearly present."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I3 explicitly calls for 'price preference/margin' triggered by 'nationality/origin'. The text provides a concrete margin (up to 25%) and a threshold (TKDN >= 25%). This matches the positive cue 'margin of preference for domestic goods' and the scoring criteria for a measure discriminating against foreign bidders (score 1) or applied via local content (score 0.5). The mapping is consistent with the indicator's definition."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text 'Preferensi harga merupakan insentif bagi produk dalam negeri... berupa kelebihan harga' (Price preference is an incentive for domestic products... in the form of a price margin) directly establishes the existence of a price preference. The surrounding context confirms the operative parameters (25% TKDN, 25% max preference). The text supports the rationale that this is an operative limitation/preference in procurement bidding."
+   }
+  ]
+ }
+]

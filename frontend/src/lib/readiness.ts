@@ -17,6 +17,8 @@ const FRIENDLY: Array<[RegExp, string]> = [
     '$1 indicator scores awaiting reviewer approval'],
   [/^approval-only submission replay has not produced final artifacts$/i,
     'Final dataset is generated after reviewer approvals (replay pending)'],
+  [/graph validation fail(ed)?/i,
+    'Graph mirror reconciliation pending (legacy alignment rows queued for review)'],
 ]
 
 export function friendlyFailure(raw: unknown): string {

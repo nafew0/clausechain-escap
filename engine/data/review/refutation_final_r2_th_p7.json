@@ -1,0 +1,282 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "OIC Notification: Customer Personal Data Guidelines (non-lif",
+  "article": "s. 29",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is expressly sectoral and concerns personal-data privacy notices for non-life insurance brokers. Under P7-I1, sectoral evidence is relevant to the sectoral-only 0.5 outcome and is not defective merely because it is not horizontal."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has hunt_in: [] and expressly permits recording sectoral data-protection laws while scoring sectoral-only coverage at 0.5. Section 29 supports a sector-specific personal-data-protection obligation and may serve as an evidence row, although it cannot alone establish that no horizontal framework exists."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text requires or permits privacy-policy notification by non-life insurance brokers and expressly refers to personal-data-protection law. It establishes sectoral data-protection regulation, not a comprehensive horizontal framework or its absence; that limitation is consistent with, rather than contrary to, the claimed sectoral P7-I1 mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification on Security Measures of Controllers B.E. 2",
+  "article": "s. 4(7)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The notification is not merely generic cybersecurity: it binds personal-data controllers and expressly covers collection, use, and disclosure under the personal-data-protection law. It therefore can evidence a horizontal framework component, although it cannot alone prove comprehensiveness."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has hunt_in: [] and permits a provision evidencing a framework to serve as an evidence row for this absence-scored indicator. This text supports horizontal coverage, but by itself supports at most a horizontal-but-thin assessment (0.5), not a comprehensive-framework score of 0; the mapping itself is not invalid."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text mandates security measures for controllers and applies them to personal-data collection, use, and disclosure, while referring to the personal-data-protection law. It establishes a horizontal personal-data-protection framework component, but does not textually establish that the framework is comprehensive; that limitation affects scoring, not the validity of the evidence mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Appropriate Measures to Safeguard the Rig",
+  "article": "s. 24(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a horizontal personal-data-controller security duty under the Personal Data Protection Act. It therefore performs a data-protection-framework function; the rubric does not require every evidence row to establish the framework's full comprehensiveness."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 has hunt_in: [] and expressly permits framework evidence, including for an absence-scored indicator. This horizontal provision supports recording an existing framework and potentially a 0 or 0.5 outcome after assessing breadth; it does not itself create a rubric defect. The G4/G8 warnings are not refutations."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly requires data controllers to provide risk-appropriate security measures and refers to minimum standards under section 37(1), while the context identifies the horizontal Personal Data Protection Act. It establishes a horizontal data-protection obligation, although it does not alone prove the framework is comprehensive; that limitation does not invalidate the evidence mapping under the supplied rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 37(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 37(3) is a substantive personal-data-protection obligation, and the cited Personal Data Protection Act is identified as horizontal. Under the rubric, evidence of such a horizontal framework supports a score of 0 for framework absence; no concrete legal-function or scope defect is shown."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has hunt_in: [] and expressly permits a provision evidencing the framework as an evidence row for this absence-scored indicator. A horizontal Personal Data Protection Act satisfies the framework-present outcome and therefore supports score 0, notwithstanding that the quoted provision is sector-neutral and concerns erasure."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes a mandatory controller system for erasure or destruction, with specified triggers and exceptions, within an Act governing personal data and data controllers. The quotation alone does not catalogue every feature of comprehensiveness, but the supplied Act identity and horizontal coverage establish the relevant framework; the snippet does not contradict the mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Notification of the National Cyber Security Committee Regard",
+  "article": "s. 8(13)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision expressly concerns retaining evidence relating to cyber threats and applies to serious and critical threat levels. That is an incident-response function within the dedicated cybersecurity framework identified in the supplied law and status context; it is not a confidentiality, transfer, or generic domestic-disclosure provision."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has an empty hunt_in list, so no omitted search term defeats the mapping. The evidence supports a dedicated cybersecurity measure addressing cyber-incident evidence retention, and the supplied context identifies the notification as subordinate to the Cybersecurity Act. Under framework_absent_scores_high, a confirmed dedicated horizontal framework yields score 0; the fact that this row evidences a framework function is permissible for an absence-scored indicator."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text establishes authority to prescribe evidence-retention guidelines and periods for services, systems, or devices likely to be affected by serious or critical cyber threats. Read with the supplied title and official-status context, it supports the claimed cybersecurity incident-response framework; it does not establish a contrary exception, retention ceiling, or merely permissive domestic rule."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Notification of the National Cyber Security Committee Regard",
+  "article": "s. 8(10)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision concerns cyber-threat incident-response capability testing, a core cybersecurity function, and the identified notification is presented as a horizontal instrument under the Cybersecurity Act. The absence-scored rubric permits this as evidence of a dedicated framework, which would support a score of 0 rather than refute the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Because hunt_in is empty, no prescribed phrase is required. Under the scoring rubric, evidence of a dedicated horizontal cybersecurity framework is relevant and yields score 0; the incident-response testing provision and its stated horizontal, Act-based framework fit that evidence function. G6 is only a WARN and mandatory modality is not required by P7-I2."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly addresses testing capability to respond to cyber threats, supporting the claimed incident-response function. Read with the identified notification and its stated issuance under the dedicated Cybersecurity Act, it supports framework evidence; the text need not itself state the eventual absence-score outcome or contain a must/shall formula."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 32(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to record a rejected objection and its reasons. Although it does not specify a retention duration, that is a scoring issue rather than a legal-function defect under the rubric, which permits recording retention requirements without a specified minimum."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying P7-I3, the text supports a mandatory recordkeeping requirement but specifies no minimum period, so the evidence is recorded and scored 0. It is not government-only, and the rubric's scoring rule permits such evidence; the absence of a numeric period does not invalidate the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly requires the Data Controller to record the rejected objection and reasons, with a cross-reference to section 39. It does not establish keeping the data for any stated period, so it supports a P7-I3 evidence row with score 0, not a positive minimum-period finding."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 88",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "Section 88 contains no DPO or DPIA requirement; it only penalizes noncompliance with the separately referenced section 41. Without section 41, the supplied excerpt does not establish the specific P7-I4 accountability mechanism or support the claimed horizontal coverage."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "If section 41 is correctly incorporated, a conditional DPO duty is evidence for P7-I4 and would score 0.5 under the rubric, not 1. The rubric does not require that the evidence provision itself reproduce every term of the underlying cross-referenced duty, and no prohibited government-only or unrelated function is shown."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The exact text establishes only an administrative fine for a representative who fails to comply with section 41 as incorporated. It does not state that section 41 requires DPO appointment, identify its conditions, or establish that the duty is horizontal; those propositions require the unquoted text of section 41."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 38(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 38(1) expressly exempts specified controllers from the designation duty in section 37(5), which supports a conditional DPO regime rather than a localization, confidentiality, or unrelated processing rule. The sectoral limitation is properly captured by the rubric's 0.5 tier."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I4, the cross-referenced designation duty and its defined exemptions evidence a DPO requirement for covered controllers. Because the requirement is conditional and sector-specific, it scores 0.5, not 1; no DPIA showing is needed, and hunt_in is empty."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says that the designation provision in section 37(5) does not apply to listed public authorities and certain businesses, while the surrounding text confirms the conditional regime. That establishes a DPO-designation framework for non-exempt controllers, supporting the claimed sectoral mapping, though not an all-sector requirement or a DPIA requirement."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 76(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 76(2) expressly requires the Competent Officer to obtain an order from the competent court before entering premises, investigating, collecting, seizing, or attaching relevant materials. Under the supplied court-order test, this is court-gated access supporting score 0, not a warrantless-access defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric permits evidence from the privacy statute and requires recording court-gated access even though it does not score 1. Section 76(2) supplies that evidence and supports score 0; any separate no-order request power in section 76(1) would need separate assessment, but does not invalidate this correctly characterized court-order row."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly states that the officer shall file a complaint for the competent court to issue an order granting permission, and identifies the permitted investigative and seizure actions. In context, those powers concern Data Controllers, Data Processors, and offenses under the personal-data statute, which sufficiently supports a court-gated government-access evidence row under P7-I5."
+   }
+  ]
+ }
+]

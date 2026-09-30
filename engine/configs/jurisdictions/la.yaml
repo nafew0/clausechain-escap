@@ -1,0 +1,170 @@
+jurisdiction: LA
+source_format: pdf        # Official Gazette / BOL / LSC / Trade Portal PDFs; most are image scans -> OCR (Vision, Lao script)
+name: Lao PDR
+un_name: Lao People's Democratic Republic
+languages: { primary: lo, supported: [lo, en] }
+section_grammars: [lao, article]   # "ມາດຕາ N" (Lao originals) + "Article N" (official/unofficial EN translations)
+citation_template: "Art. {label}"
+
+whitelist_source: data/official_domains.json
+official_sources:
+  # ranks follow the sg/my convention: 100 statute DB / gazette, 90 treaty register, 60 regulator
+  - { name: Lao Official Gazette (Ministry of Justice), domain: laoofficialgazette.gov.la, source_type: official_gazette, authority_rank: 100 }
+  - { name: Lao Trade Portal, domain: laotradeportal.gov.la, source_type: official_statute_database, authority_rank: 90 }
+  - { name: Lao Services Portal, domain: laoservicesportal.gov.la, source_type: official_statute_database, authority_rank: 85 }
+  - { name: Bank of the Lao PDR, domain: bol.gov.la, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Lao Securities Commission, domain: lsc.gov.la, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Lao Securities Commission (legislation), domain: lsc2.gov.la, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Lao Computer Emergency Response Team (MTC), domain: laocert.gov.la, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Anti-Money Laundering Intelligence Office, domain: amlio.gov.la, source_type: sectoral_regulator, authority_rank: 55 }
+  - { name: MFAT RCEP texts, domain: mfat.govt.nz, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: Pillar 2 procurement source, domain: ppmd.mof.gov.la, source_type: official_statute_database, authority_rank: 90 }
+
+portal_search:
+  engine: laoofficialgazette.gov.la listings (index.php?r=site/display&id=N) + kcfinder/upload/files PDFs; BOL fileupload PDFs
+  method: listing_scan
+  notes: >-
+    Gazette and BOL documents are mostly image PDFs (12 of 19 probed on 29-Sep-2026 had no text layer):
+    OCR is vision-first with Lao hints. The EDPL Lao original is byte-identical on the gazette
+    (0918570.pdf) and the Trade Portal (Legal_1557474430lo_LA.pdf); only the gazette copy is seeded.
+    The Trade Portal usually carries both lo_LA and en_GB files for a law.
+
+citation_patterns:
+  section: ["Art. {n}", "ມາດຕາ {n}", "Article {n}"]
+  paragraph_required: false
+connector: generic_seeds
+gold_anchor_roles: [operative, supporting]   # inject the master's supporting refs as candidates too
+legal_fit_reads_translation: true   # G7 patterns are English; also read the mapper's English account
+notes:
+  - "OCR-FIRST ECONOMY: Lao-script originals are scans; route every scanned page to Vision (Paddle has no Lao model). Lao digits (໐-໙) in article labels are normalised to Arabic; text/spans untouched."
+  - "Several instruments exist only in Lao: Verbatim Snippet = Lao, with the English quote in the translation column labelled [OWN-TRANSLATION]. EN texts (Commercial Bank Law, E-Transactions Law, Cyber Crime Law, AML Law) are marked 'Unofficial Translation' by the issuer."
+  - "Polarity (research 28-Sep-2026, cut-off 31-Aug-2026): P6-I1 0.5 (LSC Decision 11 Art. 17(2) outright ban on storing securities-company data abroad), P6-I2 1 (MTC 3643 Art. 21(1) cloud backup in Laos + BOL 511/819 transaction data + Commercial Bank Law Art. 71), P6-I3 1 (MTC 3643 Art. 22 blockchain infrastructure; LSC 11 Arts. 7-9), P6-I4 1 (EDPL Art. 17 consent), P6-I5 1 (RCEP Ch.12 obligations deferred for Lao PDR, footnote 13; AANZFTA LDC-deferred)."
+  - "All four P6 changes vs the Round-2 database (6.1 0->0.5, 6.2 0->1, 6.3 0->1) rest on 2021-2026 instruments — these are the NEW-evidence vein."
+  - "MTC 3643 Art. 20 item 2.3 (data-centre operators' own equipment in Laos) is OUT-OF-SCOPE-9.4 licensing, not 6.3."
+  - "P7 (ESCAP gold): I1 0.5 (EDPL + implementation guidelines), I2 0 (Cyber Crime Law 61/NA), I3 1 (Cyber Crime Law Art. 40), I4 1 (EDPL Arts. 29, 46), I5 0 (EDPL, Cyber Crime Law Arts. 40, 45). AML Law 64/NA (2024) added as a retention/disclosure source."
+open_verification:
+  - "Law on Criminal Procedure No. 37/NA (2017): no official copy located (only the superseded 2004 text on non-official sites) — P7-I5 court-gating unverified"
+  - "Law on Cybersecurity (2026): the P7 research asserts a March 2026 law but gives no gazette file; not seeded until the text is found"
+  - "MPT Decision No. 143 (2017, software business + internet data centres, Art. 6.1(7)-(8) local database/IX): in-force status uncertain — seeded without a status assertion so it stays a lead (STATUS_UNKNOWN)"
+  - "The 28-Sep P7 report has garbled Lao titles and a malformed AML URL (%NN%LD.pdf); its rows were not used as seeds except the AML Law, re-sourced from the gazette"
+ocr: { provider: hybrid_script, route: vision-first, language_hints: [lo, en], expect_script: lao }
+known_index: data/known_index_round2.json
+seeds: data/seeds_r2.json
+rdtii_bindings: { pillars: [2, 6, 7] }
+
+anchor_instruments:
+  - "Law on Electronic Data Protection No. 25/NA (2017) — Art. 17 consent for transfer abroad (P6-I4); horizontal DP framework (P7-I1); Arts. 29/46 (P7-I4)"
+  - "Law on Prevention and Combating Cyber Crime No. 61/NA (2015) — cybersecurity/cybercrime framework (P7-I2); Art. 40 retention (P7-I3)"
+  - "MTC Decision No. 3643 on Digital Technology Business (2025) — Art. 21(1) cloud backup in Laos (P6-I2), Art. 22 blockchain infrastructure (P6-I3)"
+
+hunt_instruments:
+  P6-I1:
+    - "LSC Decision No. 11 (2021) Art. 17(2) — securities-company data and ICT systems may not be stored abroad (0.5, sectoral ban)"
+  P6-I2:
+    - "BOL Decision No. 511 (2025) Arts. 15(3), 35(4) — payment service providers store transaction data in Laos"
+    - "BOL Decision No. 819 (2026) Arts. 13(3), 20(4) — retail payment operators"
+    - "Law on Commercial Bank No. 39/NA (2023) Art. 71 first limb — foreign branch records in Laos"
+  P6-I4:
+    - "Law on Commercial Bank Art. 71 second limb — head-office copy with BOL approval (0.5, sectoral)"
+    - "MTC Decision No. 3648 on Digital Platforms (2025) Art. 17 — offshore storage allowed with guaranteed access"
+    - "Decree No. 225/GOL (2020) Arts. 21, 30 — financial consumer data (ESCAP gold 0.5)"
+  P6-I5:
+    - "RCEP Art. 12.15.2 footnote 13 — obligation deferred for Lao PDR (1 Jan 2027, extendable to 2030); Ch.12 excluded from dispute settlement"
+  P7-I3:
+    - "AML Law No. 64/NA (2024) — record retention floor"
+    - "Law on Electronic Transactions No. 20/NA (2012) Art. 16 (ESCAP gold, score 0)"
+
+# ESCAP master (known_index_round2) -> this corpus. The master's "Guidelines ... No. 2126/MoPTC"
+# is the MPT instruction of 8 Aug 2018 whose gazette header reads No. 2426/ປທສ (number
+# discrepancy flagged in data/audit/gold_audit_la.csv). Law on Electronic Transactions
+# No. 20/NA is deliberately NOT aliased to its successor: the master cites a superseded law.
+gold_aliases:
+  "Guidelines on the Implementation of the Law on Electronic Data Protection No. 2126/MoPTC": "Instruction No. 2426/MPT (2018) on the Implementation of the Law on Electronic Data Protection"
+
+# Provisional indicator scores from the P6 deep-research report (engine/docs, cut-off 31 Aug 2026).
+# The P7 report is not reliable enough to score from (see open_verification).
+research_scores: { P6-I1: 0.5, P6-I2: 1, P6-I3: 1, P6-I4: 1, P6-I5: 1 }
+
+governing_instruments:
+  default: { law: "Law on Electronic Data Protection No. 25/NA (2017)", url: "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf" }
+  P7-I2:   { law: "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)", url: "https://laocert.gov.la/ftp_upload/Cyber_Crime_Law_EnVersion.pdf" }
+  P6-I5:   { law: "RCEP Chapter 12 Electronic Commerce (Lao PDR deferral, footnote 13)", url: "https://www.mfat.govt.nz/assets/Trade-agreements/RCEP/RECP-Agreement-112020/Chapter-12.pdf" }
+
+status_assertions:
+  "Law on Electronic Data Protection No. 25/NA (2017)":
+    status: in_force
+    fact_url: "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf"
+    fact_text: "Lao Official Gazette publication; ESCAP Round-2 government-verified gold cites it as current P6/P7 evidence; no repeal identified by the 31-Aug-2026 research cut-off."
+  "Instruction No. 2426/MPT (2018) on the Implementation of the Law on Electronic Data Protection":
+    status: in_force
+    fact_url: "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/Introduction%20on%20Implementation%20of%20Data%20Protection%20Law.pdf"
+    fact_text: "Lao Official Gazette publication implementing EDPL No. 25/NA; ESCAP gold cites the implementation guidelines as current P7-I1 evidence."
+  "Law on Electronic Transactions No. 20/NA (2012)":
+    status: superseded
+    fact_url: "https://www.laotradeportal.gov.la/upload/files/Legal_1679902214lo_LA.pdf"
+    fact_text: "Replaced by the Amended Law on Electronic Transactions No. 31/NA of 29 December 2022 (Official Gazette 23 March 2023, in force 7 April 2023). ESCAP gold still cites No. 20/NA (as '2010')."
+  "Amended Law on Electronic Transactions No. 31/NA (2022)":
+    status: in_force
+    fact_url: "https://www.laotradeportal.gov.la/upload/files/Legal_1679902214lo_LA.pdf"
+    fact_text: "Lao Trade Portal publication of the Amended Law No. 31/NA (29 December 2022), in force 7 April 2023, replacing No. 20/NA (2012)."
+    effective_date: "2023-04-07"
+  "Decree on Financial Consumer Protection No. 225/GOL (2020)":
+    status: in_force
+    fact_url: "https://laotradeportal.gov.la/upload/files/Legal_1614311323lo_LA.pdf"
+    fact_text: "Lao Trade Portal publication; ESCAP Round-2 gold cites Arts. 21, 30 as current P6-I4 evidence."
+  "Lao Securities Commission Decision No. 11 on ICT Systems of Securities Companies (Amended, 2021)":
+    status: in_force
+    fact_url: "https://lsc2.gov.la/legislation/agreement.php?page=4"
+    fact_text: "Lao Securities Commission legislation register lists the amended 2021 decision as current (research 28-Sep-2026)."
+  "Bank of the Lao PDR Decision No. 511 on the Payment Service System (2025)":
+    status: in_force
+    fact_url: "https://www.bol.gov.la/fileupload/30-06-2025_1751250479.pdf"
+    fact_text: "Bank of the Lao PDR publication dated 19 June 2025; in force (research 28-Sep-2026)."
+  "Bank of the Lao PDR Decision No. 819 on the General Payment System (2026)":
+    status: in_force
+    fact_url: "https://www.bol.gov.la/fileupload/02-09-2026_1788322426.pdf"
+    fact_text: "Bank of the Lao PDR publication (August 2026); in force (research 28-Sep-2026)."
+  "Law on Commercial Bank (Amended) No. 39/NA (2023)":
+    status: in_force
+    fact_url: "https://www.bol.gov.la/en/fileupload/18-12-2025_1766032569.pdf"
+    fact_text: "Bank of the Lao PDR English publication of the amended law (National Assembly No. 39/NA, 17 July 2023)."
+    effective_date: "2023-07-17"
+  "Ministry of Technology and Communications Decision No. 3643 on Digital Technology Business (2025)":
+    status: in_force
+    fact_url: "https://www.laoofficialgazette.gov.la/index.php?r=site/display&id=2464"
+    fact_text: "Lao Official Gazette listing; decision dated 29 September 2025 (research 28-Sep-2026)."
+  "Ministry of Technology and Communications Decision No. 3648 on Digital Platforms (2025)":
+    status: in_force
+    fact_url: "https://www.laoofficialgazette.gov.la/index.php?r=site/display&id=2463"
+    fact_text: "Lao Official Gazette listing; decision dated 29 September 2025 (research 28-Sep-2026)."
+  "Bank of the Lao PDR Decision No. 696 on IT System Management of Financial Service Providers (2021)":
+    status: in_force
+    fact_url: "https://www.bol.gov.la/fileupload/20-12-2021_1639971641.pdf"
+    fact_text: "Bank of the Lao PDR publication dated 6 December 2021; in force (research 28-Sep-2026)."
+  "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)":
+    status: in_force
+    fact_url: "https://laocert.gov.la/ftp_upload/Cyber_Crime_Law_EnVersion.pdf"
+    fact_text: "LaoCERT (MTC) publication of the English version; ESCAP Round-2 gold cites it as current P7 evidence."
+  "Law on Anti-Money Laundering and Counter-Financing of Terrorism (Amended) No. 64/NA (2024)":
+    status: in_force
+    fact_url: "http://laoofficialgazette.gov.la/kcfinder/upload/files/01%20JULY%202024%20Law%20on%20AML%20-%20CFT%20(Amended)%20-%20No%2064%20-%20NA.pdf"
+    fact_text: "Lao Official Gazette publication of the amended AML/CFT law (No. 64/NA, 1 July 2024), replacing No. 50/NA (2014)."
+    effective_date: "2024-07-01"
+  "RCEP Chapter 12 Electronic Commerce (Lao PDR deferral, footnote 13)":
+    status: in_force
+    fact_url: "https://www.mfat.govt.nz/assets/Trade-agreements/RCEP/RECP-Agreement-112020/Chapter-12.pdf"
+    fact_text: "MFAT official chapter text; RCEP in force for Lao PDR 1 January 2022, but Art. 12.15 obligations apply to Lao PDR only from 1 January 2027 (footnote 13) and Ch.12 is excluded from dispute settlement (Art. 12.17.3)."
+    effective_date: "2022-01-01"
+  # Pillar 2 (public procurement), 29 Sep 2026
+  "Law on Public Procurement No. 30/NA (2017)":
+    status: "in_force"
+    fact_url: "http://ppmd.mof.gov.la/law"
+    fact_text: "MoF Public Procurement Management Department lists No. 30/NA (adopted 2 Nov 2017) as the current procurement law (Lao + English texts) and no later law; Art. 90: in force 15 days after Official Gazette notification; implemented by Instruction 0477/MOF (13 Feb 2019)."
+  "Instruction No. 0477/MOF (2019) on Implementation of the Law on Public Procurement":
+    status: "in_force"
+    fact_url: "http://ppmd.mof.gov.la/instruction"
+    fact_text: "MoF PPMD lists No. 0477/MOF (13 Feb 2019) as the sole current implementing instruction of Law 30/NA (Lao + English texts); in force from signing + 15 days after Gazette notification (Part III)."
+  "Ministry of Finance Implementing Rules and Regulations on Government Procurement No. 01639/MOF (1998)":
+    status: "superseded"
+    fact_url: "http://ppmd.mof.gov.la/instruction"
+    fact_text: "Pre-2017 regime rules; Law 30/NA (2017) Art. 90 abrogates conflicting rules and Instruction 0477/MOF (2019) is the only implementing instruction MoF PPMD publishes. No official copy of 01639/MOF located; explicit repeal text not found (NOT SEEDED)."

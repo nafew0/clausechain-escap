@@ -1,0 +1,16 @@
+[Unit]
+Description=ClauseChain Django API (gunicorn WSGI)
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/clausechain/backend
+EnvironmentFile=/srv/clausechain/backend/.env
+Environment=ENGINE_ROOT=/srv/clausechain/engine
+ExecStart=/srv/clausechain/backend/venv/bin/gunicorn clausechain.wsgi:application \
+    --bind 127.0.0.1:8001 --workers 2 --threads 4 --timeout 300
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

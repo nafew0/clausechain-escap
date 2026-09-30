@@ -1,0 +1,295 @@
+jurisdiction: ID
+source_format: pdf        # JDIH/BPK PDFs; Bahasa Indonesia = Latin script (no OCR-script barrier; easiest R2 economy)
+name: Indonesia
+un_name: Indonesia
+languages: { primary: id, supported: [id, en] }
+section_grammars: [indonesian]   # "Pasal {n}" / "Pasal {n} ayat ({m})" — needs pdf_act extra_section_patterns
+
+whitelist_source: data/official_domains.json
+official_sources:
+  # ESCAP's own Round-2 references cite peraturan.bpk.go.id for 134 of ~180 ID rows — it is the de-facto
+  # canonical mirror (BPK = Supreme Audit Board legal database), alongside the formal peraturan.go.id.
+  - { name: BPK legal database, domain: peraturan.bpk.go.id, source_type: official_statute_database, authority_rank: 100 }
+  - { name: National legal DB, domain: peraturan.go.id, source_type: official_statute_database, authority_rank: 100 }
+  - { name: JDIHN network hub, domain: jdihn.go.id, source_type: official_statute_database, authority_rank: 95 }
+  - { name: State Secretariat JDIH, domain: jdih.setneg.go.id, source_type: official_gazette, authority_rank: 95 }
+  - { name: Komdigi JDIH, domain: jdih.komdigi.go.id, source_type: ministry, authority_rank: 90 }
+  - { name: Kominfo JDIH (legacy domain), domain: jdih.kominfo.go.id, source_type: ministry, authority_rank: 85 }
+  - { name: OJK, domain: ojk.go.id, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: Bank Indonesia, domain: bi.go.id, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: BSSN, domain: bssn.go.id, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: MoF JDIH, domain: jdih.kemenkeu.go.id, source_type: ministry, authority_rank: 85 }
+  - { name: MoH JDIH, domain: jdih.kemkes.go.id, source_type: ministry, authority_rank: 85 }
+  - { name: MoT JDIH, domain: jdih.kemendag.go.id, source_type: ministry, authority_rank: 85 }
+  - { name: ESDM JDIH, domain: jdih.esdm.go.id, source_type: ministry, authority_rank: 85 }
+  - { name: PPATK, domain: ppatk.go.id, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: DFAT IA-CEPA texts, domain: dfat.gov.au, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: MFAT RCEP texts, domain: mfat.govt.nz, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: USTR agreement texts, domain: ustr.gov, source_type: official_treaty_or_state_register, authority_rank: 85 }
+
+portal_search:
+  engine: peraturan.bpk.go.id search + jdih.komdigi.go.id + regulator sites above
+  method: keyword_fulltext
+  notes: "BPK DOES index POJK too (verified 1 Aug: POJK 8/2023, 75/2016, 6/2022, 27/2024 all on peraturan.bpk.go.id Details pages with /Download PDFs) — use BPK when ojk.go.id geo-blocks. PBI still needs bi.go.id. Several JDIH download endpoints intermittently 403; retry with browser headers."
+
+citation_patterns:
+  section: ["Article {n}", "Art. {n}", "Pasal {n}"]
+  paragraph: ["Article {n}({m})", "Pasal {n} ayat ({m})"]
+  paragraph_required: true
+connector: generic_seeds
+notes:
+  - "Ministry renamed: Kominfo -> Komdigi (Nov 2024). Permenkominfo instruments keep original titles; both JDIH domains live. 2025 Komdigi rewrite (Permen 5/2025) touched PUBLIC scope only — Permenkominfo 5/2020 remains the private-scope instrument."
+  - "P6 shape: NO ban (every domestic-processing mandate has a regulator-approval escape -> 6.4, deep-research negative finding 1); the localisation weight sits in SECTORAL OJK/BI instruments (6.3 DC/DRC preconditions) + KUP tax law 10-year in-Indonesia retention (6.2). PP 71/2019 Art. 21 is PERMISSIVE for private ESOs — an assessor reading only PP 71 will wrongly score 0."
+  - "PDP implementing PP: NOT ENACTED (BPK filtered search = 0 results, DB current to PP 30/2025); Badan PDP Perpres still in drafting (Komdigi to Constitutional Court, 27 Jul 2026). UU 27/2022 Arts. 55-56 transfer conditions remain unelaborated — no adequacy list, no SCC template."
+  - "KUHAP REPLACED: Law No. 20 of 2025 (effective 2 Jan 2026) repealed Law 8/1981. Old Arts. 33-38 citations are STALE — use Pasal 112 (urgent warrantless search, score 1) vs Pasal 113(1) (court-gated rule)."
+  - "PP 46/2014 (Health Information System) shows 'Tidak Berlaku' (revoked, superseded by PP 28/2024) — the Round-2 gold KNOWN row citing PP 46/2014 Art. 21 needs a status flag; Permenkes 24/2022 is the operative medical-records instrument."
+  - "Easy false positive: PP 80/2019 Art. 25 retention has NO territorial element (not 6.2); KUP Pasal 28(11) DOES ('di Indonesia')."
+  - "P6-I5: IA-CEPA Art. 13.11.2 is the cleanest hard-binding commitment in the whole R2 dossier ('shall allow', no DS carve-out, in force 5 Jul 2020) — decisive score-0 evidence."
+open_verification:   # deep-research §5 — UNVERIFIED items
+  - "UU 17/2023 health-data cross-border article (potential tier-1 6.4) — text truncates at Pasal 110; follow-up lead: Permenkes 18/2022"
+  - "POJK 36/2024 existence + effect on POJK 69/2016 Pasal 49/49A (second pass could not confirm it exists)"
+  - "POJK 34/2025 successor provision content (revokes POJK 75/2016 from 18 Dec 2026 — after assessment date; PDF 403)"
+  - "BSSN Regs 1/2024 + 2/2024 article pinpoints (BPK metadata verified; PDFs unextractable)"
+  - "Indonesia-Korea CEPA / Indonesia-Japan EPA / Indonesia-UAE CEPA digital chapters — NOT INSPECTED (potential extra 6.5 evidence)"
+  - "US-Indonesia Agreement on Reciprocal Trade: signed Feb 2026, entry into force NOT verified (Art. 7.5 notification exchange unevidenced)"
+# OCR routing (hybrid decision, 1 Aug): Bahasa is Latin script — free self-hosted
+# Paddle first, Vision only on low-confidence/empty escalation (recorded in metadata).
+ocr: { provider: hybrid_script, route: paddle-first, language_hints: [id], conf_floor: 0.85 }
+known_index: data/known_index_round2.json
+seeds: data/seeds_r2.json
+rdtii_bindings: { pillars: [2, 6, 7] }
+
+anchor_instruments:
+  - "Law No. 27 of 2022 on Personal Data Protection — horizontal PDP law fully applicable since 17 Oct 2024 (P7-I1 score-0 evidence); Arts. 55-56 transfer conditions (P6-I4); Art. 53-54 trigger-based DPO (P7-I4 0.5)"
+  - "PP 71/2019 (PSTE) — Art. 20 public-scope localisation [GOV-ONLY]; Art. 21 PERMISSIVE for private ESOs + Art. 21(4) delegation to OJK/BI (where the real localisation lives)"
+  - "Permenkominfo 5/2020 as amended 10/2021 — private-scope ESO regime: Art. 21/26 supervision access, Art. 36 law-enforcement access (P7-I5 split: (1)-(2) warrantless vs (3)-(5) court-gated)"
+
+hunt_instruments:
+  P6-I2:
+    - "KUP Law (UU 6/1983 as amended UU 28/2007) Pasal 28(11) — 10-year books retention 'di Indonesia' (textbook 6.2; survived Cipta Kerja + HPP)"
+  P6-I3:
+    - "POJK 3/2024 (ITSK) Pasal 34 — DC+DRC in Indonesia as licence precondition, NO waiver (strongest ID infra finding)"
+    - "POJK 4/POJK.05/2021 Pasal 23(1) — NBFI electronic systems on Indonesian DC/DRC (waiver at 23(3) -> 6.4)"
+    - "POJK 69/POJK.05/2016 Pasal 49(3) — insurers DC+DRC in Indonesia (waiver Pasal 49A via POJK 38/2020 -> 6.4)"
+    - "POJK 75/POJK.03/2016 Pasal 3(1) + Pasal 16 — rural banks: unqualified domestic DC/DRC + Indonesian-domiciled IT provider (revoked by POJK 34/2025 only from 18 Dec 2026)"
+    - "PBI 23/6/PBI/2021 Pasal 48(4) — PJP processing systems on Indonesian DC/DRC (escape at 48(6) -> 6.4)"
+    - "PBI 23/7/PBI/2021 Pasal 71(4) — PIP mirror obligation"
+    - "Permenkes 24/2022 Pasal 22(1) — EMR outsourcing only to ESOs with in-country storage facilities"
+  P6-I4:
+    - "POJK 22/2023 Pasal 21(1)-(4) — consumer-data transfer cascade: adequacy -> safeguards -> consent (replaced POJK 6/2022)"
+    - "POJK 11/POJK.03/2022 Pasal 36 + Pasal 39(4) — offshore DC/DRC + offshore processing on OJK licence (distinct from skip-listed Pasal 35)"
+    - "PBI 23/6 Pasal 48(6)-(8) + PBI 23/7 Pasal 71(6)-(8) — BI-approval offshore processing"
+    - "Permen ESDM 7/2019 Pasal 31-32 — oil/gas data abroad on Ministerial licence (clearest non-financial 6.4; contractor-facing, NOT gov-only)"
+    - "Permenkominfo 5/2020 Pasal 34 — offshore handling allowed subject to access duty (0.5 — post-hoc condition, not a gate)"
+  P7-I3:
+    - "AML Law 8/2010 Pasal 21(2) — 5-year customer identification"
+    - "KUP Pasal 28(11) — 10 years"
+    - "Permenkes 24/2022 Pasal 39(1) — 25-year electronic medical records"
+  P7-I5:
+    - "Permenkominfo 5/2020 — Pasal 21/26 ministerial supervision access + Pasal 36(1)-(2) traffic/subscriber data on request (warrantless, 1) vs 36(3)-(5) content court-gated (0)"
+    - "State Intelligence Law 17/2011 — Pasal 31/32(2)/33 BIN-head written order (1) vs Pasal 32(3) court determination (0)"
+    - "AML Law 8/2010 Pasal 41(1)(a) — PPATK own-authority data requests"
+    - "KUHAP Law 20/2025 — Pasal 112 urgent warrantless search (1) vs Pasal 113(1) court-gated rule (0)"
+    - "KUP Pasal 35A(1) — mandatory tax-data disclosure on administrative demand"
+  P7-I2:
+    - "Perpres 47/2023 National Cybersecurity Strategy + BSSN Regs 1/2024 (incident mgmt), 2/2024 (crisis mgmt), 5/2024 (action plan) — dedicated national framework, instrument-level not Act-level (score 0 on legal-instrument reading; 0.5 if Act-only reading)"
+
+governing_instruments:
+  default: { law: "Law No. 27 of 2022 on Personal Data Protection", url: "https://jdih.komdigi.go.id/produk_hukum/view/id/832/t/undangundang%2Bnomor%2B27%2Btahun%2B2022" }
+  P7-I2:   { law: "Presidential Regulation No. 47 of 2023 on National Cybersecurity Strategy", url: "https://peraturan.bpk.go.id/Details/255542/perpres-no-47-tahun-2023" }
+
+status_assertions:
+  "POJK 8/2023 AML-CFT-CPF Program Implementation":
+    status: in_force
+    fact_url: "https://peraturan.bpk.go.id/Details/272022/peraturan-ojk-no-8-tahun-2023"
+    fact_text: "BPK official record LN.2023/117; replaces POJK 12/POJK.01/2017 AML regime; in force 2023."
+  "UU 4/2021 ASEAN E-Commerce ratification":
+    status: in_force
+    fact_url: "https://jdih.kemendag.go.id/peraturan/undang-undang-nomor-4-tahun-2021-tentang-pengesahan-asean-agreement-on-electronic-commerce-persetujuan-asean-tentang-perdagangan-melalui-sistem-elektronik"
+    fact_text: "Ratification law promulgated 6 Oct 2021 (MoT JDIH official record)."
+
+  "Regulation of the Minister of Communication and Informatics of the Republic of Indonesia No.20 on Protection of Personal Data 2016":
+    status: in_force
+    fact_url: "https://jdih.komdigi.go.id"
+    fact_text: "Permenkominfo 20/2016 remains operative for private-scope processing pending the PDP implementing PP; ESCAP Round-2 government-verified gold cites it as current."
+  "Regulation of the Minister of Communication and Informatics of the Republic of Indonesia No.5 of 2020":
+    status: in_force
+    fact_url: "https://jdih.komdigi.go.id/produk_hukum/view/id/759/t/peraturan%2Bmenteri%2Bkomunikasi%2Bdan%2Binformatika%2Bnomor%2B5%2Btahun%2B2020"
+    fact_text: "Promulgated 24 Nov 2020, amended 10/2021; the 2025 Komdigi rewrite touched the public scope only."
+  "POJK 69/POJK.05/2016 Insurance Business":
+    status: in_force
+    fact_url: "https://ojk.go.id/id/regulasi/Documents/Pages/POJK-tentang--Penyelenggaraan-Usaha-Perusahaan-Asuransi,-Asuransi-Syariah,-Reasuransi,-dan-Reasuransi-Syariah/pojk%2069-2016.pdf"
+    fact_text: "Pasal 49 intact; POJK 38/2020 inserted Pasal 49A. POJK 36/2024 interaction unverified (medium confidence)."
+  "POJK 38/POJK.05/2020 (inserts Pasal 49A)":
+    status: in_force
+    fact_url: "https://www.ojk.go.id/id/regulasi/Documents/Pages/Perubahan-Atas-Peraturan-Otoritas-Jasa-Keuangan-Nomor-69-tentang-Penyelenggaraan-Usaha-Perusahaan-Asuransi/pojk%2038-2020.pdf"
+    fact_text: "Established 15 June 2020, promulgated 18 June 2020."
+  "Omnibus Health Law No.17 2023 (UU Kesehatan)":
+    status: in_force
+    fact_url: "https://jdih.kemkes.go.id/storage/documents/pdfs/2023uu017.pdf"
+    fact_text: "Kemenkes JDIH official text; in force 2023; PP 28/2024 implements it (superseding PP 46/2014)."
+
+  "UU 27/2022 (PDP Law)":
+    status: in_force
+    fact_url: "https://jdih.komdigi.go.id/produk_hukum/view/id/832/t/undangundang%2Bnomor%2B27%2Btahun%2B2022"
+    fact_text: "Effective 17 October 2022; two-year adjustment period ended 17 October 2024 — fully applicable. Implementing PP and Badan PDP Perpres NOT yet adopted (confirmed 27 Jul 2026)."
+    effective_date: "2024-10-17"
+  "Perpres 47/2023":
+    status: in_force
+    fact_url: "https://peraturan.bpk.go.id/Details/255542/perpres-no-47-tahun-2023"
+    fact_text: "BPK official record; effective 20 July 2023."
+    effective_date: "2023-07-20"
+  "BSSN Regulation 1/2024":
+    status: in_force
+    fact_url: "https://peraturan.bpk.go.id/Details/291240/peraturan-bssn-no-1-tahun-2024"
+    fact_text: "BPK official record; effective 18 January 2024; repealed BSSN Regulation 10/2020."
+    effective_date: "2024-01-18"
+  "BSSN Regulation 2/2024":
+    status: in_force
+    fact_url: "https://peraturan.bpk.go.id/Details/291245/peraturan-bssn-no-2-tahun-2024"
+    fact_text: "BPK official record; effective 18 January 2024."
+    effective_date: "2024-01-18"
+  "AML Law 8/2010":
+    status: in_force
+    fact_url: "https://peraturan.bpk.go.id/Details/38547/uu-no-8-tahun-2010"
+    fact_text: "BPK official record; no 2024-2026 repeal identified."
+  "KUP Law (UU 6/1983 as amended)":
+    status: in_force
+    fact_url: "https://peraturan.bpk.go.id/Details/77227/uu-no-6-tahun-1983"
+    fact_text: "In force as amended by UU 7/2021 (HPP); Pasal 28(11) survived Cipta Kerja and HPP unamended."
+  "KUHAP Law 20/2025":
+    status: in_force
+    fact_url: "https://peraturan.bpk.go.id/Details/337302/uu-no-20-tahun-2025"
+    fact_text: "Effective 2 January 2026; repealed and replaced Law No. 8 of 1981."
+    effective_date: "2026-01-02"
+  "Law 8/1981 (old KUHAP)":
+    status: repealed
+    fact_url: "https://peraturan.bpk.go.id/Details/337302/uu-no-20-tahun-2025"
+    fact_text: "Repealed by Law No. 20 of 2025 effective 2 January 2026 — do not cite as current."
+  "PP 46/2014 (Health Information System)":
+    status: repealed
+    fact_url: "https://peraturan.bpk.go.id"
+    fact_text: "BPK marks PP 46/2014 'Tidak Berlaku' — superseded by PP 28/2024. Gold KNOWN row citing Art. 21 must carry a status flag."
+  "Permenkes 24/2022 (Medical Records)":
+    status: in_force
+    fact_url: "https://peraturan.bpk.go.id/Details/245544/permenkes-no-24-tahun-2022"
+    fact_text: "Promulgated 31 Aug 2022, status 'Berlaku'; survived UU 17/2023 and PP 28/2024."
+  "Permenkominfo 5/2020 (as amended 10/2021)":
+    status: in_force
+    fact_url: "https://jdih.komdigi.go.id/produk_hukum/view/id/759/t/peraturan%2Bmenteri%2Bkomunikasi%2Bdan%2Binformatika%2Bnomor%2B5%2Btahun%2B2020"
+    fact_text: "Promulgated 24 Nov 2020; amended 10/2021; the 2025 Komdigi rewrite (Permen 5/2025) addressed the public scope only — private-scope instrument intact."
+  "POJK 3/2024 (ITSK)":
+    status: in_force
+    fact_url: "https://ojk.go.id/id/regulasi/Pages/POJK-3-2024-Penyelenggaraan-Inovasi-Teknologi-Sektor-Keuangan.aspx"
+    fact_text: "Promulgated 16 Feb 2024, in force 19 Feb 2024 — a NEW localisation obligation created inside the review window."
+    effective_date: "2024-02-19"
+  "POJK 4/POJK.05/2021":
+    status: in_force
+    fact_url: "https://ojk.go.id/id/regulasi/Pages/Penerapan-Manajemen-Risiko-dalam-Penggunaan-Teknologi-Informasi-oleh-Lembaga-Jasa-Keuangan-Nonbank.aspx"
+    fact_text: "Promulgated 17 Mar 2021; no 2024-2026 amendment located."
+  "POJK 69/POJK.05/2016 (as amended POJK 38/2020)":
+    status: in_force
+    fact_url: "https://ojk.go.id/id/regulasi/Documents/Pages/POJK-tentang--Penyelenggaraan-Usaha-Perusahaan-Asuransi,-Asuransi-Syariah,-Reasuransi,-dan-Reasuransi-Syariah/pojk%2069-2016.pdf"
+    fact_text: "Pasal 49 intact; POJK 38/2020 inserted Pasal 49A (conditional offshore route). CAVEAT: reported POJK 36/2024 amendment unverified."
+  "POJK 75/POJK.03/2016 (rural banks)":
+    status: in_force
+    fact_url: "https://www.ojk.go.id/id/regulasi/Documents/Pages/POJK-tentang-Standar-Penyelenggaraan-Teknologi-Informasi-bagi-Bank-Perkreditan-Rakyat-dan-Bank-Pembiayaan-Rakyat-Syariah/pojk%2075-2016.pdf"
+    fact_text: "Operative through Aug 2026: POJK 34/2025 revokes it only from 18 December 2026."
+  "PBI 23/6/PBI/2021 (PJP)":
+    status: in_force
+    fact_url: "https://www.bi.go.id/id/publikasi/peraturan/Pages/PBI_230621.aspx"
+    fact_text: "Promulgated and effective 1 July 2021; no amendment to Pasal 48 located for 2024-2026."
+    effective_date: "2021-07-01"
+  "PBI 23/7/PBI/2021 (PIP)":
+    status: in_force
+    fact_url: "https://www.bi.go.id/id/publikasi/peraturan/Pages/PBI_230721.aspx"
+    fact_text: "In force 2021; no 2024-2026 amendment to Pasal 71 located."
+  "POJK 22/2023 (Consumer Protection)":
+    status: in_force
+    fact_url: "https://ojk.go.id/id/regulasi/Pages/Pelindungan-Konsumen-dan-Masyarakat-di-Sektor-Jasa-Keuangan.aspx"
+    fact_text: "In force 2023 (replaced POJK 6/POJK.07/2022); principal compliance deadline fell in 2024."
+  "POJK 11/POJK.03/2022":
+    status: in_force
+    fact_url: "https://ojk.go.id/id/regulasi/Pages/Penyelenggaraan-Teknologi-Informasi-Oleh-Bank-Umum.aspx"
+    fact_text: "Promulgated 6-7 July 2022, effective 6 Oct 2022; OJK page lists no implementing SEOJK — the offshore approval regime lives in Pasals 35/36/39/40."
+    effective_date: "2022-10-06"
+  "Permen ESDM 7/2019 (as amended 1/2022)":
+    status: in_force
+    fact_url: "https://jdih.esdm.go.id/index.php/web/result/1942/detail"
+    fact_text: "Promulgated 2 Aug 2019; Permen ESDM 1/2022 left Pasal 31-32 untouched."
+  "IA-CEPA Chapter 13":
+    status: in_force
+    fact_url: "https://www.dfat.gov.au/sites/default/files/iacepa-chapter-13-electronic-commerce.pdf"
+    fact_text: "DFAT official chapter text; in force 5 July 2020. Art. 13.11.2 'shall allow' with no DS carve-out — hard-binding."
+    effective_date: "2020-07-05"
+  "RCEP Chapter 12 (Indonesia)":
+    status: in_force
+    fact_url: "https://www.mfat.govt.nz/assets/Trade-agreements/RCEP/RECP-Agreement-112020/Chapter-12.pdf"
+    fact_text: "MFAT official chapter text; in force for Indonesia 2 January 2023. Ch.12 DS-excluded (Art. 12.17.3)."
+    effective_date: "2023-01-02"
+  "US-Indonesia Agreement on Reciprocal Trade":
+    status: signed_not_in_force
+    fact_url: "https://ustr.gov/sites/default/files/files/Press/Releases/2026/02.19.26%20US-IDN%20ART%20Full%20Agreement%20-%20US%20Final%20for%20Website%20sanitized.pdf"
+    fact_text: "Signed February 2026; Art. 7.5 entry-into-force notification exchange NOT evidenced as of 31 Jul 2026 — do not count for 6.5 yet."
+  # Pillar 2 (public procurement), 29 Sep 2026
+  "Presidential Regulation No.16 on Government Procurement of Goods and Services 2018":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/73586/perpres-no-16-tahun-2018"
+    fact_text: "BPK status \"Berlaku\"; \"Diubah dengan\" Perpres 12/2021 and Perpres 46/2025; enacted 16 Mar 2018, promulgated and in force 22 Mar 2018."
+    effective_date: "2018-03-22"
+  "Presidential Regulation No. 46 of 2025 on the Second Amendment of the Government Procurement of Goods/Services Regulation":
+    status: "in_force"
+    fact_url: "https://jdih.lkpp.go.id/regulation/peraturan-presiden/peraturan-presiden-nomor-46-tahun-2025"
+    fact_text: "Second amendment of Perpres 16/2018, promulgated 30 Apr 2025 (LN 2025/67), in force on promulgation; replaces Arts. 65-67 and re-enacts Art. 63 (JDIH LKPP \"Berlaku\"; listed on BPK Perpres 16/2018 page)."
+    effective_date: "2025-04-30"
+  "Presidential Instruction No. 2 of 2022 on Accelerating the Increase in the Use of Domestic Products and Products from Micro, Small Enterprises, and Cooperatives (Bangga Buatan Indonesia) in Government Procurement of Goods and Services":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/204320/inpres-no-2-tahun-2022"
+    fact_text: "BPK status \"Berlaku\"; issued and effective 30 Mar 2022 (\"mulai berlaku pada tanggal dikeluarkan\")."
+    effective_date: "2022-03-30"
+  "Regulation of the Government of the Republic of Indonesia No.29 on Industrial Empowerment 2018":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/89213/pp-no-29-tahun-2018"
+    fact_text: "BPK status \"Berlaku\", \"Diubah dengan PP 28/2021\"; PP 28/2021 Art. 174(b) revoked only Arts. 44, 45, 49, 51-53 - P3DN Arts. 56-69 survive."
+  "Regulation of the Government of the Republic of Indonesia No.28 on the Implementation of the Industrial Sector 2021":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/161862/pp-no-28-tahun-2021"
+    fact_text: "BPK status \"Berlaku\", \"Diubah dengan PP 46/2023\" (raw/auxiliary materials only); in force on promulgation 2 Feb 2021."
+    effective_date: "2021-02-02"
+  "Regulation of the Government of the Republic of Indonesia No.71 on the Provision of Electronic System and Transaction 2019":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/122030/pp-no-71-tahun-2019"
+    fact_text: "BPK status \"Berlaku\"; revoked PP 82/2012; promulgated 10 Oct 2019."
+    effective_date: "2019-10-10"
+  "Regulation of the Minister of Communication and Informatics of the Republic of Indonesia No.41/PER/M.KOMINFO/10/2009 on Procedures for Assessing the Achievement of Domestic Component Levels in the Implementation of Telecommunications 2009":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/159035/permenkominfo-no-41permkominfo102009-tahun-20"
+    fact_text: "BPK status \"Berlaku\" (checked 29 Sep 2026); no revoking instrument listed."
+  "Regulation of the Minister of Finance Regulation No.115/PMK.06/2020 on the Utilization of State-Owned Assets 2020":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/144664/pmk-no-115pmk062020"
+    fact_text: "BPK status \"Berlaku\" (research 29 Sep 2026)."
+  "Regulation of the Minister of Industry No. 35 of 2025 on Provisions and Procedures for Certification of Domestic Component Level (TKDN) and Company Benefit Weight (BMP)":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/333003/permenperin-no-35-tahun-2025"
+    fact_text: "Enacted 11 Sep 2025; Art. 75 in force 3 months after promulgation (BPK \"Tanggal Berlaku 11 Desember 2025\"); Art. 74 revokes Permenperin 16/2011, 02/2014, 03/2014, 46/2022."
+    effective_date: "2025-12-11"
+  "Law No. 3 of 2014 on Industry":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Download/27824/UU%20Nomor%2003%20Tahun%202014.pdf"
+    fact_text: "Law on Industry, promulgated and in force 15 Jan 2014; Cipta Kerja (UU 6/2023) effect on Arts. 85-88 not verified."
+    effective_date: "2014-01-15"
+  "Regulation of the Government of the Republic of Indonesia No. 7 of 2021 on Ease, Protection and Empowerment of Cooperatives and Micro, Small and Medium Enterprises":
+    status: "in_force"
+    fact_url: "https://peraturan.bpk.go.id/Details/161837/pp-no-7-tahun-2021"
+    fact_text: "BPK status \"Berlaku\", no amending instrument listed; promulgated 2 Feb 2021."
+    effective_date: "2021-02-02"
+
+gold_aliases:
+  # Pillar 2 (public procurement)
+  "President Instruction No. 22/2022 on Accelerating the Increase in the Use of Domestic Products and Products from Micro, Small Enterprises, and Cooperatives to Support the Success of the National Movement \"Proudly Made in Indonesia\" in the Implementation of Government Procurement of Goods and Services 2022": "Presidential Instruction No. 2 of 2022 on Accelerating the Increase in the Use of Domestic Products and Products from Micro, Small Enterprises, and Cooperatives (Bangga Buatan Indonesia) in Government Procurement of Goods and Services"
+  "Regulation of the Government of the Republic of Indonesia No.28 on\nMaintenance of Industrial Fields 2021": "Regulation of the Government of the Republic of Indonesia No.28 on the Implementation of the Industrial Sector 2021"
+  "Regulation of the Government of the Republic of Indonesia No.46 on Amendments to Regulation of the Government of the Republic of Indonesia  No.28 on the Implementation of the Industrial Sector 2023": "Regulation of the Government of the Republic of Indonesia No.28 on the Implementation of the Industrial Sector 2021"
+  "Regulation of the Minister of Industry No.02/M-IND/PER/1/2014 on Guidelines of Increasing Use of Domestic Products 2014": "Regulation of the Minister of Industry No. 35 of 2025 on Provisions and Procedures for Certification of Domestic Component Level (TKDN) and Company Benefit Weight (BMP)"
+
+research_scores: { P2-I1: 1, P2-I2: 1, P2-I3: 1, P2-I4: 1 }

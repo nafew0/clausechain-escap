@@ -1,0 +1,102 @@
+{
+ "economy": "Malaysia",
+ "pillar": 2,
+ "run": "run-my-p2-1790691819",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided text consists solely of general financial management and appropriation provisions that do not contain any language excluding foreign firms from pub"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence consists solely of general financial management and appropriation provisions from the Financial Procedure Act 1957, containing no text reg"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence consists solely of general financial management and appropriation provisions from the Financial Procedure Act 1957, containing no specific"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states that no evidence was found for the Personal Data Protection Act 2010, and no other text is present to indicate requireme"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of requirements to surrender source code, trade secrets, or use specific encryption was found in the provided data."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence was found regarding requirements for source code, encryption, or trade secrets in procurement, resulting in a score of 0."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly states a preference policy for Bumiputera companies in government procurement, which constitutes a measure directly discriminating again"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites a specific policy granting preference to Bumiputera companies in government procurement, which constitutes a measure directly discriminating "
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence cites a policy explicitly granting preference to Bumiputera companies in government procurement, which constitutes a measure directly discriminatin"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

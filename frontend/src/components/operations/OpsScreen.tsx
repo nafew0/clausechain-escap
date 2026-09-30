@@ -18,9 +18,8 @@ export default function OpsScreen({ mode }: { mode: Mode }) {
   const Icon = ICON[mode]
   const rows = query.data?.ops_stats[mode] ?? []
   return <WorkspaceShell breadcrumbs={[{ label: 'Pipeline' }, { label: TITLE[mode] }]}><div className="cc-page ops-screen">
-    <div className="cc-page-header"><div><TruthBadge state="live" /><h1 className="cc-page-title text-[32px] mt-3">{TITLE[mode]}</h1><p className="text-cc-ink-500 mt-1.5">Engine-exported operational facts from the immutable graph store.</p></div><div className="ops-total"><Icon size={20} /><strong>{rows.length}</strong><span>{mode === 'acquisition' ? 'artifacts' : 'instruments'}</span></div></div>
-    {query.isError || !query.data ? <PageUnavailable title={query.isPending ? 'Loading engine operations…' : `${TITLE[mode]} data is unavailable`} /> : <><SnapshotBanner snapshot={query.data.snapshot} />
-      {mode === 'acquisition' ? <Acquisition rows={rows} /> : mode === 'eligibility' ? <Eligibility rows={rows} /> : <Extraction rows={rows} />}
+    <div className="cc-page-header"><div><div className="truth-chiprow"><TruthBadge state="live" />{query.data ? <SnapshotBanner snapshot={query.data.snapshot} /> : null}</div><h1 className="cc-page-title text-[32px] mt-3">{TITLE[mode]}</h1><p className="text-cc-ink-500 mt-1.5">Engine-exported operational facts from the immutable graph store.</p></div><div className="ops-total"><Icon size={20} /><strong>{rows.length}</strong><span>{mode === 'acquisition' ? 'artifacts' : 'instruments'}</span></div></div>
+    {query.isError || !query.data ? <PageUnavailable title={query.isPending ? 'Loading engine operations…' : `${TITLE[mode]} data is unavailable`} /> : <>      {mode === 'acquisition' ? <Acquisition rows={rows} /> : mode === 'eligibility' ? <Eligibility rows={rows} /> : <Extraction rows={rows} />}
     </>}
   </div></WorkspaceShell>
 }

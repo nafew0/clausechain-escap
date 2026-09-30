@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import json
 import sqlite3
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -15,7 +16,10 @@ from packages.core.corpus_fingerprint import corpus_fingerprint  # noqa: E402
 from packages.core.schemas import MappedFinding, SourceArtifact, TextSpan  # noqa: E402
 
 
-RUNS = [f"outputs/final_{cc}_p{p}" for cc in ("si", "ma", "au") for p in (6, 7)]
+from packages.core import review_layout  # noqa: E402
+
+LAYOUT = review_layout.current()
+RUNS = [f"outputs/{run}" for run in LAYOUT.round1_runs]
 
 
 def main() -> int:
@@ -23,7 +27,10 @@ def main() -> int:
     args = parser.parse_args(); failures: list[str] = []
     report: dict = {"status": "FAIL", "failures": failures, "runs": {}}
     if not args.skip_tests:
-        test = subprocess.run([sys.executable, "-m", "pytest", "-q"], capture_output=True, text=True)
+        # The suite asserts hybrid keys: never let the review mode leak into it.
+        test_env = {k: v for k, v in os.environ.items() if k != review_layout.MODE_ENV}
+        test = subprocess.run([sys.executable, "-m", "pytest", "-q"], capture_output=True, text=True,
+                              env=test_env)
         test_lines = (test.stdout + test.stderr).strip().splitlines()
         test_summary = next(
             (line for line in reversed(test_lines)
@@ -94,9 +101,9 @@ def main() -> int:
             "candidates": len(env.get("findings", [])),
             "warnings": len(env.get("warnings", [])), "pipeline_stats": stats})
 
-    recall_path = Path("data/review/recall_adjudication.json")
+    recall_path = LAYOUT.recall_adjudication
     recall = json.loads(recall_path.read_text()) if recall_path.is_file() else {"misses": []}
-    decision_path = Path("data/review/recall_decisions.json")
+    decision_path = LAYOUT.review_dir / "recall_decisions.json"
     recall_decisions = ({d["recall_key"]: d for d in json.loads(decision_path.read_text())}
                         if decision_path.is_file() else {})
     pending_adjudications = []
@@ -105,10 +112,10 @@ def main() -> int:
     for miss in recall.get("misses", []):
         import hashlib as _recall_hash
 
-        key = miss.get("recall_key") or _recall_hash.sha256("\x1f".join((
+        key = miss.get("recall_key") or _recall_hash.sha256(review_layout.namespaced("\x1f".join((
             str(miss.get("economy")), str(miss.get("gold_indicator")),
             str(miss.get("act")), str(miss.get("ref")),
-        )).encode()).hexdigest()
+        ))).encode()).hexdigest()
         verdict = (recall_decisions.get(key) or {}).get("verdict") \
             or miss.get("reviewer_verdict")
         if not verdict:
@@ -129,7 +136,7 @@ def main() -> int:
     if unresolved_real_misses:
         failures.append(f"{len(unresolved_real_misses)} unresolved REAL_MISS recall gaps remain")
 
-    candidate_path = Path("submission/consolidated.json")
+    candidate_path = LAYOUT.consolidated
     candidates = json.loads(candidate_path.read_text()).get("rows", []) if candidate_path.is_file() else []
     citation_rows = [r for r in candidates if r.get("citation_proof")]
     absence_rows = [r for r in candidates if not r.get("citation_proof")
@@ -169,7 +176,7 @@ def main() -> int:
         failures.append("candidate findings still require named human decisions")
 
     zone_pending = 0
-    for path in Path("data/zone3").glob("*_scores.json"):
+    for path in LAYOUT.zone3_dir.glob("*_scores.json"):
         payload = json.loads(path.read_text())
         zone_pending += sum(v.get("reviewer_decision") != "approved"
                             for v in payload.get("indicators", {}).values())
@@ -177,14 +184,15 @@ def main() -> int:
     if zone_pending:
         failures.append(f"{zone_pending} Zone-3 scores await explicit approval/override")
 
-    final_json, final_csv = Path("submission/consolidated_final.json"), Path("submission/consolidated_final.csv")
+    final_json = LAYOUT.submission_dir / "consolidated_final.json"
+    final_csv = LAYOUT.submission_dir / "consolidated_final.csv"
     report["final_artifacts_present"] = final_json.is_file() and final_csv.is_file()
     if not report["final_artifacts_present"]:
         failures.append("approval-only submission replay has not produced final artifacts")
 
     report["status"] = "PASS" if not failures else "FAIL"
-    Path("reports").mkdir(exist_ok=True)
-    Path("reports/champion_validation.json").write_text(json.dumps(report, indent=2) + "\n")
+    LAYOUT.reports_dir.mkdir(parents=True, exist_ok=True)
+    LAYOUT.champion_report.write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({"status": report["status"], "failures": failures,
                       "candidate_rows": len(candidates)}, indent=2))
     return 0 if not failures else 1

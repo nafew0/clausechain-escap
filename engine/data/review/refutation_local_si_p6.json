@@ -1,0 +1,198 @@
+[
+ {
+  "indicator": "P6-I4",
+  "law": "Personal Data Protection Regulations 2021",
+  "article": "s. 12(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly addresses 'personal data' moving to a 'country or territory outside Singapore', satisfying the cross-border requirement. It establishes a condition (specified certification) that deems the recipient bound by comparable protection, which is a valid legal function for a conditional flow regime. It is not a business transfer or domestic disclosure."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I4 scores '1' if conditions cover personal data or apply horizontally. The snippet states the recipient is 'taken to be bound' if they hold a 'specified certification', which is a condition permitting the transfer under the framework of Regulation 10. This fits the 'may transfer ... provided that' positive cue and the adequacy/certification logic. The coverage is horizontal as it applies to any recipient holding the certification, not just a specific sector."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states that a recipient is 'taken to be bound by legally enforceable obligations... if the recipient holds a specified certification'. This is a conditional mechanism: the legal status of the transfer (comparable protection) is contingent on the certification. It does not ban transfer, nor is it a generic domestic rule. It precisely establishes a condition under which the transfer is deemed compliant with protection standards."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I4",
+  "law": "Personal Data Protection Regulations 2021",
+  "article": "s. 12(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly addresses 'personal data' moving to a 'country or territory outside Singapore', satisfying the cross-border requirement. It establishes a condition (specified certification) under which the recipient is deemed bound by comparable protection, which is a valid conditional flow regime. It is not a business transfer or domestic disclosure."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I4 scores '1' if conditions cover personal data or apply horizontally. The snippet shows a horizontal condition (certification) for personal data transfer. The mapping rationale correctly identifies this as a conditional flow regime where transfer is permitted upon meeting the adequacy condition. No sectoral limitation is present in the text provided."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states that a recipient is 'taken to be bound by legally enforceable obligations... if the recipient holds a specified certification'. This is a conditional mechanism for cross-border data protection. The citation s. 12(2) refers to the definition of 'specified certification' within the regulation, while the operative conditional logic is in s. 12(1). However, the snippet provided includes both (1) and (2) contextually, and the mapping rationale correctly interprets the combined effect "
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "Digital Economy Partnership Agreement",
+  "article": "Art. 4.3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is a binding treaty commitment ('shall allow') applicable to 'covered persons' and 'business', which falls within the scope of Pillar 6 (private sector). The exception in paragraph 3 is a standard carve-out for legitimate public policy objectives and does not negate the existence of the binding commitment itself, which is the specific legal test for P6-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet matches the positive cue 'cross-border transfer of information by electronic means' and the legal test requirement for a binding commitment. The indicator P6-I5 is an absence-scored framework indicator; the presence of this provision evidences the framework, leading to a score of 0 (at least one binding agreement), which is the correct application of the rubric."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'Each Party shall allow the cross-border transfer of information by electronic means' explicitly establishes a binding obligation. The context confirms this is part of the Digital Economy Partnership Agreement, a multilateral treaty. The text does not limit the scope to government data, nor does it use permissive language that would fail the 'binding' requirement."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "Digital Economy Partnership Agreement",
+  "article": "Art. 4.4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a binding obligation ('No Party shall require...') regarding the location of computing facilities. The rubric's legal_test explicitly identifies 'location-of-computing-facilities disciplines' as a valid form of binding cross-border data-transfer commitment. The exception in paragraph 3 is a standard carve-out for legitimate public policy objectives and does not negate the existence of the binding commitment itself, which is the threshold for this indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the rubric's positive cues and legal test. The indicator P6-I5 asks if the economy has joined NO agreement with binding commitments. The presence of this binding commitment in DEPA Art. 4.4 is the correct evidence to record that the economy HAS such a commitment. The scoring logic (0 for at least one binding agreement) is applied at the scoring stage based on this evidence. The provision is not sectoral in a way that excludes it, as it applies to 'covered persons' general"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'No Party shall require a covered person to use or locate computing facilities in that Party’s territory as a condition for conducting business in that territory' establishes a binding negative obligation. The context confirms this is part of a treaty (DEPA). The text does not merely recognize rights or aspirations but imposes a 'shall not' duty, which fits the definition of a binding commitment under the rubric's legal_test."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "Korea-Singapore Digital Partnership Agreement",
+  "article": "Art. 14.15",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a binding obligation ('Neither Party shall require...') regarding the location of computing facilities. The rubric's legal_test explicitly lists 'location-of-computing-facilities disciplines' as a valid binding cross-border data-transfer commitment. The exception in paragraph 3 is a standard carve-out for legitimate public policy objectives and does not negate the binding nature of the core commitment in paragraph 2, nor does it transform the provision into a non-bindin"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P6-I5 asks if the economy has joined NO agreement with binding commitments. The scoring is 0 if at least one binding agreement exists. The snippet 'Neither Party shall require a covered person to use or locate computing facilities...' is a binding commitment. The rubric's legal_test explicitly includes 'location-of-computing-facilities disciplines' as a qualifying commitment. Therefore, this provision evidences the presence of a binding agreement, which is the correct evidence for "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'Neither Party shall require a covered person to use or locate computing facilities in that Party's territory as a condition for conducting business in that territory' is a mandatory prohibition on localization requirements. The rubric explicitly cites 'location-of-computing-facilities disciplines' as a positive cue for a binding cross-border data-transfer commitment. The text does not merely recognize a right (which might be non-binding) but imposes a 'shall not' obligation. The "
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "Singapore-Australia Digital Economy Agreement",
+  "article": "Art. 23",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision in Article 23, Paragraph 2 uses the mandatory language 'Neither Party shall prohibit or restrict', which constitutes a binding legal obligation. While Paragraph 3 introduces exceptions for legitimate public policy objectives, this is a standard carve-out mechanism in trade agreements and does not negate the existence of the binding commitment itself. The mapping correctly identifies the presence of a binding cross-border data transfer commitment, which is the specific legal functio"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet 'Neither Party shall prohibit or restrict the cross-border transfer of information by electronic means' is a verbatim match for the positive cue 'shall not prohibit or restrict the cross-border transfer of information'. The indicator P6-I5 asks if the economy has joined NO agreement with such commitments; the presence of this text evidences that the economy HAS such a commitment. Under the rubric's scoring logic (1 = no binding agreement, 0 = at least one), this provision serves as v"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text explicitly states a prohibition on restricting cross-border transfer of information by electronic means for business conduct. The surrounding context confirms this is Article 23 of the Singapore-Australia Digital Economy Agreement. The text establishes a clear, affirmative commitment to allow such transfers, subject to specific conditions. There is no ambiguity in the text that would suggest it refers to a different legal function (e.g., localization or government-only data"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "Singapore-Australia Digital Economy Agreement",
+  "article": "Art. 24",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a binding obligation ('Neither Party shall require...') regarding the location of computing facilities. The rubric's legal_test explicitly lists 'location-of-computing-facilities disciplines' as a valid binding cross-border data-transfer commitment. The mapping correctly identifies this as a commitment that triggers the scoring logic for P6-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P6-I5 asks if the economy has joined NO agreement with binding commitments. The presence of Article 24, which contains a binding commitment on computing facility location, provides the necessary evidence to score this indicator as 0 (at least one binding agreement). The rubric's legal_test explicitly accepts location-of-computing-facilities disciplines as valid evidence for this indicator."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'Neither Party shall require a covered person to use or locate computing facilities in that Party’s territory as a condition for conducting business in that territory' is a binding negative obligation. It directly matches the rubric's positive cue for 'location-of-computing-facilities disciplines'. The text establishes the existence of a binding commitment, which is the specific legal function required by the indicator's definition."
+   }
+  ]
+ }
+]

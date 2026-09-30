@@ -1,0 +1,53 @@
+# ClauseChain backend — development image.
+#
+# Hot reload happens via the bind mount in ../docker-compose.dev.yml
+# (./backend:/srv/clausechain/backend); the COPY below only makes this image
+# buildable/runnable standalone (`docker build` + `docker run` without
+# compose). Mirrors backend/README.md's local setup (pip install -r
+# requirements.txt; manage.py migrate/runserver) inside a container instead
+# of a host venv.
+#
+# WORKDIR mirrors the production layout (backend/Dockerfile: everything
+# under /srv/clausechain) so ENGINE_ROOT in clausechain/settings.py resolves
+# ../engine correctly when docker-compose.dev.yml mounts it alongside this
+# directory — no ENGINE_ROOT override needed.
+#
+# Unlike backend/Dockerfile (production), this image does NOT build the
+# engine's own FULL .venv — that adds a multi-GB PyTorch/BGE-M3 install to
+# every dev rebuild for a capability (launching new engine runs from inside
+# this container) that isn't needed for backend/frontend development. See
+# docker-compose.dev.yml's top comment.
+#
+# It DOES build a small separate venv at /opt/engine-export-venv with just
+# what `manage.py engine_refresh` actually shells out to (backend/workspace/
+# importer.py -> engine/scripts/export_legal_review_payload.py,
+# export_finding_key_map.py, export_ops_stats.py, which pull in
+# packages.core.{finalization,evidence,schemas,legal_controls} for
+# finding-key hashing): PyYAML + openpyxl + pydantic, no torch/numpy/pymupdf.
+# docker-compose.dev.yml points ENGINE_PYTHON at it
+# (instead of the default engine/.venv/bin/python, which is on the
+# read-only ../engine mount and built for your HOST os anyway) so
+# engine_refresh can actually import whatever run outputs already exist
+# under engine/outputs/ — it still can't LAUNCH new engine runs, same
+# limitation as before, just documented instead of silently broken.
+FROM python:3.12-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends gcc libpq-dev curl \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN python -m venv /opt/engine-export-venv \
+    && /opt/engine-export-venv/bin/pip install --no-cache-dir -U pip \
+    && /opt/engine-export-venv/bin/pip install --no-cache-dir "pyyaml>=6.0,<7" "openpyxl>=3.1,<4" "pydantic>=2.7,<3"
+
+WORKDIR /srv/clausechain/backend
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -U pip \
+    && pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

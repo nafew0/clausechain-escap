@@ -2145,5 +2145,2318 @@
   "economy": "Malaysia",
   "pillar": 6,
   "elapsed_seconds": 325.1
+ },
+ {
+  "run_id": "run-th-p6-1785572984",
+  "at": "2026-08-01T08:33:12.210865+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 513295,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 16,
+    "usd": 0.0103,
+    "priced": true
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 76244,
+    "cached_input_tokens": 0,
+    "output_tokens": 21155,
+    "calls": 35,
+    "usd": 0.0203,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0306,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 6,
+  "elapsed_seconds": 207.9
+ },
+ {
+  "run_id": "run-th-p6-1785573473",
+  "at": "2026-08-01T08:40:44.952217+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 76244,
+    "cached_input_tokens": 76139,
+    "output_tokens": 23078,
+    "calls": 35,
+    "usd": 0.0215,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0215,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 6,
+  "elapsed_seconds": 171.6
+ },
+ {
+  "run_id": "run-th-p7-1785573645",
+  "at": "2026-08-01T08:50:06.549291+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 234137,
+    "cached_input_tokens": 61266,
+    "output_tokens": 113475,
+    "calls": 113,
+    "usd": 0.0915,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 35171,
+    "cached_input_tokens": 0,
+    "output_tokens": 20598,
+    "calls": 17,
+    "usd": 0.1588,
+    "priced": true
+   }
+  },
+  "total_usd": 0.2503,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 7,
+  "elapsed_seconds": 561.3
+ },
+ {
+  "run_id": "run-in-p6-1785574206",
+  "at": "2026-08-01T08:59:32.607438+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 1062634,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 63,
+    "usd": 0.0213,
+    "priced": true
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 140825,
+    "cached_input_tokens": 0,
+    "output_tokens": 47663,
+    "calls": 79,
+    "usd": 0.0427,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0639,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 6,
+  "elapsed_seconds": 565.8
+ },
+ {
+  "run_id": "run-id-p6-1785575204",
+  "at": "2026-08-01T09:20:08.535375+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 775772,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 63,
+    "usd": 0.0155,
+    "priced": true
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 238004,
+    "cached_input_tokens": 0,
+    "output_tokens": 125267,
+    "calls": 132,
+    "usd": 0.099,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 7722,
+    "cached_input_tokens": 0,
+    "output_tokens": 6726,
+    "calls": 3,
+    "usd": 0.0481,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1626,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 6,
+  "elapsed_seconds": 804.2
+ },
+ {
+  "run_id": "run-id-p7-1785576008",
+  "at": "2026-08-01T09:35:24.903888+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 296,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": true
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 387892,
+    "cached_input_tokens": 0,
+    "output_tokens": 230576,
+    "calls": 243,
+    "usd": 0.1771,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 6322,
+    "cached_input_tokens": 0,
+    "output_tokens": 4638,
+    "calls": 3,
+    "usd": 0.0341,
+    "priced": true
+   }
+  },
+  "total_usd": 0.2113,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 7,
+  "elapsed_seconds": 915.9
+ },
+ {
+  "run_id": "run-in-p7-1785576928",
+  "at": "2026-08-01T09:52:44.839826+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 365582,
+    "cached_input_tokens": 0,
+    "output_tokens": 193357,
+    "calls": 217,
+    "usd": 0.1526,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 69236,
+    "cached_input_tokens": 0,
+    "output_tokens": 46986,
+    "calls": 39,
+    "usd": 0.3512,
+    "priced": true
+   }
+  },
+  "total_usd": 0.5037,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 7,
+  "elapsed_seconds": 1036.1
+ },
+ {
+  "run_id": "run-th-p6-1785577965",
+  "at": "2026-08-01T09:55:55.642804+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 76244,
+    "cached_input_tokens": 0,
+    "output_tokens": 20994,
+    "calls": 35,
+    "usd": 0.0202,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0202,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 6,
+  "elapsed_seconds": 189.7
+ },
+ {
+  "run_id": "run-th-p7-1785578155",
+  "at": "2026-08-01T10:06:17.640098+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 253547,
+    "cached_input_tokens": 0,
+    "output_tokens": 120994,
+    "calls": 117,
+    "usd": 0.098,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 38527,
+    "cached_input_tokens": 0,
+    "output_tokens": 17262,
+    "calls": 15,
+    "usd": 0.1421,
+    "priced": true
+   }
+  },
+  "total_usd": 0.2401,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 7,
+  "elapsed_seconds": 621.8
+ },
+ {
+  "run_id": "run-th-p6-1785593492",
+  "at": "2026-08-01T14:15:10.005767+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 113559,
+    "cached_input_tokens": 0,
+    "output_tokens": 37909,
+    "calls": 55,
+    "usd": 0.0341,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 30987,
+    "cached_input_tokens": 0,
+    "output_tokens": 7991,
+    "calls": 15,
+    "usd": 0.0789,
+    "priced": true
+   }
+  },
+  "total_usd": 0.113,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 6,
+  "elapsed_seconds": 217.6
+ },
+ {
+  "run_id": "run-th-p7-1785593710",
+  "at": "2026-08-01T14:27:35.801612+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 403960,
+    "cached_input_tokens": 0,
+    "output_tokens": 238197,
+    "calls": 204,
+    "usd": 0.1833,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 78452,
+    "cached_input_tokens": 0,
+    "output_tokens": 45114,
+    "calls": 40,
+    "usd": 0.3491,
+    "priced": true
+   }
+  },
+  "total_usd": 0.5325,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 7,
+  "elapsed_seconds": 745.5
+ },
+ {
+  "run_id": "run-in-p6-1785594456",
+  "at": "2026-08-01T14:34:46.041164+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 139360,
+    "cached_input_tokens": 0,
+    "output_tokens": 44981,
+    "calls": 78,
+    "usd": 0.0409,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0409,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 6,
+  "elapsed_seconds": 429.9
+ },
+ {
+  "run_id": "run-in-p7-1785594886",
+  "at": "2026-08-01T14:52:55.086093+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 413073,
+    "cached_input_tokens": 0,
+    "output_tokens": 217113,
+    "calls": 251,
+    "usd": 0.1716,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 78321,
+    "cached_input_tokens": 0,
+    "output_tokens": 46988,
+    "calls": 44,
+    "usd": 0.3602,
+    "priced": true
+   }
+  },
+  "total_usd": 0.5318,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 7,
+  "elapsed_seconds": 1088.5
+ },
+ {
+  "run_id": "run-id-p6-1785595975",
+  "at": "2026-08-01T15:02:54.302580+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 225567,
+    "cached_input_tokens": 0,
+    "output_tokens": 113564,
+    "calls": 128,
+    "usd": 0.0907,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 11010,
+    "cached_input_tokens": 0,
+    "output_tokens": 3988,
+    "calls": 5,
+    "usd": 0.0349,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1256,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 6,
+  "elapsed_seconds": 598.7
+ },
+ {
+  "run_id": "run-id-p7-1785596574",
+  "at": "2026-08-01T15:19:23.480539+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 433108,
+    "cached_input_tokens": 0,
+    "output_tokens": 246475,
+    "calls": 276,
+    "usd": 0.1912,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 45302,
+    "cached_input_tokens": 0,
+    "output_tokens": 17388,
+    "calls": 26,
+    "usd": 0.1496,
+    "priced": true
+   }
+  },
+  "total_usd": 0.3408,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 7,
+  "elapsed_seconds": 988.7
+ },
+ {
+  "run_id": "run-th-p6-1785604430",
+  "at": "2026-08-01T17:21:03.377387+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 26745,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 4,
+    "usd": 0.0005,
+    "priced": true
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 130112,
+    "cached_input_tokens": 0,
+    "output_tokens": 50227,
+    "calls": 75,
+    "usd": 0.0431,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 23519,
+    "cached_input_tokens": 0,
+    "output_tokens": 8329,
+    "calls": 9,
+    "usd": 0.0735,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1172,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 6,
+  "elapsed_seconds": 433.3
+ },
+ {
+  "run_id": "run-th-p7-1785604863",
+  "at": "2026-08-01T17:40:50.954338+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 566136,
+    "cached_input_tokens": 0,
+    "output_tokens": 361389,
+    "calls": 287,
+    "usd": 0.2734,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 137384,
+    "cached_input_tokens": 0,
+    "output_tokens": 64106,
+    "calls": 73,
+    "usd": 0.522,
+    "priced": true
+   }
+  },
+  "total_usd": 0.7955,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 7,
+  "elapsed_seconds": 1187.2
+ },
+ {
+  "run_id": "run-in-p6-1785606051",
+  "at": "2026-08-01T17:48:02.389195+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 42621,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 2,
+    "usd": 0.0009,
+    "priced": true
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 145082,
+    "cached_input_tokens": 0,
+    "output_tokens": 47412,
+    "calls": 82,
+    "usd": 0.043,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 1969,
+    "cached_input_tokens": 0,
+    "output_tokens": 1725,
+    "calls": 1,
+    "usd": 0.0123,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0561,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 6,
+  "elapsed_seconds": 431.0
+ },
+ {
+  "run_id": "run-in-p7-1785606482",
+  "at": "2026-08-01T18:05:59.713501+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 424842,
+    "cached_input_tokens": 0,
+    "output_tokens": 232287,
+    "calls": 256,
+    "usd": 0.1819,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 81697,
+    "cached_input_tokens": 0,
+    "output_tokens": 48220,
+    "calls": 46,
+    "usd": 0.371,
+    "priced": true
+   }
+  },
+  "total_usd": 0.5529,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 7,
+  "elapsed_seconds": 1076.8
+ },
+ {
+  "run_id": "run-id-p6-1785607560",
+  "at": "2026-08-01T18:18:08.461638+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 66513,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 6,
+    "usd": 0.0013,
+    "priced": true
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 254577,
+    "cached_input_tokens": 0,
+    "output_tokens": 133162,
+    "calls": 141,
+    "usd": 0.1054,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 23978,
+    "cached_input_tokens": 0,
+    "output_tokens": 10285,
+    "calls": 11,
+    "usd": 0.0857,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1924,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 6,
+  "elapsed_seconds": 728.1
+ },
+ {
+  "run_id": "run-id-p7-1785608288",
+  "at": "2026-08-01T18:40:14.116067+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 559930,
+    "cached_input_tokens": 0,
+    "output_tokens": 356640,
+    "calls": 322,
+    "usd": 0.27,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 37929,
+    "cached_input_tokens": 0,
+    "output_tokens": 13126,
+    "calls": 23,
+    "usd": 0.1167,
+    "priced": true
+   }
+  },
+  "total_usd": 0.3867,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 7,
+  "elapsed_seconds": 1325.2
+ },
+ {
+  "run_id": "run-in-p6-1785611114",
+  "at": "2026-08-01T19:12:51.468734+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 28365,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 3,
+    "usd": 0.0006,
+    "priced": true
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 150965,
+    "cached_input_tokens": 0,
+    "output_tokens": 50073,
+    "calls": 83,
+    "usd": 0.0451,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 6699,
+    "cached_input_tokens": 0,
+    "output_tokens": 3443,
+    "calls": 3,
+    "usd": 0.0274,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0731,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 6,
+  "elapsed_seconds": 456.7
+ },
+ {
+  "run_id": "run-in-p7-1785611572",
+  "at": "2026-08-01T19:36:34.421902+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 545852,
+    "cached_input_tokens": 0,
+    "output_tokens": 357212,
+    "calls": 323,
+    "usd": 0.2689,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 85945,
+    "cached_input_tokens": 0,
+    "output_tokens": 53540,
+    "calls": 48,
+    "usd": 0.4072,
+    "priced": true
+   }
+  },
+  "total_usd": 0.6761,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 7,
+  "elapsed_seconds": 1421.8
+ },
+ {
+  "run_id": "run-th-p6-1790510821",
+  "at": "2026-09-27T12:25:42.494616+00:00",
+  "models": {
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 262765,
+    "cached_input_tokens": 0,
+    "output_tokens": 62210,
+    "calls": 124,
+    "usd": 0.0,
+    "priced": false
+   },
+   "bge-m3": {
+    "input_tokens": 6765,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 6,
+  "elapsed_seconds": 1120.9,
+  "provider_profile": "local_openweights"
+ },
+ {
+  "run_id": "run-my-p6-1790527007",
+  "at": "2026-09-27T16:49:36.551495+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 381528,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 42,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 205619,
+    "cached_input_tokens": 0,
+    "output_tokens": 57719,
+    "calls": 114,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Malaysia",
+  "pillar": 6,
+  "elapsed_seconds": 769.5,
+  "provider_profile": "local_openweights"
+ },
+ {
+  "run_id": "run-sg-p6-1790528026",
+  "at": "2026-09-27T17:09:45.256674+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 1310405,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 112,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 275987,
+    "cached_input_tokens": 0,
+    "output_tokens": 66892,
+    "calls": 146,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Singapore",
+  "pillar": 6,
+  "elapsed_seconds": 958.7,
+  "provider_profile": "local_openweights"
+ },
+ {
+  "run_id": "run-th-p7-1790531993",
+  "at": "2026-09-27T18:34:17.835653+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 65943,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 8,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 1062157,
+    "cached_input_tokens": 0,
+    "output_tokens": 171361,
+    "calls": 579,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 7,
+  "elapsed_seconds": 2064.6,
+  "provider_profile": "local_openweights"
+ },
+ {
+  "run_id": "run-au-p6-1790534615",
+  "at": "2026-09-27T18:52:57.570573+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 2238183,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 330,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 130022,
+    "cached_input_tokens": 0,
+    "output_tokens": 45178,
+    "calls": 78,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Australia",
+  "pillar": 6,
+  "elapsed_seconds": 561.7,
+  "provider_profile": "local_openweights"
+ },
+ {
+  "run_id": "run-in-p6-1790538849",
+  "at": "2026-09-27T20:03:53.953041+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 824976,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 68,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 182829,
+    "cached_input_tokens": 0,
+    "output_tokens": 51846,
+    "calls": 99,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 6,
+  "elapsed_seconds": 584.8,
+  "provider_profile": "local_openweights"
+ },
+ {
+  "run_id": "run-sg-p7-1790539494",
+  "at": "2026-09-27T20:41:58.369595+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 397,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 1351475,
+    "cached_input_tokens": 0,
+    "output_tokens": 216187,
+    "calls": 692,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Singapore",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 2223.7
+ },
+ {
+  "run_id": "run-id-p6-1790573972",
+  "at": "2026-09-28T06:27:35.239701+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 475578,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 68,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 312319,
+    "cached_input_tokens": 0,
+    "output_tokens": 74775,
+    "calls": 178,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 6,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 2882.9
+ },
+ {
+  "run_id": "run-tl-p6-1790668947",
+  "at": "2026-09-29T08:05:27.989454+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 289469,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 14,
+    "usd": 0.0,
+    "priced": false
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 169877,
+    "cached_input_tokens": 0,
+    "output_tokens": 44240,
+    "calls": 78,
+    "usd": 0.0435,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0435,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 180.7
+ },
+ {
+  "run_id": "run-tl-p7-1790669128",
+  "at": "2026-09-29T08:09:27.433681+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 296,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 266751,
+    "cached_input_tokens": 0,
+    "output_tokens": 96277,
+    "calls": 143,
+    "usd": 0.0844,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 17772,
+    "cached_input_tokens": 0,
+    "output_tokens": 8465,
+    "calls": 11,
+    "usd": 0.0686,
+    "priced": true
+   }
+  },
+  "total_usd": 0.153,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 7,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 239.2
+ },
+ {
+  "run_id": "run-mn-p6-1790669399",
+  "at": "2026-09-29T08:11:01.625173+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 365986,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 7,
+    "usd": 0.0,
+    "priced": false
+   },
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 26867,
+    "cached_input_tokens": 0,
+    "output_tokens": 8010,
+    "calls": 12,
+    "usd": 0.0075,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0075,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 61.7
+ },
+ {
+  "run_id": "run-tl-p6-1790669604",
+  "at": "2026-09-29T08:15:29.480169+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 168452,
+    "cached_input_tokens": 167249,
+    "output_tokens": 42334,
+    "calls": 77,
+    "usd": 0.0422,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0422,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 125.4
+ },
+ {
+  "run_id": "run-la-p6-1790669606",
+  "at": "2026-09-29T08:16:34.072478+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 284938,
+    "cached_input_tokens": 207607,
+    "output_tokens": 59200,
+    "calls": 83,
+    "usd": 0.064,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 18501,
+    "cached_input_tokens": 0,
+    "output_tokens": 4143,
+    "calls": 6,
+    "usd": 0.0434,
+    "priced": true
+   },
+   "openai/text-embedding-3-small": {
+    "input_tokens": 4199,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.1074,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 187.8
+ },
+ {
+  "run_id": "run-tl-p7-1790669729",
+  "at": "2026-09-29T08:19:52.259453+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 263178,
+    "cached_input_tokens": 254095,
+    "output_tokens": 98956,
+    "calls": 140,
+    "usd": 0.0857,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 14603,
+    "cached_input_tokens": 0,
+    "output_tokens": 6685,
+    "calls": 9,
+    "usd": 0.0547,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1404,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 7,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 262.5
+ },
+ {
+  "run_id": "run-mn-p6-1790669992",
+  "at": "2026-09-29T08:21:02.326796+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 35781,
+    "cached_input_tokens": 17231,
+    "output_tokens": 12165,
+    "calls": 19,
+    "usd": 0.0109,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 8943,
+    "cached_input_tokens": 0,
+    "output_tokens": 2202,
+    "calls": 6,
+    "usd": 0.0222,
+    "priced": true
+   }
+  },
+  "total_usd": 0.033,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 69.8
+ },
+ {
+  "run_id": "run-la-p7-1790669794",
+  "at": "2026-09-29T08:22:16.299438+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 362996,
+    "cached_input_tokens": 0,
+    "output_tokens": 129465,
+    "calls": 166,
+    "usd": 0.114,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 12695,
+    "cached_input_tokens": 0,
+    "output_tokens": 5338,
+    "calls": 6,
+    "usd": 0.0447,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1587,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 7,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 342.0
+ },
+ {
+  "run_id": "run-mn-p7-1790670062",
+  "at": "2026-09-29T08:22:27.946442+00:00",
+  "models": {
+   "openai/gpt-5.6-luna": {
+    "input_tokens": 37970,
+    "cached_input_tokens": 31569,
+    "output_tokens": 15748,
+    "calls": 21,
+    "usd": 0.0132,
+    "priced": true
+   },
+   "openai/gpt-5.6-terra": {
+    "input_tokens": 3770,
+    "cached_input_tokens": 0,
+    "output_tokens": 1392,
+    "calls": 2,
+    "usd": 0.0121,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0254,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 7,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 85.5
+ },
+ {
+  "run_id": "run-tl-p6-1790670452",
+  "at": "2026-09-29T08:29:26.269087+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 166190,
+    "cached_input_tokens": 0,
+    "output_tokens": 41612,
+    "calls": 75,
+    "usd": 0.0374,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0374,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 113.5
+ },
+ {
+  "run_id": "run-la-p6-1790670454",
+  "at": "2026-09-29T08:30:24.780625+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 292127,
+    "cached_input_tokens": 0,
+    "output_tokens": 57531,
+    "calls": 85,
+    "usd": 0.058,
+    "priced": true
+   }
+  },
+  "total_usd": 0.058,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 169.8
+ },
+ {
+  "run_id": "run-tl-p7-1790670566",
+  "at": "2026-09-29T08:33:43.837966+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 279951,
+    "cached_input_tokens": 0,
+    "output_tokens": 114859,
+    "calls": 150,
+    "usd": 0.0854,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0854,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 7,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 257.4
+ },
+ {
+  "run_id": "run-mn-p6-1790670824",
+  "at": "2026-09-29T08:34:52.520917+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 44776,
+    "cached_input_tokens": 0,
+    "output_tokens": 15605,
+    "calls": 25,
+    "usd": 0.0123,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0123,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 68.4
+ },
+ {
+  "run_id": "run-la-p7-1790670624",
+  "at": "2026-09-29T08:36:06.445948+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 361124,
+    "cached_input_tokens": 0,
+    "output_tokens": 134190,
+    "calls": 154,
+    "usd": 0.1032,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1032,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 7,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 341.5
+ },
+ {
+  "run_id": "run-mn-p7-1790670892",
+  "at": "2026-09-29T08:36:22.368493+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 41322,
+    "cached_input_tokens": 0,
+    "output_tokens": 20006,
+    "calls": 23,
+    "usd": 0.0141,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0141,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 7,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 89.7
+ },
+ {
+  "run_id": "run-ru-p6-1790670966",
+  "at": "2026-09-29T08:46:15.499697+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 2891867,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 84,
+    "usd": 0.0578,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 409128,
+    "cached_input_tokens": 0,
+    "output_tokens": 133393,
+    "calls": 152,
+    "usd": 0.1076,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1654,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Russian Federation",
+  "pillar": 6,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 608.9
+ },
+ {
+  "run_id": "run-ru-p7-1790671576",
+  "at": "2026-09-29T09:07:10.571035+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 296,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 932191,
+    "cached_input_tokens": 0,
+    "output_tokens": 444924,
+    "calls": 325,
+    "usd": 0.3157,
+    "priced": true
+   }
+  },
+  "total_usd": 0.3157,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Russian Federation",
+  "pillar": 7,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 1254.5
+ },
+ {
+  "run_id": "run-la-p2-1790689068",
+  "at": "2026-09-29T13:39:55.033177+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 20478,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 3,
+    "usd": 0.0004,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 139647,
+    "cached_input_tokens": 0,
+    "output_tokens": 34366,
+    "calls": 63,
+    "usd": 0.0311,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0316,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 127.0
+ },
+ {
+  "run_id": "run-mn-p2-1790689201",
+  "at": "2026-09-29T13:42:00.401205+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 193634,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 7,
+    "usd": 0.0039,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 46210,
+    "cached_input_tokens": 0,
+    "output_tokens": 12172,
+    "calls": 16,
+    "usd": 0.0107,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0146,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 118.7
+ },
+ {
+  "run_id": "run-tl-p2-1790689320",
+  "at": "2026-09-29T13:44:06.664652+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 112177,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 4,
+    "usd": 0.0022,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 150783,
+    "cached_input_tokens": 0,
+    "output_tokens": 32582,
+    "calls": 55,
+    "usd": 0.0314,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0336,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 126.0
+ },
+ {
+  "run_id": "run-ru-p2-1790690103",
+  "at": "2026-09-29T14:03:08.039967+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 770540,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 26,
+    "usd": 0.0154,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 277632,
+    "cached_input_tokens": 0,
+    "output_tokens": 129948,
+    "calls": 111,
+    "usd": 0.0927,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1081,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Russian Federation",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 484.3
+ },
+ {
+  "run_id": "run-sg-p2-1790690766",
+  "at": "2026-09-29T14:07:51.425835+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 36686,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 5,
+    "usd": 0.0007,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 120517,
+    "cached_input_tokens": 0,
+    "output_tokens": 24456,
+    "calls": 51,
+    "usd": 0.0243,
+    "priced": true
+   }
+  },
+  "total_usd": 0.025,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Singapore",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 104.9
+ },
+ {
+  "run_id": "run-my-p2-1790690871",
+  "at": "2026-09-29T14:10:16.160702+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 124286,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 7,
+    "usd": 0.0025,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 173566,
+    "cached_input_tokens": 0,
+    "output_tokens": 36811,
+    "calls": 82,
+    "usd": 0.0358,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0382,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Malaysia",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 144.2
+ },
+ {
+  "run_id": "run-au-p2-1790691016",
+  "at": "2026-09-29T14:14:35.111156+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 80389,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 10,
+    "usd": 0.0016,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 111838,
+    "cached_input_tokens": 0,
+    "output_tokens": 26169,
+    "calls": 55,
+    "usd": 0.0243,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0259,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Australia",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 258.5
+ },
+ {
+  "run_id": "run-in-p2-1790691521",
+  "at": "2026-09-29T14:23:02.490730+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 74577,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 8,
+    "usd": 0.0015,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 171433,
+    "cached_input_tokens": 0,
+    "output_tokens": 68289,
+    "calls": 83,
+    "usd": 0.0513,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0528,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 261.5
+ },
+ {
+  "run_id": "run-ru-p2-1790691782",
+  "at": "2026-09-29T14:29:10.301740+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 264590,
+    "cached_input_tokens": 240741,
+    "output_tokens": 128201,
+    "calls": 105,
+    "usd": 0.0906,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0906,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Russian Federation",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 367.7
+ },
+ {
+  "run_id": "run-my-p2-1790692151",
+  "at": "2026-09-29T14:31:16.504478+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 171144,
+    "cached_input_tokens": 30918,
+    "output_tokens": 36096,
+    "calls": 81,
+    "usd": 0.0352,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0352,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Malaysia",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 125.4
+ },
+ {
+  "run_id": "run-la-p2-1790692276",
+  "at": "2026-09-29T14:33:03.817254+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 145171,
+    "cached_input_tokens": 0,
+    "output_tokens": 35632,
+    "calls": 66,
+    "usd": 0.0323,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0323,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 106.8
+ },
+ {
+  "run_id": "run-id-p2-1790691782",
+  "at": "2026-09-29T14:33:37.850013+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 368275,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 26,
+    "usd": 0.0074,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 451784,
+    "cached_input_tokens": 0,
+    "output_tokens": 209059,
+    "calls": 242,
+    "usd": 0.1497,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1571,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 634.9
+ },
+ {
+  "run_id": "run-la-p2-1790691818",
+  "at": "2026-09-29T14:33:44.143318+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 155193,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 10,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 183427,
+    "cached_input_tokens": 0,
+    "output_tokens": 36089,
+    "calls": 71,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 606.1
+ },
+ {
+  "run_id": "run-tl-p2-1790692384",
+  "at": "2026-09-29T14:34:40.554663+00:00",
+  "models": {
+   "openai/text-embedding-3-small": {
+    "input_tokens": 3546,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0001,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 153751,
+    "cached_input_tokens": 0,
+    "output_tokens": 32792,
+    "calls": 57,
+    "usd": 0.0318,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0318,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 96.5
+ },
+ {
+  "run_id": "run-my-p2-1790691819",
+  "at": "2026-09-29T14:35:21.040767+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 83753,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 7,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 197877,
+    "cached_input_tokens": 0,
+    "output_tokens": 38496,
+    "calls": 93,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Malaysia",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 701.3
+ },
+ {
+  "run_id": "run-mn-p2-1790692480",
+  "at": "2026-09-29T14:36:07.131385+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 46210,
+    "cached_input_tokens": 0,
+    "output_tokens": 12373,
+    "calls": 16,
+    "usd": 0.0108,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0108,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 86.3
+ },
+ {
+  "run_id": "run-in-p2-1790692431",
+  "at": "2026-09-29T14:37:17.627919+00:00",
+  "models": {
+   "openai/gpt-6-luna": {
+    "input_tokens": 166071,
+    "cached_input_tokens": 156619,
+    "output_tokens": 61351,
+    "calls": 79,
+    "usd": 0.0473,
+    "priced": true
+   }
+  },
+  "total_usd": 0.0473,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 205.7
+ },
+ {
+  "run_id": "run-mn-p2-1790692424",
+  "at": "2026-09-29T14:44:44.900069+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 63307,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 7,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 237118,
+    "cached_input_tokens": 0,
+    "output_tokens": 39633,
+    "calls": 72,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 660.5
+ },
+ {
+  "run_id": "run-au-p2-1790692521",
+  "at": "2026-09-29T14:45:18.198302+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 82551,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 10,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 120381,
+    "cached_input_tokens": 0,
+    "output_tokens": 32670,
+    "calls": 57,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Australia",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 596.9
+ },
+ {
+  "run_id": "run-tl-p2-1790693085",
+  "at": "2026-09-29T14:58:41.165014+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 314181,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 16,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 183669,
+    "cached_input_tokens": 0,
+    "output_tokens": 35749,
+    "calls": 68,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 836.1
+ },
+ {
+  "run_id": "run-in-p2-1790693119",
+  "at": "2026-09-29T15:06:10.437507+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 72184,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 8,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 204384,
+    "cached_input_tokens": 0,
+    "output_tokens": 44852,
+    "calls": 99,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1251.2
+ },
+ {
+  "run_id": "run-mn-p6-1790693366",
+  "at": "2026-09-29T15:11:41.905580+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 321,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 246302,
+    "cached_input_tokens": 0,
+    "output_tokens": 43534,
+    "calls": 86,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 6,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1335.7
+ },
+ {
+  "run_id": "run-ru-p2-1790693921",
+  "at": "2026-09-29T15:31:56.899663+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 491,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 414301,
+    "cached_input_tokens": 0,
+    "output_tokens": 61184,
+    "calls": 155,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Russian Federation",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1995.4
+ },
+ {
+  "run_id": "run-ru-p6-1790693704",
+  "at": "2026-09-29T15:40:45.292602+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 354907,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 26,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 499897,
+    "cached_input_tokens": 0,
+    "output_tokens": 69450,
+    "calls": 185,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Russian Federation",
+  "pillar": 6,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 2741.0
+ },
+ {
+  "run_id": "run-mn-p7-1790694702",
+  "at": "2026-09-29T15:43:22.844850+00:00",
+  "models": {
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 380636,
+    "cached_input_tokens": 0,
+    "output_tokens": 57086,
+    "calls": 127,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Mongolia",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1900.7
+ },
+ {
+  "run_id": "run-sg-p2-1790695917",
+  "at": "2026-09-29T15:45:46.879282+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 36969,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 5,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 129468,
+    "cached_input_tokens": 0,
+    "output_tokens": 33338,
+    "calls": 52,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Singapore",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 829.0
+ },
+ {
+  "run_id": "run-id-p2-1790694370",
+  "at": "2026-09-29T15:51:14.868253+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 179882,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 23,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 520198,
+    "cached_input_tokens": 0,
+    "output_tokens": 80656,
+    "calls": 275,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 2704.0
+ },
+ {
+  "run_id": "run-la-p6-1790696603",
+  "at": "2026-09-29T16:14:03.802924+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 4337,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 2,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 473082,
+    "cached_input_tokens": 0,
+    "output_tokens": 63353,
+    "calls": 132,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 6,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1840.7
+ },
+ {
+  "run_id": "run-la-p7-1790697051",
+  "at": "2026-09-29T16:35:36.126436+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 397,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 581136,
+    "cached_input_tokens": 0,
+    "output_tokens": 93325,
+    "calls": 230,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Lao PDR",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 2684.6
+ },
+ {
+  "run_id": "run-tl-p7-1790698447",
+  "at": "2026-09-29T16:37:35.876115+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 397,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 268417,
+    "cached_input_tokens": 0,
+    "output_tokens": 58809,
+    "calls": 124,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1408.1
+ },
+ {
+  "run_id": "run-ru-p7-1790697049",
+  "at": "2026-09-29T16:44:56.567277+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 397,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 991285,
+    "cached_input_tokens": 0,
+    "output_tokens": 120076,
+    "calls": 364,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Russian Federation",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 3247.2
+ },
+ {
+  "run_id": "run-tl-p6-1790700297",
+  "at": "2026-09-29T16:54:34.483745+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 86330,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 5,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 220371,
+    "cached_input_tokens": 0,
+    "output_tokens": 52243,
+    "calls": 93,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Timor-Leste",
+  "pillar": 6,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 577.1
+ },
+ {
+  "run_id": "run-th-p2-1790724072",
+  "at": "2026-09-29T23:26:36.640531+00:00",
+  "models": {
+   "text-embedding-3-small": {
+    "input_tokens": 461133,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 27,
+    "usd": 0.0092,
+    "priced": true
+   },
+   "openai/gpt-6-luna": {
+    "input_tokens": 301170,
+    "cached_input_tokens": 0,
+    "output_tokens": 153617,
+    "calls": 148,
+    "usd": 0.1069,
+    "priced": true
+   }
+  },
+  "total_usd": 0.1161,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 2,
+  "provider_profile": "hybrid_accuracy",
+  "elapsed_seconds": 323.7
+ },
+ {
+  "run_id": "run-my-p7-1790722594",
+  "at": "2026-09-29T23:28:52.743694+00:00",
+  "models": {
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 1170745,
+    "cached_input_tokens": 0,
+    "output_tokens": 195957,
+    "calls": 732,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Malaysia",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1938.0
+ },
+ {
+  "run_id": "run-au-p7-1790724917",
+  "at": "2026-09-30T00:08:17.188228+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 397,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 1038022,
+    "cached_input_tokens": 0,
+    "output_tokens": 203124,
+    "calls": 743,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Australia",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1979.8
+ },
+ {
+  "run_id": "run-in-p7-1790727362",
+  "at": "2026-09-30T00:36:55.195776+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 397,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 603874,
+    "cached_input_tokens": 0,
+    "output_tokens": 118421,
+    "calls": 342,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "India",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1252.7
+ },
+ {
+  "run_id": "run-id-p7-1790728904",
+  "at": "2026-09-30T01:02:33.737075+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 397,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 1,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 617349,
+    "cached_input_tokens": 0,
+    "output_tokens": 120868,
+    "calls": 403,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Indonesia",
+  "pillar": 7,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 1249.2
+ },
+ {
+  "run_id": "run-th-p2-1790730500",
+  "at": "2026-09-30T01:19:11.943564+00:00",
+  "models": {
+   "bge-m3": {
+    "input_tokens": 172326,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "calls": 21,
+    "usd": 0.0,
+    "priced": false
+   },
+   "unsloth/Qwen3.8-27B-NVFP4": {
+    "input_tokens": 370411,
+    "cached_input_tokens": 0,
+    "output_tokens": 58257,
+    "calls": 169,
+    "usd": 0.0,
+    "priced": false
+   }
+  },
+  "total_usd": 0.0,
+  "note": "measured from real API usage objects; prices per 1M tokens (PRICES)",
+  "economy": "Thailand",
+  "pillar": 2,
+  "provider_profile": "local_openweights",
+  "elapsed_seconds": 651.1
  }
 ]

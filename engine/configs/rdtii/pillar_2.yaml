@@ -1,0 +1,151 @@
+# RDTII 2.1 — Pillar 2: Public procurement (of ICT goods and digital services)
+# Codes ARE the methodology indicators 1:1 (P2-I1 = 2.1). Definitions and the five
+# traps follow docs/DEEP_RESEARCH_PROMPT_P2_TH_ID.md (ESCAP guide + FAQ), the same
+# brief every engine/docs/Pillar-2-deep-research-*.md report was written against.
+# Weights 40/32/20/8 as used in those reports.
+
+schema_version: rdtii-2.1
+pillar: 2
+name: Public procurement
+question: Are foreign suppliers of ICT goods and digital services excluded, burdened or disadvantaged in government procurement?
+polarity: restriction_present_scores_high
+scope_exclusions:
+  - Local-content rules for the COMMERCIAL market (sale/certification conditions) are Pillar 10.3, not 2.3.
+  - Foreign equity caps / FDI licensing are Pillar 3 unless the procurement rule itself uses ownership to define bid eligibility or preference.
+  - Government-data residency is Pillar 6, not Pillar 2.
+indicator_weights: { P2-I1: 0.40, P2-I2: 0.32, P2-I3: 0.20, P2-I4: 0.08 }
+
+# Replaces the P6/P7 golden rules in the screen and map prompts (mapper.golden_rules).
+p2_golden_rules: &p2_rules |
+  LEGAL RULES (ESCAP RDTII methodology, Pillar 2 public procurement — binding):
+  - Map on legal FUNCTION, not keywords. The provision must govern GOVERNMENT PROCUREMENT (tenders, bidding, supplier eligibility, evaluation, award, government supply contracts) — or define who may bid.
+  - EXCLUSION (2.1) = foreign firms barred outright, barred for a category, or admitted ONLY when no domestic supplier is available/qualified. A rule that still lets a foreign firm win (consortium with nationals, price margin, quota, local-content threshold) is a LIMITATION (2.3), not 2.1.
+  - A clause that only EMPOWERS a minister/agency to exclude or prefer scores 0 until an implementing instrument does it; it is context, not operative evidence.
+  - Reference/target pricing (HPS, focal price) applied equally to all bidders is normal practice, not a limitation.
+  - Source code / IP / escrow surrender counts (2.2) only as a CONDITION of participating in or winning a tender or government supply contract; optional or negotiated clauses and agency-internal security rules do not.
+  - Only current, in-force, official domestic law counts. Drafts/bills/repealed text never count. FTA procurement chapters are preferential context, never 2.1-2.3 evidence.
+  - One provision can satisfy several indicators; judge THIS indicator's legal test only.
+  - If the legal test is not met, say applies=false — never force a mapping.
+
+indicators:
+  P2-I1:
+    methodology_number: "2.1"
+    name: Foreign exclusions from public procurement
+    policy_name: Exclusion of foreign firms from public procurement
+    question: Are foreign firms barred from government tenders — outright, for a category of goods/services, or admitted only when no domestic supplier is available or qualified?
+    golden_rules: *p2_rules
+    required_predicates:
+      actor: [procuring_entity, government]
+      action: [procure, tender, participate, award]
+      modality: [prohibited, restricted_to_domestic]
+    positive_cues:
+      - "only domestic suppliers may participate"
+      - "foreign suppliers shall not participate in the tender"
+      - "national competitive bidding restricted to domestic bidders"
+      - "foreign persons may participate only if domestic suppliers are unable to supply"
+      - "goods produced domestically shall be procured"
+      - "restrictions on admission of goods of foreign origin for state procurement"
+      - "prohibition on the procurement of foreign software"
+      - "whether foreign persons are entitled to participate in the tender"
+      - "tenders offering imported goods shall be rejected"
+      - "domestic bidders only below the threshold"
+    legal_test: >
+      applies=true when the provision OPERATIVELY excludes foreign suppliers or foreign-origin
+      goods/services/software from public procurement (all tenders, a category, a threshold band,
+      or unless no domestic supplier can supply), including a government-only ban on a named
+      foreign vendor/product. Record the provision that does the excluding, not a mere enabling clause.
+    exclusions:
+      - "Price margins, preference points, local-content thresholds, consortium/partnering duties that still let a foreign firm win -> P2-I3 (limitation), NOT 2.1."
+      - "A clause that only EMPOWERS a body to restrict foreign participation, with no implementing measure, is context only (score 0)."
+      - "FDI equity caps / business licensing not tied to bid eligibility -> Pillar 3, not 2.1."
+      - "Government-data residency (data must stay in-country) -> Pillar 6, not 2.1."
+      - "FTA/GPA procurement chapters open markets; they are never exclusion evidence."
+    scoring:
+      "1": Any measure excluding foreign firms under any circumstances (incl. 'foreign only if nationals cannot supply'), OR two or more 0.5 measures.
+      "0.5": A measure excluding a specific (group of) foreign firm(s).
+      "0": None, or only a legal basis empowering exclusion.
+    example: "Russia 44-FZ Art. 14 + Resolution 1875: bans/restrictions on foreign-origin goods in state procurement -> 1. Mongolia Procurement Law Art. 8.1/26.10.2: domestic-goods lots reject imported goods -> 1."
+
+  P2-I2:
+    methodology_number: "2.2"
+    name: Source code, encryption and trade-secret requirements in procurement
+    policy_name: Specific requirements on source code, encryption and trade secrets
+    question: Must bidders surrender source code, patents, trade secrets or exclusive IP (incl. source-code escrow), or use a specific (national/government-certified) encryption, as a condition of participating in or winning a government tender?
+    golden_rules: *p2_rules
+    required_predicates:
+      actor: [supplier, bidder]
+      action: [surrender, disclose, deposit, transfer, use]
+      object: [source_code, intellectual_property, encryption]
+      modality: [mandatory_condition]
+    positive_cues:
+      - "the supplier shall provide the source code"
+      - "source code shall be deposited in escrow"
+      - "intellectual property rights shall vest in the government"
+      - "exclusive rights to the software shall be transferred to the customer"
+      - "use cryptographic protection certified by the national authority"
+      - "certified encryption means required for government information systems"
+      - "tender documents shall specify the conditions for the customer to hold intellectual property rights"
+    legal_test: >
+      applies=true when the provision makes surrender/escrow/transfer of source code, patents,
+      trade secrets or exclusive IP — or the use of a specific government-certified encryption —
+      a CONDITION of participating in, winning or performing a government procurement contract.
+    exclusions:
+      - "Optional or negotiated contract terms ('as agreed between the agency and supplier') -> 0, not evidence."
+      - "Security rulebooks that bind only the agency's own systems -> 0."
+      - "Source-code disclosure outside procurement (market-wide) -> Pillar 4.9, not 2.2."
+      - "General national encryption standards not tied to tenders -> Pillar 11.4, not 2.2."
+      - "Confidentiality/secrecy duties on suppliers are not IP surrender."
+    scoring:
+      "1": Requirement to surrender patents / source code / trade secrets (incl. escrow) as a tender condition.
+      "0.5": Requirement to use a specific encryption to win.
+      "0": None.
+    example: "India OSS policy 2015: government applications must use open-source software with source code available -> 1 (gold)."
+
+  P2-I3:
+    methodology_number: "2.3"
+    name: Limitations in procurement bidding
+    policy_name: Limitations in procurement bidding
+    question: Are there quotas, set-asides, price preferences or margins triggered by nationality/origin, SME or other status, or local-content percentage in government procurement?
+    golden_rules: *p2_rules
+    required_predicates:
+      actor: [procuring_entity, government]
+      action: [prefer, reserve, evaluate, award]
+      modality: [preference, set_aside, local_content_threshold]
+    positive_cues:
+      - "margin of preference for domestic goods"
+      - "price preference for goods of domestic origin"
+      - "domestic component level (local content) of at least"
+      - "purchase preference to local suppliers"
+      - "reserved for micro and small enterprises"
+      - "domestic bidders shall be given a preference of percent"
+      - "national treatment regime conditions of admission of goods of foreign origin"
+      - "priority shall be given to domestic products"
+      - "Make in India local content"
+      - "bumiputera preference"
+    legal_test: >
+      applies=true when the provision OPERATIVELY imposes a limitation in public procurement bidding:
+      a price preference/margin, evaluation bonus, quota or set-aside, or a minimum local-content
+      requirement, whether triggered by nationality/origin (discriminatory, score 1) or applied to
+      all bidders (e.g. SME set-aside open to any SME, local-content threshold anyone can meet,
+      score 0.5). Record the operative preference/threshold provision.
+    exclusions:
+      - "An outright exclusion with no path for a foreign firm to win -> P2-I1."
+      - "Local-content rules for the COMMERCIAL market (handset certification, sale conditions) -> Pillar 10.3, not 2.3."
+      - "Neutral reference/target pricing applied to every bidder -> 0."
+      - "A clause that only EMPOWERS a body to set preferences, with no implementing measure, is context only."
+    scoring:
+      "1": A measure directly discriminating against foreign bidders, OR absence of institutional transparency, OR two or more 0.5 measures.
+      "0.5": A measure applied to all bidders (e.g. LCR, performance-based conditions).
+      "0": None, or only a legal basis empowering limitations.
+    example: "Lao Law on Public Procurement No. 30/NA Art. 45 Domestic Preference -> 1 (gold). Malaysia Treasury Directive 169.2 locally made goods -> 1 (gold)."
+
+  P2-I4:
+    methodology_number: "2.4"
+    name: Not in the WTO Government Procurement Agreement
+    policy_name: Not in agreement with binding commitments on government procurement
+    regulatory: false          # WTO GPA membership/coverage — non-regulatory, not extracted
+    question: Is the economy NOT a WTO GPA party, or a party whose schedule does not cover CPC 752, 754 and 84?
+    scoring:
+      "1": Not a GPA party, or a party covering none of CPC 752/754/84.
+      "0.5": A party covering at least one but not all three.
+      "0": A party fully covering all three.

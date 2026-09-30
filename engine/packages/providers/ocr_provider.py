@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import base64
 import os
+import time
 from pathlib import Path
 from typing import Iterator
 
@@ -376,15 +377,182 @@ class PaddleVLCascade:
             )
             return page
 
+class GoogleVisionOCR:
+    """Google Cloud Vision OCR at minimum billable cost.
+
+    Exactly ONE feature per request — DOCUMENT_TEXT_DETECTION (dense-text OCR).
+    No logo/label/face/landmark features are ever requested: Vision bills per
+    feature-unit per image, so each page costs exactly one OCR unit.
+    Fail-closed: API errors raise; any fallback is an explicit router decision,
+    never a silent substitution.
+    """
+
+    ENDPOINT = "https://vision.googleapis.com/v1/images:annotate"
+
+    def __init__(self, api_key: str, language_hints: list[str] | None = None,
+                 timeout: float = 90.0):
+        if not api_key:
+            raise ValueError("GoogleVisionOCR requires an api key "
+                             "(GOOGLE_VISION_API_KEY in engine/.env)")
+        self._key = api_key
+        self._hints = [h for h in (language_hints or []) if h]
+        self._timeout = timeout
+
+    RETRY_DELAYS_S = (3.0, 10.0)
+
+    def _post_with_retry(self, body: dict) -> httpx.Response:
+        """Transient failures (timeout, transport error, 429/5xx) are retried twice
+        with backoff; one 502 must not drop an 89-page scanned code from the corpus
+        (TL CPP, 29 Sep). Other errors — and the last failed attempt — still raise."""
+        for delay in (*self.RETRY_DELAYS_S, None):
+            try:
+                response = httpx.post(f"{self.ENDPOINT}?key={self._key}", json=body,
+                                      timeout=self._timeout)
+            except (httpx.TimeoutException, httpx.TransportError):
+                if delay is None:
+                    raise
+            else:
+                if response.status_code != 429 and response.status_code < 500 or delay is None:
+                    return response
+            time.sleep(delay)
+        raise AssertionError("unreachable")
+
+    def ocr_image(self, image_bytes: bytes, page_number: int = 1,
+                  document_id: str = "image") -> ExtractedPage:
+        request: dict = {
+            "image": {"content": base64.b64encode(image_bytes).decode("ascii")},
+            "features": [{"type": "DOCUMENT_TEXT_DETECTION"}],
+        }
+        if self._hints:
+            request["imageContext"] = {"languageHints": self._hints}
+        response = self._post_with_retry({"requests": [request]})
+        response.raise_for_status()
+        payload = (response.json().get("responses") or [{}])[0]
+        if payload.get("error"):
+            raise RuntimeError(f"google_vision error: {payload['error'].get('message', 'unknown')}")
+        annotation = payload.get("fullTextAnnotation") or {}
+        text = annotation.get("text", "")
+        tokens: list[OCRToken] = []
+        page_confidences: list[float] = []
+        for vpage in annotation.get("pages", []):
+            if vpage.get("confidence") is not None:
+                page_confidences.append(float(vpage["confidence"]))
+            for block in vpage.get("blocks", []):
+                for paragraph in block.get("paragraphs", []):
+                    for word in paragraph.get("words", []):
+                        word_text = "".join(s.get("text", "") for s in word.get("symbols", []))
+                        if not word_text.strip():
+                            continue
+                        vertices = (word.get("boundingBox") or {}).get("vertices") or []
+                        bbox = None
+                        if vertices:
+                            xs = [float(v.get("x", 0)) for v in vertices]
+                            ys = [float(v.get("y", 0)) for v in vertices]
+                            bbox = [min(xs), min(ys), max(xs), max(ys)]
+                        tokens.append(OCRToken(
+                            text=word_text,
+                            confidence=(float(word["confidence"])
+                                        if word.get("confidence") is not None else None),
+                            bbox=bbox, page_number=page_number))
+        word_confidences = [t.confidence for t in tokens if t.confidence is not None]
+        confidence = (sum(page_confidences) / len(page_confidences) if page_confidences
+                      else (sum(word_confidences) / len(word_confidences)
+                            if word_confidences else None))
+        return ExtractedPage(
+            document_id=document_id, page_number=page_number, text=text,
+            source_url=f"file://{document_id}",
+            location_reference=f"page {page_number}",
+            confidence=confidence, tokens=tokens,
+            metadata={"ocr_engine": "google_vision",
+                      "feature": "DOCUMENT_TEXT_DETECTION", "billed_units": 1,
+                      **({"language_hints": self._hints} if self._hints else {})})
+
+    def extract(self, file_path: str) -> list[ExtractedPage]:
+        return [self.ocr_image(image, page_no, file_path)
+                for page_no, image in _rasterize(file_path)]
+
+
+def _script_chars(text: str, script: str) -> int:
+    ranges = {"thai": ("฀", "๿"), "devanagari": ("ऀ", "ॿ"),
+              "lao": ("຀", "໿"), "cyrillic": ("Ѐ", "ӿ")}
+    lo, hi = ranges.get(script, ("", ""))
+    return sum(1 for ch in text if lo <= ch <= hi) if lo else 0
+
+
+class HybridScriptOCR:
+    """Cost-first routing: free self-hosted Paddle for Latin-script pages,
+    Google Vision only where Paddle cannot read (non-Latin scripts) or where
+    its output fails the confidence/script sanity checks.
+
+    route="vision-first": pages go straight to Vision (no double spend — used
+    for Thai/Devanagari documents where Paddle is known-blind).
+    route="paddle-first": Paddle runs first; a page escalates to Vision when
+    confidence < conf_floor, the text is empty, or an expected script is
+    absent. Every escalation is recorded in page metadata — never silent.
+    """
+
+    def __init__(self, paddle, vision, route: str = "paddle-first",
+                 expect_script: str | None = None, conf_floor: float = 0.85):
+        self._paddle, self._vision = paddle, vision
+        self._route = route
+        self._expect = expect_script
+        self._floor = conf_floor
+
+    def ocr_image(self, image_bytes: bytes, page_number: int = 1,
+                  document_id: str = "image") -> ExtractedPage:
+        if self._route == "vision-first":
+            page = self._vision.ocr_image(image_bytes, page_number, document_id)
+            page.metadata["ocr_route"] = "vision-first"
+            return page
+        try:
+            page = self._paddle.ocr_image(image_bytes, page_number, document_id)
+            reason = None
+            if not page.text.strip():
+                reason = "empty paddle output"
+            elif page.confidence is not None and page.confidence < self._floor:
+                reason = f"paddle confidence {page.confidence:.2f} < {self._floor}"
+            elif self._expect and _script_chars(page.text, self._expect) == 0:
+                reason = f"expected {self._expect} script absent from paddle output"
+        except (httpx.HTTPError, OSError) as error:
+            page, reason = None, f"paddle unavailable: {type(error).__name__}"
+        if reason is None:
+            page.metadata["ocr_route"] = "paddle-first"
+            return page
+        escalated = self._vision.ocr_image(image_bytes, page_number, document_id)
+        escalated.metadata.update(ocr_route="paddle-first",
+                                  ocr_escalated_from="remote_paddle",
+                                  ocr_escalation_reason=reason)
+        return escalated
+
+    def extract(self, file_path: str) -> list[ExtractedPage]:
+        return [self.ocr_image(image, page_no, file_path)
+                for page_no, image in _rasterize(file_path)]
+
+
 def build_ocr(config: dict | None):
     """Factory keyed on the profile's ocr.provider (models.yaml) — the config-only swap."""
     config = config or {}
     provider = str(config.get("provider", "local")).strip().lower()
     if provider in {"tesseract", "local_tesseract"}:
         return TesseractOCR()
+    if provider in {"hybrid_script", "hybrid"}:
+        paddle = build_ocr({**config, "provider": "remote_paddle"})
+        vision = build_ocr({**config, "provider": "google_vision"})
+        return HybridScriptOCR(paddle, vision,
+                               route=str(config.get("route", "paddle-first")),
+                               expect_script=config.get("expect_script"),
+                               conf_floor=float(config.get("conf_floor", 0.85)))
+    if provider in {"google_vision", "gvision"}:
+        hints = config.get("language_hints") or os.getenv("GOOGLE_VISION_LANG_HINTS", "")
+        if isinstance(hints, str):
+            hints = [h.strip() for h in hints.split(",") if h.strip()]
+        return GoogleVisionOCR(
+            api_key=config.get("api_key") or os.getenv("GOOGLE_VISION_API_KEY", ""),
+            language_hints=hints)
     if provider in {"remote_paddle", "paddle_remote", "remote"}:
         endpoint = config.get("endpoint") or os.getenv("OCR_ENDPOINT", "http://localhost:8089")
-        api_key = config.get("api_key") or os.getenv("OCR_API_KEY") or None
+        api_key = (config.get("api_key") or os.getenv("PADDLE_OCR_API_KEY")
+                   or os.getenv("OCR_API_KEY") or None)
         request_format = (
             config.get("request_format") or os.getenv("OCR_REQUEST_FORMAT") or "multipart"
         )

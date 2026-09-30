@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import sys
 from itertools import combinations
 from pathlib import Path
@@ -104,6 +105,26 @@ def deterministic_score(indicator_id: str, rows: list[dict]) -> tuple[float, str
             return 0.0, "no government-access measure found"
         return (0.0, "all access powers appear court-gated (7.5 court-order test) -> 0") if court_gated_only \
             else (1.0, "warrantless government access evidenced -> 1")
+    if indicator_id == "P2-I1":
+        return (1.0, "operative foreign-exclusion measure evidenced") if real else \
+               (0.0, "no foreign exclusion found (enabling clauses alone score 0)")
+    if indicator_id == "P2-I2":
+        if not real:
+            return 0.0, "no source-code/IP/encryption tender condition found"
+        surrender = re.compile(r"source code|escrow|patent|trade secret|intellectual property|"
+                               r"exclusive right", re.I)
+        return (1.0, "source-code/IP surrender as a tender condition -> 1") if \
+            any(surrender.search(str(r)) for r in real) else \
+            (0.5, "specific-encryption tender condition only -> 0.5")
+    if indicator_id == "P2-I3":
+        if not real:
+            return 0.0, "no bidding limitation found"
+        origin = re.compile(r"domestic|national|local|foreign|origin|bumiputera|indigenous|"
+                            r"made in|russian|mongolian|lao|indonesian|indian|malaysian", re.I)
+        if any(origin.search(str(r)) for r in real):
+            return 1.0, "limitation triggered by nationality/origin -> 1"
+        return (1.0, "two or more non-discriminatory limitations -> 1") if len(real) > 1 else \
+               (0.5, "one limitation applied to all bidders -> 0.5")
     return 0.0, "unknown indicator"
 
 
@@ -159,8 +180,11 @@ def krippendorff_alpha(matrix: list[list[float]]) -> float | None:
 def main() -> int:
     from packages.providers.model_router import resolve_llm
 
-    llm = resolve_llm("hybrid_accuracy", tier="high_reasoning")
-    out_dir = Path("data/zone3")
+    from packages.core import review_layout
+
+    layout = review_layout.current()
+    llm = resolve_llm(layout.provider_profile, tier="high_reasoning")
+    out_dir = layout.zone3_dir
     out_dir.mkdir(parents=True, exist_ok=True)
 
     for arg in sys.argv[1:]:

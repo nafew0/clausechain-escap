@@ -1,0 +1,30 @@
+[
+ {
+  "indicator": "P2-I2",
+  "law": "Standard Bidding Document for Services (Minister of Finance ",
+  "article": "cl. 36.2",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause concerns ownership of IP resulting from procured services, not a different legal function such as confidentiality. With “Yes” retained, it makes that ownership a procurement term; the rubric does not require a separate source-code surrender clause."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P2-I2 covers procurement conditions transferring or vesting exclusive IP, and its positive cues include IP rights vesting in government. This sectoral services-procurement evidence fits that scope; when “Yes” is selected, it supports score 1. The available “No” option makes the term conditional, not a reason to reject the mapping as stated."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted field asks whether IP rights resulting from services are to be owned by the procuring entity, supplies “Yes,” and permits “No” if necessary. In this bidding-document context, that supports the rationale’s conditional claim that retaining “Yes” makes ownership a procurement term."
+   }
+  ]
+ }
+]

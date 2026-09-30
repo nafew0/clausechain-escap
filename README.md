@@ -1,357 +1,353 @@
 # ClauseChain — AI Tool for Digital Trade Regulatory Analysis
 
 UN Global Hackathon on AI for Digital Trade Regulatory Analysis
-Team: **zAI BD** (Bangladesh) | Round: **1**
-Last updated: 2026-07-20
+Team: **Team zAI BD** | Round: **Final**
+Last updated: 2026-09-30
 
----
-
-## TL;DR
-
-**ClauseChain turns official statute portals, gazette PDFs and treaty texts into verified RDTII 2.1 evidence — with a reproducible proof for every exported legal row.**
-
-- **One command**: `python run.py --economy Singapore --pillar 6` → template-exact CSV + JSON.
-- **Corpus**: 53,969 provisions across Singapore, Malaysia and Australia, parsed into statute-structure RuleUnits (never fixed-size chunks), each carrying its archived source bytes + SHA-256.
-- **Every exported row** passes **9 deterministic gates** — including byte-exact snippet verification against the archived official copy — then an adversarial refuter, then **named, role-separated human review**. The final file is regenerated from approvals alone by a deterministic replay.
-- **74 provision-level NEW findings** discovered independently beyond the provided reference dataset in the final sweep, including the first treaty-evidenced P6-I5 rows (CPTPP Art. 14.11, DEPA Art. 4.3, RCEP Art. 12.15) parsed from official state registers.
-- **Measured cost**: the entire 6-run sweep (3 economies × 2 pillars) cost **US$1.16** on the default cloud profile; the bundled Path A profile runs **fully key-free** on local models.
-- The engine **audits its own reference data**: it detected citation errors in the dataset it was given — including references to statutory clauses that do not exist in the official text — and recorded corrections with evidence.
-
-Skip to [Quick Start](#quick-start) to run it in under 10 minutes.
-
----
-
-## Live Demo
-
-**Try the review console right now — no setup:** **https://clausechain.zai.bd**
-
-- Read-only evaluator access is printed on the login page
-  (username `viewer` · password `escap-rdtii-2026`) with a one-click
-  **Fill demo credentials** button.
-- What to look at: the **Dashboard** release-readiness card (the system refuses
-  to call itself done while human sign-offs are open), the **Review** workbench
-  (byte-exact source quotes, refuter verdicts, role-separated sign-off), the
-  **Runs** console (measured cost + model route per run), and the
-  **Knowledge Graph** (54k provisions, parity-verified Neo4j mirror).
-- The demo account can browse everything and write nothing: decision endpoints
-  require reviewer roles and run-launch requires an administrator.
-- Screen-by-screen guide with screenshots: [README_WEB.md](README_WEB.md).
-  Deployment notes: [backend/README.md](backend/README.md) ·
-  [frontend/README.md](frontend/README.md).
+> ClauseChain reads an economy's official legislation, finds the provisions that matter for the RDTII 2.1
+> indicators, and records each one with an article-level citation, a verbatim quote and the official source it
+> came from, for signed human review. One pipeline runs on two model backends, switched inside the app:
+> a commercial hosted model (Engine A) and an open-weights model (Engine B).
+>
+> **Start here:** [Quick Start](#quick-start) (one command, Docker only) · full guide: [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ---
 
 ## What This Tool Does
 
-This tool automates the two tasks required by the UN Regional Digital Trade Integration Index (RDTII):
+This tool automates two tasks required by the ESCAP Regional Digital Trade Integration Index (RDTII 2.1):
 
-**Task 1 — Automated Evidence Discovery.**
-Given an economy and pillar, ClauseChain acquires legislation from official government portals (including subsidiary legislation, scanned gazettes and treaty registers), archives every source with content hashes and access dates, and extracts clean structured text — with no manual steps. Anti-bot walls are handled with a polite-backoff + real-browser fallback; a dead or blocked link becomes a recorded `ACQUISITION_UNRESOLVED` fact, never a silent gap.
+**Task 1 — Automated Evidence Discovery**
+Given an economy and a pillar, the tool downloads the relevant legislation from official government portals
+(including scanned and image-based PDFs, which go through OCR), archives the exact bytes with a SHA-256 hash and
+access date, and extracts clean, structured provision text into a legal graph — with no manual steps in the app.
 
-**Task 2 — Intelligent Mapping & Categorization.**
-Extracted provisions are mapped to RDTII indicator IDs (P6-I1…P6-I5, P7-I1…P7-I5) through hybrid retrieval and LLM reasoning constrained by a rubric-as-code layer (indicator polarity, 0.5 tiers, the 7.5 court-order test, exclusions — all in YAML data). Each matched provision is recorded with an exact article-level citation, a byte-exact verbatim snippet, and a Discovery Tag (**NEW** = found independently / **KNOWN** = matches the provided reference dataset).
+**Task 2 — Intelligent Mapping and Categorisation**
+Each candidate provision is mapped to an RDTII indicator by a language model working from the indicator's legal
+test, then checked by deterministic gates (the quote must exist byte-for-byte in the archived source, the
+location must resolve, the source must be official and in force) and by an adversarial second pass before any
+human sees it. Each row carries an article-level citation, a verbatim snippet, and a Discovery Tag: **NEW**
+(found independently) or **KNOWN** (matches the baseline we hold).
 
-**Mandatory scope:** Pillar 6 (Cross-border Data Flows) and Pillar 7 (Domestic Data Protection)
-**Economies covered:** Singapore, Malaysia, Australia. Adding an economy is a data change, not a code change — see [Scaling](#supported-economies--portals).
+**Mandatory pillars:** 6 (Cross-border data policies) and 7 (Domestic data protection and privacy).
+**Third pillar:** 2 (Public procurement).
+**Economies covered (10):** Singapore, Malaysia, Australia, Thailand, India, Indonesia, Russian Federation,
+Mongolia, Lao PDR, Timor-Leste — each on pillars 2, 6 and 7, with both engines.
+
+**Ready for the live test.** Of the nine economies in the 2025 RDTII database, ClauseChain has been run end to
+end on **six**: Thailand, Indonesia, India, Lao PDR, Mongolia and the Russian Federation (pillars 2, 6 and 7,
+both engines). It has **not** been run on Viet Nam, China or Kazakhstan: adding one is data, not code — a
+jurisdiction file and a seed list — then **Runs → Build sources** in the app. Pillars other than 2, 6 and 7
+need their indicator rubric added the same way (see [Known Limitations](#known-limitations)).
 
 ---
 
 ## Quick Start
 
-Anyone with basic Python knowledge can run this in under 10 minutes.
+⚠ **A competent programmer must reach a working system from this section alone, on a clean machine, in under
+30 minutes — with no help from our team.**
+
+ClauseChain installs with **one command**. Docker is the only prerequisite: Python, Node, PostgreSQL and every
+library are pinned inside the images, so the result is identical on macOS, Windows and Linux. The step-by-step
+guide with troubleshooting is **[DEPLOYMENT.md](DEPLOYMENT.md)**.
 
 ### 1. Clone the repository
 
-```bash
-git clone https://github.com/nafew0/clausechain-escap.git
-cd clausechain-escap/engine
-```
+    git clone https://github.com/nafew0/clausechain-escap.git
+    cd clausechain-escap
 
 ### 2. Set up the environment
 
-```bash
-# Python 3.12+ required
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
+Install and start **Docker** — [Docker Desktop](https://docs.docker.com/desktop/) on macOS or Windows, or
+[Docker Engine](https://docs.docker.com/engine/install/) with the compose plugin on Linux. Nothing else.
 
-### 3. Get the corpus (choose one)
+Needs 30 GB of free disk and 8 GB of memory for Docker (Docker Desktop's default on a 16 GB machine).
 
-**Option A — prebuilt corpus (recommended, ~2 minutes):**
-Download `clausechain_corpus_sqlite.zip` from this repository's **GitHub Releases** page and unzip into `engine/data/`:
+### 3. Configure
 
-```bash
-unzip clausechain_corpus_sqlite.zip -d data/
-# provides data/graph_v2.db (SQLite: 53,969 provisions, FTS index, source-artifact hashes)
-```
+    cp engine/.env.example keys.env
 
-**Option B — rebuild from official sources (~1–2 hours, network required):**
+Open `keys.env` and set your two declared engines and your OCR engine. See
+**[Your Two Declared Engines](#your-two-declared-engines)** below. (The team supplies a filled-in copy
+privately. The app's own secrets — database password, signing keys — are generated for you in step 4.)
 
-```bash
-python scripts/build_sg_corpus.py     # Singapore: SSO acts + subsidiary legislation + treaties
-python scripts/build_my_corpus.py     # Malaysia: statute/gazette PDFs + MITI treaty texts (OCR as needed)
-python scripts/build_au_corpus.py     # Australia: Federal Register EPUB+PDF compilations
-```
+### 4. Start the interface
 
-Rebuilds are incremental: unchanged documents are fingerprint-matched and never re-extracted.
+    ./deploy.sh --data full --env-file keys.env
 
-### 4. Configure model keys
+Windows (PowerShell): `powershell -ExecutionPolicy Bypass -File .\deploy.ps1 -Data full -EnvFile keys.env`
 
-```bash
-cp .env.example .env
-```
+The script downloads the data bundle (full: 3.3 GB, or `--data partial`: 1.3 GB) and verifies its checksum,
+builds and starts the app, loads both engines' results and the signed review decisions, and creates an admin
+account. The first run takes 20–40 minutes, mostly downloading and building.
 
-Two profiles ship in `configs/models.yaml`:
+Then open **http://localhost:8080** and sign in as `admin` — the password is in `.deploy-credentials.txt`.
+**Everything else happens in the interface** — starting a run, reviewing, correcting, switching engines,
+exporting.
 
-- **`hybrid_accuracy` (default, Path B):** set `OPENAI_API_KEY=sk-...` in `.env`. Uses `gpt-5.4-nano` for bulk work, `gpt-5.4-mini` only for escalated ambiguity, `text-embedding-3-small` embeddings.
-- **`local_fallback` (Path A, key-free):** no keys at all. Uses a local Ollama model (`qwen2.5:7b`) + BGE-M3 embeddings + local OCR. Run any command with `--provider-profile local_fallback`.
+### 5. Verify
 
-### 5. Run
+Run **Mongolia** on **pillar 6** from the interface: **Runs** → economy *Mongolia*, pillar *6* → **Build
+sources** → **Queue run**. Expected with Engine A: **8 provisions in about 1–2 minutes**, written to
+`engine/outputs/`, then **Refresh snapshot** brings them into Review. **Build sources** reports every document
+as already downloaded, because the data bundle carries them.
 
-```bash
-python run.py --economy Singapore --pillar 6
-```
-
-**Output:** `outputs/run-sg-p6-<id>/output.csv` and `output.json` (schema below), plus `review.md`, `candidate_rows.csv` and a gate/warning log for audit.
+If a run fails with `OPENAI_API_KEY is not set`, the keys are missing: add them to `engine/.env`, then run
+`docker compose restart engine-worker backend`.
 
 ---
 
-## Full Usage
+## Your Interface
 
-```bash
-python run.py --economy "Malaysia" --pillar 7 --out outputs/my_p7
-# --economy          : Singapore | Malaysia | Australia (or SG/MY/AU)
-# --pillar           : 6 | 7
-# --provider-profile : hybrid_accuracy (default, Path B) | local_fallback (Path A, key-free)
-# --mode             : live (default) | offline-eval | submission-replay
-```
+| What a reviewer needs to do | Where it is |
+| :---- | :---- |
+| Start a run and watch progress in plain words | **Runs** → choose economy and pillar → **Build sources**, then **Queue run**. The live log under *Engine worker actions* reports each step in words ("downloaded · Law on Personal Data · 412 KB PDF", "embedding 1,204 new provisions", each indicator as it is mapped). |
+| Open the audit view: a result beside the source text it came from | **Review** → select a finding → **Source Match**: the extracted row beside the archived official page, with the verbatim quote highlighted at the cited article. |
+| Follow a row to its official source at the cited article | **Review** → select a finding → **Act reference** and the official source link, which open the government portal URL recorded for that row (with its section anchor or page where the portal has one). |
+| Accept, reject or correct a row | **Review** → the NEW, KNOWN and Absence queues → **Approve** or **Reject** at each stage (citation, mapping, status), or **Request correction** with a note. **Zone-3** → approve or override an indicator score. Every decision is signed with the reviewer's name. |
+| Switch the AI engine | The **Hybrid \| Local** tabs at the top of every page. **Runs** → **Local** tab → **Queue run** runs on Engine B. |
+| Export to the RDTII schema | **RDTII Matrix** → **Export** → **Excel workbook** (ESCAP's final-round template: Output Data and Coverage Matrix), **CSV** or **JSON**. |
 
-Run the full three-economy sweep and consolidate to one dataset:
+**Walkthrough recording:** submitted with our Word document on 30 September 2026.
 
-```bash
-for eco in Singapore Malaysia Australia; do
-  for p in 6 7; do python run.py --economy $eco --pillar $p --out outputs/final_$(echo $eco | cut -c1-2 | tr A-Z a-z)_p$p; done
-done
-python scripts/refute_new.py outputs/final_*            # adversarial refuter on every NEW row
-python scripts/consolidate_submission.py outputs/final_*  # -> submission/consolidated.csv + .json (final dataset)
-python scripts/validate_graph.py                          # graph/source-artifact integrity report
-python scripts/champion_validate.py                       # release-readiness contract (names every failure)
-```
+---
 
-Regenerate the final artifacts purely from human approvals (deterministic, no LLM):
+## Your Two Declared Engines
 
-```bash
-python scripts/submission_replay.py
-```
+| | Engine A — commercial hosted | Engine B — open weights |
+| :---- | :---- | :---- |
+| Provider and model | OpenAI **gpt-6-luna**; embeddings OpenAI **text-embedding-3-small** | **Qwen3.8-27B** (Unsloth NVFP4 quantisation) served by vLLM; embeddings **BAAI bge-m3** |
+| Version / checkpoint | `gpt-6-luna` (API model id); runs before 30 Sep 2026 reached the same model through OpenRouter as `openai/gpt-6-luna` | `unsloth/Qwen3.8-27B-NVFP4` |
+| Local or hosted API | Hosted API (`api.openai.com`) | Self-hosted on our own GPU (NVIDIA DGX Spark) behind an OpenAI-compatible endpoint. Any OpenAI-compatible server works: vLLM, Ollama `/v1`, a hosted open-weights API. |
+| Config value | `HYBRID_LLM_PROVIDER=openai` `HYBRID_LLM_MODEL=gpt-6-luna` | `LOCALAI_ENDPOINT=<server>/v1` `LOCALAI_MODEL=<id the server expects>` `LOCALAI_MODEL_LABEL=unsloth/Qwen3.8-27B-NVFP4` |
+
+Both engines run the **same** pipeline, gates and output schema; only the models differ. Engine B has no
+proprietary fallback at any step: if its server fails, the run fails rather than silently calling a commercial
+API.
+
+### Switching between them
+
+In the interface: **any page** → the **Hybrid | Local** tabs → select the engine. On **Runs**, the selected tab
+decides which engine a queued run uses; on every other page it selects that engine's workspace (results,
+review queues, matrix). The two workspaces are kept fully separate and meet only on **Model Comparison**, which
+sets Engine A beside Engine B for the same economy and pillar.
+
+The underlying abstraction lives in `engine/packages/providers/llm_providers.py` (`build_llm`), with the two
+profiles in `engine/configs/models.yaml` (`hybrid_accuracy`, `local_openweights`). Adding a provider means
+setting `LOCALAI_ENDPOINT` / `LOCALAI_MODEL` for any OpenAI-compatible server (no code), or adding one branch to
+`build_llm` for a different API.
+
+### Re-running without fetching
+
+Fetching and reading are separate actions. **Build sources** is the only step that downloads; **Queue run**
+reads the archived corpus and fetches nothing.
+
+In the interface: **Runs** → **Queue run** (reads only), or **Build sources** again — documents already
+downloaded are skipped ("already downloaded"), so its downloaded-documents list in the Run Record is empty.
+Where downloaded documents are cached: `engine/data/raw/<economy code>/` (bytes, with `seeds_manifest.json`
+recording URL, SHA-256 and access date), parsed into `engine/data/graph_v2.db`.
+
+---
+
+## Crawling Politely
+
+ClauseChain does not crawl whole sites. It downloads only the specific official documents listed in its seed
+files (`engine/data/seeds.json`, `engine/data/seeds_r2.json`), once each: a document downloaded successfully is
+never requested again.
+
+| Setting | Value | Where it is set |
+| :---- | :---- | :---- |
+| Max requests per second per host | One document at a time, with a 3-second pause before each | `engine/packages/connectors/seeds_fetch.py:30` (`POLITE_DELAY_S`), applied at `:282` |
+| Parallel requests per host | 1 (a single connection, documents fetched in sequence) | `engine/packages/connectors/seeds_fetch.py:241` |
+| robots.txt respected | Not parsed; only the listed document URLs are requested, and no links are followed | `engine/packages/connectors/seeds_fetch.py:214` (`fetch_seeds`) |
 
 ---
 
 ## Architecture Overview
 
-```
-Input: Economy + Pillar
-        │
-        ▼
-┌──────────────────────────────────────────────────────────────┐
-│ TASK 1 — Evidence Discovery                                  │
-│  1. Seeds & connectors  seeds.json (ESCAP inventory + deep-  │
-│     research deltas) → polite fetch, Playwright anti-bot     │
-│     fallback, archive + SHA-256, manifest reconciliation,    │
-│     fail-closed expected-provision checks                    │
-│  2. Format-based extractors  anchored-HTML (SSO print view), │
-│     statute-PDF with grammar profiles (Commonwealth / treaty │
-│     "Art. 14.11" / Malay "Seksyen 12A"), EPUB structure      │
-│     oracle aligned to authorised PDF, OCR for scanned        │
-│     gazettes (CER measured per page)                         │
-└──────────────────────────────────────────────────────────────┘
-        │  RuleUnits (provision-depth, source-exact, located)
-        ▼
-┌──────────────────────────────────────────────────────────────┐
-│ GRAPH  Instrument → Section → Provision + CROSS_REFERENCES;  │
-│ SQLite+FTS5 default, Neo4j via GRAPH_BACKEND=neo4j;          │
-│ legal status evidence + eligibility + processing fingerprint │
-└──────────────────────────────────────────────────────────────┘
-        │
-        ▼
-┌──────────────────────────────────────────────────────────────┐
-│ TASK 2 — Mapping & Verification                              │
-│  3. Hybrid retrieval  exact-phrase ∪ BM25 ∪ dense cosine     │
-│     (broad recall, never top-k); master-known anchors        │
-│     injected; per-indicator source-type allowlists applied   │
-│     BEFORE ranking; every truncation recorded                │
-│  4. LLM mapping  rubric-as-code indicator briefs (polarity,  │
-│     tiers, exclusions); nano-first with deterministic        │
-│     escalation to mini on ambiguity                          │
-│  5. Gates G1–G9  byte-exact snippet · location · official    │
-│     domain · currentness · whole-rule · rationale support ·  │
-│     indicator fit · dangling refs · span closure (fail-closed)│
-│  6. Refuter + human review  adversarial verdict per NEW row; │
-│     named role-separated reviewers; append-only receipts;    │
-│     absence rows carry search-coverage manifests and are     │
-│     BLOCKED while any configured acquisition is unresolved   │
-└──────────────────────────────────────────────────────────────┘
-        │
-        ▼
-Output: template-exact CSV / JSON (+ replayable decision bundles)
+The boundary between **fetching** (left) and **reading** (right) is explicit: runs read only the archive, which
+is what makes a second pass fetch nothing.
+
+```mermaid
+flowchart LR
+    subgraph FETCH["Fetching — Runs → Build sources"]
+        S["Seed list<br/>official URLs per economy"] --> F["Polite fetcher<br/>one document at a time"]
+        F --> A[("Archive<br/>engine/data/raw/&lt;cc&gt;<br/>bytes + SHA-256 + date")]
+    end
+    subgraph READ["Reading — Runs → Queue run (no network to portals)"]
+        A --> X["Extractors + OCR<br/>HTML / PDF / EPUB, scanned pages"]
+        X --> G[("Legal graph<br/>graph_v2.db: act → section → provision")]
+        G --> R["Hybrid retrieval<br/>exact phrase + BM25 + embeddings"]
+        R --> M["Mapper<br/>Engine A or Engine B"]
+        M --> V["Gates G1–G9<br/>byte-exact quote, location,<br/>official source, in force"]
+        V --> O["Run output<br/>engine/outputs/&lt;run&gt;"]
+    end
+    O --> P["Refresh snapshot<br/>adversarial refuter, Zone-3 scores"]
+    P --> H["Human review<br/>signed decisions"]
+    H --> E["Export<br/>RDTII final-round template"]
 ```
 
 ### Key modules
 
-| Module | Path | Description |
+| Module | File | Description |
 | :---- | :---- | :---- |
-| Seeds fetcher | `packages/connectors/seeds_fetch.py` | Inventory-driven acquisition, archive+hash, reconciliation, browser fallback |
-| SG portal connector | `packages/connectors/sg_sso.py` | SSO whole-act print view (Acts + subsidiary legislation), anti-bot backoff |
-| HTML extractor | `packages/extractors/html_act.py` | Anchored portal HTML → sections/subsections with anchors |
-| PDF extractor | `packages/extractors/pdf_act.py` | Statute PDFs → RuleUnits; named grammar profiles (treaty/Malay) |
-| EPUB oracle | `packages/extractors/epub_act.py` + `pdf_align.py` | AU structure oracle aligned span-exact to the authorised PDF |
-| OCR router | `packages/extractors/pdf.py` | Native-text / OCR routing with page confidence |
-| Graph store | `packages/graph/sqlite_graph.py` | Swappable GraphStore (SQLite default, Neo4j optional) |
-| Retrieval | `packages/retrieval/hybrid.py` | Exact-phrase + FTS5 + dense union, caps recorded |
-| Mapper | `packages/rdtii/mapper.py` | Screen + map with rubric-as-code briefs, escalation |
-| Gates | `packages/verifier/gates.py` | G1–G9 deterministic verification, snippet finalization |
-| Orchestrator | `packages/core/orchestrator.py` | End-to-end pipeline, coverage manifests, NEW/KNOWN diff |
-| Review CLI | `scripts/apply_decisions.py` | The only sanctioned decision writer (lock → validate → atomic write → receipt) |
-| Replay | `scripts/submission_replay.py` | Approvals → final CSV/JSON, deterministic |
+| Portal Crawler | `engine/packages/connectors/seeds_fetch.py` | Seed-list download with archive, SHA-256 and access date; browser fallback for script-rendered portals |
+| Document Processor | `engine/packages/extractors/` (`html_act.py`, `pdf_act.py`, `epub_act.py`, `pdf.py`) · `engine/packages/providers/ocr_provider.py` | Download → native text or OCR → sections and provisions with anchors and page numbers |
+| Retrieval | `engine/packages/retrieval/hybrid.py` | Exact phrase ∪ FTS5/BM25 ∪ dense embeddings, disk-cached per model |
+| Mapper | `engine/packages/rdtii/mapper.py` | Screens candidates and maps a provision to an indicator from the rubric (`engine/configs/rdtii/pillar_N.yaml`) |
+| Interface | `frontend/src/` (Next.js) · `backend/workspace/` (Django API, engine worker) | Run control, audit view, review, comparison, export |
+| Output Writer | `engine/packages/export/final_round.py` · `csv_writer.py` · `json_writer.py` | Writes the RDTII final-round schema; per-run CSV and JSON |
 
----
-
-## Swapping the LLM
-
-*No vendor lock-in — required by the rubric.* All model routing lives in `configs/models.yaml` profiles; code never names a model.
-
-**Default (Path B, cloud):**
-
-```yaml
-# configs/models.yaml → profiles.hybrid_accuracy
-bulk:            openai:gpt-5.4-nano
-high_reasoning:  openai:gpt-5.4-nano     # nano-first; escalation is deterministic
-legal_escalation: openai:gpt-5.4-mini
-embedding:       openai text-embedding-3-small
-```
-
-**Key-free (Path A, local):**
-
-```bash
-ollama pull qwen2.5:7b && ollama serve
-python run.py --economy Singapore --pillar 6 --provider-profile local_fallback
-```
-
-**Add a provider:** implement the small client contract in `packages/providers/llm_providers.py` (plain REST, no SDKs), register it in `model_router.py`, reference it from a profile. Fallback chains (`primary`/`fallback`) are built in.
+Also: `engine/packages/verifier/gates.py` (gates G1–G9), `engine/packages/core/orchestrator.py` (the pipeline),
+`engine/scripts/apply_decisions.py` (the only writer of signed decisions), `engine/scripts/submission_replay.py`
+(approved decisions → final dataset).
 
 ---
 
 ## Swapping the OCR Engine
 
-| Engine | Config | Notes |
-| :---- | :---- | :---- |
-| Local engine (default) | `OCR_PROVIDER=local` | Key-free; used by Path A |
-| PaddleOCR (self-hosted VM) | `OCR_PROVIDER=remote_paddle` + `OCR_ENDPOINT=` | Our accuracy path for scanned gazettes |
+OCR runs only on pages without a text layer; text PDFs and web pages need none. Swapping is a setting in
+`engine/.env`, no code.
 
-Change `.env` — no code changes. Per-page OCR confidence and citation-token disagreement flags are carried into review; OCR quality is measured as character error rate (target < 5%).
+| Engine | Config value | Notes |
+| :---- | :---- | :---- |
+| PaddleOCR, self-hosted (our default) | `OCR_PROVIDER=remote_paddle` `OCR_ENDPOINT=…` `OCR_API_KEY=…` | Open source, runs on our own server. No proprietary API. |
+| Tesseract, local | `OCR_PROVIDER=tesseract` | Open source, key-free. |
+| Google Cloud Vision | `OCR_PROVIDER=google_vision` `GOOGLE_VISION_API_KEY=…` | **Proprietary**, optional. |
+| PaddleOCR with Vision escalation | `OCR_PROVIDER=hybrid_script` | Paddle first; **proprietary** Vision only for scripts Paddle reads poorly. Optional. |
+
+The core pipeline runs with no proprietary API: Engine B plus PaddleOCR or Tesseract. No separate translation
+service is used; verbatim quotes stay in the source language.
 
 ---
 
-## Supported Economies & Portals
+## Supported Economies and Portals
 
-| Economy | Official sources | Language | Notes |
-| :---- | :---- | :---- | :---- |
-| Singapore | sso.agc.gov.sg (Acts + SL print view); isomer/enterprisesg treaty registers | English | CloudFront anti-bot handled (backoff + browser fallback) |
-| Malaysia | lom.agc.gov.my · Federal Gazette · pdp.gov.my · NACSA · fta.miti.gov.my | English/Malay | Bilingual PDFs; Malay grammar profile ("Seksyen/Perkara"); OCR path |
-| Australia | legislation.gov.au API (authorised PDF + EPUB); DFAT treaty portal | English | Multi-volume compilations; EPUB↔PDF span alignment |
+| Economy | Official portal | Language | Run end to end? | Notes |
+| :---- | :---- | :---- | :---- | :---- |
+| Singapore | sso.agc.gov.sg · pdpc.gov.sg · imda.gov.sg | English | Yes: P2, P6, P7 · both engines | Engine A's P6/P7 runs are Round 1 (Jul 2026) |
+| Malaysia | lom.agc.gov.my · pdp.gov.my · mcmc.gov.my · myipo.gov.my | English / Malay | Yes: P2, P6, P7 · both engines | Bilingual PDFs; Malay citation grammar; Engine A's P6/P7 runs are Round 1 |
+| Australia | legislation.gov.au · treasury.gov.au · dfat.gov.au | English | Yes: P2, P6, P7 · both engines | Engine A's P6/P7 runs are Round 1; dfat.gov.au blocks automated access (see limitations) |
+| Thailand | ratchakitcha.soc.go.th · gprocurement.go.th · bot.or.th | Thai | Yes: P2, P6, P7 · both engines | Royal Gazette PDFs; "มาตรา" citations |
+| India | egazette.gov.in · meity.gov.in · rbi.org.in · dot.gov.in | English (Hindi) | Yes: P2, P6, P7 · both engines | Gazette notifications |
+| Indonesia | peraturan.bpk.go.id · jdih.komdigi.go.id · ojk.go.id · bi.go.id | Indonesian | Yes: P2, P6, P7 · both engines | "Pasal" citations |
+| Russian Federation | pravo.gov.ru | Russian | Yes: P2, P6, P7 · both engines | Browser-rendered pages; inserted articles ("Статья 18¹") kept |
+| Mongolia | legalinfo.mn | Mongolian | Yes: P2, P6, P7 · both engines | Official PDF export of each law |
+| Lao PDR | laoofficialgazette.gov.la · ppmd.mof.gov.la · bol.gov.la | Lao | Yes: P2, P6, P7 · both engines | Official Gazette |
+| Timor-Leste | mj.gov.tl · timor-leste.gov.tl · anc.tl | Portuguese (Tetum) | Yes: P2, P6, P7 · both engines | Jornal da República |
 
-**Adding an economy = data, not code:** a jurisdiction YAML (portals, whitelist, citation grammar, status assertions) + seed rows. Grammar profiles are named data ("Pasal", "Статья", "มาตรา" next); a government-verified reference dataset for seven further economies (CN·IN·ID·LA·MN·RU·TH) is already ingested as the expansion evaluation baseline.
+Each economy is a jurisdiction file (`engine/configs/jurisdictions/<cc>.yaml`: portals, languages, citation
+grammar) plus its seed rows. The engine code is the same for all ten.
 
 ---
 
 ## Output Format
 
-Each run writes CSV + JSON. **CSV columns are byte-identical to `OUTPUT_TEMPLATE_31MAY.xlsx` (a unit test enforces this):**
+The export (**RDTII Matrix → Export**) writes these columns in this exact order — the same schema as Round 1,
+plus Language of Source. Indicator IDs are written as text.
 
-| # | Column | Notes |
-| :---- | :---- | :---- |
-| 1–13 | Economy · Law Name · Law Number / Ref · Last Amended · Indicator ID · Article / Section · Discovery Tag · Location Reference · Verbatim Snippet · Mapping Rationale · Source URL · Confidence · Notes | Exact template order |
-| 14+ | Coverage · Verbatim Snippet (English) · Status (+ status evidence) | Additional columns, appended after the 13 standard ones |
+| # | Column | Required | Description |
+| :---- | :---- | :---- | :---- |
+| 1 | economy | Required | Official UN country name |
+| 2 | law_name | Required | Full official statute name and year |
+| 3 | law_number_ref | Optional | Official act or law number (e.g. Act 709, B.E. 2562) |
+| 4 | last_amended | Optional | Year of most recent amendment |
+| 5 | indicator_id | Required | **RDTII 2.1 code as text: `6.1`, `7.3`, `12.9`. Not "P6-I1".** |
+| 6 | article | Required | Exact article and paragraph (e.g. Art. 26(2), s. 16(1)) |
+| 7 | discovery_tag | Required | NEW = independent find; KNOWN = in the baseline you hold |
+| 8 | location_reference | Optional | PDF page number, or HTML anchor / section path |
+| 9 | verbatim_snippet | Required | Exact quoted text — no paraphrasing |
+| 10 | mapping_rationale | Optional | Max 300 characters: why this provision maps to this indicator |
+| 11 | source_url | Required | Direct URL on the official government portal |
+| 12 | confidence | Optional | Model certainty (0.00–1.00) |
+| 13 | notes | Optional | OCR issues, bilingual sources, cross-references |
+| 14 | language_of_source | Required | Original language of the document — drives C1c |
 
-The JSON carries the same fields plus: `source_artifact_id`, `content_sha256`, `citation_proof` (span ids, page, alignment status, gate results), `status_evidence_record`, `search_coverage_manifest` (absence rows), `mean_ocr_confidence`, `model_version`, `raw_context`, and run metadata (`corpus_fingerprint`, `pipeline_stats`, `cost_report`, `elapsed_seconds`).
-
-Final artifact: `submission/consolidated.csv` + `submission/consolidated.json` — one consolidated dataset across all six economy-pillar runs.
-
----
-
-## Verification: the Proof Chain
-
-What makes a ClauseChain row trustworthy — and what anyone can independently check:
-
-1. **Archived source** — every document's exact bytes are stored with SHA-256 + access date; the citation names the official URL we archived.
-2. **G1 byte-exactness** — the exported snippet is constructed *first* (source-exact slice → clause-boundary extension) and the gates verify that exact final text. A quote that is not in the source cannot be exported.
-3. **Nine gates, fail-closed** — location, official-domain authority, currentness/status (repealed-as-current is impossible by construction), whole-rule, rationale support, indicator fit, dangling cross-references, span closure.
-4. **Adversarial refuter** — a second model attacks every NEW row before humans see it.
-5. **Named human review** — citation reviewer ≠ mapping reviewer, enforced at write time; append-only receipts; every batch exports a content-hashed bundle.
-6. **Deterministic replay** — `submission_replay.py` regenerates the final CSV/JSON from approvals alone; run it twice, get identical bytes.
-7. **Honest absence** — "no provision found" rows carry a search-coverage manifest; an unresolved configured acquisition (e.g. a geo-blocked treaty register) **blocks** the absence conclusion.
-8. **Reference-data auditing** — known reference anchors are tracked per run; misses are adjudicated (`REAL_MISS` / `GOLD_WRONG` / `CORRECT_ABSTENTION`) with receipts. This pass surfaced citation errors inside the reference data itself.
+Each run's own output (`engine/outputs/<run>/output.json`) also carries the proof behind every row: the
+archived document's SHA-256, the span and page of the quote, the gate results, the model version and the
+measured cost.
 
 ---
 
-## Actual Cost Per Document
+## Measured Cost
 
-Measured from real runs (`logs/cost_report.json` is written by every run; the numbers are verifiable against the code).
+**Measured from real runs, not estimated.** Every run appends its token usage and priced cost to
+`engine/logs/cost_report.json` (`engine/packages/providers/cost.py` holds the prices), and the **Runs** page
+shows each run's cost.
 
-**Full Round-1 sweep (3 economies × 2 pillars, 53,969-provision corpus, final run of 20 Jul 2026):**
-
-| Run | Wall-clock | Measured cost |
+| Component | Engine used | Measured cost |
 | :---- | :---- | :---- |
-| Singapore P6 / P7 | 6.5 min / 13.4 min | $0.104 / $0.266 |
-| Malaysia P6 / P7 | 6.3 min / 15.5 min | $0.113 / $0.343 |
-| Australia P6 / P7 | 6.1 min / 14.5 min | $0.079 / $0.260 |
-| **Total sweep** | **~63 min** | **US$1.16** |
+| OCR | PaddleOCR, self-hosted | $0.00 (no API fees) |
+| Embedding | Engine A: text-embedding-3-small · Engine B: bge-m3 (self-hosted) | $0.077 across 18 runs · $0.00 |
+| Mapping — Engine A | gpt-6-luna | $1.287 across 18 runs |
+| Mapping — Engine B | Qwen3.8-27B, self-hosted | $0.00 (no API fees; our own GPU) |
+| Crawling | Direct HTTP / headless browser | $0.00 |
+| **Total, Engine A** | | **$0.0083 per document** |
+| **Total, Engine B** | | **$0.00 per document** (API) |
 
-- **Per document:** the sweep evaluates 100+ statutes/instruments → **≈ $0.01 per legal document** on the accuracy profile (gpt-5.4-nano bulk + mini escalation + text-embedding-3-small).
-- **Example run breakdown (Singapore P6):** 106 nano calls (187k in / 39k out tokens, $0.086) + mini escalations ($0.018) + 29 embedding calls ($0.000) = **$0.104**.
-- **Open-weight swap (Path A):** Ollama `qwen2.5:7b` + BGE-M3 + local OCR = **$0.00 API cost** (compute only).
-- Embeddings are disk-cached and documents are fingerprint-restamped when unchanged, so incremental re-runs spend only on changed evidence.
+**Measured on:** 29–30 September 2026, from `engine/logs/cost_report.json`.
+**Benchmark:** all 18 Engine A runs made with gpt-6-luna (10 economies; 164 source documents): **$1.364 in
+total**. Largest single run: Russian Federation P7, 21 documents, 20.9 minutes, $0.316. Engine B: 30 runs (10
+economies × 3 pillars, 425 source documents).
+**Wall-clock:** Engine A about **32 seconds per document**; Engine B about **104 seconds per document**.
+
+Working: cost per document = a run's `total_usd` ÷ the documents in that economy–pillar's seed list; summed over
+all runs, $1.364 ÷ 164 = $0.0083. Engine B makes no paid API calls; its cost is the electricity and depreciation
+of the GPU, which we have not metered.
 
 ---
 
 ## Known Limitations
 
-Honesty section — these are recorded in the tool's own reports, not hidden:
-
-- **Geo/TLS-blocked portals:** dfat.gov.au (Akamai) rejects non-browser TLS from our region; the Playwright fallback did not clear it either. The four AU treaty seeds are recorded as `ACQUISITION_UNRESOLVED`, which deliberately blocks the AU P6-I5 absence conclusion. NSW/Vic state registers (403 bot-walls) are deferred the same way.
-- **Reference-dataset recall:** a minority of known reference anchors are still missed; each miss is adjudicated with receipts (two were traced to errors in the reference data itself). Repairs are per-anchor work, tracked in the recall report.
-- **Delegated-legislation following:** cross-references from acts to subordinate instruments are captured as graph edges and seeded subsidiary legislation is ingested, but the engine does not yet auto-crawl every referenced instrument.
-- **Confidence calibration:** confidence values are relative, not calibrated probabilities; rows under 0.80 are flagged for human review (and all NEW rows get human review regardless).
-- **Long-span snippets:** provisions with no clause boundary inside the export budget are flagged `REVIEW_REQUIRED_LONG_SPAN` rather than truncated; a handful of list-introduced provisions await the structural-closure improvement.
+- **robots.txt is not parsed.** The fetcher requests only the official document URLs in its seed lists, one at a
+  time, and follows no links; it does not read a site's robots.txt before doing so.
+- **Blocked portals:** some government sites refuse automated access. dfat.gov.au (Australia's treaty register)
+  rejects non-browser connections from our region, so those documents are recorded as unresolved, which in turn
+  blocks the related "no provision found" conclusion instead of letting it pass. A few Round-2 sources needed a
+  manual download.
+- **Pillars and economies not yet configured:** rubrics exist for pillars 2, 6 and 7. Another pillar needs its
+  rubric file (`engine/configs/rdtii/pillar_N.yaml`) and seed rows; Viet Nam, China and Kazakhstan need a
+  jurisdiction file and seed rows. Both are data, not code, but the live hour would start from that data.
+- **Engine B is slower:** about three times Engine A's time per document, on a single self-hosted GPU.
+- **Scanned PDFs:** the self-hosted OCR returns text per page without word positions, so scanned documents get
+  a page-level location reference rather than a paragraph anchor.
+- **Long provisions:** a provision with no clause boundary inside the export limit is flagged for review rather
+  than cut short.
+- **Confidence calibration:** confidence values are relative, not calibrated probabilities. Rows below 0.80 are
+  flagged for human review, and every NEW row is reviewed by a person regardless of its score.
 
 ---
 
 ## Running the Test Suite
 
-```bash
-cd engine && python -m pytest tests/     # 148 tests
-```
+In the running app (no local Python needed):
 
-| Test area | Files |
+    docker compose exec engine-worker sh -c 'cd /srv/clausechain/engine && .venv/bin/python -m pytest tests -q'
+    docker compose exec backend python manage.py test
+
+Or on a development machine: `cd engine && pytest tests/` and `cd backend && python manage.py test`.
+
+| Test file | What it tests |
 | :---- | :---- |
-| Extractors (HTML/PDF/EPUB grammars) | `test_html_sso.py`, `test_epub_act.py`, `test_pdf_act.py`, `test_rerun_fixes.py` |
-| Retrieval + caps + source-type scoping | `test_rerun_wiring.py`, `test_graph_search.py` |
-| Gates & snippet finalization | `test_gates_p3.py`, `test_regression_dodont.py` |
-| Output schema (byte-equal to template) | `test_csv_writer.py`, `test_template_contract.py` |
-| Decision contract & replay | `test_apply_decisions.py`, `test_champion_contract.py` |
-| Cost metering & model routing | `test_cost_routing.py`, `test_model_router.py` |
+| `test_html_sso.py`, `test_pdf_act.py`, `test_epub_act.py` | Extractors: portal HTML, statute PDFs with citation grammars, EPUB aligned to the authorised PDF |
+| `test_gates_p3.py`, `test_regression_dodont.py` | Gates and snippet finalisation: byte-exact quotes, legal matching rules |
+| `test_csv_writer.py`, `test_template_contract.py` | Output schema matches the template exactly |
+| `test_apply_decisions.py`, `test_champion_contract.py` | Signed-decision contract and deterministic replay |
+| `test_cost_routing.py`, `test_model_router.py` | Cost metering, engine profiles and switching |
+| `test_pillar2.py`, `test_round2_final_packs.py` | Pillar 2 rubric and the Round-2 economies' seed packs |
+| `test_prepare_review_inputs.py`, `test_sources_actions.py`, `test_http_resilience.py` | Refresh chain per engine, Build sources / Clear downloads, model-endpoint retries |
+| `backend/workspace/tests.py` | Snapshot import, engine separation, review decisions, runs queue, decision import |
 
 ---
 
-## Reproducing the Benchmark Results
+## Reproducing Your Submitted Evidence
 
-```bash
-python scripts/eval_vs_master.py         # recall vs the provided reference database
-python scripts/validate_graph.py         # source-artifact + provision integrity
-python scripts/champion_validate.py      # full release-readiness contract
-```
+    docker compose exec engine-worker sh -c 'cd /srv/clausechain/engine && .venv/bin/python scripts/submission_replay.py'
 
-These print which known provisions were matched, which NEW ones were discovered, and every integrity failure by name.
+Regenerates the final dataset from the consolidated candidates and the signed decisions alone
+(`engine/data/review/decisions.json`), into `engine/submission/`. Run it twice and the output is byte-identical,
+so a reviewer can compare it row by row with what we filed. The Local (Engine B) workspace replays the same way
+with `CLAUSECHAIN_REVIEW_MODE=local` set.
 
 ---
 
@@ -359,23 +355,24 @@ These print which known provisions were matched, which NEW ones were discovered,
 
 | Role | Name | Responsibility |
 | :---- | :---- | :---- |
-| Team Lead / Technical Lead | Abu Naser Md. Nafew | Architecture, engine, full-stack, deployment |
-| Substantive Lead | MD. INSAFUL RAHMAN TUSAR | Legal review, mapping sign-off, output QA |
+| Technical Lead | Abu Naser Md. Nafew | AI architecture, OCR, pipeline, full stack, deployment |
+| Substantive Lead | MD. INSAFUL RAHMAN TUSAR | Legal and policy analysis, mapping sign-off, output QA |
 | AI Engineer | Punam Chowdhury | AI engineering |
 | AI Engineer | MD SANIUL BASIR SAZ | AI engineering |
-| UI/UX Designer | FARHANA BORSHA | Review console & workspace design |
+| UI/UX Designer | FARHANA BORSHA | Review console and workspace design |
 
 ---
 
-## License
+## Licence
 
-Released under the **Apache License 2.0**. See [LICENSE](LICENSE).
-
-Third-party licences: Python (PSF), httpx/pydantic/numpy/pytest (BSD/MIT), pymupdf (AGPL — unmodified library use), SQLite/FTS5 (public domain), Neo4j Community (GPLv3, optional), Django/DRF (BSD), Next.js/React (MIT), BGE-M3 (MIT), Ollama-served open-weight models per their model licences.
+Released under the **Apache License 2.0**, as required. See [LICENSE](LICENSE) for the full text.
 
 ---
 
+The release tag we record is the version that runs on 15 October. Settings may change on the day; code may not.
+
+---
 
 ## Acknowledgements
 
-Built for the UN Global Hackathon on AI for Digital Trade Regulatory Analysis, organised by UNESCAP and KMITL. We thank the workshop faculty whose sessions shaped this design — statute-reading methodology (Henry Gao), legal-finding fields (EUI DTI), GraphRAG-for-legal (KMITL), and the noise-audit uncertainty framing (Maynooth).
+Built for the UN Global Hackathon on AI for Digital Trade Regulatory Analysis, organised by ESCAP and KMITL.

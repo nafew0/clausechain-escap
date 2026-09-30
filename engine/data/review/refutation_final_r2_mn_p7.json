@@ -1,0 +1,86 @@
+[
+ {
+  "indicator": "P7-I2",
+  "law": "Law of Mongolia on Cybersecurity (2021)",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete legal-function defect: Article 1 expressly establishes the system, principles, and legal foundations for cybersecurity and regulates related relations. That supports a dedicated cybersecurity framework, rather than merely a privacy or sectoral security clause."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has no hunt_in constraint and scores a dedicated horizontal framework at 0; it permits a provision evidencing that framework as a valid row. The law’s cybersecurity purpose and broad cyberspace scope support the claimed framework, with no sector-only limitation shown. G4’s WARN does not refute the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted purpose clause establishes a cybersecurity system, principles, and legal foundations, and covers relations concerning information in cyberspace and the cyber environment. It supports the rationale and does not indicate a sector-only scope; the text need not enumerate every covered sector to evidence the framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Law of Mongolia on Cybersecurity (2021)",
+  "article": "Art. 6",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 6 describes core cybersecurity functions, and the law’s title identifies a dedicated cybersecurity law. The excerpt does not independently specify the law’s horizontal reach, but it also does not show a sectoral limitation; that gap alone does not make the mapping wrong."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I2, a dedicated horizontal cybersecurity framework scores 0, while a dedicated sectoral-only framework scores 0.5. The dedicated-law title and Article 6’s governance, prevention, detection, response, and recovery functions support framework evidence; nothing supplied establishes that the law is sectoral-only. The excerpt may be a valid evidence row even though the indicator measures framework presence."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text establishes cybersecurity governance and operational activities, including prevention, detection, response, and recovery. It does not expressly state who is covered or that coverage is horizontal, so that classification is not proved by this excerpt alone; however, the text does not contradict it or establish a narrower sectoral scope."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law of Mongolia on Public Information Transparency (2021)",
+  "article": "Art. 34",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 34.1.1 makes the listed duties obligatory, and 34.1.3 covers recording and storage of system activity logs. The excerpt does not establish that the measure applies only to government data, so the scope exclusion is not clearly triggered. With no specified duration, the rubric permits recording the requirement and scoring 0."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The sectoral setting is not disqualifying: the rubric expressly hunts in sectoral laws. Article 34.1.3 evidences a storage requirement but specifies no minimum days, months, or years, so under the rubric’s no-minimum rule it is a valid evidence row scored 0."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text makes the information manager responsible for recording, storing, and protecting activity logs for systems under its responsibility. It gives no retention duration and does not say storage is merely permissive or impose a maximum; thus it supports a retention requirement scored 0, not a specified minimum."
+   }
+  ]
+ }
+]

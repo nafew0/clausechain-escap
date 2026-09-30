@@ -1,0 +1,164 @@
+{
+ "economy": "Indonesia",
+ "pillar": 7,
+ "run": "run-id-p7-1790728904",
+ "krippendorff_alpha": 0.72,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence cites Law No. 27 of 2022 on Personal Data Protection, which is explicitly labeled as a 'Horizontal' framework, indicating the existence of a compre"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of Law No. 27 of 2022, a comprehensive horizontal legal framework for personal data protection that includes provisions for "
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of Law No. 27 of 2022, a horizontal personal data protection law that establishes comprehensive obligations for data control"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The provided text from Government Regulation No. 71/2019 establishes general obligations for electronic system operators but does not explicitly contain the spe"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence cites Regulation No. 71 of 2019, which is a dedicated horizontal legal framework governing electronic systems and transactions across all sectors, "
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The provided evidence consists of Government Regulation No. 71/2019, which is a horizontal regulation but functions as an administrative and operational framewo"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence was found to establish a minimum data retention period, resulting in a score of 0."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of a specified minimum data retention period was found in the provided legal text."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of a specified minimum data retention period was found in the provided gate-verified rows."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The provided text explicitly limits the requirement to appoint a Data Protection Officer (DPO) to specific sectors or conditions (public service, large-scale pr"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence indicates that the requirement to appoint a Data Protection Officer (DPO) under Article 53 is conditional on specific criteria (such as public serv"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence indicates that Data Protection Impact Assessments (DPIA) are required only for high-risk processing (Art. 34) and Data Protection Officers (DPO) ar"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no government-access measure found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence was found to support the existence of a measure allowing government access to personal data without independent judicial authorization."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found to support the existence of a measure allowing government access to personal data without independent judicial authorization."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The absence of verified evidence for a measure allowing government access without judicial authorization supports the default assumption that no such unrestrict"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

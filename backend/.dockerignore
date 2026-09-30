@@ -1,0 +1,22 @@
+# Keeps the backend/Dockerfile.dev build context small and, more importantly,
+# stops a host-created venv/ (built for macOS/whatever the host OS is) from
+# being copied into the Linux image, where it can't run.
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*.egg-info/
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+var/
+.env
+.env.local
+.pytest_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+.git

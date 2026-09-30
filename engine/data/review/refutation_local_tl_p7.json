@@ -1,0 +1,506 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Constitution of the Democratic Republic of Timor-Leste (2002",
+  "article": "s. 38",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text (s. 38(2)) is a legislative mandate ('The law shall determine...'), not the comprehensive legal framework itself. P7-I1 asks if the economy LACKS a comprehensive law. A constitutional provision directing future legislation does not establish the existence of the horizontal law required for a score of 0. It evidences the *need* for the framework or a constitutional right, but not the *presence* of the comprehensive statute. Therefore, it does not support the rationale that the 'con"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Applying the rubric's scoring logic: Score 0 requires 'A comprehensive horizontal framework exists.' The snippet is a constitutional article, not the framework law. While it shows a horizontal *scope* of rights, it does not prove the existence of the comprehensive *law* (e.g., a Data Protection Act). Using this to map to P7-I1 as evidence of the framework's existence is a category error; it is evidence of the constitutional basis, not the statutory framework itself. The indicator measures the pr"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The exact text states 'The law shall determine the concept...'. This is a directive to the legislature, not the substantive law itself. The text establishes a right and a prohibition (s. 38(3)), but the specific snippet cited (s. 38(2)) explicitly defers the definition and conditions to 'the law'. It does not establish that such a law *exists*; it only establishes that one *should* determine these matters. Thus, the text does not establish the existence of the comprehensive framework claimed in "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Decreto-Lei n.º 15/2012 Regulamentação do Sector das Telecom",
+  "article": "Art. 49",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is correctly identified as sectoral (telecommunications) and does not purport to be a comprehensive horizontal law. The mapping rationale correctly states that it evidences a sectoral framework, which aligns with the rubric's exclusion that sectoral laws are recorded but do not make the framework comprehensive. There is no legal-function defect; the text clearly limits scope to 'operators' and 'subscribers' in the telecom sector."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '1' for no framework, '0.5' for sectoral-only, and '0' for comprehensive. The mapping provides evidence of a sectoral law (DL 15/2012, Art. 49). Under the rubric, this evidence supports a score of 0.5 (assuming no other horizontal law exists, which is the context of 'Lack of comprehensive...'). The mapping rationale correctly identifies this as sectoral evidence. The indicator is absence-scored (high score = lack), so providing evidence of a sectoral law is a valid ev"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text explicitly imposes obligations on 'operadores' (operators) regarding 'assinante' (subscriber) information, including consent, security, and proportionality. This textually establishes a data protection regime within the telecommunications sector. It does not claim to be a horizontal law, nor does it misrepresent its scope. The text supports the rationale that it is a sectoral data protection provision."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "ANC Guidelines on the Registration of SIM Cards for Prepaid ",
+  "article": "cl. 5.2",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause imposes a mandatory duty ('must keep') for a specific duration (12 months) upon deactivation. This constitutes a clear legal function of minimum retention. There is no scope defect; the rubric explicitly includes telecommunications sectoral law in 'hunt_in', and the provision is not limited to government data."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'keep that subscriber’s information for a period of 12 months' matches the positive cue 'for a period of [X]'. It specifies a numeric minimum period, satisfying the scoring criterion for '1'. It is not a retention limit (e.g., 'no longer than'), so the exclusion for data minimization does not apply. The sectoral nature (telecom) is expressly permitted by the rubric's hunt_in."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states the provider 'must keep' information 'for a period of 12 months'. This textually establishes a floor (minimum) of 12 months, not a ceiling. The context confirms this applies to prepaid mobile services, which falls within the telecommunications sector allowed by the rubric. The text supports the rationale of a specified minimum retention period."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "ANC Guidelines on the Registration of SIM Cards for Prepaid ",
+  "article": "cl. 5.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause imposes a mandatory retention duty ('must keep') for a specific class of records (SIM registration). While the duration is conditional ('as long as... active'), it is not a data minimization limit like 'no longer than necessary'. It is a valid evidence row for the indicator, even if it scores 0 for lacking a fixed numeric minimum."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric explicitly states that a retention requirement WITHOUT a specified minimum period is still RECORDED and scored 0. The snippet provides a retention requirement in a sectoral law (telecom), which is within the 'hunt_in' scope. The mapping correctly identifies the absence of a numeric minimum, aligning with the scoring rule for score 0."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text 'must keep... for as long as the prepaid mobile service to a subscriber is active' establishes a retention obligation. It does not contain the negative cue 'no longer than necessary' or any language suggesting a ceiling. It is a distinct retention rule, not a misread of a different legal function."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Cont",
+  "article": "Art. 21",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory archival duty ('são mantidos' - are maintained) for public procurement records. While the scope is limited to the Public Administrative Sector, the rubric's hunt_in explicitly includes sectoral laws, and P7-I3 does not exclude sectoral retention rules unless they apply *only* to government data in a way that excludes the broader data protection context (which is not the case here; it's a specific sectoral retention rule). The legal function is clearly record ret"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly states 'prazo mínimo de 10 anos' (minimum period of 10 years). This matches the positive cue 'keep ... for a period of not less than' and the scoring criterion for '1' (A minimum retention period is clearly specified). It is not a retention limit (like 'no longer than necessary'), so the 'wrong direction' failure mode does not apply. The sectoral nature (Public Procurement) is acceptable under the rubric's hunt_in."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'O arquivo e o sistema de registo são mantidos ... por um prazo mínimo de 10 anos' establishes a mandatory minimum retention period of 10 years. The modality is passive voice indicating a state of being maintained by the entities, which in legal context implies a duty. The G6 WARN regarding 'no must/shall modality' is a false positive because the passive construction 'são mantidos' (are maintained) in a regulatory code context functions as a mandatory requirement, not a permissive"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio El",
+  "article": "Art. 30",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('organizam e mantêm') on certification entities to maintain a registry of certificates. While it does not specify a numeric minimum duration, the rubric explicitly allows recording retention requirements without a specified minimum period as a score of 0. The mapping correctly identifies this as a retention duty within the sectoral scope (electronic certification/telecom) permitted by the hunt_in criteria."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P7-I3 asks if data must be kept for at least a specified period. The text mandates maintenance of a registry but lacks a specific time unit (days/years). According to the scoring rule '0: No minimum period specified. A retention requirement WITHOUT a specified minimum period is still RECORDED, scored 0', this mapping is valid evidence for the indicator, supporting a score of 0. The sectoral nature (electronic certification) is explicitly covered under 'Sectoral law: ... telecom, .."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states entities 'organizam e mantêm' (organize and maintain) a registry. This establishes a continuous obligation to keep the data available, which constitutes a retention requirement. The absence of a specific duration does not negate the existence of the retention duty itself, which is what the indicator seeks to identify for scoring purposes (presence of duty vs. absence of numeric minimum). The rationale correctly notes the lack of numeric specification, aligning with the score 0 ou"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Lei n.º 12/2021 Código Mineiro (Mining Code)",
+  "article": "Art. 110",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('deve conservar') to retain records for a minimum of five years ('período mínimo de cinco anos'). This is a clear minimum retention period, not a limit or permissive option. The sectoral nature (mining) is explicitly permitted by the rubric's hunt_in criteria."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 scores 1 when a minimum retention period is clearly specified. The text 'por um período mínimo de cinco anos' matches the positive cue 'keep ... for a period of not less than' (or equivalent minimum). The G6 WARN regarding modality is a false positive; 'deve' is the Portuguese imperative/obligation marker equivalent to 'shall/must', not 'may'."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states 'deve conservar... por um período mínimo de cinco anos'. This explicitly establishes a floor (minimum) of five years for record retention. It does not state 'no longer than' (which would be a limit) and does not condition the retention on a future event that negates the minimum. The text supports the mapping rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Lei n.º 12/2021 Código Mineiro (Mining Code)",
+  "article": "Art. 55",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to maintain records ('está sujeito às seguintes obrigações', 'Manter registos'), which is a valid legal function for a retention indicator. The absence of a specific duration does not constitute a legal-function defect; rather, it correctly triggers the 'score 0' condition for a retention requirement without a specified minimum period."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in explicitly includes 'companies/accounting' and sectoral laws. The text mandates keeping financial and commercial records, which falls within the scope of data retention. Since no minimum period (e.g., 'at least X years') is specified, the mapping correctly supports a score of 0 under the rule that a retention requirement without a specified minimum is recorded but scored 0."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states the holder is subject to obligations to 'Manter registos' (maintain records) and 'Conservar' (preserve) samples and records. It does not contain language limiting retention to 'no longer than necessary' (which would be a data minimization limit). The text establishes a duty to keep records, which is the prerequisite for the indicator, even if the duration is undefined."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Lei n.º 17/2011 Regime Jurídico da Prevenção e do Combate ao",
+  "article": "Art. 15",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty on entities to maintain records ('mantêm arquivos') for a specified duration. The scope is correctly identified as sectoral (AML/CFT), which is explicitly permitted by the rubric's hunt_in criteria. There is no legal-function defect; the text establishes a clear obligation to retain data, not merely a permissive option or a different legal concept."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a minimum retention period ('keep >= X'). The text explicitly states 'pelo período de, pelo menos, cinco anos' (for a period of at least five years) in multiple sub-paragraphs. This matches the positive cue 'for a period of not less than' and satisfies the scoring criterion for '1'. The G6 WARN regarding modality is a false positive; 'mantêm' (maintain) in this regulatory context is a mandatory obligation, and the 'pelo menos' (at least) phrasing confirms the minimu"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text contains the phrase 'pelo período de, pelo menos, cinco anos' (for a period of at least five years). This textual evidence directly establishes a minimum retention period of five years. The context confirms this applies to identification documents, transaction information, and reports. The text does not establish a maximum limit or a permissive option; it sets a floor for retention, which is the precise legal function required by the indicator."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Lei n.º 6/2005 Regime do Licenciamento, Supervisão e Regulaç",
+  "article": "Art. 26",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('devem manter') to keep records of activities from the last five years. This constitutes a specific legal function of record retention with a defined temporal scope, satisfying the legal function requirement for P7-I3. The sectoral nature (insurance) is explicitly permitted by the rubric's 'hunt_in' criteria."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 scores '1' when a minimum retention period is clearly specified. The text 'actividades dos últimos cinco anos' (activities of the last five years) establishes a clear 5-year minimum retention period for those records. This aligns with the positive cue 'for a period of seven years' (analogous specific duration) and is not a retention limit (data minimization), thus correctly scoring high."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that companies 'must maintain... records... of the activities of the last five years' ('devem manter... registos... das actividades dos últimos cinco anos'). This textually establishes a mandatory requirement to retain data for at least the preceding five-year period. The G6 warning regarding modality is a false positive; the text uses 'devem' (must/shall), not 'podem' (may), confirming the mandatory nature of the retention."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervisi",
+  "article": "s. 31",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to maintain accounts and records. While it lacks a specific numeric duration, the rubric explicitly states that a retention requirement without a specified minimum period is still recorded and scored 0. The mapping correctly identifies this as a retention duty within the banking sector, which is a valid source under the 'hunt_in' criteria. There is no legal function defect; the text establishes the obligation to keep records, even if the duration is open-en"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 (Minimum period of data retention) specifies that a score of 0 is assigned when 'No minimum period specified' but a retention requirement exists. The snippet 'Banks shall maintain at all times accounts and records' evidences a retention requirement. The absence of a specific 'at least X years' clause means it does not score 1, but it is a valid evidence row for the indicator with a score of 0. The mapping rationale correctly notes the score 0 outcome. This aligns with the '4"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'Banks shall maintain at all times accounts and records' establishes a continuous duty to keep records. It does not contain language indicating a retention limit (e.g., 'no longer than necessary') which would be an exclusion. It does not refer to government data only, but to bank operations. The text supports the claim that a retention duty exists. The lack of a specific time frame is a factual observation that leads to the correct score of 0, not a refutation of the mapping's val"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervisi",
+  "article": "s. 27",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty on banks to 'prepare and maintain' specific records, which constitutes a valid legal function for data retention. The mapping correctly identifies that while the duty exists, no specific minimum duration is stated, aligning with the indicator's scoring logic for score 0. There is no scope defect as banking is an accepted sectoral area under the rubric's hunt_in."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric explicitly states that a retention requirement WITHOUT a specified minimum period is still RECORDED and scored 0. The snippet provides the mandatory retention duty ('shall prepare and maintain') but lacks the positive cues for a minimum period (e.g., 'at least', 'not less than'). Therefore, the mapping to P7-I3 with a score of 0 is methodologically correct and does not violate the exclusion for retention limits (which would be 'no longer than necessary')."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a duty to maintain records but contains no temporal qualifiers indicating a minimum duration. It does not contain language suggesting a maximum limit (e.g., 'only as long as necessary'), nor does it mischaracterize the nature of the records. The text supports the rationale that a retention duty exists but the specific minimum period is absent, which is the precise condition for a score of 0 under the provided rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Constitution of the Democratic Republic of Timor-Leste (2002",
+  "article": "s. 37",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text (Constitution s.37) governs the physical entry into a 'home' and the privacy of 'correspondence'. P7-I5 specifically concerns government access to 'personal data' (typically electronic/digital data held by third parties or in digital systems). While physical search warrants are a related legal concept, the specific legal function of P7-I5 is the authorization regime for accessing *data*, not physical premises. Mapping a physical search warrant provision to a data access indicator "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the rubric's 'court-order test', the provision explicitly requires a 'written order of a competent judicial authority' for the action described. The rubric states that 'Access gated on a court order / judicial warrant does NOT score 1 — it supports score 0'. Although the subject matter is physical entry rather than digital data access (a scope issue noted by opposing counsel), the *legal mechanism* described (judicial authorization) aligns with the negative cue 'only under a warrant iss"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The exact quoted text states: 'A person's home shall not be entered...'. The mapping rationale claims this 'Maps to P7-I5 because it establishes the judicial safeguard... governing access to private spaces'. P7-I5 is defined as 'Requirements to allow government access to **personal data**'. The text explicitly restricts 'entry into... home'. It does not mention 'personal data', 'electronic data', 'databases', or 'information systems'. While 'correspondence' is mentioned in the section header, th"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Decreto do Governo n.º 9/2008 Prestação de serviços de telec",
+  "article": "Art. 8",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "lost exception",
+    "reason": "The rationale misreads the legal function by treating the absence of an explicit warrant requirement in Paragraph 1 as a standalone warrantless power. However, Paragraph 2 explicitly conditions the operator's duty to provide information on the request being made 'no prazo fixado pelo juiz' (within a deadline set by the judge) and referencing a judicial process. This indicates that the access mechanism is inherently tied to judicial proceedings and oversight, not a standalone executive power. Ign"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The rubric's legal_test requires identifying access that does NOT require independent judicial authorization. The snippet 'podem ser solicitadas informações' (information may be requested) is a permissive statement of possibility within a judicial process, not a grant of executive power to bypass judicial authorization. The rationale fails to establish that the government can access data *without* judicial involvement; instead, the text describes a collaboration mechanism *within* a judicial pro"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims Paragraph 1 allows requests 'without explicitly requiring a judicial warrant.' Textually, Paragraph 1 states requests can be made 'within the scope of the judicial process.' It does not state that requests can be made *without* judicial authorization; it states they occur *within* a judicial context. Furthermore, Paragraph 3 explicitly requires written judicial authorization for requests by the Public Prosecutor. The rationale's inference that 'other authorities may act with"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio El",
+  "article": "Art. 35",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision correctly identifies a specific legal function: the disclosure of identity data by certification entities to the judicial authority. It is not a generic processing rule but a specific access/disclosure mechanism. The scope is sectoral (electronic certification), but the rubric's hunt_in explicitly directs reviewers to look beyond the privacy statute into sectoral laws (telecom, etc.) for access powers. Therefore, the sectoral nature is not a defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the Court-Order Test. The text states data is communicated 'sempre que esta o ordenar' (whenever it orders) and follows the criminal procedural regime. This indicates access is gated by a judicial order. According to the rubric, 'Access gated on a court order / judicial warrant does NOT score 1 — it supports score 0'. The rationale correctly identifies this as supporting score 0. The G6 WARN regarding modality is a minor textual nuance ('comunicam' is present indicative, "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'As entidades certificadoras comunicam à autoridade judiciária, sempre que esta o ordenar...' establishes that the communication of data is conditional upon an order from the judicial authority. The context confirms this is part of the data protection regime for certification entities. The text does not establish warrantless access; rather, it explicitly ties the action to a judicial order ('ordenar'). Thus, the text supports the claim that this is a court-gated access powe"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Decreto-Lei n.º 13/2005 Código de Processo Penal",
+  "article": "Art. 56",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly authorizes police to conduct searches and seizures 'sem mandado judicial' (without a judicial warrant) in urgent cases. This constitutes a concrete legal function of warrantless access. While the scope is physical searches, the rubric's hunt_in explicitly directs to look at criminal procedure codes for access powers, and the mapping correctly identifies a power exercisable without independent judicial authorization, which is the core defect to be identified for scoring p"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the P7-I5 rubric, the indicator asks if the government can access personal data WITHOUT authorization of an independent judicial body. The text states 'A polícia pode efectuar buscas... sem mandado judicial' (Police may conduct searches... without a judicial warrant). This matches the positive cue 'without a warrant' and the scoring criterion for '1' (access without independent judicial authorization). The presence of a post-hoc judicial review (Art. 56(2)) does not negate the initial w"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes that police may perform searches and seizures without a judicial warrant in specific urgent scenarios (flagrant delicto or risk of evidence destruction). The context confirms this is a general provision in the Code of Criminal Procedure. The text does not limit this to non-personal data; rather, it authorizes the state to access physical items (which may contain personal data) without prior judicial authorization. The rationale that this maps to P7-I5 is support"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Decreto-Lei n.º 13/2005 Código de Processo Penal",
+  "article": "Art. 184",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision correctly identifies the judicial gate for coercive measures. While it does not explicitly define the scope of 'data access' within the term 'coercive measures', it establishes the general procedural requirement for judicial authorization in the investigation phase, which is a valid legal basis for arguing that access is not warrantless. It does not contain a defect that makes the mapping wrong; it simply provides a general safeguard rather than a specific data access rule, which i"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric states that 'a power exercisable ONLY under a court order/warrant supports score 0' and to 'record both kinds of provision'. The snippet explicitly states that remaining coercive measures are applied 'pelo juiz' (by the judge). This aligns with the negative cue 'pursuant to a court order' and supports the score 0 rationale. The mapping correctly identifies this as evidence of judicial gating, which is the required outcome for this indicator's scoring logic."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly distinguishes between the 'termo de identidade e residência' (which police can apply) and 'As restantes medidas de coacção' (which the judge applies). The rationale claims this confirms access is 'exclusively court-gated'. While the text shows police can apply one specific measure without a judge, the mapping focuses on the 'remaining measures' which are judge-gated. The snippet does not support a claim that *all* access is court-gated (due to para 1), but it does support the"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Lei n.º 17/2011 Regime Jurídico da Prevenção e do Combate ao",
+  "article": "Art. 21",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies a legal function defect in the opposing view: Article 21(1) grants the UIF (a government body) the power to request information from entities without the judicial authorization required in Article 21(2). This distinction between warrantless request (n.1) and warrant-gated access (n.2) is legally significant and accurately captured. The scope is horizontal as it applies to entities subject to reporting obligations, not just government data."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the P7-I5 rubric, the indicator asks if government access can occur WITHOUT independent judicial authorization. The snippet explicitly states the UIF 'pode solicitar' (may request) information 'a qualquer entidade' (to any entity) without mentioning a warrant or court order, unlike paragraph 2 which explicitly requires 'prévia autorização judicial'. This fits the positive cue 'shall provide access to ... upon request' and the scoring criterion for score 1 (access without independent jud"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text in paragraph 1 states: 'A UIF pode solicitar a qualquer entidade ou pessoa... qualquer informação adicional que julgue necessária...'. It does not contain the negative cues 'only under a warrant' or 'pursuant to a court order'. In contrast, paragraph 2 explicitly includes 'mediante prévia autorização judicial'. The text strictly establishes that paragraph 1 access is not conditioned on judicial authorization, supporting the rationale that this is a warrantless access power."
+   }
+  ]
+ }
+]

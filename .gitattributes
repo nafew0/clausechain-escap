@@ -1,0 +1,18 @@
+# Keep LF line endings on every OS: Dockerfiles, shell scripts and the nginx
+# config inside deploy/Dockerfile break inside Linux containers with CRLF.
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+# Binary assets
+*.png binary
+*.jpg binary
+*.pdf binary
+*.xlsx binary
+*.docx binary
+*.pptx binary
+*.zip binary
+*.gz binary
+*.db binary
+# CSV data files keep their bytes exactly (some are CRLF)
+*.csv -text

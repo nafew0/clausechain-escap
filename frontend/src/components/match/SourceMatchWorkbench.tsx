@@ -24,8 +24,10 @@ import {
 import { LazyMotion, MotionConfig, domAnimation, m } from 'motion/react'
 
 import { useProofAsset, useSourceMatch } from '@/hooks/workspace'
+import { useReviewContext } from '@/hooks/workspace'
+import { DecisionPanel } from '@/components/review/ReviewWorkbench'
 import { cn } from '@/lib/utils'
-import type { EvidenceParams, JsonObject, WorkspaceQueue } from '@/types/workspace'
+import type { EvidenceParams, JsonObject, ReviewItem, WorkspaceQueue } from '@/types/workspace'
 
 const FILTER_KEYS = ['economy', 'indicator', 'pillar', 'tag', 'status'] as const
 const QUEUES = new Set<WorkspaceQueue>(['new', 'absence', 'recall', 'zone3', 'known'])
@@ -52,6 +54,9 @@ function retainedQuery(search: URLSearchParams) {
     const value = search.get(key)
     if (value) params.set(key, value)
   }
+  const textFilter = search.get('filter')
+  if (textFilter) params.set('filter', textFilter)
+  if (search.get('mode') === 'local') params.set('mode', 'local')
   const query = params.toString()
   return query ? `?${query}` : ''
 }
@@ -130,6 +135,7 @@ export default function SourceMatchWorkbench({ findingKey }: { findingKey: strin
   const search = useSearchParams()
   const filters = useMemo(() => filtersFrom(search), [search])
   const query = useSourceMatch(findingKey, filters)
+  const context = useReviewContext(query.data?.review_queue ?? 'new', query.data?.stable_key)
   const suffix = retainedQuery(search)
 
   if (query.isPending) return <div className="match-page-state"><LoaderCircle size={30} /><h1>Opening source proof…</h1></div>
@@ -148,8 +154,32 @@ export default function SourceMatchWorkbench({ findingKey }: { findingKey: strin
     !exactSnippet ||
     !rawContext.toLocaleLowerCase().includes(exactSnippet.toLocaleLowerCase())
   )
-  const backHref = filters.queue ? `/review?queue=${filters.queue}` : '/review'
+  const backParams = new URLSearchParams()
+  backParams.set('queue', data.review_queue)
+  backParams.set('item', data.stable_key)
+  for (const key of [...FILTER_KEYS, 'filter'] as const) {
+    const value = search.get(key)
+    if (value) backParams.set(key, value)
+  }
+  if (search.get('mode') === 'local') backParams.set('mode', 'local')
+  const backHref = `/review?${backParams.toString()}`
   const linkFor = (key: string | null) => key ? `/match/${key}${suffix}` : '#'
+  const sourceApprovalEligibility = proofMissing || anchorProofMissing
+    ? { eligible: false, reason: proofMissing ? 'The proof PNG is unavailable in this view. Do not approve until it is restored.' : 'The archived HTML anchor cannot be reconciled in this view. Do not approve until it is restored.' }
+    : data.approval_eligibility
+  const reviewItem: ReviewItem = {
+    id: 0,
+    position: data.navigation.position - 1,
+    row,
+    stable_key: data.stable_key,
+    finding_key: data.finding_key,
+    blocked: data.blocked,
+    block_reason: data.block_reason,
+    source_hash: data.source_hash,
+    review_state: data.review_state,
+    latest_correction: data.latest_correction,
+    approval_eligibility: sourceApprovalEligibility,
+  }
 
   return (
     <LazyMotion features={domAnimation}>
@@ -180,34 +210,41 @@ export default function SourceMatchWorkbench({ findingKey }: { findingKey: strin
           </section>
 
           <main className="match-columns">
-            <m.article className="match-claim-card" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }}>
-              <span className="match-eyebrow">CLAUSECHAIN CLAIM</span>
-              <h1>{display(row['Law Name'])}</h1>
-              <div className="match-claim-meta"><span>{display(row.Economy)}</span><span>{display(row['Indicator ID'])}</span><span>{display(row['Article / Section'])}</span></div>
-              <blockquote><mark>{exactSnippet || 'No affirmative evidence snippet.'}</mark></blockquote>
-              <section><h2>Why it maps</h2><p>{display(row['Mapping Rationale'])}</p></section>
-              <dl className="match-proof-facts">
-                <div><dt>Location</dt><dd>{data.match.page_number ? `Page ${data.match.page_number}` : display(data.match.anchor)}</dd></div>
-                <div><dt>Hierarchy</dt><dd>{data.match.article_path.length ? data.match.article_path.join(' › ') : display(row['Article / Section'])}</dd></div>
-                <div><dt>Alignment</dt><dd>{display(data.match.alignment_status)}{data.match.alignment_score !== null ? ` · ${Math.round(data.match.alignment_score * 100)}%` : ''}</dd></div>
-                <div><dt>Verified</dt><dd>{data.match.verified_at ? new Date(data.match.verified_at).toLocaleString() : 'Pending technical verification'}</dd></div>
-              </dl>
-              <section className="match-status-fact"><h2>Status evidence</h2><p>{sourceFact(statusRecord) || display(data.source.status_evidence)}</p>{statusRecord?.fact_url ? <a href={display(statusRecord.fact_url)} target="_blank" rel="noreferrer">Verify status fact <ExternalLink size={13} /></a> : null}</section>
-            </m.article>
+            <div className="match-left-column">
+              <m.article className="match-claim-card" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }}>
+                <span className="match-eyebrow">CLAUSECHAIN CLAIM</span>
+                <h1>{display(row['Law Name'])}</h1>
+                <div className="match-claim-meta"><span>{display(row.Economy)}</span><span>{display(row['Indicator ID'])}</span><span>{display(row['Article / Section'])}</span></div>
+                <blockquote><mark>{exactSnippet || 'No affirmative evidence snippet.'}</mark></blockquote>
+                <section><h2>Why it maps</h2><p>{display(row['Mapping Rationale'])}</p></section>
+                <dl className="match-proof-facts">
+                  <div><dt>Location</dt><dd>{data.match.page_number ? `Page ${data.match.page_number}` : display(data.match.anchor)}</dd></div>
+                  <div><dt>Hierarchy</dt><dd>{data.match.article_path.length ? data.match.article_path.join(' › ') : display(row['Article / Section'])}</dd></div>
+                  <div><dt>Alignment</dt><dd>{display(data.match.alignment_status)}{data.match.alignment_score !== null ? ` · ${Math.round(data.match.alignment_score * 100)}%` : ''}</dd></div>
+                  <div><dt>Verified</dt><dd>{data.match.verified_at ? new Date(data.match.verified_at).toLocaleString() : 'Pending technical verification'}</dd></div>
+                </dl>
+                <section className="match-status-fact"><h2>Status evidence</h2><p>{sourceFact(statusRecord) || display(data.source.status_evidence)}</p>{statusRecord?.fact_url ? <a href={display(statusRecord.fact_url)} target="_blank" rel="noreferrer">Verify status fact <ExternalLink size={13} /></a> : null}</section>
+              </m.article>
+              <section className="match-review-panel" aria-label="Review this verified source">
+                <DecisionPanel queue={data.review_queue} item={reviewItem} record={row} context={context.data} approvalEligibility={sourceApprovalEligibility} />
+              </section>
+            </div>
 
             <m.section className={cn('match-proof-card', `mode-${data.match.mode}`)} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }}>
               <header><div><span className="match-eyebrow">ARCHIVED SOURCE PROOF</span><h2>{data.match.mode === 'exact' ? 'Government page image' : data.match.mode === 'anchor' ? 'Official HTML anchor context' : 'Technical block'}</h2></div><ScanSearch size={22} /></header>
-              {data.match.mode === 'blocked' ? (
-                <div className="match-block-panel"><ShieldAlert size={32} /><h3>This row cannot be verified here</h3><p>{data.block_reason}</p><span>No approval should be made until the citation proof is repaired and a new immutable snapshot is imported.</span></div>
-              ) : anchorProofMissing ? (
-                <div className="match-proof-error"><ShieldAlert size={24} /><strong>Archived HTML anchor proof is unavailable</strong><span>The archived source, anchor, context, and exact quote could not all be reconciled. Do not approve from this view.</span></div>
-              ) : data.match.mode === 'anchor' ? (
-                <div className="match-anchor-proof"><div className="match-anchor-label"><Link2 size={15} /><code>{display(data.match.anchor)}</code><span>Exact source characters</span></div><HighlightedContext context={rawContext} snippet={exactSnippet} /></div>
-              ) : proofMissing ? (
-                <div className="match-proof-error"><ShieldAlert size={24} /><strong>Proof PNG is missing from the archive</strong><span>The claim remains visible, but the visual proof gate is not satisfied.</span></div>
-              ) : (
-                <ProofImage url={data.proof_asset_url!} alt={`Highlighted official source page for ${display(row['Law Name'])} ${display(row['Article / Section'])}`} />
-              )}
+              <div className="match-proof-body">
+                {data.match.mode === 'blocked' ? (
+                  <div className="match-block-panel"><ShieldAlert size={32} /><h3>This row cannot be verified here</h3><p>{data.block_reason}</p><span>No approval should be made until the citation proof is repaired and a new immutable snapshot is imported.</span></div>
+                ) : anchorProofMissing ? (
+                  <div className="match-proof-error"><ShieldAlert size={24} /><strong>Archived HTML anchor proof is unavailable</strong><span>The archived source, anchor, context, and exact quote could not all be reconciled. Do not approve from this view.</span></div>
+                ) : data.match.mode === 'anchor' ? (
+                  <div className="match-anchor-proof"><div className="match-anchor-label"><Link2 size={15} /><code>{display(data.match.anchor)}</code><span>Exact source characters</span></div><HighlightedContext context={rawContext} snippet={exactSnippet} /></div>
+                ) : proofMissing ? (
+                  <div className="match-proof-error"><ShieldAlert size={24} /><strong>Proof PNG is missing from the archive</strong><span>The claim remains visible, but the visual proof gate is not satisfied.</span></div>
+                ) : (
+                  <ProofImage url={data.proof_asset_url!} alt={`Highlighted official source page for ${display(row['Law Name'])} ${display(row['Article / Section'])}`} />
+                )}
+              </div>
               <footer><FileCheck2 size={15} /><span>Quote display is sourced from the immutable consolidated evidence row. The image is the engine-rendered C6 proof asset.</span></footer>
             </m.section>
           </main>

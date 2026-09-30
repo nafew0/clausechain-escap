@@ -255,6 +255,7 @@ def base_ref(ref: str) -> str:
 
 
 _INDICATOR_NUM = re.compile(r"\b(\d{1,2})\.(\d{1,2})\b")
+_FLOAT_ARTIFACT = re.compile(r"\s*\d{1,2}\.\d{6,}\s*")
 
 # Methodology policy names -> submission codes (P6/P7 only; methodology defs govern).
 NAME_TO_CODE = {
@@ -278,7 +279,12 @@ def _norm_policy(text: str) -> str:
 
 def indicator_code(raw_indicator: str, raw_pillar: str = "") -> str | None:
     """Map '6.4', 'Indicator 6.4 ...' or a methodology policy name to 'P6-I4'."""
-    match = _INDICATOR_NUM.search(raw_indicator or "")
+    raw_indicator = str(raw_indicator or "")
+    if _FLOAT_ARTIFACT.fullmatch(raw_indicator):
+        # Numeric xlsx cells arrive as binary floats ("2.2000000000000002",
+        # "2.2999999999999998"); \b(\d)\.(\d{1,2})\b cannot match those.
+        raw_indicator = f"{round(float(raw_indicator), 2):g}"
+    match = _INDICATOR_NUM.search(raw_indicator)
     if match:
         pillar, num = int(match.group(1)), int(match.group(2))
         if 1 <= pillar <= 12:

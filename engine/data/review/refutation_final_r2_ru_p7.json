@@ -1,0 +1,674 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Federal Law No. 149-FZ of 27.07.2006 On Information, Informa",
+  "article": "Art. 9(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is a cross-reference, not a substantive rule in 149-FZ establishing comprehensive protection. But it expressly identifies the federal personal-data law as controlling access procedures, so it can serve as evidence of the framework; that limited function does not clearly make the mapping wrong."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 scores the absence of a comprehensive horizontal framework, and hunt_in is empty. The text records a federal personal-data law but does not establish whether it is comprehensive; under the rubric, framework evidence may still be a valid row, while the score requires assessment beyond this excerpt."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says access procedures for individuals’ personal data are established by a federal law on personal data. It does not establish that law’s scope or comprehensiveness, but it does support the stated rationale that this provision identifies the controlling legal framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (conso",
+  "article": "Art. 4(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 4(1) identifies this Federal Law as part of the legislation governing personal data and describes supplementary federal laws. That supports a horizontal-framework evidence row; the rubric permits framework evidence even when the indicator records the absence/presence outcome."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 asks whether a comprehensive horizontal personal-data-protection law exists, and its scoring treats a comprehensive horizontal framework as score 0. This provision supports the existence of such a framework; the rubric does not require each evidence row alone to establish comprehensiveness, and its empty hunt_in supplies no contrary constraint."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly says personal-data legislation consists of this Federal Law and other federal laws addressing processing. It establishes a legislative framework, though it does not by itself settle every aspect of comprehensiveness; the mapping claims framework evidence, not a standalone proof of the final score."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Federal Law No. 3-FZ of 07.02.2011 On Police (consolidated)",
+  "article": "Art. 5(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision governs police-obtained information about a citizen’s private life and restricts its disclosure, so it supplies sectoral data-protection evidence. The mapping does not claim this police rule is a comprehensive horizontal framework; the rubric records sectoral laws without treating them as comprehensive."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 asks whether a comprehensive horizontal personal-data-protection law exists; its scoring expressly assigns 0.5 for sectoral-only laws and records sectoral evidence. This police-sector provision is relevant evidence for that category, though it does not alone establish the economy-wide framework outcome. hunt_in is empty, so no additional specified search requirement is violated."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says police-obtained information about a citizen’s private life may not be provided to anyone without voluntary consent, except as provided by federal law. That is a mandatory disclosure restriction with an express exception, and the rationale accurately describes it as sectoral evidence rather than a comprehensive framework. The text itself does not establish whether a horizontal law exists, but the rubric permits sectoral evidence rows."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Federal Law No. 5-FZ of 10.01.1996 On Foreign Intelligence (",
+  "article": "Art. 19.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision regulates processing of specified personal data in the foreign-intelligence sector. The mapping identifies it as sector-specific evidence, not as a horizontal framework; that is not a legal-function or scope defect under P7-I1."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 scores sectoral-only laws at 0.5, while a comprehensive horizontal framework scores 0. This provision is a valid sectoral evidence row; by itself it does not establish the economy-wide framework status or determine the final score. The rubric has no hunt_in requirement that it fails."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text authorizes foreign-intelligence authorities to require access to systems and processing of personal data for specified persons, and its context assigns safeguards and responsibility for that processing. It establishes sector-specific personal-data regulation, not the existence or absence of a comprehensive horizontal law; the mapping does not claim otherwise."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Federal Law No. 572-FZ of 29.12.2022 On identification and a",
+  "article": "Art. 26(9)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause limits this law to specified biometric personal data, supporting its classification as sectoral. P7-I1 records sectoral laws; sectoral evidence is not a defect merely because it does not itself establish whether a horizontal law exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 has no hunt_in restriction and expressly records sectoral-only laws as evidence relevant to a 0.5 score. This provision can be a sectoral evidence row; it need not independently establish the economy-wide score."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text establishes the biometric-data scope of this law, not the absence of any horizontal law. The rationale uses it as evidence of a sectoral framework, which the rubric accepts; it does not make the unsupported claim that this clause alone proves framework absence."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Government Resolution No. 687 of 15.09.2008 Regulation on pr",
+  "article": "Art. 14",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The regulation is limited to non-automated processing, but the mapping uses it only as evidence of a personal-data-protection framework, not as proof of comprehensiveness. P7-I1 allows evidence of a thin framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I1, a provision evidencing the framework may be a valid evidence row even when the indicator concerns framework absence. The rubric records sectoral or thin protection at 0.5; it does not require this provision alone to establish a comprehensive framework. “Необходимо обеспечивать” expresses an obligation, not permissive “may.”"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text requires separate storage of personal data processed for different purposes. In the stated non-automated-processing context, it supports a personal-data-protection obligation, but does not establish comprehensive coverage; the rationale does not claim that it does."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Labor Code of the Russian Federation No. 197-FZ of 30.12.200",
+  "article": "Art. 89",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 89 is an employment-sector personal-data safeguard. The mapping does not claim it establishes an economy-wide absence of horizontal protection; the rubric records sectoral laws as evidence without treating them as comprehensive."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 has no additional hunt_in requirements, and its scoring expressly assigns 0.5 for sectoral-only laws. This provision supports a sectoral evidence row; it does not by itself establish the economy-wide framework score."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text grants employees rights concerning personal data held and processed by employers, including access and correction. Its employment-specific scope supports the stated sectoral safeguard rationale, but does not itself establish whether a comprehensive horizontal framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Federal Law No. 187-FZ of 26.07.2017 On Security of Critical",
+  "article": "Art. 1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The law’s stated purpose and scope concern security of critical information infrastructure against cyberattacks. That is a concrete cybersecurity function, and its sectoral scope fits the rubric’s 0.5 category rather than defeating the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric accepts a dedicated sectoral-only cybersecurity framework as evidence for P7-I2 at 0.5; it does not require a hunt_in match. This provision evidences that framework, while the mapping need not by itself establish the economy-wide score or absence of a horizontal act."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted scope expressly says the federal law regulates security of critical information infrastructure to ensure its stable functioning during cyberattacks. In context, that supports a sectoral cybersecurity framework and does not claim broader coverage."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Federal Law No. 187-FZ of 26.07.2017 On Security of Critical",
+  "article": "Art. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision concerns legal regulation of critical-information-infrastructure security, so it performs the cybersecurity function the rationale attributes to it. Its CII-specific scope is not a defect under this rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric assigns 0.5 to a dedicated sectoral-only framework, assuming no horizontal framework exists. This provision is valid evidence of a CII-specific framework; sectoral evidence is not disqualifying, though this excerpt alone does not establish the absence of a horizontal law."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says CII-security relations are regulated under this Federal Law and other laws and regulations, and addresses special application to public communication networks. That supports the stated CII-security framework rationale, but does not itself establish that no horizontal cybersecurity law exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Presidential Decree No. 646 of 05.12.2016 Information Securi",
+  "article": "Art. 6",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The excerpt expressly makes the Doctrine a basis for state policy and measures to improve the information-security system. That supports the claimed horizontal, non-dedicated framework function; it does not claim a dedicated cybersecurity law."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has no hunt_in restriction and permits evidence of a non-dedicated framework under the 0.5 category. As an absence-scored indicator, a provision evidencing that framework may be a valid evidence row; sectoral-only evidence is not at issue here."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted sentence establishes a broad policy foundation for information security and measures to improve its system. It does not establish a dedicated horizontal cybersecurity law, but that is consistent with the rationale's characterization as non-dedicated and relevant to cybersecurity."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Presidential Decree No. 646 of 05.12.2016 Information Securi",
+  "article": "Art. 31",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The passage expressly describes an information-security assurance system and allocates authority across levels and branches of government. That supports the rationale’s characterization as a horizontal, non-dedicated framework; the rubric does not require this evidence to be a cybersecurity-specific law."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, the rubric permits this text as evidence. It supports a non-dedicated framework, placing the mapping at 0.5 rather than 1; it does not establish a dedicated horizontal cybersecurity framework that would score 0. Sectoral evidence is not at issue."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text establishes an information-security assurance system, governmental authority allocation, and reliance on competencies determined by security legislation. It does not establish a cybersecurity-specific law, but the mapping claims only a non-dedicated framework, which is consistent with the rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 115-FZ of 07.08.2001 On Countering Money Lau",
+  "article": "Art. 7(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete scope or legal-function defect appears: the AML provision imposes a fixed minimum retention period on covered entities, and the rubric expressly includes sectoral AML laws."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I3 scores 1 when a minimum period is specified. “Подлежат хранению не менее пяти лет” requires retention for at least five years; the period runs from termination of the client relationship. Sectoral evidence is expressly within hunt_in."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the documents “are subject to storage for no less than five years” and identifies when that period begins. This establishes a mandatory minimum, not a ceiling or permissive rule; the G6 warning does not change the text’s obligatory modality."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 161-FZ of 27.06.2011 On the National Payment",
+  "article": "Art. 9(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 9(6) imposes a mandatory duty: the operator must record notices and retain the corresponding information for at least three years. This is not confidentiality, a transfer rule, or a retention ceiling; it fits P7-I3."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly includes sectoral financial-services evidence in hunt_in. The text specifies a minimum of three years, satisfying the score-1 test; it is not a government-only measure. The claimed mandatory modality is also present in обязан."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted Russian says the payment-transfer operator is obliged to record notices sent to and received from the client and to keep the corresponding information for at least three years. The surrounding context confirms this concerns electronic payment instruments and contains no qualification that turns the period into a maximum."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 402-FZ of 06.12.2011 On Accounting (consolid",
+  "article": "Art. 29(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 29(2) makes retention mandatory: the documents are «подлежат хранению» (are subject to storage) for «не менее пяти лет» (at least five years). This is not a permissive rule or a retention ceiling."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly includes accounting law in hunt_in. The provision specifies a minimum of five years, so it supports score 1; sectoral scope is not a defect."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text requires economic entities to keep the listed accounting-related documents for at least five years after the year of their last use in preparing financial statements. In context, this is a concrete accounting-sector retention minimum, which the rubric accepts."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Federal Law No. 402-FZ of 06.12.2011 On Accounting (consolid",
+  "article": "Art. 29",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 29 imposes a mandatory duty to retain specified accounting documents for no less than five years after the reporting year. That is a concrete minimum period, not a retention limit or permissive rule."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I3 expressly accepts sectoral accounting evidence. The text specifies retention for at least five years, so the rubric calls for score 1; the G6 warning does not change the mandatory meaning of «подлежат хранению»."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the listed accounting records and reports «подлежат хранению» for periods set under archival rules, but not less than five years after the reporting year. The surrounding context confirms the accounting-document scope and mandatory retention; it supports the mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Criminal Procedure Code of the Russian Federation No. 174-FZ",
+  "article": "Art. 186(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The pinpoint says Art. 186(1), which is court-order-gated, while the quoted no-court route is in paragraph 2. That is a citation mismatch, but the supplied verbatim text and context establish the relevant route in the same article: interception is allowed on the named persons’ written application without independent judicial authorization."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly calls for sectoral law-enforcement evidence, so scope is appropriate. Paragraph 2 permits interception on written application without a court decision; the court decision is required only if that application is absent. Under the court-order test, the nonjudicial route supports score 1. The permissive wording is enough because the rubric asks whether a measure allows access, not whether it mandates it."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text establishes two alternatives: written application by the specified persons, or, absent that application, a court decision. It therefore does not establish that every interception is warrantless, but it does establish a permitted route without independent judicial authorization, which is sufficient under P7-I5."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Criminal Procedure Code of the Russian Federation No. 174-FZ",
+  "article": "Art. 165(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 165(5) is limited to specified urgent investigative actions, not a general access power. But the listed actions include searches and seizures in a dwelling, which can reach personal data; the exception expressly permits them without a court decision. Under the court-order test, that supports access without prior independent judicial authorization."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Criminal procedure law is expressly within hunt_in, so the sectoral source is appropriate. The urgent exception allows listed investigative actions on an investigator’s or interrogator’s resolution without a court decision; a later review does not make prior judicial authorization a prerequisite. That is 1-type evidence for P7-I5, subject to the listed-action scope."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the listed investigative actions may occur without a court decision, and the surrounding text identifies searches and seizures among them. It does not establish an unrestricted power to access all personal data, but it supports the narrower rationale that an urgent criminal investigation may access personal information encountered in those actions without prior judicial authorization."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 144-FZ of 12.08.1995 On Operational-Search A",
+  "article": "Art. 7(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 7 expressly says operational-search bodies may collect data needed for listed decisions, and the surrounding text includes non-court grounds for operational-search activity. The clause does not make collection contingent on a court order. Its sectoral law-enforcement scope is expressly within the rubric’s hunt_in."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under the court-order test, the provision supports a score-1 evidence row: it grants data-collection authority without stating that independent judicial authorization is required. The rubric expressly calls for law-enforcement and security-sector evidence. The broad term “data” is not limited here to non-personal data, so the provision can evidence access to personal data."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says these bodies may, within their powers, collect data necessary for specified decisions; the surrounding context also identifies several non-court grounds. It does not expressly say “personal data” or “without a warrant,” but it does not confine collection to court-authorized cases, and the text supports the stated collection-authority rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (conso",
+  "article": "Art. 20(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 20(4) imposes a mandatory duty to provide necessary information to the authorized personal-data protection body on request. The text does not expressly name personal data as the information, but its legal context and the regulator’s role do not make the mapping clearly wrong."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric directs research beyond the privacy statute and accepts regulator access on request as sectoral evidence. This provision requires the operator to provide information on request and states no judicial-authorization condition, so it supports warrantless-access evidence and a score of 1 if the requested information includes personal data. The Russian обязан is mandatory, not permissive."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes a duty to provide the authority with necessary information on request within ten working days; the surrounding context identifies that authority with protection of personal-data subjects. It does not expressly say the information must be personal data, which limits the inference, but does not clearly defeat the mapping under this rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 3-FZ of 07.02.2011 On Police (consolidated)",
+  "article": "Art. 17(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 17(1) affirmatively authorizes police to process citizens’ data needed for their duties and to enter the resulting information into police databases. That is a government data-handling/access power, not merely a keyword match; the rubric accepts sectoral evidence and the provision does not make this authority court-gated."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I5, the score turns on whether the measure permits government access without independent judicial authorization. This provision grants police authority to process relevant citizens’ data and place information in databases without specifying a judicial prerequisite. It therefore supports the score-1 outcome; the rubric does not exclude sectoral police powers."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text establishes police authority to process citizens’ data necessary to police duties, followed by entry of obtained information into citizens’ databases. It does not expressly describe a warrant or court-order procedure, and its affirmative processing authority supports access for this indicator; the text does not establish a universal power to access all data."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 3-FZ of 07.02.2011 On Police (consolidated)",
+  "article": "Art. 17(3.1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision grants police access to databases concerning identifiable people, a government-access function within P7-I5. It makes the access procedure executive-defined and states no independent judicial authorization condition; the sectoral setting is not a scope defect under the rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I5 expressly calls for looking beyond the privacy statute, including law-enforcement law, and scores 1 where a measure allows access without independent judicial authorization. The grant of police access under an executive-defined procedure supports that outcome; the text does not impose a court-order gate. The WARNs do not defeat the mapping: permissive access is sufficient, and the claimed rationale does not require a mandatory duty."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text says police are granted access to databases about private-security licensees, private detectives, and firearms owners, with the procedure determined by executive authorities. It establishes access to personal data and identifies no judicial authorization requirement. It does not expressly say “without a warrant,” but the stated access authority supports the rubric’s no-court-gate classification."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 323-FZ of 21.11.2011 On the Fundamentals of ",
+  "article": "Art. 91.1(8)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text grants system access to competent public bodies that are users. That is a concrete government-access basis; it does not condition access on independent judicial authorization. The sectoral setting does not defeat the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I5 expressly calls for evidence beyond privacy statutes, and sectoral law is not excluded. The provision allows competent public bodies to access system information under statutory competence, without stating a court-order condition, so it is 1-type evidence under the court-order test."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text establishes access for public bodies and organizations that use the system, subject to their legally defined competence. The surrounding context shows the system includes information about identifiable persons. The text does not expressly say 'without a warrant,' but it states no judicial-authorization condition; it supports an evidence row for access without establishing that every access is warrantless."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 38-FZ of 13.03.2006 On Advertising (consolid",
+  "article": "Art. 33(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is limited to advertising-law inspections at premises used by public authorities, but it authorizes obtaining necessary documents and information without an independent judicial authorization. That scope may include personal data; the rubric accepts sectoral access powers and the text does not exclude personal data."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric directs reviewers to hunt in sectoral laws, and this provision evidences an access power. The required copy of an order is from the antimonopoly authority’s head, not a court or independent judicial body; the permissive power to obtain documents and information can support score-1-type evidence if those materials include personal data. A mandatory modality is not required."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text expressly permits officials to obtain documents and information necessary for an inspection, subject to an agency-issued order, but does not expressly mention personal data. Because it also does not limit the materials’ contents, it can encompass personal data; the text does not establish a court-order gate or clearly defeat the mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Federal Law No. 5-FZ of 10.01.1996 On Foreign Intelligence (",
+  "article": "Art. 19.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision gives a foreign-intelligence body power to direct a system owner to provide access for processing specified personal data. It states no independent judicial-authorization condition; its limited category and sectoral scope do not defeat P7-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I5 expressly calls for sectoral evidence beyond privacy statutes. The body may issue a binding access directive without any stated court-order prerequisite, supporting score 1. “May” makes issuing the directive permissive, but does not make access court-gated or negate the granted power."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says the intelligence body is entitled to issue a binding directive requiring access to systems for processing personal data of the listed people. It does not say a court must authorize access; it supports the rationale without establishing a general access power beyond those categories."
+   }
+  ]
+ }
+]

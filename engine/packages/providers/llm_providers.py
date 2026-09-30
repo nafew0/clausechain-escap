@@ -13,6 +13,8 @@ import sys
 import httpx
 from pydantic import BaseModel, ValidationError
 
+from packages.providers import http_client
+
 
 def _schema_instruction(schema: type[BaseModel]) -> str:
     return (
@@ -21,46 +23,94 @@ def _schema_instruction(schema: type[BaseModel]) -> str:
     )
 
 
+OPENAI_BASE_URL = "https://api.openai.com/v1"
+
+
+def _rejects_temperature(response: httpx.Response) -> bool:
+    """True for the 400 an endpoint returns when the model allows no temperature setting."""
+    if response.status_code != 400:
+        return False
+    try:
+        error = response.json().get("error") or {}
+    except ValueError:
+        return False
+    return error.get("param") == "temperature" or "temperature" in str(error.get("message", ""))
+
+
 class OpenAIChatProvider:
-    def __init__(self, model: str, api_key_env: str = "OPENAI_API_KEY", timeout: float = 90.0) -> None:
+    def __init__(self, model: str, api_key_env: str = "OPENAI_API_KEY", timeout: float = 90.0,
+                 base_url: str = OPENAI_BASE_URL, request_model: str | None = None,
+                 extra_body: dict | None = None, concurrency: int | None = None) -> None:
+        # `model` is what runs record (model_version, cost report); `request_model`
+        # is the id the endpoint expects when a self-hosted server serves the
+        # weights under an alias.
         self.model = model
+        self.request_model = request_model or model
+        # Server-specific request fields (e.g. vLLM chat_template_kwargs).
+        self.extra_body = dict(extra_body or {})
+        # Parallel calls in complete_many; None = CLAUSECHAIN_LLM_CONCURRENCY (6).
+        self.concurrency = concurrency
         self.api_key_env = api_key_env
         self.timeout = timeout
+        self.base_url = base_url.rstrip("/")
         self.last_usage: dict | None = None
-        self._batch_available: bool | None = None
+        # The Files/Batches endpoints are OpenAI-proper only; any compatible
+        # gateway (OpenRouter etc.) goes through the live chat path.
+        self._batch_available: bool | None = None if self.base_url == OPENAI_BASE_URL else False
+        # temperature 0 keeps decisions repeatable; reasoning models on OpenAI proper
+        # (gpt-5.x / gpt-6.x) accept only the default and answer 400. OpenRouter
+        # drops the field silently. Sent until an endpoint rejects it, then omitted.
+        self._send_temperature = True
 
     RETRY_BACKOFFS_S = (5.0, 20.0)   # transient 429/5xx/network retries before giving up
 
     def _call(self, prompt: str, prompt_cache_key: str | None = None) -> str:
         import time as _time
 
+        from packages.core import progress
+
         api_key = os.getenv(self.api_key_env)
         if not api_key:
             raise RuntimeError(f"{self.api_key_env} is not set")
+        progress.emit("llm", f"→ {self.model} · prompt {len(prompt):,} chars", detail=prompt)
+        started = _time.time()
         last_error: Exception | None = None
-        for attempt in range(1 + len(self.RETRY_BACKOFFS_S)):
+        connect_failures = other_failures = 0
+        while True:
             try:
                 body = {
-                    "model": self.model,
+                    "model": self.request_model,
                     "messages": [{"role": "user", "content": prompt}],
                     "response_format": {"type": "json_object"},
-                    "temperature": 0,
+                    **({"temperature": 0} if self._send_temperature else {}),
+                    **self.extra_body,
                 }
-                if prompt_cache_key:
+                if prompt_cache_key and self.base_url == OPENAI_BASE_URL:
                     body["prompt_cache_key"] = prompt_cache_key
-                response = httpx.post(
-                    "https://api.openai.com/v1/chat/completions",
+                response = http_client.client(self.base_url, self.timeout).post(
+                    f"{self.base_url}/chat/completions",
                     headers={"Authorization": f"Bearer {api_key}"},
                     json=body,
-                    timeout=self.timeout,
                 )
                 if response.status_code == 429 or response.status_code >= 500:
                     raise httpx.HTTPStatusError(
                         f"retryable {response.status_code}", request=response.request,
                         response=response,
                     )
+                if self._send_temperature and _rejects_temperature(response):
+                    self._send_temperature = False
+                    progress.emit("llm", f"{self.model} accepts only its default temperature; "
+                                         "resending without it")
+                    continue
                 response.raise_for_status()
                 payload = response.json()
+                if "choices" not in payload:
+                    # OpenRouter can return HTTP 200 with an error body
+                    # ({"error": {...}}) on upstream rate limits — retryable.
+                    message = str((payload.get("error") or {}).get("message") or payload)[:200]
+                    raise httpx.HTTPStatusError(
+                        f"retryable gateway error body: {message}",
+                        request=response.request, response=response)
                 self.last_usage = payload.get("usage")
                 if self.last_usage:
                     from packages.providers import cost
@@ -72,11 +122,36 @@ class OpenAIChatProvider:
                         self.last_usage.get("completion_tokens", 0),
                         cached_input_tokens=details.get("cached_tokens", 0),
                     )
-                return payload["choices"][0]["message"]["content"]
+                content = payload["choices"][0]["message"]["content"]
+                usage = self.last_usage or {}
+                progress.emit(
+                    "llm",
+                    f"← {self.model} · {_time.time() - started:.1f}s · "
+                    f"{usage.get('prompt_tokens', '?')} in / {usage.get('completion_tokens', '?')} out tokens",
+                    detail=content,
+                )
+                return content
+            except http_client.CONNECT_ERRORS as error:
+                # Never reached the model: always safe to resend, on a longer schedule.
+                last_error = error
+                if connect_failures >= len(http_client.CONNECT_BACKOFFS_S):
+                    break
+                wait = http_client.CONNECT_BACKOFFS_S[connect_failures]
+                connect_failures += 1
+                progress.emit("llm", f"endpoint not accepting connections ({type(error).__name__}); "
+                                     f"retry {connect_failures}/{len(http_client.CONNECT_BACKOFFS_S)} "
+                                     f"in {wait:.0f}s", level="warn")
+                _time.sleep(wait)
             except (httpx.HTTPStatusError, httpx.TransportError) as error:
                 last_error = error
-                if attempt < len(self.RETRY_BACKOFFS_S):
-                    _time.sleep(self.RETRY_BACKOFFS_S[attempt])
+                if other_failures >= len(self.RETRY_BACKOFFS_S):
+                    break
+                wait = self.RETRY_BACKOFFS_S[other_failures]
+                other_failures += 1
+                progress.emit("llm", f"retry {other_failures} after {type(error).__name__}: "
+                                     f"{str(error)[:120]}", level="warn")
+                _time.sleep(wait)
+        progress.emit("llm", f"FAILED {self.model}: {str(last_error)[:200]}", level="error")
         raise last_error  # type: ignore[misc]
 
     def complete(self, prompt: str, schema: type[BaseModel], *,
@@ -100,18 +175,29 @@ class OpenAIChatProvider:
             # These mapping requests are independent. A bounded worker pool keeps
             # live runs from paying one network round trip at a time while
             # preserving input order and the provider's existing retry policy.
-            workers = max(1, int(os.getenv("CLAUSECHAIN_LLM_CONCURRENCY", "6")))
+            workers = max(1, self.concurrency or int(os.getenv("CLAUSECHAIN_LLM_CONCURRENCY", "6")))
             if workers == 1 or len(prompts) < 2:
                 return [self.complete(p, schema, prompt_cache_key=k)
                         for p, k in zip(prompts, keys, strict=True)]
             from concurrent.futures import ThreadPoolExecutor
 
-            def invoke(item):
-                prompt, key = item
+            import contextvars
+
+            from packages.core import progress
+
+            base_label = progress.current_label()
+            total = len(prompts)
+
+            def invoke(index, prompt, key):
+                # Each task runs in its own copy of the caller's context, so the
+                # indicator/stage label survives the thread hop.
+                progress.set_label(f"{base_label} {index + 1}/{total}".strip())
                 return self.complete(prompt, schema, prompt_cache_key=key)
 
             with ThreadPoolExecutor(max_workers=min(workers, len(prompts))) as pool:
-                return list(pool.map(invoke, zip(prompts, keys, strict=True)))
+                futures = [pool.submit(contextvars.copy_context().run, invoke, index, prompt, key)
+                           for index, (prompt, key) in enumerate(zip(prompts, keys, strict=True))]
+                return [future.result() for future in futures]
 
         if (os.getenv("CLAUSECHAIN_OPENAI_BATCH") != "1" or len(prompts) < 2
                 or self._batch_available is False):
@@ -129,7 +215,7 @@ class OpenAIChatProvider:
                 "model": self.model,
                 "messages": [{"role": "user", "content": prompt + _schema_instruction(schema)}],
                 "response_format": {"type": "json_object"},
-                "temperature": 0,
+                **({"temperature": 0} if self._send_temperature else {}),
             }
             if key:
                 body["prompt_cache_key"] = key
@@ -329,8 +415,34 @@ def build_llm(spec: str):
         raise ValueError(f"Model spec {spec!r} must look like 'provider:model'")
     if provider == "openai":
         return OpenAIChatProvider(model)
+    if provider == "openrouter":
+        return OpenAIChatProvider(model, api_key_env="OPENROUTER_API_KEY",
+                                  base_url="https://openrouter.ai/api/v1")
     if provider in {"google", "gemini"}:
         return GeminiChatProvider(model)
     if provider == "ollama":
         return OllamaProvider(model)
+    if provider in {"openai_compatible", "openweights"}:
+        # Self-hosted open-weights model behind any OpenAI-compatible server
+        # (vLLM, Ollama /v1, hosted open-weights APIs). No proprietary fallback.
+        base_url = os.getenv("LOCALAI_ENDPOINT", "")
+        if not base_url:
+            raise RuntimeError("LOCALAI_ENDPOINT is not set")
+        return OpenAIChatProvider(
+            os.getenv("LOCALAI_MODEL_LABEL") or model,
+            api_key_env="LOCALAI_API_KEY",
+            base_url=base_url,
+            timeout=float(os.getenv("LOCALAI_TIMEOUT_S", "300")),
+            request_model=model,
+            # One self-hosted GPU serves every parallel call: fewer in flight than
+            # the commercial APIs (hybrid keeps CLAUSECHAIN_LLM_CONCURRENCY).
+            concurrency=int(os.getenv("LOCALAI_CONCURRENCY", "3")),
+            # Qwen3-style hybrid reasoning models think before answering by
+            # default (~10x the output tokens). The pipeline asks for bounded JSON
+            # decisions, so thinking is off unless LOCALAI_ENABLE_THINKING=1.
+            extra_body={"chat_template_kwargs": {
+                "enable_thinking": os.getenv("LOCALAI_ENABLE_THINKING", "0").strip().lower()
+                in {"1", "true", "yes", "on"},
+            }},
+        )
     raise ValueError(f"Unknown LLM provider in spec {spec!r}")

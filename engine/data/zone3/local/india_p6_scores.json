@@ -1,0 +1,164 @@
+{
+ "economy": "India",
+ "pillar": 6,
+ "run": "run-in-p6-1790538849",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW', indicating that no textual basis exists to establish a ban or local processing requi"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of a ban or local processing requirement was found in the provided data."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND' for the relevant legislation, indicating no verifiable ban or local processing requirements exist to"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The text mandates a storage system for electronic records within the corporate sector, constituting a single non-personal/specific-data storage rule without evi"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence cites a single sectoral rule requiring the storage of electronic records for companies, which constitutes a specific-data storage requirement rathe"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence cites a single sectoral rule requiring the storage of corporate electronic records, which constitutes a specific-data storage requirement rather th"
+    }
+   ],
+   "band": [
+    0.5,
+    0.5
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "infrastructure requirement exists",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited provision mandates a system for the storage and retrieval of electronic records by companies but does not impose a requirement for local data centres "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The cited provision mandates a system for the storage and retrieval of electronic records for audit purposes but does not impose a requirement for local data ce"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The cited provision mandates a system for the storage and retrieval of electronic records but does not specify a local data centre or server as a precondition f"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited provision explicitly authorizes the Central Government to restrict the transfer of personal data, satisfying the criterion for personal data coverage."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Digital Personal Data Protection Act 2023 Section 16(1) explicitly allows the Central Government to restrict the transfer of personal data, satisfying the c"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence cites Section 16(1) of the Digital Personal Data Protection Act, which explicitly covers personal data and applies horizontally to all Data Fiducia"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no qualifying binding data-transfer agreement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the Information Technology Act 2000, and no other binding data-transfer agreement"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The absence of evidence for a binding data-transfer agreement in the provided gate-verified rows results in a score of 1, indicating no binding agreement was id"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The absence of evidence for a binding data-transfer agreement in the provided records supports the classification of 'No binding data-transfer agreement'."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

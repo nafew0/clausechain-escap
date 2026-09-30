@@ -4,14 +4,17 @@
 # Graph backend is the single switch GRAPH_BACKEND (get_graph_store): export GRAPH_BACKEND=neo4j for Path B.
 profiles:
   hybrid_accuracy:            # PATH B — DEFAULT (accuracy-first; our runs, submitted output, live demo)
+    # Engine A (commercial hosted). HYBRID_LLM_PROVIDER / HYBRID_LLM_MODEL in engine/.env
+    # choose it: openai + gpt-6-luna (OpenAI API, OPENAI_API_KEY) by default, or
+    # openrouter + openai/gpt-6-luna (OPENROUTER_API_KEY). Runs before 30 Sep went through OpenRouter.
     bulk:                     # query expansion / rerank / cheap classification
-      primary: openai:gpt-5.4-nano
+      primary: ${HYBRID_LLM_PROVIDER:-openai}:${HYBRID_LLM_MODEL:-gpt-6-luna}
       fallback: google:${GEMINI_BULK_MODEL:-gemini-3-flash-preview}
-    high_reasoning:           # default legal mapping/refutation: nano-first
-      primary: openai:gpt-5.4-nano
+    high_reasoning:           # default legal mapping/refutation
+      primary: ${HYBRID_LLM_PROVIDER:-openai}:${HYBRID_LLM_MODEL:-gpt-6-luna}
       fallback: google:${GEMINI_BULK_MODEL:-gemini-3-flash-preview}
-    legal_escalation:         # mini only for deterministic ambiguity/failure cases
-      primary: openai:gpt-5.4-mini
+    legal_escalation:         # deterministic ambiguity/failure cases only
+      primary: ${HYBRID_LLM_PROVIDER:-openai}:${HYBRID_LLM_MODEL:-gpt-6-luna}
       fallback: google:${GEMINI_HIGH_REASONING_MODEL:-gemini-3-flash-preview}
     embedding:
       provider: ${EMBEDDING_PROVIDER:-openai}   # cloud OpenAI (decided 4 Jul); bge_m3 stays the Path A/multilingual option
@@ -25,6 +28,29 @@ profiles:
       model: ${LOCAL_OCR_MODEL:-local-ocr-placeholder}
     graph:
       provider: ${GRAPH_BACKEND:-sqlite}   # Path B: export GRAPH_BACKEND=neo4j (self-hosted)
+      sqlite_path: data/graph.db
+
+  local_openweights:          # LOCAL MODE — open-weights model on our self-hosted OpenAI-compatible server
+    # Same pipeline, gates and schemas as hybrid_accuracy; only the models differ.
+    # No proprietary fallback in any tier: a failed call fails the run instead of
+    # silently routing to a commercial API (checklist #12).
+    bulk:
+      primary: openai_compatible:${LOCALAI_MODEL:-qwen3.8-27b}
+    high_reasoning:
+      primary: openai_compatible:${LOCALAI_MODEL:-qwen3.8-27b}
+    legal_escalation:
+      primary: openai_compatible:${LOCALAI_MODEL:-qwen3.8-27b}
+    embedding:                # open-weights too; own cache file per model (never mixed with OpenAI vectors)
+      provider: ${LOCALAI_EMBED_PROVIDER:-bge_m3}   # bge_m3 = on the run host; openai_compatible = LOCALAI_EMBED_ENDPOINT
+      model: ${LOCALAI_EMBED_MODEL:-BAAI/bge-m3}
+      dimensions: 1024
+    ocr:
+      provider: ${OCR_PROVIDER:-local}
+      endpoint: ${OCR_ENDPOINT:-http://localhost:8089}
+      api_key: ${OCR_API_KEY:-}
+      model: ${LOCAL_OCR_MODEL:-local-ocr-placeholder}
+    graph:
+      provider: ${GRAPH_BACKEND:-sqlite}
       sqlite_path: data/graph.db
 
   local_fallback:             # PATH A — key-free fallback (ships in repo; runs anywhere)

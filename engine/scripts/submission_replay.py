@@ -18,12 +18,15 @@ from packages.export.csv_writer import write_csv  # noqa: E402
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--candidates", default="submission/consolidated.json")
-    parser.add_argument("--decisions", default="data/review/decisions.json")
+    from packages.core import review_layout
+
+    layout = review_layout.current()
+    parser.add_argument("--candidates", default=str(layout.consolidated))
+    parser.add_argument("--decisions", default=str(layout.review_dir / "decisions.json"))
     parser.add_argument("--bundle", help="Rev C recovery: a data/review/bundles/<id>/ dir — "
                         "decisions are read from it instead of the live file")
     parser.add_argument("--graph", default="data/graph_v2.db")
-    parser.add_argument("--out", default="submission")
+    parser.add_argument("--out", default=str(layout.submission_dir))
     args = parser.parse_args()
     candidate_path, decision_path = Path(args.candidates), Path(args.decisions)
     if args.bundle:  # deterministic rebuild from an immutable bundle (server-loss recovery)
@@ -35,6 +38,10 @@ def main() -> int:
         d["finding_key"]: (d.get("review_subject_hash"),
                            ReviewDecision.model_validate(d["review"]))
         for d in decision_items
+        # Template-complete ledgers carry UNSIGNED placeholders (empty reviewer,
+        # empty timestamps) for rows not yet reviewed — they can never finalize,
+        # so they are skipped rather than crashing schema validation.
+        if (d.get("review") or {}).get("reviewer_name", "").strip()
     }
     candidate_keys = {finding_key(f) for f in candidates}
     unknown = sorted(set(decisions) - candidate_keys)

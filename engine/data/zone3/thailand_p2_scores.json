@@ -1,0 +1,102 @@
+{
+ "economy": "Thailand",
+ "pillar": 2,
+ "run": "run-th-p2-1790724072",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no foreign exclusion found (enabling clauses alone score 0)",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The supplied evidence contains no verified measure excluding foreign firms from public procurement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence identifies a measure excluding foreign firms from public procurement."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence contains no substantiated measure excluding foreign firms from public procurement."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence provided states NO_EVIDENCE_FOUND_PENDING_REVIEW and does not establish any procurement requirement to surrender source code or trade secrets or us"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The reviewed evidence contains no requirement to surrender intellectual property or use specific encryption as a procurement condition."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence indicates that procurement requires surrendering patents, source code, or trade secrets, or using a specific encryption method."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The requirement that a foreign consultant include Thai personnel directly imposes a nationality-linked condition on foreign bidders."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The requirement that foreign consultants include Thai personnel on their team directly imposes a nationality-linked condition on foreign bidders."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The requirement that foreign consultants include Thai personnel in their team directly imposes a nationality-linked condition on foreign bidders."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

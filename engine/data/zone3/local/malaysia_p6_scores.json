@@ -1,0 +1,164 @@
+{
+ "economy": "Malaysia",
+ "pillar": 6,
+ "run": "run-my-p6-1790527007",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the Personal Data Protection Act, indicating no verified ban or local processing "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence indicates no verified requirements for the Personal Data Protection Act 2010, resulting in a score of 0 as the transfer is free of such requirement"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the Personal Data Protection Act, indicating that no verified ban or local proces"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence explicitly states NO_EVIDENCE_FOUND_PENDING_REVIEW, indicating no local storage requirement is present in the provided text."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of local storage requirements was found for the Personal Data Protection Act 2010."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states that no evidence was found for the Personal Data Protection Act 2010, resulting in a lack of verified local storage requ"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided text."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided data, resulting in a score of 0."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided data, and the absence of specific provisions in the Personal Data Protection Act 2010 does "
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The Personal Data Protection Act (Act 709) 2010 s. 129(1) explicitly imposes conditions on the transfer of personal data, satisfying the criterion for personal "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Personal Data Protection Act (Act 709) s. 129 imposes horizontal conditions on the transfer of personal data, which satisfies the criteria for a score of 1."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Personal Data Protection Act (Act 709) Section 129 explicitly imposes horizontal conditions on the transfer of personal data outside the country, satisfying"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "binding cross-border data-transfer agreement evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "Article 14.11 explicitly states that each Party shall allow the cross-border transfer of information by electronic means, constituting a binding agreement on da"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence cites Article 14.11 of the CPTPP, which is a binding international agreement that explicitly allows for the cross-border transfer of information, s"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "Article 14.11 of the CPTPP explicitly mandates the allowance of cross-border transfer of information, constituting a binding agreement on data transfer."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

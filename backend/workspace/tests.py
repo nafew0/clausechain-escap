@@ -14,6 +14,7 @@ from rest_framework.test import APIClient
 from accounts.models import User
 
 from .importer import SnapshotImportError, import_snapshot
+from .decision_state import effective_finding_review
 from .decision_writer import (
     DecisionWriterConflict,
     apply_authoritative_decision,
@@ -24,6 +25,11 @@ from .models import (
     CorrectionRequest,
     EngineSnapshot,
     EngineAction,
+    EvidenceChange,
+    EvidenceChangeSet,
+    EvidenceIdentity,
+    EvidenceRegistryEntry,
+    EvidenceRevision,
     EvidenceRow,
     FindingDecision,
     RecallDecision,
@@ -228,6 +234,78 @@ class SnapshotImportTests(TestCase):
             import_snapshot(artifacts)
         self.assertEqual(EngineSnapshot.objects.count(), 0)
 
+    def test_rerun_creates_revision_and_retains_published_registry(self):
+        first, _ = import_snapshot(minimal_artifacts(), keep=1)
+        self.assertEqual(EvidenceIdentity.objects.count(), 3)
+        self.assertEqual(EvidenceRevision.objects.count(), 3)
+        self.assertEqual(EvidenceRegistryEntry.objects.count(), 3)
+        self.assertEqual(
+            first.evidence_change_set.state, EvidenceChangeSet.State.PUBLISHED
+        )
+
+        artifacts = minimal_artifacts()
+        artifacts["consolidated"]["rows"][0]["Verbatim Snippet"] = (
+            "A refreshed, source-exact statutory quotation."
+        )
+        artifacts["key_map"]["rows"][0]["finding_key"] = "9" * 64
+        artifacts["key_map"]["rows"][0]["review_subject_hash"] = "8" * 64
+        second, created = import_snapshot(artifacts, keep=1)
+
+        self.assertTrue(created)
+        self.assertEqual(EngineSnapshot.objects.count(), 2)
+        self.assertEqual(second.evidence_change_set.state, EvidenceChangeSet.State.DRAFT)
+        change = second.evidence_change_set.changes.get(
+            identity__indicator_id="P6-I4"
+        )
+        self.assertEqual(change.kind, EvidenceChange.Kind.REVISED)
+        self.assertEqual(change.invalidated_stages_json, ["citation"])
+        entry = EvidenceRegistryEntry.objects.get(identity=change.identity)
+        self.assertEqual(entry.active_revision.snapshot_id, first.pk)
+
+    def test_unchanged_review_components_carry_to_new_revision(self):
+        first, _ = import_snapshot(minimal_artifacts())
+        citation_user = User.objects.create_user(
+            username="carry-citation", email="carry-citation@example.com", password="pw"
+        )
+        mapping_user = User.objects.create_user(
+            username="carry-mapping", email="carry-mapping@example.com", password="pw"
+        )
+        revision = first.evidence_revisions.get(finding_key="1" * 64)
+        for stage, user, checks in (
+            (FindingDecision.Stage.CITATION, citation_user, (True, False, False)),
+            (FindingDecision.Stage.MAPPING, mapping_user, (False, True, False)),
+            (FindingDecision.Stage.STATUS, citation_user, (False, False, True)),
+        ):
+            FindingDecision.objects.create(
+                finding_key=revision.finding_key,
+                review_subject_hash=revision.review_subject_hash,
+                queue=ReviewItem.Queue.NEW,
+                review_stage=stage,
+                decision=FindingDecision.Verdict.APPROVED,
+                citation_checked=checks[0],
+                mapping_checked=checks[1],
+                status_checked=checks[2],
+                reviewer_name=user.full_name or user.username,
+                reviewer_role=stage,
+                reviewed_at=timezone.now(),
+                created_by=user,
+                authoritative_file_hash=HASH,
+                writer_receipt_json={},
+            )
+
+        artifacts = minimal_artifacts()
+        artifacts["consolidated"]["rows"][0]["Verbatim Snippet"] = "A better exact quote."
+        artifacts["key_map"]["rows"][0]["finding_key"] = "9" * 64
+        artifacts["key_map"]["rows"][0]["review_subject_hash"] = "8" * 64
+        second, _ = import_snapshot(artifacts)
+        current = second.evidence_revisions.get(finding_key="9" * 64)
+        state = effective_finding_review(
+            current.finding_key, review_subject_hash=current.review_subject_hash
+        )
+        self.assertNotIn(FindingDecision.Stage.CITATION, state["stages"])
+        self.assertTrue(state["stages"][FindingDecision.Stage.MAPPING]["carried_forward"])
+        self.assertTrue(state["stages"][FindingDecision.Stage.STATUS]["carried_forward"])
+
 
 class WorkspaceApiTests(TestCase):
     def setUp(self):
@@ -293,7 +371,13 @@ class WorkspaceApiTests(TestCase):
         self.assertEqual(runs["results"][0]["rows_produced"], 0)
         self.assertIn("champion", runs)
 
-        submission = self.client.get("/api/workspace/submission/?economy=Singapore")
+        # Sandbox ENGINE_ROOT: the developer machine's real engine tree may hold
+        # replayed final artifacts, which is environment state, not app behavior.
+        with tempfile.TemporaryDirectory() as empty_root:
+            with override_settings(ENGINE_ROOT=Path(empty_root)):
+                submission = self.client.get(
+                    "/api/workspace/submission/?economy=Singapore"
+                )
         self.assertEqual(submission.status_code, 200)
         self.assertEqual(submission.data["count"], 3)
         self.assertEqual(len(submission.data["template_columns"]), 13)
@@ -339,8 +423,16 @@ class WorkspaceApiTests(TestCase):
         self.assertEqual(self.client.get("/api/workspace/raw/../../etc/passwd/").status_code, 404)
         graph = self.client.get("/api/workspace/knowledge-graph/")
         self.assertEqual(graph.data["status"], "verified")
+        graph_artifact = self.snapshot.artifacts.get(key="neo4j-graph-snapshot")
+        graph_payload = dict(graph_artifact.parsed_json)
+        graph_payload["edges"] = [
+            {"id": "valid", "source": "p1", "target": "p1", "type": "CROSS_REFERENCES", "properties": {}},
+            {"id": "orphan", "source": "p1", "target": "missing", "type": "CROSS_REFERENCES", "properties": {}},
+        ]
+        SnapshotArtifact.objects.filter(pk=graph_artifact.pk).update(parsed_json=graph_payload)
         subgraph = self.client.get("/api/workspace/knowledge-graph/subgraph/?economy=Singapore")
         self.assertLessEqual(len(subgraph.data["nodes"]), 500)
+        self.assertEqual([edge["id"] for edge in subgraph.data["edges"]], ["valid"])
         invalid = self.client.get("/api/workspace/knowledge-graph/subgraph/?relationship=DELETE")
         self.assertEqual(invalid.status_code, 400)
         self.assertEqual(self.client.post("/api/workspace/knowledge-graph/", {}, format="json").status_code, 405)
@@ -411,8 +503,8 @@ class WorkspaceApiTests(TestCase):
                 requested_by=admin,
             )
             with override_settings(ENGINE_ROOT=root, ENGINE_ALLOWLIST=allowlist), patch(
-                "workspace.engine_worker.subprocess.run",
-                return_value=SimpleNamespace(returncode=0, stdout="submission replay: 1", stderr=""),
+                "workspace.engine_worker.run_allowlisted",
+                return_value=(0, "submission replay: 1"),
             ), patch(
                 "workspace.engine_worker.import_snapshot",
                 return_value=(self.snapshot, False),
@@ -425,6 +517,23 @@ class WorkspaceApiTests(TestCase):
                     build_allowlisted_command(
                         {"action": "run_pipeline", "economy": "Singapore; rm -rf /"}
                     )
+
+            # A live pipeline run produces artifacts only — it must never
+            # auto-import a snapshot (the reviewed app data changes solely
+            # through the explicit refresh action).
+            run_action = EngineAction.objects.create(
+                kind=EngineAction.Kind.RUN,
+                arguments_json={"action": "run_pipeline", "economy": "Singapore", "pillar": "6", "cc": "si"},
+                requested_by=admin,
+            )
+            with override_settings(ENGINE_ROOT=root, ENGINE_ALLOWLIST=allowlist), patch(
+                "workspace.engine_worker.run_allowlisted",
+                return_value=(0, "wrote outputs"),
+            ), patch("workspace.engine_worker.import_snapshot") as auto_import:
+                execute_action(run_action)
+                run_action.refresh_from_db()
+                self.assertEqual(run_action.status, EngineAction.Status.SUCCEEDED)
+                auto_import.assert_not_called()
 
     def test_source_match_supports_exact_anchor_blocked_and_queue_navigation(self):
         self.authenticate(self.citation)
@@ -440,6 +549,16 @@ class WorkspaceApiTests(TestCase):
         self.assertEqual(response.data["match"]["label"], "VERBATIM · exact")
         self.assertEqual(response.data["source_sha256"], "d" * 64)
         self.assertEqual(response.data["navigation"]["total"], 1)
+        self.assertEqual(response.data["review_queue"], "new")
+        self.assertEqual(response.data["stable_key"], exact_key)
+        self.assertTrue(response.data["approval_eligibility"]["eligible"])
+
+        response = self.client.get(
+            f"/api/workspace/source-match/{exact_key}/"
+            "?economy=Singapore,Malaysia&pillar=6,7&indicator=P6-I4,P7-I1"
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["navigation"]["total"], 2)
 
         response = self.client.get(f"/api/workspace/source-match/{anchor_key}/")
         self.assertEqual(response.data["match"]["mode"], "anchor")
@@ -564,6 +683,47 @@ class WorkspaceApiTests(TestCase):
         self.assertEqual(FindingDecision.objects.count(), 1)
 
     @patch("workspace.views.apply_authoritative_decision", return_value=RECEIPT)
+    def test_admin_can_complete_all_finding_stages_as_single_reviewer(self, writer):
+        admin = self.make_user("review-admin", "Review Admin", "admin")
+        admin.is_superuser = True
+        admin.is_staff = True
+        admin.save(update_fields=("is_superuser", "is_staff"))
+        self.authenticate(admin)
+        key = "1" * 64
+        stages = (
+            ("citation", {"citation_checked": True}),
+            ("status", {"status_checked": True}),
+            ("mapping", {"mapping_checked": True}),
+        )
+        responses = []
+        for stage, checks in stages:
+            responses.append(self.client.post(
+                "/api/workspace/decisions/findings/",
+                {
+                    "finding_key": key,
+                    "queue": "new",
+                    "review_stage": stage,
+                    "decision": "approved",
+                    "expected_latest_decision_id": None,
+                    **checks,
+                },
+                format="json",
+            ))
+        self.assertEqual([response.status_code for response in responses], [201, 201, 201])
+        self.assertFalse(responses[0].data["engine_exported"])
+        self.assertFalse(responses[1].data["engine_exported"])
+        self.assertTrue(responses[2].data["engine_exported"])
+        self.assertEqual(responses[2].data["review_state"]["decision"], "approved")
+        self.assertEqual(
+            set(FindingDecision.objects.values_list("reviewer_role", flat=True)),
+            {"admin"},
+        )
+        final_batch = writer.call_args_list[-1].args[1]
+        self.assertEqual(final_batch[0]["review"]["reviewer_role"], "admin")
+        self.assertEqual(final_batch[0]["review"]["citation_reviewer_name"], admin.full_name)
+        self.assertEqual(final_batch[0]["review"]["mapping_reviewer_name"], admin.full_name)
+
+    @patch("workspace.views.apply_authoritative_decision", return_value=RECEIPT)
     def test_optimistic_concurrency_rejects_stale_write(self, writer):
         self.authenticate(self.citation)
         payload = {
@@ -647,6 +807,445 @@ class WorkspaceApiTests(TestCase):
         ]
         self.assertTrue(review_state["correction_pending"])
 
+    def test_run_events_stream_from_engine_log_to_console_endpoint(self):
+        admin = self.make_user("events-admin", "Events Admin", "admin")
+        self.authenticate(self.citation)
+        action = EngineAction.objects.create(
+            kind=EngineAction.Kind.RUN, requested_by=admin,
+            arguments_json={"action": "run_pipeline", "economy": "Singapore", "pillar": "6", "cc": "si",
+                            "mode": "local", "provider_profile": "local_openweights", "out_prefix": "local"},
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+
+            def fake_run(argv, timeout, should_cancel, env=None, on_poll=None):
+                log = Path(env["CLAUSECHAIN_EVENT_LOG"])
+                lines = [json.dumps({"seq": i, "ts": 1790000000 + i, "stage": stage, "label": "P6-I4",
+                                     "message": msg, "detail": "prompt text" if stage == "llm" else ""})
+                         for i, (stage, msg) in enumerate([("start", "Singapore P6"), ("llm", "-> model"),
+                                                           ("done", "finished")], start=1)]
+                log.write_text("\n".join(lines[:2]) + "\n" + lines[2][:10])  # last line half-written
+                on_poll()
+                self.assertEqual(action.events.count(), 2)
+                log.write_text("\n".join(lines) + "\n")
+                return 0, "ok"
+
+            with override_settings(ENGINE_ROOT=root), patch(
+                "workspace.engine_worker.run_allowlisted", side_effect=fake_run
+            ):
+                execute_action(action)
+        page = self.client.get(f"/api/workspace/engine/actions/{action.pk}/events/").data
+        self.assertEqual([e["stage"] for e in page["events"]], ["start", "llm", "done"])
+        self.assertEqual(page["events"][1]["detail"], "prompt text")
+        self.assertEqual(page["last_seq"], 3)
+        later = self.client.get(f"/api/workspace/engine/actions/{action.pk}/events/?after=2").data
+        self.assertEqual([e["seq"] for e in later["events"]], [3])
+        self.assertEqual(self.client.get(f"/api/workspace/engine/actions/{action.pk}/events/?after=x").status_code, 400)
+
+    def test_cancel_one_and_cancel_and_clear_all(self):
+        from .engine_worker import EngineActionCancelled
+
+        admin = self.make_user("cancel-admin", "Cancel Admin", "admin")
+        admin.is_superuser = True
+        admin.is_staff = True
+        admin.save(update_fields=("is_superuser", "is_staff"))
+        self.authenticate(self.citation)
+        queued = EngineAction.objects.create(
+            kind=EngineAction.Kind.RUN, requested_by=admin,
+            arguments_json={"action": "run_pipeline", "economy": "Singapore", "pillar": "6",
+                            "cc": "si", "mode": "local", "provider_profile": "local_openweights",
+                            "out_prefix": "local"},
+        )
+        self.assertEqual(
+            self.client.post(f"/api/workspace/engine/actions/{queued.pk}/cancel/").status_code, 403
+        )
+        self.authenticate(admin)
+
+        # Queued -> cancelled immediately, and it is no longer claimable.
+        response = self.client.post(f"/api/workspace/engine/actions/{queued.pk}/cancel/")
+        self.assertEqual(response.status_code, 200, response.data)
+        self.assertEqual((response.data["status"], response.data["cancelled_by"]), ("cancelled", "Cancel Admin"))
+        self.assertEqual(self.client.post(f"/api/workspace/engine/actions/{queued.pk}/cancel/").status_code, 409)
+
+        # Running with a live worker -> stop request; the worker stops the process group.
+        running = EngineAction.objects.create(
+            kind=EngineAction.Kind.RUN, requested_by=admin, status=EngineAction.Status.RUNNING,
+            started_at=timezone.now(), arguments_json=queued.arguments_json,
+        )
+        with patch("workspace.views.worker_status",
+                   return_value={"alive": True, "current_action_id": str(running.pk)}):
+            response = self.client.post(f"/api/workspace/engine/actions/{running.pk}/cancel/")
+        self.assertEqual(response.data["status"], "running")
+        self.assertTrue(response.data["cancel_requested_at"])
+        with patch("workspace.engine_worker.run_allowlisted",
+                   side_effect=EngineActionCancelled("partial output")):
+            execute_action(running)
+        running.refresh_from_db()
+        self.assertEqual(running.status, EngineAction.Status.CANCELLED)
+        self.assertIn("Cancel Admin", running.error)
+
+        # Cancel & clear all (local tab): cancels active local work, hides finished
+        # local rows, leaves hybrid actions alone, keeps every row.
+        orphan = EngineAction.objects.create(
+            kind=EngineAction.Kind.RUN, requested_by=admin, status=EngineAction.Status.RUNNING,
+            started_at=timezone.now(), arguments_json=queued.arguments_json,
+        )
+        hybrid = EngineAction.objects.create(
+            kind=EngineAction.Kind.REPLAY, requested_by=admin, arguments_json={"action": "replay"},
+        )
+        # A live worker busy with something else is not running the orphan: close it directly.
+        with patch("workspace.views.worker_status",
+                   return_value={"alive": True, "current_action_id": None}):
+            response = self.client.post(
+                "/api/workspace/engine/actions/cancel-all/", {"mode": "local"}, format="json"
+            )
+        self.assertEqual(response.status_code, 200, response.data)
+        self.assertEqual((response.data["cancelled"], response.data["cleared"]), (1, 3))
+        orphan.refresh_from_db()
+        self.assertEqual(orphan.status, EngineAction.Status.CANCELLED)  # nobody running it: closed directly
+        self.assertEqual(self.client.get("/api/workspace/runs/?mode=local").data["actions"], [])
+        hybrid.refresh_from_db()
+        self.assertEqual(hybrid.status, EngineAction.Status.QUEUED)
+        self.assertEqual(EngineAction.objects.filter(pk__in=[queued.pk, running.pk, orphan.pk]).count(), 3)
+
+    def test_queueing_starts_a_worker_only_when_none_is_alive(self):
+        from datetime import timedelta
+        from .models import EngineWorkerHeartbeat
+        from .worker_supervisor import ensure_worker
+
+        admin = self.make_user("worker-boss", "Worker Boss", "admin")
+        admin.is_superuser = True
+        admin.is_staff = True
+        admin.save(update_fields=("is_superuser", "is_staff"))
+        self.authenticate(admin)
+        self.assertFalse(self.client.get("/api/workspace/engine/worker/").data["alive"])
+
+        with tempfile.TemporaryDirectory() as temporary, override_settings(
+            ENGINE_WORKER_AUTOSTART=True,
+            WORKSPACE_LOCK_DIR=Path(temporary),
+            ENGINE_WORKER_LOG=Path(temporary) / "worker.log",
+        ), patch("workspace.worker_supervisor.subprocess.Popen",
+                 return_value=SimpleNamespace(pid=4242)) as popen:
+            queued = self.client.post(
+                "/api/workspace/engine/run/",
+                {"economy": "Singapore", "pillar": 6, "mode": "local"},
+                format="json",
+            )
+            self.assertEqual(queued.status_code, 202, queued.data)
+            self.assertTrue(queued.data["worker"]["started"])
+            self.assertEqual(popen.call_count, 1)
+            self.assertIn("run_engine_worker", popen.call_args.args[0])
+            # A second request while the first worker is still booting does not pile on.
+            self.assertFalse(ensure_worker()["started"])
+            self.assertEqual(popen.call_count, 1)
+
+            # A fresh heartbeat means a worker is alive: nothing is started.
+            (Path(temporary) / "engine_worker.spawned").unlink()
+            EngineWorkerHeartbeat.objects.create(
+                worker_id="host:1", hostname="host", pid=1,
+                started_at=timezone.now(), last_seen=timezone.now(),
+            )
+            self.assertFalse(ensure_worker()["started"])
+            self.assertEqual(popen.call_count, 1)
+            self.assertTrue(self.client.get("/api/workspace/runs/").data["worker"]["alive"])
+
+            # A stale heartbeat (crashed worker) triggers a new start.
+            EngineWorkerHeartbeat.objects.update(last_seen=timezone.now() - timedelta(minutes=5))
+            self.assertTrue(ensure_worker()["started"])
+            self.assertEqual(popen.call_count, 2)
+
+        with override_settings(ENGINE_WORKER_AUTOSTART=False), patch(
+            "workspace.worker_supervisor.subprocess.Popen"
+        ) as popen:
+            status = ensure_worker()
+            self.assertEqual((status["started"], status["autostart"]), (False, False))
+            popen.assert_not_called()
+
+    def test_local_mode_runs_are_separate_and_feed_local_tabs(self):
+        admin = self.make_user("mode-admin", "Mode Admin", "admin")
+        admin.is_superuser = True
+        admin.is_staff = True
+        admin.save(update_fields=("is_superuser", "is_staff"))
+        self.authenticate(admin)
+
+        # Local tabs start blank; hybrid keeps reading the reviewed snapshot.
+        local_runs = self.client.get("/api/workspace/runs/?mode=local")
+        self.assertEqual(local_runs.status_code, 200)
+        self.assertEqual((local_runs.data["mode"], local_runs.data["results"]), ("local", []))
+        self.assertEqual([mode["id"] for mode in local_runs.data["modes"]], ["hybrid", "local"])
+        local_matrix = self.client.get("/api/workspace/zone3-matrix/?mode=local")
+        self.assertEqual(local_matrix.status_code, 200)
+        self.assertEqual((local_matrix.data["cells"], local_matrix.data["snapshot"]), ([], None))
+        self.assertEqual(self.client.get("/api/workspace/zone3-matrix/").data["mode"], "hybrid")
+        self.assertEqual(self.client.get("/api/workspace/runs/?mode=cloudy").status_code, 400)
+
+        # The run endpoint maps the mode onto the engine profile + output folder.
+        allowlist = settings.ENGINE_ALLOWLIST
+        queued = self.client.post(
+            "/api/workspace/engine/run/",
+            {"economy": "Singapore", "pillar": 6, "mode": "local"},
+            format="json",
+        )
+        self.assertEqual(queued.status_code, 202, queued.data)
+        self.assertEqual(queued.data["mode"], "local")
+        self.assertEqual(queued.data["arguments"]["provider_profile"], "local_openweights")
+        self.assertEqual(queued.data["arguments"]["out_prefix"], "local")
+        _, argv, _ = build_allowlisted_command(queued.data["arguments"])
+        self.assertIn("local_openweights", argv)
+        self.assertIn("outputs/local_si_p6", argv)
+        self.assertEqual(
+            self.client.post(
+                "/api/workspace/engine/run/",
+                {"economy": "Singapore", "pillar": 6, "mode": "cloudy"},
+                format="json",
+            ).status_code,
+            400,
+        )
+        self.assertTrue(allowlist.is_file())
+
+        # A succeeded local run captures its envelope and appears only in local views.
+        action = EngineAction.objects.get(pk=queued.data["id"])
+        envelope = {
+            "run_id": "local-run-1", "generated_at": "2026-09-24T10:00:00Z", "country": "SG",
+            "pillar": 6, "provider_profile": "local_openweights", "warnings": [],
+            "metadata": {"pipeline_stats": {"mapped": 2}},
+            "findings": [
+                {"Economy": "Singapore", "Indicator ID": "P6-I2", "Law Name": "PDPA 2012",
+                 "Article / Section": "s. 26", "Discovery Tag": "KNOWN",
+                 "Verbatim Snippet": "An organisation shall not transfer any personal data",
+                 "Source URL": "https://sso.agc.gov.sg/Act/PDPA2012", "raw_context": "x" * 50,
+                 "model_version": "unsloth/Qwen3.8-27B-NVFP4/escalate:unsloth/Qwen3.8-27B-NVFP4+BAAI/bge-m3"},
+                {"Economy": "Singapore", "Indicator ID": "P6-I1", "Law Name": "PDPA 2012",
+                 "Discovery Tag": "KNOWN", "Verbatim Snippet": "NO_EVIDENCE_FOUND_PENDING_REVIEW"},
+            ],
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            output = root / "outputs" / "local_si_p6" / "output.json"
+            output.parent.mkdir(parents=True)
+            output.write_text(json.dumps(envelope), encoding="utf-8")
+            with override_settings(ENGINE_ROOT=root), patch(
+                "workspace.engine_worker.run_allowlisted",
+                return_value=(0, "wrote outputs"),
+            ), patch("workspace.engine_worker.import_snapshot") as auto_import:
+                execute_action(action)
+                auto_import.assert_not_called()
+        action.refresh_from_db()
+        self.assertEqual(action.status, EngineAction.Status.SUCCEEDED, action.error)
+        self.assertIn("outputs/local_si_p6/output.json", action.result_hashes_json)
+        self.assertNotIn("raw_context", action.result_json["findings"][0])
+
+        local_runs = self.client.get("/api/workspace/runs/?mode=local").data
+        self.assertEqual(len(local_runs["results"]), 1)
+        self.assertEqual(local_runs["results"][0]["provider_profile"], "local_openweights")
+        self.assertEqual(local_runs["results"][0]["rows_produced"], 2)
+        self.assertEqual([row["id"] for row in local_runs["actions"]], [str(action.pk)])
+        hybrid_runs = self.client.get("/api/workspace/runs/").data
+        self.assertNotIn(str(action.pk), [row["id"] for row in hybrid_runs["actions"]])
+        self.assertNotIn("local_openweights", [run["provider_profile"] for run in hybrid_runs["results"]])
+
+        # A finished run reaches the Local matrix only through a Local snapshot refresh.
+        matrix = self.client.get("/api/workspace/zone3-matrix/?mode=local").data
+        self.assertEqual((matrix["snapshot"], matrix["cells"]), (None, []))
+
+    def test_run_output_folders_match_what_the_snapshot_imports(self):
+        admin = self.make_user("folder-admin", "Folder Admin", "admin")
+        admin.is_superuser = True
+        admin.save(update_fields=("is_superuser",))
+        self.authenticate(admin)
+        expected = {
+            # "Indonesia"[:2] is "in": it must not land in India's folders.
+            ("Indonesia", "hybrid"): ("id", "final_r2", "outputs/final_r2_id_p6"),
+            ("India", "hybrid"): ("in", "final_r2", "outputs/final_r2_in_p6"),
+            # Round-2 hybrid reruns write the folders the snapshot import reads.
+            ("Thailand", "hybrid"): ("th", "final_r2", "outputs/final_r2_th_p6"),
+            ("Singapore", "hybrid"): ("si", "final", "outputs/final_si_p6"),
+            ("Indonesia", "local"): ("id", "local", "outputs/local_id_p6"),
+        }
+        for (economy, mode), (code, prefix, folder) in expected.items():
+            queued = self.client.post(
+                "/api/workspace/engine/run/",
+                {"economy": economy, "pillar": 6, "mode": mode},
+                format="json",
+            )
+            self.assertEqual(queued.status_code, 202, queued.data)
+            arguments = queued.data["arguments"]
+            self.assertEqual((arguments["cc"], arguments["out_prefix"]), (code, prefix))
+            _, argv, _ = build_allowlisted_command(arguments)
+            self.assertIn(folder, argv)
+            EngineAction.objects.filter(pk=queued.data["id"]).update(
+                status=EngineAction.Status.SUCCEEDED
+            )
+
+    @patch("workspace.views.apply_authoritative_decision")
+    def test_local_snapshot_mirrors_hybrid_and_stays_separate(self, writer):
+        from .mode import current_mode
+
+        # The engine's Local layout namespaces every key; the fixture mirrors that.
+        text = json.dumps(minimal_artifacts())
+        for digit in "123":
+            text = text.replace(digit * 64, "a" + digit * 63)
+        local, created = import_snapshot(json.loads(text), mode="local")
+        self.assertTrue(created)
+        self.assertEqual(EngineSnapshot.objects.get(active=True, mode="hybrid").pk, self.snapshot.pk)
+        self.assertEqual(local.mode, "local")
+        # Its own registry: bootstrapped, and no hybrid evidence marked "not reproduced".
+        self.assertEqual(local.evidence_change_set.counts_json["not_reproduced"], 0)
+        self.assertEqual(EvidenceIdentity.objects.filter(mode="local").count(), 3)
+        self.assertEqual(EvidenceIdentity.objects.filter(mode="hybrid").count(), 3)
+
+        self.authenticate(self.citation)
+        self.assertEqual(self.client.get("/api/workspace/summary/?mode=local").data["snapshot"]["id"], str(local.pk))
+        self.assertEqual(self.client.get("/api/workspace/summary/").data["snapshot"]["id"], str(self.snapshot.pk))
+        local_new = self.client.get("/api/workspace/review/new/?mode=local").data["results"]
+        self.assertEqual([item["finding_key"] for item in local_new], ["a" + "1" * 63])
+
+        # A Local decision goes through the writer in Local mode and is recorded as Local.
+        seen = []
+        writer.side_effect = lambda *args, **kwargs: seen.append(current_mode()) or RECEIPT
+        response = self.client.post(
+            "/api/workspace/decisions/findings/?mode=local",
+            {"finding_key": "a" + "1" * 63, "queue": "new", "review_stage": "citation",
+             "decision": "approved", "citation_checked": True, "status_checked": True,
+             "expected_latest_decision_id": None},
+            format="json",
+        )
+        self.assertEqual(response.status_code, 201, response.data)
+        self.assertEqual(seen, ["local"])
+        self.assertEqual(FindingDecision.objects.get().mode, "local")
+        self.assertEqual(self.client.get("/api/workspace/ledger/?mode=local").data["count"], 1)
+        self.assertEqual(self.client.get("/api/workspace/ledger/").data["count"], 0)
+        # A Local key does not exist in the Hybrid workspace.
+        self.assertEqual(self.client.post(
+            "/api/workspace/decisions/findings/",
+            {"finding_key": "a" + "1" * 63, "queue": "new", "review_stage": "citation",
+             "decision": "approved", "citation_checked": True, "status_checked": True,
+             "expected_latest_decision_id": None},
+            format="json",
+        ).status_code, 404)
+
+        # Each matrix is its own snapshot's; the comparison sets their scores side by side.
+        hybrid_cell = self.client.get("/api/workspace/zone3-matrix/").data["cells"][0]
+        local_cell = self.client.get("/api/workspace/zone3-matrix/?mode=local").data["cells"][0]
+        self.assertNotEqual(hybrid_cell["score_key"], local_cell["score_key"])
+        comparison = self.client.get("/api/workspace/comparison/?economy=Singapore&pillar=7").data
+        scores = {entry["indicator"]: entry for entry in comparison["selected"]["scores"]}
+        self.assertIn("model_a", scores["P7-I3"])
+        self.assertIn("model_b", scores["P7-I3"])
+        export = self.client.get("/api/workspace/comparison/export/?economy=Singapore&pillar=7")
+        self.assertIn("3 · Indicator scores (Zone-3)", export.content.decode("utf-8-sig"))
+
+    def test_several_runs_can_wait_in_the_queue_but_not_duplicates(self):
+        admin = self.make_user("queue-admin", "Queue Admin", "admin")
+        admin.is_superuser = True
+        admin.save(update_fields=("is_superuser",))
+        self.authenticate(admin)
+
+        def queue(economy, pillar, mode):
+            return self.client.post("/api/workspace/engine/run/",
+                                    {"economy": economy, "pillar": pillar, "mode": mode}, format="json")
+
+        with patch("workspace.views.ensure_worker", return_value={"alive": True}):
+            self.assertEqual(queue("Russian Federation", 6, "local").status_code, 202)
+            self.assertEqual(queue("Mongolia", 7, "local").status_code, 202)
+            self.assertEqual(queue("Russian Federation", 6, "hybrid").status_code, 202)
+            # The same run twice would write the same output folder.
+            self.assertEqual(queue("Russian Federation", 6, "local").status_code, 409)
+        self.assertEqual(EngineAction.objects.filter(status=EngineAction.Status.QUEUED).count(), 3)
+
+    def test_sources_are_built_and_cleared_from_the_app_with_a_download_record(self):
+        from .models import EngineActionEvent
+
+        admin = self.make_user("sources-admin", "Sources Admin", "admin")
+        admin.is_superuser = True
+        admin.save(update_fields=("is_superuser",))
+        self.authenticate(admin)
+        with patch("workspace.views.ensure_worker", return_value={"alive": True}):
+            clear = self.client.post("/api/workspace/engine/sources/",
+                                     {"economy": "Lao PDR", "operation": "clear"}, format="json")
+            build = self.client.post("/api/workspace/engine/sources/",
+                                     {"economy": "Lao PDR", "operation": "build", "pillar": 6}, format="json")
+            again = self.client.post("/api/workspace/engine/sources/",
+                                     {"economy": "Lao PDR", "operation": "build", "pillar": 7}, format="json")
+            bad = self.client.post("/api/workspace/engine/sources/",
+                                   {"economy": "Atlantis", "operation": "build", "pillar": 6}, format="json")
+        self.assertEqual((clear.status_code, build.status_code, again.status_code, bad.status_code),
+                         (202, 202, 409, 400))
+        _, argv, _ = build_allowlisted_command(build.data["arguments"])
+        self.assertIn("--pillars", argv)
+        self.assertEqual(argv[argv.index("--pillars") + 1], "P6")
+        _, clear_argv, _ = build_allowlisted_command(clear.data["arguments"])
+        self.assertIn("scripts/archive_sources.py", clear_argv)
+        # Source work serves both models, so both tabs list it.
+        local_actions = self.client.get("/api/workspace/runs/?mode=local").data["actions"]
+        self.assertEqual({row["kind"] for row in local_actions}, {"corpus"})
+        hybrid_actions = self.client.get("/api/workspace/runs/").data["actions"]
+        self.assertEqual({row["kind"] for row in hybrid_actions}, {"corpus"})
+
+        action = EngineAction.objects.get(pk=build.data["id"])
+        EngineActionEvent.objects.create(
+            action=action, seq=1, ts=timezone.now(), stage="fetch", label="", level="info",
+            message="downloaded · Law on Electronic Transactions · 820 KB PDF",
+            detail=json.dumps({"kind": "download", "url": "https://bol.gov.la/et.pdf",
+                               "final_url": "https://bol.gov.la/et.pdf", "act": "Law on Electronic Transactions",
+                               "bytes": 839680, "file_type": "PDF", "sha256": "ab" * 32,
+                               "fetched_at": "2026-10-15T03:12:00+00:00"}))
+        EngineActionEvent.objects.create(
+            action=action, seq=2, ts=timezone.now(), stage="fetch", label="", level="info",
+            message="already archived · Old law", detail=json.dumps({"kind": "cached", "url": "https://x"}))
+        documents = self.client.get(f"/api/workspace/engine/actions/{action.pk}/documents/").data
+        self.assertEqual(documents["count"], 1)
+        self.assertEqual((documents["documents"][0]["size_kb"], documents["documents"][0]["file_type"]), (820.0, "PDF"))
+        csv_text = self.client.get(
+            f"/api/workspace/engine/actions/{action.pk}/documents/?export=csv").content.decode("utf-8-sig")
+        self.assertIn("Source URL,Fetched during,Time (hh:mm),Size (KB),File type", csv_text)
+        self.assertIn("https://bol.gov.la/et.pdf,Sources · Lao PDR", csv_text)
+
+    def test_local_spend_is_never_attached_to_a_hybrid_run(self):
+        from .importer import _cost_for_run
+
+        costs = [
+            {"run_id": "hybrid", "economy": "Singapore", "pillar": 6, "total_usd": 1.25},
+            {"run_id": "local", "economy": "Singapore", "pillar": 6, "total_usd": 0.0,
+             "provider_profile": "local_openweights"},
+        ]
+        self.assertEqual(_cost_for_run(costs, {"country": "SG", "pillar": 6})["run_id"], "hybrid")
+
+    @patch("workspace.views.apply_authoritative_decision", return_value=RECEIPT)
+    def test_zone3_matrix_overlays_decisions_and_traces_evidence(self, writer):
+        self.authenticate(self.citation)
+        response = self.client.get("/api/workspace/zone3-matrix/")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["counts"], {"total": 1, "decided": 0, "pending": 1})
+        cell = response.data["cells"][0]
+        self.assertEqual((cell["economy"], cell["indicator"]), ("Singapore", "P7-I3"))
+        self.assertEqual(cell["state"], "pending")
+        self.assertIsNone(cell["latest_decision_id"])
+        self.assertIn("evidence", cell)
+
+        self.authenticate(self.mapping)
+        zone_item = ReviewItem.objects.get(queue=ReviewItem.Queue.ZONE3)
+        decision = self.client.post(
+            "/api/workspace/decisions/zone3/",
+            {
+                "score_key": zone_item.stable_key,
+                "verdict": "overridden",
+                "score": "0.5",
+                "reasoning": "Legal scope supports the intermediate score.",
+                "expected_latest_decision_id": None,
+            },
+            format="json",
+        )
+        self.assertEqual(decision.status_code, 201, decision.data)
+        response = self.client.get("/api/workspace/zone3-matrix/")
+        cell = response.data["cells"][0]
+        self.assertEqual(cell["state"], "overridden")
+        self.assertEqual(float(cell["effective"]), 0.5)
+        self.assertEqual(cell["reviewer_name"], self.mapping.full_name)
+        self.assertEqual(cell["reasoning"], "Legal scope supports the intermediate score.")
+        self.assertTrue(cell["latest_decision_id"])
+        self.assertEqual(response.data["counts"]["decided"], 1)
+
     @patch(
         "workspace.views.apply_authoritative_decision",
         side_effect=RuntimeError("should not be called"),
@@ -670,6 +1269,68 @@ class WorkspaceApiTests(TestCase):
             format="json",
         )
         self.assertEqual(response.status_code, 400)
+        writer.assert_not_called()
+
+    def absence_approval(self):
+        return self.client.post(
+            "/api/workspace/decisions/findings/",
+            {
+                "finding_key": "3" * 64,
+                "queue": "absence",
+                "review_stage": "citation",
+                "decision": "approved",
+                "citation_checked": True,
+                "expected_latest_decision_id": None,
+            },
+            format="json",
+        )
+
+    @patch("workspace.views.apply_authoritative_decision", return_value=RECEIPT)
+    def test_absence_conclusion_is_approvable_despite_placeholder_flag(self, writer):
+        # Older engine key maps flag every absence placeholder as blocked. The
+        # search-coverage manifest, not that flag, decides whether it can be approved.
+        self.assertTrue(EvidenceRow.objects.get(finding_key="3" * 64).blocked)
+        self.authenticate(self.citation)
+        response = self.absence_approval()
+        self.assertEqual(response.status_code, 201, response.data)
+
+    @patch(
+        "workspace.views.apply_authoritative_decision",
+        side_effect=RuntimeError("should not be called"),
+    )
+    def test_absence_with_unresolved_search_failures_cannot_be_approved(self, writer):
+        evidence = EvidenceRow.objects.get(finding_key="3" * 64)
+        manifest = dict(evidence.row_json["search_coverage_manifest"])
+        manifest["unresolved_failures"] = ["Official register timed out"]
+        evidence.row_json = {**evidence.row_json, "search_coverage_manifest": manifest}
+        evidence.save(update_fields=["row_json"])
+        self.authenticate(self.citation)
+        response = self.absence_approval()
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("unresolved acquisition failures", str(response.data))
+        writer.assert_not_called()
+
+    @patch(
+        "workspace.views.apply_authoritative_decision",
+        side_effect=RuntimeError("should not be called"),
+    )
+    def test_blocked_provision_evidence_still_cannot_be_approved(self, writer):
+        EvidenceRow.objects.filter(finding_key="1" * 64).update(blocked=True)
+        self.authenticate(self.citation)
+        response = self.client.post(
+            "/api/workspace/decisions/findings/",
+            {
+                "finding_key": "1" * 64,
+                "queue": "new",
+                "review_stage": "citation",
+                "decision": "approved",
+                "citation_checked": True,
+                "expected_latest_decision_id": None,
+            },
+            format="json",
+        )
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("technically blocked", str(response.data))
         writer.assert_not_called()
 
     @patch("workspace.views.apply_authoritative_decision", return_value=RECEIPT)
@@ -716,6 +1377,44 @@ class WorkspaceApiTests(TestCase):
         )
         self.assertEqual(response.status_code, 400)
         writer.assert_not_called()
+
+    @patch("workspace.views.apply_authoritative_decision", return_value=RECEIPT)
+    def test_warn_gates_stay_approvable_but_fail_gates_block(self, writer):
+        # Engine contract: FAIL = the row can never ship; WARN = a signal the
+        # named reviewer weighs individually. WARN must not disable approval.
+        evidence = EvidenceRow.objects.get(finding_key="1" * 64)
+        proof = dict(evidence.row_json["citation_proof"])
+        payload = {
+            "finding_key": "1" * 64,
+            "queue": "new",
+            "review_stage": "citation",
+            "decision": "approved",
+            "citation_checked": True,
+            "expected_latest_decision_id": None,
+        }
+        self.authenticate(self.citation)
+
+        proof["gate_results"] = [
+            {"gate_id": "G1", "status": "PASS"},
+            {"gate_id": "G4", "status": "WARN",
+             "reason": "no current-version assertion found on the source page"},
+        ]
+        evidence.row_json = {**evidence.row_json, "citation_proof": proof}
+        evidence.save(update_fields=["row_json"])
+        response = self.client.post(
+            "/api/workspace/decisions/findings/", payload, format="json"
+        )
+        self.assertEqual(response.status_code, 201, response.data)
+
+        proof["gate_results"] = [{"gate_id": "G9", "status": "FAIL"}]
+        evidence.row_json = {**evidence.row_json, "citation_proof": proof}
+        evidence.save(update_fields=["row_json"])
+        payload["expected_latest_decision_id"] = str(FindingDecision.objects.get().pk)
+        response = self.client.post(
+            "/api/workspace/decisions/findings/", payload, format="json"
+        )
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("G9", str(response.data))
 
     @patch("workspace.views.apply_authoritative_decision", return_value=RECEIPT)
     def test_bulk_known_approval_fails_closed_on_incomplete_proof(self, writer):
@@ -899,3 +1598,63 @@ class EngineWriterContractTests(TestCase):
                 apply_authoritative_decision(
                     "recall", [decision], expected_file_hash="0" * 64
                 )
+
+
+class ImportDecisionsCommandTests(TestCase):
+    def test_signed_ledger_becomes_decision_rows_once(self):
+        from io import StringIO
+
+        from django.core.management import call_command
+
+        import_snapshot(minimal_artifacts())
+        signed = {
+            "reviewer_name": "Citation Reviewer",
+            "reviewer_role": "Team Lead",
+            "reviewed_at": "2026-07-20T16:46:48+00:00",
+            "citation_checked": True,
+            "mapping_checked": True,
+            "status_checked": True,
+            "citation_reviewer_name": "Citation Reviewer",
+            "mapping_reviewer_name": "Mapping Reviewer",
+            "status_reviewer_name": "Citation Reviewer",
+            "decision": "approved",
+            "correction_note": "Supported.",
+        }
+        findings = [
+            {"finding_key": "1" * 64, "review_subject_hash": "4" * 64, "review": signed},
+            {"finding_key": "2" * 64, "review_subject_hash": "5" * 64,
+             "review": {**signed, "decision": "rejected"}},
+            {"finding_key": "9" * 64, "review_subject_hash": "9" * 64, "review": signed},
+            {"finding_key": "2" * 64, "review_subject_hash": "5" * 64,
+             "review": {**signed, "reviewer_name": "", "decision": "rejected"}},
+        ]
+        zone3 = [{"economy": "Singapore", "indicator": "P7-I3", "action": "override",
+                  "score": 0.5, "reasoning": "Narrow measure.", "reviewer_name": "Citation Reviewer",
+                  "reviewed_at": "2026-07-20T16:46:48+00:00"}]
+        recall = [{"recall_key": recall_key("Singapore", "P7-I3", "Employment Act", "s. 95"),
+                   "verdict": "REAL_MISS", "note": "Engine gap.", "reviewer_name": "Citation Reviewer",
+                   "reviewed_at": "2026-07-19T12:50:04+00:00"}]
+        with tempfile.TemporaryDirectory() as temp_dir, override_settings(ENGINE_ROOT=temp_dir):
+            folder = Path(temp_dir) / "data" / "review"
+            folder.mkdir(parents=True)
+            (folder / "decisions.json").write_text(json.dumps(findings))
+            (folder / "zone3_decisions.json").write_text(json.dumps(zone3))
+            (folder / "recall_decisions.json").write_text(json.dumps(recall))
+            out = StringIO()
+            call_command("import_decisions", "--mode", "hybrid", stdout=out)
+            summary = json.loads(out.getvalue())["hybrid"]
+            call_command("import_decisions", "--mode", "hybrid", stdout=StringIO())
+
+        self.assertEqual(summary["findings"], {"created": 2, "kept": 0, "unsigned": 1, "not_in_snapshot": 1})
+        self.assertEqual(FindingDecision.objects.count(), 4)
+        approved = effective_finding_review("1" * 64, review_subject_hash="4" * 64)
+        self.assertEqual(approved["decision"], "approved")
+        self.assertEqual(approved["mapping_reviewer_name"], "Mapping Reviewer")
+        self.assertEqual(
+            effective_finding_review("2" * 64, review_subject_hash="5" * 64)["decision"], "rejected"
+        )
+        score = Zone3Decision.objects.get()
+        self.assertEqual((score.verdict, str(score.score)), ("overridden", "0.5"))
+        self.assertEqual(score.score_key, zone3_key("Singapore", "P7-I3"))
+        self.assertEqual(RecallDecision.objects.get().verdict, "REAL_MISS")
+        self.assertFalse(User.objects.get(username="ledger-import").has_usable_password())

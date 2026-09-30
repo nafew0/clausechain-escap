@@ -1,0 +1,164 @@
+{
+ "economy": "Lao PDR",
+ "pillar": 7,
+ "run": "run-la-p7-1790697051",
+ "krippendorff_alpha": 0.774,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence cites Law No. 25/NA (2017) as a horizontal framework that defines the rights and obligations of data controllers and includes provisions for superv"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of Law No. 25/NA (2017), a horizontal legal framework that defines data subject rights (Art. 29), controller obligations (Ar"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The law is explicitly limited to 'electronic' data, making it sectoral rather than a comprehensive horizontal framework covering all personal data, and the prov"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence cites the 'Law on Prevention and Combating Cyber Crime No. 61/NA (2015)' with explicit 'Horizontal' tags, detailing centralized management"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The Law on Prevention and Combating Cyber Crime No. 61/NA (2015) is a dedicated horizontal framework that establishes a central management organization, defines"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The Law on Prevention and Combating Cyber Crime No. 61/NA (2015) is a dedicated horizontal framework that explicitly covers incident monitoring, detection, and "
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The Law on Prevention and Combating Cyber Crime explicitly prohibits service providers from deleting computer traffic data before ninety days, clearly specifyin"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Law on Prevention and Combating Cyber Crime No. 61/NA (2015) Article 40 explicitly prohibits service providers from deleting computer traffic data before ni"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Law on Prevention and Combating Cyber Crime explicitly specifies a minimum retention period of ninety days for computer traffic data, and the Anti-Money Lau"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided text excerpts from Articles 46 and 29 do not contain any plain language mandating the appointment of a Data Protection Officer (DPO) or the conduct"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence from Articles 46 and 29 of the Law on Electronic Data Protection No. 25/NA (2017) addresses supervisory content and data subject rights, b"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence cites Article 46 regarding inspection content and Article 29 regarding data subject rights, neither of which establishes a mandatory requi"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Article 30 of the Law on Anti-Money Laundering and Counter-Financing of Terrorism explicitly permits investigative and supervisory agencies to access informatio"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The Law on Prevention and Combating Cyber Crime explicitly permits police access to data in emergencies without independent judicial authorization, and the AML "
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The Law on Anti-Money Laundering and Counter-Financing of Terrorism explicitly permits investigative agencies to access information 'at any time' without requir"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

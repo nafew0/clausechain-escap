@@ -22,7 +22,9 @@ from openpyxl.styles import Alignment, Font, PatternFill
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 RUNS = ["final_si_p6", "final_si_p7", "final_ma_p6", "final_ma_p7",
-        "final_au_p6", "final_au_p7"]
+        "final_au_p6", "final_au_p7",
+        "final_r2_th_p6", "final_r2_th_p7", "final_r2_in_p6", "final_r2_in_p7",
+        "final_r2_id_p6", "final_r2_id_p7"]
 OUT = Path("outputs/legal_recall_review/ClauseChain_Legal_Review_Workbook.xlsx")
 
 HEAD_FONT = Font(bold=True, color="FFFFFF")
@@ -48,7 +50,7 @@ def _sheet(wb, title, headers, widths):
 
 def _indicator_questions() -> dict[str, dict]:
     out = {}
-    for p in ("6", "7"):
+    for p in ("2", "6", "7"):
         cfg = yaml.safe_load(Path(f"configs/rdtii/pillar_{p}.yaml").read_text())
         for ind_id, ind in (cfg.get("indicators") or {}).items():
             out[ind_id] = ind if isinstance(ind, dict) else {}

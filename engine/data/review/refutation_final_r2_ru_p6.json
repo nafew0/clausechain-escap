@@ -1,0 +1,114 @@
+[
+ {
+  "indicator": "P6-I1",
+  "law": "Government Resolution No. 6 of 10.01.2023 on decisions prohi",
+  "article": "Art. 9",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 9 describes the effect of a prohibition introduced by a decision, rather than itself imposing a blanket ban. But it expressly applies that prohibition to specified cross-border transfers of personal data, so this is not a concrete legal-function defect under P6-I1."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P6-I1 covers a ban on cross-border transfer of personal data, which the text expressly identifies. The specified scope does not reduce the score: the rubric assigns 1 when personal data is covered. G6's modality warning does not refute the mapping because the text expressly refers to a prohibition."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text establishes that a decision's prohibition on cross-border transfer of personal data applies to the transfers specified in the submission. It does not establish a universal ban, but P6-I1 does not require one when personal data is covered."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Federal Law No. 149-FZ of 27.07.2006 On Information, Informa",
+  "article": "Art. 13(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text requires the technical means of information systems used by the listed public-sector bodies to be located in Russia. That is a mandatory local-infrastructure requirement; the government-data exclusion does not clearly apply because the rule is scoped by system use, not by the data being government data."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P6-I3 scoring, the mandatory location of technical means in Russia is a local-infrastructure precondition for operating the covered systems. It is not an already-established data-centre control, licensing rule, access-policy rule, or copy-storage rule. The public-sector scope alone does not establish that this applies only to government data. G6's modality warning is mistaken: должны means must, but that does not defeat the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the technical means of information systems used by the specified public bodies must be located within Russia. In context, this establishes a mandatory location condition for those systems, supporting the stated infrastructure rationale; it does not purport to cover all service providers."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I4",
+  "law": "Government Resolution No. 24 of 16.01.2023 on restricting cr",
+  "article": "Art. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text expressly concerns cross-border transfers of personal data and requires advance notice to the regulator. It is not domestic disclosure, government-only data, or a business transfer; the stated procedural condition fits P6-I4."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P6-I4, advance notice before a personal-data transfer is a condition on that flow, and the rubric scores conditions covering personal data at 1. The normative verb “направляет” supports a required notice, so G6’s permissive-modality concern does not establish a defect."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text establishes that an operator must send the regulator notice of intent before starting a cross-border personal-data transfer. It does not establish that notice alone guarantees permission, but the mapping claims a procedural condition, not that notice is sufficient authorization; that is supported by the text."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "Convention for the Protection of Individuals with regard to ",
+  "article": "Art. 12",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete legal-function or scope defect: Article 12(2) imposes a binding treaty constraint on prohibiting or specially authorising covered cross-border personal-data flows for the stated privacy purpose. The paragraph 3 exceptions qualify that commitment but do not negate it."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P6-I5 asks whether there is at least one binding cross-border data-transfer commitment. Article 12 supplies one; hunt_in is empty, and the rubric does not exclude personal-data evidence. The mapping records evidence of a commitment, while scoring assigns 0 when at least one exists; the indicator’s absence-oriented polarity does not make this evidence invalid."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text expressly concerns transborder flows of personal data and says a Party shall not prohibit or require special authorisation for them solely to protect privacy. Read with paragraph 3, this is a qualified—not absolute—commitment, but it still establishes a binding cross-border transfer discipline. The current-version WARN does not contradict the quoted text."
+   }
+  ]
+ }
+]

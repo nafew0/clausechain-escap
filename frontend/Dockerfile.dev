@@ -1,0 +1,21 @@
+# ClauseChain frontend — development image (Next.js dev server, hot reload).
+#
+# Hot reload happens via the bind mount in ../docker-compose.dev.yml
+# (./frontend:/app, with node_modules/.next kept in named volumes so the
+# container's own npm-ci'd install isn't shadowed by the host mount); the
+# COPY below only makes this image buildable/runnable standalone. See
+# frontend/Dockerfile for the multi-stage production build.
+FROM node:24-slim
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY . .
+
+EXPOSE 3000
+
+# -H 0.0.0.0: without an explicit hostname, `next dev`'s bind address isn't
+# guaranteed to be reachable from outside the container across Next versions.
+CMD ["npm", "run", "dev", "--", "-H", "0.0.0.0"]

@@ -25,6 +25,7 @@ official_sources:
   - { name: Dept of Standards, domain: jsm.gov.my, source_type: agency, authority_rank: 40 }
   - { name: Royal Malaysia Police (CCID), domain: ccid.rmp.gov.my, source_type: enforcement_agency, authority_rank: 40 }
   - { name: National Cyber Security Agency, domain: nacsa.gov.my, source_type: official_statute_database, authority_rank: 100 }
+  - { name: Pillar 2 procurement source, domain: ppp.treasury.gov.my, source_type: official_statute_database, authority_rank: 90 }
 
 portal_search:
   engine: https://lom.agc.gov.my (act search) + regulator-site search per domain above
@@ -42,7 +43,7 @@ notes:
   - "ESCAP's MY rows cite 26 NON-official domains (most of any R1 economy — incl. law-firm sites) — the biggest source-upgrade opportunity of the three."
 known_index: data/known_index.json
 seeds: data/seeds.json
-rdtii_bindings: { pillars: [6, 7] }
+rdtii_bindings: { pillars: [2, 6, 7] }
 
 anchor_instruments:
   - "Personal Data Protection Act 2010 (Act 709) — retention LIMIT in s.10 is NOT P7-I3; hunt minimum-retention in sectoral law (AML, companies, tax)"
@@ -177,3 +178,69 @@ status_assertions:
     status: in_force
     fact_url: "https://www.pdp.gov.my/ppdpv1/en/akta709/"
     fact_text: "The current official PDP Commissioner Act 709 directory lists the Communications Sector Code of Practice."
+  # Pillar 2 (public procurement), 29 Sep 2026
+  "Financial Procedure Act 1957 (Act 61)":
+    status: "in_force"
+    fact_url: "https://lom.agc.gov.my/act-detail.php?type=principal&act=61"
+    fact_text: "Laws of Malaysia (AGC) publishes Act 61 as a principal act in force; current LOM text dated 15.11.2023 (revised 1972, Act 61 wef 1 Mar 1972)."
+  "Government Contracts Act 1949 (Act 120)":
+    status: "in_force"
+    fact_url: "https://lom.agc.gov.my/act-detail.php?type=principal&act=120"
+    fact_text: "Laws of Malaysia (AGC) publishes Act 120 (Reprint 2006, all amendments to 1 Jan 2006; revised 1973) as a principal act in force."
+  "Official Secrets Act 1972 (Act 88)":
+    status: "in_force"
+    fact_url: "https://lom.agc.gov.my/act-detail.php?type=principal&act=88"
+    fact_text: "Laws of Malaysia (AGC) publishes Act 88 (Reprint 2006) as a principal act in force."
+  "Treasury Instructions (Arahan Perbendaharaan) 2023 Amendment":
+    status: "in_force"
+    fact_url: "https://www.mof.gov.my/portal/en/treasury-instructions"
+    fact_text: "MOF publishes Arahan Perbendaharaan (Pindaan 2023) as the current Treasury Instructions (first issued 1966; revised 1970, 1997, 2008; 2023 amendment updated 24 Feb 2023)."
+    effective_date: "2023-02-23"
+  "Treasury Circular PK 1.4 Local Materials, Goods and Services in Government Procurement Policy (2025)":
+    status: "in_force"
+    fact_url: "https://ppp.treasury.gov.my/"
+    fact_text: "Live PK 1.4 on the Treasury's official PK portal (version dated 23 Jun 2025); PK in force from 29 Nov 2022."
+    effective_date: "2025-06-23"
+  "Treasury Circular PK 1.5 Bumiputera Company Preference Policy (2024)":
+    status: "in_force"
+    fact_url: "https://ppp.treasury.gov.my/"
+    fact_text: "Live PK 1.5 on the Treasury's official PK portal ('Kuatkuasa 261224' version); PK in force from 29 Nov 2022, amended 2023 and 2024."
+    effective_date: "2024-12-26"
+  "Treasury Circular PK 1.7 Industrial Collaboration Programme (ICP) in Government Procurement (2025)":
+    status: "in_force"
+    fact_url: "https://ppp.treasury.gov.my/"
+    fact_text: "Live PK 1.7 on the Treasury's official PK portal ('280125 Full Version'); PK in force from 29 Nov 2022."
+    effective_date: "2025-01-28"
+  "Treasury Circular PK 2.1 General Provisions (2024)":
+    status: "in_force"
+    fact_url: "https://ppp.treasury.gov.my/"
+    fact_text: "Live PK 2.1 on the Treasury's official PK portal (version 24 Sep 2024, in force 1 Oct 2024)."
+    effective_date: "2024-10-01"
+  "Treasury Circular PK 2.2 Open Tender (2024)":
+    status: "in_force"
+    fact_url: "https://ppp.treasury.gov.my/"
+    fact_text: "Live PK 2.2 on the Treasury's official PK portal (clean version 14 Nov 2024; para 27.1: in force from 29 Nov 2022). Older 'Kemaskini 021224' copy is withdrawn from the page."
+    effective_date: "2024-11-14"
+  "Treasury Circular PK 2.9 Quotations (2025)":
+    status: "in_force"
+    fact_url: "https://ppp.treasury.gov.my/"
+    fact_text: "Live PK 2.9 on the Treasury's official PK portal (version 21 Nov 2025); PK in force from 29 Nov 2022."
+    effective_date: "2025-11-21"
+  "Treasury Circular PK 7.6 ICT and Internet Network Procurement (2022)":
+    status: "in_force"
+    fact_url: "https://ppp.treasury.gov.my/"
+    fact_text: "Live PK 7.6 on the Treasury's official PK portal (version 21 Dec 2022); PK in force from 29 Nov 2022."
+    effective_date: "2022-12-21"
+
+gold_aliases:
+  # Pillar 2 (public procurement)
+  "Treasury Directive 1966": "Treasury Instructions (Arahan Perbendaharaan) 2023 Amendment"
+  "Official Secrets Act No.88 1972": "Official Secrets Act 1972 (Act 88)"
+  "Financial Procedure Act (Act 61) 1957": "Financial Procedure Act 1957 (Act 61)"
+  "Government Contracts Act (Act 120) 1949": "Government Contracts Act 1949 (Act 120)"
+
+research_scores: { P2-I1: 1, P2-I2: 1, P2-I3: 1, P2-I4: 1 }
+
+# Pillar 2 additive builds (scripts/build_seeds_corpus.py --pillars P2) only; the
+# dedicated P6/P7 builders do not read this key.
+ocr: { provider: google_vision, language_hints: [en] }

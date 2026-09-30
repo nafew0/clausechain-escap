@@ -1,6 +1,6 @@
 'use client'
 import { useMemo, useState } from 'react'
-import { useRouter, usePathname, useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { ColumnDef } from '@tanstack/react-table'
 import { flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table'
@@ -77,7 +77,6 @@ interface BkashSearchResult {
 function updateSearchParams(
   searchParams: string,
   patch: Record<string, string>,
-  router: { replace(url: string): void },
   pathname: string
 ) {
   const next = new URLSearchParams(searchParams)
@@ -91,7 +90,7 @@ function updateSearchParams(
   if (patch.page === undefined) {
     next.set('page', '1')
   }
-  router.replace(`${pathname}?${next.toString()}`)
+  window.history.replaceState(null, '', `${pathname}?${next.toString()}`)
 }
 
 function downloadBlob(blob: Blob, filename: string) {
@@ -120,7 +119,6 @@ function getBkashProviderSummary(providerStatus?: BkashProviderStatus) {
 export default function AdminPayments() {
   const { toast } = useToast()
   const queryClient = useQueryClient()
-  const router = useRouter()
   const pathname = usePathname() ?? ''
   const searchParams = useSearchParams()
   const searchParamString = searchParams?.toString() ?? ''
@@ -358,11 +356,11 @@ export default function AdminPayments() {
             <Input
               placeholder="Search invoice, payment, user, or plan"
               value={params.search}
-              onChange={(event) => updateSearchParams(searchParamString, { search: event.target.value }, router, pathname)}
+              onChange={(event) => updateSearchParams(searchParamString, { search: event.target.value }, pathname)}
             />
             <CustomSelect
               value={params.provider}
-              onChange={(value) => updateSearchParams(searchParamString, { provider: String(value) }, router, pathname)}
+              onChange={(value) => updateSearchParams(searchParamString, { provider: String(value) }, pathname)}
               options={[
                 { label: 'All providers', value: '' },
                 { label: 'Stripe', value: 'stripe' },
@@ -371,7 +369,7 @@ export default function AdminPayments() {
             />
             <CustomSelect
               value={params.status}
-              onChange={(value) => updateSearchParams(searchParamString, { status: String(value) }, router, pathname)}
+              onChange={(value) => updateSearchParams(searchParamString, { status: String(value) }, pathname)}
               options={[
                 { label: 'All statuses', value: '' },
                 { label: 'Paid', value: 'paid' },
@@ -384,23 +382,23 @@ export default function AdminPayments() {
             <Input
               type="date"
               value={params.date_from}
-              onChange={(event) => updateSearchParams(searchParamString, { date_from: event.target.value }, router, pathname)}
+              onChange={(event) => updateSearchParams(searchParamString, { date_from: event.target.value }, pathname)}
             />
             <Input
               type="date"
               value={params.date_to}
-              onChange={(event) => updateSearchParams(searchParamString, { date_to: event.target.value }, router, pathname)}
+              onChange={(event) => updateSearchParams(searchParamString, { date_to: event.target.value }, pathname)}
             />
           </div>
           <div className="grid gap-3 md:grid-cols-[minmax(0,0.9fr)_minmax(0,0.7fr)_auto]">
             <Input
               placeholder="Optional user ID"
               value={params.user_id}
-              onChange={(event) => updateSearchParams(searchParamString, { user_id: event.target.value }, router, pathname)}
+              onChange={(event) => updateSearchParams(searchParamString, { user_id: event.target.value }, pathname)}
             />
             <CustomSelect
               value={params.ordering}
-              onChange={(value) => updateSearchParams(searchParamString, { ordering: String(value) }, router, pathname)}
+              onChange={(value) => updateSearchParams(searchParamString, { ordering: String(value) }, pathname)}
               options={[
                 { label: 'Newest first', value: '-created_at' },
                 { label: 'Oldest first', value: 'created_at' },
@@ -502,7 +500,7 @@ export default function AdminPayments() {
                 variant="outline"
                 className="rounded-xl"
                 disabled={currentPage <= 1}
-                onClick={() => updateSearchParams(searchParamString, { page: String(currentPage - 1) }, router, pathname)}
+                onClick={() => updateSearchParams(searchParamString, { page: String(currentPage - 1) }, pathname)}
               >
                 Previous
               </Button>
@@ -510,7 +508,7 @@ export default function AdminPayments() {
                 variant="outline"
                 className="rounded-xl"
                 disabled={currentPage >= totalPages}
-                onClick={() => updateSearchParams(searchParamString, { page: String(currentPage + 1) }, router, pathname)}
+                onClick={() => updateSearchParams(searchParamString, { page: String(currentPage + 1) }, pathname)}
               >
                 Next
               </Button>

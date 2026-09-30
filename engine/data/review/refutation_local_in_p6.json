@@ -1,0 +1,86 @@
+[
+ {
+  "indicator": "P6-I2",
+  "law": "Companies (Accounts) Rules 2014 (as amended 2022)",
+  "article": "s. 3(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that backups of electronic books of account be kept in servers physically located in India. This constitutes a legal requirement for domestic storage of a copy of the data, satisfying the core legal function of P6-I2. The sectoral nature (Companies Act) does not invalidate the mapping as the rubric accepts sectoral evidence for specific data types."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the scoring rubric: The indicator asks if a copy must be stored domestically. The text states 'back-up... shall be kept in servers physically located in India'. This is a single non-personal/specific-data storage rule (books of account). According to the rubric, 'A single non-personal/specific-data storage rule' scores 0.5. The mapping is valid as it identifies a local storage requirement, distinct from P6-I1 (ban on transfer) or P6-I3 (operational location). The rationale correctly ide"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'Provided that the back-up of the books of account... shall be kept in servers physically located in India' explicitly establishes a domestic storage requirement for a copy (backup). The context confirms this is a proviso to the general electronic record rules, specifically addressing the location of backups. The text does not merely permit but mandates ('shall be kept') this location, supporting the P6-I2 classification."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "Companies (Accounts) Rules 2014 (as amended 2022)",
+  "article": "s. 3(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that backups of electronic books of account, including those maintained outside India, be kept in servers physically located in India. This constitutes a clear legal function of local storage for a copy of the data, distinct from a ban on transfer (P6-I1) or a requirement to operate the primary system locally (P6-I3). The sectoral nature (Corporate) does not invalidate the mapping as the rubric accepts sectoral evidence."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the scoring rubric: The indicator asks if a copy must be stored domestically. The text states 'back-up... shall be kept in servers physically located in India'. This is a single requirement for specific data (books of account) rather than horizontal personal data. According to the rubric, 'A single non-personal/specific-data storage rule' scores 0.5. The mapping correctly identifies this as a local storage requirement (P6-I2) and not a transfer ban. The presence of the requirement valid"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'Provided that the back-up... shall be kept in servers physically located in India' establishes a mandatory domestic storage location for backups. The context confirms this applies to electronic records maintained in electronic mode. The text does not suggest this is merely permissive or a ceiling on retention, but a fixed location requirement for the copy. The rationale that this is distinct from a transfer ban is supported by the text allowing records to be maintained 'at"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Companies (Accounts) Rules 2014 (as amended 2022)",
+  "article": "s. 3(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that backups of electronic books of account, including those maintained outside India, must be kept in servers physically located in India. This constitutes a specific infrastructure requirement (local server) for the maintenance of corporate records, fitting the legal function of P6-I3 without being a mere policy rulebook or licensing regime."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I3 scores '1' if any infrastructure requirement exists, specifically 'local data centre/server as a PRECONDITION of service'. The text 'shall be kept in servers physically located in India' matches the positive cue 'server located within the territory'. It is not excluded as a rulebook (it mandates physical location, not just policy) nor as a licensing regime (it is a storage requirement). The mapping aligns with the scoring criteria."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that backups 'shall be kept in servers physically located in India'. This is a mandatory directive ('shall') regarding the physical location of the storage infrastructure. The context confirms this applies to electronic records of companies, establishing a clear textual basis for the claim that local servers are required."
+   }
+  ]
+ }
+]

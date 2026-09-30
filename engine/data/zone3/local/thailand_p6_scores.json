@@ -1,0 +1,164 @@
+{
+ "economy": "Thailand",
+ "pillar": 6,
+ "run": "run-th-p6-1790510821",
+ "krippendorff_alpha": 0.417,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the Personal Data Protection Act, meaning there is no textual basis to confirm th"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence indicates that no specific ban or local processing requirements were found for the Personal Data Protection Act, resulting in a score of z"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The Personal Data Protection Act B.E. 2562 (2019) is a horizontal law covering personal data, but the evidence status is 'NO_EVIDENCE_FOUND_PENDING_REVIEW', whi"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states that no evidence was found for the Personal Data Protection Act regarding local storage requirements, resulting in a sco"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of a local storage requirement was found for the Personal Data Protection Act or any other legislation."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the Personal Data Protection Act, meaning no local storage requirement is confirm"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided text."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided data, resulting in a score of 0."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of infrastructure requirements was found in the provided data, and the absence of such mandates results in a score of 0."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The text explicitly grants authority to establish criteria for the protection of 'Personal Data' sent or transferred to a foreign country, which constitutes hor"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites Section 15(5) of the Personal Data Protection Act, which grants the authority to establish criteria for the protection of personal data trans"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence cites a general power to establish criteria for cross-border transfers but does not explicitly confirm that specific conditions or safeguards are c"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "binding cross-border data-transfer agreement evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly cites binding agreements (AANZFTA and RCEP) that contain provisions regarding the cross-border transfer of information and comp"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The economy is party to the RCEP and AANZFTA, which contain binding provisions (RCEP s. 12.15 and AANZFTA s. 17) that explicitly facilitate or do not prevent th"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The economy is party to RCEP and AANZFTA, which contain binding provisions (RCEP s. 12.15 and AANZFTA s. 17) that explicitly prohibit restrictions on the cross-"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

@@ -23,6 +23,7 @@ official_sources:
   - { name: Singapore Customs, domain: customs.gov.sg, source_type: sectoral_regulator, authority_rank: 50 }
   - { name: IPOS, domain: ipos.gov.sg, source_type: sectoral_regulator, authority_rank: 50 }
   - { name: Enterprise Singapore, domain: enterprisesg.gov.sg, source_type: agency, authority_rank: 40 }
+  - { name: Pillar 2 procurement source, domain: www.gebiz.gov.sg, source_type: official_statute_database, authority_rank: 90 }
 
 portal_search:            # L3 weapon: query the portal's own full-text search with rubric-cue query sets
   engine: https://sso.agc.gov.sg/Search/Content
@@ -38,7 +39,7 @@ notes:
   - "ESCAP's SG rows cite 15 NON-official domains (see upgrade_targets in official_domains.json) — each is a chance to upgrade a row to an official source."
 known_index: data/known_index.json     # built by scripts/build_known_index.py (master = primary)
 seeds: data/seeds.json                 # ESCAP-provided only (provenance kept clean; our additions live below)
-rdtii_bindings: { pillars: [6, 7] }
+rdtii_bindings: { pillars: [2, 6, 7] }
 
 # Corpus acts: fetched whole via the SSO print view (slug = /Act/{ref}).
 # Chosen to cover EVERY act ESCAP's SG gold cites for P6+P7, plus CMA (7.5 NEW vein).
@@ -104,3 +105,55 @@ status_assertions:   # treaty seeds on official SG-government file hosts — 19 
     fact_url: "https://www.enterprisesg.gov.sg/regional-comprehensive-economic-partnership"
     fact_text: "Enterprise Singapore publishes the RCEP legal text; RCEP entered into force for Singapore on 1 January 2022."
     effective_date: "2022-01-01"
+  # Pillar 2 (public procurement), 29 Sep 2026
+  "Government Procurement Act 1997":
+    status: "in_force"
+    fact_url: "https://sso.agc.gov.sg/Act/GPA1997"
+    fact_text: "SSO shows 'Current version as at 29 Sep 2026' = 2020 Revised Edition (all amendments to 1 Dec 2021, in operation 31 Dec 2021); last amending Act 40 of 2019; no 2024-26 amendment."
+    effective_date: "2021-12-31"
+  "Government Procurement Regulations 2014":
+    status: "in_force"
+    fact_url: "https://sso.agc.gov.sg/SL/GPA1997-RG2"
+    fact_text: "SSO current version (29 Sep 2026) is the 2025 Revised Edition of GN S 269/2014, first published in the Gazette on 16 Dec 2025 (ValidDate 17 Dec 2025)."
+    effective_date: "2025-12-17"
+  "Government Procurement (Application) Order 2002":
+    status: "in_force"
+    fact_url: "https://sso.agc.gov.sg/SL/GPA1997-OR1"
+    fact_text: "SSO current version (29 Sep 2026) of SL 217/2002 (2025 Rev Ed) incorporates S 421/2026 (wef 1 Jul 2026) and S 606/2026 (wef 15 Sep 2026)."
+    effective_date: "2026-09-15"
+  "Government Procurement (Challenge Proceedings) Regulations 2002":
+    status: "in_force"
+    fact_url: "https://sso.agc.gov.sg/SL/GPA1997-RG1"
+    fact_text: "SSO current version (29 Sep 2026) is the 2025 Revised Edition of SL 215/2002, first published in the Gazette on 16 Dec 2025."
+    effective_date: "2025-12-17"
+  "IMDA Accreditation Guidelines Version 6.0 (June 2026)":
+    status: "in_force"
+    fact_url: "https://www.imda.gov.sg/assets/8d5dc494-12b4-4414-9acc-5a7beb57975a.pdf"
+    fact_text: "IMDA-published Accreditation Guidelines Version 6.0 dated June 2026 (current edition; para 7.1.2 AC Panel for Government agencies to consider first, via MOF-IMDA streamlined process)."
+    effective_date: "2026-06-01"
+  "IMDA Spark Guidelines Version 2.0 (June 2026)":
+    status: "in_force"
+    fact_url: "https://www.imda.gov.sg/assets/cc029d7d-6d5b-4700-a0ab-15a4f2437e6f.pdf"
+    fact_text: "IMDA-published Spark Guidelines Version 2.0 dated June 2026 (current edition; Spark Government Procurement Panel)."
+    effective_date: "2026-06-01"
+  "MOF Conditions of Contract for Tender Lite (Goods and/or Services)":
+    status: "in_force"
+    fact_url: "https://www.gebiz.gov.sg/docs/Tender_Lite_COCs_Supplier.pdf"
+    fact_text: "Current MOF Tender Lite Conditions of Contract (supplier version) published on GeBIZ, the official Government procurement portal; Tender Lite in use since end-April 2026."
+  "CSA Cybersecurity Certification Guide (NITES and SCCS)":
+    status: "in_force"
+    fact_url: "https://www.csa.gov.sg/our-programmes/certification-and-labelling-schemes/national-it-evaluation-scheme/"
+    fact_text: "CSA's current certification guide (linked from the CSA NITES/SCCS pages, updated Jan-Feb 2025) describing NITES as a policy requirement for government procurement."
+
+gold_aliases:
+  # Pillar 2 (public procurement)
+  "Government Procurement (Challenage Proceddings) Regulation 2002": "Government Procurement (Challenge Proceedings) Regulations 2002"
+  "Government Procurement Act (GPA) 1997": "Government Procurement Act 1997"
+  "Government Procurement Regulations (GP Regulations) 2014": "Government Procurement Regulations 2014"
+  "Government Procurement (Application) Order (GP Order) 2002": "Government Procurement (Application) Order 2002"
+
+research_scores: { P2-I1: 0, P2-I2: 0.5, P2-I3: 1, P2-I4: 0.5 }
+
+# Pillar 2 additive builds (scripts/build_seeds_corpus.py --pillars P2) only; the
+# dedicated P6/P7 builders do not read this key.
+ocr: { provider: google_vision, language_hints: [en] }

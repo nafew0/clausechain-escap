@@ -15,6 +15,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 
 def read(path: Path) -> list[dict]:
     if not path.is_file():
@@ -27,8 +29,10 @@ def main() -> int:
     if not run_dirs:
         print(__doc__)
         return 1
-    out = Path("submission")
-    out.mkdir(exist_ok=True)
+    from packages.core import review_layout
+
+    out = review_layout.current().submission_dir
+    out.mkdir(parents=True, exist_ok=True)
 
     for stale in (out / "consolidated_final.csv", out / "consolidated_final.json"):
         if stale.exists():

@@ -1,0 +1,478 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Digital Personal Data Protection Act 2023",
+  "article": "s. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited section (s. 3) explicitly defines the horizontal scope of the Digital Personal Data Protection Act 2023, applying to processing within and outside India with specific, limited exceptions. This legal function directly supports the claim that a comprehensive horizontal framework exists, countering the 'lack' premise of P7-I1. No scope defect is found; the provision is the correct locus for establishing the framework's reach."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The snippet evidences the existence and scope of such a framework (the DPDP Act 2023). Although the indicator is absence-scored (high score for lack), a provision evidencing the framework is a valid evidence row to support a score of 0 (presence). The mapping correctly identifies the law as horizontal, not sectoral, aligning with the scoring criteria."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states the Act 'shall apply to the processing of digital personal data within the territory of India' and 'outside the territory of India' with specific exclusions. This textually establishes a broad, horizontal application rather than a sectoral one. The rationale that this evidences a comprehensive framework is directly supported by the text's explicit scope definitions."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Digital Personal Data Protection Act No. 22 2023",
+  "article": "s. 11(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies the Digital Personal Data Protection Act 2023 as a horizontal framework. Section 11(1) grants rights to 'Data Principals' generally, not limited to a specific sector, satisfying the 'horizontal' coverage requirement. There is no legal-function defect; the provision establishes a core data protection right within the claimed law."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The cited law is the DPDP Act 2023, a horizontal statute. The provision evidences the existence of this framework. While the indicator is absence-scored (high score for lack), the mapping provides valid evidence of the framework's presence, which supports a score of 0. The rationale correctly links the provision to the existence of the comprehensive law."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet from Section 11(1) is present in the source context. The text explicitly grants the 'right to obtain' information from a 'Data Fiduciary', confirming the legal function of access rights. The context includes the exception in subsection (2), which is properly captured. The text establishes the existence of a statutory right within the Act, supporting the claim that a comprehensive framework exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Information Technology Act No.21 2000",
+  "article": "s. 88(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a central advisory body for the Information Technology Act, which is a dedicated horizontal cybersecurity framework in India. The mapping correctly identifies the law as the controlling evidence for the presence of a dedicated framework, satisfying the legal function of P7-I2."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 0 for a dedicated horizontal cybersecurity framework. The IT Act 2000 is such a framework. The snippet evidences the institutional structure of this framework. Under the rubric, a provision evidencing the framework is valid evidence for the indicator, even if the score reflects the presence (0) rather than absence."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly names the 'Cyber Regulations Advisory Committee' and its role in advising on rules connected to the Act. This textual evidence supports the rationale that the Act contains core institutional provisions for cybersecurity regulation, confirming it is a dedicated framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Information Technology Act No.21 2000",
+  "article": "s. 88(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a statutory advisory committee mandated by the Information Technology Act. While it is an institutional mechanism rather than a substantive security rule, it is a valid component of the dedicated legal framework. The rubric does not require the evidence row to be a substantive prohibition or duty; it requires evidence of the framework's existence. The IT Act is a dedicated horizontal law, so this provision supports the 'dedicated horizontal' classification."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores 0 for a 'dedicated HORIZONTAL cybersecurity framework'. The IT Act 2000 is widely recognized as India's primary horizontal cyber law. The snippet evidences the existence of this framework by showing its institutional structure (Cyber Regulations Advisory Committee). The mapping rationale correctly identifies the Act as a dedicated horizontal framework. The provision is not sectoral-only, nor is it a scattered clause in a privacy law. Therefore, it supports a score of "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states the Central Government shall constitute the 'Cyber Regulations Advisory Committee' under 'this Act'. This confirms the Act contains specific provisions for cyber regulation. The context confirms this is part of the IT Act 2000. The text does not limit the scope to a specific sector (e.g., banking or government data only), supporting the 'Horizontal' coverage claim. The text establishes the existence of a regulatory body dedicated to the Act's subject matter, which is c"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "SEBI CSCRF 2024",
+  "article": "s. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies the SEBI CSCRF as a sectoral framework. The rubric explicitly assigns a score of 0.5 for 'dedicated but SECTORAL-ONLY framework'. The provision is not a generic privacy clause but a specific cybersecurity framework, satisfying the legal function required to evidence the 'non-dedicated' or 'sectoral' state of the indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's scoring criteria for 0.5 includes 'a dedicated but SECTORAL-ONLY framework'. The source text confirms the CSCRF is for 'SEBI REs' (Regulated Entities), which is a specific sector. The mapping rationale correctly notes it is 'limited to the financial sector'. This aligns perfectly with the rubric's definition for a 0.5 score, distinguishing it from a horizontal framework (0) or total absence (1)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states the CSCRF 'aims to provide standards and guidelines for strengthening cyber resilience' and 'supersede existing SEBI cybersecurity circulars'. This establishes the existence of a specific, dedicated framework for cybersecurity within the securities market. It does not claim to be a horizontal national law, nor does it lack the specific legal function of cybersecurity governance, thus supporting the mapping to the 'sectoral-only' category."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "SEBI CSCRF 2024",
+  "article": "s. 10",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies the instrument as a sectoral framework (Renewable Energy) under SEBI jurisdiction. The rubric explicitly assigns a score of 0.5 to 'dedicated but SECTORAL-ONLY framework'. There is no legal-function defect; the text establishes a cybersecurity regime, and the scope limitation is accurately reflected in the 'Coverage' field and the rationale."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the scoring rubric for P7-I2: The indicator asks if the economy LACKS a dedicated framework. The presence of a dedicated but sectoral framework (CSCRF for REs) corresponds to the '0.5' score definition ('A NON-DEDICATED framework... and/or a dedicated but SECTORAL-ONLY framework'). The mapping rationale correctly identifies this as a 'dedicated legal framework, albeit limited to the renewable energy sector', which aligns with the 0.5 scoring criteria. The hunt_in is empty, so no specifi"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact snippet states: 'CSCRF aims to ensure that even smaller REs are equipped with adequate cybersecurity measures and achieve resiliency against cybersecurity incidents/ attacks.' This text explicitly establishes the existence of a framework (CSCRF) with the specific legal function of ensuring cybersecurity measures and resiliency. It does not merely mention security in passing; it defines the aim of the framework. The text supports the claim that a dedicated (albeit sectoral) cybersecurit"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Aadhaar Act 2016",
+  "article": "s. 23(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a mandatory duty to maintain information in the CIDR. While it lacks a specific numeric duration, the rubric explicitly allows recording retention requirements without a specified minimum period as a score of 0. There is no legal function defect; the text correctly evidences the existence of a retention framework, which is the prerequisite for the indicator."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 states that a retention requirement without a specified minimum period is still recorded and scored 0. The snippet 'maintaining and updating the information... in such manner as may be specified by regulations' constitutes a retention requirement. The mapping correctly identifies this as evidence for the indicator with a score of 0, adhering to the '4-Jul internal-guide rule' mentioned in the scoring criteria. The absence of a numeric value does not invalidate the evidence r"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'maintaining and updating the information of individuals in the Central Identities Data Repository' establishes a duty to keep data. It does not specify a time limit, nor does it state 'no longer than necessary' (which would be a limit/minimization). Therefore, it is not a retention limit (wrong direction failure) but a general retention mandate. The text supports the rationale that a duty exists but the specific minimum period is not in this snippet, justifying the score of 0."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Companies (Accounts) Rules 2014 (as amended 2022)",
+  "article": "s. 3(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to retain electronic records ('shall not be disposed of... unless permitted by law'). While it lacks a specific numeric duration, the rubric explicitly states that a retention requirement without a specified minimum period is still recorded and scored 0. The mapping correctly identifies this as a retention duty within the sectoral scope (Companies/Corporate) permitted by the hunt_in criteria. There is no legal-function defect; it is a valid evidence row for"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the scoring rubric: The text contains a retention obligation but no 'at least X days/years' cue. Therefore, the score is 0. The rationale correctly notes that the specific minimum period is unspecified. The provision is not a retention limit (like 'no longer than necessary') but a prohibition on disposal, which aligns with the 'requirement_present_scores_high' polarity logic where the presence of the duty is recorded even if the specific metric (minimum period) is absent. The sectoral n"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'such records shall not be disposed of or rendered unusable, unless permitted by law'. This textually establishes a mandatory retention obligation. It does not contain a numeric duration, which supports the score of 0. The text does not establish a retention limit (data minimization) but rather a floor of retention (prohibition of disposal). The mapping accurately reflects that the text evidences the framework/duty but lacks the specific minimum period required for "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Companies (Accounts) Rules 2014 (as amended 2022)",
+  "article": "s. 3(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory retention duty ('shall not be disposed of... unless permitted by law') on corporate electronic records. While it lacks a specific numeric duration, the rubric explicitly permits recording retention requirements without a specified minimum period (score 0). The sectoral nature (Companies Act) is valid under the hunt_in criteria. No legal function defect exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 states that a retention requirement WITHOUT a specified minimum period is still RECORDED and scored 0. The snippet evidences a retention framework (prohibition on disposal) but lacks the 'at least X' cue. This aligns perfectly with the scoring rule for score 0. The G7 WARN correctly identifies the absence of numeric duration, which does not invalidate the mapping but confirms the score."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states records 'shall not be disposed of or rendered unusable, unless permitted by law.' This establishes a retention obligation. It does not contain a retention limit (e.g., 'no longer than'), so it is not a data minimization clause. It does not specify a cross-border transfer ban as the primary function (the proviso is secondary to the retention duty). The text supports the rationale that a mandatory retention duty exists, even if the period is undefined in this specific cl"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Companies (Management and Administration) Rules 2014",
+  "article": "s. 15(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty ('shall be preserved') for a specific duration ('eight years'), which constitutes a valid legal function for data retention. The scope is corporate records, which falls within the 'companies/accounting' sectoral law category explicitly listed in the rubric's hunt_in. There is no defect in legal function or scope."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a minimum retention period ('keep >= X days/months/years'). The text specifies 'preserved for a period of eight years', which matches the positive cue 'for a period of seven years' (analogous structure) and satisfies the scoring criterion for '1'. The sectoral nature (Companies Rules) is expressly permitted by the hunt_in criteria. The mapping is methodologically sound."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states the register 'shall be preserved for a period of eight years'. This is a clear, unambiguous minimum retention period. It is not a retention limit (e.g., 'no longer than'), nor is it permissive. The text establishes the specific duration required, directly supporting the rationale that a minimum period is specified."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Companies (Management and Administration) Rules 2014",
+  "article": "s. 3(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to 'maintain' a register of members, which constitutes a data retention requirement. The rationale correctly identifies that no specific numeric minimum period (e.g., 'at least X years') is specified for the ongoing maintenance, only a transitional deadline for compilation. This aligns with the rubric's scoring rule that a retention requirement without a specified minimum period is recorded and scored 0. There is no legal function defect; the duty is operat"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 explicitly states: 'A retention requirement WITHOUT a specified minimum period is still RECORDED, scored 0'. The snippet from the Companies (Management and Administration) Rules 2014 is a sectoral law (Companies), which is expressly listed in the 'hunt_in' field. The text requires maintaining records but does not use positive cues like 'for at least' or 'not less than' regarding the duration of retention. Therefore, mapping this to a score of 0 is methodologically correct pe"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text 'maintain a register of its members' establishes a continuous obligation to keep the data. The proviso 'particulars shall be compiled within six months' refers to the initial setup for existing companies, not a retention limit or a minimum retention period for the data itself. The text does not contain language indicating a maximum retention period (like 'no longer than necessary') nor a minimum retention period (like 'for six years from'). Thus, the text strictly supports the cla"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Companies Act No.18 2013",
+  "article": "s. 125(8)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to 'maintain separate accounts and other relevant records' for the Investor Education and Protection Fund. This constitutes a valid data retention requirement within the sectoral scope (financial/investor protection) explicitly listed in the rubric's hunt_in. The absence of a specific minimum period in this subsection does not invalidate the mapping, as the rubric explicitly states that a retention requirement without a specified minimum period is still rec"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly applies the scoring rule for P7-I3. The text contains a retention duty ('maintain... records') but lacks a specified minimum duration (e.g., 'at least X years'). According to the rubric, this results in a score of 0, which is the correct outcome for a retention requirement without a specified minimum. The provision is not a retention limit (data minimization), so the exclusion for 'no longer than necessary' does not apply. The sectoral nature of the law (Companies Act) alig"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'maintain separate accounts and other relevant records' establishes a legal obligation to keep records. It does not establish a specific time period, which is consistent with the rationale provided ('specific minimum period is not specified... score 0'). The text does not contain language indicating a maximum retention period or data minimization constraint that would contradict the indicator's focus on minimum retention. The context confirms this is a statutory duty for a "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Information Technology Act No.21 2000",
+  "article": "s. 44",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to maintain records, which is a valid legal function for a retention indicator. While it lacks a specific duration, the rubric explicitly allows recording such requirements with a score of 0. There is no scope defect as the IT Act applies horizontally to electronic records."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies that no minimum period is specified in the text. According to the rubric's scoring rule ('0': No minimum period specified... still RECORDED, scored 0), this is a valid evidence row. The hunt_in criteria do not exclude general IT acts, and the absence of a specific duration does not trigger a refutation but rather determines the score."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states a penalty for failing to 'maintain books of account or records'. It does not contain language limiting retention (e.g., 'no longer than necessary') or restricting the scope to government data only. The text establishes a duty to keep records, which aligns with the indicator's focus on retention requirements, even if the duration is undefined."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Prevention of Money-laundering Act 2002",
+  "article": "s. 11(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly states records 'shall be maintained for a period of five years', which constitutes a mandatory minimum retention period. The citation to s. 11(5) in the claim header is inconsistent with the snippet's internal numbering '(3)', but the substantive legal function (minimum retention) is clearly present and supported by the text provided. The sectoral nature (AML) is expressly permitted by the rubric's hunt_in."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 requires a specified minimum period ('keep >= X days/months/years'). The text 'maintained for a period of five years' satisfies this positive cue. It is not a retention limit (e.g., 'no longer than'), so it does not trigger the exclusion. The sectoral context (Financial Services) aligns with the hunt_in criteria. Therefore, the mapping is valid and scores 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'shall be maintained for a period of five years' unambiguously establishes a minimum duration of five years for the specified records. The surrounding context confirms this applies to reporting entities in the financial sector. There is no textual evidence suggesting this is a maximum limit or a permissive option. The text supports the rationale that a numeric minimum retention period is specified."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Bharatiya Nagarik Suraksha Sanhita 2023",
+  "article": "s. 96(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision correctly identifies a judicial gate. Section 96(3) (and the surrounding context of s.96) explicitly states that a Court 'may issue a search-warrant' and that the person directed 'may search or inspect in accordance therewith'. This establishes that the access power is conditional on judicial authorization. There is no defect in the legal function; it accurately reflects a warrant-based regime."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I5 states that 'a power exercisable ONLY under a court order/warrant supports score 0' and that 'Access gated on a court order / judicial warrant does NOT score 1 — it supports score 0 (record it, note the judicial safeguard)'. The mapping rationale correctly identifies this as evidence supporting a score of 0. The provision is a valid evidence row for the indicator, even if it does not drive a score of 1, because the rubric explicitly instructs to record such provisions to dem"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text explicitly conditions the search on the issuance of a warrant by a Court ('it may issue a search-warrant'). Subsection (3) further restricts who can grant such warrants for postal custody, reinforcing the judicial nature of the authorization. The text does not contain language permitting access 'without a warrant' or 'upon request' without judicial oversight. Therefore, the text strictly supports the characterization of this access as court-gated."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Bharatiya Nagarik Suraksha Sanhita 2023",
+  "article": "s. 186",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The provision authorizes a physical search of a 'place' to seize tangible evidence, not the access to 'personal data' held by private entities or telecom operators. P7-I5 specifically concerns government access to personal data (e.g., via telecom or digital records). A physical search warrant regime does not establish the legal function of accessing digital personal data without judicial authorization; it is a different legal mechanism entirely."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I5 requires evidence of access to 'personal data'. The cited text (s. 186) governs the procedural mechanics of police searches across station limits for physical evidence. It does not mention data, databases, telecom records, or digital information. Therefore, it fails the 'hunt_in' and 'positive_cues' criteria which look for data-specific access powers (e.g., 'search any data', 'open databases'). It is evidence for physical search powers, not data access."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the section 'authorizes executive access to data via search'. The exact text states it is lawful to 'search... any place'. It contains no reference to 'data', 'records', 'information', or 'personal data'. The text strictly limits the scope to physical locations ('place in the limits of another police station'). The rationale extrapolates a data-access function that is textually absent from the snippet."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Telecommunications (Authorisation for Provision of Miscellan",
+  "article": "s. 78(8)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that 'Every new authorised entity shall provide access... to the Central Government, the authorised agency or the designated agency.' This is a direct statutory obligation to provide data to the executive branch. There is no language in the snippet or the immediate context requiring a judicial warrant or court order for this specific access. Therefore, it constitutes a valid instance of government access without independent judicial authorization, which is the c"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I5 scores 1 if a measure allows government access WITHOUT independent judicial authorization. The snippet shows a mandatory provision ('shall provide access') to the Central Government and agencies. The hunt_in explicitly directs reviewers to look at telecom laws. The positive cue 'shall provide access to ... upon request' (or similar mandatory language) is present. The absence of a judicial gate in this specific rule supports a score of 1. The sectoral nature (telecom) is expr"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'Every new authorised entity shall provide access to the database... and to the traceable identity of a user to the Central Government, the authorised agency or the designated agency.' The text establishes a duty to provide access to these specific government bodies. It does not contain any conditional language such as 'upon order of a court' or 'with a warrant.' The context provided (Rules 28-30) discusses inspection and confidentiality but does not impose a judici"
+   }
+  ]
+ }
+]

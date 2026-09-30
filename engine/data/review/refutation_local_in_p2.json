@@ -1,0 +1,142 @@
+[
+ {
+  "indicator": "P2-I1",
+  "law": "Public Procurement (Preference to Make in India) Order 2017 ",
+  "article": "cl. 3B",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The provision establishes a preference mechanism and eligibility restriction for 'Class I local suppliers' (domestic entities) over 'Class II' and 'Non-local' suppliers. However, the rubric's exclusions explicitly state that 'Price margins, preference points, local-content thresholds... that still let a foreign firm win -> P2-I3 (limitation), NOT 2.1.' The text describes a conditional exclusion ('In case there is sufficient local capacity...') and a preference procedure, which aligns with the de"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Applying the scoring rubric, P2-I1 requires a measure that 'OPERATIVELY excludes foreign suppliers... outright... or admitted only when no domestic supplier is available'. The cited clause (cl. 3B) operates as a preference system where 'Non-local suppliers' may participate in 'other cases' (sub-clause b) and are subject to a 20% price margin preference (sub-clause c). This structure fits the exclusion criteria for P2-I1 ('preference points... that still let a foreign firm win -> P2-I3'). Therefo"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'only Class I local suppliers shall be eligible to bid.' This is an operative exclusion of non-Class I suppliers (which includes 'Non-local suppliers' as defined in the surrounding context) from the bidding process under the specific condition of 'sufficient local capacity and competition.' While the broader context suggests a preference regime, the specific snippet cited does textually establish a scenario where foreign/non-local firms are barred from bidding. A st"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I1",
+  "law": "Public Procurement (Preference to Make in India) Order 2017 ",
+  "article": "cl. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively restricts bid eligibility to 'Class-I local suppliers' for notified items, which constitutes an exclusion of foreign suppliers from those specific tenders. This fits the P2-I1 legal test for excluding foreign firms for a category of goods/services. It is not merely an enabling clause or a preference point system (P2-I3), as it mandates eligibility restrictions based on local status."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the scoring rubric. The provision excludes foreign suppliers for a specific category (items with sufficient local capacity/competition), which qualifies as a measure excluding foreign firms. Under the rubric, 'Any measure excluding foreign firms under any circumstances' scores 1. The rationale correctly identifies the operative exclusion rather than a mere legal basis for exclusion."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states 'only Class-I local supplier... shall be eligible to bid'. This is a clear, operative restriction on who can bid, excluding non-local (foreign) suppliers for the specified scope. The context confirms this is a mandatory sourcing rule for notified items, supporting the claim that it operatively excludes foreign suppliers from these tenders."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "DoT Notification of Telecom Products, Services or Works unde",
+  "article": "para. 5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively grants 'deemed Class-II local supplier' status to specific manufacturers. Under the PPP-MII Order, this status triggers a specific price preference/margin in government procurement bidding. This is an operative limitation/preference, not merely an empowerment clause, and it is not an outright exclusion (which would be P2-I1). The sectoral scope (Telecom) is valid as the rubric accepts sectoral evidence for procurement preferences."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I3 seeks 'price preference/margin... triggered by... local-content percentage'. The snippet explicitly assigns 'deemed Class-II local supplier' status, which is a local-content-based classification that triggers the preference mechanism. The rationale correctly identifies this as an operative limitation. The scoring logic (0.5 or 1 depending on discrimination) is applicable to this type of status-based preference. The mapping aligns with the 'Make in India local content' positi"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'Such manufacturers will be treated as deemed Class-II local suppliers'. This is a definitive operative statement ('will be treated as'), not a permissive or conditional one. It establishes a specific legal status for the named group (PLI manufacturers) within the procurement framework. The context confirms this is part of the DoT Notification implementing the PPP-MII Order. The text supports the claim that this status triggers the preference mechanism inherent in the 'Class-II' "
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Public Procurement (Preference to Make in India) Order 2017 ",
+  "article": "cl. 6",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is a valid operative limitation in public procurement. It imposes a specific 20% margin of purchase preference, which fits the legal test for P2-I3. There is no scope defect; it is not a commercial market rule (Pillar 10.3) nor an outright exclusion (P2-I1). The 'Make in India' context confirms the origin-based trigger."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the rubric's positive cues ('margin of preference for domestic goods', 'Make in India local content'). The scoring logic is correct: a measure directly discriminating against foreign bidders via a price preference margin scores 1. The snippet provides the operative threshold required by the indicator."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'The margin of purchase preference shall be 20%' explicitly establishes a quantitative preference margin. The context confirms this is a mandatory ('shall') provision within the Public Procurement Order. The text supports the rationale that this is an operative price preference, not merely an empowering clause or a neutral target."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Public Procurement (Preference to Make in India) Order 2017 ",
+  "article": "cl. 3B",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is an operative rule within a government procurement order, not a mere empowerment clause. It explicitly mandates a 'purchase preference' and a '20% margin' for Class I local suppliers, which constitutes a concrete legal function of imposing a limitation in bidding. There is no scope defect; it directly regulates the award process in public tenders."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I3 scores 1 for measures 'directly discriminating against foreign bidders' or triggered by 'nationality/origin'. The snippet defines 'Class I local suppliers' (domestic) and grants them preference over 'Non local suppliers' (foreign) within a 20% margin. This matches the positive cue 'margin of preference for domestic goods' and the example 'Make in India local content'. The mapping correctly identifies a discriminatory measure (score 1) rather than a neutral one (score 0.5)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'purchase preference should be given to the Class I local supplier over Class II local suppliers/ Non local suppliers provided that their quoted rate falls within 20% margin'. This textually establishes a price preference and a set-aside mechanism (ensuring 50% quantity) triggered by the status of being a 'local supplier' (origin). The context confirms this applies to 'tenders where contract is to be awarded to multiple bidders', confirming it is a procurement biddi"
+   }
+  ]
+ }
+]

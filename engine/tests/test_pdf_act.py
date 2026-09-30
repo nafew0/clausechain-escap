@@ -141,3 +141,57 @@ def test_official_code_nested_decimal_clauses_parse_as_hierarchy():
                            "bank-code", "https://x")
     labels = {u.article_section for u in units}
     assert {"s. 3.5.1", "s. 3.5.2", "s. 4.10.1", "s. 4.10.2"} <= labels
+
+
+def test_bare_section_heading_line_starts_a_section_but_wrapped_reference_does_not():
+    # Thai PDPA official translation: "Section 29" alone on its line (no trailing
+    # space); the old pattern required text after the number and merged s. 29 into s. 28.
+    text = """Section 28 In the event that the Data Controller sends Personal Data to a foreign
+country, the destination country shall have adequate data protection standards.
+Section 29
+In the event that the Data Controller has put in place a Personal Data protection policy,
+the transfer may be carried out in accordance with the rules referred to in
+Section 28
+of this Act and shall be exempt from compliance with the adequacy requirement.
+Section 30
+The data subject is entitled to request access to and obtain a copy of the Personal Data.
+"""
+    units = parse_act_text([_page(12, text)], "Thailand", "PDPA", "pdpa", "https://x")
+    labels = [u.article_section for u in units]
+    assert labels == ["s. 28", "s. 29", "s. 30"]
+    # the wrapped cross-reference stays inside s. 29
+    assert "of this Act" in next(u.text for u in units if u.article_section == "s. 29")
+
+
+def test_indonesian_preamble_and_catchwords_do_not_derail_pasal_numbering():
+    from packages.extractors.pdf_act import SECTION_GRAMMARS
+
+    # "Mengingat: Pasal 20, Pasal 21, ..." used to be accepted as Article 20, so
+    # the monotonic filter rejected the real Articles 2-19 of whole Acts.
+    text = """Mengingat :
+Pasal 20, Pasal 21, Pasal 28H ayat (1), dan Pasal 34
+ayat (3) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945;
+Pasal 1
+Dalam Undang-Undang ini yang dimaksud dengan Data Pribadi adalah data tentang orang.
+Pasal 2
+Undang-Undang ini berlaku untuk setiap Orang yang melakukan pemrosesan Data Pribadi.
+Pasal 3 . . .
+Pasal 3
+(1) Pengendali Data Pribadi wajib memenuhi ketentuan sebagaimana dimaksud dalam
+Pasal 20 ayat (1) sebelum melakukan transfer Data Pribadi ke luar wilayah hukum.
+"""
+    units = parse_act_text([_page(1, text)], "Indonesia", "UU 27/2022", "uu27", "https://x",
+                           extra_section_patterns=SECTION_GRAMMARS["indonesian"],
+                           citation_template="Art. {label}")
+    assert [u.article_section for u in units] == ["Art. 1", "Art. 2", "Art. 3"]
+    assert "Pasal 20 ayat (1)" in units[-1].text
+
+
+def test_clause_numbered_notification_parses_and_cites_cl():
+    text = """Clause 1. This Notification is called the Notification on Criteria for Protection of Personal Data.
+Clause 2. This Notification shall come into effect after ninety days from its publication.
+Clause 4. In the event that a data controller sends or transfers personal data to a foreign country,
+the destination country shall have adequate personal data protection standards.
+"""
+    units = parse_act_text([_page(1, text)], "Thailand", "PDPC Notification", "n28", "https://x")
+    assert [u.article_section for u in units] == ["cl. 1", "cl. 2", "cl. 4"]

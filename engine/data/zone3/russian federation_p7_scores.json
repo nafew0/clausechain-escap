@@ -1,0 +1,164 @@
+{
+ "economy": "Russian Federation",
+ "pillar": 7,
+ "run": "run-ru-p7-1790671576",
+ "krippendorff_alpha": 0.763,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "A horizontal personal-data law exists and the excerpts show security and unlawful-processing provisions, but they do not establish a comprehensive set of protec"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "Federal Law No. 152-FZ is a horizontal personal-data framework covering processing across public authorities and imposing security and remediation obligations, "
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "Federal Law No. 152-FZ is a horizontal personal-data framework covering processing across public and private contexts and imposing security and remediation duti"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The horizontal Information Security Doctrine is expressly the basis for state policy and the development of relations in information security, establishing a ho"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The Information Security Doctrine is a horizontal legal instrument that provides the basis for state policy and relations in information security, so a dedicate"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The nationally applicable Information Security Doctrine, approved by presidential decree, establishes a horizontal basis for policy and relations in information"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly requires retention for at least five years under Federal Law No. 115-FZ and at least three years under Federal Law No. 161-FZ."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence specifies minimum retention periods of at least five years and at least three years."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence specifies minimum retention periods of at least five years for AML records and at least three years for payment-system notifications."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The horizontal provision requires every operator that is a legal entity to appoint a person responsible for organizing personal-data processing, with no sector "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Article 22.1 imposes a DPO requirement horizontally on operators that are legal entities, rather than limiting it to specific sectors."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Article 22.1 imposes a horizontal requirement on legal-entity operators to appoint a person responsible for organizing personal-data processing, rather than lim"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The quoted provisions require operators and information-distribution services to provide information to authorized government bodies, and state no requirement f"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The cited laws require communications operators and internet information-distribution services to provide information to authorized government bodies, without m"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The cited laws require telecom operators and internet services to provide information to authorized security and operational-investigative bodies, establishing "
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

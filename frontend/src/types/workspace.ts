@@ -28,6 +28,7 @@ export interface SnapshotIdentity {
   bundle_hash: string
   engine_git_sha: string
   stale: boolean
+  mode?: RunMode
 }
 
 export interface ReviewProgress {
@@ -43,6 +44,57 @@ export interface WorkspaceSummary {
   progress: Record<WorkspaceQueue, ReviewProgress>
   reviewer_roles: string[]
   runs?: RunRecord[]
+  registry: {
+    total: number
+    current: number
+    not_reproduced: number
+    retired: number
+    approved: number
+    rejected: number
+    decision_unrecorded: number
+    blocked: number
+    change_set: null | {
+      id: string
+      state: 'draft' | 'published'
+      scope: { economy: string; indicator_id: string }[]
+      counts: Record<'unchanged' | 'revised' | 'new' | 'not_reproduced', number>
+      attention: ReviewProgress
+      created_at: string
+      published_at: string | null
+    }
+  }
+}
+
+export interface EvidenceRegistryChange {
+  id: string
+  kind: 'unchanged' | 'revised' | 'new' | 'not_reproduced'
+  invalidated_stages: ReviewStage[]
+  identity: {
+    id: string
+    identity_hash: string
+    economy: string
+    indicator_id: string
+    law_name: string
+    citation: string
+    finding_type: string
+  }
+  previous_finding_key: string | null
+  current_finding_key: string | null
+  review_queue: FindingQueue | null
+  review_state: FindingReviewState | null
+  latest_decision: null | {
+    id: string
+    verdict: 'retain' | 'retire' | 'investigate'
+    comment: string
+    reviewer_name: string
+    created_at: string
+  }
+}
+
+export interface EvidenceChangeSetResponse {
+  snapshot: SnapshotIdentity
+  change_set: NonNullable<WorkspaceSummary['registry']['change_set']>
+  results: EvidenceRegistryChange[]
 }
 
 export interface SnapshotArtifactMeta {
@@ -145,6 +197,9 @@ export interface FindingStageState {
   reviewer_name: string
   reviewer_user_id: string
   reviewed_at: string
+  carried_forward?: boolean
+  carried_from_finding_key?: string
+  carried_from_revision_id?: string
 }
 
 export interface FindingReviewState {
@@ -192,6 +247,11 @@ export interface ReviewItem {
   latest_correction?: LatestCorrection | null
   latest_decision?: DomainDecision | null
   approval_eligibility?: { eligible: boolean; reason: string }
+  registry_change?: {
+    kind: 'unchanged' | 'revised' | 'new' | 'not_reproduced'
+    invalidated_stages: ReviewStage[]
+    identity_hash: string
+  } | null
 }
 
 export interface PaginatedResponse<T> {
@@ -300,6 +360,10 @@ export interface SourceMatchDetail {
     source_artifact_id: string | null
   }
   review_state: FindingReviewState
+  review_queue: FindingQueue
+  stable_key: string
+  approval_eligibility: { eligible: boolean; reason: string }
+  latest_correction: LatestCorrection | null
   navigation: {
     position: number
     total: number
@@ -308,11 +372,53 @@ export interface SourceMatchDetail {
   }
 }
 
+/** One engine, two model backends: hybrid = commercial hosted (reviewed
+ * snapshot), local = self-hosted open-weights model (captured run envelopes). */
+export type RunMode = 'hybrid' | 'local'
+
+export interface RunModeInfo {
+  id: RunMode
+  label: string
+  models: string
+}
+
+export interface EngineActionEvent {
+  seq: number
+  ts: string
+  stage: string
+  label: string
+  level: 'info' | 'warn' | 'error' | string
+  message: string
+  detail: string
+}
+
+export interface EngineActionEventsPage {
+  action_id: string
+  status: EngineAction['status']
+  cancel_requested_at: string | null
+  events: EngineActionEvent[]
+  last_seq: number
+  more: boolean
+}
+
+export interface EngineWorkerStatus {
+  alive: boolean
+  autostart: boolean
+  last_seen: string | null
+  hostname: string | null
+  pid: number | null
+  current_action_id: string | null
+  started?: boolean
+  starting?: boolean
+  error?: string
+}
+
 export interface EngineAction {
   id: string
-  kind: 'refresh' | 'replay' | 'run'
-  status: 'queued' | 'running' | 'succeeded' | 'failed'
+  kind: 'refresh' | 'replay' | 'run' | 'corpus'
+  status: 'queued' | 'running' | 'succeeded' | 'failed' | 'cancelled'
   arguments: JsonObject
+  mode: RunMode
   requested_by: string
   requested_at: string
   started_at: string | null
@@ -320,11 +426,17 @@ export interface EngineAction {
   stdout: string
   result_hashes: JsonObject
   error: string
+  /** set while a running action is being stopped */
+  cancel_requested_at: string | null
+  cancelled_by: string
+  /** present on the queue response: worker status after ensuring one runs */
+  worker?: EngineWorkerStatus
 }
 
 export interface RunRecord {
   run_name: string
   run_id: string | null
+  provider_profile: string | null
   country: string
   pillar: number
   generated_at: string | null
@@ -341,9 +453,12 @@ export interface RunRecord {
 }
 
 export interface RunsResponse {
+  mode: RunMode
+  modes: RunModeInfo[]
   results: RunRecord[]
   champion: JsonObject
   actions: EngineAction[]
+  worker: EngineWorkerStatus
   can_launch: boolean
 }
 
@@ -537,4 +652,22 @@ export type DecideResponse =
 export function rowRecord(headers: string[], row: JsonValue[] | JsonObject): JsonObject {
   if (!Array.isArray(row)) return row
   return Object.fromEntries(headers.map((header, index) => [header, row[index] ?? null]))
+}
+
+/** A document an engine action downloaded (Runs → Sources; the Run Record list). */
+export interface ActionDocument {
+  url: string
+  seed_url: string
+  act: string | null
+  fetched_at: string
+  size_kb: number
+  file_type: string | null
+  sha256: string | null
+}
+
+export interface ActionDocumentsResponse {
+  action_id: string
+  status: EngineAction['status']
+  count: number
+  documents: ActionDocument[]
 }

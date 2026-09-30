@@ -1,0 +1,410 @@
+jurisdiction: IN
+source_format: pdf        # India Code / departmental PDFs; gazette PDFs bilingual or Devanagari-only
+name: India
+un_name: India
+languages: { primary: en, supported: [en, hi] }   # English IS authentic for most Union instruments;
+                                                  # EXCEPTION: DoT authorisation Rules Jun-Jul 2026 = Devanagari-only
+section_grammars: [english, hindi]   # "Section {n}" / "Rule {n}" / "धारा {n}" / "नियम {n}"
+
+whitelist_source: data/official_domains.json
+official_sources:
+  - { name: India Code, domain: indiacode.nic.in, source_type: official_statute_database, authority_rank: 100 }
+  - { name: eGazette, domain: egazette.gov.in, source_type: official_gazette, authority_rank: 100 }   # search UI bot-blocked, but /WriteReadData/<year>/<id>.pdf serves directly (verified 1 Aug); mine ids via gazettetracker.com
+  - { name: eGazette (alt), domain: egazette.nic.in, source_type: official_gazette, authority_rank: 100 }
+  - { name: MeitY, domain: meity.gov.in, source_type: ministry, authority_rank: 90 }   # ESCAP's most-cited IN domain (31 refs); hosts DPDP Act/Rules/commencement PDFs
+  - { name: RBI, domain: rbi.org.in, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: RBI docs, domain: rbidocs.rbi.org.in, source_type: sectoral_regulator, authority_rank: 60 }  # CAPTCHA-guarded at times
+  - { name: DoT, domain: dot.gov.in, source_type: ministry, authority_rank: 90 }
+  - { name: DoT eservices, domain: eservices.dot.gov.in, source_type: ministry, authority_rank: 90 }
+  - { name: CERT-In, domain: cert-in.org.in, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: SEBI, domain: sebi.gov.in, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: IRDAI, domain: irdai.gov.in, source_type: sectoral_regulator, authority_rank: 60 }   # robots-disallowed to bots — archive via manual fetch if needed
+  - { name: TRAI, domain: trai.gov.in, source_type: sectoral_regulator, authority_rank: 55 }
+  - { name: MCA, domain: mca.gov.in, source_type: ministry, authority_rank: 60 }
+  - { name: FIU-India, domain: fiuindia.gov.in, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: DST, domain: dst.gov.in, source_type: ministry, authority_rank: 55 }   # geospatial guidelines
+  - { name: IFSCA, domain: ifsca.gov.in, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: PIB, domain: pib.gov.in, source_type: government_press, authority_rank: 40 }
+  - { name: THC (rules mirror), domain: thc.nic.in, source_type: official_statute_database, authority_rank: 70 }  # nic.in gov mirror used when MCA/eGazette blocked
+  - { name: Pillar 2 procurement source, domain: www.dpiit.gov.in, source_type: official_statute_database, authority_rank: 90 }
+  - { name: Pillar 2 procurement source, domain: doe.gov.in, source_type: official_statute_database, authority_rank: 90 }
+  - { name: Pillar 2 procurement source, domain: www.dcmsme.gov.in, source_type: official_statute_database, authority_rank: 90 }
+
+portal_search:
+  engine: indiacode.nic.in (act/rule search) + departmental portals above
+  method: keyword_fulltext
+  notes: "eGazette unreachable to bots (TLS/robots) — gazette instruments verified via departmental PDFs (meity/dot/cert-in/sebi/rbi). Several DoT PDFs truncate on fetch; robust download with retries + size check required."
+
+citation_patterns:
+  section: ["s. {n}", "Section {n}", "धारा {n}"]
+  rule: ["Rule {n}", "rule {n}({m})", "नियम {n}"]
+  direction: ["Direction ({roman})", "para {n}"]     # CERT-In directions, RBI circular paras
+  paragraph_required: true
+connector: generic_seeds
+notes:
+  - "COMMENCEMENT IS THE INDIA TRAP: DPDP Act 2023 core duties (ss.3-17 incl. s.10 DPO + s.16 transfers) and DPDP Rules rr.5-16 commence 13 MAY 2027 — NOT in force Aug 2026. SPDI Rules 2011 remain operative (repeal deferred). Never cite DPDP substance as current law; record as pipeline."
+  - "s.16(1) restricted-country negative list: NEVER NOTIFIED as of cutoff. India's operative P6 weight is sectoral: RBI/SEBI/IRDAI/DoT."
+  - "DoT authorisation Rules 2026 (network G.S.R. 644(E); principal 23 Jun 2026; misc 23 Jun 2026) are DEVANAGARI-ONLY gazette PDFs — OCR + [OWN-TRANSLATION] labeling mandatory; an earlier research pass FABRICATED English quotes from these — always quote the Hindi and translate explicitly."
+  - "P6 headline: network Rules 2026 r.25(3) = strongest I1 (no proviso in r.25 itself — but 'no offshore route elsewhere in instrument' NOT proven); RBI payment/lending regime = I2 with 24h-repatriation (never I1 — FAQ 5 supplies the transfer path); SEBI cloud framework = I3 (MeitY-empanelled STQC DCs precondition); Companies Accounts Rules r.3(5) proviso = purest I2 (daily backup on India servers)."
+  - "P7-I5 rich vein: IT Interception Rules 2009 r.3 (Home Secretary = NON-judicial); Telecom Interception Rules 2024; BNSS 2023 s.94(1) police own-authority vs s.96(1) court-gated vs s.185 initially-warrantless; PMLA s.50(2) summons; Aadhaar s.33(1) court vs s.33(2) Secretary."
+  - "P6-I5: India has NO binding data-transfer agreement (UAE CEPA = endeavour + DS carve-out; UK CETA = forward-review only; TEPA/ECTA = no digital chapter; not in RCEP/CPTPP/DEPA/JSI/108). Score-1 supportable."
+open_verification:   # deep-research §5/§7 ranked items — UNVERIFIED, do not cite as fact
+  - "Income-tax Rules 2026 r.46(8) daily-backup-in-India claim — CONTRADICTORY secondary sources; most consequential open item"
+  - "IRDAI 2025 Regulations reg.9(iii) + repeal of 2015 Regs — official text unreadable (robots); rests on exposure draft + secondary"
+  - "Unified Licence cl. 39.20/39.23 remote-access clauses — never verified; UL being displaced by 2023-Act regime anyway"
+# RESOLVED 1 Aug (full official eGazette texts acquired via egazette.gov.in/WriteReadData —
+# the file server is open even where the search portal is bot-blocked; gazette IDs mined
+# via gazettetracker.com):
+#   - Principal Rules 2026 = G.S.R. 513(E), Gazette CG-DL-E-24062026-273774, 133pp:
+#     localisation clause CONFIRMED at r.30(3)(b) [OFFICIAL-EN in gazette English section];
+#     the cloud-hosted/satellite carve-out in r.30(3)(a) touches SYSTEM location only —
+#     the data-export prohibition in (b) applies to all authorised entities.
+#   - Misc Rules 2026 = G.S.R. 512(E), CG-DL-E-23062026-273770, 73pp: r.24(2)(b) negation
+#     intact in official English ("no copies ... shall be routed, shared or made available
+#     outside India") — the reported drafting defect was a Devanagari-extraction artifact.
+#   - Captive Rules 2026 = CG-DL-E-23062026-273771, 52pp: parallel clause at r.24(4).
+#   - Migration Rules 2026 = CG-DL-E-23062026-273763, 8pp: archived.
+#   - All four gazettes carry an OFFICIAL ENGLISH section — the Devanagari-only concern
+#     applies to the dot.gov.in Network-Rules upload, not to the eGazette copies.
+# OCR routing (hybrid decision, 1 Aug): gazette pages are Hindi+English bilingual —
+# vision-first for scanned docs; most English sources are native-text (no OCR at all).
+ocr: { provider: hybrid_script, route: vision-first, language_hints: [hi, en], expect_script: devanagari }
+known_index: data/known_index_round2.json
+seeds: data/seeds_r2.json
+rdtii_bindings: { pillars: [2, 6, 7] }
+
+anchor_instruments:
+  - "Information Technology Act 2000 — operative horizontal IT law; ss.69/69A/69B access powers; s.70B CERT-In"
+  - "Digital Personal Data Protection Act 2023 — enacted, PHASED: Board machinery live 13 Nov 2025; core duties 13 May 2027 (commencement G.S.R. 843(E))"
+  - "CERT-In Directions 28 Apr 2022 — the single densest instrument: P7-I2 (six-hour reporting), P7-I3 (180-day logs; 5-year subscriber/VASP records), P7-I5 (regulator access)"
+
+hunt_instruments:
+  P6-I1:
+    - "Telecom (Authorisation for Telecommunication Network) Rules 2026 G.S.R. 644(E) — r.25(3) storage-in-India + no-copies-abroad (Devanagari-only)"
+    - "Principal Telecom Services Rules 2026 (23 Jun 2026) — parallel clause, pinpoint OPEN"
+    - "Misc Telecom Services Rules 2026 — r.24(2)(kha) (M2M/IoT reach; negation defect unresolved)"
+    - "DST Geospatial Guidelines 2021 — cl. vii/ix finer-than-threshold data India-only (I1+I3)"
+  P6-I2:
+    - "RBI payment-data FAQs 26 Jun 2019 — FAQ 4/5: domestic storage + 24h offshore-processing repatriation (I2+I4, defeats I1 reading)"
+    - "RBI Digital Lending Directions 2025 para 13(iv) — servers only in India + 24h deletion"
+    - "RBI Payment Aggregators Directions 2025 para 9(c) — imports 2018 regime"
+    - "NBFC Outsourcing Directions 2017 para 7.3(v) — original records stay in India"
+    - "Companies (Accounts) Rules 2014 as amended 2022 — r.3(1) accessible-at-all-times + r.3(5) daily backup on India servers (broadest-scope I2)"
+    - "SEBI CSCRF 2024 — Regulatory Data within legal boundaries of India + readable domestic copy"
+    - "IRDAI Maintenance of Information Regulations 2025 — reg.9(iii) policies/claims in India DCs (repeals 2015 Regs; verify officially)"
+  P6-I3:
+    - "SEBI Cloud Framework 2023 — Principle 2: MeitY-empanelled STQC-audited Indian DCs as precondition of serving REs"
+  P6-I4:
+    - "Network Rules 2026 r.34 — prior CG permission for remote access from abroad (mirror-copy + 6-month audit trail conditions)"
+  P7-I3:
+    - "CERT-In Directions (iv)/(v)/(vi) — 180-day logs; 5-year subscriber records (VPN/VPS/cloud); 5-year VASP KYC"
+    - "PMLA 2002 ss.12(3)-(4) — 5-year records"
+    - "Companies Act 2013 s.128(5) — 8-year books"
+  P7-I5:
+    - "IT (Interception) Rules 2009 rr.3/9/22 — executive (Home Secretary) authorization, score 1"
+    - "Telecom (Lawful Interception) Rules 2024 rr.2(1)(c)/3 — executive authorization"
+    - "BNSS 2023 — s.94(1) police own-authority (1) vs s.96(1) court warrant (0) vs s.185(1)/(5) initially-warrantless (1)"
+    - "Aadhaar Act 2016 — s.33(1) court-gated (0) vs s.33(2) Secretary direction (1)"
+    - "PMLA s.50(2) — summons/production own-authority"
+  P7-I2:
+    - "Telecom (Telecom Cyber Security) Rules 2024 G.S.R. 707(E) — dedicated but SECTORAL (0.5); note: NO localisation in these rules"
+
+governing_instruments:
+  default: { law: "Information Technology Act 2000 (Act 21 of 2000)", url: "https://www.indiacode.nic.in/handle/123456789/1999" }
+  P7-I1:   { law: "Digital Personal Data Protection Act 2023 (Act 22 of 2023) — phased commencement", url: "https://www.indiacode.nic.in/handle/123456789/22037" }
+
+status_assertions:
+  "IRDAI (Outsourcing of Activities by Indian Insurers) Regulations 2017":
+    status: in_force
+    fact_url: "https://www.indiacode.nic.in/ViewFileUploaded?path=AC_CEN_2_33_00044_193804_1523351752525/regulationindividualfile/&file=irdai_(outsourcing_of_activities_by_indian_insurers)_regulations,_2017.pdf"
+    fact_text: "India Code official upload."
+  "IRDAI (Protection of Policyholders Interests, Operations and Allied Matters of Insurers) Regulations 2024":
+    status: in_force
+    fact_url: "https://financialservices.gov.in/sites/default/files/Act-Policies/2026-01/IRDAI--Protection-of--Policyholder-s-Interests--operations-and-allied-matters-of-insurers--Regulations--2024.pdf"
+    fact_text: "DFS official register PDF (2026-01 upload)."
+  "UAS License Agreement (Migration from CMTS)":
+    status: in_force
+    fact_url: "https://www.dot.gov.in/static/uploads/2026/05/4f2c1ad12524efb1134ba9f57e266184.pdf"
+    fact_text: "DoT official upload; legacy licenses operative pending 2026 authorisation migration."
+  "Companies (Management and Administration) Rules 2014":
+    status: in_force
+    fact_url: "https://thc.nic.in/Central%20Governmental%20Rules/Companies%20(Management%20and%20Administration)%20Rules,2014.pdf"
+    fact_text: "nic.in government mirror of the MCA rules, as amended."
+
+  "Information Technology Act 2000":
+    status: in_force
+    fact_url: "https://www.indiacode.nic.in/handle/123456789/1999"
+    fact_text: "India Code lists the IT Act 2000 (Act 21 of 2000) as in force, as amended."
+  "Companies Act 2013":
+    status: in_force
+    fact_url: "https://www.indiacode.nic.in/handle/123456789/2114"
+    fact_text: "India Code lists the Companies Act 2013 (Act 18 of 2013) as in force."
+  "National Data Sharing and Accessibility Policy 2012":
+    status: in_force
+    fact_url: "https://dst.gov.in"
+    fact_text: "Operative policy instrument; ESCAP Round-2 government-verified gold cites it (6.1 row)."
+  "National Cyber Security Policy 2013":
+    status: in_force
+    fact_url: "https://www.meity.gov.in"
+    fact_text: "Operative policy instrument; gold 7.2 row."
+  "Insurance Regulatory and Development Authority of India (Maintenance of Insurance Records) Regulations 2015":
+    status: in_force
+    fact_url: "https://irdai.gov.in/consolidated-gazette-notified-regulations"
+    fact_text: "IRDAI consolidated register. CAVEAT: reported repealed by the 2025 Regulations reg.18(i)(c) — verify before final citation; treated as operative for corpus text."
+  "Reserve Bank of India (Know Your Customer (KYC)) Directions 2016":
+    status: in_force
+    fact_url: "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=10292"
+    fact_text: "RBI Master Direction, updated from time to time."
+  "Reserve Bank of India Master Direction on Issuance and Operation of Prepaid Payment Instruments":
+    status: in_force
+    fact_url: "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx"
+    fact_text: "RBI Master Direction register."
+  "Master Direction on Information Technology Governance, Risk, Controls and Assurance Practices 2023":
+    status: in_force
+    fact_url: "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12562"
+    fact_text: "RBI/2023-24; effective 1 Apr 2024."
+  "Reserve Bank of India Directive 2018":
+    status: in_force
+    fact_url: "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11244"
+    fact_text: "DPSS.CO.OD No.2785/06.08.005/2017-18 (6 Apr 2018) payment-data storage; cross-referred as live by the 2025 PA Directions."
+  "Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021":
+    status: in_force
+    fact_url: "https://www.meity.gov.in/content/information-technology-intermediary-guidelines-and-digital-media-ethics-code-rules-2021"
+    fact_text: "MeitY register; as amended 2022/2023."
+  "Information Technology (Guidelines for Cyber Café) Rules 2011":
+    status: in_force
+    fact_url: "https://www.meity.gov.in"
+    fact_text: "Made under IT Act s.87; not repealed as of cutoff."
+  "Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations 2015":
+    status: in_force
+    fact_url: "https://www.sebi.gov.in/legal/regulations"
+    fact_text: "SEBI regulations register, as amended."
+  "Prevention of Money-laundering (Maintenance of Records of the Nature and Value of Transactions, the Procedure and Manner) Rules":
+    status: in_force
+    fact_url: "https://fiuindia.gov.in"
+    fact_text: "PML Rules 2005 under PMLA; operative AML record-keeping regime."
+  "International Financial Services Centres Authority (Market Infrastructure Institutions) Regulations 2021":
+    status: in_force
+    fact_url: "https://ifsca.gov.in/Legal"
+    fact_text: "IFSCA legal register."
+  "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations 2021":
+    status: in_force
+    fact_url: "https://ifsca.gov.in/Legal"
+    fact_text: "IFSCA legal register."
+  "International Financial Services Centres Authority (Fund Management) Regulations 2022":
+    status: in_force
+    fact_url: "https://ifsca.gov.in/Legal"
+    fact_text: "IFSCA legal register."
+  "International Financial Services Centres Authority Banking Handbook Conduct of Business Directions 2023":
+    status: in_force
+    fact_url: "https://ifsca.gov.in/Legal"
+    fact_text: "IFSCA banking handbook directions."
+  "International Financial Services Centres Authority (Maintenance of Insurance Records and Submission of Requisite Information) Regulations":
+    status: in_force
+    fact_url: "https://ifsca.gov.in/Legal"
+    fact_text: "IFSCA insurance records regulations."
+  "International Financial Services Centres Authority (Anti Money Laundering, Counter Terrorist-Financing and Know Your Customer) Guidelines 2022":
+    status: in_force
+    fact_url: "https://ifsca.gov.in/Legal"
+    fact_text: "IFSCA AML/CFT/KYC guidelines 2022."
+  "License Agreement for Provision of Internet Services 2013":
+    status: in_force
+    fact_url: "https://dot.gov.in/licensing"
+    fact_text: "DoT ISP license agreement regime; legacy licenses run until expiry/migration under the 2026 Migration Rules."
+  "License Agreement for Provision of Unified License":
+    status: in_force
+    fact_url: "https://dot.gov.in/unified-license"
+    fact_text: "DoT UL agreement; legacy population persists during 2026 authorisation migration."
+  "Telecommunications (Terms and Conditions for Migration) Rules 2026":
+    status: in_force
+    fact_url: "https://egazette.gov.in/WriteReadData/2026/273763.pdf"
+    fact_text: "Official Gazette CG-DL-E-23062026-273763; in force on publication."
+  "Comprehensive Cyber Security Framework for Primary (Urban) Cooperative Banks (UCBs) 2019":
+    status: in_force
+    fact_url: "https://www.rbi.org.in"
+    fact_text: "RBI graded-approach framework for UCBs."
+  "Insurance Regulatory and Development Authority of India (Outsourcing of Activities by Indian Insurers) Regulations":
+    status: in_force
+    fact_url: "https://irdai.gov.in/consolidated-gazette-notified-regulations"
+    fact_text: "IRDAI register."
+  "Ministry of Electronics and Information Technology Cyber Security Direction 2022":
+    status: in_force
+    fact_url: "https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf"
+    fact_text: "CERT-In Directions No. 20(3)/2022 under IT Act s.70B(6); effective 27 Jun 2022."
+  "Guidelines for Government Departments MeitY":
+    status: in_force
+    fact_url: "https://www.meity.gov.in"
+    fact_text: "MeitY guidelines [GOV-ONLY] — recorded, scope-excluded at scoring."
+
+  "Digital Personal Data Protection Act 2023":
+    status: in_force  # PARTLY: Board/institutional provisions live since 13 Nov 2025; ss.3-17 commence 13 May 2027 — reviewers must not cite dormant sections as current law (guidance below)
+    fact_url: "https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa"
+    fact_text: "Commencement G.S.R. 843(E) 13 Nov 2025: Board/institutional provisions first; ss.3-17 core duties 13 May 2027. s.16(1) restricted-country list never notified."
+    effective_date: "2025-11-13"
+  "Digital Personal Data Protection Rules 2025":
+    status: in_force  # PARTLY: rules 1,2,17-21 live since 13 Nov 2025; rules 3,5-16,22,23 commence 13 May 2027 — same reviewer guidance
+    fact_url: "https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf"
+    fact_text: "G.S.R. 846(E): rules 1,2,17-21 from 13 Nov 2025; rule 4 from 13 Nov 2026; rules 3,5-16,22,23 (incl. r.13 SDF and r.15 transfers) 13 May 2027."
+  "CERT-In Directions 28 April 2022":
+    status: in_force
+    fact_url: "https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf"
+    fact_text: "Issued under IT Act s.70B(6), No. 20(3)/2022-CERT-In; generally effective 27 June 2022; CERT-In page current as of 28 July 2026."
+    effective_date: "2022-06-27"
+  "Telecommunications (Authorisation for Telecommunication Network) Rules 2026":
+    status: in_force
+    fact_url: "https://www.dot.gov.in/static/uploads/2026/07/c396e4c7175a1895d74c836343e03e96.pdf"
+    fact_text: "G.S.R. 644(E), notified 20 July 2026, published 22 July 2026, in force on publication. Devanagari-only gazette text."
+    effective_date: "2026-07-22"
+  "Telecommunications (Principal Telecommunication Services) Rules 2026":
+    status: in_force
+    fact_url: "https://egazette.gov.in/WriteReadData/2026/273774.pdf"
+    fact_text: "Official Gazette G.S.R. 513(E), CG-DL-E-24062026-273774, in force on publication; full 133-page bilingual text archived. Localisation at r.30(3)(b)."
+    effective_date: "2026-06-23"
+  "Telecommunications (Miscellaneous Telecommunication Services) Rules 2026":
+    status: in_force
+    fact_url: "https://egazette.gov.in/WriteReadData/2026/273770.pdf"
+    fact_text: "Official Gazette G.S.R. 512(E), CG-DL-E-23062026-273770; localisation at r.24(2)(b), official English text."
+    effective_date: "2026-06-23"
+  "Telecommunications (Captive Telecommunication Services) Rules 2026":
+    status: in_force
+    fact_url: "https://egazette.gov.in/WriteReadData/2026/273771.pdf"
+    fact_text: "Official Gazette CG-DL-E-23062026-273771; parallel localisation clause at r.24(4)."
+    effective_date: "2026-06-23"
+  "Telecommunications (Telecom Cyber Security) Rules 2024":
+    status: in_force
+    fact_url: "https://eservices.dot.gov.in/act-and-rules"
+    fact_text: "G.S.R. 707(E) notified 21 November 2024; amended October 2025."
+    effective_date: "2024-11-21"
+  "Telecommunications (Lawful Interception) Rules 2024":
+    status: in_force
+    fact_url: "https://eservices.dot.gov.in/act-and-rules"
+    fact_text: "G.S.R. 754(E) notified 6 December 2024 under the Telecommunications Act 2023."
+    effective_date: "2024-12-06"
+  "Bharatiya Nagarik Suraksha Sanhita 2023":
+    status: in_force
+    fact_url: "https://www.indiacode.nic.in/handle/123456789/21920?locale=en"
+    fact_text: "Act 46 of 2023, effective 1 July 2024, replacing the Code of Criminal Procedure 1973."
+    effective_date: "2024-07-01"
+  "Prevention of Money-laundering Act 2002":
+    status: in_force
+    fact_url: "https://www.indiacode.nic.in/handle/123456789/2036"
+    fact_text: "India Code official text; in force as amended."
+  "Aadhaar Act 2016":
+    status: in_force
+    fact_url: "https://www.indiacode.nic.in/handle/123456789/21583"
+    fact_text: "India Code official text."
+  "IT (Interception) Rules 2009":
+    status: in_force
+    fact_url: "https://www.indiacode.nic.in/handle/123456789/1362/simple-search?query=Information+Technology+%28Procedure+and+Safeguards+for+Interception%2C+Monitoring+or+Decryption+of+Information%29+Rules%2C+2009.&searchradio=rules"
+    fact_text: "In force for interception under IT Act s.69; post-amendment consolidation not exposed — medium-high confidence."
+  "RBI Digital Lending Directions 2025":
+    status: in_force
+    fact_url: "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=12848&Mode=0"
+    fact_text: "RBI/2025-26/36, effective 8 May 2025."
+    effective_date: "2025-05-08"
+  "RBI Payment Aggregators Directions 2025":
+    status: in_force
+    fact_url: "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12896"
+    fact_text: "RBI/DPSS/2025-26/141, effective 15 September 2025; imports the 2018 payment-data storage regime via para 9(c)."
+    effective_date: "2025-09-15"
+  "RBI Payment Data Storage FAQs 2019":
+    status: in_force
+    fact_url: "https://www.rbi.org.in/commonman/english/scripts/FAQs.aspx?Id=2995"
+    fact_text: "Clarifies DPSS.CO.OD No.2785/06.08.005/2017-18 (6 Apr 2018); FAQ 4/5 read directly off the RBI portal; cross-referred by the 2025 PA Directions."
+  "SEBI Cloud Framework 2023":
+    status: in_force
+    fact_url: "https://www.sebi.gov.in/sebi_data/attachdocs/mar-2023/1678112480131.pdf"
+    fact_text: "SEBI/HO/ITD/ITD_VAPT/P/CIR/2023/033, 6 March 2023; fully effective ~March 2024; cross-referred as live by CSCRF."
+    effective_date: "2023-03-06"
+  "SEBI CSCRF 2024":
+    status: in_force
+    fact_url: "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2024/1724326790365.pdf"
+    fact_text: "SEBI/HO/ITD-1/ITD_CSC_EXT/P/CIR/2024/113, 20 August 2024; glide path from 1 Jan 2025; extended by CIR/2025/45."
+  "Companies (Accounts) Rules 2014 (2022 amendment)":
+    status: in_force
+    fact_url: "https://thc.nic.in/Central%20Governmental%20Rules/Companies%20(Accounts)%20Rules,%202014..pdf"
+    fact_text: "Fourth Amendment G.S.R. 624(E) 5 Aug 2022 (daily backup on India-located servers). Verified on a nic.in government mirror; MCA/eGazette copies blocked to bots."
+  "DST Geospatial Guidelines 2021":
+    status: in_force
+    fact_url: "https://dst.gov.in/sites/default/files/Final%20Approved%20Guidelines%20on%20Geospatial%20Data.pdf"
+    fact_text: "Issued 15 February 2021; no repeal or relaxation of clauses vii/ix found for 2024-2026."
+    effective_date: "2021-02-15"
+  # Pillar 2 (public procurement), 29 Sep 2026
+  "Public Procurement (Preference to Make in India) Order 2017 (DPIIT, revised 19 July 2024)":
+    status: "in_force"
+    fact_url: "https://www.dpiit.gov.in/static/uploads/2025/07/458478309ccf301ceb58f63d02646f42.pdf"
+    fact_text: "DPIIT Order No. P-45021/2/2017-PP (BE-II)-Part(4) Vol.II of 19.07.2024 revising the 15.06.2017 Order; no 2025-26 revision on DPIIT/TEC lists (checked 29.09.2026)."
+    effective_date: "2024-07-19"
+  "General Financial Rules 2017 (consolidated up to 31 January 2026)":
+    status: "in_force"
+    fact_url: "https://doe.gov.in/files/circulars_document/GFRupdatedupto31012026.pdf"
+    fact_text: "DoE consolidated GFR 2017 \"updated up to 31.01.2026\" incl. r.144(xi) (subst. 23.02.2023) and r.161(iv)(b) GTE bar (OM 15.05.2020)."
+    effective_date: "2017-03-08"
+  "Department of Expenditure Order (Public Procurement No. 4) 2023 on Restrictions under Rule 144(xi) of the General Financial Rules 2017":
+    status: "in_force"
+    fact_url: "https://doe.gov.in/files/circulars_document/Order_Public_Procurement_No_4_Restrictions_under_Rule_144_xi_of_the_General_Financial_Rules_GFRs_2017.pdf"
+    fact_text: "DoE Order (PP No. 4) F.7/10/2021-PPD(1) of 23.02.2023 superseding Orders (PP) 1-3 of July 2020; no 2024-Sep 2026 amendment on DoE PPD list."
+    effective_date: "2023-02-23"
+  "DoT Notification of Telecom Products, Services or Works under the Public Procurement (Preference to Make in India) Order 2017 (F.No. 18-10/2017-IP, 21 October 2024)":
+    status: "in_force"
+    fact_url: "https://egazette.gov.in/WriteReadData/2024/258138.pdf"
+    fact_text: "Gazette CG-DL-E-22102024-258138; para 2 supersedes DoT notifications of 29.08.2018 and 31.08.2021; para 15 in effect from date of notification."
+    effective_date: "2024-10-21"
+  "Public Procurement Policy for Micro and Small Enterprises (MSEs) Order 2012 (S.O. 581(E))":
+    status: "in_force"
+    fact_url: "https://egazette.gov.in/WriteReadData/2022/240902.pdf"
+    fact_text: "S.O. 581(E) 23.03.2012, amended by S.O. 5670(E) 09.11.2018 (20%->25%), S.O. 3237(E) 11.08.2021 and S.O. 5745(E) 08.12.2022 (gazette note lists all amendments)."
+    effective_date: "2012-03-23"
+  "Public Procurement (Preference to Make in India) Order 2019 for Cyber Security Products (MeitY)":
+    status: "in_force"
+    fact_url: "https://www.dot.gov.in/static/uploads/2026/04/5cd74d7ff79cf32947dcc7ae6dad175d.pdf"
+    fact_text: "MeitY Order 2019 for Cyber Security Products (No.1(10)/2017-CLES) reiterated by MeitY OM 04.03.2021 and DoT circular 19-113/2020-SA of 16.03.2021; no withdrawal found."
+  "Policy on Collaborative Application Development by Opening the Source Code of Government Applications 2015":
+    status: "in_force"
+    fact_url: "https://egazette.gov.in/WriteReadData/2015/164611.pdf"
+    fact_text: "DeitY F.No. 2(14)/2014-EG-II, Gazette of India Part I Sec. 1; no repeal found (research 29.09.2026)."
+    effective_date: "2015-05-06"
+  "Policy on Adoption of Open Source Software for Government of India 2015":
+    status: "in_force"
+    fact_url: "https://egazette.gov.in/WriteReadData/2015/163746.pdf"
+    fact_text: "Notified in Gazette of India Part I Sec. 1 (F. No. 1(3)/2014-EG II); MeitY copy current on meity.gov.in."
+  "Information Technology Act No.21 2000":
+    status: "in_force"
+    fact_url: "https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf"
+    fact_text: "Act 21 of 2000 as amended (incl. IT (Amendment) Act 2008 inserting s. 84A); India Code updated text."
+    effective_date: "2000-10-17"
+  "MeitY Inviting Application for Empanelment of Cloud Services of Cloud Service Providers (July 2026)":
+    status: "in_force"
+    fact_url: "https://www.meity.gov.in/static/uploads/2026/07/c3cbbbbe793deb83de3b3d7151aa94c3.pdf"
+    fact_text: "MeitY open empanelment invitation, July 2026 (replaces Aug 2025 and 2017 invitations); Annexure-6 PQ (i) Indian incorporation; s.5.2.4 in-India hosting."
+  "MeitY Guidelines for Procurement of Cloud Services v2.0 (18 March 2026)":
+    status: "in_force"
+    fact_url: "https://www.meity.gov.in/static/uploads/2026/03/fea54ec9e544c77abbdb48d0f1da6264.pdf"
+    fact_text: "MeitY Cloud Management Office Guidelines v2.0 of 18.03.2026, successor to the 2017 Guidelines on contractual terms (advisory)."
+    effective_date: "2026-03-18"
+  "Manual for Procurement of Goods 2024 (Second Edition, Department of Expenditure)":
+    status: "in_force"
+    fact_url: "https://doe.gov.in/circulars/manual-procurement-goods-second-edition-2024"
+    fact_text: "DoE Manual for Procurement of Goods, Second Edition 2024 (published 16.08.2024); guidance compendium under GFR 2017."
+    effective_date: "2024-08-16"
+
+gold_aliases:
+  # Pillar 2 (public procurement)
+  "Government of India,\nMinistry of Commerce and Industry Department for Promotion of Industry and Internal Trade (Public Procurement Section) Public Procurement (Preference to Make in India) Order 2017": "Public Procurement (Preference to Make in India) Order 2017 (DPIIT, revised 19 July 2024)"
+  "Government of India, Ministry of Finance Department of Expenditure General Financial Rules 2017": "General Financial Rules 2017 (consolidated up to 31 January 2026)"
+  "Public Procurement Policy for Micro and Small Enterprises (MSEs) Order 2018": "Public Procurement Policy for Micro and Small Enterprises (MSEs) Order 2012 (S.O. 581(E))"
+  "Government of India, Ministry of Finance, Manual for Procurement of Goods, Second Edition 2024": "Manual for Procurement of Goods 2024 (Second Edition, Department of Expenditure)"
+  "Government of India, Ministry of Electronics and Information,  Technology Notification for Public Procurement (Preference to Make in India) Order 2019 for Cyber Security Products": "Public Procurement (Preference to Make in India) Order 2019 for Cyber Security Products (MeitY)"
+  "Government of India, Ministry of Communication and Information Technology, Policy on Adoption of Open Source Software for Government of India 2015": "Policy on Adoption of Open Source Software for Government of India 2015"
+  "Government of India, Information Technology Act No.21 2000": "Information Technology Act No.21 2000"
+  "Government of India,\nMinistry of Electronics and Information Technology (MeitY), Guidelines for Government Departments On Contractual Terms Related to Cloud Services 2017": "MeitY Guidelines for Procurement of Cloud Services v2.0 (18 March 2026)"
+  "Government of India,\nMinistry of Electronics and Information Technology (MeitY), Invitation for Application/Proposal for Empanelment of Cloud Service Offering of Cloud Service Providers (CSPs) 2017": "MeitY Inviting Application for Empanelment of Cloud Services of Cloud Service Providers (July 2026)"
+  "Government of India,\nMinistry of Micro, Small and Medium Enterprises, Public Procurement Policy for Micro and Small Enterprises Order 2012": "Public Procurement Policy for Micro and Small Enterprises (MSEs) Order 2012 (S.O. 581(E))"
+  "Government of India,\nMinistry of Micro, Small and Medium Enterprises, Public Procurement Policy for Micro and Small Enterprises Order 2018": "Public Procurement Policy for Micro and Small Enterprises (MSEs) Order 2012 (S.O. 581(E))"
+  "Government of India, \nMinistry of Electronics and Information Technology, Public Procurement (Make in India) Order 2018 for Cyber Security Products": "Public Procurement (Preference to Make in India) Order 2019 for Cyber Security Products (MeitY)"
+  "Government of India, \nMinistry of Electronics and Information Technology, Public Procurement (Make in India) Order 2019 for Cyber Security Products": "Public Procurement (Preference to Make in India) Order 2019 for Cyber Security Products (MeitY)"
+  "Government of India, Ministry of Communications and Information Technology, Preference to Domestically Manufactured Electronic Products in Government Procurement, 2013": "Public Procurement (Preference to Make in India) Order 2017 (DPIIT, revised 19 July 2024)"
+  "Government of India, Ministry of Communications and Information Technology, Guidelines for Providing Preference to Domestically Manufactured Electronic Products in Government Procurement, 2015": "Public Procurement (Preference to Make in India) Order 2017 (DPIIT, revised 19 July 2024)"
+  "Government of India, \nMinistry of Communications, Public Procurement (Preference to Make in India) Order 2017 - Notification of Telecom Products, Services and Works": "DoT Notification of Telecom Products, Services or Works under the Public Procurement (Preference to Make in India) Order 2017 (F.No. 18-10/2017-IP, 21 October 2024)"
+
+research_scores: { P2-I1: 1, P2-I2: 1, P2-I3: 1, P2-I4: 1 }

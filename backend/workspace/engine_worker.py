@@ -1,8 +1,11 @@
 import hashlib
 import json
+import os
 import re
+import signal
 import socket
 import subprocess
+import time
 from datetime import timedelta
 from pathlib import Path
 
@@ -12,11 +15,104 @@ from django.db.models import Q
 from django.utils import timezone
 
 from .importer import SnapshotImportError, import_snapshot
-from .models import EngineAction
+from .models import EngineAction, EngineActionEvent
 
 
 class EngineWorkerError(RuntimeError):
     pass
+
+
+class EngineActionCancelled(RuntimeError):
+    pass
+
+
+CANCEL_POLL_SECONDS = 2.0
+
+
+def _stop_process_group(process):
+    """SIGTERM the whole group (the pipeline may have children), then SIGKILL."""
+    for sig, grace in ((signal.SIGTERM, 10), (signal.SIGKILL, 5)):
+        try:
+            os.killpg(process.pid, sig)
+        except ProcessLookupError:
+            return
+        try:
+            process.wait(timeout=grace)
+            return
+        except subprocess.TimeoutExpired:
+            continue
+
+
+def event_log_path(action):
+    return settings.ENGINE_ROOT / "logs" / "events" / f"{action.pk}.jsonl"
+
+
+class EventTail:
+    """Copies new JSON lines from the engine's event log into EngineActionEvent."""
+
+    def __init__(self, action, path):
+        self.action, self.path, self.offset = action, path, 0
+
+    def pump(self):
+        from datetime import datetime, timezone as dt_timezone
+
+        try:
+            with self.path.open("rb") as handle:
+                handle.seek(self.offset)
+                chunk = handle.read()
+        except OSError:
+            return 0
+        if not chunk:
+            return 0
+        complete = chunk[: chunk.rfind(b"\n") + 1]  # never ingest a half-written line
+        self.offset += len(complete)
+        rows = []
+        for raw in complete.decode("utf-8", errors="replace").splitlines():
+            try:
+                event = json.loads(raw)
+            except json.JSONDecodeError:
+                continue
+            rows.append(EngineActionEvent(
+                action=self.action, seq=int(event.get("seq") or 0),
+                ts=datetime.fromtimestamp(float(event.get("ts") or 0), tz=dt_timezone.utc),
+                stage=str(event.get("stage") or "")[:32], label=str(event.get("label") or "")[:160],
+                level=str(event.get("level") or "info")[:8], message=str(event.get("message") or ""),
+                detail=str(event.get("detail") or ""),
+            ))
+        EngineActionEvent.objects.bulk_create(rows, ignore_conflicts=True)
+        return len(rows)
+
+
+def run_allowlisted(argv, timeout, should_cancel, env=None, on_poll=None):
+    """Run the allowlisted command, polling for cancellation. Returns
+    (returncode, combined output); raises EngineActionCancelled or
+    subprocess.TimeoutExpired."""
+    process = subprocess.Popen(
+        argv,
+        cwd=settings.ENGINE_ROOT,
+        shell=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        start_new_session=True,  # own process group, so cancel stops all of it
+        env=env,
+    )
+    deadline = time.monotonic() + timeout
+    while True:
+        try:
+            stdout, stderr = process.communicate(timeout=CANCEL_POLL_SECONDS)
+            return process.returncode, "\n".join(part for part in (stdout, stderr) if part)
+        except subprocess.TimeoutExpired:
+            if on_poll:
+                on_poll()
+            cancelled = should_cancel()
+            if cancelled or time.monotonic() > deadline:
+                _stop_process_group(process)
+                stdout, stderr = process.communicate()
+                output = "\n".join(part for part in (stdout, stderr) if part)
+                if cancelled:
+                    raise EngineActionCancelled(output)
+                raise subprocess.TimeoutExpired(argv, timeout, output=output)
 
 
 ACTION_ARTIFACTS = {
@@ -24,7 +120,11 @@ ACTION_ARTIFACTS = {
         "submission/consolidated_final.csv",
         "submission/consolidated_final.json",
     ),
-    "refresh_payload": ("ui_export.zip",),
+    "refresh_payload": (
+        "ui_export.zip",
+        "submission/consolidated.json",
+        "submission/review/decisions.template.json",
+    ),
 }
 
 
@@ -88,12 +188,45 @@ def _sha256(path):
     return digest.hexdigest()
 
 
+def review_mode_env(action_name, arguments):
+    """Review actions work on one model backend's files; runs are never namespaced."""
+    mode = (arguments or {}).get("mode")
+    if action_name in {"refresh_payload", "replay"} and mode in ("hybrid", "local"):
+        return {"CLAUSECHAIN_REVIEW_MODE": mode}
+    return {}
+
+
+def run_output_path(arguments):
+    prefix = arguments.get("out_prefix") or "final"
+    return f"outputs/{prefix}_{arguments['cc']}_p{arguments['pillar']}/output.json"
+
+
+# Debug fields dropped from the stored copy; the full envelope stays on disk as
+# the immutable artifact whose hash is recorded. Proof, status record and search
+# coverage are kept: Local mode reviews straight from this copy, and the next run
+# of the same economy/pillar overwrites the file on disk.
+ENVELOPE_DROP_FIELDS = ("raw_context", "graph_path", "review")
+
+
+def compact_envelope(envelope):
+    findings = [
+        {key: value for key, value in finding.items() if key not in ENVELOPE_DROP_FIELDS}
+        for finding in envelope.get("findings") or []
+    ]
+    return {
+        key: envelope.get(key)
+        for key in ("run_id", "generated_at", "country", "pillar", "provider_profile",
+                    "warnings", "metadata")
+    } | {"findings": findings}
+
+
 def artifact_hashes(action_name, arguments):
     paths = list(ACTION_ARTIFACTS.get(action_name, ()))
+    if (arguments or {}).get("mode") == "local":  # the Local workspace's own files
+        paths = [path.replace("submission/", "submission/local/", 1) for path in paths
+                 if path.startswith("submission/")]
     if action_name == "run_pipeline":
-        paths.append(
-            f"outputs/final_{arguments['cc']}_p{arguments['pillar']}/output.json"
-        )
+        paths.append(run_output_path(arguments))
     result = {}
     for relative in paths:
         path = settings.ENGINE_ROOT / relative
@@ -134,24 +267,43 @@ def claim_next_action(worker_id=None):
 def execute_action(action):
     action_name, argv, timeout = build_allowlisted_command(action.arguments_json)
     try:
-        completed = subprocess.run(
-            argv,
-            cwd=settings.ENGINE_ROOT,
-            shell=False,
-            capture_output=True,
-            text=True,
-            timeout=timeout,
-            check=False,
-        )
-        output = "\n".join(part for part in (completed.stdout, completed.stderr) if part)
+        events_path = event_log_path(action)
+        events_path.parent.mkdir(parents=True, exist_ok=True)
+        tail = EventTail(action, events_path)
+        try:
+            returncode, output = run_allowlisted(
+                argv,
+                timeout,
+                lambda: EngineAction.objects.filter(
+                    pk=action.pk, cancel_requested_at__isnull=False
+                ).exists(),
+                env={**os.environ, "CLAUSECHAIN_EVENT_LOG": str(events_path),
+                     "PYTHONUNBUFFERED": "1", **review_mode_env(action_name, action.arguments_json)},
+                on_poll=tail.pump,
+            )
+        finally:
+            tail.pump()
         output = output[-100_000:]
-        if completed.returncode:
+        if returncode:
             raise EngineWorkerError(
-                f"Allowlisted command exited {completed.returncode}.\n{output}".strip()
+                f"Allowlisted command exited {returncode}.\n{output}".strip()
             )
         hashes = artifact_hashes(action_name, action.arguments_json)
-        if action_name in {"replay", "refresh_payload", "run_pipeline"}:
-            snapshot, _ = import_snapshot()
+        if action_name == "run_pipeline":
+            output = settings.ENGINE_ROOT / run_output_path(action.arguments_json)
+            try:
+                action.result_json = compact_envelope(
+                    json.loads(output.read_text(encoding="utf-8"))
+                )
+            except (OSError, json.JSONDecodeError):
+                action.result_json = {}
+        # run_pipeline deliberately does NOT auto-import: a live run produces
+        # immutable artifacts only, and the reviewed app snapshot changes solely
+        # through the explicit refresh action. (Auto-importing also fails closed
+        # whenever fresh run outputs diverge from the consolidated candidate set,
+        # which marked otherwise-successful runs as failed.)
+        if action_name in {"replay", "refresh_payload"}:
+            snapshot, _ = import_snapshot(mode=(action.arguments_json or {}).get("mode") or "hybrid")
             hashes["snapshot"] = {
                 "id": str(snapshot.pk),
                 "source_hash": snapshot.source_hash,
@@ -160,6 +312,11 @@ def execute_action(action):
         action.stdout = output
         action.result_hashes_json = hashes
         action.error = ""
+    except EngineActionCancelled as exc:
+        action.refresh_from_db(fields=("cancelled_by",))
+        action.status = EngineAction.Status.CANCELLED
+        action.stdout = str(exc)[-100_000:]
+        action.error = f"Cancelled by {action.cancelled_by or 'a user'} while running."
     except (OSError, subprocess.SubprocessError, EngineWorkerError, SnapshotImportError) as exc:
         action.status = EngineAction.Status.FAILED
         action.error = str(exc)[-20_000:]
@@ -167,8 +324,8 @@ def execute_action(action):
     action.lease_expires_at = None
     action.save(
         update_fields=(
-            "status", "stdout", "result_hashes_json", "error", "finished_at",
-            "lease_expires_at",
+            "status", "stdout", "result_hashes_json", "result_json", "error",
+            "finished_at", "lease_expires_at",
         )
     )
     return action

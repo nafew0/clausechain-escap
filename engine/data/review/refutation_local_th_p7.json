@@ -1,0 +1,702 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC BCR Certification Regulation B.E. 2568",
+  "article": "s. 17(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited text is a certificate template from the PDPC BCR Certification Regulation. While it is a subordinate instrument, it explicitly references the 'Personal Data Protection Act B.E. 2562 (2019)' as the source of the 'principles and standards of personal data protection.' This reference confirms the existence of the horizontal framework, which is the core subject of P7-I1. The mapping is legally sound as evidence of the framework's operationalization."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The snippet provides direct textual evidence of the PDPA (a horizontal law) being the basis for BCR approval. Although the indicator is absence-scored (high score = lack of framework), a provision evidencing the framework is a valid evidence row to support a score of 0 (framework present). The rubric explicitly allows for evidence rows that establish the presence/absence outcome."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states that the BCRs are approved as complying with standards 'prescribed under the Personal Data Protection Act B.E. 2562 (2019)'. This textually establishes that the PDPA is the governing law for these data protection standards. It does not claim to be the PDPA itself, but it serves as valid evidence that the PDPA is the operative comprehensive framework, which is sufficient to refute the 'lack of framework' condition."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Appropriate Measures to Safeguard the Rig",
+  "article": "cl. 4(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is a PDPC notification implementing the Personal Data Protection Act B.E. 2562 (2019). While it specifically addresses the exception for historical records (Section 24(1)), it explicitly references the PDPA and the Committee's authority under Section 37, thereby evidencing the existence of the overarching horizontal legal framework. It does not suffer from a scope defect that would invalidate it as evidence of the framework's existence."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The snippet cites the 'Personal Data Protection Act B.E. 2562 (2019)' and the 'Office of the Personal Data Protection Committee', which are positive cues for a horizontal framework. Although the specific clause deals with a sectoral/exceptional context (historical archives), the rubric allows for evidence that establishes the framework's presence. The mapping correctly identifies the existence of the PDPA, supporti"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states: 'pursuant to Section 24 (1) of the Personal Data Protection Act B.E. 2562 (2019)'. This textual reference explicitly establishes the existence of the named Act. The rationale claims this evidences the existence of a comprehensive horizontal framework. The text supports the existence of the Act, which is the core requirement for the indicator. The fact that the snippet is from a notification regarding specific measures does not negate the textual evidence of the Act's exist"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Collecting Personal Data Pertaining to Cr",
+  "article": "cl. 9",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies that the notification is a sectoral instrument (Criminal Records) issued under the authority of the Personal Data Protection Committee (PDPC). While the specific rule is sectoral, the rubric for P7-I1 (framework_absent_scores_high) allows for evidence of the framework's existence. The text explicitly references 'personal data protection laws' and 'data controller' obligations, which are hallmarks of a comprehensive horizontal framework (the PDPA). Therefore, usin"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' if a comprehensive horizontal framework exists. The snippet provides concrete evidence of such a framework by detailing specific controller obligations (retention limits, erasure duties) and referencing the legal basis ('personal data protection laws'). Although the content is sectoral (criminal records), the rubric's exclusion note states that sectoral laws are recorded but do not make the framework comprehensive *if they are the only laws*. However, the presence"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a retention limit ('maximum duration not exceeding six months') and an erasure obligation for criminal record data. It explicitly references 'personal data protection laws' as the source of legal justification. This textual reference confirms the existence of a broader legal regime (the PDPA) under which this notification operates. The text does not contradict the claim that a comprehensive framework exists; rather, it operationalizes a specific aspect of that f"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Criteria and Procedures for Formulating a",
+  "article": "cl. 3(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a horizontal obligation on 'data processors' to maintain Records of Processing Activities (RoPA), a core mechanism of the PDPA. This is not a sectoral restriction but a general compliance duty applicable across sectors, supporting the claim that a comprehensive horizontal framework exists. No legal-function defect is found."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The cited notification is an official PDPC instrument detailing the implementation of a core PDPA obligation (RoPA). Its existence and content confirm the operationalization of the horizontal law, thereby evidencing the presence of the framework required for a score of 0. The mapping is valid under the 'framework_absent_scores_high' polarity."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly mandates that 'A data processor shall formulate and maintain a record of processing activities' and specifies the minimum details required. This text establishes a mandatory, horizontal data protection obligation. It does not reference specific sectors, government-only data, or cybersecurity-only measures. The text directly supports the rationale that a comprehensive framework is in place."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Criteria and Procedures for Notifying Per",
+  "article": "cl. 12(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited text is from the Office of the Personal Data Protection Committee (PDPC), the statutory authority under Thailand's Personal Data Protection Act (PDPA). The reference to 'data controller' and the horizontal application to 'natural or juristic person' confirms this is a general data protection instrument, not a sectoral or government-only measure. While a breach notification guideline is a secondary instrument, it legally presupposes and evidences the existence of the primary horizontal "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 asks if a comprehensive horizontal framework is LACKING. A score of 0 indicates the framework exists. The provided snippet is from an official PDPC document implementing the PDPA. The presence of such a detailed, horizontal procedural guideline (applicable to all data controllers) serves as valid evidence that a comprehensive legal framework is in place. The rubric does not restrict evidence to the primary statute text; it accepts evidence of the framework's existence and op"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text explicitly mentions 'data controller,' 'personal data breach,' and 'rights and freedom of a person.' It lists factors for risk assessment applicable to 'natural or juristic person.' This text does not describe a sectoral law (e.g., banking or health) nor a government-only data regime. It establishes a general standard for handling personal data breaches. The rationale that this evidences a comprehensive horizontal framework is textually supported by the generic terminology and the"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Criteria for Rendering an Order Imposing ",
+  "article": "cl. 9(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is issued by the Personal Data Protection Committee (PDPC) and references the 'law' and 'data controller/processor' roles, which are hallmarks of a horizontal framework. While it is a subordinate regulation (Notification) rather than the primary Act, it serves as valid evidence of the existence of the enforcement machinery for the comprehensive framework, satisfying the 'presence' requirement for P7-I1."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The snippet evidences the enforcement mechanism (administrative fines) applicable to data controllers and processors generally, not limited to a specific sector. This supports the conclusion that a horizontal framework is in place, aligning with the scoring criteria for the presence of the law."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states the Expert Committee imposes fines on 'the data controller, the data processor or affiliated person' according to regulations promulgated by the 'Personal Data Protection Committee'. This textual reference to a central committee and general roles confirms the existence of a centralized, horizontal regulatory structure, which is the core of the P7-I1 indicator."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Criteria for the Erasure or Destruction o",
+  "article": "cl. 6(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited text is from a PDPC Notification, which is a subordinate instrument issued under the authority of the Personal Data Protection Act (PDPA). While the notification itself is a secondary source, it explicitly references 'data controllers' and 'personal data' in a manner consistent with the PDPA's definitions. The existence of such a detailed regulatory framework for de-identification strongly implies the existence of the primary horizontal law (PDPA) that it regulates. Therefore, it serve"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 asks if the economy LACKS a comprehensive framework. A score of 0 indicates a comprehensive horizontal framework exists. The provided snippet is from the 'Office of the Personal Data Protection Committee' (PDPC), the regulatory body established by Thailand's PDPA. The content details mandatory criteria for de-identification, a core data protection obligation. This confirms the operational existence of a horizontal data protection regime. The rubric allows for evidence of the"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes that 'a data controller shall adhere to the criteria' for de-identification. It lists specific direct identifiers (names, ID numbers, etc.) and indirect identification risks. This text does not explicitly name the 'Personal Data Protection Act' in the snippet itself, but it is issued by the 'Office of the Personal Data Protection Committee'. The context confirms this is a regulatory standard for personal data. The rationale claims this evidences the existence of"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Designation of the Data Protection Office",
+  "article": "cl. 6(5)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet is from a PDPC notification implementing the PDPA, which is a horizontal law. The provision defines 'large scale' processing, a core concept in the PDPA's scope. It does not exhibit a legal-function defect (e.g., it is not a sectoral-only law or a cybersecurity measure). The G4 WARN regarding version status does not constitute a legal defect in the mapping's validity for the purpose of establishing the framework's existence."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' if a comprehensive horizontal framework exists. The snippet is from the Personal Data Protection Committee (PDPC), the authority for the horizontal PDPA. The text defines criteria for 'large scale' processing, which is a substantive element of the PDPA's operational framework. This evidence supports the presence of a comprehensive framework, aligning with the scoring logic for a score of 0 (framework present). The hunt_in is empty, so no specific sectoral exclusio"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes criteria for determining when data processing is 'on a large scale' under the PDPA. The context confirms this is Clause 6 of a PDPC notification. The text explicitly references 'data controller', 'data processor', and 'personal data', which are terms of art in the horizontal PDPA. The text does not limit itself to a specific sector (unlike the exclusions in the surrounding context which list specific industries for deemed large-scale, but the main clause is gene"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Exemption of Record Keeping for Small Ent",
+  "article": "cl. 2(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly references 'Section 39' and 'Section 26' of the Personal Data Protection Act, which are core provisions of a horizontal framework. The existence of a notification defining exemptions for small enterprises under these sections legally presupposes the existence of the underlying comprehensive law. There is no scope defect; the provision operates within the horizontal framework it evidences."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. This notification is an administrative instrument issued by the PDPC (the authority under the horizontal law) that defines the scope of application (exemptions) for that law. It is valid evidence of the framework's existence and operationalization. The rubric does not require the primary statute text itself; any provision evidencing the framework's structure or scope is acceptable. The 'sectoral' exclusion applies "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states: 'A small enterprise data controller whose compliance with Section 39... is exempt...'. This phrasing confirms the existence of a 'Section 39' governing data controller compliance. The text also references 'Section 26' regarding specific types of personal data. These references establish the presence of a codified, sectioned legal instrument (the PDPA) that applies to data controllers generally, with specific exemptions. The text does not contradict the claim that a comprehensive"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Purposes Pertinent to Research or Statist",
+  "article": "cl. 6(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited text is a notification issued by the Personal Data Protection Committee (PDPC) under the authority of the Personal Data Protection Act B.E. 2562 (2019). The text explicitly references the Act multiple times (e.g., 'Sections 25 and 27 of the Personal Data Protection Act B.E. 2562 (2019)'). This confirms the existence of a comprehensive horizontal legal framework, which is the core requirement for scoring P7-I1 as 0 (framework exists). There is no legal-function defect; the provision ser"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 asks if the economy LACKS a comprehensive framework. The scoring key indicates '0' for 'A comprehensive horizontal framework exists.' The provided snippet is from a PDPC notification that regulates data controllers under the PDPA, a horizontal law. The rationale correctly identifies that this provision evidences the existence of the framework. The rubric's 'exclusions' note that sectoral laws are recorded but do not make the framework comprehensive; however, this is a notifi"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: '...the data controller shall ensure that the conductor of research... obtains informed consent... except in any of the cases as follows... (a) ... the data controller has satisfied the requirement under Sections 25 and 27 of the Personal Data Protection Act B.E. 2562 (2019)'. This text explicitly establishes the existence and applicability of the 'Personal Data Protection Act B.E. 2562 (2019)'. It does not merely describe a sectoral rule in isolation but operates a"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Qualifications of the Competent Official",
+  "article": "cl. 6",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly references 'personal data protection laws' and the establishment of a 'competent official' (regulator) with a defined term and public accountability (Gazette publication). This is a structural element of a comprehensive horizontal framework, not a sectoral or government-only measure. It does not suffer from a scope defect or misread legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P7-I1 is absence-scored (framework_absent_scores_high). The rubric states that for absence-scored framework indicators, a provision evidencing the framework may be a valid evidence row. This clause evidences the existence of a regulatory body under 'personal data protection laws,' supporting a score of 0 (comprehensive framework exists) rather than 1 or 0.5. The mapping is consistent with the scoring logic."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that the names of the designated competent official 'according to personal data protection laws' shall be published. This textual reference confirms the existence of a statutory regime ('laws') governing personal data protection and the appointment of officials under it. It does not merely describe a procedural step in isolation but anchors the official's role within the broader legal framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Rendering an Order Imposing an Administra",
+  "article": "cl. 8(13)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is issued by the Personal Data Protection Committee (PDPC) and applies to 'data controllers' and 'data processors' generally, not limited to a specific sector. It defines the enforcement mechanism for the Personal Data Protection Act, which is a horizontal law. Therefore, it does not suffer from a scope defect that would exclude it from evidencing a comprehensive framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The indicator P7-I1 asks if a comprehensive framework is LACKING. The presence of a detailed administrative fine notification from the PDPC confirms the existence of an active, operational data protection regime. Under the rubric, the existence of such a framework supports a score of 0 (comprehensive framework exists). The evidence is valid for establishing the presence of the framework, which is the inverse of the 'lack' condition."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly references 'data controller', 'data processor', and 'data subject', which are core concepts of a horizontal data protection law. It details the factors for imposing administrative fines, confirming the existence of a regulatory body (Expert Committee/PDPC) with enforcement powers. This textual evidence directly supports the rationale that a comprehensive legal regime exists."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Security Measures of Data Controllers",
+  "article": "cl. 4(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping correctly identifies the instrument as a subordinate regulation issued by the Personal Data Protection Committee (PDPC). While the specific clause addresses security measures, its existence and issuance by the PDPC serve as valid evidence of an operational, comprehensive horizontal data protection framework in Thailand, which supports a score of 0 (framework exists) under the rubric. There is no legal-function defect; the instrument is part of the broader PDPA ecosystem."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 asks if the economy LACKS a comprehensive framework. The presence of a PDPC notification on security measures confirms the existence of a regulatory body and a horizontal legal structure (the PDPA) that governs data controllers. This evidence supports the '0' score (comprehensive framework exists) rather than '1' (no framework) or '0.5' (sectoral only). The provision is not sectoral; it applies to 'data controllers' generally, aligning with the horizontal scope required to r"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly references 'personal data protection laws' and defines duties for 'data controllers' regarding 'personal data' in all forms. This textual context establishes that the instrument operates within a broader statutory framework (the PDPA) rather than being an isolated sectoral rule. The text does not limit its application to a specific sector (e.g., health or finance), supporting the characterization of the underlying framework as horizontal/comprehensive."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Security Standards for Personal Data of t",
+  "article": "cl. 6",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text is from a 'Notification' (regulation) specifically for 'Data Controller who is Exempted' from the main Act. It imposes specific security and breach notification duties on processors. This is a substantive operational obligation (likely P7-I4 or P7-I5), not evidence of the existence of a comprehensive horizontal legal framework (P7-I1). Citing a specific security clause for exempted entities does not establish the presence of a comprehensive law; it presupposes the framework exists"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P7-I1 focuses on the existence of a 'comprehensive (horizontal) personal-data-protection law'. The scoring criteria distinguish between 'No comprehensive framework' (1), 'Sectoral-only' (0.5), and 'Comprehensive horizontal framework' (0). The provided snippet is a specific clause (Clause 6) regarding security measures for processors. While it implies a framework exists, it is not the primary evidence of the framework's comprehensiveness or horizontality. It is a specific operation"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly references 'personal data', 'data controller', 'data processor', and 'security measures'. It is issued by the PDPC (Personal Data Protection Committee). The rationale states it 'evidences the existence of a comprehensive personal data protection framework'. Strictly speaking, the existence of a binding notification from the PDPC regarding data controllers (even exempted ones) confirms that a data protection regulatory regime is in place. The indicator P7-I1 is a binary/ternar"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: Sent or Transferred to a Foreign Country ",
+  "article": "cl. 7(6)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited text is from the PDPC Notification on cross-border transfers, which explicitly references the 'Personal Data Protection Act, B.E. 2562 (2019)' and 'personal data protection laws'. This confirms the existence of a horizontal statutory framework. The scope is horizontal as it applies to data controllers/processors generally, not just specific sectors. No legal-function defect is found; the provision correctly evidences the regulatory infrastructure of the PDPA."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores 0 if a comprehensive horizontal framework exists. The snippet references the PDPA and its subordinate regulations, confirming the presence of such a framework. While the specific clause deals with cross-border safeguards (which might relate to P6 or P7-I2 in a detailed analysis), the rubric for P7-I1 is a binary check for the *existence* of the law. The evidence provided (a PDPC notification under the PDPA) is sufficient to establish that the 'Lack of comprehensive le"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'based on the criteria and standards for personal data protection in accordance with personal data protection laws and relevant subordinate legislation and regulations.' This text explicitly acknowledges the existence of 'personal data protection laws'. It does not claim to be the law itself, but it is a subordinate regulation issued by the PDPC under that law. For the purpose of P7-I1 (which asks if the economy *lacks* a framework), the existence of a subordinate n"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "PDPC Notification: the Template of Identification Cards for ",
+  "article": "cl. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly references the 'Personal Data Protection Act B.E. 2562 (2019)', which is the primary horizontal data protection law in Thailand. While the specific clause defines 'competent officials' (a procedural/administrative detail), it serves as valid evidence of the existence and operational status of the comprehensive framework. It does not suffer from a scope defect that would invalidate the mapping for the presence of the law."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 scores '0' when a comprehensive horizontal framework exists. The snippet confirms the existence of the PDPA 2019, a horizontal law. Although the snippet is from a notification regarding identification cards, it is not a sectoral law itself but rather an administrative instrument under the horizontal act. Therefore, it supports the '0' score (framework present) rather than '0.5' (sectoral only). The mapping is consistent with the scoring logic."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states that 'competent officials' are designated to assume duties under the 'Personal Data Protection Act B.E. 2562 (2019)'. This textually establishes that the PDPA 2019 is the governing statute for these duties. It does not claim to be the PDPA itself, but it evidences the PDPA's existence and application. The rationale that it 'evidences the existence' of the framework is textually supported by the explicit citation of the Act's name and year."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 40(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The cited provision (s. 40) imposes obligations on Personal Data Processors, a role defined within a horizontal statute applicable to all sectors unless exempted. It does not exhibit a legal-function defect (e.g., it is not a sectoral-only rule or a cybersecurity measure). The existence of such a provision supports the claim that a comprehensive framework exists, which aligns with the '0' score logic for P7-I1 (framework present). No scope defect is found that would invalidate the mapping to the"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I1 asks if the economy LACKS a comprehensive framework. The scoring key indicates '0' for 'A comprehensive horizontal framework exists.' The cited text is from the 'Personal Data Protection Act B.E. 2562', which is a horizontal law. The provision evidences the operational machinery (processor duties) of this framework. Under the rubric's instruction that 'a provision evidencing the framework may be a valid evidence row,' this snippet correctly supports the determination that th"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes the duties of a 'Personal Data Processor' under 'this Act'. The context confirms this is part of a broader legislative instrument (Government Gazette, Chapter 69). The text does not limit its application to a specific sector (e.g., banking or health) but rather defines general roles (Controller/Processor) and general duties (security, records). Therefore, the text actually establishes the existence of a general, horizontal regulatory structure, supporting the ra"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Notification of the National Cyber Security Committee Regard",
+  "article": "s. 8(13)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is issued by the National Cyber Security Committee under the Cybersecurity Act B.E. 2562, which is a dedicated horizontal framework. The specific clause regarding evidence preservation for severe/critical cyber incidents is a valid operational component of this framework. There is no scope defect; it does not rely on sectoral-only laws or scattered privacy clauses."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores 0 for a dedicated horizontal cybersecurity framework. The cited notification is part of the NCSA framework under the Cybersecurity Act, which is horizontal. The presence of this provision evidences the existence of the framework, supporting a score of 0 (framework present). The mapping correctly identifies the provision as part of the controlling horizontal evidence rather than a sectoral notice."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly mandates guidelines for evidence preservation in cyber incidents at severe and critical levels. This is a concrete cybersecurity obligation. The context confirms it is part of the 'Security Control Baselines' within the NCSC notification. The text supports the rationale that this is a core operational obligation within the dedicated framework."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Notification of the National Cyber Security Committee Regard",
+  "article": "s. 8(10)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is issued by the National Cyber Security Committee under the Cybersecurity Act B.E. 2562, which is a dedicated horizontal framework. The specific clause mandates incident response capability testing, a core cybersecurity function. It does not suffer from sectoral limitation or misclassification of legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I2 scores '0' for a dedicated horizontal cybersecurity framework. The cited notification is part of the subordinate framework under the horizontal Cybersecurity Act. The presence of this operational obligation (incident response testing) evidences the existence of the framework, supporting a score of 0 (framework present). The mapping is consistent with the rubric's positive cues and scoring logic."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Thai text 'ดำเนินการให้มีการทดสอบ...' translates to 'conduct/perform the testing of...', which is an imperative directive in the context of a notification/standard. While G6 flags a potential modality issue, in the context of NCSA notifications which set mandatory standards for compliance, this is interpreted as a requirement. The text clearly establishes an obligation regarding incident response capability, supporting the rationale that it is a core operational obligation within the framewo"
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "PDPC Notification: Criteria and Procedures for Formulating a",
+  "article": "cl. 3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to 'formulate and maintain' records of processing activities. While it does not specify a numeric duration, the rubric explicitly states that a retention requirement without a specified minimum period is still recorded and scored 0. The mapping correctly identifies the legal function (record maintenance) and the absence of a specific time limit, which aligns with the scoring criteria for score 0."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 asks if data must be kept for at least a specified period. The text requires maintenance of records but lacks a numeric minimum (e.g., 'at least 6 years'). According to the scoring guide, 'No minimum period specified' results in a score of 0, and such provisions are still recorded. The mapping rationale correctly notes the absence of a numeric minimum and assigns score 0, adhering to the '4-Jul internal-guide rule' mentioned in the rubric."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'A data processor shall formulate and maintain a record of processing activities...'. It does not contain phrases like 'for at least', 'not less than', or specific time units (days/years). Therefore, the text establishes a duty to maintain records without a defined minimum temporal scope. This textual reality supports the mapping's conclusion that the indicator score is 0 due to the lack of a specified minimum period, rather than a score of 1."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 39(4)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to maintain records, including the retention period, which constitutes a valid legal function for a retention indicator. While it does not specify a numeric minimum, the rubric explicitly allows recording such provisions with a score of 0. There is no scope defect or misapplication of legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 states that a retention requirement without a specified minimum period is still recorded and scored 0. The snippet evidences a retention/record-keeping framework (specifically the duty to record the retention period), which fits the 'absence-scored framework indicator' exception. The mapping is methodologically sound under the 4-Jul internal-guide rule."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly requires the Data Controller to maintain records including 'the retention period of the Personal Data'. It does not state a specific duration (e.g., 'at least 6 years'), but it establishes the obligation to define and maintain retention parameters. This accurately supports a score of 0 (no minimum specified) rather than a refutation of the mapping itself."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 40(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a duty to 'prepare and maintain records' but delegates the specific rules and methods to the Committee. It does not specify a numeric minimum retention period (e.g., 'at least X years'). Under the rubric, a retention requirement without a specified minimum period is recorded and scored 0. The mapping correctly identifies this as a recordable provision for P7-I3 with a score of 0, rather than incorrectly claiming a specific duration exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I3 explicitly states: 'A retention requirement WITHOUT a specified minimum period is still RECORDED, scored 0'. The snippet 'prepare and maintain records of personal data processing activities' constitutes a retention requirement (maintaining records implies keeping them for some duration). Since no numeric minimum is present in the text, the score is 0. The mapping aligns with the 'absence-scored framework indicator' rule where the provision evidences the framework/duty even i"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text explicitly states the processor shall 'prepare and maintain records'. It does not contain language such as 'no longer than necessary' (which would be a limit/exclusion) or 'at least X years' (which would be a minimum). The text establishes a duty to maintain records, which is the prerequisite for the indicator. The absence of a specific number in this specific subsection does not invalidate the mapping to the indicator, as the indicator covers the presence/absence of the minimum period "
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Personal Data Protection Act B.E. 2562 official EN translati",
+  "article": "s. 39",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory duty to maintain records, including the retention period of personal data. While it does not specify a numeric minimum duration for the data itself, the rubric explicitly states that a retention requirement without a specified minimum period is still recorded and scored 0. The mapping correctly identifies this as a retention-related provision under P7-I3 with a score of 0, avoiding the error of claiming a specific minimum period exists."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the P7-I3 rubric, the indicator asks if data must be kept for at least a specified period. The text requires maintaining records of the 'retention period' but does not mandate a specific numeric minimum (e.g., 'at least 6 years'). According to the scoring rules, 'No minimum period specified' results in a score of 0, and such provisions are still recorded. The mapping rationale correctly assigns a score of 0 and identifies the provision as relevant to the retention framework, adhering to"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text establishes a duty to maintain records, specifically item (4) 'the retention period of the Personal Data'. It does not contain language such as 'shall be retained for at least' or 'not less than' regarding the data's storage duration. Therefore, the text does not establish a minimum retention period for the data itself, only a record-keeping obligation. The mapping's conclusion that this supports a score of 0 (absence of specified minimum) is textually accurate."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "PDPC Notification: Designation of the Data Protection Office",
+  "article": "cl. 8",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet explicitly references 'The data protection officer of a data controller or a data processor', which legally presupposes the existence of the DPO role. While it does not contain the imperative verb 'shall appoint', it defines the operational scope and conflict-of-interest rules for the DPO, thereby evidencing the accountability mechanism required by P7-I4. It is not a generic privacy law provision but a specific DPO regulation."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P7-I4 asks if organisations must appoint a DPO. The source is a PDPC Notification specifically titled 'Designation of the Data Protection Officer'. The snippet confirms the DPO's status and duties. Although the snippet itself is permissive regarding 'other duties', the context (Clause 8 of a DPO designation notification) supports the presence of the DPO framework. The mapping is valid as evidence of the DPO requirement's operationalization."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'The data protection officer... may assume other duties'. This is a substantive provision regulating the DPO role. It does not merely mention the term in passing; it establishes rules for the DPO's concurrent activities. This textually establishes that a DPO exists within the legal framework and is subject to specific operational constraints, which is sufficient to map to the indicator concerning DPO requirements."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "PDPC Notification: Designation of the Data Protection Office",
+  "article": "cl. 4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly imposes a duty to 'designate the data protection officer' for specific entities. While the scope is limited to large-scale processing, this constitutes a valid legal function for P7-I4. The rubric explicitly allows for sector-specific or conditional DPO requirements to score 0.5, so the lack of universal application is not a defect but a scoring nuance."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet contains the positive cue 'designate the data protection officer'. The mapping rationale correctly identifies the conditional nature ('large scale... regular monitoring'), which aligns with the rubric's scoring tier for 'Sector-specific DPO/DPIA requirement only' (0.5). The indicator is not refuted because the provision evidences the required mechanism, even if it does not meet the 'all sectors' threshold for a score of 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states that data controllers/processors meeting the criteria 'are required to designate the data protection officer.' This is a mandatory obligation ('required to'), not a permissive one. It directly addresses the P7-I4 question regarding DPO appointment. The text does not establish a ban or a different legal function; it establishes a conditional DPO requirement, which is a valid evidence row for this indicator."
+   }
+  ]
+ }
+]

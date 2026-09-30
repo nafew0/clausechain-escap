@@ -1,0 +1,102 @@
+{
+ "economy": "Thailand",
+ "pillar": 2,
+ "run": "run-th-p2-1790730500",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The text explicitly restricts participation in consultancy tenders to consultants registered with a specific domestic body (the Consultants Information Centre o"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The regulation restricts participation in consultancy tenders to consultants registered with a specific domestic center, effectively excluding foreign firms not"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The regulation restricts consultancy services to firms registered with a specific domestic center (Ministry of Finance), which effectively excludes foreign firm"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states that no evidence was found for the Personal Data Protection Act, and no other text is present to indicate requirements f"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence of requirements to surrender source code, trade secrets, or use specific encryption in procurement was found."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No evidence of requirements to surrender source code, trade secrets, or use specific encryption was found in the provided data."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence includes a measure requiring Thai nationality for independent consultants (Ministerial Regulation cl. 4(1)) and a requirement for Thai personnel to"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence includes a measure requiring Thai nationality for independent consultants (Ministerial Regulation cl. 4(1)) and a requirement for Thai personnel to"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The requirement for independent consultants to hold Thai nationality (Ministerial Regulation cl. 4(1)) constitutes a direct measure discriminating against forei"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

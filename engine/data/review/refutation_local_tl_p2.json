@@ -1,0 +1,114 @@
+[
+ {
+  "indicator": "P2-I3",
+  "law": "Decreto do Governo n.º 1/2026 Visão geral do quadro legal pa",
+  "article": "para. 2.8.4",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision operatively imposes a 10% evaluation bonus or price adjustment specifically for 'national suppliers' (fornecedores nacionais) in public procurement. This is a concrete legal function of a price preference/margin triggered by nationality/origin, which directly satisfies the P2-I3 legal test for a discriminatory measure. There is no scope defect; it is not a commercial market rule (Pillar 10.3) nor a mere empowerment clause."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric defines a score of 1 for measures 'directly discriminating against foreign bidders'. The text explicitly grants a 10% score increase to national suppliers or increases the price of non-national suppliers by 10% for evaluation. This is a direct discrimination based on origin/nationality. The mapping to P2-I3 is correct, and the evidence supports the highest score tier. The G6 warning regarding modality is unfounded as the text uses 'devem aplicar' (must apply) and 'receberão' (will rec"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'as entidades adjudicantes devem aplicar uma margem preferencial aos fornecedores nacionais' (contracting entities must apply a preferential margin to national suppliers). It further specifies a 10% increase in score or price adjustment. This text establishes an operative limitation in procurement bidding based on nationality. It does not merely empower a body but mandates the application of the preference. The context confirms this is part of the 'Preferência nacio"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Decreto do Governo n.º 1/2026 Visão geral do quadro legal pa",
+  "article": "para. 2.7.3",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision imposes a mandatory requirement ('devem apresentar') for bidders to submit a Local Content Plan detailing Timorese labor and local materials in contracts over US$ 500,000. This is an operative limitation in public procurement bidding based on origin/status, fitting the P2-I3 legal test. It is not a mere empowerment clause, nor does it fall under Pillar 10.3 (commercial market) or P2-I1 (outright exclusion), as it is a conditional requirement for eligibility/compliance in the biddin"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P2-I3 explicitly calls for 'minimum local-content requirement' or 'local-content percentage' as positive cues. The snippet describes a 'Plano de Conteúdo Local' (Local Content Plan) with specific components (Timorese labor, local materials). While the exact percentage threshold is not in this snippet, the requirement to submit a plan detailing these elements constitutes an operative local-content requirement. The G6 WARN regarding modality is incorrect; the text uses 'devem' (must"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states: 'Em concursos em que o conteúdo local é aplicável... os concorrentes devem apresentar um Plano de Conteúdo Local detalhando: a) Proporção de mão-de-obra timorense... c) Materiais ou equipamentos provenientes de Timor-Leste'. This text explicitly establishes a requirement for local content (labor and materials) in procurement competitions. It does not merely reference a concept but imposes a submission requirement for a plan detailing these local elements. The context confi"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Cont",
+  "article": "Art. 86",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision is operative and not merely empowering. Article 86(1) mandates that the contracting entity 'determines' (determina) that national suppliers benefit from a score/price increase, and Article 86(2) sets specific caps (10%). This is a concrete legal function imposing a limitation, not a generic domestic disclosure or a mere legal basis. The scope is correctly identified as public procurement (concurso público, etc.), distinguishing it from commercial market rules (Pillar 10.3) or FDI l"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The mapping aligns with the P2-I3 rubric. The indicator asks for quotas, set-asides, or price preferences triggered by nationality/origin. The text provides a 'majoração' (increase/margin) in score or price for 'fornecedores nacionais' (national suppliers) meeting local content thresholds. This matches the positive cue 'margin of preference for domestic goods' and 'price preference for goods of domestic origin'. The scoring logic supports a score of 1 (discriminatory against foreign bidders) or "
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text and context establish a mandatory regime for national suppliers. Paragraph 1 states the entity 'determines' the benefit. Paragraph 2 quantifies the benefit (up to 10% score/price increase). Paragraph 4 defines eligibility based on origin (goods produced in Timor-Leste, personnel nationality). The text explicitly links the bidding advantage to the status of being a 'fornecedor nacional' and meeting local content/origin criteria. There is no ambiguity that this is a limitatio"
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Cont",
+  "article": "Art. 124",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The cited text (Art. 124, n. 4) regulates the maximum percentage of contract value that can be subcontracted (25% vs 40%). This is a performance/execution constraint on the contractor's ability to delegate work, not a 'limitation in procurement bidding' such as a price preference, quota, set-aside, or minimum local-content requirement for the goods/services themselves. The rubric for P2-I3 requires an operative limitation in the *bidding* phase (e.g., evaluation bonus, reserved lots). While the "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The mapping relies on the keyword 'national suppliers' and a percentage threshold, but fails to identify the correct legal function. The rubric's positive cues (e.g., 'margin of preference', 'reserved for micro and small enterprises', 'local content') refer to advantages or eligibility criteria in the award decision. The text describes a *penalty* or *restriction* on subcontracting capacity post-award. This does not fit the 'price preference/margin, evaluation bonus, quota or set-aside' criteria"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The exact text states: 'a percentagem estabelecida no número anterior é reduzida para 25 % do valor contratual' (the percentage established in the previous number is reduced to 25% of the contract value). The 'previous number' (n. 3) defines the limit on *subcontracting* ('proibida a subcontratação de prestações... cujo valor acumulado exceda 40 %'). Therefore, the text explicitly establishes a limit on the *value of subcontracted services*, not a local-content requirement for the goods or a pri"
+   }
+  ]
+ }
+]

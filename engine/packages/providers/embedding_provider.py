@@ -4,6 +4,8 @@ import os
 
 import httpx
 
+from packages.providers import http_client
+
 
 class StubEmbeddingProvider:
     """Deterministic P0 embedding stub with no network calls."""
@@ -22,7 +24,9 @@ class OpenAIEmbeddingProvider:
         dimensions: int | None = None,
         api_key_env: str = "OPENAI_API_KEY",
         timeout: float = 60.0,
+        base_url: str = "https://api.openai.com/v1",
     ) -> None:
+        self.base_url = base_url.rstrip("/")
         self.model = model
         self.dimensions = dimensions
         self.api_key_env = api_key_env
@@ -35,30 +39,42 @@ class OpenAIEmbeddingProvider:
         import time as _time
 
         api_key = os.getenv(self.api_key_env)
-        if not api_key:
+        # OpenAI proper needs a key; a self-hosted server may run without auth.
+        if not api_key and self.base_url == "https://api.openai.com/v1":
             raise RuntimeError(f"{self.api_key_env} is not set")
+        headers = {"Authorization": f"Bearer {api_key}"} if api_key else {}
+        # Token-safety truncation: Thai/CJK tokenize near 1 token/char, so a long
+        # unit can blow the 8192-token embedding limit (400 Bad Request — hit on
+        # the Thai corpus, 1 Aug). 6000 chars stays safe in every script; only
+        # over-limit texts are cut, so existing cached embeddings stay valid.
+        max_chars = int(os.getenv("EMBED_MAX_CHARS", "6000"))
+        texts = [t if len(t) <= max_chars else t[:max_chars] for t in texts]
         body: dict = {"model": self.model, "input": texts}
         if self.dimensions:
             body["dimensions"] = self.dimensions
-        last_error: Exception | None = None
-        for attempt in range(1 + len(self.RETRY_BACKOFFS_S)):
+        connect_failures = other_failures = 0
+        while True:
             try:
-                response = httpx.post(
-                    "https://api.openai.com/v1/embeddings",
-                    headers={"Authorization": f"Bearer {api_key}"},
+                response = http_client.client(self.base_url, self.timeout).post(
+                    f"{self.base_url}/embeddings",
+                    headers=headers,
                     json=body,
-                    timeout=self.timeout,
                 )
                 if response.status_code == 429 or response.status_code >= 500:
                     raise httpx.HTTPStatusError(f"retryable {response.status_code}",
                                                 request=response.request, response=response)
                 break
-            except (httpx.HTTPStatusError, httpx.TransportError) as error:
-                last_error = error
-                if attempt < len(self.RETRY_BACKOFFS_S):
-                    _time.sleep(self.RETRY_BACKOFFS_S[attempt])
-                else:
-                    raise last_error
+            except http_client.CONNECT_ERRORS:
+                # Never reached the server: safe to resend, on the longer schedule.
+                if connect_failures >= len(http_client.CONNECT_BACKOFFS_S):
+                    raise
+                _time.sleep(http_client.CONNECT_BACKOFFS_S[connect_failures])
+                connect_failures += 1
+            except (httpx.HTTPStatusError, httpx.TransportError):
+                if other_failures >= len(self.RETRY_BACKOFFS_S):
+                    raise
+                _time.sleep(self.RETRY_BACKOFFS_S[other_failures])
+                other_failures += 1
         response.raise_for_status()
         payload = response.json()
         self.last_usage = payload.get("usage")
@@ -104,6 +120,19 @@ def build_embedding(config: dict):
         return OpenAIEmbeddingProvider(
             model=config.get("model", "text-embedding-3-small"),
             dimensions=config.get("dimensions"),
+        )
+    if provider in {"openai_compatible", "openweights"}:
+        # Open-weights embedding model on a self-hosted OpenAI-compatible server.
+        base_url = config.get("base_url") or os.getenv("LOCALAI_EMBED_ENDPOINT", "")
+        if not base_url:
+            raise RuntimeError("LOCALAI_EMBED_ENDPOINT is not set")
+        return OpenAIEmbeddingProvider(
+            model=config.get("model") or os.getenv("LOCALAI_EMBED_MODEL", "bge-m3"),
+            dimensions=None,
+            # Same key as the LLM server unless a separate one is configured.
+            api_key_env=("LOCALAI_EMBED_API_KEY" if os.getenv("LOCALAI_EMBED_API_KEY")
+                         else "LOCALAI_API_KEY"),
+            base_url=base_url,
         )
     if provider in {"bge_m3", "bge-m3", "local"}:
         return BgeM3EmbeddingProvider(

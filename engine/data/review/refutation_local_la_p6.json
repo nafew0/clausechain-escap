@@ -1,0 +1,338 @@
+[
+ {
+  "indicator": "P6-I2",
+  "law": "Lao Securities Commission Decision No. 11 on ICT Systems of ",
+  "article": "Art. 9",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision mandates that data and backup centers be located in Laos. This is a storage requirement, not a ban on transfer (P6-I1) nor a requirement to operate a local server for business logic (P6-I3). The sectoral scope (securities) is valid under the rubric which allows sectoral evidence if it covers personal data or applies horizontally; here it applies to all securities companies, satisfying the '1' score condition for a single sectoral rule if interpreted as specific data, or potentially"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I2 asks if a copy of data must be stored domestically. The text 'data... must be stored in Laos' directly answers this. The scoring rubric allows '1' for personal data or horizontal application, or '0.5' for a single non-personal/specific-data rule. Securities data often includes personal data of clients, and even if treated as specific business data, it is a valid evidence row. The 'hunt_in' is empty, so no specific keyword failure. The mapping is consistent with the indicator"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Lao text 'ຕ້ອງເກັບຮັກສາ' (tong kep raka) translates to 'must be stored' or 'shall be stored,' indicating a mandatory obligation. The G6 WARN regarding modality is incorrect; 'tong' is a mandatory modal verb in Lao, not permissive. The text explicitly requires storage within the PDR Lao territory. Therefore, the text establishes a local storage requirement, supporting the P6-I2 mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "Lao Securities Commission Decision No. 11 on ICT Systems of ",
+  "article": "Art. 7",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that data and communication technology systems be stored in the Lao PDR and that backup centers be located in the Lao PDR. This constitutes a local storage requirement for a specific sector (securities), which fits the P6-I2 definition. The exclusion for P6-I3 (server operation) does not apply because the text specifically references 'storage' (ເກັບຮັກສາ) and 'backup centers' (ສູນສຳຮອງ), not merely the operational location of servers for processing."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I2 scores '0.5' for a single non-personal/specific-data storage rule. The text applies to 'securities companies' (sectoral) and mandates storage of 'data and communication technology systems' (specific data/infrastructure). This aligns with the '0.5' scoring criterion. The hunt_in is empty, but the positive cues 'shall be stored in' are semantically present in the Lao text ('ຕ້ອງເກັບຮັກສາ...ໃນ ສປປ ລາວ'). The mapping is valid under the rubric's allowance for sectoral evidence."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Lao text 'ຕ້ອງເກັບຮັກສາ' translates to 'must be stored' or 'shall be stored,' establishing a mandatory obligation. The phrase 'ໃນ ສປປ ລາວ' means 'in the Lao PDR.' The text explicitly requires the data to be kept within the territory. The G6 WARN regarding modality is incorrect because 'ຕ້ອງ' is a mandatory auxiliary verb in Lao, equivalent to 'must/shall,' not permissive. The text clearly establishes a domestic storage requirement."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 71",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that commercial banks keep records at their head office in Lao PDR and that foreign branches keep documents at their branch office located in Lao PDR. This constitutes a domestic storage requirement for transaction data, which includes personal data of individual customers. The sectoral nature (banking) does not invalidate the mapping under the rubric, which allows sectoral evidence if it covers personal data or applies horizontally. The requirement is for stora"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I2 scores '1' if the requirement covers personal data. The text specifies keeping 'list of individual customer' and 'records of transactions' at the head office in Lao PDR. This meets the threshold for a local storage requirement covering personal data. The retention period of 'at least ten years' is a minimum, not a ceiling, and does not conflict with the storage location mandate. The mapping correctly identifies the legal function of domestic storage."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states: 'The commercial bank shall keep records of documents and transactions at its head office' and 'Foreign commercial bank branch shall keep documents and transaction data at its branch office located in Lao PDR.' This textually establishes a mandatory domestic storage location for the specified records. The rationale that this includes personal data is supported by the explicit mention of 'list of individual customer.' The text does not suggest that transfer is forbidden, onl"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "Ministry of Technology and Communications Decision No. 3643 ",
+  "article": "Art. 27",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that 'data and databases must be stored in the Lao PDR' (ຂໍ້ມູນ ແລະ ຖານຂໍ້ມູນ ຕ້ອງເກັບໄວ້ຢູ່ໃນ ສປປ ລາວ). This constitutes a clear local storage requirement. While the scope is sectoral (Digital Technology Business), the rubric for P6-I2 scoring '1' explicitly allows for sectoral coverage if it applies to personal data or horizontally, or if there are multiple requirements. Even if interpreted as a single non-personal/specific-data rule, it would score 0.5, but t"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text contains the positive cue 'stored in the territory' (equivalent to 'ເກັບໄວ້ຢູ່ໃນ ສປປ ລາວ'). The rubric's hunt_in is empty, but the positive cues align with the text. The provision mandates storage location, which is the core of P6-I2. It is not a retention period (P6-I7) nor a server operation requirement (P6-I3). The mapping correctly identifies a local storage requirement. The sectoral nature does not preclude mapping, as the rubric accepts sectoral evidence for scoring purposes."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'ຂໍ້ມູນ ແລະ ຖານຂໍ້ມູນ ຕ້ອງເກັບໄວ້ຢູ່ໃນ ສປປ ລາວ' translates to 'Data and databases must be stored in the Lao PDR.' The word 'ຕ້ອງ' (tong) is a mandatory modal verb meaning 'must' or 'shall'. This directly establishes a legal obligation for domestic storage. The context confirms this is part of technical standards for software creation and services. The text clearly supports the rationale that a copy of the data must be stored domestically."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "Ministry of Technology and Communications Decision No. 3643 ",
+  "article": "Art. 25",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly permits storage abroad ('in the case data... stored abroad') subject to access guarantees, which negates a claim that it is a pure localization ban (P6-I1). It functions as a local storage preference/requirement with an exception, fitting the P6-I2 scope of 'local storage requirements' where transfer is still allowed. The sectoral nature (Digital Technology Business) is acceptable under the rubric's scoring for specific data rules."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores '1' for personal data or horizontal application, and '0.5' for a single non-personal/specific-data storage rule. This is a sectoral rule for 'Digital Technology Business' (specific data), so it maps to a 0.5 score. The presence of a local storage requirement ('must store data in Lao PDR... or use trusted provider') satisfies the indicator's core question. The '90 days' retention clause is a minimum retention period, not a ceiling, and does not trigger the 'wrong direction' fail"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Lao text 'ຕ້ອງເກັບຮັກສາຂໍ້ມູນຢູ່ ສປປ ລາວ' translates to 'must store data in Lao PDR'. The word 'ຕ້ອງ' (tong) is a mandatory modal verb meaning 'must' or 'have to', directly contradicting the G6 WARN which claimed no must/shall modality was found. The text establishes a mandatory local storage obligation with a conditional exception for foreign storage, which aligns with the P6-I2 definition."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Amended Law on Electronic Transactions No. 31/NA (2022)",
+  "article": "Art. 51",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly conditions the continuation of the business license on the provision of technical equipment and premises within 180 days, with suspension or revocation as the penalty for non-compliance. This constitutes a mandatory infrastructure requirement for the service, satisfying the legal function of P6-I3. The sectoral scope (digital identity) is not a defect as the rubric does not exclude sectoral evidence."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I3 scores '1' if any infrastructure requirement exists as a precondition of service. The text requires 'technical equipment and premises' (infrastructure) as a condition for maintaining the license. This aligns with the positive cue 'maintain at least one local server' (interpreted broadly as local infrastructure/facilities). It is not a rulebook (exclusion 1), not cybersecurity (exclusion 2), not rented capacity (exclusion 3), and not a licensing regime per se (exclusion 5, wh"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Lao text states 'must comply with additional conditions' (ຕ້ອງປະຕິບັດຕາມເງື່ອນໄຂເພີ່ມເຕີມ) and lists 'providing technical equipment and premises' (ປະກອບວັດຖຸເຕັກນິກ ແລະ ສະຖານທີ່) as item 1. The text further states that failure to comply leads to suspension or withdrawal of the license. This establishes a mandatory obligation to have local facilities, which is the exact subject of P6-I3. The G6 warning regarding modality is a false positive; 'ຕ້ອງ' (tong) is a mandatory modal verb in Lao, equ"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Amended Law on Electronic Transactions No. 31/NA (2022)",
+  "article": "Art. 49",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The cited text (Art. 49, item 5) lists a 'development plan for technical infrastructure' as a document required for a business license application. This is a procedural/administrative requirement to submit a plan, not a substantive legal obligation to physically maintain local servers or data centers as a condition of service. The rubric for P6-I3 requires 'local data centre/server as a PRECONDITION of service'. A plan for infrastructure is not the infrastructure itself, nor does it mandate the "
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric's positive cues are specific: 'maintain at least one local server', 'server located within the territory', 'establish a data centre in'. The snippet 'plan for development of technical infrastructure' does not match these cues. It evidences a licensing document requirement (likely P6-I1 or general business regulation) rather than the specific infrastructure localization requirement of P6-I3. The mapping fails the hunt_in/scoring test because the text does not establish the existence of"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The exact quoted text is '5. ແຜນພັດທະນາລະບົບໂຄງລ່າງພື້ນຖານດ້ານເຕັກນິກ ແລະ ລະບົບຄວາມປອດໄພ' (Plan for development of technical infrastructure and security systems). The rationale claims this 'establishes local technical infrastructure as a precondition'. The text establishes a *document* (a plan) as a precondition for the license, not the *infrastructure* itself. There is no textual evidence in the snippet that the infrastructure must be local, nor that the service is conditioned on the physical p"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Lao Securities Commission Decision No. 11 on ICT Systems of ",
+  "article": "Art. 9",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that data and communication technology systems of securities companies must be stored in the Lao PDR and that backup centers must be located in the Lao PDR. This constitutes a clear infrastructure requirement (local storage/backup facilities) as a condition for operating the securities business, fitting the legal function of P6-I3. The sectoral nature (securities) does not invalidate the mapping as the rubric does not exclude sectoral evidence, and the requireme"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Applying the rubric, the text 'must be stored in the Lao PDR' and 'backup center must be located in the Lao PDR' aligns with the positive cue 'server located within the territory' and the scoring criterion '1: Any infrastructure requirement exists (local data centre/server as a PRECONDITION of service)'. The requirement is for the location of the storage/backup infrastructure, which is a precondition for the company's operation under the decision. It is not a rule for already-established data ce"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text states: 'Data and communication technology systems... of securities companies must be stored in the Lao PDR and the backup data center must be located in the Lao PDR.' This text directly establishes a requirement for local physical infrastructure (storage and backup centers) within the territory. It does not merely govern existing centers or refer to policies/licensing. The text supports the rationale that local infrastructure is mandated."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Lao Securities Commission Decision No. 11 on ICT Systems of ",
+  "article": "Art. 8",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly mandates that data and communication technology systems be stored in the Lao PDR and that backup data centers be established in the Lao PDR. This constitutes a clear infrastructure precondition for securities companies operating in the sector, satisfying the legal function of P6-I3 without falling into the 'rules for already-established data centers' exclusion."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text contains positive cues ('server located within the territory' equivalent via 'backup data center must be established in Lao PDR') and imposes a facility precondition. It is not a licensing regime (9.4) nor a rulebook for existing centers (score 0). The sectoral nature (Securities) is acceptable as the rubric does not exclude sectoral evidence, and the requirement is a precondition for the service infrastructure."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The Lao text 'ຕ້ອງເກັບໃວ້ໃນ ສປປ ລາວ' (must be stored in Lao PDR) and 'ຕ້ອງຕັ້ງຢູ່ ສປປ ລາວ' (must be established in Lao PDR) uses the mandatory particle 'ຕ້ອງ' (must/should). This confirms the mandatory nature of the local infrastructure requirement, refuting the G6 warning about permissive modality and supporting the mapping to P6-I3."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Ministry of Technology and Communications Decision No. 3643 ",
+  "article": "Art. 21",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly conditions the use of foreign cloud infrastructure on the existence of a local backup storage system in Laos ('in the case of using foreign cloud infrastructure, must have a backup data storage system located in Lao PDR'). This constitutes a legal function of infrastructure precondition, not merely a generic data localization or security rule. The scope is sectoral (Cloud Infrastructure Services), which is permissible under the rubric as it does not exclude sectoral evid"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I3 scores '1' if 'Any infrastructure requirement exists (local data centre/server as a PRECONDITION of service, or transfer conditioned on infrastructure)'. The text requires a local backup system as a condition for using foreign infrastructure. This fits the 'transfer conditioned on infrastructure' or 'precondition' criteria. It is not a rule for already-established data centres (score 0) nor a licensing regime (9.4). The G6 WARN regarding modality is addressed by the Lao lega"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text states: 'In the case of using foreign cloud infrastructure, must have a backup data storage system located in Lao PDR.' This textually establishes a requirement for local storage infrastructure contingent on the use of foreign infrastructure. It does not merely govern security controls or encryption (P7-I2) but specifies a physical/logical location requirement for a backup system, which aligns with the 'local server/data centre' concept in the indicator's positive cues."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Ministry of Technology and Communications Decision No. 3643 ",
+  "article": "Art. 20",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly states 'All equipment comprising the service system must be located in the Lao PDR' (ອຸປະກອນທັງໝົດ ທີ່ປະກອບເຂົ້າເປັນລະບົບການໃຫ້ບໍລິການ ຕ້ອງຕັ້ງຢູ່ໃນ ສປປ ລາວ). This creates a clear legal function of localization as a condition for operating the data centre service, satisfying the 'local server/data centre as a precondition' test. There is no scope defect; the requirement applies to the physical infrastructure of the service provider."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I3 scores '1' if any infrastructure requirement exists where local data centre/server is a precondition of service. The text mandates that all equipment comprising the service system be located in the Lao PDR. This is not a rule for 'already-established' data centres (which would score 0) but a foundational requirement for the equipment constituting the service. It is not a licensing regime (9.4) or a policy rulebook (5-Jun trap). The positive cue 'server located within the ter"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text in section 2.3 (Equipment) contains the clause 'ອຸປະກອນທັງໝົດ ທີ່ປະກອບເຂົ້າເປັນລະບົບການໃຫ້ບໍລິການ ຕ້ອງຕັ້ງຢູ່ໃນ ສປປ ລາວ' (All equipment comprising the service system must be located in the Lao PDR). The word 'ຕ້ອງ' (must/should) indicates a mandatory obligation. The context is 'Technical Standards and Security of Data Centre Services' (Article 20). The text establishes that the physical location of the service system's equipment is a mandatory condition, directly supporting"
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I3",
+  "law": "Ministry of Technology and Communications Decision No. 3648 ",
+  "article": "Art. 22",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The cited text (Art. 22, item 5) requires a 'office and technical equipment' (ສຳນັກງານ ແລະ ວັດຖຸເຕັກນິກ) as a general business condition. It does not specify that the equipment must be servers or data centers located within Lao PDR territory. The rubric for P6-I3 specifically targets 'local servers / data centres / facilities required AS A CONDITION' with positive cues like 'server located within the territory'. A generic requirement for an office and equipment is a standard business licensing c"
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric for P6-I3 (Infrastructure requirements) looks for local data centers/servers as a precondition. The text provided is a general list of conditions for a digital database license, including capital, technical standards, user protection, office/equipment, staff, fees, and reporting. Item 5 ('office and technical equipment') is too generic to satisfy the specific 'local server/data center' requirement of P6-I3. It likely falls under general business licensing or P6-I1 (Legal framework) or"
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rationale claims the text 'establishes local physical infrastructure (facilities/equipment) as a precondition'. The text says 'ມີສຳນັກງານ ແລະ ວັດຖຸເຕັກນິກ' (have an office and technical equipment). It does not say 'local', 'within the territory', 'server', or 'data center'. The text does not establish that the infrastructure must be local or specific to data hosting. It merely requires the existence of an office and equipment to conduct business. The rationale over-interprets the generic ter"
+   }
+  ]
+ }
+]

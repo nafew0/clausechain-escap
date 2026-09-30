@@ -1,0 +1,12 @@
+# Keeps the frontend/Dockerfile(.dev) build context small and stops a host
+# node_modules (possibly built for a different OS/arch) from being copied
+# into the image.
+node_modules
+.next
+out
+.env
+.env.local
+npm-debug.log*
+.git
+.env*
+!.env.example

@@ -1,0 +1,164 @@
+{
+ "economy": "Indonesia",
+ "pillar": 6,
+ "run": "run-id-p6-1785607560",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence does not establish any ban or local processing requirement affecting data transfers."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence establishes any ban or local processing requirement affecting cross-border data transfers."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No gate-verified evidence establishes any ban or local processing requirement on personal or non-personal data."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence contains no verified local-storage requirement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence establishes any local-storage requirement."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The only cited horizontal personal-data law has no verified evidence of any local-storage requirement."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited law has no verified evidence establishing an infrastructure requirement as a precondition of service or data transfer."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence establishes a local data-centre/server precondition or an infrastructure-conditioned data transfer requirement."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No verified evidence shows that infrastructure, such as a local data centre or server, is required as a precondition for service or as a condition on data trans"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited law has no verified evidence establishing any conditions on data transfers."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence establishes conditions on data transfers."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No verified evidence establishes any conditions on data transfers."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "binding cross-border data-transfer agreement evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "IA-CEPA Article 13.11 plainly requires each Party to allow cross-border electronic information transfers, establishing at least one binding data-transfer agreem"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "At least one binding agreement, including IA-CEPA Article 13.11, requires allowing cross-border electronic transfers of information."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "IA-CEPA Chapter 13 contains binding commitments permitting cross-border electronic information transfers and prohibiting unjustified data-localization requireme"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

@@ -1,0 +1,164 @@
+{
+ "economy": "Lao PDR",
+ "pillar": 6,
+ "run": "run-la-p6-1790670454",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence contains no verified ban or local processing requirement, so no such restriction is established."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No ban or local processing requirement is evidenced in the gate-verified row."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence contains no verified ban or local processing requirement, so no such restriction is established."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence provides no verified local-storage requirement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence establishes a local-storage requirement."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No local-storage requirement is evidenced in the reviewed law."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "infrastructure requirement exists",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The text requires notification of the platform and specifies service-system qualities, but does not state that a local data centre or server is a precondition o"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The requirement to notify the platform used or provided is not a local data-centre/server precondition or a condition on data transfer."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provision requires notification of the platform used or provided and sets service-quality standards, but does not require local infrastructure as a precondi"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Article 17 conditions transfers of personal data outside Laos on data-owner consent and compliance with law, and the law is identified as horizontal."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Article 17 conditions cross-border transfers of personal data on data-owner consent or consistency with law, meeting the score-1 criterion for any personal-data"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Article 17 conditions the cross-border transfer of personal data on data-owner consent or legal compliance, which meets the score-1 threshold."
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "binding cross-border data-transfer agreement evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The quoted provision only states the Chapter\u2019s scope and does not state a binding commitment on data transfer."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The cited scope provision does not establish a binding commitment on data transfer, so no binding data-transfer agreement is evidenced."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The cited scope clause does not itself impose a binding data-transfer commitment, so the evidence does not establish an agreement."
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

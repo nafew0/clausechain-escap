@@ -1,0 +1,102 @@
+{
+ "economy": "Russian Federation",
+ "pillar": 2,
+ "run": "run-ru-p2-1790691782",
+ "krippendorff_alpha": 0.2,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The excerpts do not plainly state an exclusion of foreign firms; they refer to procurement restrictions or prohibitions without identifying firms by foreign sta"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Resolution No. 1875 imposes restrictions on foreign-origin goods, with an exception where no equivalent is produced in Russia, so foreign suppliers are excluded"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The national-treatment rules impose prohibitions or restrictions on foreign-origin goods in procurement, excluding foreign suppliers where applicable and theref"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 1.0,
+   "deterministic_reason": "source-code/IP surrender as a tender condition -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The excerpts do not expressly require surrender of patents, source code, or trade secrets, or use of specific encryption as a tender condition."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The cited provisions address ownership of commissioned intellectual property and design works, but do not require surrender of patents, source code, or trade se"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The cited provisions allocate intellectual-property rights in commissioned or publicly funded works but do not establish source-code, patent, or trade-secret su"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "limitation triggered by nationality/origin -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The excerpts show SME-only procurement and preferences for specified entities, but do not plainly establish foreign-bidder discrimination or a measure applied t"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Resolution No. 1875 establishes national-treatment restrictions on foreign goods in procurement, directly discriminating against foreign bidders."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Resolution No. 1875 establishes national-treatment restrictions that discriminate against foreign-origin goods and therefore directly disadvantage foreign bidde"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

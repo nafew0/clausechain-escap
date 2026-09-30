@@ -1,0 +1,164 @@
+{
+ "economy": "Lao PDR",
+ "pillar": 6,
+ "run": "run-la-p6-1790696603",
+ "krippendorff_alpha": 0.417,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the horizontal application of the law, meaning there is no textual basis to confi"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence identifies a single horizontal requirement (Law on Electronic Data Protection No. 25/NA) but is marked as pending review with no confirmed evidence"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the horizontal application of the law, meaning there is no verified data to suppo"
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence contains two distinct local storage requirements (Art. 9 and Art. 7 of Decision No. 11) regarding non-personal data in the securities sector, which"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The evidence contains a single local storage requirement for non-personal/specific data (securities company data) in the securities sector, while the banking pr"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence identifies two distinct local storage requirements (Articles 7 and 9) within the same sectoral regulation for securities companies, which meets the"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "infrastructure requirement exists",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly requires that data and backup centers for securities companies be located within the Lao PDR, constituting a local infrastructure precon"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Lao Securities Commission Decision No. 11 (Arts. 8 and 9) explicitly requires that data and backup data centers for securities companies must be located within "
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Lao Securities Commission Decision No. 11 explicitly mandates that data and backup centers for securities companies must be located within the Lao PDR, constitu"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited text explicitly conditions the use or disclosure of personal data on obtaining permission from the data owner, satisfying the criterion for personal d"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites Article 16 of the Law on Electronic Data Protection, which is a horizontal law covering personal data, and explicitly conditions the use or d"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence cites Article 16 of the Law on Electronic Data Protection, which is explicitly labeled as 'Horizontal' and governs the use or disclosure of persona"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no qualifying binding data-transfer agreement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the RCEP Chapter 12 Electronic Commerce provision, indicating no binding data-transfer agr"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence indicates no binding data-transfer agreement was found for the economy, consistent with the score 1 criterion."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence indicates that Lao PDR deferred from the RCEP Electronic Commerce chapter, meaning it has not agreed to the binding data-transfer commitments conta"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

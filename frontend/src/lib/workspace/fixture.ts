@@ -242,6 +242,10 @@ export async function fixtureSourceMatch(
   const filtered = (await fixtureEvidence(params)).results
   const index = Math.max(0, filtered.findIndex((row) => row.finding_key === findingKey))
   const sourceArtifact = String(evidence.row['source_artifact_id'] ?? evidence.source_hash)
+  const requestedQueue = params.queue
+  const reviewQueue = requestedQueue === 'new' || requestedQueue === 'known' || requestedQueue === 'absence'
+    ? requestedQueue
+    : String(evidence.row['Discovery Tag'] ?? '').toUpperCase() === 'KNOWN' ? 'known' : 'new'
   return {
     ...evidence,
     blocked: mode === 'blocked',
@@ -271,6 +275,13 @@ export async function fixtureSourceMatch(
       citation_tier: String(evidence.row['citation_tier'] ?? '') || null,
       source_artifact_id: sourceArtifact || null,
     },
+    review_queue: reviewQueue,
+    stable_key: findingKey,
+    approval_eligibility: {
+      eligible: mode !== 'blocked',
+      reason: mode === 'blocked' ? 'A complete citation proof is not available.' : '',
+    },
+    latest_correction: null,
     navigation: {
       position: index + 1,
       total: filtered.length || 1,

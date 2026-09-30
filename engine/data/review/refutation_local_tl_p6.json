@@ -1,0 +1,30 @@
+[
+ {
+  "indicator": "P6-I2",
+  "law": "Lei n.º 12/2021 Código Mineiro (Mining Code)",
+  "article": "Art. 110",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision mandates the retention of specific records (mining/royalty) in Timor-Leste offices. While sectoral, the rubric explicitly allows scoring for 'specific data' (0.5 score). It is not a government-only measure (applies to private rights holders), nor is it a server operation requirement (P6-I3). The legal function of domestic storage is present."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I2 scores '0.5' for 'A single non-personal/specific-data storage rule'. The text requires storage of 'registos' (records) in 'escritórios em Timor-Leste' (offices in Timor-Leste). This fits the 'specific data' category. The '5 years' is a minimum retention period ('período mínimo'), which is consistent with the rubric's note that fixed duties are minimums unless stated as ceilings. The mapping to P6-I2 is valid under the scoring rules."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states 'deve conservar, nos seus escritórios em Timor-Leste' (must keep, in its offices in Timor-Leste). This is a mandatory obligation ('deve') to store records domestically. The G6 WARN regarding modality is incorrect; 'deve' is the Portuguese equivalent of 'shall/must', not 'may'. The text clearly establishes a domestic storage requirement for the specified records."
+   }
+  ]
+ }
+]

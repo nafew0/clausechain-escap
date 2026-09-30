@@ -1,0 +1,102 @@
+{
+ "economy": "Australia",
+ "pillar": 2,
+ "run": "run-au-p2-1790691016",
+ "krippendorff_alpha": 1.0,
+ "indicators": {
+  "P2-I1": {
+   "deterministic": 1.0,
+   "deterministic_reason": "operative foreign-exclusion measure evidenced",
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 1.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The quoted text states only a procurement-value condition and does not plainly state a foreign-firm exclusion."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The cited evidence does not identify any measure excluding foreign firms; it only describes the scope of a procurement rule."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The supplied fragment of paragraph 5.4 does not establish any measure excluding foreign firms from public procurement."
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P2-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no source-code/IP/encryption tender condition found",
+   "master_gold": 0.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited evidence contains no stated requirement to surrender source code or trade secrets, use escrow, or use specific encryption in procurement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No evidence was found of a tender requirement to surrender patents, source code, or trade secrets, or to use specific encryption."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence provided contains no requirement to surrender source code, patents, or trade secrets, or to use specific encryption in procurement."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P2-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no bidding limitation found",
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence reports no measure or institutional-transparency limitation, so no qualifying restriction is established."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No qualifying limitation or lack of institutional transparency is evidenced in the gate-verified row, which reports no evidence found pending review."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No verified evidence identifies a procurement-bidding limitation or institutional-transparency gap; the Privacy Act entry is pending review and does not establi"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

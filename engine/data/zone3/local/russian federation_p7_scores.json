@@ -1,0 +1,164 @@
+{
+ "economy": "Russian Federation",
+ "pillar": 7,
+ "run": "run-ru-p7-1790697049",
+ "krippendorff_alpha": 0.811,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The evidence cites Federal Law No. 152-FZ as a horizontal framework that includes provisions for data subject rights (such as rectification under Art. 21) and s"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of Federal Law No. 152-FZ, a horizontal framework that includes specific provisions for data subject rights such as rectific"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The evidence confirms the existence of Federal Law No. 152-FZ, a horizontal framework that includes specific provisions for data subject rights (such as rectifi"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 0.0,
+   "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The provided evidence consists exclusively of Federal Law No. 152-FZ, which is a sectoral law governing personal data protection rather than a dedicated horizon"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "The provided evidence consists solely of Federal Law No. 152-FZ, which is a sectoral law governing personal data protection rather than a dedicated horizontal c"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The provided evidence consists solely of Federal Law No. 152-FZ, which is a sectoral law focused on personal data protection rather than a dedicated horizontal "
+    }
+   ],
+   "band": [
+    0.0,
+    0.5
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence text is truncated and does not contain any explicit specification of a minimum data retention period (e.g., days, months, or years)."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence text contains no mention of a minimum data retention period (e.g., days, months, or years), only language requirements for internet resour"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence consists of truncated text regarding language requirements for internet networks and does not contain any explicit specification of a mini"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "all-sectors DPO/DPIA evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Article 22.1 of Federal Law No. 152-FZ mandates that any operator that is a legal entity must appoint a person responsible for the organization of personal data"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Federal Law No. 152-FZ Article 22.1 mandates that any operator that is a legal entity must appoint a person responsible for the organization of personal data pr"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence shows a horizontal requirement for legal entities to appoint a person responsible for data processing (Art. 22.1), but it does not mandate a full D"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provided text explicitly mandates that communication operators and information distributors must provide data to authorized state organs conducting operatio"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Article 64 of Federal Law No. 126-FZ mandates that telecommunications operators provide information to authorized state bodies conducting operational-investigat"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence explicitly mandates that telecommunications operators and information distributors must provide data to authorized state organs conducting operatio"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

@@ -1,0 +1,394 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 60",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 60 imposes a banking-sector duty to keep customer transaction information confidential, subject to laws providing otherwise. The mapping accurately describes that function and does not claim it is a horizontal data-protection framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 expressly records sectoral protections, and sectoral-only laws correspond to score 0.5 rather than 0. This provision is valid sectoral evidence; it does not by itself establish the economy-wide absence of a comprehensive horizontal law."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text establishes a conditional confidentiality obligation concerning customers’ transaction information. It does not establish a comprehensive horizontal framework, but the mapping presents it only as sector-specific evidence, which is consistent with P7-I1."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)",
+  "article": "Art. 51",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 51 assigns district and municipal post and telecommunication offices duties to receive and report computer-system emergency incidents to LaoCERT. That is a concrete incident-response function; its sectoral scope is not a defect because the rubric expressly recognizes dedicated sectoral-only frameworks."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric's hunt_in is empty, and incident response is within the stated cybersecurity scope. This is evidence of a sectoral framework, consistent with the rubric's 0.5 category if no horizontal dedicated framework exists; the provision alone does not establish the economy-wide score, but the mapping does not claim one."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text and context establish duties concerning cybercrime prevention and reporting computer-system emergency incidents through the post and telecommunication administration to LaoCERT. They support the rationale narrowly as sectoral incident-response evidence, not as proof of horizontal coverage."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I2",
+  "law": "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)",
+  "article": "Art. 23",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision addresses emergency computer-system incident response, a function expressly within the rubric’s cybersecurity scope. Its placement in a cybercrime law does not make the mapping wrong: the rubric allows non-dedicated legal frameworks to support P7-I2."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, no specified source type is required. The incident-response procedure is evidence consistent with the rubric’s non-dedicated-framework category (score 0.5); it does not establish a dedicated horizontal cybersecurity framework (score 0). The framework-absence polarity does not bar using a provision as an evidence row. G6’s modality warning does not negate the provision’s evidentiary relevance."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the Ministry should consider emergency computer-system warnings and reply with suggested methods, and calls for immediate technical response in necessary and urgent cases. In the surrounding cybercrime-law context, that establishes an incident-response function, though not a dedicated horizontal cybersecurity framework. That distinction fits the rubric rather than defeating the mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Anti-Money Laundering and Counter-Financing of Terror",
+  "article": "Art. 25",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete scope or legal-function defect: Article 25 requires AML/CFT reporting entities to keep the specified records for at least ten years. The duty is not limited to government data."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I3 expressly includes sectoral AML laws in hunt_in. “For at least ten years” clearly specifies a minimum retention period, so the rubric scores this requirement 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text states that the defined information “must be kept for at least ten years” from transaction completion or termination of the business relationship. That establishes the specified minimum period; the G4 warning does not negate the quoted duty."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Anti-Money Laundering and Counter-Financing of Terror",
+  "article": "Art. 24",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "Article 24 requires transfer information to be recorded before delivery to the beneficiary; it does not require that information be kept. A record-creation duty alone is not the retention requirement P7-I3 measures."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "The rubric accepts sectoral AML evidence, but score 0 applies when a retention requirement exists without a specified minimum. This text specifies no retention duty or period, so it does not support a P7-I3 evidence row merely because information must be recorded."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The exact text says information must be accurately recorded before further delivery. It says nothing about keeping the information afterward; the surrounding context adds no retention period or continuing retention obligation."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Anti-Money Laundering and Counter-Financing of Terror",
+  "article": "Art. 16",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 16 places “Record keeping” among reporting entities’ obligations. The rubric expressly accepts sectoral AML evidence and records a retention requirement without a specified minimum as score 0; the absence of a duration is not a scope defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The sectoral AML/CFT provision is within hunt_in, and the obligation to keep records supports recording a retention requirement. No minimum period is specified, so the rubric assigns score 0; G7’s warning is consistent with that result."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The surrounding text makes “Record keeping” an obligation of reporting entities, but states no retention duration. That supports recording the requirement and scoring 0 under the rubric, which expressly allows a retention requirement without a specified minimum."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 71",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 71 imposes a legal record-retention duty on commercial banks, not merely a business-transfer or confidentiality rule. It requires the covered documents and information, including electronic copies, to be kept at least ten years; the rubric expressly includes sectoral banking evidence."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I3 asks whether data must be kept for at least a specified period. “At least ten years” clearly specifies a minimum, so the rubric scores this 1. The provision is not government-only, and the sectoral-law hunt_in expressly includes relevant sectoral evidence."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the documents and information, including electronic copies, “shall be kept at least ten years” after the stated events. That establishes a mandatory minimum retention period, not a ceiling or a permissive period. The surrounding Article 71 context concerns commercial-bank records and transaction data."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 65",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 65 imposes a mandatory duty to maintain accounts, supporting a records-maintenance requirement. The rationale does not claim a specified duration, and the rubric permits a retention requirement without a minimum period to be recorded and scored 0."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Commercial banking accounting is within the rubric’s sectoral hunt_in scope. The text specifies no minimum retention period, so it supports an evidence row scored 0 under the rubric; it does not support a score of 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text requires the bank to maintain accounts in accordance with accounting law and regulations, but states no retention duration. That matches the rationale’s limited claim and the rubric’s treatment of an unspecified retention requirement."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Ministry of Technology and Communications Decision No. 3648 ",
+  "article": "Art. 17",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No clear legal-function or scope defect appears. The item concerns retention of system-usage-history data, and the surrounding introductory clause makes the listed requirements mandatory; it is not merely a backup or accessibility requirement."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I3 expressly accepts sectoral laws. The text specifies retention for at least ninety days, satisfying the rubric’s minimum-period test and scoring 1; it is not a “no longer than necessary” limit. The introductory mandatory clause also addresses the G6 modality concern."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted item says system-usage-history data are retained for at least ninety days, and Article 17 introduces its list as requirements to be complied with. The separate finance-data clause does not negate that specified minimum for system-usage-history data."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I4",
+  "law": "Bank of the Lao PDR Decision No. 819 on the General Payment ",
+  "article": "Art. 46",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 46 imposes a mandatory risk assessment that expressly includes personal-data privacy risks for payment-system operators using external providers. That provides a concrete sector-specific DPIA-type accountability duty; the rubric permits sectoral evidence, so the limited coverage is not a defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric’s hunt_in is empty, and the required assessment expressly covers personal-data privacy risks. This supports a sector-specific DPIA-type requirement, corresponding to 0.5 rather than the all-sectors score of 1; sectoral scope is expressly recognized by the scoring rubric."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text requires covered operators to assess service-use risks, specifically including risks concerning personal-data privacy. It does not expressly require appointing a DPO or use the term DPIA, but the indicator is disjunctive and the mandatory privacy-risk assessment supports the claimed sectoral DPIA-type mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law on Anti-Money Laundering and Counter-Financing of Terror",
+  "article": "Art. 27",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision’s function is suspicious-transaction reporting to AMLIO, and the rubric accepts sectoral access provisions. Although “should be required” is less direct than “shall,” it does not clearly establish that reporting is merely optional or that the mapping is wrong."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric directs review beyond privacy statutes, and a suspicious-transaction report to AMLIO can give the government access to transaction-related personal data without a stated court-order condition. The G6 modality warning merits caution, but is not by itself a refutation."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says reporting entities “should be required” to report suspicious transactions, including attempted customer transactions, to AMLIO. It does not enumerate report fields or expressly say “personal data,” but its reporting context does not clearly defeat the access mapping; the text also states no judicial-authorization condition."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 110",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 110 gives the Bank of the Lao PDR authority to require additional documents from banks and related service providers, while the context includes deposit and credit information. The text does not expressly say “personal data,” but its broad scope does not clearly exclude it; no court-order condition appears."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I5’s hunt_in expressly includes sectoral and banking laws. The authority to require documents, alongside reporting on deposits and credits, is evidence of potential government access without independent judicial authorization; under the supplied scoring, that supports a 1-type evidence row, not a court-gated-access exclusion."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted provision establishes a power to require documents, and the surrounding text identifies deposit and credit information, but it does not expressly state that every such document contains personal data. That limits certainty, yet does not clearly make the broad access mapping wrong; the text states no judicial-authorization prerequisite."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law on Commercial Bank (Amended) No. 39/NA (2023)",
+  "article": "Art. 74",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "Article 74 requires an audit company to provide “information” to the Bank of the Lao PDR, including on request, but does not establish that the information is personal data. The rubric requires government access to personal data, so the request power alone does not support this mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The rubric expressly permits sectoral evidence and the on-request route appears not to require judicial authorization. But P7-I5 concerns access to personal data, and this passage does not show that the information covered includes personal data; it therefore cannot establish a score-1 evidence row."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The quoted text establishes an obligation to provide information to the Bank on request or under applicable laws and regulations. It says nothing about personal data, and the surrounding context does not supply that missing connection."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)",
+  "article": "Art. 60",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Article 60 imposes a fine for non-supply of data to officials, but does not itself establish an access power over personal data or show that the supply duty operates without independent judicial authorization."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "The rubric permits sectoral evidence, so the cybercrime-law context is not a defect. But this passage does not identify personal data or establish that officials may obtain it without judicial authorization; it therefore does not meet the P7-I5 positive scoring test."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The quoted text says only that failure to supply unspecified data and information to officials within a defined period is finable. It does not state an access procedure, identify personal data, or say judicial authorization is unnecessary."
+   }
+  ]
+ }
+]

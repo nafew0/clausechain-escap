@@ -277,5 +277,955 @@
   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
   "note": "Criminal Procedure Code s.34(1) expressly permits a police search without a search warrant when its conditions hold, and s.39 permits investigating police/authorised persons to access and inspect computers without prior independent judicial authorization. One such power gives 1. [AI suggestion ratified as final by reviewer instruction, 20 Jul final session.]",
   "action": "approve"
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P6-I4",
+  "reasoning": "Approve 1: matches ESCAP Round-2 gold (PDPA s.28, adequacy-conditioned transfers; plus PDPC Notifications B.E. 2566 under s.28/s.29). Evidence caveat: the currently attached row s.80(3) is a confidentiality offence, not the transfer regime, and the local run's s.15(5) is a parser mislabel of s.16(5). Both engines found s.28 and it passed G1-G9 but was dropped at proof-span resolution; the evidence row will be replaced by s.28/s.29 after the section-heading/page-break parser fix and a Thailand corpus rebuild.",
+  "reviewed_at": "2026-09-27T13:26:36.476312+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Australia",
+  "indicator": "P2-I1",
+  "reasoning": "Paragraph 5.4 of the CPRs of 17 November 2025 makes non-corporate Commonwealth entities invite only Australian businesses for purchases between $10,000 and the procurement threshold; others come in only if no Australian bid offers value for money. That closes a whole value band to foreign firms, which is a full exclusion. ESCAP's 0.5 predates these CPRs and leaned partly on 5G rules aimed at commercial carriers.",
+  "reviewed_at": "2026-09-30T01:33:48.422611+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Australia",
+  "indicator": "P2-I2",
+  "reasoning": "Neither the CPRs nor the standard ICT contracts make a bidder hand over source code or IP; escrow is an option the buyer may elect. ASD's rule that SECRET and TOP SECRET systems use ASD-approved high-assurance cryptographic equipment governs agencies' own classified systems and is not written into tenders as a bid condition, so it does not lift the score. ESCAP also has 0.",
+  "reviewed_at": "2026-09-30T01:33:48.547276+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "Australia",
+  "indicator": "P2-I3",
+  "reasoning": "The CPRs of 17 November 2025 do limit bidding: Appendix A exemption 17 lets entities buy directly from SMEs up to $500,000, and Appendix B defines an SME as an Australian or New Zealand business, so the advantage turns on nationality. The Indigenous Procurement Policy's Mandatory Set Aside for $80,000-$200,000 contracts is a second measure; both should be added as evidence. ESCAP scored the SME targets 0.5 despite that definition.",
+  "reviewed_at": "2026-09-30T01:34:01.531824+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "India",
+  "indicator": "P2-I1",
+  "reasoning": "Clause 3B of the Make in India Order, as revised in July 2024, lets only Class-I local suppliers bid for items a nodal ministry has notified as having enough local capacity and competition, as DoT has done for telecom products. Imported goods are shut out of those categories altogether, so this is a category exclusion and the full score stands.",
+  "reviewed_at": "2026-09-30T01:34:01.653336+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "India",
+  "indicator": "P2-I3",
+  "reasoning": "Clause 3A obliges procuring entities to give Class-I local suppliers purchase preference, and clause 3B lets the lowest Class-I bid within 20% of the best price take the contract. DoT's telecom notification treats anyone offering imported products as non-local. A price margin keyed to where goods are made, which a foreign bidder can still beat, is a discriminatory limitation.",
+  "reviewed_at": "2026-09-30T01:34:01.744535+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Indonesia",
+  "indicator": "P2-I1",
+  "reasoning": "Foreign firms may compete only in International Procurement, and Article 63 of the procurement regulation, as re-enacted by Perpres 46/2025, opens that route below Rp50 billion for goods and other services only where no capable Indonesian business exists. That is the 'foreign only if locals cannot supply' pattern, so the full score stands.",
+  "reviewed_at": "2026-09-30T01:34:01.828833+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Indonesia",
+  "indicator": "P2-I2",
+  "reasoning": "Article 9(1) of PP 71/2019 obliges developers of software built for government bodies to hand over its source code and documentation, with third-party escrow under paragraphs (3) and (4) as the alternative. It is a statutory duty attached to every such government software contract, not a negotiated term, so it is a source-code surrender condition. It reaches custom-built software only, not a supplier's existing products.",
+  "reviewed_at": "2026-09-30T01:34:01.910849+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Indonesia",
+  "indicator": "P2-I3",
+  "reasoning": "Several measures discriminate by nationality or origin: foreign firms in international procurement must partner with an Indonesian firm (Article 63), PP 29/2018 Article 64 requires a price preference for goods with at least 25% local content, and Article 67(6) gives national firms 7.5% over foreign bids in construction. The TKDN thresholds and the 40% allocation to Indonesian-made small-business products add further limits.",
+  "reviewed_at": "2026-09-30T01:34:02.002349+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Lao PDR",
+  "indicator": "P2-I1",
+  "reasoning": "Article 19(1) of the Public Procurement Law confines national open bidding to local individuals and legal entities, so foreign firms can enter only international open bidding. Barring them from a whole procedure category is an exclusion. ESCAP read Article 19 as proof of openness and scored 0, which the wording does not bear out; the value thresholds for each procedure are still worth confirming.",
+  "reviewed_at": "2026-09-30T01:34:02.087775+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Lao PDR",
+  "indicator": "P2-I2",
+  "reasoning": "Neither the Public Procurement Law No. 30/NA nor Instruction 0477/MOF asks bidders to hand over source code, patents or trade secrets or to use a particular encryption, and Article 15 of the law protects bidders' trade secrets. ESCAP also scores this 0.",
+  "reviewed_at": "2026-09-30T01:34:02.175843+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Lao PDR",
+  "indicator": "P2-I3",
+  "reasoning": "Clause 14 of Instruction 0477/MOF gives Article 45's domestic preference its teeth: imported goods have up to 15% added to their price before comparison with Lao-made goods (14.2.1, 14.2.7), and local contractors win works contracts if within 7.5% of a foreign bid (14.1.1). Both are origin- or nationality-based margins in public tenders.",
+  "reviewed_at": "2026-09-30T01:34:02.262873+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Malaysia",
+  "indicator": "P2-I1",
+  "reasoning": "The score is right, but every Financial Procedure Act section put forward was rightly rejected. The exclusion sits in the Treasury circulars: PK 2.2 para 2.1 reserves Category A tenders to Malaysian companies and admits non-FTA foreign firms only where local expertise is lacking, and PK 1.4 para 2.5(i) allows foreign services only when local ones are unavailable. Both should be added as evidence.",
+  "reviewed_at": "2026-09-30T01:34:02.346188+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Malaysia",
+  "indicator": "P2-I2",
+  "reasoning": "A surrender condition does exist, in the Treasury circulars rather than the statutes ESCAP checked. PK 2.1 para 2.10(iv) makes source code and IP in developed application systems Government property, and clause (xvii)(a) of the standard tender conditions in PK 2.2 Lampiran 2 vests copyright and other IP in goods supplied in the Government. Both are mandatory terms, not negotiated ones, and should be added as evidence.",
+  "reviewed_at": "2026-09-30T01:34:02.433214+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Malaysia",
+  "indicator": "P2-I3",
+  "reasoning": "PK 1.5 para 3.1 extends the Bumiputera preference to joint ventures with foreign firms only where the venture is incorporated in Malaysia with at least 51% Bumiputera and at most 49% foreign equity. A foreign firm can still win, but only an ownership structure defined by nationality earns the preference, which is direct discrimination. The Bumiputera price margins in para 6.2 carry the same weight and are worth adding.",
+  "reviewed_at": "2026-09-30T01:34:02.523492+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P2-I1",
+  "reasoning": "Article 8.1 of the 2023 Procurement Law requires tender documents to specify that goods domestic producers can supply to the required quality are bought from domestic manufacturers. Foreign goods are shut out wherever local supply exists, which is an exclusion rather than a margin. Its practical reach into ICT depends on the Government's list, which names few ICT items.",
+  "reviewed_at": "2026-09-30T01:34:02.613081+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Mongolia",
+  "indicator": "P2-I2",
+  "reasoning": "No encryption requirement is in view at all, and the only provision offered, the services bidding-document entry giving the buyer IP in work produced under the contract, is a default the buyer can switch off and was rightly rejected. Nothing makes bidders surrender code or use particular cryptography, so 0.5 has no footing and the score is 0, as ESCAP has it.",
+  "reviewed_at": "2026-09-30T01:34:02.694048+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P2-I3",
+  "reasoning": "Article 8.7.2 reduces a works bid by 7.5% for evaluation where the bidder's ultimate owner is a Mongolian citizen, and 8.7.1 gives locally established firms 5%. The first is a nationality-based margin, which is enough on its own. It covers works only, so the domestic-goods margins in Articles 8.4 to 8.6, which reach ICT purchases, should also be cited.",
+  "reviewed_at": "2026-09-30T01:34:02.779426+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P2-I1",
+  "reasoning": "Article 14(4)(1) of 44-FZ requires any bid offering banned foreign-origin goods to be rejected, with Resolution No. 1875 supplying the ban list. For significant critical infrastructure, paragraph 10 of Resolution No. 1478 refuses approval to buy foreign software whenever a registered Russian or EAEU equivalent meets the requirements. Foreign supply comes in only where no domestic product will do.",
+  "reviewed_at": "2026-09-30T01:34:02.872966+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P2-I3",
+  "reasoning": "Resolution No. 1352 requires at least 20% of covered customers' planned annual purchasing to go through procurements open only to small and medium businesses (paras 5.1 and 20), and SME status needs Russian registration with capped foreign ownership. 44-FZ Article 27(4) adds status-based advantages for small businesses and others. A quota foreign suppliers cannot qualify for discriminates by nationality.",
+  "reviewed_at": "2026-09-30T01:34:02.959029+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Singapore",
+  "indicator": "P2-I1",
+  "reasoning": "The Government Procurement Act and Regulations do not bar foreign suppliers: GeBIZ is open to foreign firms and Singapore is a GPA party. The Application Order's carve-out for MHA security purchasing narrows coverage without excluding foreign bidders, so there is no exclusion to score.",
+  "reviewed_at": "2026-09-30T01:34:03.047842+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Singapore",
+  "indicator": "P2-I2",
+  "reasoning": "Nothing in the procurement Act or Regulations requires source code or IP to be handed over, and the Tender Lite IP clause is optional. CSA's National IT Evaluation Scheme requires products handling sensitive government data to be evaluated, but its cryptographic criteria are unpublished, so no specific encryption mandate can be shown; revisit if those criteria turn out to prescribe particular cryptography.",
+  "reviewed_at": "2026-09-30T01:34:03.130894+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "Singapore",
+  "indicator": "P2-I3",
+  "reasoning": "The GP Regulations have no margin or set-aside, but they bind only covered procurement, which is all ESCAP looked at. Under IMDA's Accreditation Guidelines v6.0 (paras 3.1.2 and 7.1.2-7.1.3), firms registered in Singapore with substantial local activity sit on a panel government buyers must consider first. That channel is closed to suppliers without a Singapore establishment, so it is a local preference and should be added as evidence.",
+  "reviewed_at": "2026-09-30T01:34:03.222847+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P2-I1",
+  "reasoning": "Article 28(1) of the Procurement Code (DL 1/2025) lets any person or consortium bid in every procedure, and none is reserved to nationals. The national-only option in DL 22/2022 Article 49 was revoked for procedures started from 1 January 2026. The national-supplier margins in Articles 86 and 87 are limitations, not exclusions.",
+  "reviewed_at": "2026-09-30T01:34:03.312649+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P2-I2",
+  "reasoning": "Under the Procurement Code, transfer of IP is only a point the parties may negotiate (Article 77(5)(h)), and bidders' trade secrets are protected. The qualified e-signature needed to submit a bid authenticates the bidder; it is not an encryption requirement for products. The standard contract templates are unpublished, so terms for commissioned software could not be checked.",
+  "reviewed_at": "2026-09-30T01:34:03.398153+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P2-I3",
+  "reasoning": "Article 86 of the Procurement Code makes contracting entities give national suppliers, meaning Timorese citizens or firms more than 50% Timorese-owned, an uplift of up to 10% in open and restricted tenders and quotations. Under Article 87, non-nationals meeting the same local-content tests get at most 5%, and foreign firms meeting none get nothing. That gap is a nationality-based preference.",
+  "reviewed_at": "2026-09-30T01:34:03.484735+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "India",
+  "indicator": "P6-I1",
+  "reasoning": "The relevant rules sit outside the IT Act: rule 44 of the 2026 telecom service authorisation rules (G.S.R. 513(E)) bars sending user information abroad, rule 25(3) of G.S.R. 644(E) forbids copies of network data leaving India, and clause (vii) of the 2021 Geospatial Guidelines keeps fine-scale map data processed in India. Several sectoral requirements make 1 and should be added as evidence; ESCAP relied on government-only policies.",
+  "reviewed_at": "2026-09-30T01:34:03.571506+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "India",
+  "indicator": "P6-I2",
+  "reasoning": "The local-copy rules here are not confined to one sector. Direction (iv) of the CERT-In Directions of 28 April 2022 makes every service provider, intermediary and body corporate keep 180 days of ICT logs within India, and rule 3(5) of the Companies (Accounts) Rules requires daily backups of electronic books on servers in India. Both apply across the economy; add CERT-In and re-export rule 3(5) in its 2022 wording.",
+  "reviewed_at": "2026-09-30T01:34:03.656463+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "India",
+  "indicator": "P6-I3",
+  "reasoning": "Rule 25(3) of the 2026 telecom network authorisation rules (G.S.R. 644(E)) requires every authorised entity to keep all systems of its network in India, and Principle 2 of SEBI's March 2023 cloud framework lets regulated entities use only MeitY-empanelled data centres, with Principle 3 keeping the data in India. Either is a local-facility condition of doing business. Add both as evidence; ESCAP's 0 looked only at the DPDP Act.",
+  "reviewed_at": "2026-09-30T01:34:03.747221+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "India",
+  "indicator": "P6-I4",
+  "reasoning": "The 1 holds, though not on section 16 of the DPDP Act, which is an uncommenced power to blacklist countries. Rule 7 of the 2011 IT (Sensitive Personal Data) Rules lets sensitive personal data go abroad only to a country with equivalent protection, and only where the transfer is contractually necessary or consented to. Those Rules last until the repeal of section 43A takes effect; add rule 7 as evidence.",
+  "reviewed_at": "2026-09-30T01:34:03.833392+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "India",
+  "indicator": "P6-I5",
+  "reasoning": "No treaty in force obliges India to let data flow. It is outside RCEP, CPTPP and DEPA; the UAE CEPA only has the parties 'endeavour' to promote data flows, the UK agreement has a review clause and nothing more, and the Australia and EFTA agreements have no digital chapter. India is not a party to Convention 108 either.",
+  "reviewed_at": "2026-09-30T01:34:03.918238+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Indonesia",
+  "indicator": "P6-I1",
+  "reasoning": "The PDP Law has no ban, but two financial rules require onshore processing: POJK 11/POJK.03/2022 makes banks process IT-based transactions in Indonesia unless OJK approves otherwise, and PBI 22/23/PBI/2020 keeps domestic payment transactions processed in Indonesia. These are separate requirements on specific data, so the score is 1; add both as evidence. ESCAP bundles them into a single 0.5 entry.",
+  "reviewed_at": "2026-09-30T01:34:04.007099+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Indonesia",
+  "indicator": "P6-I2",
+  "reasoning": "Article 28(11) of the General Tax Provisions Law (UU 6/1983 as amended) requires books, records and electronically processed bookkeeping data to be kept in Indonesia for ten years. It binds every taxpayer that keeps books, so it is a horizontal local-storage rule and carries 1; it should be added as evidence. ESCAP's 0.5 rests on the health-data rule in PP 46/2014, which PP 28/2024 appears to have replaced.",
+  "reviewed_at": "2026-09-30T01:34:04.093007+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Indonesia",
+  "indicator": "P6-I3",
+  "reasoning": "Article 35 of POJK 11/POJK.03/2022 requires banks to place their electronic systems in data centres and disaster-recovery centres in Indonesia, with offshore placement only by OJK approval for listed purposes, and POJK 4/POJK.05/2021 does the same for non-bank financial institutions. Local facilities are therefore a precondition of the service. Both should be added as evidence; ESCAP also scores this 1.",
+  "reviewed_at": "2026-09-30T01:34:04.178553+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Indonesia",
+  "indicator": "P6-I4",
+  "reasoning": "Article 56 of Law 27/2022 lets personal data leave Indonesia only if the destination's protection is equal or higher, failing that under adequate and binding safeguards, and failing both with the data subject's consent. That is a horizontal conditional-transfer regime covering all personal data. We already hold the official text of Article 56 and it should be put forward here; ESCAP also scores 1.",
+  "reviewed_at": "2026-09-30T01:34:04.265495+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Indonesia",
+  "indicator": "P6-I5",
+  "reasoning": "Article 13.11 of IA-CEPA obliges Indonesia to allow cross-border transfers of information, personal information included, for a covered person's business, and Article 13.12 bars making local computing facilities a condition of doing business. The agreement is in force, so Indonesia has at least one binding data-flow commitment. RCEP Articles 12.14 and 12.15 would add to this if cited directly.",
+  "reviewed_at": "2026-09-30T01:34:04.356321+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "Lao PDR",
+  "indicator": "P6-I1",
+  "reasoning": "Article 17(2) of Lao Securities Commission Decision No. 11 (2021) prohibits securities companies from storing their data and ICT systems abroad, with no approval route. That is a ban, but confined to one sector, so 0.5; it should be added as evidence. The EDPL itself only conditions transfers on consent, and ESCAP's 0 looked no further than it.",
+  "reviewed_at": "2026-09-30T01:34:04.440628+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.5
+ },
+ {
+  "action": "override",
+  "economy": "Lao PDR",
+  "indicator": "P6-I2",
+  "reasoning": "There is more than one local-copy rule: Article 71 of the amended Commercial Bank Law (No. 39/NA, 2023) makes foreign bank branches keep documents and transaction data at their branch in Laos, and Article 21(1) of MTC Decision 3643 (2025) requires cloud providers on foreign infrastructure to keep a backup in Laos. Two such requirements make 1; add both as evidence. ESCAP's 0 considered only the EDPL and e-transactions law.",
+  "reviewed_at": "2026-09-30T01:34:04.527717+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Lao PDR",
+  "indicator": "P6-I3",
+  "reasoning": "The cloud-backup clause in Article 21 of Decision 3643 is a local-copy rule and belongs under storage, but the 1 still holds. Articles 7 to 9 of LSC Decision No. 11 (2021) require securities companies' ICT systems and backup data centre to be in Laos, and Article 22 of Decision 3643 makes licensed blockchain providers use Lao data-centre infrastructure. Add these as evidence; ESCAP's 0 did not consider them.",
+  "reviewed_at": "2026-09-30T01:34:04.614664+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Lao PDR",
+  "indicator": "P6-I4",
+  "reasoning": "The final paragraph of Article 17 of the Law on Electronic Data Protection bars sending personal data out of Laos without the data owner's consent or contrary to law. Consent opens the route, so this is a conditional transfer regime covering all personal data, and ESCAP reads it the same way.",
+  "reviewed_at": "2026-09-30T01:34:04.694571+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Lao PDR",
+  "indicator": "P6-I5",
+  "reasoning": "Articles 12.14 and 12.15 of RCEP do not bind Laos until 1 January 2027, extendable to 2030, and the AANZFTA upgrade defers its equivalents on the same timetable; the scope clause cited commits Laos to nothing. The ASEAN e-commerce agreement only recognises the importance of data flows. Nothing bound Laos in August 2026; if ATISA's financial-services annex is counted for Timor-Leste, Laos needs the same check.",
+  "reviewed_at": "2026-09-30T01:34:04.808808+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P6-I1",
+  "reasoning": "Article 14.1 of the Personal Information Law forbids sending personal data abroad unless a law or treaty allows it or the data subject consents, which is a condition, not a ban. The A/90 rule placing sensitive-data servers in Mongolia is an infrastructure requirement, and the 2026 Data Bill is still before Parliament. Nothing in force bans transfers or mandates domestic processing.",
+  "reviewed_at": "2026-09-30T01:34:04.900622+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P6-I2",
+  "reasoning": "No rule in force requires a domestic copy while letting the main data sit abroad. The credit-bureau regulation and the A/90 sensitive-data rule put the servers themselves in Mongolia, which counts as infrastructure, and the National Data Center storage duties cover only state databases. ESCAP likewise finds no local-storage rule.",
+  "reviewed_at": "2026-09-30T01:34:04.990180+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P6-I3",
+  "reasoning": "Several rules make local facilities a condition of operating. Clause 3.2 of the A/90 regulation puts sensitive-data processing servers in Mongolia, clause 7.1 of the credit-information regulation does the same for credit bureaus' primary and backup servers, and the OTC-market and .MN registrar rules require domestic data centres. Any one of them is enough, and ESCAP's own entry on the A/90 rule agrees.",
+  "reviewed_at": "2026-09-30T01:34:05.082289+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P6-I4",
+  "reasoning": "Article 14 of the 2021 Personal Information Law lets personal data go abroad where a law or treaty provides for it or the data subject consents. That is a conditional transfer regime covering all personal data, and ESCAP reads Article 14.1 the same way.",
+  "reviewed_at": "2026-09-30T01:34:05.170690+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P6-I5",
+  "reasoning": "Mongolia has no treaty in force binding it to let data flow. The Japan–Mongolia EPA only recognises the importance of data flows, the UN paperless-trade agreement says 'shall endeavour', and the EAEU interim agreement in force since July 2026 requires privacy safeguards rather than open flows. Mongolia is outside RCEP, DEPA and Convention 108.",
+  "reviewed_at": "2026-09-30T01:34:05.265375+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P6-I1",
+  "reasoning": "Paragraph 9 of Resolution No. 6 was rightly set aside; it only describes case-by-case bans. The 1 rests elsewhere: Article 16(11)–(12) of the National Payment System Law keeps domestic payment processing onshore and bars sending that transaction data abroad, and Article 3(21) of Law 572-FZ bans biometric identification that needs a cross-border transfer. Two bans on specific data make 1; add both as evidence.",
+  "reviewed_at": "2026-09-30T01:34:05.350338+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Russian Federation",
+  "indicator": "P6-I2",
+  "reasoning": "Article 18(5) of 152-FZ requires operators collecting Russian citizens' personal data to record, store, update and retrieve it using databases in Russia, with only narrow exceptions, while onward transfer stays possible under Article 12. That is a horizontal local-database rule for personal data, so 1, and it should be added as evidence. ESCAP files Article 18(5) under the ban and infrastructure questions instead.",
+  "reviewed_at": "2026-09-30T01:34:05.439946+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Russian Federation",
+  "indicator": "P6-I3",
+  "reasoning": "Neither provision cited shows a local-facility condition: Article 13, part 2.1, of the Information Law covers only state and municipal bodies' own systems, and Article 6(3) of 152-FZ merely passes the Russian-database storage duty down to processors. No private-sector server or data-centre precondition has been found, so 0. ESCAP's 1 rests on Article 18(5), which we count under storage.",
+  "reviewed_at": "2026-09-30T01:34:05.535388+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P6-I4",
+  "reasoning": "Article 12 of 152-FZ makes every operator notify Roskomnadzor before sending personal data abroad, lets transfers to adequacy-list countries proceed after notice, and holds others for a ten-working-day review in which a ban may be imposed. Resolution No. 24 sets out how the notice is filed. Transfers remain possible once those steps are taken, so this is a horizontal conditional regime.",
+  "reviewed_at": "2026-09-30T01:34:05.620770+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P6-I5",
+  "reasoning": "Russia ratified Convention 108 in 2013, and Article 12(2) stops a Party from prohibiting, or requiring special authorisation for, personal-data flows to another Party purely on privacy grounds. That is a binding treaty commitment on cross-border transfer, so Russia is not without one.",
+  "reviewed_at": "2026-09-30T01:34:05.731564+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "Thailand",
+  "indicator": "P6-I1",
+  "reasoning": "Two sectoral rules keep processing in Thailand: section 12 of the Credit Information Business Act B.E. 2545 bars credit bureaus and their controllers and processors from processing information outside the Kingdom, and clause 4.4 of Bank of Thailand Notification SorNorChor 12/2561 requires domestic debit-card switching, clearing and settlement to be done onshore. Two such requirements make 1; add both as evidence. ESCAP bundles them at 0.5.",
+  "reviewed_at": "2026-09-30T01:34:05.822576+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P6-I2",
+  "reasoning": "Nothing in the PDPA, its notifications or the sectoral laws checked requires a copy of data to be kept in Thailand; sections 28 and 29 allow transfers abroad with safeguards. The credit-bureau and debit-card rules are processing mandates and count under the ban question instead. ESCAP also records no local-storage rule.",
+  "reviewed_at": "2026-09-30T01:34:05.916184+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P6-I3",
+  "reasoning": "No Thai instrument checked makes a local server or data centre a condition of providing a service. The PDPA governs transfers rather than facilities, and the debit-card notification concerns where transactions are processed, not what infrastructure a provider must hold. ESCAP's record likewise shows no infrastructure requirement.",
+  "reviewed_at": "2026-09-30T01:34:06.012455+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P6-I5",
+  "reasoning": "Article 12.15(2) of RCEP, in force for Thailand since 2022, bars it from preventing cross-border transfers of information for a covered person's business; keeping the chapter out of dispute settlement does not make it optional. That alone gives Thailand a binding data-flow commitment, and Article 17(2) of the AANZFTA upgrade's e-commerce chapter adds a computing-facilities discipline.",
+  "reviewed_at": "2026-09-30T01:34:06.117695+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P6-I1",
+  "reasoning": "No law in force bans transfers abroad or requires domestic processing. Article 8 of DL 12/2024 makes server location irrelevant to where a business is established, Article 25(2) of the Petroleum Activities Law lets petroleum data be freely exported, and there is no personal-data law yet; the draft opened for consultation in July 2026 is not in force.",
+  "reviewed_at": "2026-09-30T01:34:06.204581+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "Timor-Leste",
+  "indicator": "P6-I2",
+  "reasoning": "Two mandatory sectoral copy rules are already accepted: Article 110 of the Mining Code keeps all mining records at the holder's offices in Timor-Leste, and section 27.2 of UNTAET Regulation 2000/8 keeps banks' credit files and customer information at their head office there. Two such requirements take the score to 1, not 0.5. Section 27.2 lapses only when Law 10/2026 takes effect in August 2027.",
+  "reviewed_at": "2026-09-30T01:34:06.295091+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P6-I3",
+  "reasoning": "No local-server or data-centre precondition appears in the telecom, e-commerce or banking laws, and Article 8 of DL 12/2024 treats server location as irrelevant. The one gap is the central bank's 2025 governance instructions (29/2025 and 30/2025), which have not been read and should be checked before this is treated as final.",
+  "reviewed_at": "2026-09-30T01:34:06.385335+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P6-I4",
+  "reasoning": "There is no personal-data law, and no sectoral rule makes transfers abroad subject to conditions. Bank and telecom confidentiality rules apply to any disclosure, not specifically to foreign transfers, and the only cross-border conditions govern exchanges between authorities. The draft data-protection law would change this if adopted.",
+  "reviewed_at": "2026-09-30T01:34:06.472579+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "India",
+  "indicator": "P7-I1",
+  "reasoning": "The DPDP Act's rights and duties commence only on 13 May 2027 under G.S.R. 843(E), so India had no comprehensive law in force in August 2026. What applied was IT Act section 43A and the 2011 SPDI Rules, which reach only body corporates and mainly sensitive data, plus sectoral rules such as Aadhaar section 28(5). That is thin, partly sectoral protection: 0.5. ESCAP's 0 counts the Act from enactment.",
+  "reviewed_at": "2026-09-30T01:34:06.560872+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.5
+ },
+ {
+  "action": "override",
+  "economy": "India",
+  "indicator": "P7-I2",
+  "reasoning": "India has no statute written for cybersecurity. Its cyber rules, including the CERT-In and critical-infrastructure provisions in sections 70A and 70B, sit inside the general IT Act, and the one dedicated instrument on file, SEBI's CSCRF, binds only securities-market entities. A non-dedicated framework plus a sectoral one is 0.5. ESCAP's 0 rests on the 2013 National Cyber Security Policy, which binds no one.",
+  "reviewed_at": "2026-09-30T01:34:06.642700+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.5
+ },
+ {
+  "action": "approve",
+  "economy": "India",
+  "indicator": "P7-I3",
+  "reasoning": "The score is right, but nothing on file carries it: the IFSCA fund-management and intermediary regulations were replaced in 2025, and the PMLA text was turned down only for its label. Section 12(3) of the PMLA, which makes reporting entities keep transaction records for five years, should be re-filed under that number; it alone supports 1, as do ESCAP's CERT-In and RBI KYC entries.",
+  "reviewed_at": "2026-09-30T01:34:06.726732+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "India",
+  "indicator": "P7-I4",
+  "reasoning": "The 0.5 rests entirely on section 10 of the DPDP Act, which commences only on 13 May 2027, so in August 2026 nobody had to appoint a data protection officer or run an impact assessment. Nothing else on file imposes either duty in any sector, so 0. ESCAP's 1 counts section 10 before commencement; ESCAP itself scores the IT Rules compliance officer 0.",
+  "reviewed_at": "2026-09-30T01:34:06.814691+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "India",
+  "indicator": "P7-I5",
+  "reasoning": "The score stands, though not on anything filed: both BNSS extracts were mislabelled and the PMLA item quoted the Magistrate safeguard in section 18(5). Section 69 of the IT Act lets the government order interception or decryption of computer data by executive order, with no judge, and PMLA section 18(1) lets an authorised officer search on his own recorded belief. Both should be filed.",
+  "reviewed_at": "2026-09-30T01:34:06.897526+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Indonesia",
+  "indicator": "P7-I1",
+  "reasoning": "Law 27/2022 applies to every controller in every sector and gives the full set of rights: correction in Article 6, erasure in Article 8, withdrawal of consent in Article 9 and restriction in Article 11, backed by security duties and criminal penalties. Its duties have bound everyone since October 2024. The missing supervisory agency affects enforcement, not whether the framework exists, so 0 is right.",
+  "reviewed_at": "2026-09-30T01:34:06.987684+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "Indonesia",
+  "indicator": "P7-I2",
+  "reasoning": "Indonesia's cyber rules are a patchwork, not a dedicated law. Perpres 47/2023 is a national strategy that leaves binding duties to other regulations, the enforceable cyber duties on file bind only banks and non-bank financial firms, general security duties sit in the ITE Law and GR 71/2019, and the BSSN 2024 regulations are agency rules whose dates are still unsettled. That is 0.5, ESCAP's score too.",
+  "reviewed_at": "2026-09-30T01:34:07.079904+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.5
+ },
+ {
+  "action": "override",
+  "economy": "Indonesia",
+  "indicator": "P7-I3",
+  "reasoning": "The no-measure conclusion looked only at the PDP Law. Article 28(11) of the General Tax Provisions Law requires bookkeeping records to be kept for ten years, and Article 21 of the AML Law (UU 8/2010) requires customer identity records to be kept for at least five years after the relationship ends. Both are clear minimum periods and should be filed; ESCAP also scores 1.",
+  "reviewed_at": "2026-09-30T01:34:07.165437+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Indonesia",
+  "indicator": "P7-I4",
+  "reasoning": "Article 34(1) of the PDP Law requires every controller to run a DPIA for high-risk processing, and Article 53(1) requires a data protection officer in the listed high-risk situations. Neither is confined to a sector, so 1 holds, as ESCAP also scores. Article 53(1) must still be filed from the official BPK text; only petition copies were offered, and all were rejected.",
+  "reviewed_at": "2026-09-30T01:34:07.250230+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Indonesia",
+  "indicator": "P7-I5",
+  "reasoning": "Article 34(1) of the State Intelligence Law (UU 17/2011) lets the intelligence agency gather information on its Head's order alone, with no court involved, and Law 9/2017 gives the tax authority bank-account information without a court order. Either is access without a judge, so 1, matching ESCAP. Article 34(1) is already on file under the DPO question and should be moved here.",
+  "reviewed_at": "2026-09-30T01:34:07.330460+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Lao PDR",
+  "indicator": "P7-I1",
+  "reasoning": "Laos has no general personal-data law. The 2017 Law on Electronic Data Protection reaches across sectors but covers only data in electronic form, and the bank-secrecy duty in Article 60(3) of the Commercial Bank Law is sectoral. That is thin, partial protection, so 0.5 is right and matches ESCAP. The Electronic Data Protection Law itself should be filed, since it is what carries the score.",
+  "reviewed_at": "2026-09-30T01:34:07.416412+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.5
+ },
+ {
+  "action": "approve",
+  "economy": "Lao PDR",
+  "indicator": "P7-I2",
+  "reasoning": "The 2015 Cyber Crime Law goes beyond offences: Article 20 has providers relay threat warnings and restrict access, Article 23 makes the ministry answer incident warnings within five working days, and Article 48 puts one ministry in charge nationally. That is dedicated cyber legislation of general reach, so 0 stands, as ESCAP scores. The newer Law on Cyber Security should be filed once its official text is found.",
+  "reviewed_at": "2026-09-30T01:34:07.505953+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Lao PDR",
+  "indicator": "P7-I3",
+  "reasoning": "Article 71 of the amended Commercial Bank Law makes banks keep documents and transaction data for at least ten years, and Article 25 of the 2024 AML Law sets a ten-year floor for customer and transaction records; the 2025 digital-platform decision adds ninety days for usage logs. These are real minimum periods, so 1 is right. ESCAP reaches 1 through the Cyber Crime Law's traffic-data rule.",
+  "reviewed_at": "2026-09-30T01:34:07.592312+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Mongolia",
+  "indicator": "P7-I1",
+  "reasoning": "Mongolia does have a comprehensive law. The Law on Protection of Personal Information of 17 December 2021, in force since 1 May 2022, applies across sectors and gives data subjects access, correction and deletion rights in Article 16.1. A horizontal law with those rights scores 0, as ESCAP also has it. The Law should be filed, with its article numbering checked against the legalinfo.mn text.",
+  "reviewed_at": "2026-09-30T01:34:07.669807+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P7-I2",
+  "reasoning": "The 2021 Cybersecurity Law is a stand-alone statute: Article 1 sets the system and legal basis for cybersecurity generally, Article 6 covers prevention, detection, response and recovery, and Article 13 gives the intelligence agency concrete national duties such as securing the state network. A dedicated law of economy-wide reach scores 0, matching ESCAP.",
+  "reviewed_at": "2026-09-30T01:34:07.754254+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P7-I3",
+  "reasoning": "Article 34 of the Public Information Transparency Law, the only item filed, sets no period and covers state systems, so it cannot carry 1. The score is still right: the 2015 Law on Accounting requires accounting documents and financial statements to be kept for at least ten years. That rule, cited as Article 11.1, should be filed once its text is confirmed; ESCAP also scores 1.",
+  "reviewed_at": "2026-09-30T01:34:07.839603+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Mongolia",
+  "indicator": "P7-I4",
+  "reasoning": "There is no DPO rule, but the law is not silent: Article 23 of the Personal Information Law requires controllers to assess automated processing that affects people's rights or routinely handles sensitive data, and send the assessment to the National Human Rights Commission. An assessment duty without a DPO is the guide's 0.25 level, which a three-point score cannot hold; 0 matches ESCAP. Article 23 should be filed.",
+  "reviewed_at": "2026-09-30T01:34:07.924957+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "Mongolia",
+  "indicator": "P7-I5",
+  "reasoning": "The view that no access power exists does not hold. Article 7.2.2-7.2.3 of the Banking Law lets the Bank of Mongolia, and investigators with a prosecutor's approval, obtain customers' bank secrets with no court involved, and a prosecutor is not an independent judge. That is enough for 1. ESCAP reads the same article but scores 0 without applying the court-order test. Article 7.2 should be filed and its wording checked.",
+  "reviewed_at": "2026-09-30T01:34:08.012490+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P7-I1",
+  "reasoning": "152-FZ is a general law: Article 1(1) applies it to state bodies, municipalities, companies and individuals, Article 19(1) puts security duties on every operator, and Article 21 gives remedies such as blocking unlawfully processed data. Sectoral regimes such as Labour Code Article 89 sit alongside it. A horizontal law with real rights and duties scores 0, as ESCAP also has it.",
+  "reviewed_at": "2026-09-30T01:34:08.101763+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P7-I2",
+  "reasoning": "The Information Security Doctrine is a policy statement and was rightly set aside, but 187-FZ carries the score: it is a statute written to protect critical information infrastructure against computer attacks across the sectors it lists. That is dedicated cybersecurity law of the same kind as Singapore's and Malaysia's Acts, so 0 stands. ESCAP's 0.5 treats Russia's information-security approach as non-dedicated and gives 187-FZ less weight.",
+  "reviewed_at": "2026-09-30T01:34:08.189248+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P7-I3",
+  "reasoning": "Article 7(4) of the AML law makes covered organisations keep customer and identification records for at least five years after the relationship ends, and Article 29 of the Accounting Law sets a five-year floor for accounting records. Article 9(6) of the National Payment System Law adds a three-year minimum for payment notices. These are clear minimum periods, so 1 is right and matches ESCAP.",
+  "reviewed_at": "2026-09-30T01:34:08.271169+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P7-I4",
+  "reasoning": "Article 22.1(1) of 152-FZ requires every operator that is a legal entity to appoint a person responsible for organising personal-data processing, and part 4 gives that person DPO-type duties such as internal control and handling requests. The duty runs across all sectors, so 1 is right, as ESCAP also scores.",
+  "reviewed_at": "2026-09-30T01:34:08.358899+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P7-I5",
+  "reasoning": "Article 64(1.1) of the Communications Law and Article 10.1(3.1) of the Information Law make operators and internet services hand stored communications and user data to security and operational-search agencies; a judge is needed only where communications secrecy or the home is touched, so subscriber data can be had without one. Article 19.1 of the Foreign Intelligence Law adds database access by order. 1, matching ESCAP.",
+  "reviewed_at": "2026-09-30T01:34:08.447394+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P7-I1",
+  "reasoning": "The PDPA of 2019, fully in force since 1 June 2022, applies across sectors; section 37 imposes security, onward-disclosure and erasure duties on every controller, and the 2022 security notification made under it is binding. That is a comprehensive horizontal law, so 0 is right, matching ESCAP. The credit-bureau consent rule in section 20 of the Credit Information Act is sectoral and only supplements it.",
+  "reviewed_at": "2026-09-30T01:34:08.530116+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P7-I2",
+  "reasoning": "Thailand has a dedicated, economy-wide statute, the Cybersecurity Act B.E. 2562. The ThaiCERT notification made under it sets up national incident reporting, severity assessment, response support and threat warnings, which is exactly the machinery in question. So 0 is right, matching ESCAP. The Act itself should be filed, since the notification clauses on file depend on it.",
+  "reviewed_at": "2026-09-30T01:34:08.613407+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P7-I3",
+  "reasoning": "The only item filed, PDPA section 32(3), just records a rejected objection and sets no period, so it cannot carry the score. The score is still 1: section 26 of the Computer Crime Act requires service providers to keep computer traffic data for at least 90 days, as ESCAP records. Section 26 should be filed, together with the 2021 traffic-data notification made under it.",
+  "reviewed_at": "2026-09-30T01:34:08.692592+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P7-I4",
+  "reasoning": "Section 41 of the PDPA requires controllers and processors to appoint a data protection officer when they are public authorities, regularly monitor large volumes of data, or process sensitive data as a core activity. The triggers turn on the kind of processing, not the industry, so the duty reaches every sector and the score is 1, as ESCAP has it.",
+  "reviewed_at": "2026-09-30T01:34:08.787940+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P7-I5",
+  "reasoning": "PDPA section 76(2), the only provision on file, needs a court order before officers enter premises and seize evidence, so alone it points to 0. The score is still 1: section 76(1) lets officers demand documents by written notice, and Computer Crime Act section 18(1)-(3) lets officials take traffic and user data from providers without a court, since section 19 covers only 18(4)-(8). Both should be filed.",
+  "reviewed_at": "2026-09-30T01:34:08.882481+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Timor-Leste",
+  "indicator": "P7-I1",
+  "reasoning": "Timor-Leste has no data-protection law: section 38 of the Constitution only calls for one, and the draft went to consultation in July 2026. What exists is sectoral: privacy duties on operators in Decree-Law 15/2012 and Government Decree 9/2008, the SIM-registration Guidelines, and Decree-Law 12/2024 for certification providers. Sectoral-only protection is 0.5, not 0.",
+  "reviewed_at": "2026-09-30T01:34:08.971474+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.5
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P7-I2",
+  "reasoning": "Timor-Leste has no cybersecurity law; a bill authorising the Government to legislate on cybersecurity and cybercrime only reached Parliament on 31 July 2026. The telecom decree's security clauses are not a dedicated framework, and nothing on file shows incident monitoring or response machinery, so 1 stands. If those clauses turn out to make operators handle or report incidents, 0.5 would be arguable.",
+  "reviewed_at": "2026-09-30T01:34:09.060295+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P7-I3",
+  "reasoning": "Article 6 of Government Decree 9/2008 makes mobile operators keep subscriber identification records for at least five years from the contract date, and Article 44 of Decree-Law 12/2024 makes certification providers keep certificate information for no less than 20 years. The SIM Guidelines add twelve months after deactivation. These are clear minimum periods, so 1 is right.",
+  "reviewed_at": "2026-09-30T01:34:09.155882+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P7-I4",
+  "reasoning": "With no personal-data law in force, nothing requires organisations to appoint a data protection officer or carry out impact assessments. The telecom, e-commerce and banking rules impose only confidentiality and security duties, and the draft data-protection law that went to consultation in July 2026 is not law. So 0 is right.",
+  "reviewed_at": "2026-09-30T01:34:09.243172+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P7-I5",
+  "reasoning": "Article 21 of the AML Law (Law 17/2011) lets the financial intelligence unit demand any further information it needs from reporting entities with no court involved, and section 35.3 of the bank regulation lets central-bank inspectors examine all bank records. Clause 5.5 of the SIM Guidelines lets the regulator demand full subscriber records within 24 hours. That is access without a judge, so 1.",
+  "reviewed_at": "2026-09-30T01:34:09.328839+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Thailand",
+  "indicator": "P2-I1",
+  "reasoning": "Section 73 of the Procurement Act lets only registered consultants tender, and clause 4(1) and 5(4)-(6) of the registration regulation require Thai nationality or majority Thai ownership. A foreign firm gets in only when no registered consultant offers the service, which is the foreign-only-if-no-local-supplier pattern. These provisions currently sit under limitations and should be filed here too.",
+  "reviewed_at": "2026-09-30T01:34:09.418516+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P2-I2",
+  "reasoning": "Nothing makes bidders hand over source code, patents or trade secrets, or use a particular encryption, to win a contract. The IP clauses in the standard computer contracts are optional, and the consultant form only gives the agency the work it paid for.",
+  "reviewed_at": "2026-09-30T01:34:09.504137+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Thailand",
+  "indicator": "P2-I3",
+  "reasoning": "Clause 27/3(3) of Regulation No. 2 prefers a Thai national or Thai-incorporated bidder within 3% of the cheapest foreign bid, and clause 13 of the principal regulation reserves 30% of budgets for the Thai Innovation List, open only to majority Thai-owned firms. Either alone discriminates by nationality.",
+  "reviewed_at": "2026-09-30T01:34:09.609179+00:00",
+  "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
  }
 ]

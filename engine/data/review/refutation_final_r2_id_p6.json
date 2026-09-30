@@ -1,0 +1,142 @@
+[
+ {
+  "indicator": "P6-I5",
+  "law": "IA-CEPA Chapter 13 (E-Commerce)",
+  "article": "Art. 13.12",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 13.12(2) is a binding location-of-computing-facilities discipline and therefore falls within the rubric's express cross-border data-transfer examples. The grandfathering and public-policy/security exceptions are disclosed rather than lost, and do not negate the commitment."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P6-I5, hunt_in is unrestricted and the positive cues expressly include location-of-computing-facilities disciplines. The mandatory prohibition on requiring domestic facilities as a business condition supports applies=true; the provision evidences at least one binding commitment, so scoring records 0 rather than treating the indicator as absent."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says 'Neither Party shall require' covered persons to use or locate computing facilities in its territory as a condition of business, subject to stated exceptions. That exact language establishes a binding location discipline, which the rubric accepts even though it does not separately use the phrase 'cross-border transfer of information'."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "IA-CEPA Chapter 13 (E-Commerce)",
+  "article": "Art. 13.11",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 13.11.2 expressly requires each Party to allow cross-border electronic transfers for covered-person business. The public-policy and security exceptions qualify the commitment but do not negate it, and the rubric accepts this sectoral coverage."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted 'shall allow the cross-border transfer of information by electronic means' matches the rubric's positive cues and hunt_in is unrestricted. Mapping applies=true, evidences at least one binding commitment, and therefore supports scoring 0; the absence-oriented indicator polarity does not make the evidence row invalid."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text establishes a mandatory cross-border transfer commitment, expressly including personal information, for covered-person business. Paragraph 3 preserves qualified exceptions, but the context does not convert the commitment into a permission or eliminate its binding character."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "RCEP Chapter 12 (official text)",
+  "article": "Art. 12.3",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Article 12.3 establishes the Chapter’s scope and exclusions; it does not itself state a binding cross-border data-transfer commitment such as requiring or prohibiting transfer restrictions. The mapping therefore proves a framework reference, not the P6-I5 legal test."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "Under the supplied rubric, applies=true requires treaty text stating a binding cross-border data-transfer commitment. The snippet only says the Chapter applies to measures affecting electronic commerce, while the surrounding text merely identifies Article 12.15 and preserves exceptions. It does not supply a positive cue or operative transfer discipline, so G7 cannot properly pass."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal function",
+    "reason": "The exact quoted text contains no cross-border transfer language and imposes no duty to allow, restrict, or regulate transfer of information. Its context confirms scope, government-data exclusion, and conditional non-application, but does not establish the binding transfer obligation required by P6-I5."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "UU 4/2021 ASEAN E-Commerce ratification",
+  "article": "Art. 3(1)",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The quoted Pasal 1(1) only ratifies the ASEAN Agreement and does not state any binding cross-border data-transfer commitment. It therefore does not establish the legal function required by P6-I5, notwithstanding that sectoral coverage is permissible."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Under P6-I5, applies=true requires a treaty provision stating a binding cross-border transfer commitment. The supplied text is an incorporating ratification provision, not such a commitment. Hunt_in is empty, so no location defect arises, and the sectoral nature is acceptable; the defect is failure to provide the required operative treaty language. The scoring polarity would be applied only after that commitment is evidenced."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The exact text says only that Indonesia ratifies the ASEAN Agreement and that the English original and Indonesian translation are attached as an integral part of the law. It does not say that information may be transferred across borders, nor prohibit or restrict such transfer, so the quoted text alone cannot support the claimed P6-I5 mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "UU 4/2021 ASEAN E-Commerce ratification",
+  "article": "Art. 3",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Article 1(1) legally ratifies the ASEAN Agreement, but the quoted text does not state any binding cross-border data-transfer obligation. It establishes treaty adoption, not the specific legal function required for P6-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "provision evidences a different indicator than claimed",
+    "reason": "Although the rubric has no hunt_in restriction and permits sectoral evidence, applies=true requires treaty text stating a binding cross-border transfer commitment. The supplied passage contains none of the required transfer disciplines or equivalent language. If proven by the underlying Agreement, the commitment would map to P6-I5 and score 0, but this row does not establish it."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "snippet does not actually support the rationale",
+    "reason": "The exact excerpt says only that Indonesia ratifies the ASEAN Agreement; Article 1(2) says the Agreement is attached and integral, but no quoted provision identifies cross-border transfer of information or a related restriction. The excerpt therefore does not itself support the stated rationale."
+   }
+  ]
+ }
+]

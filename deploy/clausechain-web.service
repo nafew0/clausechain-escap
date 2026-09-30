@@ -1,0 +1,14 @@
+[Unit]
+Description=ClauseChain Next.js frontend
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/clausechain/frontend
+EnvironmentFile=/srv/clausechain/frontend/.env
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,86 @@
+[
+ {
+  "indicator": "P6-I2",
+  "law": "Lei n.º 12/2021 Código Mineiro (Mining Code)",
+  "article": "Art. 110",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 110 requires the holder to retain records in its offices in Timor-Leste. That is a domestic-storage function, not a transfer ban or an operating-server requirement, so it fits P6-I2."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric accepts a single storage rule for non-personal or specific data at 0.5. These mining records are sector-specific records, and “deve conservar” in Timor-Leste offices establishes mandatory domestic retention. The five-year period is expressly a minimum, not a ceiling; hunt_in is empty."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted provision says the holder must retain all records in its Timor-Leste offices for at least five years; the context specifies mining production and disposition records. It supports one domestic-storage requirement, without establishing a transfer prohibition."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "Lei n.º 6/2005 Regime do Licenciamento, Supervisão e Regulaç",
+  "article": "Art. 26",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rule requires insurers and intermediaries to keep records at their premises. The electronic-format option and permission to keep backups elsewhere do not clearly eliminate that premises-based requirement, so no concrete P6-I2 scope defect is established."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P6-I2 accepts a single specific-data storage rule at 0.5; this sectoral records requirement can supply that evidence. The text says they must keep records at their premises, while the electronic option concerns format and accessibility. G6 is not a refutation: the mandatory modality appears in paragraph 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text expressly says records must be kept at the entities’ premises and electronic records must be readily accessible in Timor-Leste; it also permits backups outside the premises. It does not expressly call the premises domestic, but the text and context do not clearly establish that the required premises-based records may be kept abroad. The five-year phrase describes covered activities, not a ceiling on storage."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I2",
+  "law": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervisi",
+  "article": "s. 27",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 27.2 requires banks to maintain the specified documentation and information at their East Timor head office, establishing domestic storage. It does not claim that transfers are prohibited; the rationale correctly distinguishes storage from a transfer ban."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P6-I2 asks whether a domestic copy must be stored, and the rule requires covered information to be maintained at the East Timor head office. The rubric does not exclude sectoral rules; on this banking-specific evidence, a single non-personal/specific-data rule supports 0.5, while the text does not clearly establish horizontal or personal-data coverage for a score of 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text says every bank shall maintain proper credit documentation and prescribed business-relations information at its East Timor head office. That supports a domestic storage obligation for the covered information, without establishing a transfer prohibition or a broader, generally applicable rule."
+   }
+  ]
+ }
+]

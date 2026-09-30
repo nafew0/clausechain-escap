@@ -12,6 +12,7 @@ import {
   rejectFixtureWrite,
 } from '@/lib/workspace/fixture'
 import type {
+  ActionDocumentsResponse,
   BulkFindingDecisionInput,
   BulkFindingDecisionResponse,
   CorrectionRequestInput,
@@ -19,6 +20,7 @@ import type {
   DecisionHistory,
   DecisionWriteResponse,
   EvidenceDetail,
+  EvidenceChangeSetResponse,
   EvidenceParams,
   EvidenceRow,
   EngineAction,
@@ -30,6 +32,9 @@ import type {
   ReviewQueueParams,
   ReviewQueueResponse,
   ReviewContext,
+  EngineActionEventsPage,
+  RunMode,
+  RunModeInfo,
   RunsResponse,
   SourceMatchDetail,
   SubmissionParams,
@@ -68,6 +73,25 @@ export async function getReviewContext(
 export async function getSummary(): Promise<WorkspaceSummary> {
   if (WORKSPACE_FIXTURE_MODE) return (await loadWorkspaceFixture()).summary
   const { data } = await api.get<WorkspaceSummary>('/workspace/summary/')
+  return data
+}
+
+export async function getEvidenceChanges(params: { kind?: string; economy?: string } = {}): Promise<EvidenceChangeSetResponse> {
+  const { data } = await api.get<EvidenceChangeSetResponse>('/workspace/registry/changes/', { params: queryParams(params) })
+  return data
+}
+
+export async function decideEvidenceChange(changeId: string, payload: {
+  verdict: 'retain' | 'retire' | 'investigate'
+  comment: string
+  expected_latest_decision_id: string | null
+}) {
+  const { data } = await api.post(`/workspace/registry/changes/${changeId}/decision/`, payload)
+  return data
+}
+
+export async function publishEvidenceChanges() {
+  const { data } = await api.post('/workspace/registry/publish/', {})
   return data
 }
 
@@ -157,9 +181,12 @@ export async function getProofAsset(assetUrl: string): Promise<Blob> {
   return data
 }
 
-export async function getRuns(): Promise<RunsResponse> {
-  if (WORKSPACE_FIXTURE_MODE) return (await loadWorkspaceFixture()).runs
-  const { data } = await api.get<RunsResponse>('/workspace/runs/')
+export async function getRuns(mode: RunMode = 'hybrid'): Promise<RunsResponse> {
+  if (WORKSPACE_FIXTURE_MODE) {
+    const runs = (await loadWorkspaceFixture()).runs
+    return mode === 'hybrid' ? runs : { ...runs, mode, results: [], actions: [], champion: {} }
+  }
+  const { data } = await api.get<RunsResponse>('/workspace/runs/', { params: { mode } })
   return data
 }
 
@@ -179,9 +206,58 @@ export async function getEngineActions(): Promise<EngineActionResponse> {
   return data
 }
 
+export async function getEngineActionEvents(actionId: string, after = 0): Promise<EngineActionEventsPage> {
+  const { data } = await api.get<EngineActionEventsPage>(`/workspace/engine/actions/${actionId}/events/`, {
+    params: { after },
+  })
+  return data
+}
+
+/** Runs → Sources: download + read + index an economy's documents, or clear its downloads. */
+export async function launchSourcesAction(
+  payload: { economy: string; operation: 'build' | 'clear'; pillar?: 2 | 6 | 7 }
+): Promise<EngineAction> {
+  if (WORKSPACE_FIXTURE_MODE) return rejectFixtureWrite()
+  const { data } = await api.post<EngineAction>('/workspace/engine/sources/', payload)
+  return data
+}
+
+export async function getActionDocuments(actionId: string): Promise<ActionDocumentsResponse> {
+  const { data } = await api.get<ActionDocumentsResponse>(`/workspace/engine/actions/${actionId}/documents/`)
+  return data
+}
+
+/** The Run Record's "every document downloaded" list, as CSV. */
+export async function downloadActionDocuments(actionId: string): Promise<void> {
+  const response = await api.get<Blob>(`/workspace/engine/actions/${actionId}/documents/`, {
+    params: { export: 'csv' },
+    responseType: 'blob',
+  })
+  const href = URL.createObjectURL(response.data)
+  const anchor = document.createElement('a')
+  anchor.href = href
+  anchor.download = `documents_downloaded_${actionId.slice(0, 8)}.csv`
+  anchor.click()
+  URL.revokeObjectURL(href)
+}
+
+export async function cancelEngineAction(actionId: string): Promise<EngineAction> {
+  if (WORKSPACE_FIXTURE_MODE) return rejectFixtureWrite()
+  const { data } = await api.post<EngineAction>(`/workspace/engine/actions/${actionId}/cancel/`)
+  return data
+}
+
+export async function cancelAllEngineActions(
+  mode: RunMode
+): Promise<{ mode: RunMode; cancelled: number; stopping: number; cleared: number }> {
+  if (WORKSPACE_FIXTURE_MODE) return rejectFixtureWrite()
+  const { data } = await api.post('/workspace/engine/actions/cancel-all/', { mode })
+  return data
+}
+
 export async function launchEngineAction(
   kind: 'replay' | 'refresh' | 'run',
-  payload: { economy?: string; pillar?: 6 | 7 } = {}
+  payload: { economy?: string; pillar?: 2 | 6 | 7; mode?: RunMode } = {}
 ): Promise<EngineAction> {
   if (WORKSPACE_FIXTURE_MODE) return rejectFixtureWrite()
   const { data } = await api.post<EngineAction>(`/workspace/engine/${kind}/`, payload)
@@ -229,6 +305,81 @@ export async function decideRecall(
     '/workspace/decisions/recall/',
     payload
   )
+  return data
+}
+
+export interface Zone3MatrixEvidence {
+  /** null for local-mode rows: unreviewed run output has no review item yet */
+  finding_key: string | null
+  stable_key: string
+  queue: 'new' | 'known' | 'absence' | null
+  law: string
+  article: string
+  tag: string
+  blocked: boolean
+  snippet?: string
+  source_url?: string | null
+  confidence?: string | number | null
+  absence?: boolean
+}
+
+export interface Zone3MatrixCell {
+  economy: string
+  indicator: string
+  score_key: string
+  question?: string
+  deterministic: number | null
+  deterministic_reason?: string
+  master_gold?: number | string | null
+  gold_divergence?: string | null
+  judge_scores?: string
+  judge_reasoning?: string
+  agreement_alpha?: number | string | null
+  score_band?: string
+  flagged: boolean
+  /** hybrid: reviewer states; local: evidence found / absence concluded (unscored) */
+  state: 'pending' | 'approved' | 'overridden' | 'evidence' | 'absence'
+  effective: number | null
+  reviewer_name: string
+  reviewed_at: string | null
+  reasoning: string
+  latest_decision_id: string | null
+  blocked: boolean
+  evidence: Zone3MatrixEvidence[]
+  absence_rows?: Zone3MatrixEvidence[]
+}
+
+export interface Zone3MatrixRun {
+  run_id: string | null
+  country: string
+  pillar: number
+  generated_at: string | null
+  action_id: string
+}
+
+export interface Zone3MatrixResponse {
+  mode: RunMode
+  modes: RunModeInfo[]
+  snapshot: { generated_at: string; bundle_hash: string; stale: boolean } | null
+  runs?: Zone3MatrixRun[]
+  economies: string[]
+  indicators: string[]
+  counts: {
+    total: number
+    decided: number
+    pending: number
+    with_evidence?: number
+    absence?: number
+    evidence_rows?: number
+  }
+  score_semantics: { explanation: string; allowed_scores: number[] }
+  cells: Zone3MatrixCell[]
+}
+
+export async function getZone3Matrix(mode: RunMode = 'hybrid'): Promise<Zone3MatrixResponse> {
+  const { data } = await api.get<Zone3MatrixResponse>('/workspace/zone3-matrix/', {
+    params: { mode },
+  })
   return data
 }
 

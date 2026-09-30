@@ -1,0 +1,354 @@
+jurisdiction: TH
+source_format: pdf        # Royal Gazette / regulator PDFs -> extractors/pdf_act.py; Thai script -> OCR-heavy
+name: Thailand
+un_name: Thailand
+languages: { primary: th, supported: [th, en] }
+section_grammars: [thai]  # มาตรา (matra, sections in acts) / ข้อ (kho, clauses in notifications)
+                          # NOTE: needs pdf_act extra_section_patterns for "มาตรา {thai-numeral}" — P3.6 hook
+
+whitelist_source: data/official_domains.json
+official_sources:
+  # ranks follow the sg/my convention: 100 statute DB / gazette, 90 treaty register, 60 regulator
+  - { name: Royal Gazette, domain: ratchakitcha.soc.go.th, source_type: official_gazette, authority_rank: 100 }
+  - { name: OCS law portal (laws.go.th), domain: laws.go.th, source_type: official_statute_database, authority_rank: 100 }
+  - { name: OCS full-text search, domain: searchlaw.ocs.go.th, source_type: official_statute_database, authority_rank: 95 }
+  - { name: MDES, domain: mdes.go.th, source_type: ministry, authority_rank: 60 }        # ESCAP's most-cited TH domain (30 refs)
+  - { name: PDPC, domain: pdpc.or.th, source_type: regulator_guidance, authority_rank: 60 }
+  - { name: NCSA, domain: ncsa.or.th, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: NCSA drive (notifications), domain: drive.ncsa.or.th, source_type: sectoral_regulator, authority_rank: 55 }
+  - { name: ETDA, domain: etda.or.th, source_type: sectoral_regulator, authority_rank: 60 }  # hosts consolidated CCA EN text
+  - { name: NBTC, domain: nbtc.go.th, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: NBTC broadcast, domain: broadcast.nbtc.go.th, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: Bank of Thailand, domain: bot.or.th, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: BOT FIPCS register, domain: app.bot.or.th, source_type: sectoral_regulator, authority_rank: 60 }
+  - { name: OIC (insurance), domain: oic.or.th, source_type: sectoral_regulator, authority_rank: 55 }
+  - { name: OIC e-service, domain: oiceservice.oic.or.th, source_type: sectoral_regulator, authority_rank: 55 }
+  - { name: DBD (business dept), domain: dbd.go.th, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: Thai Customs, domain: customs.go.th, source_type: sectoral_regulator, authority_rank: 50 }
+  - { name: MoPH DDC, domain: ddc.moph.go.th, source_type: sectoral_regulator, authority_rank: 45 }
+  - { name: SEC Thailand, domain: sec.or.th, source_type: sectoral_regulator, authority_rank: 55 }
+  - { name: DFAT AANZFTA texts, domain: dfat.gov.au, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: MFAT RCEP texts, domain: mfat.govt.nz, source_type: official_treaty_or_state_register, authority_rank: 90 }
+  - { name: Pillar 2 procurement source (CGD e-GP), domain: gprocurement.go.th, source_type: official_statute_database, authority_rank: 90 }
+  - { name: Department of Intellectual Property, domain: ipthailand.go.th, source_type: ministry, authority_rank: 60 }
+
+portal_search:
+  engine: searchlaw.ocs.go.th (OCS full-text) + ratchakitcha.soc.go.th documents + regulator sites above
+  method: keyword_fulltext
+  notes: "laws.go.th UI is JavaScript-driven (research pass got access errors) — use searchlaw.ocs.go.th and direct Gazette /documents/*.pdf URLs. pdpc.or.th intermittently 403s bots."
+
+citation_patterns:
+  section: ["s. {n}", "Section {n}", "มาตรา {n}", "matra {n}"]
+  clause: ["clause {n}", "ข้อ {n}", "kho {n}"]     # subordinate notifications cite ข้อ, not มาตรา
+  paragraph_required: true
+connector: generic_seeds
+notes:
+  - "OCR-FIRST ECONOMY: Royal Gazette PDFs often embed document-specific SUBSET FONTS — text layer extracts as mojibake (research pass: 'Nล@$>@/...' garbage). Route ratchakitcha PDFs through OCR/VLM even when a text layer exists; sanity-check output contains real Thai script."
+  - "Years are Buddhist Era (B.E. = CE + 543); sections use Thai numerals in gazette text — normalise to Arabic in citations, keep native form in Verbatim Snippet."
+  - "Verbatim Snippet = Thai; use 'Verbatim Snippet (English)' appended column with [OWN-TRANSLATION]/[OFFICIAL-EN] label. ETDA hosts official-ish EN consolidations for CCA."
+  - "PDPC subordinate notification wave 2022-2026 is the NEW-evidence vein: security measures 2022, breach notification 2022, processor ROPA 2022, DPO notifications 2023 + No.2 2025, s.28/s.29 cross-border notifications 2023, BCR certification regulation Feb 2026."
+  - "P7-I5 court-order split verified: CCA s.18(4)-(8) powers are COURT-GATED by s.19; DSI Act s.24 own-authority vs s.25 court-gated; AMLA s.38 own-authority vs s.46 court-gated; CPC s.92 warrantless exceptions vs s.57 court rule. Record both, only warrantless drives score 1."
+  - "P6 shape: NO ban, NO horizontal storage/infra mandate found (deep-research negative findings 1-3). PDPA s.28/29 + subordinate notifications = conditional flow (6.4). Do not code 6.1."
+open_verification:   # from deep-research §5 — treat these as UNVERIFIED until re-checked
+  - "Exact ข้อ numbers of the 2023 s.28/s.29 PDPC notifications (inferred, not read)"
+  - "2026 BCR regulation exact Thai title (gazette font mojibake); whether any BCR approved in practice"
+  - "BOT FPG 8/2557 in-force status (FIPCS status filter is a JS postback form)"
+  - "MDES traffic-retention notification B.E. 2564 text (all fetch routes failed; 90-day floor rests on gazette cite)"
+  - "SEC (ก.ล.ต.) rules + Cloud-First/GDCC policy — NOT RESEARCHED, not a negative"
+# OCR routing (hybrid decision, 1 Aug): Paddle is blind to Thai — pages go straight
+# to Vision (no double spend). Language hints from this pack.
+ocr: { provider: hybrid_script, route: vision-first, language_hints: [th], expect_script: thai }
+known_index: data/known_index_round2.json
+seeds: data/seeds_r2.json
+rdtii_bindings: { pillars: [2, 6, 7] }
+
+anchor_instruments:
+  - "Personal Data Protection Act B.E. 2562 (2019) — horizontal DP law (P7-I1 score-0 evidence); s.28/s.29 = cross-border conditional flow (P6-I4); s.41 DPO (P7-I4)"
+  - "Cyber Security Maintenance Act B.E. 2562 (2019) — dedicated horizontal cybersecurity framework (P7-I2 score-0 evidence)"
+  - "Computer Crime Act B.E. 2550 as amended B.E. 2560 — s.18 access powers, s.19 court gate, s.26 traffic-data retention (90-day floor via MDES notification B.E. 2564)"
+
+hunt_instruments:
+  P7-I3:   # minimum retention floors
+    - "MDES Notification on Computer Traffic Data Retention B.E. 2564 — kho 3/12/13, >=90 days (replaced 2007 MICT notification)"
+    - "Anti-Money Laundering Act B.E. 2542 — matra 22, 5-year customer ID + transaction records"
+    - "Accounting Act B.E. 2543 — matra 14, 5-year accounts floor (matra 13: keep at place of business)"
+    - "Labour Protection Act B.E. 2541 — matra 115, 2-year employment records"
+    - "Credit Information Business Operation Act B.E. 2545 — s.13 retention"
+  P7-I4:
+    - "PDPC DPO Notification B.E. 2566 — kho 4-6, 100k-data-subject trigger + deemed-large-scale sectors (0.5, trigger-based)"
+    - "PDPC State-Agency DPO Notification B.E. 2566 + No.2 B.E. 2568 (provinces/municipalities added)"
+  P7-I5:
+    - "Special Case Investigation Act B.E. 2547 — matra 24 own-authority (score 1) vs matra 25 court-gated"
+    - "AMLA B.E. 2542 — matra 38(1)-(3) own-authority vs matra 46 court-gated"
+    - "Criminal Procedure Code — matra 92 warrantless exceptions vs matra 57 court rule"
+    - "National Intelligence Act B.E. 2562 — ss.5-6 (already in gold)"
+  P6-I4:
+    - "PDPC s.28 notification B.E. 2566 (adequacy criteria; transit/no-access-cloud carve-out)"
+    - "PDPC s.29 notification B.E. 2566 (contract clauses incl. ASEAN MCCs/EU SCCs, certification, intergovernmental)"
+    - "PDPC BCR Certification Regulation B.E. 2568 (17 Feb 2026, gazette 103274.pdf) — first operational BCR procedure"
+    - "OIC insurance data guidelines — kho 9 cross-border cross-reference (0.5, do not double-count)"
+    - "BOT FPG 8/2557 outsourcing — clause 5.3.1(2)(2.2) prior approval for overseas providers (in-force status OPEN)"
+  P6-I5:   # treaty evidence (absence-scored: rows document what EXISTS)
+    - "AANZFTA Second Protocol Ch.10 Arts.17/18 — STRONGEST for TH: mandatory + DS suspended only to 21 Apr 2028; in force for TH 21 Apr 2025"
+    - "RCEP Art. 12.15.2/12.14.2 — binding text but Ch.12 wholly DS-excluded (Art. 12.17.3) + self-judging exceptions; in force TH 1 Jan 2022"
+    - "ASEAN E-Commerce Agreement Art. 7.4 — NOT hard-binding ('recognise the importance', 'subject to laws') — record, do not rely"
+
+governing_instruments:
+  default: { law: "Personal Data Protection Act B.E. 2562 (2019)", url: "https://ratchakitcha.soc.go.th/DATA/PDF/2562/A/069/T_0052.PDF" }
+  P7-I2:   { law: "Cyber Security Maintenance Act B.E. 2562 (2019)", url: "https://www.ncsa.or.th" }
+
+status_assertions:
+  "PDPC Notification: Selection of the Chairperson and Honorary Directors":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: CRIT1":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Data Controllers and Data Processors with Capacities of Public Authorities":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Designation of the Data Protection Officer pursuant to Section 41 2":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Security Standards for Personal Data of the Data Controller who is Exempted":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Appropriate Measures to Safeguard the Rights and Freedoms of the Data Subjects":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Sent or Transferred to a Foreign Country Section 28":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Sent or Transferred to a Foreign Country Section 29":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Purposes Pertinent to Research or Statistics":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Collecting Personal Data Pertaining to Criminal Records":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Order Imposing an Administrative Fine No 2":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Criteria for Rendering an Order Imposing an Administrative Fine":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Rendering an Order Imposing an Administrative Fine compiled":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Criteria for the Erasure or Destruction or De identification of Personal Data":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Exemption of Record Keeping for Small Enterprise Data Controllers":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Security Measures of Data Controllers":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Criteria and Procedures for Formulating and Maintaining RoPA":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Qualifications and Disqualifications Expert Committee":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Qualifications of the Competent Official":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: the Template of Identification Cards for Competent Officials":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: Criteria and Procedures for Notifying Personal Data Breach":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: DEC23_DoT1":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "PDPC Notification: POJK 8 2023":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+  "Personal Data Protection Act B.E. 2562 official EN translation":
+    status: in_force
+    fact_url: "https://www.pdpc.or.th"
+    fact_text: "Official PDPC register PDF (user browser download; Cloudflare-gated to bots)."
+
+  "BOT Notification SorNorChor 12/2561: Debit Card Services (EN)":
+    status: in_force
+    fact_url: "https://www.bot.or.th/content/dam/bot/fipcs/documents/FPG/2561/EngPDF/25610094.pdf"
+    fact_text: "Official PDPC/BOT/Royal Gazette register PDF; PDPC subordinate notifications operationalise the PDPA B.E. 2562."
+  "PDPC s.28 Cross-Border Notification B.E. 2566 (Royal Gazette)":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/documents/17082307.pdf"
+    fact_text: "Official PDPC/BOT/Royal Gazette register PDF; PDPC subordinate notifications operationalise the PDPA B.E. 2562."
+
+  "Notification of the National Cyber Security Committee":
+    status: in_force
+    fact_url: "https://www.ncsa.or.th"
+    fact_text: "NCSA publishes the NCSC standards notifications (issued under the Cybersecurity Act B.E. 2562) as the operative subordinate framework; ESCAP Round-2 government-verified gold cites them as current 7.2 evidence."
+  "NCSC Notification: CII organisations duties":
+    status: in_force
+    fact_url: "https://www.ncsa.or.th"
+    fact_text: "NCSC subordinate notification under the Cybersecurity Act B.E. 2562; distributed via NCSA official drive."
+
+  "Criminal Procedure Code (consolidated)":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/documents/1100264.pdf"
+    fact_text: "Official Royal Gazette consolidated code text; the CPC remains Thailand's operative criminal-procedure statute (amendments read with the consolidation)."
+  "Non-Life Insurance Act B.E. 2535":
+    status: in_force
+    fact_url: "https://oiceservice.oic.or.th/document/Law/file/00516/00516_aef1f2fa4a7ea760a8d84a23b325cff0.pdf"
+    fact_text: "OIC official legislation library publishes the Act as current (as amended); no 2024-2026 change found."
+  "OIC Notification: Customer Personal Data Guidelines (non-life)":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/documents/140D098S0000000001600.pdf"
+    fact_text: "Royal Gazette publication; amended by No.2 B.E. 2568 (20 Apr 2026) which does not touch kho 9."
+  "Credit Information Business Operation Act B.E. 2545":
+    status: in_force
+    fact_url: "https://www.bot.or.th/en/our-roles/financial-institutions/credit-information-business.html"
+    fact_text: "BOT's credit-information supervision pages treat the Act as the operative regime; ESCAP Round-2 government-verified gold records it as current evidence (TH 6.1/7.1/7.3 rows)."
+  "Telecommunications Business Act B.E. 2544":
+    status: in_force
+    fact_url: "https://www.nbtc.go.th"
+    fact_text: "NBTC's licensing regime operates under the Act; ESCAP Round-2 government-verified gold records ss.50/64/66/74/77 as current evidence."
+  "National Intelligence Act B.E. 2562":
+    status: in_force
+    fact_url: "https://www.ratchakitcha.soc.go.th/DATA/PDF/2562/A/050/T_0022.PDF"
+    fact_text: "Royal Gazette publication 2019; no amendment identified; ESCAP Round-2 government-verified gold cites ss.5-6 as current P7-I5 evidence."
+    effective_date: "2019-04-16"
+  "MICT Notification on Computer Traffic Data Retention 2007":
+    status: repealed
+    fact_url: "http://www.ratchakitcha.soc.go.th/DATA/PDF/2564/E/188/T_0009.PDF"
+    fact_text: "Repealed and replaced by the MDES Notification B.E. 2564 (phased 2021-2022); record as lead only, never as current evidence."
+  "Personal Data Protection Act B.E. 2562":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/DATA/PDF/2562/A/069/T_0052.PDF"
+    fact_text: "Royal Gazette publication; main operational provisions effective 1 June 2022."
+    effective_date: "2022-06-01"
+  "PDPC Notification on Security Measures B.E. 2565":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/DATA/PDF/2565/E/140/T_0028.PDF"
+    fact_text: "Royal Gazette publication, effective June 2022."
+  "PDPC Breach Notification Criteria B.E. 2565":
+    status: in_force
+    fact_url: "https://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/292/T_0007.PDF"
+    fact_text: "Royal Gazette publication; effective 15 December 2022."
+    effective_date: "2022-12-15"
+  "PDPC Processor ROPA Notification B.E. 2565":
+    status: in_force
+    fact_url: "https://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/140/T_0026.PDF"
+    fact_text: "Royal Gazette publication 20 June 2022; effective 180 days after publication."
+  "PDPC DPO Notification B.E. 2566":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/documents/140D226S0000000001200.pdf"
+    fact_text: "Royal Gazette publication 14 September 2023; effective 13 December 2023."
+    effective_date: "2023-12-13"
+  "PDPC State-Agency DPO Notification No. 2 B.E. 2568":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/documents/88831.pdf"
+    fact_text: "Royal Gazette publication 9 October 2025; effective 8 December 2025."
+    effective_date: "2025-12-08"
+  "PDPC BCR Certification Regulation B.E. 2568":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/documents/103274.pdf"
+    fact_text: "Royal Gazette เล่ม 143 ตอนพิเศษ 44 ง, 17 February 2026 (gazette citation line independently confirmed; Thai title extraction unreliable — subset font)."
+    effective_date: "2026-02-17"
+  "MDES Traffic Data Retention Notification B.E. 2564":
+    status: in_force
+    fact_url: "http://www.ratchakitcha.soc.go.th/DATA/PDF/2564/E/188/T_0009.PDF"
+    fact_text: "Royal Gazette publication; repealed and replaced the 2007 MICT notification; phased commencement 2021-2022, 90-day baseline retained."
+  "Computer Crime Act B.E. 2550 (as amended B.E. 2560)":
+    status: in_force
+    fact_url: "https://www.etda.or.th/getattachment/9d647b89-540f-421f-b031-d18e7c4f16c1/Computer-Crimes-Act-BE-2550-and-BE-2560.aspx"
+    fact_text: "ETDA official consolidated text; no 2024-2026 amendment to s.19 identified."
+  "Anti-Money Laundering Act B.E. 2542":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/DATA/PDF/2542/A/029/45.PDF"
+    fact_text: "Original Royal Gazette text; in force as amended. CAVEAT: no searchable 2026 consolidation on stipulated portals — medium confidence."
+  "Accounting Act B.E. 2543":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/DATA/PDF/2543/A/041/1.PDF"
+    fact_text: "Royal Gazette publication; no 2024-2026 repeal identified."
+  "Labour Protection Act B.E. 2541":
+    status: in_force
+    fact_url: "https://www.ratchakitcha.soc.go.th/DATA/PDF/2541/A/008/1.PDF"
+    fact_text: "Royal Gazette publication; no 2024-2026 amendment to s.115 identified in re-audit."
+  "Special Case Investigation Act B.E. 2547":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/DATA/PDF/2547/A/008/1.PDF"
+    fact_text: "Original Royal Gazette text; in force as amended (consolidation caveat — medium confidence)."
+  "AANZFTA Second Protocol":
+    status: in_force
+    fact_url: "https://www.dfat.gov.au/trade/agreements/in-force/aanzfta/official-documents/agreement-establishing-asean-australia-new-zealand-free-trade-area-aanzfta/chapter-10-electronic-commerce"
+    fact_text: "DFAT official text; Second Protocol in force for Thailand 21 April 2025; Ch.10 Arts.17/18 DS attaches 21 April 2028."
+    effective_date: "2025-04-21"
+  "RCEP Chapter 12 (Thailand)":
+    status: in_force
+    fact_url: "https://www.mfat.govt.nz/assets/Trade-agreements/RCEP/RECP-Agreement-112020/Chapter-12.pdf"
+    fact_text: "MFAT official chapter text; RCEP in force for Thailand 1 January 2022. Ch.12 excluded from dispute settlement (Art. 12.17.3)."
+    effective_date: "2022-01-01"
+  # Pillar 2 (public procurement), 29 Sep 2026 — engine/docs/Pillar-2-deep-research-Thailand.md.
+  # Order matters: the builder takes the first key with the best token overlap, and
+  # each key below is a token subset of the instruments listed after it.
+  "Notification of the Public Procurement and Supplies Administration Policy Committee on Standard Contract Forms B.E. 2561":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/documents/2133647.pdf"
+    fact_text: "Royal Gazette vol. 135 special pt. 37 Ngor, 19 Feb 2018 (notice dated 7 Feb 2018); 14 standard forms. No replacement notice verified as of Sep 2026."
+  "Regulation of the Ministry of Finance regarding Public Procurement and Supplies Administration B.E. 2560":
+    status: in_force
+    fact_url: "http://www.gprocurement.go.th/wps/portal/egp/Regulation/ministerial_regulations/"
+    fact_text: "Royal Gazette vol. 134 special pt. 210 Ngor, 23 Aug 2017; amended only by MoF Regulation No. 2 B.E. 2564 (e-meetings, cl. 27). CGD-hosted texts, checked Sep 2026."
+  "Public Procurement and Supplies Administration Act B.E. 2560":
+    status: in_force
+    fact_url: "https://www.gprocurement.go.th/wps/portal/egp/Regulation/ministerial_regulations/"
+    fact_text: "Royal Gazette vol. 134 pt. 24 Kor, 24 Feb 2017; no amendment listed by CGD as of Sep 2026 (still cited as B.E. 2560 in the 2569 MR preamble)."
+  "Ministerial Regulation Prescribing Criteria, Procedures and Conditions for Registration as Consultants B.E. 2560":
+    status: in_force
+    fact_url: "https://www.gprocurement.go.th/wps/portal/egp/Regulation/ministerial_regulations/"
+    fact_text: "Royal Gazette vol. 134 pt. 86 Kor, 23 Aug 2017; no amendment listed on the CGD Ministerial Regulations page as of Sep 2026."
+  "Ministerial Regulation Prescribing Supplies and Procurement Methods for Supplies that the State Must Promote or Support (No.4) B.E. 2566":
+    status: in_force
+    fact_url: "https://ratchakitcha.soc.go.th/documents/140A054N0000000000100.pdf"
+    fact_text: "Royal Gazette vol. 140 pt. 54 Kor, 6 Sep 2023; inserts Ch. 7/3 Digital Promotion Supplies (cl. 27/7-27/9). Latest promoted-supplies MR on the CGD listing (Sep 2026)."
+  "Ministerial Regulation Prescribing Supplies and Procurement Methods for Supplies that the State Must Promote or Support (No.3) B.E. 2564":
+    status: in_force
+    fact_url: "https://www.gprocurement.go.th/wps/portal/egp/Regulation/ministerial_regulations/"
+    fact_text: "Royal Gazette vol. 138 pt. 68 Kor, 14 Oct 2021; amends cl. 5-7, 9(7), 10(5) of the principal MR B.E. 2563."
+  # One key for the principal MR B.E. 2563 and its No. 2 amendment: both are B.E. 2563
+  # and their names reduce to the same tokens, so a separate key could not tell them apart.
+  "Ministerial Regulation Prescribing Supplies and Procurement Methods for Supplies that the State Must Promote or Support B.E. 2563":
+    status: in_force
+    fact_url: "https://www.gprocurement.go.th/wps/portal/egp/Regulation/ministerial_regulations/"
+    fact_text: "Principal MR: Royal Gazette vol. 137 pt. 8 Kor, 29 Jan 2020. No. 2 (Made in Thailand, Ch. 7/1; SME Ch. 2): vol. 137 pt. 104 Kor, 22 Dec 2020. Both in force per the CGD listing (Sep 2026), as amended by No. 3 (2564) and No. 4 (2566)."
+  "Procurement of Computer Programs Guidelines: Software and the use of licensed software by the Governmental Agencies issued by the Department of Intellectual Property":
+    status: in_force
+    fact_url: "https://www.ipthailand.go.th/images/3534/2564/Copyright/software_program_20201027.pdf"
+    fact_text: "Held ESCAP gold reference (DIP, 2020). Not re-verified 29 Sep 2026: ipthailand.go.th blocks scripted access (Incapsula)."
+  "Protection of Layout Designs of Integrated Circuits Act B.E. 2543":
+    status: in_force
+    fact_url: "https://www.ipthailand.go.th/images/781/id_032.pdf"
+    fact_text: "Held ESCAP gold reference (s. 6). IP law, not a procurement instrument; kept so the gold row can be matched. ipthailand.go.th blocks scripted access (Incapsula)."
+
+research_scores: { P2-I1: 1, P2-I2: 0, P2-I3: 1, P2-I4: 1 }

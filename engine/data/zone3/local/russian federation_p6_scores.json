@@ -1,0 +1,164 @@
+{
+ "economy": "Russian Federation",
+ "pillar": 6,
+ "run": "run-ru-p6-1790693704",
+ "krippendorff_alpha": 0.763,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states NO_EVIDENCE_FOUND_PENDING_REVIEW, meaning no textual basis exists to support a score of 0.5 or 1."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence indicates that no specific ban or local processing requirements were found for the cited law, resulting in a score of 0 as the transfer is"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence explicitly states 'NO_EVIDENCE_FOUND_PENDING_REVIEW' for the cited law, meaning there is no verified data to support a score of 0.5 or 1, "
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited provisions of Federal Law No. 126-FZ mandate the storage of information regarding the receipt, transmission, and processing of voice, text, and other "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites multiple distinct subsections (Art. 64(1), 1.1, 2, 3, 4) of the Federal Law on Communications mandating the local storage of specific data ty"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence consists of multiple rows from the same specific sectoral law (Telecommunications) mandating the storage of non-personal traffic data (facts of rec"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "infrastructure requirement exists",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The provided text fragment is incomplete and does not explicitly state a requirement for local data centers or servers as a precondition for service, nor does i"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The provided evidence fragment from Article 13(2) of Federal Law No. 149-FZ pertains to the technical means of information systems used by state bodies and does"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence is truncated and does not explicitly state that specific infrastructure (such as local data centers) is a precondition for service or that"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited provisions of Federal Law No. 152-FZ explicitly impose notification conditions on the cross-border transfer of personal data, satisfying the criterion"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence cites Federal Law No. 152-FZ, which explicitly regulates the cross-border transfer of personal data, satisfying the criterion for personal data cov"
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The evidence cites Federal Law No. 152-FZ, which is a horizontal law covering personal data, and explicitly mandates notification conditions for cross-border tr"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 0.0,
+   "deterministic_reason": "binding cross-border data-transfer agreement evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The quoted text of Article 12 of ETS No. 108 explicitly prohibits Parties from restricting transborder flows of personal data, constituting a binding agreement "
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "The economy is a party to Convention 108, which constitutes a binding international agreement containing specific provisions on the transfer of personal data."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The provided evidence cites Article 12 of Convention 108, which is a binding international treaty that explicitly prohibits parties from restricting transborder"
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

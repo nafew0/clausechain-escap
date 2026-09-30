@@ -1,0 +1,86 @@
+[
+ {
+  "indicator": "P6-I4",
+  "law": "PDP Data Protection Impact Assessment Guideline 2026",
+  "article": "s. 13",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision correctly identifies cross-border data transfer conditions (adequacy, consent, contract) under Section 129. It is not a business transfer, domestic disclosure, or government-only measure. The legal function of conditioning cross-border flow is present."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric for P6-I4 scores '1' if conditions cover personal data or apply horizontally. The snippet explicitly lists 'personal data' and 'outside Malaysia' with conditions like 'adequate level of protection' and 'consent'. This matches the positive cues and scoring criteria for a full score. The fact that it is a guideline (DPIA) does not negate the evidence of the conditional regime it describes."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text asks the data controller to identify the 'applicable legal basis' for transferring personal data outside Malaysia, listing specific conditions (adequacy, consent, contract). This textually establishes that transfer is permitted only if one of these bases is met. The G6 warning about modality is noted, but the context of a 'legal basis' requirement implies a mandatory condition for lawful transfer, supporting the P6-I4 mapping."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "CPTPP Chapter 14 (Malaysia MITI text)",
+  "article": "Art. 14.18",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision explicitly references 'obligations under Article 14.11 (Cross-Border Transfer of Information by Electronic Means)', confirming the existence of a binding commitment in the treaty. While it is a dispute settlement carve-out, it serves as valid evidence that the underlying obligation exists and is part of the binding agreement, satisfying the legal test for P6-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric requires identifying if the economy has joined an agreement with binding cross-border data-transfer commitments. The snippet confirms the CPTPP contains such commitments (Art 14.11). The indicator is 'framework_absent_scores_high', meaning the presence of this binding commitment leads to a score of 0. The mapping correctly identifies the provision as evidence of the 'at least one binding agreement' condition."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text states Malaysia 'shall not be subject to dispute settlement... regarding its obligations under Article 14.11'. This textual structure presupposes and confirms the existence of those obligations. It does not negate the commitment but rather defines the enforcement mechanism (or lack thereof for a period) for that specific commitment. Therefore, it establishes the presence of the binding commitment required by the indicator."
+   }
+  ]
+ },
+ {
+  "indicator": "P6-I5",
+  "law": "CPTPP Chapter 14 (Malaysia MITI text)",
+  "article": "Art. 14.11",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision establishes a binding obligation ('shall allow') for cross-border data transfer. The exception in paragraph 3 is a standard carve-out for legitimate public policy objectives and does not negate the existence of the binding commitment itself, which is the specific legal function required by the indicator. The mapping correctly identifies the presence of a binding agreement."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The snippet matches the positive cue 'cross-border transfer of information by electronic means' and the legal test for a binding commitment. The indicator P6-I5 asks if the economy has joined NO agreement; the presence of this text evidences that it HAS joined an agreement with binding commitments. This is a valid evidence row for the framework indicator, regardless of the final score (which would be 0). The rubric explicitly accepts this type of provision."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact quoted text 'Each Party shall allow the cross-border transfer of information by electronic means...' is present in the source. The context confirms this is Article 14.11 of the CPTPP. The text explicitly creates a binding duty ('shall allow') regarding cross-border transfers, which directly supports the rationale that a binding commitment exists. No textual ambiguity prevents this interpretation."
+   }
+  ]
+ }
+]

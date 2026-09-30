@@ -1,0 +1,164 @@
+{
+ "economy": "Timor-Leste",
+ "pillar": 7,
+ "run": "run-tl-p7-1790670566",
+ "krippendorff_alpha": 0.5,
+ "indicators": {
+  "P7-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The cited sectoral provisions are limited in scope, and the Constitution merely directs that a law define personal data and processing conditions without itself"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The evidence shows only sector-specific protections and a constitutional direction for future legal regulation, not an enacted comprehensive horizontal data-pro"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence shows only sector-specific data-use protections, while the constitutional provision merely directs legislation to define personal data and processi"
+    }
+   ],
+   "band": [
+    0.0,
+    1.0
+   ],
+   "spread": 1.0,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I2": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no cybersecurity framework evidence -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The only row says NO_EVIDENCE_FOUND_PENDING_REVIEW and provides no evidence of any cybersecurity framework; no framework type is established in the quoted text."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "No evidence establishes any cybersecurity framework; the cited telecommunications sector regulation is not shown to address cybersecurity incident monitoring, d"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The telecom-sector regulation is a possible non-dedicated or sectoral framework, so the pending review does not establish that no cybersecurity framework exists"
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  },
+  "P7-I3": {
+   "deterministic": 1.0,
+   "deterministic_reason": "minimum retention period(s) evidenced",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "Multiple provisions clearly specify minimum retention periods, including 12 months after deactivation, five years from contract signing, and 20 years after cert"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "Multiple provisions clearly specify minimum retention periods, including five years, 20 years, and 12 months."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Multiple cited provisions clearly specify minimum retention periods, including 12 months for deactivated prepaid services and a minimum of five years for mobile"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I4": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no DPO/DPIA requirement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "No verified text establishes a DPO or DPIA requirement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence establishes a DPO or DPIA requirement, whether economy-wide or sector-specific."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "The only gate-verified row reports no evidence of a DPO or DPIA requirement, so neither is established."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P7-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "warrantless government access evidenced -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The ANC may request service providers\u2019 registration records for compliance audits, and this power is not conditioned on independent judicial authorization."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "ANC Guidelines clause 5.5 allows the ANC to request providers\u2019 complete SIM-registration records for compliance auditing without requiring independent judicial "
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "The ANC may request providers\u2019 complete physical and electronic SIM-registration records for compliance audits without any stated requirement for independent ju"
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}

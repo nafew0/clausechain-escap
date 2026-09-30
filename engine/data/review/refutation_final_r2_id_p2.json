@@ -1,0 +1,366 @@
+[
+ {
+  "indicator": "P2-I1",
+  "law": "Law No. 3 of 2014 on Industry",
+  "article": "Art. 86(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 86(1) imposes mandatory use of domestic products in the covered procurement, and paragraph (4) makes their unavailability or insufficiency an exception. The rubric expressly covers domestic-goods procurement requirements; this is not merely an enabling clause."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric covers foreign-origin goods as well as foreign firms and includes domestic-goods procurement requirements. This operative, conditional exclusion supports applies=true and score 1; its sectoral scope is not a defect. “Wajib” means mandatory, not permissive."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says domestic products “wajib digunakan” (must be used); the surrounding context identifies the covered procuring entities and paragraph (4) states the unavailable-or-insufficient exception. Although it does not literally say “foreign goods are prohibited,” the rubric accepts mandatory domestic-product procurement as evidence of exclusion."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I1",
+  "law": "Presidential Regulation No. 46 of 2025 on the Second Amendme",
+  "article": "Art. 52(3)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 52(3) is an operative contract-performance duty, not merely authority to restrict participation: when materials, supplies, or equipment are needed, they must be domestic products and/or qualifying domestically produced products. That supports exclusion of foreign-origin goods in this procurement category under P2-I1; the rule need not bar the foreign firm itself."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P2-I1 has no hunt_in restriction, and its legal test expressly covers foreign-origin goods in a category of public procurement. The mandatory domestic-material condition is sectoral evidence the rubric accepts; it supports a score of 1, consistent with the imported-goods example. The G6 WARN is not a defect: “wajib” means mandatory, not permissive."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says materials, supplies, or equipment needed for performance must be products within the stated domestic categories, as listed in the bid documents. Though it does not expressly say foreign suppliers are barred, it supports the rationale’s narrower claim that foreign-origin materials are excluded from that category; “dan/atau” does not make the stated use optional."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I1",
+  "law": "Presidential Regulation No. 46 of 2025 on the Second Amendme",
+  "article": "Art. 19(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 19 requires domestic products in procurement specifications, and Article 19(3) limits that requirement to when they are available. This is an operative domestic-origin procurement requirement, not merely an empowerment clause; the rubric expressly recognizes domestic goods being procured as exclusion evidence."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has no hunt_in locations, and this provision directly concerns public procurement. Read with Article 19(3), it conditionally requires domestic products when available, matching the rubric’s domestic-sourcing cue and supporting score 1; the sectoral nature of the evidence is not a defect."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says the procurement official uses domestic products in specifications and that this use is fulfilled insofar as those products are available. In context, that supports a conditional domestic-origin requirement; it does not establish an unconditional ban, and the rationale preserves the availability condition."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Law No. 3 of 2014 on Industry",
+  "article": "Art. 86(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision has an operative procurement function: specified bodies must use domestic products in covered procurement. Its funding and entity limits narrow the covered procurements but do not defeat the P2-I3 fit."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P2-I3, mandatory use of domestic-origin products is an operative origin-based procurement limitation, supporting a score of 1. The exception for products that are unavailable or insufficient preserves a conditional regime; it does not make the rule merely empowering or permissive. “Wajib digunakan” means must be used, so the G6 permissive-modality concern is unsupported."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 86(1) says domestic products “wajib digunakan” in the specified procurement, and subsection (4) states the exception when they are unavailable or insufficient. The text establishes a mandatory domestic-product requirement, not an unconditional ban on foreign bidders; that is enough for P2-I3’s origin-based limitation test."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Law No. 3 of 2014 on Industry",
+  "article": "Art. 39(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Although the duty applies only to turnkey projects, the surrounding text expressly places those projects within government industrial-technology procurement. The rubric accepts performance-based procurement conditions; the sectoral scope alone is not a defect."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "With hunt_in empty, the operative text supplies the evidence: providers in turnkey procurement must transfer technology to domestic parties. This is a performance-based condition, supporting 0.5 under the rubric; it does not establish nationality-based discrimination for a score of 1. The government's “may” concerns whether to use turnkey procurement, not whether the provider must transfer technology."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Read with the surrounding context, Article 39(1) permits government technology procurement through turnkey projects, while Article 39(2) makes technology transfer to domestic parties mandatory for providers in those projects. That supports a conditional procurement performance requirement, not a claim that all procurement must use turnkey projects."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Omnibus Health Law No.17 2023 (UU Kesehatan)",
+  "article": "Art. 328",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 328(1) governs procurement by public authorities and health facilities and requires them to prioritize medicines and devices using domestically produced raw materials. That is an operative origin/local-content preference, not merely authority to create one; its sectoral scope does not defeat the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly covers procurement preferences and local-content measures. The mandatory prioritization is operative, while the text does not make bidder nationality a condition and bidders can qualify by using domestic inputs; it therefore supports a 0.5 measure applied to bidders generally, not a mere enabling provision. “Harus mengutamakan” means must prioritize, so the G6 WARN does not identify a defect."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says procurement entities must prioritize medicines and devices using domestically produced raw materials, and the following clause preserves quality, safety, and utility considerations. It establishes an origin-based procurement preference, though not a specified margin or quota; the rubric accepts preferences without requiring either."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Instruction No. 2 of 2022 on Accelerating the I",
+  "article": "Art. 10",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision does more than authorize preferences: it directs regents and mayors to allocate and realize at least 40% of goods/services expenditure for products of micro, small enterprises, and cooperatives made domestically. That is an operative procurement quota within the rubric’s scope."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric has no additional hunt_in terms, and the text supplies an operative minimum-spend quota tied to SME/cooperative status and domestic production—not merely an empowering legal basis. The domestic-origin trigger supports score 1 as a discriminatory measure; the G6 WARN does not defeat the directive’s operative force in context."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says to plan, allocate, and realize at least 40% of the budget for using the specified domestically produced products. Read in the instruction’s list of directions to regents and mayors, it establishes a minimum allocation, not a permission or a mere aspiration; the rubric expressly includes quotas and set-asides."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Instruction No. 2 of 2022 on Accelerating the I",
+  "article": "Art. 11",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause requires inclusion of a mandatory-use condition for domestic and specified small-enterprise products in contracts. In the stated government-procurement context, that is an operative origin-based procurement limitation, not merely authority to adopt one."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Although hunt_in is empty, the rubric’s positive cues include domestic-product preferences and its legal test covers operative local-content requirements. The mandatory domestic-product condition supports a discriminatory measure scored 1; “wajib” expressly conveys mandatory force, so the G6 warning does not establish a permissive-rule misread."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text directs inclusion of a “syarat wajib menggunakan” (mandatory requirement to use) domestic and specified small-enterprise products in all cooperation contracts. It does not specify a percentage, but the rubric does not require one where the operative condition mandates domestic-product use; the stated procurement context supplies the public-procurement connection."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Regulation No. 46 of 2025 on the Second Amendme",
+  "article": "Art. 67",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 67(6) imposes an operative 7.5% price preference for national businesses over the lowest foreign-business bid, plus an additional 5% for qualifying consortia. This is a nationality-based procurement bidding preference, not merely an enabling power or a different legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric calls for an operative price preference and does not exclude sectoral procurement evidence; hunt_in is empty. The nationality-triggered preference directly discriminates against foreign bidders and scores 1 under P2-I3."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text and surrounding context place the measure in international construction procurement and expressly grant national businesses a 7.5% preference over the lowest foreign-business bid, with a further 5% for specified consortia. It supports the mapping and rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Regulation No. 46 of 2025 on the Second Amendme",
+  "article": "Art. 20(2)",
+  "verdict": "SPLIT-REVIEW",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "wrong pinpoint citation",
+    "reason": "The cited Art. 20(2) contains packaging prohibitions, not the 40% allocation. The supplied context identifies the operative rule as Art. 20(3), so the cited subsection does not support the claimed mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The operative text in paragraph (3) requires at least 40% of the budget to be used for domestically produced goods of micro/small enterprises and cooperatives. That is a domestic-origin procurement set-aside, supporting score 1 under P2-I3; hunt_in is empty. “Wajib” is mandatory, so G6’s permissive-modality warning is unfounded. The pinpoint should be corrected to paragraph (3), but the rubric fit is valid."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted paragraph (3) expressly requires the allocation and limits it to products of domestic production; the surrounding context confirms the paragraph number. This establishes an operative domestic-origin preference within procurement, not an outright exclusion of foreign bidders. The Art. 20(2) pinpoint is inaccurate, but the quoted text supports P2-I3."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Regulation No.16 on Government Procurement of G",
+  "article": "Art. 67(2)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text gives national construction firms an operative price preference over the lowest foreign-firm bid. That is a procurement bidding preference within P2-I3; sectoral construction coverage is not excluded."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The operative preference is triggered by national-firm status and creates a price margin in bid evaluation, so it directly discriminates against foreign bidders and supports score 1. The rubric calls for sectoral evidence and accepts this provision."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted sentence expressly allows a construction bid by a national business entity to be up to 7.5% above the lowest foreign-business bid, and the surrounding text places the preference in procurement evaluation. It establishes the claimed preference."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Presidential Regulation No.16 on Government Procurement of G",
+  "article": "Art. 67(1)",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete scope or legal-function defect: Article 67 concerns supplier selection in government procurement and establishes a price advantage for domestic products. The surrounding provisions apply and calculate that preference, so this is not merely an empowerment clause."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly covers domestic-origin price preferences in procurement. Article 67’s domestic-product preference, supported by the surrounding TKDN threshold and evaluation provisions, is an operative measure and fits score 1 as a preference based on origin; hunt_in is empty. The current-version WARN alone does not invalidate the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text identifies an incentive for domestic products in supplier selection in the form of an accepted price advantage. Read with Article 67’s surrounding provisions applying that preference in bid evaluation, it supports the claimed procurement price-preference function."
+   }
+  ]
+ },
+ {
+  "indicator": "P2-I3",
+  "law": "Regulation of the Government of the Republic of Indonesia No",
+  "article": "Art. 43",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision directly prioritizes government use of products with a specified certificate. That supports a status-based government-purchasing preference; its sectoral character does not defeat P2-I3, and the text does not clearly show that the priority is outside procurement."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P2-I3 covers preferences triggered by an “other status,” and this is an operative preference for certified products, not merely authority to create one. On the supplied rubric it supports a non-discriminatory measure (0.5); the empty hunt_in and lack of a nationality cue do not negate it. “Memprioritaskan” states a priority, not permissive “may” language."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text says central and regional governments prioritize use of Green Industry Certified products. It does not expressly mention tenders or bidding, but the government-use preference is consistent with a procurement preference and does not clearly establish a different legal function. The WARN about modality does not make the mapping wrong."
+   }
+  ]
+ }
+]

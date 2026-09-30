@@ -1,0 +1,646 @@
+[
+ {
+  "indicator": "P7-I1",
+  "law": "ANC Guidelines on the Registration of SIM Cards for Prepaid ",
+  "article": "cl. 4.8",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause imposes a data-use restriction on information collected for prepaid SIM registration. Its sectoral scope is consistent with the rationale and does not confuse purpose limitation with another legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 has an empty hunt_in, and the rubric expressly records sectoral data-protection laws without treating them as comprehensive. This provision may be an evidence row; by itself it does not establish whether the economy scores 0.5 for sectoral-only laws or 1 for no comprehensive framework."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text limits use of information collected during registration to furthering the Guidelines and bars marketing or other uses. It establishes a sector-specific data-use rule, not the economy-wide existence or absence of a horizontal law; the mapping presents it as sectoral evidence rather than proof of that outcome."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Constitution of the Democratic Republic of Timor-Leste (2002",
+  "article": "s. 38",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 38 applies generally to personal data and sets protection requirements, so no concrete sector-scope defect appears. The rubric records thin horizontal frameworks at 0.5; this provision need not establish a comprehensive statute to be relevant evidence."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric asks whether a comprehensive horizontal framework exists and includes horizontal-but-thin frameworks at 0.5. Section 38 supports a horizontal but limited framework, while leaving processing conditions to legislation; it is a valid evidence row, not proof of a comprehensive framework."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text and context establish a general personal-data access right, a legislative mandate concerning processing, and a narrow consent-based prohibition. They do not establish comprehensive protection, but that limitation is consistent with the rubric’s horizontal-but-thin category and does not make the mapping wrong."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Decreto do Governo n.º 9/2008 Prestação de serviços de telec",
+  "article": "Art. 6",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete scope defect: Article 6 imposes mobile-operator duties concerning user-data privacy, permitted purposes, security, and confidentiality. The rationale appropriately treats it as sectoral evidence, not proof of horizontal coverage."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 has an empty hunt_in, and its scoring expressly records sectoral-only laws at 0.5; a sectoral evidence row is therefore valid for this absence-scored indicator. The text’s “deve” states a duty, so G6’s modality warning does not establish a misread."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text requires the operator to respect user-data privacy law and limits processing purposes while requiring security and confidentiality. Article 6’s mobile-service context supports a sectoral data-protection obligation, but does not establish a comprehensive horizontal law; the mapping does not claim that it does."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio El",
+  "article": "Art. 35",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete scope or legal-function defect: Article 35 regulates personal-data use by certification entities, and the rationale treats it as sectoral evidence rather than as a horizontal framework."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 has no hunt_in requirements, and its rubric expressly records sectoral-only laws at 0.5 while they do not make the framework comprehensive. This sectoral provision is a valid evidence row for that outcome; the WARN about modality does not refute the mapping because “não podem ser utilizados” prohibits the stated use, subject to the captured exception."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text bars certification entities from using collected personal data for another purpose unless that use is expressly authorized by law or the interested person. The surrounding text confirms the sectoral setting; it supports the rationale’s limited claim of sectoral data-protection rules, not the existence of a comprehensive horizontal law."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I1",
+  "law": "Decreto-Lei n.º 15/2012 Regulamentação do Sector das Telecom",
+  "article": "Art. 49",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision concerns subscriber information handled by telecom operators and requires it to be adequate and proportionate to its purposes. That supports the stated sectoral data-protection function; the rationale does not claim this provision itself establishes the absence of a horizontal law."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I1 records sectoral data-protection laws, and its rubric assigns 0.5 where the framework is sectoral-only. This provision is valid sectoral evidence; the economy-wide score must still reflect whether a comprehensive horizontal framework exists. The empty hunt_in imposes no contrary restriction."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 49(3) says the operator ensures collected, used, retained, or disclosed information is adequate and proportionate to its purposes; the surrounding text also regulates subscriber information handling. This establishes a sectoral rule, not the absence of a horizontal law, which the rationale does not overclaim."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "ANC Guidelines on the Registration of SIM Cards for Prepaid ",
+  "article": "cl. 5.2",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete legal-function or scope defect appears: clause 5.2 imposes a duty on service providers to keep subscriber information for 12 months, and the fixed period is not stated as a ceiling or merely permissive."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly includes telecommunications sectoral laws. The clause specifies a 12-month retention period, satisfying the 'keep >= X' test and scoring 1; it is not a 'no longer than necessary' limit."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the provider 'must keep' the subscriber's information 'for a period of 12 months from the date of deactivation.' In context, it supports a fixed minimum retention duty and does not establish a maximum."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "ANC Guidelines on the Registration of SIM Cards for Prepaid ",
+  "article": "cl. 5.1",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The clause creates a mandatory retention duty for registration records while prepaid service is active. It does not specify a minimum number of days, months, or years, but the rubric expressly says to record a retention requirement without a specified minimum and score it 0; that does not make the mapping wrong."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric’s hunt_in includes telecommunications sectoral law, so this is within scope. The clause supports recording a retention requirement, but specifies no minimum period in days, months, or years; under the rubric, the evidence row is valid and the indicator scores 0."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the provider must keep registration records for as long as the prepaid service is active. It establishes a mandatory, service-linked retention duty, not a specified minimum period; consistent with the rubric, it supports a recorded requirement scored 0."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Decreto do Governo n.º 9/2008 Prestação de serviços de telec",
+  "article": "Art. 6",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Art. 6(1) uses the mandatory “deve manter” and requires archiving user-identification data for a minimum of five years from contract formation. This is a retention duty, not merely confidentiality or another legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The telecom sector is expressly included in P7-I3's hunt_in. “Período mínimo de cinco anos” clearly specifies keeping data for at least five years, meeting score 1; this is not a retention limit or a government-data-only measure."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the operator “deve manter” the user's identification elements in an archive “por um período mínimo de cinco anos.” The surrounding context confirms the provision concerns data collected for mobile telecom service; neither the text nor context makes the period permissive or a ceiling."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio El",
+  "article": "Art. 44",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 44(2) requires the certification entity to retain certificate-related information for a period not less than 20 years after suspension or revocation. That is a specified minimum retention period, not a retention limit or a different legal function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I3 scores 1 when a minimum period is clearly specified. The sectoral hunt_in expressly includes sectoral laws, and this provision applies beyond government data and sets a minimum of 20 years. The text’s mandatory retention phrasing supports the mapping; the G6 WARN alone does not refute it."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text says the certification entity 'conserva' the information for a period 'não inferior a 20 anos'—retains it for no less than 20 years. In context, that establishes a minimum measured from suspension or revocation; the access clause does not make retention permissive or convert the period into a ceiling."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Lei n.º 12/2021 Código Mineiro (Mining Code)",
+  "article": "Art. 110",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 110(1) imposes a duty on Mining Rights Holders to keep records for a minimum of five years. That is a specified minimum, not a retention ceiling or merely permissive language; the location requirement does not defeat the P7-I3 mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric scores 1 when a minimum period is clearly specified. The sectoral hunt-in supports considering sectoral retention rules, and the provision says records must be kept for a minimum of five years. This is not the excluded 'no longer than necessary' limit; G6's modality warning is not supported by the Portuguese 'deve' (must)."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text says the rights holder 'deve conservar' all records, including royalty-calculation records, 'por um período mínimo de cinco anos.' The surrounding context identifies the records' contents and regulatory access but does not qualify or shorten that minimum. It supports the stated P7-I3 rationale."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "Lei n.º 6/2005 Regime do Licenciamento, Supervisão e Regulaç",
+  "article": "Art. 26",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 26 imposes a mandatory recordkeeping duty on insurers and insurance intermediaries and requires records covering activities from the last five years. That supports a five-year minimum under P7-I3; this is not a confidentiality, transfer, or government-only provision."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly includes sectoral laws, and insurance records fall within its hunt_in scope. “Devem manter” is mandatory, and the five-year lookback specifies the period of records that must be maintained, supporting score 1 rather than an unspecified-period score of 0. The text does not state a ceiling."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The exact text says insurers and intermediaries “devem manter” records “das actividades dos últimos cinco anos.” Article 26(6) confirms that “registos” include documentation and information. Read together, these provisions require maintaining records covering the preceding five years; the text does not make that duty permissive or limit retention to a maximum of five years."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervisi",
+  "article": "s. 32",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 32.1(a) requires the auditor to assist the bank in maintaining proper accounts and records, which supports a record-maintenance mapping. It specifies no minimum period, so under the rubric the requirement is recorded and scored 0."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Banking is within the rubric’s sectoral hunt_in scope. The record-maintenance duty states no days, months, or years for which records must be kept, so score 0 is consistent with the rule for a retention requirement without a specified minimum."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text establishes auditor assistance in maintaining proper accounts and records, but gives no retention duration. It therefore supports, at most, a record-maintenance requirement scored 0—not a specified minimum period."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervisi",
+  "article": "s. 27",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete scope defect: this is a mandatory duty imposed on banks to prepare and maintain records, and the rubric accepts sectoral evidence. The absence of a specified duration supports score 0 rather than defeating the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Banking is within hunt_in's listed sectoral laws. Section 27 requires records to be maintained but specifies no minimum period; under the rubric's 4-Jul rule, that retention requirement is recorded and scored 0."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text requires banks to prepare and maintain specified records, including customer transaction records, but gives no number of days, months, or years. It therefore evidences a retention duty, not a minimum period, consistent with score 0."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I3",
+  "law": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervisi",
+  "article": "s. 31",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No concrete scope defect: the provision requires banks to maintain accounts and records, and the rubric permits a mandatory retention duty without a specified minimum to be recorded and scored 0."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The banking/accounting provision fits the rubric’s sectoral hunt_in. It requires maintaining records but specifies no minimum days, months, or years, so recording the duty and assigning score 0 follows the scoring rule."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 31.1 says banks shall maintain accounts and records “at all times”; it establishes an ongoing record-maintenance duty, not a specified minimum retention period. The context adds no duration, supporting a recorded requirement scored 0."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "ANC Guidelines on the Registration of SIM Cards for Prepaid ",
+  "article": "cl. 5.5",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Clause 5.5 authorizes the ANC to request providers’ complete SIM-registration records for compliance audits and requires delivery within 24 hours. It does not condition the request on judicial authorization; this is not merely a confidentiality or business-transfer provision."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly directs reviewers to hunt in sectoral telecommunications measures. Registration records are evidence of access to personal data held by providers, and the clause states no independent-judicial-authorization condition. It therefore supports the rubric’s score-1 type of access evidence; its sectoral scope is not a defect."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text says the ANC may request complete physical and electronic registration records for compliance audits and that they must be provided within 24 hours. In the context of prepaid SIM-card registration, this supports access to registration data, with no court-order condition stated. The excerpt does not establish that every possible access power is warrantless, but this provision itself is a valid evidence row under the rubric."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Constitution of the Democratic Republic of Timor-Leste (2002",
+  "article": "s. 37",
+  "verdict": "RECOMMEND-REJECT",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": true,
+    "failure_mode": "keyword match without the legal FUNCTION",
+    "reason": "The clause protects correspondence and permits exceptions established by law; it does not itself confer a government access power. Treating a privacy exception as an affirmative access measure does not establish P7-I5's required function."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "P7-I5 scores 1 only when a measure allows government access without independent judicial authorization. This text says exceptions may be provided by law in criminal proceedings, but establishes neither access nor that authorization is unnecessary; it therefore cannot support a score-1 mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": true,
+    "failure_mode": "the snippet does not actually support the rationale",
+    "reason": "Subsection 1 says correspondence is inviolable except in cases provided for by law as a result of criminal proceedings. It does not say the government may access communications without judicial authorization. Subsection 2 expressly requires a written judicial order for home entry, but says nothing that resolves authorization for communications access."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Decreto do Governo n.º 9/2008 Prestação de serviços de telec",
+  "article": "Art. 8",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "No clear scope or legal-function defect: the provision concerns an operator supplying traffic-data information to judicial authorities, and the rubric expressly directs reviewers to examine telecom law. Its judicial-process conditions make it relevant evidence for P7-I5."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under the court-order test, this supports score 0 for this access route: requests arise in judicial proceedings, the judge fixes the compliance period, and a prosecutor’s request requires written authorization from the competent judge. “Deve ser atendida” makes operator compliance mandatory once those conditions are met; the WARN does not refute the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text establishes access to traffic-data information in a judicial proceeding and expressly requires written judge authorization for prosecutor requests. It does not establish warrantless access; read narrowly, it is evidence of a judicial safeguard, not proof that every government access power is court-gated."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio El",
+  "article": "Art. 35",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision concerns disclosure of personal identity data to a judicial authority, not merely confidentiality or an unrelated business transfer. Disclosure is conditioned on that authority ordering it under legally prescribed procedures, so it does not establish access without judicial authorization."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I5 expressly calls for looking beyond the privacy statute and accepts sectoral evidence. Article 35(4) supplies evidence of court-gated access; under the court-order test, that supports score 0 rather than score 1. The conditional wording does not make the mapping wrong."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 35(4) says certification entities communicate pseudonym-certificate holders’ identity data when the judicial authority orders it under legally prescribed terms, with criminal-procedure rules applying as relevant. The text establishes judicially ordered disclosure, not warrantless access; the surrounding privacy provisions do not alter that condition."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Decreto-Lei n.º 13/2005 Código de Processo Penal",
+  "article": "Art. 53",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 53 authorizes police to identify suspected persons and, in context, permits compelled fingerprinting and photography. That supports obtaining personal identifying data without an express judicial-authorization condition; the mapping does not equate confidentiality or a business transfer with data access."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric expressly directs research into criminal-procedure law, so sectoral coverage is appropriate. Article 53 is evidence of police access to identifying and biometric information without a stated court-order gate, supporting the score-1 test. The current-version WARN does not itself defeat the mapping."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The quoted text authorizes police to identify a person suspected of crime; the surrounding provisions specify compelled identification measures, including fingerprinting and photography. It does not expressly authorize searching stored records, but the rubric does not limit access to stored data, and the text supports obtaining personal data without requiring independent judicial authorization."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Decreto-Lei n.º 13/2005 Código de Processo Penal",
+  "article": "Art. 172",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision concerns seizure of evidentiary objects, not an express power to inspect data, but its broad scope can encompass objects containing personal data. The mapping claims possible access through seizure, not a general data-search power, so the legal-function distinction does not clearly defeat the fit."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Criminal procedure is expressly within hunt_in. Although paragraph 1 generally requires a judge’s order, paragraph 2 permits police seizure without prior authorization in urgent cases, subject to immediate notice and later validation. That exception is access without prior independent judicial authorization under the court-order test; later validation does not erase it."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text establishes seizure of crime-related or evidentiary objects, with a judge-order default and an urgent exception permitting police seizure before authorization. It does not expressly mention personal data or inspection of data contents, but its broad object language supports the rationale’s limited claim that seizure may provide access to personal-data-bearing material."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "Lei n.º 17/2011 Regime Jurídico da Prevenção e do Combate ao",
+  "article": "Art. 21",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Article 21(1) gives the UIF a power to request any additional information from covered entities or persons, without stating a judicial-authorization condition. That broad information request can encompass personal data; the separate court-order condition in Article 21(2) governs the distinct access power described there and does not clearly negate subsection 1."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Under P7-I5, a government access route that does not require independent judicial authorization supports score 1. The sectoral AML context is within the rubric’s hunt_in scope, and Article 21(1)’s unrestricted information-request power is evidence of such a route; Article 21(2) records a separate court-gated route but does not make every access power court-gated."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The text establishes that the UIF may request any additional information it considers necessary from persons or entities subject to the Article 22 reporting obligation. It does not expressly say ‘personal data’ or require compliance, but its broad wording and the article’s information-access context support the rationale’s qualified claim that the power may provide access to data; the text does not clearly establish that the request power is judicially authorized."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervisi",
+  "article": "s. 20",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The provision does more than concern bank secrecy: it expressly permits disclosure of covered customer information to the Central Payments Office and its inspectors, without conditioning that route on independent judicial authorization. The judicial-authority clause is separate. The sectoral setting is not a defect under the rubric."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "P7-I5 asks whether a measure allows government access without independent judicial authorization. The permitted CPO/inspector disclosure is 1-type evidence; the court-order test does not apply to that separate recipient category. The rubric expressly calls for sectoral and regulatory-law evidence, and this provision supports a score of 1."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 20.2 says the information may be disclosed to the CPO, including its inspectors; it does not say disclosure to them requires a court order. Although it does not establish a power to compel disclosure, the rubric asks whether access is allowed, not compelled, and the text establishes a non-judicially gated route. The judicial-authority wording does not extend to the CPO."
+   }
+  ]
+ },
+ {
+  "indicator": "P7-I5",
+  "law": "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervisi",
+  "article": "s. 35",
+  "verdict": "RECOMMEND-KEEP",
+  "rubric_version": "full-indicator-v2",
+  "panel_type": "three-lens-single-configured-model",
+  "refuter_votes": [
+   {
+    "persona": "opposing_counsel",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Section 35.3 grants the Central Payments Office and its auditors authority to examine bank records and require operational information. Those records may include personal account data, and the text states no judicial-authorization condition. The banking-sector setting does not itself defeat the mapping."
+   },
+   {
+    "persona": "methodology_reviewer",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "The rubric directs reviewers to look beyond privacy statutes, and sectoral evidence is not excluded. Section 35.3 supplies an access power with no court-order prerequisite in the provided section; if it reaches personal data, that is 1-type evidence under the court-order test."
+   },
+   {
+    "persona": "strict_textualist",
+    "refuted": false,
+    "failure_mode": "none",
+    "reason": "Read with sections 35.2–35.5, the quoted text establishes inspection access to bank and subsidiary records and required cooperation, without stating a judicial gate. It does not establish that every record is personal data, but its broad reference to accounts and records can support access to potentially personal data; that limitation does not clearly make the mapping wrong."
+   }
+  ]
+ }
+]

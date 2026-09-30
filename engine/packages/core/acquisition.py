@@ -12,7 +12,13 @@ import json
 from pathlib import Path
 
 
-ECONOMY_CODES = {"Singapore": "sg", "Malaysia": "my", "Australia": "au"}
+ECONOMY_CODES = {"Singapore": "sg", "Malaysia": "my", "Australia": "au",
+                 # Round 2: seed inventory in data/seeds_r2.json (see SEED_FILES).
+                 "Thailand": "th", "India": "in", "Indonesia": "id",
+                 "Russian Federation": "ru", "Mongolia": "mn", "Lao PDR": "la",
+                 "Timor-Leste": "tl"}
+SEED_FILES = {"sg": "data/seeds.json", "my": "data/seeds.json", "au": "data/seeds.json"}
+DEFAULT_SEED_FILE = "data/seeds_r2.json"
 
 
 def _json_object(path: Path) -> dict:
@@ -50,7 +56,7 @@ def unresolved_seed_acquisitions(
                        f"configured for {economy}"),
         }]
 
-    seeds_path = root / "data/seeds.json"
+    seeds_path = root / SEED_FILES.get(code, DEFAULT_SEED_FILE)
     configured_payload = _json_object(seeds_path)
     economies = configured_payload.get("economies")
     if not seeds_path.is_file() or not isinstance(economies, dict) \

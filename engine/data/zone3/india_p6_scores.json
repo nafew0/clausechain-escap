@@ -1,0 +1,164 @@
+{
+ "economy": "India",
+ "pillar": 6,
+ "run": "run-in-p6-1785611114",
+ "krippendorff_alpha": 0.811,
+ "indicators": {
+  "P6-I1": {
+   "deterministic": 0.0,
+   "deterministic_reason": "no qualifying measure found (absence row) -> 0",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited row contains no verified text establishing any ban or local processing requirement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No verified evidence establishes any ban or local processing requirement, so the transfer is treated as free of such requirements."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No gate-verified evidence establishes any ban or local processing requirement under the cited Act."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I2": {
+   "deterministic": 0.5,
+   "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.5,
+     "reason": "The rule requires a company to transmit a copy of every foreign-register entry to its registered office in India, constituting one sector-specific local storage"
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.5,
+     "reason": "A single sectoral rule requires a copy of foreign-register entries to be transmitted to and kept at the company\u2019s registered office in India, while the accounts"
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "Only the requirement to keep a copy of the foreign register at the registered office in India clearly mandates local storage; the electronic-records provision r"
+    }
+   ],
+   "band": [
+    0.5,
+    0.5
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I3": {
+   "deterministic": 0.0,
+   "deterministic_reason": "none found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 0.0,
+     "reason": "The cited evidence contains no verified text establishing an infrastructure requirement, so no such requirement is shown."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 0.0,
+     "reason": "No gate-verified evidence establishes a local infrastructure requirement or a transfer conditioned on infrastructure."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.0,
+     "reason": "No verified evidence establishes any infrastructure requirement as a precondition for service or data transfer."
+    }
+   ],
+   "band": [
+    0.0,
+    0.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I4": {
+   "deterministic": 1.0,
+   "deterministic_reason": "covers personal data / horizontal -> 1",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provision authorizes restrictions on transferring personal data and applies horizontally to data fiduciaries across sectors."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "The provision authorizes restrictions on transferring personal data outside India, so conditions cover personal data and meet the score-1 criterion."
+    },
+    {
+     "persona": "skeptical",
+     "score": 1.0,
+     "reason": "Section 16(1) horizontally empowers the government to restrict transfers of personal data to specified foreign countries or territories, satisfying the score-1 "
+    }
+   ],
+   "band": [
+    1.0,
+    1.0
+   ],
+   "spread": 0.0,
+   "flag_for_review": false,
+   "reviewer_decision": "pending"
+  },
+  "P6-I5": {
+   "deterministic": 1.0,
+   "deterministic_reason": "no qualifying binding data-transfer agreement found",
+   "master_gold": null,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
+   "judges": [
+    {
+     "persona": "strict",
+     "score": 1.0,
+     "reason": "The provided evidence does not identify any binding data-transfer agreement."
+    },
+    {
+     "persona": "ESCAP",
+     "score": 1.0,
+     "reason": "No binding data-transfer agreement is evidenced in the provided gate-verified information."
+    },
+    {
+     "persona": "skeptical",
+     "score": 0.5,
+     "reason": "The evidence is inconclusive because the cited law has no verified finding regarding any binding data-transfer agreement."
+    }
+   ],
+   "band": [
+    0.5,
+    1.0
+   ],
+   "spread": 0.5,
+   "flag_for_review": true,
+   "reviewer_decision": "pending"
+  }
+ },
+ "note": "AI suggestions only \u2014 every score requires human approval (reviewer_decision) before it ships."
+}
