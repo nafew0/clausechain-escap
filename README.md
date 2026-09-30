@@ -65,12 +65,16 @@ Needs 30 GB of free disk and 8 GB of memory for Docker (Docker Desktop's default
 
 ### 3. Configure
 
-    cp engine/.env.example keys.env
+Download our filled-in **`keys.env`** (provided with the submission through ESCAP's submission form) and copy
+it into the `clausechain-escap` folder you cloned in step 1. **This is the recommended way:** the script finds
+it there by default. It sets your two declared engines and your OCR engine — see
+**[Your Two Declared Engines](#your-two-declared-engines)** below.
 
-Open `keys.env` and set your two declared engines and your OCR engine. See
-**[Your Two Declared Engines](#your-two-declared-engines)** below. (Our filled-in `keys.env` is provided
-with the submission through ESCAP's submission form (Jotform). The app's own secrets — database password,
-signing keys — are generated for you in step 4.)
+    cp ~/Downloads/keys.env .                     # Windows: Copy-Item $HOME\Downloads\keys.env .
+
+The file can also stay anywhere else; the script then asks for its path. To write your own instead:
+`cp engine/.env.example keys.env` and fill it in. The app's own secrets — database password, signing keys —
+are generated for you in step 4.
 
 ### 4. Start the interface
 
@@ -78,11 +82,12 @@ signing keys — are generated for you in step 4.)
 
 Windows (PowerShell): `powershell -ExecutionPolicy Bypass -File .\deploy.ps1`
 
-The script asks for the port, the keys file (`keys.env` from step 3), the data bundle (full 3.3 GB or partial
-1.3 GB) and whether to build, each with a default — press Enter to accept it. It then downloads the data with a
-progress bar and verifies its checksum, builds and starts the app, loads both engines' results and the signed
-review decisions, and creates an admin account. The first run takes about 20 minutes, mostly downloading and
-building (measured: 1,089 seconds on a fresh Windows machine). (No questions: `./deploy.sh --yes --env-file keys.env`.)
+The script asks for the port, the keys file (default: `keys.env` in this folder), the data bundle (full 3.3 GB
+or partial 1.3 GB) and whether to build, each with a default — press Enter to accept it. It then downloads the
+data with a progress bar and verifies its checksum, builds and starts the app, loads both engines' results and
+the signed review decisions, and creates an admin account. The first run takes about 20 minutes, mostly
+downloading and building (measured: 1,089 seconds on a fresh Windows machine). No questions at all:
+`./deploy.sh --yes`.
 
 At the end it shows the admin login (URL, username `admin`, password) in a highlighted box and asks you to
 save it; it is also kept in `.deploy-credentials.txt`. Open **http://localhost:8080** and sign in.

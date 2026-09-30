@@ -37,6 +37,7 @@ that, starting and stopping take seconds.
 ```bash
 git clone --progress https://github.com/nafew0/clausechain-escap.git
 cd clausechain-escap
+cp ~/Downloads/keys.env .      # the keys file provided with the submission (recommended)
 ./deploy.sh
 ```
 
@@ -45,6 +46,7 @@ cd clausechain-escap
 ```powershell
 git clone --progress https://github.com/nafew0/clausechain-escap.git
 cd clausechain-escap
+Copy-Item $HOME\Downloads\keys.env .      # the keys file provided with the submission (recommended)
 powershell -ExecutionPolicy Bypass -File .\deploy.ps1
 ```
 
@@ -52,12 +54,22 @@ WSL 2 and Git Bash users can run `./deploy.sh` instead.
 
 `git clone` shows its progress as it downloads the repository (about 450 MB).
 
+**The keys file.** Our filled-in `keys.env` is provided with the submission
+(through ESCAP's submission form). Copying it into the `clausechain-escap`
+folder, as above, is the recommended way: the script finds it there by default,
+so you only press Enter. You can also leave it anywhere and type its path when
+asked ([section 3](#3-api-keys)).
+
 The script then asks a few questions. Each shows its default in brackets;
 press **Enter** to accept it:
 
 ```
   Port for the web app [8080]:
-  Path to the keys file [none]:            your filled-in copy of engine/.env.example
+  Engine API keys (keys.env):
+    Recommended: download keys.env and copy it into this folder, then press Enter:
+      /path/to/clausechain-escap
+    Or type the path to your keys file ('none' = add keys later in engine/.env).
+  Keys file [keys.env]:
   Data bundle:
     1) full     3.3 GB  corpus, source downloads, run outputs, embedding caches, run logs
     2) partial  1.3 GB  corpus, source downloads, run outputs
@@ -77,7 +89,7 @@ keys yet? Press Enter; you can add them later ([section 3](#3-api-keys)).
 | Step | What happens |
 | :--- | :--- |
 | 1. Prerequisites | Finds Docker (even if this terminal was opened before Docker was installed), checks that it is running, checks disk space. |
-| 2. Settings | Asks for the port, the keys file, the data bundle and whether to build (Enter keeps each default), then creates `.env` with fresh random secrets and `engine/.env` from your keys file. |
+| 2. Settings | Asks for the port, the keys file (default: `keys.env` in this folder), the data bundle and whether to build (Enter keeps each default), then creates `.env` with fresh random secrets and `engine/.env` from your keys file. |
 | 3. Data | Downloads the chosen bundle with a progress bar, verifies its SHA-256 and unpacks it: the built corpus, every downloaded source document and every run (full also has the embedding caches for both models and the run logs). An interrupted download resumes when you run the script again. |
 | 4. Build and start | Builds the images, prepares the database and starts the app. |
 | 5. Wait | Waits until the website and the API answer. |
@@ -115,7 +127,7 @@ defaults for everything not given, with no questions.
 | `--yes` | `-Yes` | No questions: defaults plus the options given. |
 | `--data full` | `-Data full` | Full data bundle, 3.3 GB: corpus, source downloads, run outputs, embedding caches and run logs. Re-runs need no re-embedding. The default. |
 | `--data partial` | `-Data partial` | Partial data bundle, 1.3 GB: corpus, source downloads and run outputs. A re-run first re-embeds the corpus (needs the keys). |
-| `--env-file FILE` | `-EnvFile FILE` | Install the engine keys from FILE. |
+| `--env-file FILE` | `-EnvFile FILE` | The engine keys file (default: `keys.env` in this folder). |
 | `--port 9090` | `-Port 9090` | Serve on another port (default 8080). |
 | `--data-file FILE` | `-DataFile FILE` | Use a data bundle you already downloaded. |
 | `--data-url URL` | `-DataUrl URL` | Download the data bundle from another location. |
@@ -126,9 +138,19 @@ defaults for everything not given, with no questions.
 
 ## 3. API keys
 
-Keys live in one file, **`engine/.env`**. It is never in git or in the
-images; the containers read it read-only. Every setting is described in
-`engine/.env.example`.
+**Recommended:** copy the `keys.env` we provide with the submission (through
+ESCAP's submission form) into the `clausechain-escap` folder before running the
+script. The script uses it by default and installs it as **`engine/.env`**, the
+one file that holds the keys. Neither file is ever committed (`*.env` is
+gitignored) or copied into the images; the containers read `engine/.env`
+read-only. Keys file somewhere else? Type its path when the script asks.
+
+To write your own instead, start from the example, which describes every
+setting:
+
+```bash
+cp engine/.env.example keys.env
+```
 
 | Engine | Settings |
 | :--- | :--- |

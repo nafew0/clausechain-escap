@@ -10,7 +10,7 @@
 #   -DataFile FILE                          use a bundle you already downloaded
 #   -DataUrl URL [-DataSha256 SUM]          download the bundle from another link
 #   -SkipData                               start with an empty workspace
-#   -EnvFile FILE                           install the engine API keys from FILE
+#   -EnvFile FILE                           engine API keys file (default: keys.env in this folder)
 #   -Port N                                 serve on port N (default 8080)
 #   -NoBuild                                start the existing images without rebuilding
 #
@@ -31,6 +31,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
+$OrigPwd = (Get-Location).Path
 Set-Location -Path $PSScriptRoot
 $Root = (Get-Location).Path
 $Utf8 = New-Object System.Text.UTF8Encoding($false)   # no BOM: docker compose reads .env byte for byte
@@ -112,6 +113,15 @@ function Ask($question, $default) {
     return $answer.Trim().Trim('"').Trim("'")
 }
 function Test-Yes($answer) { return -not ($answer -match '^(n|no)$') }
+# A path relative to this folder first, then to the folder the command was run from.
+function Resolve-UserPath($path) {
+    if (-not $path) { return $path }
+    $path = $path.Trim().Trim('"').Trim("'")
+    if (-not (Test-Path $path) -and -not [System.IO.Path]::IsPathRooted($path) -and (Test-Path (Join-Path $OrigPwd $path))) {
+        return (Join-Path $OrigPwd $path)
+    }
+    return $path
+}
 
 $CurrentPort = ""
 if (Test-Path ".env") {
@@ -121,12 +131,25 @@ if (-not $CurrentPort) { $CurrentPort = "8080" }
 if (-not $Port) { $Port = Ask "Port for the web app" $CurrentPort }
 if ($Port -notmatch '^\d+$') { Die "The port must be a number (got '$Port')." }
 
+# Engine API keys: keys.env in this folder is the default (recommended), or any path.
 if (-not $EnvFile) {
-    $keysDefault = if (Test-Path "engine\.env") { "keep" } else { "none" }
-    if ($Interactive) { Write-Host "  Engine API keys: a filled-in copy of engine\.env.example ('$keysDefault' = add or keep them later)" }
-    $EnvFile = Ask "Path to the keys file" $keysDefault
-    if ($EnvFile -in @("keep", "none", "skip", "no")) { $EnvFile = "" }
+    $keysDefault = if (Test-Path "keys.env") { "keys.env" } elseif (Test-Path "engine\.env") { "keep" } else { "keys.env" }
+    if ($Interactive) {
+        Write-Host "  Engine API keys (keys.env):"
+        Write-Host "    Recommended: download keys.env and copy it into this folder, then press Enter:"
+        Write-Host "      $Root"
+        Write-Host "    Or type the path to your keys file ('none' = add keys later in engine\.env)."
+    }
+    while ($true) {
+        $EnvFile = Ask "Keys file" $keysDefault
+        if ($EnvFile -in @("keep", "none", "skip", "no")) { $EnvFile = ""; break }
+        $EnvFile = Resolve-UserPath $EnvFile
+        if (Test-Path $EnvFile) { break }
+        if ($Interactive) { Warn "Not found: $EnvFile. Copy keys.env into $Root and press Enter, type its path, or type 'none'." }
+        else { Warn "No keys file ($EnvFile); continuing without keys (add them later in engine\.env)"; $EnvFile = ""; break }
+    }
 }
+$EnvFile = Resolve-UserPath $EnvFile
 if ($EnvFile -and -not (Test-Path $EnvFile)) { Die "Keys file not found: $EnvFile" }
 
 $DataPresent = (Test-Path "engine\data\graph_v2.db") -and (Test-Path "engine\outputs")
@@ -144,7 +167,7 @@ if (-not $SkipData -and -not $DataFile -and -not $DataUrl -and -not $Data -and -
         { $_ -in @("1", "full") } { $Data = "full"; break }
         { $_ -in @("2", "partial") } { $Data = "partial"; break }
         "3" {
-            $DataFile = Ask "Path to the bundle (.tar.gz)" ""
+            $DataFile = Resolve-UserPath (Ask "Path to the bundle (.tar.gz)" "")
             if (-not $DataFile -or -not (Test-Path $DataFile)) { Die "Bundle not found: $DataFile" }
             break
         }
@@ -158,6 +181,8 @@ if (-not $SkipData -and -not $DataFile -and -not $DataUrl -and -not $Data -and -
         default { Die "Choose a number from 1 to 5 (got '$_')." }
     }
 }
+
+if ($DataFile) { $DataFile = Resolve-UserPath $DataFile }
 
 if (-not $NoBuild -and $Interactive) {
     if (-not (Test-Yes (Ask "Build the images (needed the first time and after an update)" "yes"))) { $NoBuild = $true }

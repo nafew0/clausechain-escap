@@ -13,7 +13,7 @@
 #   --data-file FILE                     use a bundle you already downloaded
 #   --data-url URL [--data-sha256 SUM]   download the bundle from another link
 #   --skip-data                          start with an empty workspace
-#   --env-file FILE                      install the engine API keys from FILE
+#   --env-file FILE                      engine API keys file (default: keys.env in this folder)
 #   --port N                             serve on port N (default 8080)
 #   --no-build                           start the existing images without rebuilding
 #   --help
@@ -22,6 +22,7 @@
 
 set -euo pipefail
 
+ORIG_PWD="$(pwd)"
 cd "$(dirname "$0")"
 ROOT="$(pwd)"
 
@@ -137,6 +138,10 @@ clean_path() {
   path="${path#\"}"; path="${path%\"}"; path="${path#\'}"; path="${path%\'}"
   path="${path//\\ / }"
   case "$path" in "~"*) path="$HOME${path#\~}" ;; esac
+  # Relative to this folder first, then to the folder the command was run from.
+  if [ -n "$path" ] && [ ! -e "$path" ] && [ "${path#/}" = "$path" ] && [ -e "$ORIG_PWD/$path" ]; then
+    path="$ORIG_PWD/$path"
+  fi
   printf '%s' "$path"
 }
 
@@ -144,11 +149,29 @@ CURRENT_PORT="$(grep -E '^CLAUSECHAIN_PORT=' .env 2>/dev/null | cut -d= -f2 || t
 [ -n "$PORT" ] || ask PORT "Port for the web app" "${CURRENT_PORT:-8080}"
 case "$PORT" in ''|*[!0-9]*) die "The port must be a number (got '$PORT')." ;; esac
 
+# Engine API keys: keys.env in this folder is the default (recommended), or any path.
 if [ -z "$ENV_FILE" ]; then
-  if [ -f engine/.env ]; then keys_default=keep; else keys_default=none; fi
-  [ "$INTERACTIVE" = 1 ] && echo "  Engine API keys: a filled-in copy of engine/.env.example ('$keys_default' = add or keep them later)"
-  ask ENV_FILE "Path to the keys file" "$keys_default"
-  case "$ENV_FILE" in keep|none|skip|no) ENV_FILE="" ;; esac
+  if [ -f keys.env ]; then keys_default=keys.env
+  elif [ -f engine/.env ]; then keys_default=keep
+  else keys_default=keys.env; fi
+  if [ "$INTERACTIVE" = 1 ]; then
+    echo "  Engine API keys (keys.env):"
+    echo "    Recommended: download keys.env and copy it into this folder, then press Enter:"
+    echo "      $ROOT"
+    echo "    Or type the path to your keys file ('none' = add keys later in engine/.env)."
+  fi
+  while :; do
+    ask ENV_FILE "Keys file" "$keys_default"
+    case "$ENV_FILE" in keep|none|skip|no) ENV_FILE=""; break ;; esac
+    ENV_FILE="$(clean_path "$ENV_FILE")"
+    [ -f "$ENV_FILE" ] && break
+    if [ "$INTERACTIVE" = 1 ]; then
+      warn "Not found: $ENV_FILE. Copy keys.env into $ROOT and press Enter, type its path, or type 'none'."
+    else
+      warn "No keys file ($ENV_FILE); continuing without keys (add them later in engine/.env)"
+      ENV_FILE=""; break
+    fi
+  done
 fi
 ENV_FILE="$(clean_path "$ENV_FILE")"
 [ -z "$ENV_FILE" ] || [ -f "$ENV_FILE" ] || die "Keys file not found: $ENV_FILE"
