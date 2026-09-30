@@ -69,9 +69,14 @@ die()  { printf '\n%s✘ %s%s\n' "$R" "$1" "$N" >&2; exit 1; }
 
 # ---------------------------------------------------------------- 1. prerequisites
 step "1/7  Checking prerequisites"
-# A terminal opened before Docker Desktop was installed does not have it on PATH yet;
-# look in Docker's standard install locations before giving up.
-if ! command -v docker >/dev/null 2>&1; then
+INTERACTIVE=0
+if [ "$ASSUME_YES" = 0 ] && [ -t 0 ] && [ -t 1 ]; then INTERACTIVE=1; fi
+
+# Docker Desktop is the one prerequisite. The script never installs it: it checks,
+# and if Docker is missing or stopped it shows where to get it and waits.
+find_docker() {
+  command -v docker >/dev/null 2>&1 && return 0
+  # A terminal opened before Docker Desktop was installed does not have it on PATH yet.
   for dir in "$HOME/.docker/bin" /usr/local/bin /opt/homebrew/bin \
              /Applications/Docker.app/Contents/Resources/bin \
              "/c/Program Files/Docker/Docker/resources/bin" \
@@ -79,21 +84,55 @@ if ! command -v docker >/dev/null 2>&1; then
     if [ -x "$dir/docker" ] || [ -x "$dir/docker.exe" ]; then
       PATH="$dir:$PATH"; export PATH
       warn "docker was not on this terminal's PATH; using $dir (opening a new terminal also fixes this)"
-      break
+      return 0
     fi
   done
-fi
-command -v docker >/dev/null 2>&1 || die "Docker is not installed.
-   macOS / Windows: install Docker Desktop  https://docs.docker.com/desktop/
-   Linux: install Docker Engine + compose    https://docs.docker.com/engine/install/"
-if docker compose version >/dev/null 2>&1; then
-  COMPOSE="docker compose"
-elif command -v docker-compose >/dev/null 2>&1; then
-  COMPOSE="docker-compose"
-else
-  die "Docker Compose v2 is missing (the 'docker compose' command). Update Docker Desktop, or install the compose plugin."
-fi
-docker info >/dev/null 2>&1 || die "Docker is installed but not running. Start Docker Desktop (or 'sudo systemctl start docker') and run this again."
+  return 1
+}
+docker_download() {
+  case "$(uname -s)" in
+    Darwin)
+      echo "      Download page:  https://docs.docker.com/desktop/setup/install/mac-install/"
+      if [ "$(uname -m)" = arm64 ]; then
+        echo "      Installer:      https://desktop.docker.com/mac/main/arm64/Docker.dmg   (Apple silicon)"
+      else
+        echo "      Installer:      https://desktop.docker.com/mac/main/amd64/Docker.dmg   (Intel)"
+      fi ;;
+    MINGW*|MSYS*|CYGWIN*)
+      echo "      Download page:  https://docs.docker.com/desktop/setup/install/windows-install/"
+      echo "      Installer:      https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe" ;;
+    *)
+      if grep -qi microsoft /proc/version 2>/dev/null; then
+        echo "      WSL 2: install Docker Desktop on Windows and turn on WSL integration:"
+        echo "      Download page:  https://docs.docker.com/desktop/setup/install/windows-install/"
+      else
+        echo "      Download page:  https://docs.docker.com/desktop/setup/install/linux/"
+        echo "      Installer:      https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb   (Ubuntu / Debian)"
+        echo "      Servers without a desktop: Docker Engine + compose plugin  https://docs.docker.com/engine/install/"
+      fi ;;
+  esac
+}
+wait_for_user() {
+  [ "$INTERACTIVE" = 1 ] || die "$1"
+  printf '  Press Enter to check again (Ctrl+C to stop) … '
+  read -r _ || die "$1"
+}
+
+until find_docker; do
+  warn "Docker Desktop is required and is not installed yet. Download it, install it, and start it:"
+  docker_download
+  wait_for_user "Docker is not installed. Install Docker Desktop (links above), then run this again."
+done
+until docker compose version >/dev/null 2>&1 || command -v docker-compose >/dev/null 2>&1; do
+  warn "Docker Compose v2 is missing (the 'docker compose' command). Update Docker Desktop, or install the compose plugin:"
+  docker_download
+  wait_for_user "Docker Compose v2 is missing. Update Docker Desktop, then run this again."
+done
+if docker compose version >/dev/null 2>&1; then COMPOSE="docker compose"; else COMPOSE="docker-compose"; fi
+until docker info >/dev/null 2>&1; do
+  warn "Docker is installed but not running. Start Docker Desktop (Linux service: sudo systemctl start docker) and wait until it says it is running."
+  wait_for_user "Docker is installed but not running. Start Docker Desktop and run this again."
+done
 ok "Docker $(docker version --format '{{.Server.Version}}' 2>/dev/null) with $($COMPOSE version --short 2>/dev/null || echo compose)"
 
 if command -v curl >/dev/null 2>&1; then FETCH="curl"; elif command -v wget >/dev/null 2>&1; then FETCH="wget"; else FETCH=""; fi
@@ -119,9 +158,6 @@ fi
 
 # ---------------------------------------------------------------- 2. settings
 step "2/7  Settings"
-INTERACTIVE=0
-if [ "$ASSUME_YES" = 0 ] && [ -t 0 ] && [ -t 1 ]; then INTERACTIVE=1; fi
-
 # ask VAR "question" "default": prints the question with its default; Enter keeps it.
 ask() {
   local answer=""

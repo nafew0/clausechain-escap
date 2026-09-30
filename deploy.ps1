@@ -77,9 +77,14 @@ if (Test-Path "deploy\data_bundle.cfg") {
 
 # ---------------------------------------------------------------- 1. prerequisites
 Step "1/7  Checking prerequisites"
-# A window opened before Docker Desktop was installed still has the old PATH:
-# reload it from the registry, then try Docker's standard install folder.
-if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
+$Interactive = (-not $Yes) -and (-not [Console]::IsInputRedirected)
+
+# Docker Desktop is the one prerequisite. The script never installs it: it checks,
+# and if Docker is missing or stopped it shows where to get it and waits.
+function Find-Docker {
+    if (Get-Command docker -ErrorAction SilentlyContinue) { return $true }
+    # A window opened before Docker Desktop was installed still has the old PATH:
+    # reload it from the registry, then try Docker's standard install folder.
     $env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [Environment]::GetEnvironmentVariable("Path", "User")
     $dockerBin = Join-Path $env:ProgramFiles "Docker\Docker\resources\bin"
     if (-not (Get-Command docker -ErrorAction SilentlyContinue) -and (Test-Path (Join-Path $dockerBin "docker.exe"))) {
@@ -87,13 +92,34 @@ if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
     }
     if (Get-Command docker -ErrorAction SilentlyContinue) {
         Warn "docker was not on this window's PATH; found it (opening a new window also fixes this)"
+        return $true
     }
+    return $false
 }
-if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
-    Die "Docker is not installed. Install Docker Desktop: https://docs.docker.com/desktop/setup/install/windows-install/"
+function Show-DockerDownload {
+    $arch = if ($env:PROCESSOR_ARCHITECTURE -eq "ARM64") { "arm64" } else { "amd64" }
+    Write-Host "      Download page:  https://docs.docker.com/desktop/setup/install/windows-install/"
+    Write-Host "      Installer:      https://desktop.docker.com/win/main/$arch/Docker%20Desktop%20Installer.exe"
 }
-if ((Invoke-Quiet $null @("docker", "compose", "version")) -ne 0) { Die "Docker Compose v2 is missing ('docker compose'). Update Docker Desktop." }
-if ((Invoke-Quiet $null @("docker", "info")) -ne 0) { Die "Docker Desktop is installed but not running. Start it, wait until it says 'running', and run this again." }
+function Wait-ForUser($message) {
+    if (-not $Interactive) { Die $message }
+    Read-Host "  Press Enter to check again (Ctrl+C to stop)" | Out-Null
+}
+
+while (-not (Find-Docker)) {
+    Warn "Docker Desktop is required and is not installed yet. Download it, install it, and start it:"
+    Show-DockerDownload
+    Wait-ForUser "Docker is not installed. Install Docker Desktop (links above), then run this again."
+}
+while ((Invoke-Quiet $null @("docker", "compose", "version")) -ne 0) {
+    Warn "Docker Compose v2 is missing (the 'docker compose' command). Update Docker Desktop:"
+    Show-DockerDownload
+    Wait-ForUser "Docker Compose v2 is missing. Update Docker Desktop, then run this again."
+}
+while ((Invoke-Quiet $null @("docker", "info")) -ne 0) {
+    Warn "Docker Desktop is installed but not running. Start it and wait until it says it is running."
+    Wait-ForUser "Docker Desktop is installed but not running. Start it and run this again."
+}
 if (-not (Get-Command curl.exe -ErrorAction SilentlyContinue)) { Die "curl.exe is missing (it ships with Windows 10 1803 and later)." }
 if (-not (Get-Command tar.exe -ErrorAction SilentlyContinue)) { Die "tar.exe is missing (it ships with Windows 10 1803 and later)." }
 Ok ("Docker " + (& docker version --format '{{.Server.Version}}'))
@@ -103,7 +129,6 @@ if ($freeGb -lt 30) { Warn "Only $freeGb GB free on $($drive.Name):. The data an
 
 # ---------------------------------------------------------------- 2. settings
 Step "2/7  Settings"
-$Interactive = (-not $Yes) -and (-not [Console]::IsInputRedirected)
 # Asks a question showing its default; Enter keeps the default.
 function Ask($question, $default) {
     if (-not $Interactive) { return $default }

@@ -103,7 +103,7 @@ keys yet? Press Enter; you can add them later ([section 3](#3-api-keys)).
 
 | Step | What happens |
 | :--- | :--- |
-| 1. Prerequisites | Finds Docker (even if this terminal was opened before Docker was installed), checks that it is running, checks disk space. |
+| 1. Prerequisites | Checks that Docker Desktop is installed and running (it finds it even in a terminal opened before the install). If it is missing or stopped, the script shows the download link for your computer and waits while you install or start it — press Enter to check again. It never installs anything itself. Then checks disk space. |
 | 2. Settings | Asks for the port, the keys file (default: `keys.env` in this folder), the data bundle and whether to build (Enter keeps each default), then creates `.env` with fresh random secrets and `engine/.env` from your keys file. |
 | 3. Data | Downloads the chosen bundle with a progress bar, verifies its SHA-256 and unpacks it: the built corpus, every downloaded source document and every run (full also has the embedding caches for both models and the run logs). An interrupted download resumes when you run the script again. |
 | 4. Build and start | Builds the images, prepares the database and starts the app. |
@@ -220,7 +220,8 @@ Run these in the `clausechain-escap` folder.
 
 | Symptom | Fix |
 | :--- | :--- |
-| `Docker is installed but not running` | Start Docker Desktop, wait until it says it is running, run the script again. |
+| `Docker Desktop is required and is not installed yet` | Download it from the link shown (or the table in section 1), install it, start it, then press Enter in the script. |
+| `Docker is installed but not running` | Start Docker Desktop, wait until it says it is running, then press Enter in the script. |
 | `docker: command not found` in your own terminal | Open a new terminal window. Docker Desktop adds itself to the PATH only for terminals opened after it was installed. The deploy scripts find it either way. |
 | `port is already allocated` | Another program uses port 8080: `./deploy.sh --port 9090`. |
 | The download stopped | Run the script again; it resumes. |
