@@ -6123,17 +6123,17 @@
   "finding_key": "3a9bafac981acfea168414779ed79de0676861d51c6f1eed3d4a0eae29f6c9d9",
   "review_subject_hash": "51c135f1034fc59f2edd39eb3761012e2580ddb91bbca07ab7dd7034b00a5a2a",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
-   "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
-   "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rule 7(8) makes a company keep in India a copy of every entry in a foreign register and a duplicate register at its registered office: a local-copy duty on company register data. Sectoral, so it supports 6.2 as a specific-data measure. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:01:17.256159+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": true,
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -8588,34 +8588,34 @@
   "finding_key": "c35ffc629e0c6558bee6efa047a2d731ccf157f6e68c0c6e961b35bbf79dd892",
   "review_subject_hash": "5364d1e7b0e46add6bbd42c194f658141e58b1b9a5f995756778e9ed52898cd3",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
-   "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
-   "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Pasal 41 sets the same security-standard aspects for the operators covered by Pasal 38: sectoral cybersecurity standards, supporting 0.5 under 7.2. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:01:17.936594+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": true,
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "1c103ae781444e165e8791864a15e508338108aba0fe8367fcafabbc2173c079",
   "review_subject_hash": "c2e3e2b3d2df8afa2fcc4519ebb341c1341ae45894615999375370faf677baa2",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
-   "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
-   "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Pasal 34 sets the information-security and cybersecurity standards payment-system operators must meet: a dedicated but sectoral framework, which supports 0.5 under 7.2. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:01:17.775794+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": true,
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -11019,17 +11019,17 @@
   "finding_key": "f521be1b66194da978be66ac007d4d3e772b4cbb65d39e4904014f0da6162b0f",
   "review_subject_hash": "f3dae31885c6ce1f3c983a297dcc177a2abf9f1c0b07d8bab692e14ba63621d0",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
-   "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
-   "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Article 26 requires licensed insurers and intermediaries to keep complete records of current activity, the last five years and all policies in force at their own premises: a sectoral local-record duty under 6.2. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:01:17.461139+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": true,
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -11427,17 +11427,17 @@
   "finding_key": "88515e2ec1e3ed0b3d79dfd51a80fbeb05af297d742d91d2ced39ba0297c7efc",
   "review_subject_hash": "901c2fd3f02839a29b94d282b40f425ad36bd65059bcb3f4010c01846cf8b1d4",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
-   "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
-   "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Article 35 lets certification entities disclose the identity behind a pseudonym certificate only when a judicial authority orders it. Access is court-ordered, so this is a court-gated measure under 7.5 that supports a score of 0. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:01:17.618131+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": true,
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {

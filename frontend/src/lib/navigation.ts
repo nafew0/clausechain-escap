@@ -43,7 +43,7 @@ export const WORKSPACE_NAV_ITEMS: WorkspaceNavItem[] = [
   { href: '/comparison', icon: GitCompareArrows, label: 'Model Comparison', state: 'live', section: 'workspace' },
   { href: '/ledger', icon: BookOpen, label: 'Ledger', state: 'live', section: 'workspace' },
   { href: '/raw-data', icon: Braces, label: 'Raw Data', state: 'live', section: 'workspace' },
-  { href: '/knowledge-graph', icon: Share2, label: 'Knowledge Graph', state: 'readonly', section: 'workspace' },
+  { href: '/knowledge-graph', icon: Share2, label: 'Knowledge Graph', state: 'prototype', section: 'workspace' },
   { href: '/jurisdictions', icon: Globe, label: 'Source Library', state: 'readonly', section: 'workspace' },
   { href: '/pipeline/crawl', icon: Wifi, label: 'Source Acquisition', state: 'live', section: 'pipeline' },
   { href: '/pipeline/harvest', icon: Layers, label: 'Corpus Eligibility', state: 'live', section: 'pipeline' },
