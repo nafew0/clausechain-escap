@@ -53,7 +53,7 @@ guide with troubleshooting is **[DEPLOYMENT.md](DEPLOYMENT.md)**.
 
 ### 1. Clone the repository
 
-    git clone https://github.com/nafew0/clausechain-escap.git
+    git clone --progress https://github.com/nafew0/clausechain-escap.git
     cd clausechain-escap
 
 ### 2. Set up the environment
@@ -73,13 +73,15 @@ privately. The app's own secrets — database password, signing keys — are gen
 
 ### 4. Start the interface
 
-    ./deploy.sh --data full --env-file keys.env
+    ./deploy.sh
 
-Windows (PowerShell): `powershell -ExecutionPolicy Bypass -File .\deploy.ps1 -Data full -EnvFile keys.env`
+Windows (PowerShell): `powershell -ExecutionPolicy Bypass -File .\deploy.ps1`
 
-The script downloads the data bundle (full: 3.3 GB, or `--data partial`: 1.3 GB) and verifies its checksum,
-builds and starts the app, loads both engines' results and the signed review decisions, and creates an admin
-account. The first run takes 20–40 minutes, mostly downloading and building.
+The script asks for the port, the keys file (`keys.env` from step 3), the data bundle (full 3.3 GB or partial
+1.3 GB) and whether to build, each with a default — press Enter to accept it. It then downloads the data with a
+progress bar and verifies its checksum, builds and starts the app, loads both engines' results and the signed
+review decisions, and creates an admin account. The first run takes 20–40 minutes, mostly downloading and
+building. (No questions: `./deploy.sh --yes --env-file keys.env`.)
 
 Then open **http://localhost:8080** and sign in as `admin` — the password is in `.deploy-credentials.txt`.
 **Everything else happens in the interface** — starting a run, reviewing, correcting, switching engines,

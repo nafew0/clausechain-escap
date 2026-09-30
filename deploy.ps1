@@ -3,12 +3,16 @@
 #
 # Needs only Docker Desktop. Every other dependency is pinned inside the images.
 #
-#   .\deploy.ps1
-#   .\deploy.ps1 -Data full                 full data, 3.3 GB (asked interactively if omitted)
-#   .\deploy.ps1 -Data partial              partial data, 1.3 GB (no embedding caches or run logs)
-#   .\deploy.ps1 -EnvFile keys.env          also install the provided engine keys
-#   .\deploy.ps1 -DataFile bundle.tar.gz    use a bundle you already downloaded
-#   .\deploy.ps1 -Port 9090                 serve on another port (default 8080)
+#   .\deploy.ps1                            asks each setting (Enter keeps the default shown)
+#   .\deploy.ps1 -Yes                       no questions: defaults plus any parameters given
+#
+#   -Data full | partial                    data bundle: full 3.3 GB (default) or partial 1.3 GB
+#   -DataFile FILE                          use a bundle you already downloaded
+#   -DataUrl URL [-DataSha256 SUM]          download the bundle from another link
+#   -SkipData                               start with an empty workspace
+#   -EnvFile FILE                           install the engine API keys from FILE
+#   -Port N                                 serve on port N (default 8080)
+#   -NoBuild                                start the existing images without rebuilding
 #
 # If scripts are blocked: powershell -ExecutionPolicy Bypass -File .\deploy.ps1
 # Safe to run again: finished steps are skipped.
@@ -21,7 +25,8 @@ param(
     [string]$DataSha256 = "",
     [ValidateSet("full", "partial")][string]$Data = "",
     [switch]$SkipData,
-    [switch]$NoBuild
+    [switch]$NoBuild,
+    [switch]$Yes
 )
 
 $ErrorActionPreference = "Stop"
@@ -97,69 +102,142 @@ if ($freeGb -lt 30) { Warn "Only $freeGb GB free on $($drive.Name):. The data an
 
 # ---------------------------------------------------------------- 2. settings
 Step "2/7  Settings"
+$Interactive = (-not $Yes) -and (-not [Console]::IsInputRedirected)
+# Asks a question showing its default; Enter keeps the default.
+function Ask($question, $default) {
+    if (-not $Interactive) { return $default }
+    $prompt = if ($default) { "  $question [$default]" } else { "  $question" }
+    $answer = Read-Host $prompt
+    if ([string]::IsNullOrWhiteSpace($answer)) { return $default }
+    return $answer.Trim().Trim('"').Trim("'")
+}
+function Test-Yes($answer) { return -not ($answer -match '^(n|no)$') }
+
+$CurrentPort = ""
+if (Test-Path ".env") {
+    $CurrentPort = ((Read-Lines ".env") | Where-Object { $_ -match '^CLAUSECHAIN_PORT=' } | ForEach-Object { ($_ -split '=', 2)[1] }) | Select-Object -First 1
+}
+if (-not $CurrentPort) { $CurrentPort = "8080" }
+if (-not $Port) { $Port = Ask "Port for the web app" $CurrentPort }
+if ($Port -notmatch '^\d+$') { Die "The port must be a number (got '$Port')." }
+
+if (-not $EnvFile) {
+    $keysDefault = if (Test-Path "engine\.env") { "keep" } else { "none" }
+    if ($Interactive) { Write-Host "  Engine API keys: a filled-in copy of engine\.env.example ('$keysDefault' = add or keep them later)" }
+    $EnvFile = Ask "Path to the keys file" $keysDefault
+    if ($EnvFile -in @("keep", "none", "skip", "no")) { $EnvFile = "" }
+}
+if ($EnvFile -and -not (Test-Path $EnvFile)) { Die "Keys file not found: $EnvFile" }
+
+$DataPresent = (Test-Path "engine\data\graph_v2.db") -and (Test-Path "engine\outputs")
+if (-not $SkipData -and -not $DataFile -and -not $DataUrl -and -not $Data -and -not $DataPresent) {
+    if ($Interactive) {
+        Write-Host "  Data bundle:"
+        Write-Host "    1) full     3.3 GB  corpus, source downloads, run outputs, embedding caches, run logs"
+        Write-Host "                        (re-runs need no re-embedding)"
+        Write-Host "    2) partial  1.3 GB  corpus, source downloads, run outputs"
+        Write-Host "    3) a bundle file you already downloaded"
+        Write-Host "    4) download from another link"
+        Write-Host "    5) none: start with an empty workspace"
+    }
+    switch (Ask "Choose 1-5" "1") {
+        { $_ -in @("1", "full") } { $Data = "full"; break }
+        { $_ -in @("2", "partial") } { $Data = "partial"; break }
+        "3" {
+            $DataFile = Ask "Path to the bundle (.tar.gz)" ""
+            if (-not $DataFile -or -not (Test-Path $DataFile)) { Die "Bundle not found: $DataFile" }
+            break
+        }
+        "4" {
+            $DataUrl = Ask "Link to the bundle" ""
+            if (-not $DataUrl) { Die "No link given." }
+            $DataSha256 = Ask "Its SHA-256 (Enter to skip the check)" ""
+            break
+        }
+        { $_ -in @("5", "none") } { $SkipData = $true; break }
+        default { Die "Choose a number from 1 to 5 (got '$_')." }
+    }
+}
+
+if (-not $NoBuild -and $Interactive) {
+    if (-not (Test-Yes (Ask "Build the images (needed the first time and after an update)" "yes"))) { $NoBuild = $true }
+}
+
+if ($SkipData) { $dataSummary = "none (empty workspace)" }
+elseif ($DataPresent -and -not $DataFile -and -not $DataUrl) { $dataSummary = "already in place" }
+elseif ($DataFile) { $dataSummary = $DataFile }
+elseif ($DataUrl) { $dataSummary = $DataUrl }
+elseif ($Data -eq "partial") { $dataSummary = "partial (1.3 GB download)" }
+else { $dataSummary = "full (3.3 GB download)" }
+if ($EnvFile) { $keysSummary = $EnvFile }
+elseif (Test-Path "engine\.env") { $keysSummary = "engine\.env (kept)" }
+else { $keysSummary = "none yet (runs need them; add later in engine\.env)" }
+Write-Host "  Summary"
+Write-Host "    Port:   $Port"
+Write-Host "    Keys:   $keysSummary"
+Write-Host "    Data:   $dataSummary"
+Write-Host ("    Build:  " + $(if ($NoBuild) { "no" } else { "yes" }))
+if ($Interactive -and -not (Test-Yes (Ask "Continue" "yes"))) { Write-Host "  Nothing changed."; exit 0 }
+
 if (-not (Test-Path ".env")) {
     $lines = Read-Lines ".env.example"
     foreach ($name in "DJANGO_SECRET_KEY", "JWT_SIGNING_KEY", "POSTGRES_PASSWORD") { $lines = Set-EnvValue $lines $name (New-Secret) }
     Write-Lf ".env" $lines
     Ok "Created .env with new random secrets"
 } else { Ok ".env already present (kept)" }
-if ($Port) {
-    $lines = Read-Lines ".env"
-    $lines = Set-EnvValue $lines "CLAUSECHAIN_PORT" $Port
-    $lines = Set-EnvValue $lines "APP_ORIGIN" "http://localhost:$Port"
-    $lines = Set-EnvValue $lines "CSRF_TRUSTED_ORIGINS" "http://localhost:$Port,http://127.0.0.1:$Port"
-    Write-Lf ".env" $lines
-}
-$Port = ((Read-Lines ".env") | Where-Object { $_ -match '^CLAUSECHAIN_PORT=' } | ForEach-Object { ($_ -split '=', 2)[1] }) | Select-Object -First 1
-if (-not $Port) { $Port = "8080" }
+$lines = Read-Lines ".env"
+$lines = Set-EnvValue $lines "CLAUSECHAIN_PORT" $Port
+$lines = Set-EnvValue $lines "APP_ORIGIN" "http://localhost:$Port"
+$lines = Set-EnvValue $lines "CSRF_TRUSTED_ORIGINS" "http://localhost:$Port,http://127.0.0.1:$Port"
+Write-Lf ".env" $lines
 $Url = "http://localhost:$Port"
 
 if ($EnvFile) {
-    if (-not (Test-Path $EnvFile)) { Die "-EnvFile not found: $EnvFile" }
     Write-Lf "engine\.env" (Read-Lines $EnvFile)
     Ok "Installed engine keys from $EnvFile into engine\.env"
 } elseif (-not (Test-Path "engine\.env")) {
     Write-Lf "engine\.env" (Read-Lines "engine\.env.example")
-    Warn "No engine keys yet: browsing and review work; runs need keys in engine\.env (then: docker compose restart engine-worker)"
+    Warn "No engine keys yet: browsing and review work; runs need keys in engine\.env (then: docker compose restart engine-worker backend)"
 } else { Ok "engine\.env already present (kept)" }
 
 # ---------------------------------------------------------------- 3. data
 Step "3/7  Data bundle (corpus database, run outputs, source downloads)"
 if ($SkipData) {
-    Warn "Skipped (-SkipData)"
-} elseif ((Test-Path "engine\data\graph_v2.db") -and (Test-Path "engine\outputs") -and -not $DataFile) {
+    Warn "Skipped: empty workspace"
+} elseif ($DataPresent -and -not $DataFile -and -not $DataUrl) {
     Ok "Already in place (engine\data\graph_v2.db)"
 } else {
     if (-not $DataFile -and -not $DataUrl) {
-        if (-not $Data) {
-            Write-Host "  Which data bundle?"
-            Write-Host "    1) full     3.3 GB  corpus, source downloads, run outputs, embedding caches, run logs"
-            Write-Host "                        (re-runs need no re-embedding)"
-            Write-Host "    2) partial  1.3 GB  corpus, source downloads, run outputs"
-            $answer = Read-Host "  Choose 1 or 2 [1]"
-            if ($answer -in @("2", "p", "partial")) { $Data = "partial" } else { $Data = "full" }
-        }
+        if (-not $Data) { $Data = "full" }
         $key = $Data.ToUpper()
         $DataUrl = $Bundle["CLAUSECHAIN_DATA_$($key)_URL"]
         if (-not $DataSha256) { $DataSha256 = $Bundle["CLAUSECHAIN_DATA_$($key)_SHA256"] }
-        Write-Host "  Data bundle: $Data"
     }
     if (-not $DataFile) {
         if (-not $DataUrl) { Die "No data bundle location. Pass -DataUrl <link> or -DataFile <bundle.tar.gz>." }
         New-Item -ItemType Directory -Force -Path ".deploy-cache" | Out-Null
         $name = if ($Data) { $Data } else { "custom" }
         $DataFile = ".deploy-cache\clausechain-data-$name.tar.gz"
-        Write-Host "  Downloading $DataUrl"
-        & curl.exe -fL --retry 5 --retry-delay 5 -C - -o $DataFile $DataUrl
-        if ($LASTEXITCODE -ne 0) { Die "Download failed. Check the link, then run .\deploy.ps1 again (it resumes)." }
+        $done = $false
+        if ($DataSha256 -and (Test-Path $DataFile)) {
+            $done = ((Get-FileHash -Algorithm SHA256 -Path $DataFile).Hash.ToLower() -eq $DataSha256.ToLower())
+        }
+        if ($done) { Ok "Already downloaded ($DataFile)" }
+        else {
+            Write-Host "  Downloading $DataUrl"
+            & curl.exe -fL --progress-bar --retry 5 --retry-delay 5 -C - -o $DataFile $DataUrl
+            if ($LASTEXITCODE -ne 0) { Die "Download failed. Check the link, then run .\deploy.ps1 again (it resumes)." }
+        }
     }
     if (-not (Test-Path $DataFile)) { Die "Data bundle not found: $DataFile" }
+    Write-Host "  Verifying SHA-256 ..."
+    $actual = (Get-FileHash -Algorithm SHA256 -Path $DataFile).Hash.ToLower()
     if ($DataSha256) {
-        Write-Host "  Verifying SHA-256 ..."
-        $actual = (Get-FileHash -Algorithm SHA256 -Path $DataFile).Hash.ToLower()
         if ($actual -ne $DataSha256.ToLower()) { Die "Checksum mismatch (got $actual). Delete $DataFile and run again." }
         Ok "Checksum verified"
-    } else { Warn "No checksum given; skipping verification" }
+    } elseif ($actual -in @($Bundle["CLAUSECHAIN_DATA_FULL_SHA256"], $Bundle["CLAUSECHAIN_DATA_PARTIAL_SHA256"])) {
+        Ok "Checksum verified (a published bundle)"
+    } else { Warn "Not one of the published bundles (SHA-256 $actual); unpacking it anyway" }
     Write-Host "  Unpacking about 15 GB (several minutes) ..."
     & tar.exe -xzf $DataFile -C $Root
     if ($LASTEXITCODE -ne 0) { Die "Could not unpack $DataFile" }

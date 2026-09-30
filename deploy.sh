@@ -6,13 +6,17 @@
 # Every other dependency — Python, Node, Postgres, all libraries — is pinned
 # inside the images, so the result is the same on every machine.
 #
-#   ./deploy.sh                          download the data bundle, build, start
-#   ./deploy.sh --data full              full data, 3.3 GB (asked interactively if omitted)
-#   ./deploy.sh --data partial           partial data, 1.3 GB (no embedding caches or run logs)
-#   ./deploy.sh --env-file keys.env      also install the provided engine keys
-#   ./deploy.sh --data-file bundle.tgz   use a bundle you already downloaded
-#   ./deploy.sh --port 9090              serve on another port (default 8080)
-#   ./deploy.sh --help
+#   ./deploy.sh                          asks each setting (Enter keeps the default shown)
+#   ./deploy.sh --yes                    no questions: defaults plus any options given
+#
+#   --data full | partial                data bundle: full 3.3 GB (default) or partial 1.3 GB
+#   --data-file FILE                     use a bundle you already downloaded
+#   --data-url URL [--data-sha256 SUM]   download the bundle from another link
+#   --skip-data                          start with an empty workspace
+#   --env-file FILE                      install the engine API keys from FILE
+#   --port N                             serve on port N (default 8080)
+#   --no-build                           start the existing images without rebuilding
+#   --help
 #
 # Safe to run again: finished steps are skipped (data, secrets, admin account).
 
@@ -30,8 +34,9 @@ DATA_SHA256=""
 DATA_CHOICE=""
 SKIP_DATA=0
 NO_BUILD=0
+ASSUME_YES=0
 
-usage() { sed -n '2,17p' "$0" | sed 's/^# \{0,1\}//'; exit 0; }
+usage() { sed -n '2,22p' "$0" | sed 's/^# \{0,1\}//'; exit 0; }
 while [ $# -gt 0 ]; do
   case "$1" in
     --port) PORT="$2"; shift 2 ;;
@@ -42,6 +47,7 @@ while [ $# -gt 0 ]; do
     --data-sha256) DATA_SHA256="$2"; shift 2 ;;
     --skip-data) SKIP_DATA=1; shift ;;
     --no-build) NO_BUILD=1; shift ;;
+    -y|--yes) ASSUME_YES=1; shift ;;
     -h|--help) usage ;;
     *) echo "Unknown option: $1 (see --help)" >&2; exit 2 ;;
   esac
@@ -112,6 +118,95 @@ fi
 
 # ---------------------------------------------------------------- 2. settings
 step "2/7  Settings"
+INTERACTIVE=0
+if [ "$ASSUME_YES" = 0 ] && [ -t 0 ] && [ -t 1 ]; then INTERACTIVE=1; fi
+
+# ask VAR "question" "default": prints the question with its default; Enter keeps it.
+ask() {
+  local answer=""
+  if [ "$INTERACTIVE" = 1 ]; then
+    if [ -n "$3" ]; then printf '  %s [%s]: ' "$2" "$3"; else printf '  %s: ' "$2"; fi
+    read -r answer || answer=""
+  fi
+  printf -v "$1" '%s' "${answer:-$3}"
+}
+# A path typed or dragged into the terminal: drop quotes and backslash-escaped spaces, expand ~.
+clean_path() {
+  local path="$1"
+  path="${path#"${path%%[![:space:]]*}"}"; path="${path%"${path##*[![:space:]]}"}"
+  path="${path#\"}"; path="${path%\"}"; path="${path#\'}"; path="${path%\'}"
+  path="${path//\\ / }"
+  case "$path" in "~"*) path="$HOME${path#\~}" ;; esac
+  printf '%s' "$path"
+}
+
+CURRENT_PORT="$(grep -E '^CLAUSECHAIN_PORT=' .env 2>/dev/null | cut -d= -f2 || true)"
+[ -n "$PORT" ] || ask PORT "Port for the web app" "${CURRENT_PORT:-8080}"
+case "$PORT" in ''|*[!0-9]*) die "The port must be a number (got '$PORT')." ;; esac
+
+if [ -z "$ENV_FILE" ]; then
+  if [ -f engine/.env ]; then keys_default=keep; else keys_default=none; fi
+  [ "$INTERACTIVE" = 1 ] && echo "  Engine API keys: a filled-in copy of engine/.env.example ('$keys_default' = add or keep them later)"
+  ask ENV_FILE "Path to the keys file" "$keys_default"
+  case "$ENV_FILE" in keep|none|skip|no) ENV_FILE="" ;; esac
+fi
+ENV_FILE="$(clean_path "$ENV_FILE")"
+[ -z "$ENV_FILE" ] || [ -f "$ENV_FILE" ] || die "Keys file not found: $ENV_FILE"
+
+DATA_PRESENT=0
+if [ -f engine/data/graph_v2.db ] && [ -d engine/outputs ]; then DATA_PRESENT=1; fi
+if [ "$SKIP_DATA" = 0 ] && [ -z "$DATA_FILE$DATA_URL$DATA_CHOICE" ] && [ "$DATA_PRESENT" = 0 ]; then
+  if [ "$INTERACTIVE" = 1 ]; then
+    echo "  Data bundle:"
+    echo "    1) full     3.3 GB  corpus, source downloads, run outputs, embedding caches, run logs"
+    echo "                        (re-runs need no re-embedding)"
+    echo "    2) partial  1.3 GB  corpus, source downloads, run outputs"
+    echo "    3) a bundle file you already downloaded"
+    echo "    4) download from another link"
+    echo "    5) none: start with an empty workspace"
+  fi
+  ask data_answer "Choose 1-5" "1"
+  case "$data_answer" in
+    1|full) DATA_CHOICE=full ;;
+    2|partial) DATA_CHOICE=partial ;;
+    3) ask DATA_FILE "Path to the bundle (.tar.gz)" ""
+       DATA_FILE="$(clean_path "$DATA_FILE")"
+       [ -f "$DATA_FILE" ] || die "Bundle not found: $DATA_FILE" ;;
+    4) ask DATA_URL "Link to the bundle" ""
+       [ -n "$DATA_URL" ] || die "No link given."
+       ask DATA_SHA256 "Its SHA-256 (Enter to skip the check)" "" ;;
+    5|none) SKIP_DATA=1 ;;
+    *) die "Choose a number from 1 to 5 (got '$data_answer')." ;;
+  esac
+fi
+if [ -n "$DATA_FILE" ]; then DATA_FILE="$(clean_path "$DATA_FILE")"; fi
+case "${DATA_CHOICE:-}" in ''|full|partial) ;; *) die "--data must be 'full' or 'partial'." ;; esac
+
+if [ "$NO_BUILD" = 0 ] && [ "$INTERACTIVE" = 1 ]; then
+  ask build_answer "Build the images (needed the first time and after an update)" "yes"
+  case "$build_answer" in n|N|no|No|NO) NO_BUILD=1 ;; esac
+fi
+
+if [ "$SKIP_DATA" = 1 ]; then data_summary="none (empty workspace)"
+elif [ "$DATA_PRESENT" = 1 ] && [ -z "$DATA_FILE$DATA_URL" ]; then data_summary="already in place"
+elif [ -n "$DATA_FILE" ]; then data_summary="$DATA_FILE"
+elif [ -n "$DATA_URL" ]; then data_summary="$DATA_URL"
+elif [ "${DATA_CHOICE:-full}" = partial ]; then data_summary="partial (1.3 GB download)"
+else data_summary="full (3.3 GB download)"; fi
+if [ -n "$ENV_FILE" ]; then keys_summary="$ENV_FILE"
+elif [ -f engine/.env ]; then keys_summary="engine/.env (kept)"
+else keys_summary="none yet (runs need them; add later in engine/.env)"; fi
+if [ "$NO_BUILD" = 1 ]; then build_summary=no; else build_summary=yes; fi
+echo "  Summary"
+echo "    Port:   $PORT"
+echo "    Keys:   $keys_summary"
+echo "    Data:   $data_summary"
+echo "    Build:  $build_summary"
+if [ "$INTERACTIVE" = 1 ]; then
+  ask go_answer "Continue" "yes"
+  case "$go_answer" in n|N|no|No|NO) echo "  Nothing changed."; exit 0 ;; esac
+fi
+
 if [ ! -f .env ]; then
   cp .env.example .env
   for name in DJANGO_SECRET_KEY JWT_SIGNING_KEY POSTGRES_PASSWORD; do
@@ -123,23 +218,18 @@ if [ ! -f .env ]; then
 else
   ok ".env already present (kept)"
 fi
-if [ -n "$PORT" ]; then
-  sed -i.bak -e "s|^CLAUSECHAIN_PORT=.*|CLAUSECHAIN_PORT=${PORT}|" \
-             -e "s|^APP_ORIGIN=.*|APP_ORIGIN=http://localhost:${PORT}|" \
-             -e "s|^CSRF_TRUSTED_ORIGINS=.*|CSRF_TRUSTED_ORIGINS=http://localhost:${PORT},http://127.0.0.1:${PORT}|" .env
-  rm -f .env.bak
-fi
-PORT="$(grep -E '^CLAUSECHAIN_PORT=' .env | cut -d= -f2)"
-PORT="${PORT:-8080}"
+sed -i.bak -e "s|^CLAUSECHAIN_PORT=.*|CLAUSECHAIN_PORT=${PORT}|" \
+           -e "s|^APP_ORIGIN=.*|APP_ORIGIN=http://localhost:${PORT}|" \
+           -e "s|^CSRF_TRUSTED_ORIGINS=.*|CSRF_TRUSTED_ORIGINS=http://localhost:${PORT},http://127.0.0.1:${PORT}|" .env
+rm -f .env.bak
 URL="http://localhost:${PORT}"
 
 if [ -n "$ENV_FILE" ]; then
-  [ -f "$ENV_FILE" ] || die "--env-file not found: $ENV_FILE"
   cp "$ENV_FILE" engine/.env
   ok "Installed engine keys from $ENV_FILE into engine/.env"
 elif [ ! -f engine/.env ]; then
   cp engine/.env.example engine/.env
-  warn "No engine keys yet: browsing and review work; runs need keys in engine/.env (then: $COMPOSE restart engine-worker)"
+  warn "No engine keys yet: browsing and review work; runs need keys in engine/.env (then: $COMPOSE restart engine-worker backend)"
 else
   ok "engine/.env already present (kept)"
 fi
@@ -147,51 +237,48 @@ fi
 # ---------------------------------------------------------------- 3. data
 step "3/7  Data bundle (corpus database, run outputs, source downloads)"
 if [ "$SKIP_DATA" = 1 ]; then
-  warn "Skipped (--skip-data)"
-elif [ -f engine/data/graph_v2.db ] && [ -d engine/outputs ] && [ -z "$DATA_FILE" ]; then
+  warn "Skipped: empty workspace"
+elif [ "$DATA_PRESENT" = 1 ] && [ -z "$DATA_FILE$DATA_URL" ]; then
   ok "Already in place (engine/data/graph_v2.db)"
 else
   if [ -z "$DATA_FILE" ] && [ -z "$DATA_URL" ]; then
-    if [ -z "$DATA_CHOICE" ] && [ -t 0 ]; then
-      echo "  Which data bundle?"
-      echo "    1) full     3.3 GB  corpus, source downloads, run outputs, embedding caches, run logs"
-      echo "                        (re-runs need no re-embedding)"
-      echo "    2) partial  1.3 GB  corpus, source downloads, run outputs"
-      printf "  Choose 1 or 2 [1]: "
-      read -r answer
-      case "$answer" in 2|p|partial) DATA_CHOICE=partial ;; *) DATA_CHOICE=full ;; esac
-    fi
     DATA_CHOICE="${DATA_CHOICE:-full}"
-    case "$DATA_CHOICE" in
-      full) DATA_URL="${CLAUSECHAIN_DATA_FULL_URL:-}"; DATA_SHA256="${DATA_SHA256:-${CLAUSECHAIN_DATA_FULL_SHA256:-}}" ;;
-      partial) DATA_URL="${CLAUSECHAIN_DATA_PARTIAL_URL:-}"; DATA_SHA256="${DATA_SHA256:-${CLAUSECHAIN_DATA_PARTIAL_SHA256:-}}" ;;
-      *) die "--data must be 'full' or 'partial'" ;;
-    esac
-    echo "  Data bundle: $DATA_CHOICE"
+    if [ "$DATA_CHOICE" = partial ]; then
+      DATA_URL="${CLAUSECHAIN_DATA_PARTIAL_URL:-}"; DATA_SHA256="${DATA_SHA256:-${CLAUSECHAIN_DATA_PARTIAL_SHA256:-}}"
+    else
+      DATA_URL="${CLAUSECHAIN_DATA_FULL_URL:-}"; DATA_SHA256="${DATA_SHA256:-${CLAUSECHAIN_DATA_FULL_SHA256:-}}"
+    fi
   fi
   if [ -z "$DATA_FILE" ]; then
     [ -n "$DATA_URL" ] || die "No data bundle location. Pass --data-url <link> or --data-file <bundle.tar.gz>."
     [ -n "$FETCH" ] || die "'curl' or 'wget' is required to download the data bundle."
     mkdir -p .deploy-cache
     DATA_FILE=".deploy-cache/clausechain-data-${DATA_CHOICE:-custom}.tar.gz"
-    echo "  Downloading $DATA_URL"
-    if [ "$FETCH" = curl ]; then
-      curl -fL --retry 5 --retry-delay 5 -C - -o "$DATA_FILE" "$DATA_URL" || die "Download failed. Check the link, then run ./deploy.sh again (it resumes)."
+    if [ -f "$DATA_FILE" ] && [ -n "$DATA_SHA256" ] && [ "$(sha256_of "$DATA_FILE")" = "$DATA_SHA256" ]; then
+      ok "Already downloaded ($DATA_FILE)"
     else
-      wget -c -t 5 -O "$DATA_FILE" "$DATA_URL" || die "Download failed. Check the link, then run ./deploy.sh again (it resumes)."
+      echo "  Downloading $DATA_URL"
+      if [ "$FETCH" = curl ]; then
+        curl -fL --progress-bar --retry 5 --retry-delay 5 -C - -o "$DATA_FILE" "$DATA_URL" || die "Download failed. Check the link, then run ./deploy.sh again (it resumes)."
+      else
+        wget -c -t 5 --progress=bar:force -O "$DATA_FILE" "$DATA_URL" || die "Download failed. Check the link, then run ./deploy.sh again (it resumes)."
+      fi
     fi
   fi
   [ -f "$DATA_FILE" ] || die "Data bundle not found: $DATA_FILE"
+  echo "  Verifying SHA-256 …"
+  actual="$(sha256_of "$DATA_FILE")"
   if [ -n "$DATA_SHA256" ]; then
-    echo "  Verifying SHA-256 …"
-    actual="$(sha256_of "$DATA_FILE")"
     [ "$actual" = "$DATA_SHA256" ] || die "Checksum mismatch (got $actual). Delete $DATA_FILE and run again."
     ok "Checksum verified"
+  elif [ "$actual" = "${CLAUSECHAIN_DATA_FULL_SHA256:-}" ] || [ "$actual" = "${CLAUSECHAIN_DATA_PARTIAL_SHA256:-}" ]; then
+    ok "Checksum verified (a published bundle)"
   else
-    warn "No checksum given; skipping verification"
+    warn "Not one of the published bundles (SHA-256 $actual); unpacking it anyway"
   fi
-  echo "  Unpacking about 15 GB (several minutes) …"
-  tar -xzf "$DATA_FILE" -C "$ROOT" || die "Could not unpack $DATA_FILE"
+  echo "  Unpacking about 15 GB (several minutes; the large corpus file shows as a pause) …"
+  tar -xzvf "$DATA_FILE" -C "$ROOT" 2>&1 | awk '{ printf "\r  unpacked %d files", NR; fflush() } END { print "" }' \
+    || die "Could not unpack $DATA_FILE"
   [ -f engine/data/graph_v2.db ] || die "The bundle did not contain engine/data/graph_v2.db"
   ok "Data in place ($(du -sh engine/data/graph_v2.db | awk '{print $1}') corpus database)"
 fi

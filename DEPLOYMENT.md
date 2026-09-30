@@ -34,31 +34,50 @@ that, starting and stopping take seconds.
 ### macOS and Linux
 
 ```bash
-git clone https://github.com/nafew0/clausechain-escap.git
+git clone --progress https://github.com/nafew0/clausechain-escap.git
 cd clausechain-escap
-./deploy.sh --env-file /path/to/keys.env
+./deploy.sh
 ```
 
 ### Windows (PowerShell)
 
 ```powershell
-git clone https://github.com/nafew0/clausechain-escap.git
+git clone --progress https://github.com/nafew0/clausechain-escap.git
 cd clausechain-escap
-powershell -ExecutionPolicy Bypass -File .\deploy.ps1 -EnvFile C:\path\to\keys.env
+powershell -ExecutionPolicy Bypass -File .\deploy.ps1
 ```
 
 WSL 2 and Git Bash users can run `./deploy.sh` instead.
 
-Leave out `--env-file` / `-EnvFile` if you have no keys yet; you can add them
-later ([section 3](#3-api-keys)).
+`git clone` shows its progress as it downloads the repository (about 450 MB).
+
+The script then asks a few questions. Each shows its default in brackets;
+press **Enter** to accept it:
+
+```
+  Port for the web app [8080]:
+  Path to the keys file [none]:            your filled-in copy of engine/.env.example
+  Data bundle:
+    1) full     3.3 GB  corpus, source downloads, run outputs, embedding caches, run logs
+    2) partial  1.3 GB  corpus, source downloads, run outputs
+    3) a bundle file you already downloaded
+    4) download from another link
+    5) none: start with an empty workspace
+  Choose 1-5 [1]:
+  Build the images (needed the first time and after an update) [yes]:
+  Continue [yes]:
+```
+
+The data download shows a progress bar, and unpacking shows a file count. No
+keys yet? Press Enter; you can add them later ([section 3](#3-api-keys)).
 
 ### What the script does
 
 | Step | What happens |
 | :--- | :--- |
 | 1. Prerequisites | Finds Docker (even if this terminal was opened before Docker was installed), checks that it is running, checks disk space. |
-| 2. Settings | Creates `.env` with fresh random secrets, and `engine/.env` from your keys file. |
-| 3. Data | Asks for the full (3.3 GB) or partial (1.3 GB) data bundle, downloads it, verifies its SHA-256 and unpacks it: the built corpus, every downloaded source document and every run (full also has the embedding caches for both models and the run logs). An interrupted download resumes when you run the script again. |
+| 2. Settings | Asks for the port, the keys file, the data bundle and whether to build (Enter keeps each default), then creates `.env` with fresh random secrets and `engine/.env` from your keys file. |
+| 3. Data | Downloads the chosen bundle with a progress bar, verifies its SHA-256 and unpacks it: the built corpus, every downloaded source document and every run (full also has the embedding caches for both models and the run logs). An interrupted download resumes when you run the script again. |
 | 4. Build and start | Builds the images, prepares the database and starts the app. |
 | 5. Wait | Waits until the website and the API answer. |
 | 6. Import | Loads the Hybrid and Local results and the signed review decisions into the database. |
@@ -78,9 +97,14 @@ nothing you did in the app is overwritten.
 
 ### Options
 
+Every setting below is asked when you run the script. Pass it on the command
+line to skip that question, or add `--yes` (Windows: `-Yes`) to take the
+defaults for everything not given, with no questions.
+
 | macOS / Linux | Windows | Use |
 | :--- | :--- | :--- |
-| `--data full` | `-Data full` | Full data bundle, 3.3 GB: corpus, source downloads, run outputs, embedding caches and run logs. Re-runs need no re-embedding. The script asks if you leave this out. |
+| `--yes` | `-Yes` | No questions: defaults plus the options given. |
+| `--data full` | `-Data full` | Full data bundle, 3.3 GB: corpus, source downloads, run outputs, embedding caches and run logs. Re-runs need no re-embedding. The default. |
 | `--data partial` | `-Data partial` | Partial data bundle, 1.3 GB: corpus, source downloads and run outputs. A re-run first re-embeds the corpus (needs the keys). |
 | `--env-file FILE` | `-EnvFile FILE` | Install the engine keys from FILE. |
 | `--port 9090` | `-Port 9090` | Serve on another port (default 8080). |
@@ -193,7 +217,7 @@ bundle) and commit it.
 ### Testing a fresh install
 
 ```bash
-git clone https://github.com/nafew0/clausechain-escap.git /tmp/cc-test
+git clone --progress https://github.com/nafew0/clausechain-escap.git /tmp/cc-test
 cd /tmp/cc-test
 ./deploy.sh --port 8090 --data-file /path/to/clausechain-data-YYYYMMDD.tar.gz
 ```
