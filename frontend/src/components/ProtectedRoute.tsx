@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 import { useAuth } from '@/contexts/AuthContext'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 
 export default function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth()
@@ -12,13 +13,7 @@ export default function ProtectedRoute({ children }: { children: React.ReactNode
     if (!loading && !user) router.replace('/login')
   }, [user, loading, router])
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-xl">Loading...</div>
-      </div>
-    )
-  }
+  if (loading) return <PageLoader variant="screen" />
 
   if (!user) return null
 

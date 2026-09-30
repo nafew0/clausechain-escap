@@ -8520,17 +8520,17 @@
   "finding_key": "2943185f23ede3a7449b03ef912b2cce93e92809a549c156b1c18471dae40f42",
   "review_subject_hash": "be21b2c07e306efc508e3eee47cb916ce3076dd48cb32bdfa3020809a1c341dd",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Wrong pinpoint: the quoted text is Article 12 paragraph (2) of BSSN Regulation 2/2024, not paragraph (3) as cited, and a wrong section scores zero. The currentness record on this row also belongs to BSSN Regulation 1/2024, not this regulation.",
+   "decision": "rejected",
    "mapping_checked": false,
-   "status_checked": false,
-   "citation_reviewer_name": "",
    "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "reviewed_at": "2026-09-30T12:21:52.152991+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "admin",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -8622,17 +8622,17 @@
   "finding_key": "cf8371bdbb0f16c7e219a77bf12daf193afaaa81f3271073aa3143924ddda7fd",
   "review_subject_hash": "d8112a125094db403490903f31f33af6b5668b3c3dd324c3b43bc5e8427b0bbf",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Wrong pinpoint: the quoted text is Article 72 paragraph (1) of PBI 23/6/PBI/2021, not paragraph (2) as cited. The provision is relevant to 7.2 and should be re-extracted as Art. 72(1).",
+   "decision": "rejected",
    "mapping_checked": false,
-   "status_checked": false,
-   "citation_reviewer_name": "",
    "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "reviewed_at": "2026-09-30T12:21:52.345288+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "admin",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -8656,17 +8656,17 @@
   "finding_key": "be235af410a91c9e2668a895b005116d6df65d11844d6099b7d3ba9f6accc799",
   "review_subject_hash": "44d92e40f27584d500fdc1dfdceba22df55147f31e8183ec717a855ccff246d8",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Wrong pinpoint: the quoted text is Article 89 paragraph (1) of PBI 23/7/PBI/2021, not paragraph (2) as cited. The provision is relevant to 7.2 and should be re-extracted as Art. 89(1).",
+   "decision": "rejected",
    "mapping_checked": false,
-   "status_checked": false,
-   "citation_reviewer_name": "",
    "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "reviewed_at": "2026-09-30T12:21:52.541052+00:00",
+   "reviewer_name": "Abu Naser Md. Nafew",
+   "reviewer_role": "admin",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {

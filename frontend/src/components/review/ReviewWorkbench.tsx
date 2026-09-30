@@ -39,6 +39,7 @@ import { useAuth } from '@/contexts/AuthContext'
 import { SnapshotBanner } from '@/components/workspace/SnapshotBanner'
 import { ModePageHeader } from '@/components/workspace/ModePageHeader'
 import { JudgeReasoning } from '@/components/review/JudgeReasoning'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 import {
   useDecide,
   useDecisionHistory,
@@ -698,7 +699,7 @@ export default function ReviewWorkbench() {
                     ] as const).map(([group, label, options, selected]) => <fieldset key={group}><legend>{label}</legend><div>{options.map((value) => <label key={value}><input type="checkbox" checked={selected.includes(value)} onChange={() => toggleFilter(group, value)} /><span>{group === 'pillars' ? `Pillar ${value}` : value}</span></label>)}</div></fieldset>)}
                   </m.div> : null}</AnimatePresence>
                 </div>
-                <div className="review-filter-summary"><span>{filtered.length} rows</span>{filter || activeFilterCount ? <button onClick={clearFilters}>Clear filters</button> : null}</div>
+                <div className="review-filter-summary"><span>{queueQuery.isPending ? 'Loading…' : `${filtered.length} rows`}</span>{filter || activeFilterCount ? <button onClick={clearFilters}>Clear filters</button> : null}</div>
               </div>
               {queue === 'known' ? <div className="review-bulk-bar"><label><input type="checkbox" checked={bulkEligible.length > 0 && selectedKnown.size === bulkEligible.length} onChange={(event) => setSelectedKnown(event.target.checked ? new Set(bulkEligible.map(({ item }) => item.finding_key!)) : new Set())} /> Select eligible filtered rows</label><button disabled={!selectedKnown.size || decide.isPending} onClick={() => void submitBulk()}>Approve {selectedKnown.size || ''}</button></div> : null}
               <div className="review-rail-list">
@@ -734,7 +735,7 @@ export default function ReviewWorkbench() {
                 </article>
                 <DecisionPanel key={selected.item.stable_key} queue={queue} item={selected.item} record={selected.record} context={context.data} />
                 {history.data && history.data.results.length ? <section className="review-history"><h3><History size={16} /> Append-only history</h3>{history.data.results.slice().reverse().map((entry) => <article key={entry.id}><strong>{'stage' in entry ? entry.stage : entry.verdict}</strong><span>{entry.reviewer_name} · {new Date(entry.reviewed_at).toLocaleString()}</span></article>)}</section> : null}
-              </m.div> : queueQuery.isPending ? <div className="review-canvas-loading" /> : <div className="review-empty"><Menu size={24} /><h2>No rows match these filters</h2><button onClick={clearFilters}>Clear filters</button></div>}
+              </m.div> : queueQuery.isPending ? <PageLoader label="Loading the review queue" /> : <div className="review-empty"><Menu size={24} /><h2>No rows match these filters</h2><button onClick={clearFilters}>Clear filters</button></div>}
             </main>
           </div>}
           {selected ? <ReferenceDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} record={selected.record} context={context.data} loading={context.isPending} /> : null}

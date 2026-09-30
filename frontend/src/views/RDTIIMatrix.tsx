@@ -1,8 +1,9 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 import Link from 'next/link'
-import { AlertTriangle, ArrowUpRight, CheckCircle2, CircleDashed, FileText, Gavel, LoaderCircle, MinusCircle, PenLine, Scale, Server, X, XCircle } from 'lucide-react'
+import { AlertTriangle, ArrowUpRight, CheckCircle2, CircleDashed, FileText, Gavel, MinusCircle, PenLine, Scale, Server, X, XCircle } from 'lucide-react'
 
 import WorkspaceShell from '@/components/clausechain/WorkspaceShell'
 import { TruthBadge } from '@/components/clausechain/TruthState'
@@ -82,7 +83,7 @@ export default function RDTIIMatrix() {
     actions={<FinalRoundExportMenu mode={mode} disabled={!matrix.data?.snapshot} />}
     description={local ? 'The open-weights model’s own matrix: its Zone-3 proposals and your Local review decisions, from the Local snapshot. Scores are 0 / 0.5 / 1 at indicator level; Model comparison sets them beside the hybrid scores.' : 'Economies × indicators · engine-proposed, reviewer-decided, evidence-anchored. Scores are 0 / 0.5 / 1 at indicator level.'}
   />
-  if (matrix.isPending) return <WorkspaceShell breadcrumbs={[{ label: 'RDTII Matrix' }]}><div className="cc-page z3-page">{header}<div className="run-page-state"><LoaderCircle size={28} /> Loading indicator scores…</div></div></WorkspaceShell>
+  if (matrix.isPending) return <WorkspaceShell breadcrumbs={[{ label: 'RDTII Matrix' }]}><div className="cc-page z3-page">{header}<PageLoader label="Loading indicator scores" /></div></WorkspaceShell>
   if (matrix.isError || !matrix.data) return <WorkspaceShell breadcrumbs={[{ label: 'RDTII Matrix' }]}><div className="cc-page z3-page">{header}<div className="run-page-state error"><XCircle size={28} /> The score matrix API is unavailable.</div></div></WorkspaceShell>
   const data = matrix.data
 

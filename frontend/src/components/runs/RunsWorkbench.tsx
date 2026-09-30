@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 import {
   Activity,
   AlertTriangle,
@@ -220,7 +221,7 @@ export default function RunsWorkbench() {
     title={copy.title}
     description={copy.intro}
   />
-  if (query.isPending) return <div className="cc-page runs-workbench">{header}<div className="run-page-state"><LoaderCircle size={28} /> Loading immutable run history…</div></div>
+  if (query.isPending) return <div className="cc-page runs-workbench">{header}<PageLoader label="Loading run history" /></div>
   if (query.isError || !query.data) return <div className="cc-page runs-workbench">{header}<div className="run-page-state error"><XCircle size={28} /> Run history API is unavailable.</div></div>
 
   return (

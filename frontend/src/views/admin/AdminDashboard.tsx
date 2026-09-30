@@ -1,5 +1,6 @@
 'use client'
 import { useQuery } from '@tanstack/react-query'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 
 import QBarChart from '@/components/charts/QBarChart'
 import QLineChart from '@/components/charts/QLineChart'
@@ -45,7 +46,7 @@ export default function AdminDashboard() {
   })
 
   if (isLoading) {
-    return <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-muted-foreground">Loading admin analytics...</div>
+    return <PageLoader label="Loading admin analytics" />
   }
 
   if (error) {

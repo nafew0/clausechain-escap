@@ -73,7 +73,7 @@ export default function ModelComparison() {
 
   return <WorkspaceShell breadcrumbs={[{ label: 'Model Comparison' }]}><div className="cc-page comparison-page">
     <div className="cc-page-header"><div><div className="truth-chiprow"><span className="comparison-chip"><GitCompareArrows size={13} /> Model A vs Model B · one engine</span></div><h1 className="cc-page-title text-[34px] mt-3">Model comparison</h1><p className="text-cc-ink-500 mt-1.5">The same pipeline, corpus and gates, run on two model backends. Provision by provision, in the final template&apos;s &ldquo;Engine Comparison&rdquo; shape. Hybrid and Local stay separate everywhere else.</p></div>{selected ? <button className="truth-primary-link" onClick={() => void exportCsv()} disabled={exporting}><Download size={15} /> {exporting ? 'Exporting…' : 'Export CSV'}</button> : null}</div>
-    {query.isError || !query.data ? <PageUnavailable title={query.isPending ? 'Pairing the two models’ findings…' : 'The comparison is unavailable'} /> : <>
+    {query.isError || !query.data ? <PageUnavailable pending={query.isPending} title={query.isPending ? 'Pairing the two models’ findings…' : 'The comparison is unavailable'} /> : <>
       <nav className="comparison-scopes" aria-label="Economy and pillar">{query.data.scopes.map((scope) => {
         const both = scope.model_a && scope.model_b
         const active = selected?.economy === scope.economy && selected?.pillar === scope.pillar

@@ -41,7 +41,7 @@ export default function KnowledgeGraph() {
       <div className="cc-page graph-page">
         <div className="cc-page-header"><div><div className="truth-chiprow"><TruthBadge state="readonly" label={status === 'verified' ? 'READ-ONLY · VERIFIED NEO4J SNAPSHOT' : 'READ-ONLY · NEO4J SNAPSHOT'} />{summary.data ? <SnapshotBanner snapshot={summary.data.snapshot} /> : null}</div><h1 className="cc-page-title text-[32px] mt-3">Legal provenance knowledge graph</h1><p className="text-cc-ink-500 mt-1.5">Neo4j mirror for audit paths and cross-references—not an unmeasured retrieval-lift claim.</p></div></div>
         {summary.isError || !summary.data ? (
-          <PageUnavailable title={summary.isPending ? 'Loading Neo4j snapshot metadata…' : 'Knowledge graph metadata is unavailable'} />
+          <PageUnavailable pending={summary.isPending} title={summary.isPending ? 'Loading Neo4j snapshot metadata…' : 'Knowledge graph metadata is unavailable'} />
         ) : (
           <>
             <section className={`graph-verification ${status}`}><div>{status === 'verified' ? <ShieldCheck /> : <AlertTriangle />}<span><strong>{status === 'verified' ? 'Neo4j parity verified' : status === 'parity_failed' ? 'Mirror reconciliation pending' : 'Neo4j snapshot unavailable'}</strong><small>Schema {summary.data.schema_version ?? 'n/a'} · {summary.data.node_count} exported nodes · {summary.data.edge_count} relationships</small></span></div><code>{summary.data.artifact.sha256}</code>{summary.data.reason ? <p>{summary.data.reason}</p> : null}</section>
@@ -59,7 +59,7 @@ export default function KnowledgeGraph() {
                 </div>
                 <div className="graph-lenses">{LENSES.map(([key, label]) => <button className={lens === key ? 'active' : ''} onClick={() => setLens(key)} key={key}><GitBranch size={14} />{label}</button>)}</div>
                 {graph.isError || !graph.data ? (
-                  <PageUnavailable title={graph.isPending ? 'Resolving graph lens…' : 'The stored subgraph could not be read'} />
+                  <PageUnavailable compact pending={graph.isPending} title={graph.isPending ? 'Resolving graph lens…' : 'The stored subgraph could not be read'} />
                 ) : (
                   <div className="graph-workspace">
                     <section className="graph-canvas" aria-label="Knowledge graph visualization"><svg viewBox="0 0 900 560" role="img" aria-label={`${layout.nodes.length} nodes and ${layout.edges.length} relationships`}><g>{layout.edges.map(edge => <line key={edge.id} x1={edge.source.x} y1={edge.source.y} x2={edge.target.x} y2={edge.target.y} className={`edge edge-${edge.type.toLowerCase()}`}><title>{edge.type}</title></line>)}</g><g>{layout.nodes.map(node => <g role="button" tabIndex={0} aria-label={`${node.labels.join(', ')} ${node.id}`} onClick={() => setSelectedId(node.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') setSelectedId(node.id) }} className={selectedId === node.id ? 'node selected' : 'node'} key={node.id} transform={`translate(${node.x},${node.y})`}><circle r={selectedId === node.id ? 11 : 8} fill={COLORS[node.labels[0]] ?? '#64748B'} /><text x="12" y="4">{nodeLabel(node)}</text></g>)}</g></svg><div className="graph-legend">{Object.entries(COLORS).map(([label, color]) => <span key={label}><i style={{ background: color }} />{label}</span>)}</div></section>

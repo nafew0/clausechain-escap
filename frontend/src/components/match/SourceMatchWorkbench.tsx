@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import {
@@ -14,7 +15,6 @@ import {
   FileCheck2,
   Focus,
   Link2,
-  LoaderCircle,
   LockKeyhole,
   Minus,
   Plus,
@@ -103,7 +103,7 @@ function ProofImage({ url, alt }: { url: string; alt: string }) {
     }
   }, [objectUrl])
 
-  if (proof.isPending) return <div className="match-proof-loading"><LoaderCircle size={26} /><span>Loading authenticated proof image…</span></div>
+  if (proof.isPending) return <PageLoader variant="compact" label="Loading the proof image" />
   if (proof.isError || !objectUrl) return <div className="match-proof-error"><ShieldAlert size={24} /><strong>Proof image could not be loaded</strong><span>The archived file remains unavailable; do not approve from this view.</span></div>
   return (
     <div className="match-image-stage">
@@ -138,7 +138,7 @@ export default function SourceMatchWorkbench({ findingKey }: { findingKey: strin
   const context = useReviewContext(query.data?.review_queue ?? 'new', query.data?.stable_key)
   const suffix = retainedQuery(search)
 
-  if (query.isPending) return <div className="match-page-state"><LoaderCircle size={30} /><h1>Opening source proof…</h1></div>
+  if (query.isPending) return <PageLoader label="Opening the source proof" />
   if (query.isError || !query.data) return <div className="match-page-state error"><ShieldAlert size={30} /><h1>Source Match unavailable</h1><p>The evidence API could not load this finding. Return to Review and try again.</p><Link href="/review">Back to Review</Link></div>
 
   const data = query.data

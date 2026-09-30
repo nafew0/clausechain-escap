@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 
 import ProtectedRoute from '@/components/ProtectedRoute'
 import WorkspaceShell from '@/components/clausechain/WorkspaceShell'
@@ -9,7 +10,7 @@ export default async function SourceMatchPage({ params }: PageProps<'/match/[fin
   return (
     <ProtectedRoute>
       <WorkspaceShell breadcrumbs={[{ label: 'Review', href: '/review' }, { label: 'Source Match' }]}>
-        <Suspense fallback={<div className="match-page-state" aria-label="Loading Source Match" />}>
+        <Suspense fallback={<PageLoader variant="screen" label="Opening the source proof" />}>
           <SourceMatchWorkbench findingKey={findingKey} />
         </Suspense>
       </WorkspaceShell>

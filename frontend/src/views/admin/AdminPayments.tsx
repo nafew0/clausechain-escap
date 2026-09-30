@@ -1,5 +1,6 @@
 'use client'
 import { useMemo, useState } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { ColumnDef } from '@tanstack/react-table'
@@ -329,7 +330,7 @@ export default function AdminPayments() {
   }
 
   if (isLoading) {
-    return <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-muted-foreground">Loading payments...</div>
+    return <PageLoader label="Loading payments" />
   }
 
   if (error) {

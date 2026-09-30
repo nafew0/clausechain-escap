@@ -9,7 +9,6 @@ import {
   CircleDashed,
   Database,
   FileCheck2,
-  GitBranch,
   History,
   RefreshCw,
   ShieldAlert,
@@ -47,7 +46,7 @@ export default function WorkspaceDashboard() {
       description="Current legal evidence, controlled updates and attributable review history."
       actions={<Link className="truth-primary-link" href={modeHref("/review")}>Open legal review <ArrowRight size={15} /></Link>}
     />
-    {query.isError || !data ? <PageUnavailable title={query.isPending ? 'Loading the authoritative registry…' : 'Registry data is unavailable'} /> : <>
+    {query.isError || !data ? <PageUnavailable pending={query.isPending} title={query.isPending ? 'Loading the authoritative registry…' : 'Registry data is unavailable'} /> : <>
       <section className="registry-overview" data-data-card>
         <div className="registry-overview-title"><Database /><div><span>Current evidence registry</span><strong>{data.registry.current.toLocaleString()} active evidence records</strong><small>{data.registry.retired.toLocaleString()} retired · {data.registry.not_reproduced.toLocaleString()} marked not reproduced</small></div></div>
         <dl>
@@ -75,7 +74,7 @@ export default function WorkspaceDashboard() {
 
       <section><div className="truth-section-heading"><div><span>Engine activity</span><h2>Latest jurisdiction evaluations</h2></div><Link href={modeHref("/runs")}>Run console <ArrowRight size={14} /></Link></div><div className="dashboard-run-grid">{(data.runs ?? []).map(run => <article key={run.run_name} className="truth-data-card" data-data-card><header><div><span>{run.country} · Pillar {run.pillar}</span><strong>{run.run_name}</strong></div>{run.warning_count ? <ShieldAlert size={17} /> : <CheckCircle2 size={17} />}</header><dl><div><dt>Rows</dt><dd>{run.rows_produced}</dd></div><div><dt>NEW</dt><dd>{run.discovery_counts.NEW}</dd></div><div><dt>KNOWN</dt><dd>{run.discovery_counts.KNOWN}</dd></div><div><dt>Warnings</dt><dd>{run.warning_count}</dd></div></dl><footer><Activity size={13} />{run.elapsed_seconds == null ? 'elapsed n/a' : `${Number(run.elapsed_seconds).toFixed(1)}s`}<span>{run.total_usd == null ? 'cost n/a' : `$${Number(run.total_usd).toFixed(4)}`}</span></footer></article>)}</div></section>
 
-      <section className="dashboard-links"><Link href={modeHref("/submission")}><FileCheck2 /> <span><strong>Evidence Dataset</strong><small>Current evidence rows and deterministic gates</small></span><ArrowRight /></Link><Link href={modeHref("/raw-data")}><CircleDashed /><span><strong>Raw Data</strong><small>Immutable artifact explorer</small></span><ArrowRight /></Link><Link href={modeHref("/knowledge-graph")}><GitBranch /><span><strong>Knowledge Graph</strong><small>Read-only Neo4j provenance snapshot</small></span><ArrowRight /></Link></section>
+      <section className="dashboard-links"><Link href={modeHref("/submission")}><FileCheck2 /> <span><strong>Evidence Dataset</strong><small>Current evidence rows and deterministic gates</small></span><ArrowRight /></Link><Link href={modeHref("/raw-data")}><CircleDashed /><span><strong>Raw Data</strong><small>Immutable artifact explorer</small></span><ArrowRight /></Link></section>
     </>}
   </div></WorkspaceShell>
 }

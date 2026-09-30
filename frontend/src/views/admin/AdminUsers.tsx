@@ -1,5 +1,6 @@
 'use client'
 import { useMemo } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { useQuery } from '@tanstack/react-query'
 import type { ColumnDef } from '@tanstack/react-table'
@@ -119,7 +120,7 @@ export default function AdminUsers() {
   ]
 
   if (isLoading) {
-    return <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-muted-foreground">Loading users...</div>
+    return <PageLoader label="Loading users" />
   }
 
   if (error) {

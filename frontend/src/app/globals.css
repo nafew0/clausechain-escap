@@ -2612,3 +2612,47 @@
 .final-export-menu small { font-size: 10px; line-height: 1.45; color: var(--cc-ink-500); }
 .final-export-menu .spin { animation: match-spin 1s linear infinite; }
 .final-export-error { margin: 4px; padding: 7px 9px; border-radius: 8px; background: #FFF2F2; color: #A72828; font-size: 10px; }
+
+/* ClauseChain page loader (components/clausechain/PageLoader.tsx) */
+.cc-loader { display: grid; place-items: center; animation: cc-loader-in 260ms ease-out 140ms both; }
+.cc-loader-screen { position: fixed; inset: 0; z-index: 60; background: rgba(248, 250, 252, 0.9); backdrop-filter: blur(6px); }
+.cc-loader-page { min-height: 58vh; width: 100%; }
+.cc-loader-compact { padding: 32px 16px; width: 100%; }
+.cc-loader-card { display: grid; justify-items: center; gap: 12px; }
+.cc-loader-mark { width: 136px; height: auto; overflow: visible; filter: drop-shadow(0 10px 22px rgba(37, 99, 235, 0.22)); animation: cc-loader-glow 2.6s ease-in-out infinite; }
+.cc-loader-compact .cc-loader-mark { width: 96px; }
+.cc-loader-tile { transform-box: fill-box; transform-origin: center; animation: cc-loader-breathe 2.6s ease-in-out infinite; }
+.cc-loader-shine { animation: cc-loader-shine 2.6s ease-in-out infinite; }
+.cc-loader-check, .cc-loader-bar, .cc-loader-chain { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.cc-loader-check { animation: cc-loader-draw-check 2.6s cubic-bezier(.65, 0, .35, 1) infinite; }
+.cc-loader-bar { animation: cc-loader-draw-bar 2.6s cubic-bezier(.65, 0, .35, 1) infinite; }
+.cc-loader-chain { animation: cc-loader-draw-chain 2.6s cubic-bezier(.65, 0, .35, 1) infinite; }
+.cc-loader-node { transform-box: fill-box; transform-origin: center; transform: scale(0); }
+.cc-loader-node.n1 { animation: cc-loader-pop-1 2.6s ease-out infinite; }
+.cc-loader-node.n2 { animation: cc-loader-pop-2 2.6s ease-out infinite; }
+.cc-loader-node.n3 { animation: cc-loader-pop-3 2.6s ease-out infinite; }
+.cc-loader-readout { display: flex; align-items: baseline; gap: 10px; }
+.cc-loader-word { color: var(--cc-ink-700); font-size: 13px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+.cc-loader-percent { min-width: 3.2ch; color: var(--cc-authority-600); font: 700 15px var(--cc-font-mono); font-variant-numeric: tabular-nums; text-align: right; }
+.cc-loader-track { position: relative; width: 184px; height: 4px; overflow: hidden; border-radius: 999px; background: var(--cc-ink-100); }
+.cc-loader-compact .cc-loader-track { width: 140px; }
+.cc-loader-track span { position: absolute; inset: 0 auto 0 0; border-radius: inherit; background: linear-gradient(90deg, #0FB5A7, #2563EB); transition: width 110ms linear; }
+.cc-loader-track span::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .6), transparent); animation: cc-loader-track-shimmer 1.3s linear infinite; }
+.cc-loader-caption { max-width: 320px; margin: 0; color: var(--cc-ink-500); font-size: 12px; line-height: 1.5; text-align: center; }
+@keyframes cc-loader-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@keyframes cc-loader-glow { 0%, 100% { filter: drop-shadow(0 10px 22px rgba(37, 99, 235, .18)); } 50% { filter: drop-shadow(0 12px 30px rgba(15, 181, 167, .34)); } }
+@keyframes cc-loader-breathe { 0%, 100% { transform: scale(.96); } 45% { transform: scale(1.03); } }
+@keyframes cc-loader-shine { 0%, 30% { transform: translateX(0); } 60%, 100% { transform: translateX(170px); } }
+@keyframes cc-loader-draw-check { 0% { stroke-dashoffset: 1; } 20%, 80% { stroke-dashoffset: 0; } 94%, 100% { stroke-dashoffset: 1; } }
+@keyframes cc-loader-draw-bar { 0%, 12% { stroke-dashoffset: 1; } 30%, 80% { stroke-dashoffset: 0; } 94%, 100% { stroke-dashoffset: 1; } }
+@keyframes cc-loader-draw-chain { 0%, 26% { stroke-dashoffset: 1; } 56%, 80% { stroke-dashoffset: 0; } 94%, 100% { stroke-dashoffset: 1; } }
+@keyframes cc-loader-pop-1 { 0%, 28% { transform: scale(0); } 36% { transform: scale(1.35); } 42%, 82% { transform: scale(1); } 92%, 100% { transform: scale(0); } }
+@keyframes cc-loader-pop-2 { 0%, 40% { transform: scale(0); } 48% { transform: scale(1.35); } 54%, 82% { transform: scale(1); } 92%, 100% { transform: scale(0); } }
+@keyframes cc-loader-pop-3 { 0%, 54% { transform: scale(0); } 62% { transform: scale(1.35); } 68%, 82% { transform: scale(1); } 92%, 100% { transform: scale(0); } }
+@keyframes cc-loader-track-shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@media (prefers-reduced-motion: reduce) {
+  .cc-loader, .cc-loader-mark, .cc-loader-tile, .cc-loader-shine, .cc-loader-check, .cc-loader-bar, .cc-loader-chain,
+  .cc-loader-node, .cc-loader-track span::after { animation: none; }
+  .cc-loader-check, .cc-loader-bar, .cc-loader-chain { stroke-dashoffset: 0; }
+  .cc-loader-node { transform: none; }
+}

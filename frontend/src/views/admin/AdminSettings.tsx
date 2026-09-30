@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 
 import { useToast } from '@/hooks/useToast'
@@ -357,11 +358,7 @@ export default function AdminSettings() {
   }
 
   if (isLoading) {
-    return (
-      <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-muted-foreground">
-        Loading settings...
-      </div>
-    )
+    return <PageLoader label="Loading settings" />
   }
 
   if (error) {

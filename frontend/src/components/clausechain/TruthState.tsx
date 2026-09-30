@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Database, FlaskConical, LockKeyhole } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { SnapshotIdentity } from '@/types/workspace'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 
 export type TruthState = 'live' | 'readonly' | 'prototype'
 
@@ -39,6 +40,8 @@ export function SnapshotBanner({ snapshot }: { snapshot: SnapshotIdentity }) {
   )
 }
 
-export function PageUnavailable({ title, detail }: { title: string; detail?: string }) {
+/** An unavailable page area, or — while its data is still loading (`pending`) — the ClauseChain loader. */
+export function PageUnavailable({ title, detail, pending, compact }: { title: string; detail?: string; pending?: boolean; compact?: boolean }) {
+  if (pending) return <PageLoader label={title} variant={compact ? 'compact' : 'page'} />
   return <section className="truth-unavailable" role="alert"><strong>{title}</strong><p>{detail ?? 'The authoritative API is unavailable. No sample data has been substituted.'}</p></section>
 }

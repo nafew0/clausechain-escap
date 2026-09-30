@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 
 import ProtectedRoute from '@/components/ProtectedRoute'
 import ReviewWorkbench from '@/components/review/ReviewWorkbench'
@@ -9,7 +10,7 @@ export default function ReviewPage() {
   return (
     <ProtectedRoute>
       <WorkspaceShell breadcrumbs={[{ label: 'Review & approve' }]} contentMode="contained">
-        <Suspense fallback={<div className="review-canvas-loading" aria-label="Loading review workspace" />}>
+        <Suspense fallback={<PageLoader variant="screen" label="Loading the review workspace" />}>
           <ModeRoute><ReviewWorkbench /></ModeRoute>
         </Suspense>
       </WorkspaceShell>

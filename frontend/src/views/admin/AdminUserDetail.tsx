@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { PageLoader } from '@/components/clausechain/PageLoader'
 import Link from 'next/link'
 import { useRouter, useParams } from 'next/navigation'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
@@ -129,7 +130,7 @@ export default function AdminUserDetail() {
   }
 
   if (isLoading) {
-    return <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-muted-foreground">Loading user record...</div>
+    return <PageLoader label="Loading the user record" />
   }
 
   if (error) {
