@@ -34,10 +34,10 @@ human sees it. Each row carries an article-level citation, a verbatim snippet, a
 **Economies covered (10):** Singapore, Malaysia, Australia, Thailand, India, Indonesia, Russian Federation,
 Mongolia, Lao PDR, Timor-Leste — each on pillars 2, 6 and 7, with both engines.
 
-**Ready for the live test.** Of the nine economies in the 2025 RDTII database, ClauseChain has been run end to
-end on **six**: Thailand, Indonesia, India, Lao PDR, Mongolia and the Russian Federation (pillars 2, 6 and 7,
-both engines). It has **not** been run on Viet Nam, China or Kazakhstan: adding one is data, not code — a
-jurisdiction file and a seed list — then **Runs → Build sources** in the app. Pillars other than 2, 6 and 7
+**Ready for the live test.** Of the eight live-test economies — Thailand, China, India, Indonesia, the Russian
+Federation, Lao PDR, Mongolia and Timor-Leste — ClauseChain has been run end to end on **seven** (pillars 2, 6
+and 7, both engines). China is not set up yet: ESCAP's 2025 baseline for China is already loaded, and adding it
+is data, not code — a jurisdiction file and a seed list — then **Runs → Build sources** in the app. Pillars other than 2, 6 and 7
 need their indicator rubric added the same way (see [Known Limitations](#known-limitations)).
 
 ---
@@ -336,8 +336,8 @@ of the GPU, which we have not metered.
   blocks the related "no provision found" conclusion instead of letting it pass. A few Round-2 sources needed a
   manual download.
 - **Pillars and economies not yet configured:** rubrics exist for pillars 2, 6 and 7. Another pillar needs its
-  rubric file (`engine/configs/rdtii/pillar_N.yaml`) and seed rows; Viet Nam, China and Kazakhstan need a
-  jurisdiction file and seed rows. Both are data, not code, but the live hour would start from that data.
+  rubric file (`engine/configs/rdtii/pillar_N.yaml`) and seed rows; China needs a jurisdiction file and seed
+  rows. Both are data, not code, but the live hour would start from that data.
 - **Engine B is slower:** about three times Engine A's time per document, on a single self-hosted GPU.
 - **Scanned PDFs:** the self-hosted OCR returns text per page without word positions, so scanned documents get
   a page-level location reference rather than a paragraph anchor.
