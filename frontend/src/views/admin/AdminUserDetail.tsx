@@ -71,10 +71,10 @@ export default function AdminUserDetail() {
     try {
       await updateAdminUser(userId as string, { is_active: !data.user.is_active })
       await refresh()
-      toast({ title: 'User status updated', description: 'reactdjango saved the account status change.', variant: 'success' })
+      toast({ title: 'User status updated', description: 'ClauseChain saved the account status change.', variant: 'success' })
     } catch (err: unknown) {
       const e = err as AxiosError
-      toast({ title: 'Status update failed', description: e.response?.data?.detail || 'reactdjango could not update this user right now.', variant: 'error' })
+      toast({ title: 'Status update failed', description: e.response?.data?.detail || 'ClauseChain could not update this user right now.', variant: 'error' })
     } finally {
       setSavingStatus(false)
     }
@@ -87,10 +87,10 @@ export default function AdminUserDetail() {
     try {
       await updateAdminUser(userId as string, { plan_id: selectedPlanId })
       await refresh()
-      toast({ title: 'Plan updated', description: 'reactdjango applied the manual plan override.', variant: 'success' })
+      toast({ title: 'Plan updated', description: 'ClauseChain applied the manual plan override.', variant: 'success' })
     } catch (err: unknown) {
       const e = err as AxiosError
-      toast({ title: 'Plan change failed', description: e.response?.data?.detail || 'reactdjango could not change the plan right now.', variant: 'error' })
+      toast({ title: 'Plan change failed', description: e.response?.data?.detail || 'ClauseChain could not change the plan right now.', variant: 'error' })
     } finally {
       setSavingPlan(false)
     }
@@ -100,10 +100,10 @@ export default function AdminUserDetail() {
     setSendingReset(true)
     try {
       await sendAdminPasswordReset(userId as string)
-      toast({ title: 'Password reset sent', description: 'reactdjango emailed a secure password reset link to the user.', variant: 'success' })
+      toast({ title: 'Password reset sent', description: 'ClauseChain emailed a secure password reset link to the user.', variant: 'success' })
     } catch (err: unknown) {
       const e = err as AxiosError
-      toast({ title: 'Reset email failed', description: e.response?.data?.detail || 'reactdjango could not send the reset email.', variant: 'error' })
+      toast({ title: 'Reset email failed', description: e.response?.data?.detail || 'ClauseChain could not send the reset email.', variant: 'error' })
     } finally {
       setSendingReset(false)
     }
@@ -118,11 +118,11 @@ export default function AdminUserDetail() {
       setDeleteDialogOpen(false)
       queryClient.removeQueries({ queryKey: ['admin-user-detail', userId] })
       await queryClient.invalidateQueries({ queryKey: ['admin-users'] })
-      toast({ title: 'User deleted', description: response.message || 'reactdjango permanently deleted this user account.', variant: 'success' })
+      toast({ title: 'User deleted', description: response.message || 'ClauseChain permanently deleted this user account.', variant: 'success' })
       router.push('/admin/users')
     } catch (err: unknown) {
       const e = err as AxiosError
-      toast({ title: 'Delete failed', description: e.response?.data?.detail || 'reactdjango could not delete this user right now.', variant: 'error' })
+      toast({ title: 'Delete failed', description: e.response?.data?.detail || 'ClauseChain could not delete this user right now.', variant: 'error' })
     } finally {
       setDeletingUser(false)
     }
@@ -133,7 +133,7 @@ export default function AdminUserDetail() {
   }
 
   if (error) {
-    return <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-rose-600">reactdjango could not load this user right now.</div>
+    return <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-rose-600">ClauseChain could not load this user right now.</div>
   }
 
   const { user, subscription, usage, recent_payments: recentPayments, subscription_events: events, plans, payment_warnings: paymentWarnings } = data

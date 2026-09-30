@@ -13,10 +13,10 @@ import { confirmPasswordReset, validatePasswordReset } from '@/services/auth'
 const SHELL_PROPS = {
   eyebrow: 'Password Reset',
   title: 'Reset your password',
-  description: 'Choose a new password to regain access to your reactdjango workspace.',
+  description: 'Choose a new password to regain access to your ClauseChain workspace.',
   showcaseTitle: 'Secure account recovery without exposing user records.',
   showcaseDescription:
-    'reactdjango validates every reset link before showing the form, then invalidates prior refresh tokens after the password changes.',
+    'ClauseChain validates every reset link before showing the form, then invalidates prior refresh tokens after the password changes.',
   metrics: [
     { value: 'JWT', label: 'Session revoked' },
     { value: '1 link', label: 'Token validation' },
@@ -24,7 +24,7 @@ const SHELL_PROPS = {
   ],
   highlights: [
     'Reset links are verified before any password form is shown.',
-    'reactdjango revokes outstanding refresh tokens after the password changes.',
+    'ClauseChain revokes outstanding refresh tokens after the password changes.',
     'The new password must still pass Django\'s production password validators.',
     'This reset flow works for admin-triggered recovery emails without exposing internal admin routes.',
   ],
@@ -109,7 +109,7 @@ export default function ResetPassword() {
       const axiosError = error as { response?: { data?: { detail?: string } } }
       toast({
         title: 'Password reset failed',
-        description: axiosError.response?.data?.detail || 'reactdjango could not reset the password with this link.',
+        description: axiosError.response?.data?.detail || 'ClauseChain could not reset the password with this link.',
         variant: 'error',
       })
     } finally {

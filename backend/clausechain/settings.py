@@ -1,5 +1,5 @@
 """
-Django settings for reactdjango project.
+Django settings for ClauseChain project.
 Template created from AniFight project.
 """
 

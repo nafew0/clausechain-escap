@@ -1,8 +1,9 @@
 Place branding assets in this folder.
 
 Required files:
-- logo.svg
-- logo.ico
+- logo.svg (wordmark)
+- logo-mark.svg (symbol only; the admin panel header)
+- logo.ico (favicon; the same icon is src/app/favicon.ico)
 
 Optional auth-page images:
 - loginpage.webp

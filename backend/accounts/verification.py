@@ -205,7 +205,7 @@ def deliver_verification_email(user, verification_token):
     plain_message = strip_tags(html_message)
 
     send_mail(
-        subject="Verify your reactdjango email",
+        subject="Verify your ClauseChain email",
         message=plain_message,
         from_email=getattr(settings, "DEFAULT_FROM_EMAIL", "no-reply@example.com"),
         recipient_list=[user.email],

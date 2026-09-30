@@ -71,7 +71,7 @@ def send_password_reset_email(user, *, requested_by=None):
         "requested_by": requested_by,
         "logo_url": logo_url,
     }
-    subject = "Reset your reactdjango password"
+    subject = "Reset your ClauseChain password"
     html_body = render_to_string("emails/password_reset.html", context)
     text_body = strip_tags(html_body)
 

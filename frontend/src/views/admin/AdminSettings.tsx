@@ -309,7 +309,7 @@ export default function AdminSettings() {
       await queryClient.invalidateQueries({ queryKey: ['public-branding'] })
       toast({
         title: 'Settings saved',
-        description: 'reactdjango updated the platform settings successfully.',
+        description: 'ClauseChain updated the platform settings successfully.',
         variant: 'success',
       })
     } catch (requestError) {
@@ -317,7 +317,7 @@ export default function AdminSettings() {
         title: 'Save failed',
         description: extractErrorMessage(
           requestError,
-          'reactdjango could not save settings right now.'
+          'ClauseChain could not save settings right now.'
         ),
         variant: 'error',
       })
@@ -347,7 +347,7 @@ export default function AdminSettings() {
         title: 'Connection failed',
         description: extractErrorMessage(
           requestError,
-          'reactdjango could not validate the AI provider.'
+          'ClauseChain could not validate the AI provider.'
         ),
         variant: 'error',
       })
@@ -367,7 +367,7 @@ export default function AdminSettings() {
   if (error) {
     return (
       <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-rose-600">
-        reactdjango could not load settings right now.
+        ClauseChain could not load settings right now.
       </div>
     )
   }
@@ -738,7 +738,7 @@ export default function AdminSettings() {
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
                 {data.ai_api_key_openai_meta.configured
-                  ? 'Configured in the server environment. reactdjango does not expose provider secrets in the admin panel.'
+                  ? 'Configured in the server environment. ClauseChain does not expose provider secrets in the admin panel.'
                   : 'Configure `OPENAI_API_KEY` on the server to enable OpenAI requests and connection testing.'}
               </p>
             </div>
@@ -754,7 +754,7 @@ export default function AdminSettings() {
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
                 {data.ai_api_key_anthropic_meta.configured
-                  ? 'Configured in the server environment. reactdjango does not expose provider secrets in the admin panel.'
+                  ? 'Configured in the server environment. ClauseChain does not expose provider secrets in the admin panel.'
                   : 'Configure `ANTHROPIC_API_KEY` on the server to enable Anthropic requests and connection testing.'}
               </p>
             </div>

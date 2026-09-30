@@ -61,7 +61,7 @@ def _safe_redirect(url_builder, *, status_value="failed", payment_id=""):
             return redirect(url_builder(payment_id=payment_id))
         return redirect(url_builder(status_value=status_value))
     except Exception:  # pragma: no cover - last-resort fallback for callback UX
-        logger.exception("Could not build the reactdjango bKash callback redirect URL.")
+        logger.exception("Could not build the ClauseChain bKash callback redirect URL.")
         return redirect("/payment/failed")
 
 

@@ -1,5 +1,5 @@
 """
-WSGI config for reactdjango project.
+WSGI config for ClauseChain project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 """

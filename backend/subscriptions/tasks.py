@@ -61,14 +61,14 @@ def check_expiring_subscriptions():
             continue
 
         renewal_line = (
-            f"Renew now from your reactdjango profile: {renew_url}"
+            f"Renew now from your ClauseChain profile: {renew_url}"
             if renew_url
-            else "Log in to reactdjango and renew from your profile."
+            else "Log in to ClauseChain and renew from your profile."
         )
         _send_email(
-            subject=f"Your reactdjango {subscription.plan.name} plan expires soon",
+            subject=f"Your ClauseChain {subscription.plan.name} plan expires soon",
             message=(
-                f"Your reactdjango {subscription.plan.name} subscription expires on "
+                f"Your ClauseChain {subscription.plan.name} subscription expires on "
                 f"{timezone.localtime(subscription.current_period_end).strftime('%B %d, %Y %H:%M %Z')}.\n\n"
                 f"{renewal_line}\n"
             ),
@@ -123,11 +123,11 @@ def check_expired_subscriptions():
             )
 
         _send_email(
-            subject="Your reactdjango subscription has expired",
+            subject="Your ClauseChain subscription has expired",
             message=(
-                f"Your reactdjango {previous_plan_name} subscription was downgraded to Free after "
+                f"Your ClauseChain {previous_plan_name} subscription was downgraded to Free after "
                 f"the {LicenseService.BKASH_GRACE_PERIOD_DAYS}-day grace period ended.\n\n"
-                f"{f'You can renew from your profile: {profile_url}' if profile_url else 'Log in to reactdjango to renew at any time.'}\n"
+                f"{f'You can renew from your profile: {profile_url}' if profile_url else 'Log in to ClauseChain to renew at any time.'}\n"
             ),
             recipient_email=subscription.user.email,
         )

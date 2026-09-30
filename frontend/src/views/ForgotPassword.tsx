@@ -11,10 +11,10 @@ import { requestPasswordReset } from '@/services/auth'
 const SHELL_PROPS = {
   eyebrow: 'Account Recovery',
   title: 'Forgot your password?',
-  description: 'Enter your username or email and reactdjango will send a reset link if the account is eligible.',
+  description: 'Enter your username or email and ClauseChain will send a reset link if the account is eligible.',
   showcaseTitle: 'Self-service password recovery with generic responses.',
   showcaseDescription:
-    'reactdjango keeps the recovery flow non-enumerating, rate-limited, and consistent whether the account exists or not.',
+    'ClauseChain keeps the recovery flow non-enumerating, rate-limited, and consistent whether the account exists or not.',
   metrics: [
     { value: '1 link', label: 'Single-use reset' },
     { value: '120s', label: 'Cooldown' },
@@ -22,7 +22,7 @@ const SHELL_PROPS = {
   ],
   highlights: [
     'The reset request response stays generic to avoid account enumeration.',
-    'reactdjango applies a per-account cooldown and an IP-level abuse throttle.',
+    'ClauseChain applies a per-account cooldown and an IP-level abuse throttle.',
     'Existing reset links still land on the validated reset-password page.',
     'Admins and end users now share the same secure reset infrastructure.',
   ],
@@ -53,7 +53,7 @@ export default function ForgotPassword() {
       const axiosError = error as { response?: { data?: { detail?: string } } }
       toast({
         title: 'Request failed',
-        description: axiosError.response?.data?.detail || 'reactdjango could not process the reset request right now.',
+        description: axiosError.response?.data?.detail || 'ClauseChain could not process the reset request right now.',
         variant: 'error',
       })
     } finally {

@@ -161,7 +161,7 @@ export default function AdminPayments() {
       const e = err as { response?: { data?: { detail?: string } } }
       toast({
         title: 'Search failed',
-        description: e.response?.data?.detail || 'reactdjango could not search bKash by trxID right now.',
+        description: e.response?.data?.detail || 'ClauseChain could not search bKash by trxID right now.',
         variant: 'error',
       })
     },
@@ -193,7 +193,7 @@ export default function AdminPayments() {
       const e = err as { response?: { data?: { detail?: string } } }
       toast({
         title: 'Refund failed',
-        description: e.response?.data?.detail || 'reactdjango could not submit the bKash refund.',
+        description: e.response?.data?.detail || 'ClauseChain could not submit the bKash refund.',
         variant: 'error',
       })
     },
@@ -321,10 +321,10 @@ export default function AdminPayments() {
         Object.entries(params).filter(([key]) => key !== 'page')
       )
       const blob = await exportAdminPayments(exportParams)
-      downloadBlob(blob as Blob, 'reactdjango-payments.csv')
+      downloadBlob(blob as Blob, 'clausechain-payments.csv')
     } catch (err: unknown) {
       const e = err as { response?: { data?: { detail?: string } } }
-      toast({ title: 'Export failed', description: e.response?.data?.detail || 'reactdjango could not export the filtered payments.', variant: 'error' })
+      toast({ title: 'Export failed', description: e.response?.data?.detail || 'ClauseChain could not export the filtered payments.', variant: 'error' })
     }
   }
 
@@ -333,7 +333,7 @@ export default function AdminPayments() {
   }
 
   if (error) {
-    return <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-rose-600">reactdjango could not load payment records right now.</div>
+    return <div className="theme-panel rounded-[1.8rem] p-6 text-sm text-rose-600">ClauseChain could not load payment records right now.</div>
   }
 
   return (
@@ -424,7 +424,7 @@ export default function AdminPayments() {
               <div>
                 <p className="font-semibold text-foreground">bKash reconciliation</p>
                 <p className="text-sm text-muted-foreground">
-                  Search a trxID directly against bKash and compare it with the local reactdjango record.
+                  Search a trxID directly against bKash and compare it with the local ClauseChain record.
                 </p>
               </div>
               <div className="flex w-full flex-wrap gap-3 md:w-auto">

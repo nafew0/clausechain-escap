@@ -107,7 +107,7 @@ class StripeService:
         ).first()
         if not plan:
             raise StripeConfigurationError(
-                "No reactdjango plan is mapped to the Stripe price."
+                "No ClauseChain plan is mapped to the Stripe price."
             )
 
         if plan.stripe_price_id_yearly == price_id:
@@ -179,7 +179,7 @@ class StripeService:
             return LicenseService.get_user_subscription(resolved_user)
 
         raise StripeServiceError(
-            "Unable to match the Stripe event to a local reactdjango subscription."
+            "Unable to match the Stripe event to a local ClauseChain subscription."
         )
 
     @classmethod

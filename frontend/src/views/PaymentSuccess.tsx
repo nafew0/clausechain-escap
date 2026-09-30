@@ -129,8 +129,8 @@ export default function PaymentSuccess() {
   const providerLabel = provider === 'bkash' ? 'bKash' : 'Stripe'
   const syncCopy =
     provider === 'bkash'
-      ? 'reactdjango is confirming your bKash payment and refreshing your workspace access.'
-      : 'reactdjango is syncing the Stripe subscription state and will return you to the dashboard automatically.'
+      ? 'ClauseChain is confirming your bKash payment and refreshing your workspace access.'
+      : 'ClauseChain is syncing the Stripe subscription state and will return you to the dashboard automatically.'
   const pendingCopy =
     provider === 'bkash'
       ? 'Confirming your subscription with bKash and refreshing your workspace access.'

@@ -1,1 +1,1 @@
-# reactdjango package
+# ClauseChain package

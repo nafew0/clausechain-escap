@@ -6,7 +6,6 @@ import {
   CreditCard,
   LayoutDashboard,
   Settings2,
-  ShieldCheck,
   Users,
 } from 'lucide-react'
 
@@ -46,12 +45,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <aside className="theme-panel rounded-[2rem] p-5 lg:sticky lg:top-20 lg:h-[calc(100vh-6rem)]">
           <div className="rounded-[1.5rem] border border-[rgb(var(--theme-border-rgb)/0.8)] bg-[rgb(var(--theme-primary-soft-rgb)/0.72)] p-4">
             <div className="flex items-center gap-3">
-              <div className="theme-icon-primary flex h-11 w-11 items-center justify-center rounded-2xl">
-                <ShieldCheck className="h-5 w-5" />
-              </div>
+              <img src="/branding/logo-mark.svg" alt="ClauseChain" className="h-10 w-auto shrink-0" />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                  reactdjango
+                  ClauseChain
                 </p>
                 <p className="text-lg font-semibold text-foreground">Admin panel</p>
               </div>

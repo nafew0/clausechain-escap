@@ -126,7 +126,7 @@ export default function AdminDashboard() {
         <Card className="theme-panel rounded-[1.8rem] border-0">
           <CardHeader>
             <CardTitle>Recent signups</CardTitle>
-            <CardDescription>The latest accounts created in reactdjango.</CardDescription>
+            <CardDescription>The latest accounts created in ClauseChain.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             {data.recent_signups.map((signup: Record<string, string>) => (

@@ -1,5 +1,5 @@
 """
-URL configuration for reactdjango project.
+URL configuration for ClauseChain project.
 """
 from django.contrib import admin
 from django.urls import path, include
