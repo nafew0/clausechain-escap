@@ -101,3 +101,5 @@ Frontend prototype design request.zip
 /.deploy-credentials.txt
 /.deploy-import-*.log
 /dist/
+# Word documents (submission forms, memos) stay local
+*.docx
