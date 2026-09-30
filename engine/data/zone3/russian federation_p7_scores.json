@@ -7,24 +7,24 @@
   "P7-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "A horizontal personal-data law exists and the excerpts show security and unlawful-processing provisions, but they do not establish a comprehensive set of protec"
+     "reason": "The cited law is horizontal and imposes data-protection duties, but the excerpts do not establish a comprehensive set of data-subject rights."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "Federal Law No. 152-FZ is a horizontal personal-data framework covering processing across public authorities and imposing security and remediation obligations, "
+     "reason": "Federal Law No. 152-FZ establishes a horizontal personal-data framework, including security obligations and procedures addressing unlawful processing, so the evidence supports a comprehensive framework."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "Federal Law No. 152-FZ is a horizontal personal-data framework covering processing across public and private contexts and imposing security and remediation duti"
+     "reason": "Federal Law No. 152-FZ is a horizontal personal-data protection law with security and remediation obligations, so the evidence supports a comprehensive framework rather than its absence."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P7-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The horizontal Information Security Doctrine is expressly the basis for state policy and the development of relations in information security, establishing a ho"
+     "reason": "The Information Security Doctrine is a horizontal instrument that expressly provides the basis for state policy and the development of public relations in information security."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The Information Security Doctrine is a horizontal legal instrument that provides the basis for state policy and relations in information security, so a dedicate"
+     "reason": "The Information Security Doctrine, approved by presidential decree, provides a horizontal framework for information security across sectors, so a dedicated horizontal framework exists."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The nationally applicable Information Security Doctrine, approved by presidential decree, establishes a horizontal basis for policy and relations in information"
+     "reason": "Presidential Decree No. 646 establishes a horizontal Information Security Doctrine as the basis for national policy and relations in information security, constituting a dedicated horizontal framework despite the sectoral scope of Law No. 187-FZ."
     }
    ],
    "band": [
@@ -63,30 +63,30 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P7-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "minimum retention period(s) evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The evidence explicitly requires retention for at least five years under Federal Law No. 115-FZ and at least three years under Federal Law No. 161-FZ."
+     "reason": "The cited laws clearly specify minimum retention periods of at least five years and at least three years."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The evidence specifies minimum retention periods of at least five years and at least three years."
+     "reason": "The cited laws clearly specify minimum retention periods, including five years under Federal Law No. 115-FZ and three years under Federal Law No. 161-FZ."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The evidence specifies minimum retention periods of at least five years for AML records and at least three years for payment-system notifications."
+     "reason": "The evidence clearly specifies minimum retention periods, including five years under Law No. 115-FZ and three years under Law No. 161-FZ."
     }
    ],
    "band": [
@@ -100,24 +100,24 @@
   "P7-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "all-sectors DPO/DPIA evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The horizontal provision requires every operator that is a legal entity to appoint a person responsible for organizing personal-data processing, with no sector "
+     "reason": "The horizontal rule requires every operator that is a legal entity to appoint a person responsible for organizing personal-data processing, establishing a cross-sector DPO requirement."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Article 22.1 imposes a DPO requirement horizontally on operators that are legal entities, rather than limiting it to specific sectors."
+     "reason": "The horizontal law requires legal-entity operators to appoint a person responsible for organizing personal-data processing, establishing a DPO requirement across sectors."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Article 22.1 imposes a horizontal requirement on legal-entity operators to appoint a person responsible for organizing personal-data processing, rather than lim"
+     "reason": "Article 22.1 requires every operator that is a legal entity to appoint a person responsible for organizing personal-data processing, a horizontal requirement across sectors."
     }
    ],
    "band": [
@@ -131,24 +131,24 @@
   "P7-I5": {
    "deterministic": 1.0,
    "deterministic_reason": "warrantless government access evidenced -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The quoted provisions require operators and information-distribution services to provide information to authorized government bodies, and state no requirement f"
+     "reason": "The cited provisions require providers to furnish information to authorized government bodies, and the supplied text states no judicial-authorization requirement."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The cited laws require communications operators and internet information-distribution services to provide information to authorized government bodies, without m"
+     "reason": "The cited laws require communications operators and internet information-service organizers to provide information to authorized government bodies, without requiring independent judicial authorization for that access."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The cited laws require telecom operators and internet services to provide information to authorized security and operational-investigative bodies, establishing "
+     "reason": "The cited laws require communications operators and internet services to provide information to authorized security and investigative agencies without conditioning that access on independent judicial authorization."
     }
    ],
    "band": [

@@ -2,7 +2,7 @@
  "economy": "Malaysia",
  "pillar": 6,
  "run": "run-my-p6-1784545752",
- "krippendorff_alpha": 0.417,
+ "krippendorff_alpha": 1.0,
  "indicators": {
   "P6-I1": {
    "deterministic": 0.0,
@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No ban or local processing requirement for personal data or any horizontal/non-personal-specific requirement is evidenced in the provided text (NO_EVIDENCE_FOUN"
+     "reason": "The only listed horizontal measure has no verified evidence of a ban or local processing requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No evidence was found (pending review) of any ban or local processing requirement for personal data or any horizontal/non-personal-specific requirement under th"
+     "reason": "No verified evidence establishes a ban or local-processing requirement, so no qualifying restriction is identified."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence was found that the economy imposes any ban or local processing requirement on personal data or applies such requirements horizontally, so t"
+     "reason": "No evidence was found that the Act imposes a ban or local-processing requirement, so transfer is scored as free of such requirements."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P6-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
-   "master_gold": 0.0,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No local storage requirement is evidenced in the provided text (NO_EVIDENCE_FOUND_PENDING_REVIEW)."
+     "reason": "The provided evidence identifies no local-storage requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal storage rule under the cited Act 709 "
+     "reason": "No local-storage requirement is evidenced in the gate-verified row."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal specific storage rule under the cited"
+     "reason": "No evidence establishes a local-storage requirement, and the pending-review entry cannot support a positive score."
     }
    ],
    "band": [
@@ -63,7 +63,7 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I3": {
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found in the provided text that any local data centre/server infrastructure is required as a precondition for service or that data transfer is c"
+     "reason": "No quoted text establishes a local infrastructure requirement or a transfer condition."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition) in the provided material."
+     "reason": "No evidence of an infrastructure requirement was found in the gate-verified row."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found that any law or rule makes local data-centre/server infrastructure a precondition for providing services or conditions data "
+     "reason": "The reviewed evidence identifies no local data-centre or server requirement as a precondition for service or data transfer."
     }
    ],
    "band": [
@@ -107,25 +107,25 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions impose conditional restrictions on transferring personal data abroad (e.g., Act 709 s.129), which plainly covers personal data and thus mee"
+     "reason": "Section 129(1) conditions transfers of personal data outside Malaysia, which meets the score-1 criterion."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The evidence shows conditional rules on transferring personal data abroad (e.g., PDP Act 709 s.129 and banking sector code of practice), so conditions cover per"
+     "reason": "Section 129 of the Personal Data Protection Act imposes conditions on transferring personal data abroad, which qualifies for score 1."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The evidence shows conditional rules on cross-border transfers of personal data (e.g., only to places specified by the Minister/with sufficient protection), but"
+     "score": 1.0,
+     "reason": "Section 129 imposes conditions on transferring personal data abroad, which meets the score-1 threshold for any personal-data coverage."
     }
    ],
    "band": [
-    0.5,
+    1.0,
     1.0
    ],
-   "spread": 0.5,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P6-I5": {
@@ -138,25 +138,25 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited CPTPP text (Art. 14.11) is a binding obligation requiring each Party to allow cross-border transfer of information by electronic means for covered per"
+     "reason": "CPTPP Article 14.11 states that each Party shall allow covered persons\u2019 cross-border electronic information transfers, establishing a binding data-transfer commitment."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "CPTPP Art. 14.11 is a binding commitment requiring each Party to allow cross-border electronic transfer of information (including personal information) for cove"
+     "reason": "CPTPP Chapter 14, Article 14.11 is a binding commitment requiring parties to allow covered persons\u2019 cross-border electronic information transfers."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The CPTPP Article 14.11 provides a binding obligation to allow cross-border electronic transfer of information (including personal information) for covered pers"
+     "score": 0.0,
+     "reason": "CPTPP Article 14.11 is a binding commitment requiring parties to allow covered persons\u2019 cross-border electronic information transfers."
     }
    ],
    "band": [
     0.0,
-    0.5
+    0.0
    ],
-   "spread": 0.5,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   }
  },

@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence contains no identified measure excluding foreign firms, only a pending-review no-evidence finding."
+     "reason": "The evidence contains no identified measure excluding foreign firms from public procurement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No evidence of a measure excluding foreign firms from public procurement was found."
+     "reason": "No foreign-firm exclusion measure is evidenced in the provided row, which is marked NO_EVIDENCE_FOUND_PENDING_REVIEW."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence indicates that foreign firms are excluded from public procurement."
+     "reason": "The evidence identifies no measure excluding foreign firms from public procurement."
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence contains no verified requirement to surrender source code or trade secrets, or to use specific encryption in procurement."
+     "reason": "The provided evidence states no relevant requirement; it does not show a tender condition to surrender source code or trade secrets or to use specific encryption."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No evidence was found of a procurement requirement to surrender patents, source code, or trade secrets, or to use specific encryption."
+     "reason": "No evidence was found of procurement requirements to surrender patents, source code, or trade secrets, or to use specific encryption."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence establishes a procurement requirement to surrender source code, patents, or trade secrets, or to use specific encryption."
+     "reason": "No evidence was found of procurement requirements to surrender source code or trade secrets, or to use specific encryption."
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The only listed row reports no evidence found, so the provided text establishes no procurement-bidding limitation."
+     "reason": "The evidence contains no verified measure limiting procurement bidding."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No qualifying procurement-bidding limitation is evidenced in the provided row."
+     "reason": "No evidence of procurement bidding limitations was found in the gate-verified row."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No qualifying procurement-bidding limitation or absence of institutional transparency is evidenced in the provided row."
+     "reason": "The evidence contains no verified procurement-bidding limitation, so no qualifying measure is established."
     }
    ],
    "band": [

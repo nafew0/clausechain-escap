@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The quoted text states only a procurement-value condition and does not plainly state a foreign-firm exclusion."
+     "reason": "The supplied text does not state any exclusion of foreign firms."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The cited evidence does not identify any measure excluding foreign firms; it only describes the scope of a procurement rule."
+     "reason": "The evidence is truncated before stating any foreign-firm exclusion, so it establishes no qualifying measure."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The supplied fragment of paragraph 5.4 does not establish any measure excluding foreign firms from public procurement."
+     "reason": "The excerpt does not show any exclusion of foreign firms; an obligation to invite an Australian SME, if that is the continuation, would not by itself bar foreign participation."
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited evidence contains no stated requirement to surrender source code or trade secrets, use escrow, or use specific encryption in procurement."
+     "reason": "The supplied evidence identifies no requirement to surrender patents, source code, or trade secrets, or to use specific encryption to win."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No evidence was found of a tender requirement to surrender patents, source code, or trade secrets, or to use specific encryption."
+     "reason": "No evidence was found of a procurement requirement to surrender patents, source code, or trade secrets, or to use specific encryption."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The evidence provided contains no requirement to surrender source code, patents, or trade secrets, or to use specific encryption in procurement."
+     "reason": "No evidence was found of procurement requirements to surrender source code or trade secrets, or to use specific encryption."
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence reports no measure or institutional-transparency limitation, so no qualifying restriction is established."
+     "reason": "The provided row contains no evidence of a qualifying procurement limitation or institutional transparency issue."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No qualifying limitation or lack of institutional transparency is evidenced in the gate-verified row, which reports no evidence found pending review."
+     "reason": "No qualifying procurement-bidding limitation or absence of institutional transparency is evidenced."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence identifies a procurement-bidding limitation or institutional-transparency gap; the Privacy Act entry is pending review and does not establi"
+     "reason": "No evidence identifies a procurement-bidding limitation; the listed Privacy Act entry is marked no evidence found."
     }
    ],
    "band": [

@@ -7,24 +7,24 @@
   "P2-I1": {
    "deterministic": 1.0,
    "deterministic_reason": "operative foreign-exclusion measure evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "Article 8.1 directs procurement of qualifying goods from domestic producers when domestic production can supply them, excluding foreign firms in that circumstan"
+     "reason": "The text requires purchasing qualifying goods from domestic producers when domestic production can supply them, excluding foreign suppliers in that circumstance."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Article 8.1 requires procurement from domestic producers when qualifying goods can be supplied domestically, excluding foreign firms under that circumstance."
+     "reason": "Article 8.1 requires procurement of qualifying goods from domestic producers when they can supply them, excluding foreign firms in those circumstances."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Article 8.1 requires procurement of qualifying goods that domestic producers can supply from domestic producers, excluding foreign firms from those procurements"
+     "reason": "Article 8.1 requires procurement from domestic producers for qualifying goods that domestic industry can supply, excluding foreign suppliers in those circumstances."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P2-I2": {
    "deterministic": 0.5,
    "deterministic_reason": "specific-encryption tender condition only -> 0.5",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.5 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The quoted text states no requirement to surrender patents, source code, or trade secrets, and no specific encryption requirement."
+     "reason": "The quoted text contains no requirement to surrender patents, source code, or trade secrets, or to use specific encryption to win."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The cited bidding-document excerpt contains no requirement to surrender patents, source code, or trade secrets, or to use a specific encryption to win."
+     "reason": "The provided evidence contains no requirement to surrender patents, source code, or trade secrets, nor to use a specific encryption to win."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The cited bidding-document excerpt contains no requirement to surrender source code, patents, or trade secrets, or to use specific encryption."
+     "reason": "The cited excerpt contains only general tender-document instructions and shows no requirement to surrender source code, patents, trade secrets, or escrow, or to use specified encryption."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P2-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "limitation triggered by nationality/origin -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
-     "score": 1.0,
-     "reason": "The text grants a price preference to bidders based on local affiliation, directly favoring that class over foreign bidders."
+     "score": 0.5,
+     "reason": "The excerpt establishes a locality-based price preference in works tenders, but does not expressly discriminate against foreign bidders."
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "The provision grants a location-based preference in public works tenders but does not expressly exclude foreign bidders, so it is a measure applied to bidders g"
+     "reason": "The provision grants a location-based preference in public works tenders but does not directly discriminate against foreign bidders."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The provision grants a location-based price preference in public works bidding, but the excerpt does not establish direct discrimination against foreign bidders"
+     "score": 1.0,
+     "reason": "The rule grants locally affiliated bidders a preference by fictitiously reducing their bid price, directly disadvantaging foreign bidders."
     }
    ],
    "band": [

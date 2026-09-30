@@ -2,29 +2,29 @@
  "economy": "Thailand",
  "pillar": 6,
  "run": "run-th-p6-1785604430",
- "krippendorff_alpha": 1.0,
+ "krippendorff_alpha": 0.462,
  "indicators": {
   "P6-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited horizontal Personal Data Protection Act row contains no verified evidence of a ban or local processing requirement."
+     "reason": "The only row reports no evidence found pending review, so it does not establish any ban or local processing requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No verified evidence establishes a ban or local processing requirement for personal, non-personal, or specific data."
+     "reason": "No verified evidence establishes a ban or local-processing requirement, so the transfer is scored as free of such requirements."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence establishes a ban or local processing requirement for personal or non-personal data."
+     "reason": "The sole horizontal law has no verified evidence of a transfer or local-processing requirement, so no such restriction is established."
     }
    ],
    "band": [
@@ -32,30 +32,30 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited evidence contains no verified text establishing any local-storage requirement."
+     "reason": "The evidence contains no found text establishing any local-storage requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No verified evidence establishes any local-storage requirement."
+     "reason": "No local-storage requirement is evidenced in the provided record."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence establishes any local-storage requirement."
+     "reason": "The gate-verified evidence identifies no local-storage requirement, so the indicator is not supported."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P6-I3": {
    "deterministic": 0.0,
    "deterministic_reason": "none found",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited source contains no verified text establishing an infrastructure requirement."
+     "reason": "The provided evidence contains no stated infrastructure requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No verified evidence establishes a local infrastructure precondition or an infrastructure-conditioned data transfer requirement."
+     "reason": "No infrastructure requirement is evidenced in the gate-verified record; rules governing already-established data centres would not qualify."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence establishes any infrastructure requirement or transfer conditioned on infrastructure."
+     "reason": "No evidence was found of a local infrastructure precondition or a transfer conditioned on infrastructure; rules for established data centres alone would not qualify."
     }
    ],
    "band": [
@@ -100,32 +100,32 @@
   "P6-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "covers personal data / horizontal -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The provision applies horizontally to disclosure of another person\u2019s personal data to any other person, thereby imposing a condition on personal-data transfers."
+     "reason": "Section 80 expressly penalizes disclosure of another person\u2019s personal data to any other person, imposing a condition on personal-data flows."
     },
     {
      "persona": "ESCAP",
-     "score": 1.0,
-     "reason": "Section 80 applies horizontally to any person and restricts disclosure of another person\u2019s personal data, so conditions cover personal data."
+     "score": 0.0,
+     "reason": "The cited provision penalizes disclosure of personal data learned through duties under the Act but does not impose conditions on data transfers."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Section 80 applies horizontally to any person and restricts disclosure of personal data, satisfying the indicator's personal-data coverage criterion."
+     "reason": "Section 80(3) restricts disclosure of personal data horizontally, so it establishes a condition on personal-data flows."
     }
    ],
    "band": [
-    1.0,
+    0.0,
     1.0
    ],
-   "spread": 0.0,
-   "flag_for_review": false,
+   "spread": 1.0,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I5": {
@@ -138,17 +138,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "RCEP Chapter 12 section 12.15 and AANZFTA Second Protocol Chapter 10 section 17 each state binding obligations governing cross-border data transfers or computin"
+     "reason": "RCEP \u00a712.15 expressly prohibits preventing cross-border information transfers for a covered person\u2019s business, which is a binding data-transfer commitment."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The economy is covered by at least one binding data-transfer agreement, including AANZFTA and RCEP provisions permitting cross-border electronic data transfers."
+     "reason": "AANZFTA Second Protocol and RCEP contain binding commitments on cross-border data transfers."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "RCEP Chapter 12.15 and AANZFTA Second Protocol Chapter 10, Section 17 are binding commitments addressing cross-border data transfers and prohibiting data-locali"
+     "reason": "RCEP Article 12.15 is a binding commitment not to prevent qualifying cross-border data transfers, so at least one binding data-transfer agreement is evidenced."
     }
    ],
    "band": [

@@ -7,24 +7,24 @@
   "P2-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "no foreign exclusion found (enabling clauses alone score 0)",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The supplied evidence contains no verified measure excluding foreign firms from public procurement."
+     "reason": "The evidence contains no measure excluding foreign firms from public procurement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No verified evidence identifies a measure excluding foreign firms from public procurement."
+     "reason": "The provided evidence identifies no measure excluding foreign firms from public procurement."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The evidence contains no substantiated measure excluding foreign firms from public procurement."
+     "reason": "No evidence of a measure excluding foreign firms from public procurement was found."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P2-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "no source-code/IP/encryption tender condition found",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence provided states NO_EVIDENCE_FOUND_PENDING_REVIEW and does not establish any procurement requirement to surrender source code or trade secrets or us"
+     "reason": "The cited row contains no evidence of a procurement requirement to surrender source code or trade secrets or to use specific encryption."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The reviewed evidence contains no requirement to surrender intellectual property or use specific encryption as a procurement condition."
+     "reason": "The evidence provided identifies no requirement to surrender patents, source code, or trade secrets, or to use specific encryption to win procurement."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence indicates that procurement requires surrendering patents, source code, or trade secrets, or using a specific encryption method."
+     "reason": "No evidence was found of procurement requirements to surrender patents, source code, or trade secrets, or to use specific encryption to win."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P2-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "limitation triggered by nationality/origin -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The requirement that a foreign consultant include Thai personnel directly imposes a nationality-linked condition on foreign bidders."
+     "reason": "The requirement that a foreign consultant include Thai personnel directly applies a special condition to foreign bidders."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The requirement that foreign consultants include Thai personnel on their team directly imposes a nationality-linked condition on foreign bidders."
+     "reason": "The requirement that foreign consultants include Thai personnel directly targets foreign bidders and therefore meets the score-1 criterion."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The requirement that foreign consultants include Thai personnel in their team directly imposes a nationality-linked condition on foreign bidders."
+     "reason": "The requirement that a foreign consultant include Thai personnel in its team directly targets foreign consultants and discriminates against foreign bidders."
     }
    ],
    "band": [

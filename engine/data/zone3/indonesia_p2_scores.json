@@ -7,24 +7,24 @@
   "P2-I1": {
    "deterministic": 1.0,
    "deterministic_reason": "operative foreign-exclusion measure evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "Article 63(2) permits an international tender below the specified thresholds only when no domestic business can meet the requirements, excluding foreign firms w"
+     "reason": "Article 63(2) limits international tenders below the specified thresholds to cases where no domestic business can meet the requirements, excluding foreign firms otherwise."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Article 63 conditions international tendering below the specified thresholds on there being no capable domestic business, excluding foreign firms when domestic "
+     "reason": "The rules restrict international tenders below specified thresholds to cases where no domestic supplier can meet the requirement, excluding foreign firms when domestic suppliers can."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The regulation permits international tenders below the specified thresholds only when no domestic business can meet the requirement, excluding foreign firms whe"
+     "reason": "The procurement rules restrict international tenders below specified thresholds to cases where no domestic business can supply, an exclusion of foreign firms unless nationals cannot supply."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P2-I2": {
    "deterministic": 1.0,
    "deterministic_reason": "source-code/IP surrender as a tender condition -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The provision requires developers supplying software specially developed for public electronic system operators to submit its source code and documentation, whi"
+     "reason": "The text requires developers supplying software specially developed for public electronic-system operators to hand over its source code, which is a source-code surrender requirement for that public-sector supply."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The regulation requires developers supplying software specifically developed for public electronic systems to submit its source code and documentation, meeting "
+     "reason": "The regulation requires developers supplying software specifically developed for public electronic system operators to hand over its source code and documentation."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The regulation requires developers supplying software specially developed for public electronic system operators to submit its source code and documentation, me"
+     "reason": "Article 9(1) requires developers supplying software specially developed for public-sector electronic system operators to surrender its source code and documentation, meeting the source-code requirement."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P2-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "limitation triggered by nationality/origin -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "Article 63(5) expressly requires foreign businesses participating in international tenders to cooperate with national businesses, directly imposing a condition "
+     "reason": "The quoted rule specifically requires foreign businesses participating in international tenders to cooperate with national businesses, directly imposing a foreign-bidder-specific condition."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Article 63(5) requires foreign businesses participating in international tenders to partner with domestic businesses, directly discriminating against foreign bi"
+     "reason": "Article 63(5) requires foreign business entities participating in international tenders to cooperate with a national business entity, directly discriminating against foreign bidders."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Foreign firms participating in international tenders must partner with a domestic business, a measure that directly discriminates against foreign bidders."
+     "reason": "Article 63(5) specifically requires foreign enterprises in international tenders to partner with a domestic enterprise, directly discriminating against foreign bidders."
     }
    ],
    "band": [

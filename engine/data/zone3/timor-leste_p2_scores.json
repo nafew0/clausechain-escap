@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence contains no verified measure excluding foreign firms from public procurement."
+     "reason": "No measure excluding foreign firms is identified in the provided evidence."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No measure excluding foreign firms is evidenced; the sole row is marked NO_EVIDENCE_FOUND_PENDING_REVIEW."
+     "reason": "No evidence of a measure excluding foreign firms from public procurement was found."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence of a measure excluding foreign firms from public procurement was found."
+     "reason": "No evidence identifies any measure excluding foreign firms from public procurement."
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence contains no verified text requiring surrender of source code or trade secrets, or use of specific encryption, as a procurement condition."
+     "reason": "The evidence row contains no verified text requiring surrender of source code, patents or trade secrets, or use of specific encryption in procurement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The evidence contains no documented requirement to surrender patents, source code, or trade secrets, or to use specific encryption to win procurement."
+     "reason": "The evidence contains no requirement to surrender patents, source code or trade secrets, or to use specific encryption to win procurement."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The verified evidence contains no requirement to surrender source code or trade secrets, use escrow, or use specific encryption to qualify for procurement."
+     "reason": "No verified evidence indicates that procurement requires surrendering source code or trade secrets, or using a specific encryption method."
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The stated preferential margin for national suppliers directly favors them over foreign bidders."
+     "reason": "The text requires a preferential margin for national suppliers in procurement procedures, directly discriminating against foreign bidders."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "A preferential margin for national suppliers directly discriminates against foreign bidders."
+     "reason": "The procurement code grants national suppliers a preferential margin, directly discriminating against foreign bidders."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The preferential margin for national suppliers directly disadvantages foreign bidders, constituting a discriminatory procurement measure."
+     "reason": "Articles 86\u201388 require a preferential margin for national suppliers, directly disadvantaging foreign bidders."
     }
    ],
    "band": [

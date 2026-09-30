@@ -168,7 +168,9 @@ export default function RDTIIMatrix() {
                 <h3><Scale size={13} /> Engine proposal</h3>
                 <p className="z3-det"><b>{scoreLabel(selected.deterministic)}</b> {selected.deterministic_reason}</p>
                 {selected.judge_scores ? <p className="z3-judges"><Gavel size={12} /> {selected.judge_scores} · α {String(selected.agreement_alpha ?? 'n/a')} · band {selected.score_band || 'n/a'}</p> : null}
-                <p className="z3-gold">Master gold suggests <b>{scoreLabel(selected.master_gold as number | string | null)}</b>{selected.gold_divergence ? ' — diverges from the engine proposal' : ' — agrees with the engine proposal'}</p>
+                {scoreLabel(selected.master_gold as number | string | null) === '—'
+                  ? <p className="z3-gold is-empty">No ESCAP 2025 RDTII score to compare with{selected.economy === 'Timor-Leste' ? ': Timor-Leste is not in the 2025 RDTII database.' : '.'}</p>
+                  : <p className="z3-gold">ESCAP&apos;s 2025 RDTII score is <b>{scoreLabel(selected.master_gold as number | string | null)}</b>{selected.gold_divergence ? ' — it differs from the engine proposal' : ' — it agrees with the engine proposal'}</p>}
                 {selected.gold_divergence ? <p className="z3-divergence"><AlertTriangle size={12} /> {selected.gold_divergence}</p> : null}
               </section>
 

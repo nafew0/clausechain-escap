@@ -17,7 +17,7 @@ import {
   getEvidenceChanges,
   getEvidenceRow,
   getProofAsset,
-  getReviewQueue,
+  getFullReviewQueue,
   getReviewContext,
   getRuns,
   getSubmission,
@@ -134,10 +134,11 @@ export function useRawArtifact(key: string | null) { return useQuery({ queryKey:
 export function useKnowledgeGraph() { return useQuery({ queryKey: workspaceKeys.graph(), queryFn: getKnowledgeGraph }) }
 export function useKnowledgeSubgraph(params: Record<string, string | undefined>) { return useQuery({ queryKey: workspaceKeys.subgraph(params), queryFn: () => getKnowledgeSubgraph(params) }) }
 
-export function useReviewQueue(queue: WorkspaceQueue, params: ReviewQueueParams = {}) {
+/** A whole review queue, every page of it. */
+export function useFullReviewQueue(queue: WorkspaceQueue) {
   return useQuery({
-    queryKey: workspaceKeys.review(queue, params),
-    queryFn: () => getReviewQueue(queue, params),
+    queryKey: workspaceKeys.review(queue, {}),
+    queryFn: () => getFullReviewQueue(queue),
   })
 }
 

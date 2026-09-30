@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited provisions govern the management and withdrawal of public funds and state no exclusion of foreign firms from public procurement."
+     "reason": "The cited provisions concern management and withdrawal of public funds and do not state any exclusion of foreign firms from public procurement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The cited provisions govern public funds and withdrawals and contain no measure excluding foreign firms from public procurement."
+     "reason": "The cited provisions govern management and withdrawal of public funds and contain no measure excluding foreign firms from public procurement."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The cited provisions govern management and withdrawal of public funds and contain no measure excluding foreign firms from public procurement."
+     "reason": "The cited provisions govern public funds and expenditure but contain no measure excluding foreign firms from procurement."
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence contains no verified text requiring source-code, patent, or trade-secret surrender or use of a specific encryption to win procurement."
+     "reason": "The cited row contains no evidence of a requirement to surrender source code or trade secrets or use specific encryption in procurement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The gate-verified evidence contains no requirement to surrender patents, source code or trade secrets, or to use specific encryption to win procurement."
+     "reason": "No evidence was found of a procurement requirement to surrender patents, source code, or trade secrets, or to use specific encryption."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence shows procurement requires surrendering source code, patents, or trade secrets, or mandates specific encryption to win."
+     "reason": "No evidence indicates procurement requires surrendering source code, patents, or trade secrets, or mandates specific encryption to win."
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The text gives procurement preference to Bumiputera companies, including joint ventures with foreign companies, directly favoring them over foreign bidders with"
+     "reason": "The policy grants preference to Bumiputera companies, including qualifying joint ventures with foreign companies, directly favoring them over foreign bidders that do not qualify."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The policy gives procurement preference to Bumiputera companies, including qualifying joint ventures, directly disadvantaging foreign bidders that do not meet t"
+     "reason": "The Bumiputera preference policy directly favors qualifying domestic companies over foreign bidders, constituting discrimination against foreign bidders."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The mandatory preference for Bumiputera companies across all procurement categories directly disadvantages foreign bidders."
+     "reason": "The Bumiputera preference applies across all procurement categories and directly disadvantages foreign bidders that do not qualify for the preference."
     }
    ],
    "band": [

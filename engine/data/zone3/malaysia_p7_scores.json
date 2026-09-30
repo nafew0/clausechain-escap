@@ -2,7 +2,7 @@
  "economy": "Malaysia",
  "pillar": 7,
  "run": "run-my-p7-1784549177",
- "krippendorff_alpha": 0.25,
+ "krippendorff_alpha": 0.763,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
@@ -13,25 +13,25 @@
    "judges": [
     {
      "persona": "strict",
-     "score": 0.5,
-     "reason": "The cited provisions show a horizontal data protection framework (e.g., breach notification and data subject rights), but the evidence does not establish a comp"
+     "score": 0.0,
+     "reason": "A horizontal Personal Data Protection Act provides data subjects access to and correction of inaccurate personal data, alongside breach-notification and cross-border-transfer provisions, supporting a comprehensive framework."
     },
     {
      "persona": "ESCAP",
-     "score": 1.0,
-     "reason": "Malaysia has a horizontal personal data protection framework under the Personal Data Protection Act 2010 (Act 709) as amended by the Personal Data Protection (A"
+     "score": 0.5,
+     "reason": "Malaysia has a horizontal private-sector data protection law with access and correction rights and breach-notification duties, but its limited scope, including the public-sector exclusion, leaves the framework incomplete."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "Although Malaysia has a horizontal personal data protection framework (Act 709 as amended by Act A1727) covering breach notification and access/correction, the "
+     "score": 0.0,
+     "reason": "Malaysia has a horizontal Personal Data Protection Act with access and correction rights, alongside the 2024 amendments adding breach-notification duties, so a comprehensive framework exists despite its limitations."
     }
    ],
    "band": [
     0.0,
-    1.0
+    0.5
    ],
-   "spread": 1.0,
+   "spread": 0.5,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   },
@@ -44,26 +44,26 @@
    "judges": [
     {
      "persona": "strict",
-     "score": 0.5,
-     "reason": "The cited provisions show cybersecurity rules that are sectoral (e.g., CII incident notification and risk assessment/audit) and a horizontal licensing regulatio"
+     "score": 0.0,
+     "reason": "The Cyber Security (Licensing of Service Provider) Regulations 2024 are identified as horizontal and expressly cover managed security-operation-centre services for monitoring cybersecurity, establishing a dedicated horizontal cybersecurity framework."
     },
     {
      "persona": "ESCAP",
-     "score": 0.5,
-     "reason": "The economy has a dedicated cybersecurity legal regime (Cyber Security Act 854 2024 and related 2024 regulations), but the provided evidence shows key operation"
+     "score": 0.0,
+     "reason": "The dedicated Cyber Security Act 2024 framework includes horizontal regulation of cybersecurity service providers, so it is not limited to critical-infrastructure sectors."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The evidence shows multiple 2024 cybersecurity regulations that are sectoral (e.g., CII incident notification and risk/audit) plus a licensing regulation that i"
+     "score": 0.0,
+     "reason": "The 2024 Cyber Security Act and its horizontal licensing regulations establish a dedicated horizontal cybersecurity framework, even though several operational duties are limited to critical infrastructure entities."
     }
    ],
    "band": [
     0.0,
-    0.5
+    0.0
    ],
-   "spread": 0.5,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P7-I3": {
@@ -76,25 +76,25 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The Companies Act 2016 (Act 777) s. 341(3)/(4)/(5) expressly requires records to be kept for at least seven years, which clearly specifies a minimum retention p"
+     "reason": "The Companies Act 2016 requires records to be kept for at least seven years, clearly specifying a minimum retention period."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Malaysia\u2019s Companies Act 2016 (Act 777) s. 341(3)-(5) requires records to be kept for at least seven years, which clearly specifies a minimum retention period."
+     "reason": "The Companies Act 2016 specifies that covered records must be kept for at least seven years."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "While the Companies Act 2016 clearly specifies a minimum retention period of at least seven years for certain corporate records, the AML Act 2001 evidence provi"
+     "score": 1.0,
+     "reason": "The Companies Act 2016 explicitly requires the covered records to be kept for at least seven years, specifying a minimum retention period."
     }
    ],
    "band": [
-    0.5,
+    1.0,
     1.0
    ],
-   "spread": 0.5,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P7-I4": {
@@ -107,17 +107,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited text plainly requires data controllers to appoint a Data Protection Officer (s.12A(1) and (3) of Act A1727, and the PDP Commissioner Circular 1/2025 s"
+     "reason": "The Act requires every data controller to appoint one or more data protection officers, establishing a horizontal DPO requirement across sectors."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Evidence shows a horizontal legal requirement for all data controllers to appoint a Data Protection Officer (Act A1727 s.12A(1),(3) and PDP Commissioner Circula"
+     "reason": "Section 12A requires data controllers to appoint one or more data protection officers, establishing a horizontal requirement across all sectors."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The evidence cites a horizontal statutory requirement under Act A1727 s.12A(1) and (3) that all data controllers must appoint one or more Data Protection Office"
+     "reason": "Section 12A imposes a horizontal DPO appointment requirement on data controllers, so the requirement is not limited to particular sectors."
     }
    ],
    "band": [
@@ -131,32 +131,32 @@
   "P7-I5": {
    "deterministic": 1.0,
    "deterministic_reason": "warrantless government access evidenced -> 1",
-   "master_gold": 0.0,
-   "gold_divergence": true,
-   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions allow investigating or police officers to take possession, require delivery of documents/information, and access computerized data during s"
+     "reason": "The cited AML provisions let investigating officers obtain or retain information through a notice or during an investigation, and the cited computer-search provision grants access to computerized data, without stating that independent judicial authorization is required."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The cited provisions allow investigating officers/police to compel delivery of documents/information and to access computerized data during searches without any"
+     "reason": "The AML Act permits an investigating officer to take possession of information and require its delivery by written notice, with no independent judicial authorization specified."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The cited provisions allow police/investigating officers to compel delivery or access to documents/information and computerized data during investigations/searc"
+     "score": 1.0,
+     "reason": "AMLA section 37(1) lets an investigating officer compel delivery of documents or information by written notice, with no independent judicial authorization required."
     }
    ],
    "band": [
-    0.5,
+    1.0,
     1.0
    ],
-   "spread": 0.5,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   }
  },

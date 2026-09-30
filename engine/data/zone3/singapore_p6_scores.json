@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found that the Personal Data Protection Act 2012 imposes any ban or local processing requirements on personal data or applies such requirements "
+     "reason": "The only listed row reports no evidence of a ban or local-processing requirement, so the text does not establish a restriction on transfers."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found that the economy imposes any ban and local processing requirements on personal data or applies such requirements horizontall"
+     "reason": "No transfer requirement is evidenced in the gate-verified row, so the transfer is scored as free of such requirements."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence was found that the economy has any ban or local processing requirement covering personal data or applying horizontally (or any equivalent requiremen"
+     "reason": "The only gate-verified row has no evidence of a ban or local-processing requirement, so the evidence does not support scoring above 0."
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The provided evidence shows no local storage requirement for personal data or any non-personal/specific-data storage rule (NO_EVIDENCE_FOUND_PENDING_REVIEW)."
+     "reason": "No local-storage requirement is evidenced in the provided record."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any local storage requirement for personal data or any horizontal/non-personal storage rule under the cited Personal"
+     "reason": "No local-storage requirement is established by the gate-verified evidence."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found of any local storage requirement for personal data or any horizontal/non-personal specific storage rule, so the indicator sh"
+     "reason": "The provided evidence identifies no local-storage requirement."
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found that any rule makes local data centre/server infrastructure a precondition for service or conditions data transfer on such infrastructure."
+     "reason": "The provided record contains no evidence of an infrastructure requirement or transfer conditioned on infrastructure."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition or transfer conditioned on infrastr"
+     "reason": "No evidence establishes a local infrastructure precondition or infrastructure-conditioned data transfer requirement."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence was found that any service is conditioned on local data-centre/server infrastructure or that data transfer is conditioned on such infrastru"
+     "reason": "No evidence identifies an infrastructure requirement; the cited Act is marked NO_EVIDENCE_FOUND_PENDING_REVIEW."
     }
    ],
    "band": [
@@ -107,17 +107,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions impose conditions on transfers of personal data outside Singapore and are explicitly described as horizontal (e.g., PDPA 2012 s. 26(1), s. "
+     "reason": "The Act expressly conditions transfers of any personal data outside Singapore on prescribed requirements, and the provision is classified as horizontal."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Personal Data Protection Act 2012 s.26 and the Personal Data Protection Regulations 2021 s.12 impose horizontal conditions on transferring personal data out"
+     "reason": "The transfer regime imposes conditions on transfers of personal data, meeting the score-1 criterion."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The evidence shows horizontal, personal-data transfer restrictions and conditions under Singapore\u2019s PDPA (s.26(1),(2),(4)) plus corresponding cross-border safeg"
+     "reason": "The Personal Data Protection Act imposes conditions on transfers of personal data outside Singapore, which meets the personal-data coverage criterion for score 1."
     }
    ],
    "band": [
@@ -138,17 +138,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited agreements (Digital Economy Partnership Agreement Art. 4.3 and Singapore-Australia Digital Economy Agreement Art. 23) both contain binding commitments"
+     "reason": "The cited agreements impose binding obligations allowing cross-border data transfers for covered persons, so at least one binding data-transfer agreement exists."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The economy has binding commitments allowing cross-border electronic transfer of information (including personal information) under the Digital Economy Partners"
+     "reason": "At least one binding agreement\u2014the Digital Economy Partnership Agreement\u2014requires allowing cross-border transfers of information, so the economy has a binding data-transfer agreement."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The cited Digital Economy Partnership Agreement and Singapore\u2013Australia Digital Economy Agreement both contain binding provisions requiring/allowing cross-borde"
+     "reason": "The cited agreements impose binding obligations permitting cross-border data transfers for covered persons, so at least one binding data-transfer agreement exists."
     }
    ],
    "band": [

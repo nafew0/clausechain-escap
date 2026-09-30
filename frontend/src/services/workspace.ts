@@ -147,6 +147,25 @@ export async function getReviewQueue(
   return data
 }
 
+/** Every item in a queue. The API pages at 200; the Review page searches, filters and
+ * steps through the whole queue, so it loads all pages (the first, then the rest together). */
+export async function getFullReviewQueue(queue: WorkspaceQueue): Promise<ReviewQueueResponse> {
+  const pageSize = 200
+  const first = await getReviewQueue(queue, { page: 1, page_size: pageSize })
+  const pages = Math.ceil(first.count / pageSize)
+  if (pages <= 1) return first
+  const rest = await Promise.all(
+    Array.from({ length: pages - 1 }, (_, index) =>
+      getReviewQueue(queue, { page: index + 2, page_size: pageSize })
+    )
+  )
+  const seen = new Set<string>()
+  const results = [first, ...rest]
+    .flatMap((page) => page.results)
+    .filter((item) => !seen.has(item.stable_key) && Boolean(seen.add(item.stable_key)))
+  return { ...first, next: null, previous: null, results }
+}
+
 export async function getEvidence(
   params: EvidenceParams = {}
 ): Promise<PaginatedResponse<EvidenceRow>> {

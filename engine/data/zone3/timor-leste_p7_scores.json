@@ -2,7 +2,7 @@
  "economy": "Timor-Leste",
  "pillar": 7,
  "run": "run-tl-p7-1790670566",
- "krippendorff_alpha": 0.5,
+ "krippendorff_alpha": 0.75,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited sectoral provisions are limited in scope, and the Constitution merely directs that a law define personal data and processing conditions without itself"
+     "reason": "The cited constitutional provision leaves personal-data concepts and processing conditions to be determined by law, while the other cited protections are sectoral, so the evidence does not establish a comprehensive horizontal framework."
     },
     {
      "persona": "ESCAP",
-     "score": 1.0,
-     "reason": "The evidence shows only sector-specific protections and a constitutional direction for future legal regulation, not an enacted comprehensive horizontal data-pro"
+     "score": 0.5,
+     "reason": "The evidence shows sector-specific protections and a constitutional provision deferring personal-data rules to legislation, but no comprehensive horizontal framework."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The evidence shows only sector-specific data-use protections, while the constitutional provision merely directs legislation to define personal data and processi"
+     "reason": "The evidence shows only sector-specific protections, while the constitutional provision merely leaves personal-data rules to be determined by law and does not establish a comprehensive horizontal framework."
     }
    ],
    "band": [
@@ -45,25 +45,25 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The only row says NO_EVIDENCE_FOUND_PENDING_REVIEW and provides no evidence of any cybersecurity framework; no framework type is established in the quoted text."
+     "reason": "The provided evidence identifies no cybersecurity framework; the listed telecom regulation is marked NO_EVIDENCE_FOUND_PENDING_REVIEW."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "No evidence establishes any cybersecurity framework; the cited telecommunications sector regulation is not shown to address cybersecurity incident monitoring, d"
+     "reason": "No cybersecurity framework is evidenced; the listed telecommunications regulation has no verified cybersecurity evidence."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The telecom-sector regulation is a possible non-dedicated or sectoral framework, so the pending review does not establish that no cybersecurity framework exists"
+     "score": 1.0,
+     "reason": "No cybersecurity framework is verified; the listed telecommunications regulation has no evidence found pending review."
     }
    ],
    "band": [
-    0.5,
+    1.0,
     1.0
    ],
-   "spread": 0.5,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P7-I3": {
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "Multiple provisions clearly specify minimum retention periods, including 12 months after deactivation, five years from contract signing, and 20 years after cert"
+     "reason": "The cited rules specify minimum retention periods, including 12 months after deactivation and a minimum of five years from contract signing."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Multiple provisions clearly specify minimum retention periods, including five years, 20 years, and 12 months."
+     "reason": "Multiple requirements specify clear minimum retention periods, including 12 months, five years, and not less than 20 years."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Multiple cited provisions clearly specify minimum retention periods, including 12 months for deactivated prepaid services and a minimum of five years for mobile"
+     "reason": "Several provisions clearly specify minimum retention periods, including 12 months, five years, and 20 years."
     }
    ],
    "band": [
@@ -107,17 +107,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No verified text establishes a DPO or DPIA requirement."
+     "reason": "The verified evidence contains no evidence of a DPO or DPIA requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No verified evidence establishes a DPO or DPIA requirement, whether economy-wide or sector-specific."
+     "reason": "No verified evidence establishes a DPO or DPIA requirement in any sector."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The only gate-verified row reports no evidence of a DPO or DPIA requirement, so neither is established."
+     "reason": "No evidence establishes a DPO or DPIA requirement in any sector."
     }
    ],
    "band": [
@@ -138,17 +138,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The ANC may request service providers\u2019 registration records for compliance audits, and this power is not conditioned on independent judicial authorization."
+     "reason": "The ANC may request service providers\u2019 complete physical and electronic registration records for compliance audits, with no judicial authorization requirement stated."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "ANC Guidelines clause 5.5 allows the ANC to request providers\u2019 complete SIM-registration records for compliance auditing without requiring independent judicial "
+     "reason": "ANC Guidelines clause 5.5 allow the ANC to request service providers\u2019 registration records for compliance audits without requiring independent judicial authorization."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The ANC may request providers\u2019 complete physical and electronic SIM-registration records for compliance audits without any stated requirement for independent ju"
+     "reason": "The ANC may request providers\u2019 registration records for compliance audits without any stated requirement for independent judicial authorization, enabling government access to personal data."
     }
    ],
    "band": [

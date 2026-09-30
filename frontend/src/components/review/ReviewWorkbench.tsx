@@ -38,11 +38,12 @@ import {
 import { useAuth } from '@/contexts/AuthContext'
 import { SnapshotBanner } from '@/components/workspace/SnapshotBanner'
 import { ModePageHeader } from '@/components/workspace/ModePageHeader'
+import { JudgeReasoning } from '@/components/review/JudgeReasoning'
 import {
   useDecide,
   useDecisionHistory,
   useReviewContext,
-  useReviewQueue,
+  useFullReviewQueue,
   useSummary,
 } from '@/hooks/workspace'
 import { cn } from '@/lib/utils'
@@ -227,7 +228,7 @@ function QueueSpecificEvidence({ queue, record }: { queue: WorkspaceQueue; recor
           <div><span>Spread</span><strong>{text(record['Spread'])}</strong></div>
         </div>
         <EvidenceSection title="Judge reasoning" open={false}>
-          <p>{text(record['Judge reasoning'])}</p>
+          <JudgeReasoning reasoning={text(record['Judge reasoning'], '')} scores={text(record['Judge scores'], '')} />
         </EvidenceSection>
       </>
     )
@@ -505,7 +506,7 @@ export default function ReviewWorkbench() {
   const [mobileRailOpen, setMobileRailOpen] = useState(!requestedItem)
   const [selectedKnown, setSelectedKnown] = useState<Set<string>>(new Set())
   const summary = useSummary()
-  const queueQuery = useReviewQueue(queue, { page_size: 200 })
+  const queueQuery = useFullReviewQueue(queue)
   const loadError = summary.error ?? queueQuery.error
   const records = useMemo(() => (queueQuery.data?.results ?? []).map((item) => ({ item, record: rowRecord(queueQuery.data?.headers ?? [], item.row) })).sort((left, right) => {
     const leftDecided = queue === 'recall' || queue === 'zone3' ? Boolean(left.item.latest_decision) : Boolean(left.item.review_state?.decision)

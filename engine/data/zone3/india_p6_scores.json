@@ -7,24 +7,24 @@
   "P6-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited row contains no verified text establishing any ban or local processing requirement."
+     "reason": "The evidence identifies no ban or local processing requirement, so none is established."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No verified evidence establishes any ban or local processing requirement, so the transfer is treated as free of such requirements."
+     "reason": "No ban or local-processing requirement is evidenced in the provided row, so the transfer is scored as free of such requirements."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No gate-verified evidence establishes any ban or local processing requirement under the cited Act."
+     "reason": "No verified evidence establishes any ban or local-processing requirement, so transfer is scored as free of such requirements."
     }
    ],
    "band": [
@@ -32,30 +32,30 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I2": {
    "deterministic": 0.5,
    "deterministic_reason": "sectoral/specific-data measure(s) only -> 0.5",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 1.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.5 vs master gold 1.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The rule requires a company to transmit a copy of every foreign-register entry to its registered office in India, constituting one sector-specific local storage"
+     "reason": "The requirement to transmit copies of entries in a foreign register to the company\u2019s registered office in India is one local-copy requirement for specific, non-personal records; the other excerpt requires storage but states no location."
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "A single sectoral rule requires a copy of foreign-register entries to be transmitted to and kept at the company\u2019s registered office in India, while the accounts"
+     "reason": "The requirement to keep a duplicate of a foreign register at the registered office in India is one sector-specific local-storage rule; the other cited provision does not specify a local storage location."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "Only the requirement to keep a copy of the foreign register at the registered office in India clearly mandates local storage; the electronic-records provision r"
+     "reason": "Section 7(8) requires copies of foreign-register entries to be sent to the company\u2019s registered office in India, a single local-storage rule; section 3(5) specifies a storage system but no location."
     }
    ],
    "band": [
@@ -63,30 +63,30 @@
     0.5
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I3": {
    "deterministic": 0.0,
    "deterministic_reason": "none found",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited evidence contains no verified text establishing an infrastructure requirement, so no such requirement is shown."
+     "reason": "The evidence contains no verified text establishing a local infrastructure precondition or transfer condition."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence establishes a local infrastructure requirement or a transfer conditioned on infrastructure."
+     "reason": "No evidence identifies a local data centre or server as a precondition for service, or conditions data transfers on infrastructure."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence establishes any infrastructure requirement as a precondition for service or data transfer."
+     "reason": "No evidence establishes a local infrastructure requirement or a transfer condition tied to infrastructure."
     }
    ],
    "band": [
@@ -100,24 +100,24 @@
   "P6-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "covers personal data / horizontal -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The provision authorizes restrictions on transferring personal data and applies horizontally to data fiduciaries across sectors."
+     "reason": "The provision authorizes restrictions on transfers of personal data and applies horizontally to Data Fiduciaries."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The provision authorizes restrictions on transferring personal data outside India, so conditions cover personal data and meet the score-1 criterion."
+     "reason": "The provision allows restrictions on transfers of personal data, which meets the score-1 criterion."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Section 16(1) horizontally empowers the government to restrict transfers of personal data to specified foreign countries or territories, satisfying the score-1 "
+     "reason": "The Act horizontally authorizes restrictions on cross-border transfers of personal data, which meets the score-1 criterion."
     }
    ],
    "band": [
@@ -138,17 +138,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The provided evidence does not identify any binding data-transfer agreement."
+     "reason": "The supplied evidence identifies no binding data-transfer agreement; it only reports no evidence found for the cited Act, pending review."
     },
     {
      "persona": "ESCAP",
-     "score": 1.0,
-     "reason": "No binding data-transfer agreement is evidenced in the provided gate-verified information."
+     "score": 0.5,
+     "reason": "The only row is marked NO_EVIDENCE_FOUND_PENDING_REVIEW, so it does not establish either the absence of a binding data-transfer agreement or the existence of one."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The evidence is inconclusive because the cited law has no verified finding regarding any binding data-transfer agreement."
+     "reason": "The cited Information Technology Act is not a data-transfer agreement, but the pending-review finding does not establish that no binding agreement exists."
     }
    ],
    "band": [

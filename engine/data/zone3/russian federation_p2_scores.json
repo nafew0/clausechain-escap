@@ -2,60 +2,60 @@
  "economy": "Russian Federation",
  "pillar": 2,
  "run": "run-ru-p2-1790691782",
- "krippendorff_alpha": 0.2,
+ "krippendorff_alpha": 0.652,
  "indicators": {
   "P2-I1": {
    "deterministic": 1.0,
    "deterministic_reason": "operative foreign-exclusion measure evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "The excerpts do not plainly state an exclusion of foreign firms; they refer to procurement restrictions or prohibitions without identifying firms by foreign sta"
+     "score": 1.0,
+     "reason": "Resolution No. 1875 expressly refers to a procurement prohibition that may be waived when the specified goods are unavailable in Russia, establishing a foreign-exclusion measure subject to a domestic-availability condition."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Resolution No. 1875 imposes restrictions on foreign-origin goods, with an exception where no equivalent is produced in Russia, so foreign suppliers are excluded"
+     "reason": "Resolution No. 1875 imposes national-treatment prohibitions on specified foreign goods, with exceptions including when Russian supply is unavailable, so foreign supply is excluded where domestic supply exists."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The national-treatment rules impose prohibitions or restrictions on foreign-origin goods in procurement, excluding foreign suppliers where applicable and theref"
+     "reason": "Resolution No. 1875 imposes procurement bans or restrictions on foreign-origin goods, with exceptions including when domestic supply is unavailable, which is a measure excluding foreign participation under the stated scale."
     }
    ],
    "band": [
-    0.0,
+    1.0,
     1.0
    ],
-   "spread": 1.0,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P2-I2": {
    "deterministic": 1.0,
    "deterministic_reason": "source-code/IP surrender as a tender condition -> 1",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The excerpts do not expressly require surrender of patents, source code, or trade secrets, or use of specific encryption as a tender condition."
+     "reason": "The cited provisions concern ownership of commissioned works or intellectual-property rights under contracts, but do not plainly require tenderers to surrender source code, patents, or trade secrets, or to use specific encryption."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The cited provisions address ownership of commissioned intellectual property and design works, but do not require surrender of patents, source code, or trade se"
+     "reason": "The cited provisions allocate intellectual-property rights in commissioned or government-contract works but do not require bidders, as a tender condition, to surrender patents, source code, or trade secrets, or to use specified encryption."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The cited provisions allocate intellectual-property rights in commissioned or publicly funded works but do not establish source-code, patent, or trade-secret su"
+     "reason": "The cited provisions allocate intellectual-property rights in commissioned works but do not require bidders to surrender source code, patents, or trade secrets, or to use specified encryption."
     }
    ],
    "band": [
@@ -69,31 +69,31 @@
   "P2-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "limitation triggered by nationality/origin -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "The excerpts show SME-only procurement and preferences for specified entities, but do not plainly establish foreign-bidder discrimination or a measure applied t"
+     "score": 0.5,
+     "reason": "The text expressly provides for procurements in which only SMEs may participate, a single bidder-eligibility limitation, but does not state that it discriminates against foreign bidders."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Resolution No. 1875 establishes national-treatment restrictions on foreign goods in procurement, directly discriminating against foreign bidders."
+     "reason": "Resolution No. 1875 establishes national-treatment measures that restrict foreign bidders or goods, which directly discriminates against foreign bidders."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Resolution No. 1875 establishes national-treatment restrictions that discriminate against foreign-origin goods and therefore directly disadvantage foreign bidde"
+     "reason": "Resolution No. 1875 establishes national-treatment restrictions in procurement that discriminate against foreign bidders, meeting the score-1 threshold."
     }
    ],
    "band": [
-    0.0,
+    0.5,
     1.0
    ],
-   "spread": 1.0,
+   "spread": 0.5,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   }

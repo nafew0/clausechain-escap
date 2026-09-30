@@ -7,24 +7,24 @@
   "P7-I1": {
    "deterministic": 1.0,
    "deterministic_reason": "no DP framework evidence found -> lacks framework -> 1",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "A horizontal personal-information law is identified, but the evidence is pending review and does not establish that it is comprehensive or that it is thin."
+     "reason": "A horizontal personal-information law is identified, but its comprehensiveness is pending review, so the text does not establish a comprehensive framework."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "Mongolia\u2019s 2021 Personal Information Protection Law is a horizontal framework that provides data subjects with rights including correction of personal informati"
+     "reason": "Mongolia\u2019s 2021 Personal Information Protection Law establishes a comprehensive horizontal framework for personal-data protection."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "Mongolia\u2019s 2021 Law on the Protection of Personal Information establishes a horizontal personal-data protection framework, so the evidence does not support a fi"
+     "reason": "Mongolia\u2019s 2021 Law on the Protection of Personal Information establishes a horizontal framework with core data-subject rights, including correction, so the evidence does not support a lack of comprehensive legal protection."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P7-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The Law of Mongolia on Cybersecurity (2021) expressly establishes a cybersecurity framework and is identified as horizontal, so a dedicated horizontal cybersecu"
+     "reason": "The Law of Mongolia on Cybersecurity expressly establishes the legal framework for cybersecurity activities and is identified as horizontal, so a dedicated horizontal cybersecurity framework exists."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "Mongolia has a dedicated horizontal cybersecurity framework: the 2021 Law on Cybersecurity establishes the legal basis and system for cybersecurity activities."
+     "reason": "Mongolia has a dedicated horizontal cybersecurity framework in the Law on Cybersecurity (2021), which establishes the legal basis and scope for cybersecurity activities."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "Mongolia has a dedicated horizontal cybersecurity law that establishes the framework and governs cybersecurity activities."
+     "reason": "Mongolia has a dedicated horizontal cybersecurity law, which establishes the legal framework for cybersecurity activities."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P7-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "minimum retention period(s) evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The provided excerpt specifies no minimum data-retention period."
+     "reason": "The provided text does not specify a minimum data retention period."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The cited provision does not specify a minimum data-retention period."
+     "reason": "The provided evidence does not specify a minimum data retention period."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The cited provision does not specify a minimum data-retention period."
+     "reason": "The provided evidence does not specify a minimum data-retention period."
     }
    ],
    "band": [
@@ -100,24 +100,24 @@
   "P7-I4": {
    "deterministic": 0.0,
    "deterministic_reason": "no DPO/DPIA requirement found",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The supplied evidence contains no finding that a DPO or DPIA is required."
+     "reason": "The gate-verified evidence contains no finding that a DPO or DPIA is required."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The evidence identifies no DPO or DPIA requirement, so neither is established as required."
+     "reason": "No gate-verified evidence establishes a DPO or DPIA requirement, so neither is scored as required."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The only gate-verified row reports no evidence of a DPO or DPIA requirement, so no qualifying requirement is established."
+     "reason": "The reviewed evidence establishes no DPO or DPIA requirement, so neither required tier is supported."
     }
    ],
    "band": [
@@ -131,24 +131,24 @@
   "P7-I5": {
    "deterministic": 0.0,
    "deterministic_reason": "no government-access measure found",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence contains no verified measure allowing government access to personal data without independent judicial authorization."
+     "reason": "The supplied evidence identifies no measure allowing government access to personal data without independent judicial authorization."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The gate-verified evidence identifies no measure allowing government access to personal data without independent judicial authorization."
+     "reason": "The supplied evidence identifies no measure allowing government access to personal data without independent judicial authorization."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The 2021 Personal Information Protection Law permits personal-data processing without consent when required to perform legal obligations, allowing government ac"
+     "reason": "The 2021 Personal Data Protection Law permits state organizations to collect and process personal data without the person\u2019s consent to carry out legally assigned functions, without requiring independent judicial authorization."
     }
    ],
    "band": [

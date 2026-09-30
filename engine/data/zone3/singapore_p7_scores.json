@@ -2,7 +2,7 @@
  "economy": "Singapore",
  "pillar": 7,
  "run": "run-sg-p7-1784548650",
- "krippendorff_alpha": 0.803,
+ "krippendorff_alpha": 0.774,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The cited provisions show a horizontal personal data protection regime (e.g., responsibility for data and consent withdrawal), but the evidence does not plainly"
+     "reason": "A horizontal Personal Data Protection Act and related regulations exist, but the quoted provisions do not establish that the framework is comprehensive."
     },
     {
      "persona": "ESCAP",
-     "score": 0.5,
-     "reason": "The evidence shows a horizontal Personal Data Protection Act 2012 with core accountability and consent-withdrawal obligations, but the provided excerpts do not "
+     "score": 0.0,
+     "reason": "Singapore\u2019s Personal Data Protection Act 2012 provides a comprehensive horizontal framework, including accountability, consent withdrawal, access and correction rights, and the regulations address cross-border transfers."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "While there is a horizontal Personal Data Protection Act and regulations, the cited provisions do not demonstrate a comprehensive framework (e.g., key individua"
+     "score": 0.0,
+     "reason": "Singapore has a comprehensive horizontal Personal Data Protection Act, including accountability, consent-withdrawal, access and correction obligations, so the framework is not merely sectoral or thin."
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The cited provisions establish cybersecurity obligations and exercises only for specific categories of critical information infrastructure/essential service pro"
+     "reason": "The cited Cybersecurity Act and regulations establish a dedicated framework limited to critical information infrastructure and relevant essential-service providers, which is sectoral rather than horizontal."
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "The evidence shows only sectoral cybersecurity obligations for provider-owned and third-party-owned critical information infrastructure/essential service provid"
+     "reason": "The evidence shows a dedicated cybersecurity framework limited to critical information infrastructure and essential service providers, making it sectoral-only."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The evidence points to sectoral/critical-infrastructure-specific cybersecurity regulations (provider-owned and third-party-owned CIIs) rather than a dedicated h"
+     "reason": "The Cybersecurity Act 2018 and its regulations establish a dedicated framework for critical information infrastructure and essential-service providers, but the evidence supports a sectoral rather than horizontal framework."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P7-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "minimum retention period(s) evidenced",
-   "master_gold": 0.0,
-   "gold_divergence": true,
-   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
+   "master_gold": 1.0,
+   "gold_divergence": false,
+   "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions plainly specify minimum retention periods (e.g., Companies Act 1967 s.199(2) requires not less than 5 years, and Income Tax Act 1947 s.67(1"
+     "reason": "The Companies Act requires retention for not less than five years, and the Income Tax Act also specifies a five-year retention period."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Multiple laws specify a minimum retention period (e.g., Companies Act 1967 s.199(2) requires retention for not less than 5 years, and Income Tax Act 1947 s.67(1"
+     "reason": "The Companies Act specifies retention for not less than 5 years, and the Income Tax Act also specifies a 5-year period, so a minimum retention period is clearly stated."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Multiple statutes explicitly specify a minimum retention period (e.g., Companies Act 1967 s.199(2) requires not less than 5 years, and Income Tax Act 1947 s.67("
+     "reason": "Companies Act 1967 s. 199(2) requires retention for not less than five years, clearly specifying a minimum period."
     }
    ],
    "band": [
@@ -94,7 +94,7 @@
     1.0
    ],
    "spread": 0.0,
-   "flag_for_review": true,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P7-I4": {
@@ -106,26 +106,26 @@
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "The cited provisions only require an organisation to designate individuals responsible for ensuring compliance with the Act, and they do not plainly require a D"
+     "score": 1.0,
+     "reason": "The Act requires every organisation to designate one or more individuals responsible for compliance, a horizontal DPO-type requirement across all sectors."
     },
     {
      "persona": "ESCAP",
-     "score": 0.0,
-     "reason": "The provided evidence only shows a requirement to designate responsible individuals for compliance (PDPA 2012 s.11), with no gate-verified requirement for a Dat"
+     "score": 1.0,
+     "reason": "Section 11 requires every organisation to designate one or more individuals responsible for compliance, establishing a horizontal DPO requirement across all sectors."
     },
     {
      "persona": "skeptical",
-     "score": 0.0,
-     "reason": "The provided evidence only shows a requirement to designate responsible individuals under PDPA s.11, with no indication that a DPO and/or DPIA is required acros"
+     "score": 1.0,
+     "reason": "Section 11 requires every organisation to designate one or more individuals responsible for PDPA compliance, establishing a horizontal DPO requirement across sectors."
     }
    ],
    "band": [
-    0.0,
+    1.0,
     1.0
    ],
-   "spread": 1.0,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P7-I5": {
@@ -138,25 +138,25 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited Criminal Procedure Code provisions allow police officers or authorised persons to access/inspect/check data or documents/things based on their own con"
+     "reason": "The cited provisions expressly authorize police officers or authorized persons to access and inspect data or computer systems without stating that independent judicial authorization is required."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Criminal Procedure Code 2010 s. 20(1A) and s. 39(1A) allow police officers of at least sergeant rank or authorised persons to access/inspect certain data/do"
+     "reason": "Criminal Procedure Code sections 20(1) and 20(1A) authorize police officers or authorised persons to require documents or data for investigations without independent judicial authorization."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The cited Criminal Procedure Code provisions allow police/authorised persons to access/inspect/check data and documents based on internal consideration (e.g., s"
+     "score": 1.0,
+     "reason": "The Criminal Procedure Code permits police or authorised persons to access or require disclosure of data during investigations without independent judicial authorization."
     }
    ],
    "band": [
-    0.5,
+    1.0,
     1.0
    ],
-   "spread": 0.5,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   }
  },

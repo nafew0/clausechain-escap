@@ -2,7 +2,7 @@
  "economy": "Timor-Leste",
  "pillar": 6,
  "run": "run-tl-p6-1790670452",
- "krippendorff_alpha": 0.763,
+ "krippendorff_alpha": 0.774,
  "indicators": {
   "P6-I1": {
    "deterministic": 0.0,
@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The only gate-verified row reports no evidence of a ban or local processing requirement, so none is established by the supplied text."
+     "reason": "The evidence reports NO_EVIDENCE_FOUND_PENDING_REVIEW and establishes no ban or local processing requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No ban or local processing requirement is evidenced in the provided row."
+     "reason": "No ban or local-processing requirement is evidenced in the provided row, so transfer is scored as free of such requirements."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The only listed horizontal instrument has no verified evidence of a ban or local-processing requirement, so the evidence does not support a positive score."
+     "reason": "The sole horizontal instrument is marked NO_EVIDENCE_FOUND_PENDING_REVIEW, so the evidence does not establish any ban or local processing requirement."
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "Three sectoral requirements mandate maintaining mining, insurance, and banking records at local offices or a local head office, meeting the threshold of two or "
+     "reason": "Three sectoral rules require locally maintaining specified mining, insurance, and banking business records, meeting the threshold of two or more non-personal/specific-data storage requirements."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "At least two sector-specific local-storage requirements apply to mining, insurance, and banking records."
+     "reason": "Three sector-specific local-storage requirements cover mining, insurance, and banking records, meeting the threshold of two or more requirements."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "At least two sector-specific rules require records to be kept locally, covering mining and insurance records without being limited to personal data."
+     "reason": "At least two sector-specific rules require records to be kept locally, including mining records in Timor-Leste and insurance records at the insurer\u2019s premises."
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited row reports no evidence found of an infrastructure requirement, so none is established."
+     "reason": "The provided row states NO_EVIDENCE_FOUND_PENDING_REVIEW and does not identify any infrastructure precondition or transfer condition."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No infrastructure requirement is evidenced in the gate-verified row."
+     "reason": "The provided evidence identifies no infrastructure requirement; rules governing already-established data centres would not qualify."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The reviewed evidence identifies no requirement to establish local infrastructure or condition data transfers on infrastructure."
+     "reason": "No verified evidence establishes a local infrastructure precondition or transfer condition, so no infrastructure requirement is recorded."
     }
    ],
    "band": [
@@ -107,17 +107,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The provided evidence states no conditions on data transfer."
+     "reason": "The evidence row reports no evidence of conditions on transfers, so no conditional flow regime is established."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No conditions on data transfers are evidenced in the provided row."
+     "reason": "No transfer conditions are evidenced in the gate-verified row."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The evidence row reports no verified evidence of transfer conditions, so the indicator scores 0."
+     "reason": "The cited horizontal e-commerce and e-signatures law has no verified evidence of conditions on data transfers."
     }
    ],
    "band": [
@@ -138,17 +138,17 @@
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The only row is marked NO_EVIDENCE_FOUND_PENDING_REVIEW, which establishes neither that a binding data-transfer agreement exists nor that none exists."
+     "reason": "The only row says no evidence was found pending review, which does not establish either that a binding data-transfer agreement exists or that none exists."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "No binding data-transfer agreement is identified in the supplied evidence."
+     "reason": "No binding data-transfer agreement is identified in the provided evidence."
     },
     {
      "persona": "skeptical",
-     "score": 1.0,
-     "reason": "No binding data-transfer agreement is evidenced; the Constitution row is marked no evidence found pending review."
+     "score": 0.5,
+     "reason": "The constitution row is pending review and does not establish whether any binding data-transfer agreement exists, so a definitive score of 1 is not supported."
     }
    ],
    "band": [

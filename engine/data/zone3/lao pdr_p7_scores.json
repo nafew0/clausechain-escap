@@ -7,24 +7,24 @@
   "P7-I1": {
    "deterministic": 0.5,
    "deterministic_reason": "sectoral-only DP evidence -> 0.5",
-   "master_gold": null,
+   "master_gold": 0.5,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The cited provision is sectoral banking law, and the evidence does not establish a comprehensive horizontal data-protection framework."
+     "reason": "The evidence identifies a sectoral banking-law provision but does not establish a comprehensive horizontal data-protection framework."
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "The evidence identifies a sector-specific banking law protecting bank customers, but no comprehensive horizontal data-protection framework."
+     "reason": "The evidence shows sector-specific customer protections in banking law, but no comprehensive horizontal data-protection framework."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The evidence identifies a sector-specific banking customer-protection provision, but does not establish that a comprehensive horizontal data-protection framewor"
+     "reason": "The evidence establishes a sector-specific banking protection provision, but does not demonstrate a comprehensive horizontal data-protection framework."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P7-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The dedicated Law on Prevention and Combating Cyber Crime contains horizontally applicable management and incident-response provisions, establishing a horizonta"
+     "reason": "The law centrally manages prevention and combating of cyber crime and provides for incident response involving computer systems, establishing a dedicated horizontal framework."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The dedicated Law on Prevention and Combating Cyber Crime contains horizontal provisions for centralized management and incident response, so a dedicated horizo"
+     "reason": "The 2015 Law on Prevention and Combating Cyber Crime is a dedicated horizontal framework, with provisions for centralized management and incident response."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The 2015 Law on Prevention and Combating Cyber Crime is a dedicated horizontal framework, with government-wide management and incident-response provisions."
+     "reason": "The 2015 law is a dedicated, horizontal framework addressing cybercrime prevention and incident response, so it meets the threshold for a dedicated horizontal cybersecurity framework."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P7-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "minimum retention period(s) evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "Article 71 of the amended Law on Commercial Bank requires covered documents and information to be kept at least ten years."
+     "reason": "Commercial Bank Law Article 71 requires documents and information to be kept at least ten years after completion or termination."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Article 71 of the amended Law on Commercial Bank requires documents and information to be kept at least ten years after completion or termination."
+     "reason": "Commercial Bank Law Article 71 specifies that documents and information must be kept at least ten years after completion of the documents or transactions, or contract termination."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Commercial Bank Law Article 71 clearly requires covered documents and information to be kept for at least ten years."
+     "reason": "The Commercial Bank Law explicitly requires documents and information to be kept at least ten years after completion of the documents or transactions, or contract termination."
     }
    ],
    "band": [
@@ -100,24 +100,24 @@
   "P7-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "all-sectors DPO/DPIA evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "Neither quoted provision plainly requires a DPO or a DPIA; the sectoral excerpt concerns oversight of external service providers."
+     "reason": "Neither quoted provision plainly requires a DPO or a DPIA."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The cited horizontal provision concerns data-controller rights and obligations, while the payment-systems provision concerns oversight of external service provi"
+     "reason": "The cited horizontal provision concerns data-controller rights, and the sectoral provision concerns oversight of outsourced services; neither requires a DPO or DPIA."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "Neither cited provision establishes a requirement to appoint a DPO or conduct a DPIA; the horizontal provision concerns data-controller rights and the sectoral "
+     "reason": "The cited horizontal provision does not establish a DPO or DPIA requirement, and the payment-systems provision concerns oversight of external service providers rather than requiring a DPO or DPIA."
     }
    ],
    "band": [
@@ -131,24 +131,24 @@
   "P7-I5": {
    "deterministic": 1.0,
    "deterministic_reason": "warrantless government access evidenced -> 1",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 1.0 vs master gold 0.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited excerpts do not plainly state that any measure allows government access to personal data; powers to request documents or receive reports do not establ"
+     "reason": "The cited provisions do not plainly establish government access to personal data without independent judicial authorization."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Bank of the Lao PDR may require documents from commercial banks and related service providers, and the cited provision does not require independent judicial"
+     "reason": "The cited AML/CFT reporting and banking provisions allow government bodies to obtain or receive information, potentially including personal data, without requiring independent judicial authorization."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "AML/CFT reporting entities must promptly report suspicious transactions to the government\u2019s AMLIO, allowing disclosure of associated personal data without indep"
+     "reason": "The AML/CFT law requires reporting entities to report suspicious transactions directly to AMLIO, enabling government access to personal data without independent judicial authorization."
     }
    ],
    "band": [

@@ -2,7 +2,7 @@
  "economy": "Australia",
  "pillar": 7,
  "run": "run-au-p7-1784553157",
- "krippendorff_alpha": 0.811,
+ "krippendorff_alpha": 0.588,
  "indicators": {
   "P7-I1": {
    "deterministic": 1.0,
@@ -14,24 +14,24 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The provided evidence shows no comprehensive horizontal data-protection framework (Privacy Act 1988: NO_EVIDENCE_FOUND_PENDING_REVIEW), so a comprehensive frame"
+     "reason": "The sole gate-verified entry is marked NO_EVIDENCE_FOUND_PENDING_REVIEW and does not establish that a comprehensive framework exists."
     },
     {
      "persona": "ESCAP",
-     "score": 1.0,
-     "reason": "No comprehensive horizontal data protection framework is evidenced (Privacy Act 1988 is marked NO_EVIDENCE_FOUND_PENDING_REVIEW), so the economy cannot be credi"
+     "score": 0.0,
+     "reason": "Australia\u2019s Privacy Act 1988 establishes a horizontal data-protection framework with privacy principles and rights to access and correct personal information, so it is comprehensive under the stated scale."
     },
     {
      "persona": "skeptical",
-     "score": 1.0,
-     "reason": "No comprehensive horizontal data protection framework is evidenced (Privacy Act 1988 has no supporting evidence found pending review), so the indicator should b"
+     "score": 0.0,
+     "reason": "Australia has a horizontal Privacy Act 1988 with broad privacy principles and rights to access and correction, constituting a comprehensive framework despite exemptions and gaps."
     }
    ],
    "band": [
-    1.0,
+    0.0,
     1.0
    ],
-   "spread": 0.0,
+   "spread": 1.0,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   },
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited provisions include a horizontal Cyber Security Act 2024 establishing incident-related functions (e.g., determining cyber security incidents and conduc"
+     "reason": "The Cyber Security Act 2024 contains horizontal provisions addressing cyber incidents, establishing a dedicated horizontal cybersecurity framework."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The Cyber Security Act 2024 provides a dedicated horizontal cybersecurity framework (e.g., incident determination and governance functions under sections 36(2) "
+     "reason": "The Cyber Security Act 2024 is a dedicated horizontal cybersecurity framework, including provisions for incident information collection and reviews."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The Cyber Security Act 2024 provides a horizontal cybersecurity framework (e.g., incident identification/coordination and governance functions), so the economy "
+     "reason": "The Cyber Security Act 2024 provides a dedicated horizontal cybersecurity framework, including national incident assessment and review functions."
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions (e.g., AML/CTF Act 2006 ss 111(1), 114A(1), 117(2) and Corporations Act 2001 s 286A(2)) plainly specify a minimum retention period of 7 yea"
+     "reason": "Several cited provisions explicitly require records to be retained for 7 years, specifying a minimum retention period."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Multiple provisions explicitly specify a minimum retention period of 7 years (e.g., AML/CTF Act 2006 ss. 111(1), 114A(1), 117(2), and Corporations Act 2001 s. 2"
+     "reason": "Multiple provisions clearly specify minimum retention periods of 7 years."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Multiple AML/CTF provisions explicitly specify a minimum retention period of 7 years (e.g., AML/CTF Act 2006 ss 111(1), 114A(1), 117(2)), satisfying the require"
+     "reason": "Multiple provisions explicitly require records to be retained for 7 years, specifying a clear minimum retention period."
     }
    ],
    "band": [
@@ -106,25 +106,25 @@
    "judges": [
     {
      "persona": "strict",
-     "score": 0.5,
-     "reason": "The quoted text states a DPO/DPIA-like requirement only when an agency proposes an activity involving handling personal information and the Commissioner conside"
+     "score": 0.0,
+     "reason": "The quoted excerpt does not state that a DPO or DPIA is required."
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "Evidence shows a horizontal Privacy Act 1988 s.33D(1) requirement triggered when an agency proposes an activity involving handling personal information and the "
+     "reason": "The provision requires a privacy impact assessment for qualifying activities by agencies, making it a sector-specific requirement rather than one applying across all sectors."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The evidence shows a horizontal statutory trigger for a Privacy Act DPIA/DPO-type requirement when an agency proposes an activity involving handling personal in"
+     "reason": "Section 33D permits the Commissioner to require an agency to conduct a privacy impact assessment for specified activities, but this is limited to agencies rather than applying across all sectors."
     }
    ],
    "band": [
-    0.5,
+    0.0,
     1.0
    ],
-   "spread": 0.5,
+   "spread": 1.0,
    "flag_for_review": true,
    "reviewer_decision": "pending"
   },
@@ -137,26 +137,26 @@
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "The cited provisions either require consent for entry (s.150(1)), impose information requirements by notice (s.167(2)), or require an Attorney-General-issued wa"
+     "score": 1.0,
+     "reason": "The cited provisions allow government officials to obtain information or access data through consent, notices, or an Attorney-General-issued warrant, without requiring independent judicial authorization."
     },
     {
      "persona": "ESCAP",
-     "score": 0.5,
-     "reason": "The evidence shows some government access powers that can be exercised without independent judicial authorization (e.g., AML/CFT authorised officer powers to re"
+     "score": 1.0,
+     "reason": "The AML/CFT Act permits an authorised officer to require information or documents by written notice without independent judicial authorization, satisfying the criterion."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The evidence includes some government access powers that appear to rely on consent or administrative notice (e.g., AML/CFT entry with occupier consent and writt"
+     "score": 1.0,
+     "reason": "The cited AML/CFT and Data Availability and Transparency Act provisions authorize officials to obtain information without independent judicial authorization."
     }
    ],
    "band": [
-    0.0,
+    1.0,
     1.0
    ],
-   "spread": 1.0,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   }
  },

@@ -7,24 +7,24 @@
   "P6-I1": {
    "deterministic": 1.0,
    "deterministic_reason": "covers personal data / horizontal -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The provision expressly concerns prohibitions on cross-border transfers of personal data and is identified as horizontal."
+     "reason": "The provision is expressly horizontal and applies to prohibitions on cross-border transfers of personal data."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The requirement applies horizontally to cross-border transfers of personal data, meeting the score-1 criterion."
+     "reason": "The requirement applies to cross-border transfers of personal data and is identified as horizontal, meeting the score-1 criterion."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Article 9 expressly applies prohibitions on cross-border transfers of personal data, which meets the personal-data criterion for score 1."
+     "reason": "The cited provision concerns cross-border transfers of personal data, which meets the scale\u2019s criterion for a score of 1."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P6-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "no qualifying measure found (absence row) -> 0",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The evidence states NO_EVIDENCE_FOUND_PENDING_REVIEW and does not establish any local-storage requirement."
+     "reason": "The supplied row contains no evidence of a local-storage requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No local-storage requirement is established by the gate-verified evidence."
+     "reason": "The evidence does not establish any local-storage requirement."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The listed horizontal law is marked NO_EVIDENCE_FOUND_PENDING_REVIEW, so the evidence does not establish a local-storage requirement."
+     "reason": "The only listed horizontal personal-data law has no verified evidence of a local-storage requirement, so no qualifying rule is established."
     }
    ],
    "band": [
@@ -63,30 +63,30 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P6-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "infrastructure requirement exists",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The excerpts do not plainly require local infrastructure as a precondition to service or condition data transfers on infrastructure."
+     "reason": "The quoted text specifies processing details and refers to technical means used in public-sector information systems, but states no infrastructure requirement."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "Article 13(2) imposes a domestic-location requirement on technical means used in specified government information systems, constituting an infrastructure requir"
+     "reason": "Article 13(2) requires technical means of specified government and public-sector information systems to be located in Russia, which is an infrastructure requirement."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Article 13(2) imposes a domestic-location requirement on technical means used by government information systems, which is an infrastructure requirement."
+     "reason": "Article 13(2) requires technical means of specified government information systems to be located in Russia, creating a local infrastructure requirement."
     }
    ],
    "band": [
@@ -100,24 +100,24 @@
   "P6-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "covers personal data / horizontal -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The provisions impose notification and other conditions on cross-border transfers of personal data, which qualifies for score 1."
+     "reason": "The cited horizontal provisions expressly regulate cross-border transfers of personal data and require prior notification, so conditions cover personal data and apply horizontally."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The horizontal cross-border transfer regime imposes conditions on transfers of personal data, meeting the score-1 criterion."
+     "reason": "Article 12 imposes conditions on cross-border transfers of personal data, which meets the score-1 criterion."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Article 12 of the horizontal personal-data law imposes notification and related restrictions on cross-border transfers of personal data, meeting the score-1 cri"
+     "reason": "Article 12 imposes horizontal conditions on cross-border transfers of personal data, including prior notification and limits on transfers."
     }
    ],
    "band": [
@@ -138,17 +138,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "Article 12 of Convention ETS No. 108 binds each Party not to prohibit or specially authorize transborder data flows solely to protect privacy."
+     "reason": "Article 12 of the Convention makes a binding commitment against restricting transborder personal-data flows solely for privacy protection."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The binding Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data (ETS No. 108), Article 12, addresses transborder d"
+     "reason": "Convention 108, Article 12 is a binding commitment governing transborder personal-data flows between its Parties."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "Article 12 of binding Convention ETS No. 108 restricts parties from prohibiting or specially authorizing covered cross-border data flows, so at least one bindin"
+     "reason": "ETS No. 108 is a binding agreement, and Article 12 commits parties not to prohibit or specially authorize qualifying transborder data flows to another party."
     }
    ],
    "band": [

@@ -47,23 +47,37 @@ def evidence_rows(run_dir: Path) -> dict[str, list[dict]]:
     return rows
 
 
+# ESCAP's 2025 RDTII database: round 1 (Singapore, Malaysia, Australia) and the final
+# round's database economies. Timor-Leste is in neither, so it has no gold.
+GOLD_INDEXES = ("data/known_index.json", "data/known_index_round2.json")
+
+
 def master_gold_scores(economy: str) -> dict[str, float]:
-    """ESCAP's own recorded score per indicator (the answer key for our 3 economies).
-    Generic: read from known_index, never hardcoded. Used as a TRIPWIRE — any
+    """ESCAP's own recorded score per indicator (the answer key).
+    Generic: read from the known indexes, never hardcoded. Used as a TRIPWIRE — any
     det-vs-gold divergence auto-flags for human adjudication (19 Jul rule after
-    13 silent mismatches passed the persona panel unanimously)."""
+    13 silent mismatches passed the persona panel unanimously).
+
+    The database scores each measure, and one indicator often has several (a measure
+    recorded at 0 beside a restrictive one at 1). The indicator's score is the highest
+    of them, as in gold_audit.py; the first row alone depended on row order."""
     import json as _json
     from pathlib import Path as _P
 
     gold: dict[str, float] = {}
-    idx = _json.loads(_P("data/known_index.json").read_text())["economies"]
-    for e in idx.get(economy, []):
-        code = str(e.get("indicator_code") or "")
-        if e.get("source") == "master" and code and code not in gold:
+    for name in GOLD_INDEXES:
+        path = _P(name)
+        if not path.is_file():
+            continue
+        for e in _json.loads(path.read_text())["economies"].get(economy, []):
+            code = str(e.get("indicator_code") or "")
+            if e.get("source") != "master" or not code:
+                continue
             try:
-                gold[code] = float(str(e.get("score", "")).strip())
+                score = float(str(e.get("score", "")).strip())
             except (TypeError, ValueError):
                 continue
+            gold[code] = max(gold.get(code, 0.0), score)
     return gold
 
 
@@ -146,7 +160,8 @@ EVIDENCE (gate-verified rows):
 Return score (exactly 0, 0.5 or 1) and a one-sentence reason. Judge independently."""
         try:
             result = llm.complete(prompt, JudgeScore)
-            out.append({"persona": persona.split()[1], "score": result.score, "reason": result.reason[:160]})
+            # The full reason: reviewers read it in the Review page (it was cut at 160 characters before).
+            out.append({"persona": persona.split()[1], "score": result.score, "reason": result.reason.strip()})
         except Exception as error:  # noqa: BLE001
             out.append({"persona": persona.split()[1], "score": None, "error": str(error)[:80]})
     return out

@@ -141,3 +141,30 @@ def test_proof_spans_locate_quote_when_pdf_splits_subreference_brackets():
         evidence)
     assert ids == [f"s{i}" for i in range(len(runs))]
     assert len(boxes) == len(runs)
+
+
+def test_judge_reasons_are_kept_whole():
+    # Reviewers read the full reason; it used to be cut at 160 characters.
+    from scripts.zone3_score import PERSONAS, persona_scores
+
+    reason = "The cited provision requires prior approval before any transfer, " * 6
+
+    class FakeLLM:
+        def complete(self, prompt, schema):
+            return schema(score=0.5, reason=f"  {reason}  ")
+
+    judges = persona_scores(FakeLLM(), "P6-I4", {"name": "Conditional flow"}, [])
+    assert len(judges) == len(PERSONAS)
+    assert all(judge["reason"] == reason.strip() and len(judge["reason"]) > 160 for judge in judges)
+
+
+def test_zone3_gold_covers_final_round_economies_at_indicator_level():
+    # The final-round database economies have gold too (it was read for SG/MY/AU only),
+    # and an indicator's gold is its highest measure score, not the first row's.
+    from scripts.zone3_score import master_gold_scores
+
+    thailand = master_gold_scores("Thailand")
+    assert {"P2-I1", "P6-I4", "P7-I2", "P7-I5"} <= set(thailand)
+    assert thailand["P7-I5"] == 1.0            # measures scored 0 and 1 -> 1
+    assert master_gold_scores("Singapore")["P7-I3"] == 1.0
+    assert master_gold_scores("Timor-Leste") == {}   # not in the RDTII database

@@ -2,60 +2,60 @@
  "economy": "India",
  "pillar": 2,
  "run": "run-in-p2-1790692431",
- "krippendorff_alpha": 0.6,
+ "krippendorff_alpha": 1.0,
  "indicators": {
   "P2-I1": {
    "deterministic": 1.0,
    "deterministic_reason": "operative foreign-exclusion measure evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
-     "score": 0.0,
-     "reason": "The clause limits eligibility to Class I local suppliers but does not state that foreign firms are excluded, since it imposes no nationality-based restriction."
+     "score": 1.0,
+     "reason": "When sufficient local capacity and competition exist, only Class I local suppliers may bid, excluding foreign firms under that circumstance."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The measure excludes foreign firms from bidding when sufficient local capacity and competition exist, allowing only Class I local suppliers to bid."
+     "reason": "When sufficient local capacity and competition are notified, only Class I local suppliers may bid, excluding foreign firms under those circumstances."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "When sufficient local capacity and competition exist, only Class I local suppliers may bid, excluding foreign suppliers that do not qualify as local suppliers u"
+     "reason": "Clause 3B excludes foreign suppliers from bidding when sufficient local capacity and competition are notified, so it is a measure excluding foreign firms under specified circumstances."
     }
    ],
    "band": [
-    0.0,
+    1.0,
     1.0
    ],
-   "spread": 1.0,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P2-I2": {
    "deterministic": 0.5,
    "deterministic_reason": "specific-encryption tender condition only -> 0.5",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 1.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.5 vs master gold 1.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The clause assigns ownership of project-produced documents to the Government but does not require surrender of patents, source code, or trade secrets, or use of"
+     "reason": "The clause assigns project-produced documents to the Government but does not require surrender of patents, source code, or trade secrets, or use of specific encryption."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The clause assigns project-produced documents to the Government but does not require surrender of patents, source code, or trade secrets, nor use of specific en"
+     "reason": "Government ownership of project-produced documents does not explicitly require surrender of patents, source code, or trade secrets, and no specific encryption requirement is stated."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The clause transfers ownership of project documents but does not explicitly require surrender of source code, patents, or trade secrets, nor mandate specific en"
+     "reason": "The clause assigns project-produced documents to the Government but does not explicitly require surrender of patents, source code, or trade secrets, or use of specific encryption."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P2-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "limitation triggered by nationality/origin -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The procurement rules give purchase preference to Class-I local suppliers and classify bidders offering imported products as non-local, directly disadvantaging "
+     "reason": "The procurement preference gives Class-I local suppliers priority within a 20% margin, while bidders offering imported products are classified as non-local, directly disadvantaging foreign bidders."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "The Make in India provisions give purchase preference to Class-I local suppliers and classify bidders offering imported products as non-local suppliers, directl"
+     "reason": "The Make in India procurement preference directly favors Class-I local suppliers and classifies bidders offering imported products as non-local suppliers, discriminating against foreign bidders."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "The Make in India rules give Class-I local suppliers purchase preference and classify bidders offering imported products as non-local, directly disadvantaging f"
+     "reason": "The Make in India procurement rules favor Class-I local suppliers and classify bidders offering imported products as non-local, directly disadvantaging foreign bidders."
     }
    ],
    "band": [

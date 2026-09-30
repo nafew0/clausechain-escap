@@ -2,29 +2,29 @@
  "economy": "Indonesia",
  "pillar": 7,
  "run": "run-id-p7-1785608288",
- "krippendorff_alpha": 0.079,
+ "krippendorff_alpha": 0.263,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The cited provisions establish a horizontal personal-data-protection law with several rights and obligations, but the excerpts do not plainly establish that the"
+     "reason": "The excerpts establish a horizontal personal-data-protection law, but do not establish that its framework is comprehensive or identify the relevant rights and protections needed to assess that comprehensiveness."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "Law No. 27 of 2022 establishes a comprehensive horizontal personal-data-protection framework, including data-subject rights, consent withdrawal, security obliga"
+     "reason": "Law No. 27 of 2022 establishes a comprehensive horizontal personal data protection framework, including data-subject rights and controller obligations."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "Law No. 27 of 2022 establishes a comprehensive horizontal data-protection framework, including data-subject rights, consent withdrawal, security obligations, pr"
+     "reason": "Law No. 27 of 2022 establishes a comprehensive horizontal personal data protection framework, including data-subject rights and controller and processor obligations."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P7-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 0.5,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 0.5 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited BSSN Regulations 1/2024, 2/2024, and 5/2024 are identified as horizontal cybersecurity instruments covering cyber incident management, cyber crisis ma"
+     "reason": "The evidence identifies horizontal BSSN regulations governing cyber incident management and cyber crisis management, establishing a dedicated horizontal cybersecurity framework."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "Dedicated horizontal cybersecurity frameworks exist through BSSN Regulations 1/2024 and 2/2024 covering national cyber incident and crisis management, reinforce"
+     "reason": "Dedicated horizontal cybersecurity regulations address national cyber incident management and cyber crisis management, so a dedicated horizontal cybersecurity framework exists."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The BSSN 2024 regulations establish dedicated, horizontal cybersecurity provisions covering cyber incident management, cyber crisis management, and a national c"
+     "reason": "BSSN Regulations 1/2024 and 2/2024 establish dedicated, horizontally applicable rules for cyber incident and crisis management, so a dedicated horizontal cybersecurity framework exists."
     }
    ],
    "band": [
@@ -63,30 +63,30 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P7-I3": {
    "deterministic": 0.0,
    "deterministic_reason": "none",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 1.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 1.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No verified evidence states a minimum data retention period."
+     "reason": "No evidence specifies a minimum data-retention period."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No verified evidence specifies a minimum data retention period."
+     "reason": "No evidence establishes a clearly specified minimum data-retention period."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence specifies a minimum data retention period."
+     "reason": "No evidence was found establishing a specified minimum data-retention period."
     }
    ],
    "band": [
@@ -94,30 +94,30 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P7-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "all-sectors DPO/DPIA evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
-     "score": 1.0,
-     "reason": "Article 34 imposes a horizontal DPIA obligation on controllers whenever processing poses a high risk, with no sector limitation, satisfying the across-all-secto"
+     "score": 0.0,
+     "reason": "Article 34 requires a DPIA for high-risk processing, but the evidence states no DPO requirement, and DPIA-only is not an available observed score tier."
     },
     {
      "persona": "ESCAP",
-     "score": 0.5,
-     "reason": "The PDP Law requires DPIAs for high-risk processing and appointing a data-protection officer under specified criteria, but neither obligation applies across all"
+     "score": 1.0,
+     "reason": "The horizontal PDP Law requires DPO appointment for controllers or processors meeting Article 53\u2019s criteria, which apply across sectors rather than only to specified sectors."
     },
     {
      "persona": "skeptical",
-     "score": 0.0,
-     "reason": "The evidence shows only a horizontal high-risk DPIA obligation and does not establish a DPO requirement; since the guide-only DPIA-only tier is not scored, this"
+     "score": 1.0,
+     "reason": "The PDP Law imposes horizontal DPIA duties for high-risk processing and DPO duties for specified processing circumstances, rather than limiting either requirement to particular sectors."
     }
    ],
    "band": [
@@ -131,24 +131,24 @@
   "P7-I5": {
    "deterministic": 0.0,
    "deterministic_reason": "no government-access measure found",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 1.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.0 vs master gold 1.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The cited evidence contains no verified text establishing a government access measure without independent judicial authorization."
+     "reason": "The supplied evidence identifies no measure allowing government access to personal data without independent judicial authorization."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence establishes a measure allowing government access to personal data without independent judicial authorization."
+     "reason": "No measure allowing government access to personal data without independent judicial authorization is evidenced in the gate-verified record."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No verified evidence establishes any government access measure lacking independent judicial authorization."
+     "reason": "The available evidence identifies no measure authorizing government access to personal data without independent judicial authorization."
     }
    ],
    "band": [
@@ -156,7 +156,7 @@
     0.0
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   }
  },

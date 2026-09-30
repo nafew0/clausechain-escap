@@ -2,7 +2,7 @@
  "economy": "Australia",
  "pillar": 6,
  "run": "run-au-p6-1784546704",
- "krippendorff_alpha": 1.0,
+ "krippendorff_alpha": 0.079,
  "indicators": {
   "P6-I1": {
    "deterministic": 0.0,
@@ -14,17 +14,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No ban or local processing requirement evidence was found for this economy (NO_EVIDENCE_FOUND_PENDING_REVIEW), so transfers appear free of such requirements."
+     "reason": "The evidence reports no requirement, so no ban or local-processing requirement is established."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No ban and local processing requirements for personal data or any horizontal/non-personal-specific requirements were found in the provided evidence (NO_EVIDENCE"
+     "reason": "No ban or local processing requirement is evidenced; the horizontal Privacy Act entry is marked NO_EVIDENCE_FOUND_PENDING_REVIEW."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence was found of any ban or local processing requirement for personal data or any horizontal/non-personal-specific data requirement, so transfers appear"
+     "reason": "No ban or local-processing requirement is evidenced in the provided row, which is marked NO_EVIDENCE_FOUND_PENDING_REVIEW."
     }
    ],
    "band": [
@@ -45,17 +45,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "Section 77(1) only states who holds My Health Record system records and for what purposes, without plainly requiring any local storage of personal or non-person"
+     "reason": "The excerpt identifies entities that hold records but states no local-storage requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "Section 77(1) states who holds My Health Record system records (horizontal applicability) but does not impose a local-storage requirement for personal or non-pe"
+     "reason": "The provided excerpt identifies entities holding My Health Record system records but states no local-storage requirement."
     },
     {
      "persona": "skeptical",
-     "score": 0.0,
-     "reason": "The cited provision describes who holds My Health Records (a repository/portal/service provider) rather than imposing a local-storage requirement on the economy"
+     "score": 1.0,
+     "reason": "Section 77(1) imposes a local-storage requirement on records held for the My Health Record system, which are personal health data."
     }
    ],
    "band": [
@@ -76,17 +76,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No evidence was found that any rule makes local data-centre/server infrastructure a precondition for service or conditions data transfer on such infrastructure."
+     "reason": "The provided row contains no evidence of an infrastructure requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any infrastructure requirement (e.g., local data centre/server as a precondition or transfer conditioned on infrastr"
+     "reason": "No infrastructure requirement is evidenced in the provided row, so the score is 0."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence was found that any infrastructure requirement (e.g., local data centre/server as a precondition or infrastructure-conditioned transfer) exists for t"
+     "reason": "No verified evidence establishes a local infrastructure precondition or transfer conditioned on infrastructure."
     }
    ],
    "band": [
@@ -107,17 +107,17 @@
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "No conditions on transfer are evidenced in the provided text (NO_EVIDENCE_FOUND_PENDING_REVIEW), so the indicator cannot be scored as covering personal data or "
+     "reason": "The provided evidence states no transfer conditions, so no conditional flow regime is established."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "No gate-verified evidence was found showing any conditional flow regimes governing transfers (horizontal or personal-data related) under the Privacy Act 1988."
+     "reason": "No conditions on data transfer are evidenced in the gate-verified row."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "No evidence was found that any conditional flow regime applies to transfers (horizontal or sectoral), so the indicator should be scored as having no conditions "
+     "reason": "No evidence establishes any conditions on data transfers."
     }
    ],
    "band": [
@@ -138,25 +138,25 @@
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The provided evidence shows no binding data-transfer agreement (NO_EVIDENCE_FOUND_PENDING_REVIEW), so the criterion for at least one binding agreement is not me"
+     "reason": "The only listed evidence is marked NO_EVIDENCE_FOUND_PENDING_REVIEW, and it does not identify any binding data-transfer agreement."
     },
     {
      "persona": "ESCAP",
-     "score": 1.0,
-     "reason": "No binding data-transfer agreement is evidenced in the provided material (Privacy Act 1988 row shows NO_EVIDENCE_FOUND_PENDING_REVIEW), so the criterion for at "
+     "score": 0.5,
+     "reason": "The evidence is pending review and does not establish whether any binding data-transfer agreement exists."
     },
     {
      "persona": "skeptical",
-     "score": 1.0,
-     "reason": "The only provided evidence indicates no binding data-transfer agreement was found (NO_EVIDENCE_FOUND_PENDING_REVIEW), so the criterion for having at least one b"
+     "score": 0.0,
+     "reason": "Australia is party to the CPTPP, which includes binding commitments on cross-border transfers of information by electronic means."
     }
    ],
    "band": [
-    1.0,
+    0.0,
     1.0
    ],
-   "spread": 0.0,
-   "flag_for_review": false,
+   "spread": 1.0,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   }
  },

@@ -2,29 +2,29 @@
  "economy": "India",
  "pillar": 7,
  "run": "run-in-p7-1785611572",
- "krippendorff_alpha": 0.794,
+ "krippendorff_alpha": 0.622,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The cited provisions establish a horizontal personal-data law governing processing, but the quoted text does not demonstrate that the framework is comprehensive"
+     "reason": "The excerpts establish a horizontal personal-data law but show only processing grounds, not a comprehensive framework."
     },
     {
      "persona": "ESCAP",
-     "score": 0.5,
-     "reason": "A horizontal framework exists through the Digital Personal Data Protection Act 2023, but it is not sufficiently comprehensive in scope and rights to merit a sco"
+     "score": 0.0,
+     "reason": "India\u2019s Digital Personal Data Protection Act 2023 is a horizontal framework, and it provides a right to correction, so it is not merely sectoral or thin under the stated criteria."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The 2023 Act establishes a horizontal framework governing personal-data processing, but the cited evidence covers only lawful-processing grounds and does not de"
+     "score": 0.0,
+     "reason": "India\u2019s Digital Personal Data Protection Act is a horizontal framework covering personal-data processing across sectors, so it meets the scale\u2019s threshold for a comprehensive framework."
     }
    ],
    "band": [
@@ -38,24 +38,24 @@
   "P7-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The National Cyber Security Policy 2013 is a dedicated horizontal cybersecurity framework addressing protection of information infrastructure and security in cy"
+     "reason": "The National Cyber Security Policy 2013 is a dedicated, horizontally scoped cybersecurity policy, and its stated focus includes addressing cybersecurity challenges and protecting information infrastructure in cyberspace."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "A dedicated horizontal cybersecurity framework exists through the National Cyber Security Policy 2013, supported by the Information Technology Act 2000."
+     "reason": "India has a dedicated horizontal cybersecurity framework, including the National Cyber Security Policy 2013 and cybersecurity-related provisions in the Information Technology Act 2000."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "Although the Information Technology Act and National Cyber Security Policy provide horizontal cybersecurity-related measures, they are not a dedicated comprehen"
+     "reason": "India has horizontal cybersecurity provisions in the IT Act and a national cybersecurity policy, but the evidence does not establish a dedicated, legally binding horizontal cybersecurity framework."
     }
    ],
    "band": [
@@ -69,24 +69,24 @@
   "P7-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "minimum retention period(s) evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited regulations clearly specify minimum retention periods, including ten years and five years after winding up of the scheme."
+     "reason": "The cited regulations explicitly require records to be preserved for a minimum of ten years and for five years after scheme winding up."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "A minimum retention period is clearly specified, including five years after winding up and a minimum of ten years for specified records."
+     "reason": "Minimum retention periods are explicitly specified, including a minimum of ten years for records maintained by fund management entities and capital market intermediaries."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "Multiple sectoral regulations clearly specify minimum retention periods, including ten years for fund management and capital market intermediary records and fiv"
+     "reason": "Multiple regulations explicitly require records to be retained for minimum periods of five or ten years."
     }
    ],
    "band": [
@@ -100,24 +100,24 @@
   "P7-I4": {
    "deterministic": 0.5,
    "deterministic_reason": "sector-specific only",
-   "master_gold": null,
-   "gold_divergence": false,
-   "gold_divergence_note": null,
+   "master_gold": 1.0,
+   "gold_divergence": true,
+   "gold_divergence_note": "det 0.5 vs master gold 1.0 \u2014 human adjudication required; check evidence currentness vs master baseline before approving",
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "The Act requires a Data Protection Officer only for Significant Data Fiduciaries, a defined sector-specific category, and does not state a requirement applying "
+     "reason": "The text requires a DPO only for Significant Data Fiduciaries, establishing a sector-specific rather than economy-wide requirement."
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "The Act requires a Data Protection Officer only for designated Significant Data Fiduciaries, making the requirement sector-specific rather than applicable acros"
+     "reason": "The Act requires Significant Data Fiduciaries to appoint a DPO, making this a sector-specific requirement rather than an all-sectors requirement."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "The Act requires a DPO only for designated Significant Data Fiduciaries, making the requirement sector-specific rather than applicable across all sectors."
+     "reason": "A DPO is required only for Significant Data Fiduciaries, not across all sectors or data fiduciaries generally."
     }
    ],
    "band": [
@@ -125,30 +125,30 @@
     0.5
    ],
    "spread": 0.0,
-   "flag_for_review": false,
+   "flag_for_review": true,
    "reviewer_decision": "pending"
   },
   "P7-I5": {
    "deterministic": 1.0,
    "deterministic_reason": "warrantless government access evidenced -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "Section 186(2) plainly makes it lawful for a police officer to conduct the relevant investigative search, while the quoted text does not require prior independe"
+     "reason": "BNSS section 186(2) authorizes a police officer to search without prior judicial authorization, allowing government access without an independent court order."
     },
     {
      "persona": "ESCAP",
      "score": 1.0,
-     "reason": "BNSS 2023 section 186(2) permits a police officer to conduct a search where obtaining a warrant could allow evidence to be concealed or destroyed, without indep"
+     "reason": "BNSS section 186(2) allows a police officer conducting an investigation to search without prior independent judicial authorization, so at least one measure permits government access without it."
     },
     {
      "persona": "skeptical",
      "score": 1.0,
-     "reason": "BNSS section 186(2) permits a police officer to conduct an investigative search where evidence might be concealed or destroyed without prior independent judicia"
+     "reason": "BNSS section 186(2) permits a police officer to conduct a search during an investigation without prior independent judicial authorization, so the evidence establishes a government access measure that meets the score-1 criterion."
     }
    ],
    "band": [

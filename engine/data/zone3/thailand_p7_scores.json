@@ -2,29 +2,29 @@
  "economy": "Thailand",
  "pillar": 7,
  "run": "run-th-p7-1785604863",
- "krippendorff_alpha": 0.407,
+ "krippendorff_alpha": 0.702,
  "indicators": {
   "P7-I1": {
    "deterministic": 0.0,
    "deterministic_reason": "comprehensive horizontal framework evidenced -> 0",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 1.0,
-     "reason": "The cited provisions address only computer-crime investigations and credit-information or financial-services activities, and do not establish a comprehensive ho"
+     "reason": "The cited provisions are sector-specific, and the evidence identifies no comprehensive horizontal data-protection framework."
     },
     {
      "persona": "ESCAP",
-     "score": 0.5,
-     "reason": "The evidence identifies only sectoral protections for computer-crime investigations and credit information/financial services, with no comprehensive horizontal "
+     "score": 0.0,
+     "reason": "Thailand has a comprehensive horizontal Personal Data Protection Act, so the cited sector-specific provisions do not establish a lack of a comprehensive framework."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "Thailand has enacted the Personal Data Protection Act B.E. 2562, a comprehensive horizontal data-protection framework, notwithstanding the sectoral provisions c"
+     "reason": "Thailand\u2019s Personal Data Protection Act B.E. 2562 provides a comprehensive horizontal framework, so the listed sectoral provisions do not establish a lack of comprehensive data-protection law."
     }
    ],
    "band": [
@@ -38,55 +38,55 @@
   "P7-I2": {
    "deterministic": 0.0,
    "deterministic_reason": "dedicated horizontal framework evidenced -> 0",
-   "master_gold": null,
+   "master_gold": 0.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The ThaiCERT notification is identified as a horizontal instrument establishing the duties and powers of Thailand\u2019s national computer emergency response team, p"
+     "reason": "The ThaiCERT notification is a dedicated, horizontally scoped cybersecurity instrument establishing the team and its duties and powers."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "A dedicated horizontal cybersecurity framework exists, evidenced by the National Cyber Security Committee notification establishing ThaiCERT and assigning it cy"
+     "reason": "The ThaiCERT notification establishes a dedicated, horizontally applicable cybersecurity framework, so the dedicated horizontal framework criterion is met."
     },
     {
      "persona": "skeptical",
-     "score": 0.5,
-     "reason": "The evidence shows a non-dedicated, horizontally applicable Computer Crime Act and sector-specific incident measures, but does not establish a dedicated horizon"
+     "score": 0.0,
+     "reason": "Thailand has a dedicated horizontal cybersecurity framework under the Cybersecurity Act B.E. 2562, so the indicator\u2019s lack-of-framework condition is absent."
     }
    ],
    "band": [
     0.0,
-    0.5
+    0.0
    ],
-   "spread": 0.5,
-   "flag_for_review": true,
+   "spread": 0.0,
+   "flag_for_review": false,
    "reviewer_decision": "pending"
   },
   "P7-I3": {
    "deterministic": 1.0,
    "deterministic_reason": "minimum retention period(s) evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "The provision requires recording the rejected objection request and reasons but specifies no minimum data retention period."
+     "reason": "The text requires recording the rejection and reasons but specifies no minimum retention period."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "The provision requires recording a rejected objection and its reasons but does not specify any minimum data retention period."
+     "reason": "The provision requires recording a rejected objection and the reasons for it but specifies no minimum retention period."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The cited provision requires recording the rejection and reasons but does not specify any minimum data retention period."
+     "reason": "The provision requires recording the rejection and reasons but specifies no minimum retention period."
     }
    ],
    "band": [
@@ -100,24 +100,24 @@
   "P7-I4": {
    "deterministic": 1.0,
    "deterministic_reason": "all-sectors DPO/DPIA evidenced",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.5,
-     "reason": "Section 41 requires a DPO only in specified circumstances and sectors, so the evidence supports a sector-specific requirement rather than an all-sector obligati"
+     "reason": "Section 41 requires a DPO only in specified circumstances, establishing a sector-specific requirement rather than an economy-wide one."
     },
     {
      "persona": "ESCAP",
      "score": 0.5,
-     "reason": "Section 41 requires a DPO only for specified sectors or statutory circumstances, while section 38 indicates exemptions for other controllers, so the requirement"
+     "reason": "Section 41 requires a DPO only for specified categories of public authorities and controllers or processors meeting statutory conditions, so the requirement is sector-specific rather than economy-wide."
     },
     {
      "persona": "skeptical",
      "score": 0.5,
-     "reason": "Section 41 requires a DPO only for specified sectors or statutory circumstances, and the evidence does not establish a universal DPO or DPIA requirement across "
+     "reason": "Section 41 requires a DPO only for specified categories of public authorities and controllers or processors meeting statutory conditions, with no evidence of a universal DPO or DPIA requirement."
     }
    ],
    "band": [
@@ -131,24 +131,24 @@
   "P7-I5": {
    "deterministic": 1.0,
    "deterministic_reason": "warrantless government access evidenced -> 1",
-   "master_gold": null,
+   "master_gold": 1.0,
    "gold_divergence": false,
    "gold_divergence_note": null,
    "judges": [
     {
      "persona": "strict",
      "score": 0.0,
-     "reason": "Section 76(2) requires the Competent Officer to file a complaint with the competent court when access is necessary, and does not plainly authorize access withou"
+     "reason": "The quoted provision requires the Competent Officer to file a complaint with the competent court, and does not state that government access may occur without independent judicial authorization."
     },
     {
      "persona": "ESCAP",
      "score": 0.0,
-     "reason": "Section 76(2) requires the Competent Officer to file with the competent court, so the access power is subject to judicial authorization."
+     "reason": "The cited provision requires the Competent Officer to apply to the competent court, so it does not establish government access without independent judicial authorization."
     },
     {
      "persona": "skeptical",
      "score": 0.0,
-     "reason": "The cited provision requires the competent officer to apply to the competent court when access is necessary, indicating judicial authorization rather than an ac"
+     "reason": "The cited provision requires the Competent Officer to apply to a competent court, so it does not show government access without judicial authorization."
     }
    ],
    "band": [
