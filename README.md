@@ -44,9 +44,6 @@ need their indicator rubric added the same way (see [Known Limitations](#known-l
 
 ## Quick Start
 
-⚠ **A competent programmer must reach a working system from this section alone, on a clean machine, in under
-30 minutes — with no help from our team.**
-
 ClauseChain installs with **one command**. Docker is the only prerequisite: Python, Node, PostgreSQL and every
 library are pinned inside the images, so the result is identical on macOS, Windows and Linux. The step-by-step
 guide with troubleshooting is **[DEPLOYMENT.md](DEPLOYMENT.md)**.
@@ -65,16 +62,20 @@ Needs 30 GB of free disk and 8 GB of memory for Docker (Docker Desktop's default
 
 ### 3. Configure
 
-Download our filled-in **`keys.env`** (provided with the submission through ESCAP's submission form) and copy
-it into the `clausechain-escap` folder you cloned in step 1. **This is the recommended way:** the script finds
-it there by default. It sets your two declared engines and your OCR engine — see
+**ESCAP reviewers:** our filled-in **`keys.env`** is attached to our submission in ESCAP's Jotform. Download it
+from there and put it in the `clausechain-escap` folder you cloned in step 1 (**recommended**: the script finds
+it there by default). It sets our two declared engines and the OCR engine — see
 **[Your Two Declared Engines](#your-two-declared-engines)** below.
 
     cp ~/Downloads/keys.env .                     # Windows: Copy-Item $HOME\Downloads\keys.env .
 
-The file can also stay anywhere else; the script then asks for its path. To write your own instead:
-`cp engine/.env.example keys.env` and fill it in. The app's own secrets — database password, signing keys —
-are generated for you in step 4.
+If that command fails — the browser saved the file somewhere else, or under another name such as
+`keys (1).env` or `keys.env.txt` — copy the downloaded file into the `clausechain-escap` folder by hand
+(drag it there in Finder or File Explorer) and make sure it is named exactly `keys.env`. Or leave it where it
+is and type its path when the script asks for the keys file.
+
+To write your own keys file instead: `cp engine/.env.example keys.env` and fill it in. The app's own secrets —
+database password, signing keys — are generated for you in step 4.
 
 ### 4. Start the interface
 
@@ -378,7 +379,7 @@ Released under the **Apache License 2.0**, as required. See [LICENSE](LICENSE) f
 
 ---
 
-The release tag we record is the version that runs on 15 October. Settings may change on the day; code may not.
+**Release:** the tag recorded in our submission is the version that runs on 15 October.
 
 ---
 
