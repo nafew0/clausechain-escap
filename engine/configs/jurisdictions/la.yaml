@@ -89,6 +89,10 @@ governing_instruments:
   default: { law: "Law on Electronic Data Protection No. 25/NA (2017)", url: "https://www.laoofficialgazette.gov.la/kcfinder/upload/files/0918570.pdf" }
   P7-I2:   { law: "Law on Prevention and Combating Cyber Crime No. 61/NA (2015)", url: "https://laocert.gov.la/ftp_upload/Cyber_Crime_Law_EnVersion.pdf" }
   P6-I5:   { law: "RCEP Chapter 12 Electronic Commerce (Lao PDR deferral, footnote 13)", url: "https://www.mfat.govt.nz/assets/Trade-agreements/RCEP/RECP-Agreement-112020/Chapter-12.pdf" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "Law on Public Procurement No. 30/NA (2017)", url: "http://ppmd.mof.gov.la/storage/1632981237.Laos%20PDR%20Public%20Procurement%20Law_English%5B23%5D.pdf" }
+  P2-I2:   { law: "Law on Public Procurement No. 30/NA (2017)", url: "http://ppmd.mof.gov.la/storage/1632981237.Laos%20PDR%20Public%20Procurement%20Law_English%5B23%5D.pdf" }
+  P2-I3:   { law: "Law on Public Procurement No. 30/NA (2017)", url: "http://ppmd.mof.gov.la/storage/1632981237.Laos%20PDR%20Public%20Procurement%20Law_English%5B23%5D.pdf" }
 
 status_assertions:
   "Law on Electronic Data Protection No. 25/NA (2017)":

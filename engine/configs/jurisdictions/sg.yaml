@@ -83,6 +83,10 @@ hunt_instruments:
 governing_instruments:
   default: { law: "Personal Data Protection Act 2012", url: "https://sso.agc.gov.sg/Act/PDPA2012" }
   P7-I2:   { law: "Cybersecurity Act 2018", url: "https://sso.agc.gov.sg/Act/CA2018" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "Government Procurement Act 1997", url: "https://sso.agc.gov.sg/Act/GPA1997" }
+  P2-I2:   { law: "Government Procurement Act 1997", url: "https://sso.agc.gov.sg/Act/GPA1997" }
+  P2-I3:   { law: "Government Procurement Act 1997", url: "https://sso.agc.gov.sg/Act/GPA1997" }
 
 status_assertions:   # treaty seeds on official SG-government file hosts — 19 Jul
   "Digital Economy Partnership Agreement":

@@ -70,6 +70,10 @@ hunt_instruments:
 governing_instruments:
   default: { law: "Personal Data Protection Act 2010 (Act 709)", url: "https://lom.agc.gov.my/act-detail.php?act=709" }
   P7-I2:   { law: "Cyber Security Act 2024 (Act 854)", url: "https://lom.agc.gov.my/act-detail.php?act=854" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "Treasury Circular PK 7.6 ICT and Internet Network Procurement (2022)", url: "https://ppp.treasury.gov.my/loadpdf/pindaan/84eb0663-0aaf-4275-9ac7-fd860d7837ad" }
+  P2-I2:   { law: "Treasury Circular PK 7.6 ICT and Internet Network Procurement (2022)", url: "https://ppp.treasury.gov.my/loadpdf/pindaan/84eb0663-0aaf-4275-9ac7-fd860d7837ad" }
+  P2-I3:   { law: "Treasury Circular PK 1.4 Local Materials, Goods and Services in Government Procurement Policy (2025)", url: "https://ppp.treasury.gov.my/loadpdf/pindaan/b8bcceb6-4660-4122-a766-5e5cfb212d72" }
 
 # A2: explicit official currentness facts. Absence from this registry means
 # `unknown` and blocks retrieval/export; a live URL alone is never a status fact.

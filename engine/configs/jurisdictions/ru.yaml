@@ -108,6 +108,10 @@ governing_instruments:
   default: { law: "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)", url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102108261" }
   P7-I2:   { law: "Federal Law No. 187-FZ of 26.07.2017 On Security of Critical Information Infrastructure", url: "http://pravo.gov.ru/proxy/ips/?docbody=&firstDoc=1&lastDoc=1&nd=102439340" }
   P6-I5:   { law: "Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data (ETS No. 108)", url: "https://rm.coe.int/1680078b37" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "Federal Law No. 44-FZ of 05.04.2013 On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs (consolidated)", url: "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102164547&rdk=157" }
+  P2-I2:   { law: "Federal Law No. 44-FZ of 05.04.2013 On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs (consolidated)", url: "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102164547&rdk=157" }
+  P2-I3:   { law: "Federal Law No. 44-FZ of 05.04.2013 On the Contract System in the Sphere of Procurement of Goods, Works and Services for State and Municipal Needs (consolidated)", url: "http://pravo.gov.ru/proxy/ips/?docview&page=1&print=1&nd=102164547&rdk=157" }
 
 status_assertions:
   "Federal Law No. 152-FZ of 27.07.2006 On Personal Data (consolidated)":

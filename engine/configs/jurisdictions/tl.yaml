@@ -80,6 +80,10 @@ governing_instruments:
   P6-I3:   { law: "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas", url: "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf" }
   P6-I4:   { law: "Decreto-Lei n.º 12/2024 Regime Jurídico Geral do Comércio Eletrónico e de Assinaturas Eletrónicas", url: "https://www.mj.gov.tl/jornal/public/docs/2024/serie_1/SERIE_I_NO_7.pdf" }
   P7-I2:   { law: "Decreto-Lei n.º 15/2012 Regulamentação do Sector das Telecomunicações", url: "https://www.mj.gov.tl/jornal/public/docs/2012/serie_1/serie1_no12.pdf" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Contratos Públicos (Public Procurement and Public Contracts Code)", url: "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_2.pdf#page=4" }
+  P2-I2:   { law: "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Contratos Públicos (Public Procurement and Public Contracts Code)", url: "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_2.pdf#page=4" }
+  P2-I3:   { law: "Decreto-Lei n.º 1/2025 Código do Aprovisionamento e dos Contratos Públicos (Public Procurement and Public Contracts Code)", url: "https://www.mj.gov.tl/jornal/public/docs/2025/serie_1/SERIE_I_NO_2.pdf#page=4" }
 
 status_assertions:
   "UNTAET Regulation No. 2000/8 on Bank Licensing and Supervision":

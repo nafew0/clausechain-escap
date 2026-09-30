@@ -70,6 +70,10 @@ gold_aliases:
 governing_instruments:
   default: { law: "Privacy Act 1988", url: "https://www.legislation.gov.au/C2004A03712/latest" }
   P7-I2:   { law: "Security of Critical Infrastructure Act 2018", url: "https://www.legislation.gov.au/C2018A00029/latest" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "Commonwealth Procurement Rules 17 November 2025", url: "https://www.legislation.gov.au/F2025L01263/2025-10-22/2025-10-22/text/original/pdf" }
+  P2-I2:   { law: "Commonwealth Procurement Rules 17 November 2025", url: "https://www.legislation.gov.au/F2025L01263/2025-10-22/2025-10-22/text/original/pdf" }
+  P2-I3:   { law: "Commonwealth Procurement Rules 17 November 2025", url: "https://www.legislation.gov.au/F2025L01263/2025-10-22/2025-10-22/text/original/pdf" }
 
 status_assertions:   # non-Federal-Register seeds (state portals, DFAT treaties) — 19 Jul
   "CPTPP official documents (DFAT)":

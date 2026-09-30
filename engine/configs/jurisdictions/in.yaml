@@ -112,6 +112,10 @@ hunt_instruments:
 governing_instruments:
   default: { law: "Information Technology Act 2000 (Act 21 of 2000)", url: "https://www.indiacode.nic.in/handle/123456789/1999" }
   P7-I1:   { law: "Digital Personal Data Protection Act 2023 (Act 22 of 2023) — phased commencement", url: "https://www.indiacode.nic.in/handle/123456789/22037" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "General Financial Rules 2017 (consolidated up to 31 January 2026)", url: "https://doe.gov.in/files/circulars_document/GFRupdatedupto31012026.pdf" }
+  P2-I2:   { law: "General Financial Rules 2017 (consolidated up to 31 January 2026)", url: "https://doe.gov.in/files/circulars_document/GFRupdatedupto31012026.pdf" }
+  P2-I3:   { law: "General Financial Rules 2017 (consolidated up to 31 January 2026)", url: "https://doe.gov.in/files/circulars_document/GFRupdatedupto31012026.pdf" }
 
 status_assertions:
   "IRDAI (Outsourcing of Activities by Indian Insurers) Regulations 2017":

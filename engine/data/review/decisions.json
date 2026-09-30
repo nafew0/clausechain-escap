@@ -3879,51 +3879,51 @@
   "finding_key": "e074d8a9e2b52a1a3df5050297a104ddb6c55eb5ee07f12db0717a2f106ed5d4",
   "review_subject_hash": "e5fd7c1686463a03d3362634298cc98b3db2c0a56410645e8dd0e26d15a94931",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores Thailand 6.1 at 0.5 on section 12 of the Credit Information Business Act, and the approved score is 1. The search behind this row was incomplete (no seed inventory was set up for Thailand when it ran), so it cannot confirm on its own that no measure exists. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:03.942544+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
   "finding_key": "08b1a016bce380448ba1e8b7392dc4f2661b4a5c2cb2ec01200db3943ff3178c",
   "review_subject_hash": "fb39c12c231e2743c01ae26ab907a1280042733278519979ff569a9d5f21f14a",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "The search behind this row was incomplete (no seed inventory was set up for Thailand when it ran), so it cannot confirm on its own that no measure exists. The score of 0 is set by the Zone-3 decision instead. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:05.118038+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
   "finding_key": "a64161cf7cbadcd4e93c256a5fabf22a60db91a161aaa9ab8765eaad3fd3283a",
   "review_subject_hash": "5e6da6a9dc2dc8a4f680d85f673aa297df319d6f79dfedd72f9ff73aa4b5e8e0",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "The search behind this row was incomplete (no seed inventory was set up for Thailand when it ran), so it cannot confirm on its own that no measure exists. The score of 0 is set by the Zone-3 decision instead. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:05.387564+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -6089,17 +6089,17 @@
   "finding_key": "0e1d736989553818f1b6ce1f42243f9289b1b5d99bf7a2e42ab0543ae9a80242",
   "review_subject_hash": "66b0630a980448cab2f8602317247a385db2e3d69ac6d9f71fbeaafe118668bf",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores India 6.1 at 0.5 and the approved score is 1. The search behind this row was incomplete (no seed inventory was set up for India when it ran), so it cannot confirm on its own that no measure exists. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:04.436250+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -6140,17 +6140,17 @@
   "finding_key": "1b0a8442d8345c5ee5d88cbaa18154bfee80bdaeac03f35647b8573d0236d020",
   "review_subject_hash": "91b4669ab40bd9243b5ada90fd22bb032d986efbbfca0dc77fa0df4b32a9ff36",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "The search behind this row was incomplete (no seed inventory was set up for India when it ran), so it cannot confirm on its own that no measure exists. The score for this cell is set by the Zone-3 decision instead. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:04.684581+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -6191,17 +6191,17 @@
   "finding_key": "c9d30a9205f99c1e82b29ae563e28a17fa2d535639de4b464df19abe27030127",
   "review_subject_hash": "17611f82d3544641508197b394af783234e20933ccfe866d3154f8aa015e3e01",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "The search behind this row was incomplete (no seed inventory was set up for India when it ran), so it cannot confirm on its own that no measure exists. The score of 1 is set by the Zone-3 decision instead. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:04.903618+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -7347,68 +7347,68 @@
   "finding_key": "9f09fff7c789caedf2f53b526ec602bcb8410f45504308d8bf631ca262530cd8",
   "review_subject_hash": "6719e1fcc26b27e2e6485986d8188d31627c436cbf6bbe8da03b039c77e797db",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores Indonesia 6.1 at 0.5 (POJK 11/2022) and the approved score is 1. The search behind this row was incomplete (no seed inventory was set up for Indonesia when it ran), so it cannot confirm on its own that no measure exists. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:05.584316+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
   "finding_key": "c7fc8ecfe68f30579bd14c74a1c069050be45b9e5e1bf202f640e2db766f5ffe",
   "review_subject_hash": "605f3c0cf1e69544f879f40508e1cd28fb254f881685affc738e363c74ada535",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores Indonesia 6.2 at 0.5 and the approved score is 1. The search behind this row was incomplete (no seed inventory was set up for Indonesia when it ran), so it cannot confirm on its own that no measure exists. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:05.804767+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
   "finding_key": "cbb4ccddf8e2c33545f60ef46ef940a51fdbc4bd8bfec6df8c9e11ec066c7cf6",
   "review_subject_hash": "6006f202f36527b8e9c12d317cdbae4c404e4b944c74dacd279c8f6a53bd80a3",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores Indonesia 6.3 at 1 and the approved score is 1. The search behind this row was incomplete (no seed inventory was set up for Indonesia when it ran), so it cannot confirm on its own that no measure exists. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:06.004986+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
   "finding_key": "0a002012eec69e504a11ae4e936196af2daea729f85eb0a054e3b96444a660ba",
   "review_subject_hash": "6f279b076a64fe1d6e863be7a6174e92ee611825c1d8fac05609139102594dbc",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores Indonesia 6.4 at 1 and the approved score is 1. The search behind this row was incomplete (no seed inventory was set up for Indonesia when it ran), so it cannot confirm on its own that no measure exists. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:06.222643+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -8741,17 +8741,17 @@
   "finding_key": "e4f48176602639ce9b1d0c4e6c7a04238f87047e3330214287bbd4dee13c4b9c",
   "review_subject_hash": "a5b2252a86c51068d51d6fe4aa57b937ec68781195e15dec63321c5e26711bdc",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores Indonesia 7.3 at 1 and the approved score is 1. The search record itself lists three ESCAP-recorded provisions missing from the corpus: Bank Indonesia Regulation 22/23/PBI/2020 art. 21, the ITE Law art. 40(2) and a Minister of Communication regulation art. 15. The search behind this row was incomplete (no seed inventory was set up for Indonesia when it ran), so it cannot confirm on its own that no measure exists. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:06.436863+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -8979,17 +8979,17 @@
   "finding_key": "75d362531b94007da1e95ff6d750ea35ccb5adaf01782338cd25b40c2caecdb5",
   "review_subject_hash": "7475a6075b4c63ad9f243d03ffd5b5b27957d58aaec6bdba6d2759f42c533f30",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores Indonesia 7.5 at 1 and the approved score is 1. The search behind this row was incomplete (no seed inventory was set up for Indonesia when it ran), so it cannot confirm on its own that no measure exists. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:06.643914+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -9013,17 +9013,17 @@
   "finding_key": "04a8f41f5fa0b5e3f72fdbd9df2cb4b5a0dbe2ff27f785a59523d87de9ffde6b",
   "review_subject_hash": "fe0d00b79be539391a3360e132469cbcb5729f6fbbd5c9460f1f3c1fafd2b024",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: ESCAP scores Russia 6.2 at 0.5 on sectoral storage duties, and the approved score of 1 rests on article 18(5) of Federal Law 152-FZ. The no-evidence conclusion is wrong. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:06.853883+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -10424,17 +10424,17 @@
   "finding_key": "09787854ff32421d80af73f11e4da1c92df0edc66f8d8ba43850da00421cc1aa",
   "review_subject_hash": "a439fa54a2f401eab96506355d7c8b04e19c239de42c6391f5e943075efc716d",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "Mongolia has a comprehensive framework: the 2021 Law on Protection of Personal Information is a horizontal personal-data law, and the approved score is 0, as ESCAP has it. A finding that no framework exists is wrong. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T13:40:07.025805+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -10560,17 +10560,17 @@
   "finding_key": "fea3411f4466e019e480d547b318f0c06298673ef8c0bb1429ca84bd248b1430",
   "review_subject_hash": "f86557cc7e34a501bcf93172a6de33efdb220da671efcdafb4644a2b9109d654",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "A measure exists: under the rule that two specific-data requirements score 1, the recorded score of 1 rests on Article 71 of the Commercial Bank Law (No. 39/NA, 2023) and Article 21(1) of MTC Decision 3643 (2025). The no-evidence conclusion is wrong. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T14:21:23.064247+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -11526,8 +11526,8 @@
   }
  },
  {
-  "finding_key": "8de41526802eecff2dcc8a342479ae589e0b4ffbd60ba6d2ebd552209289b22d",
-  "review_subject_hash": "40c2896a5a0f78294822d31b3f92e76335672dfd54074d28b0f9265fb83cc8da",
+  "finding_key": "821aec0ff0e68a21c423a7658ddfc977ec4b59f680dffc4a9b6690280f2ac1d0",
+  "review_subject_hash": "6d852300222b4a574d3bce907a0c6b02139725d1a3892c8d22b258ff04f419d3",
   "review": {
    "decision": "rejected",
    "reviewer_name": "",
@@ -11543,8 +11543,8 @@
   }
  },
  {
-  "finding_key": "eeca894c753d3eec617ff227fcf1ab20e4168cf89e413c86e5a223e24e7b20eb",
-  "review_subject_hash": "750ceea8c3fde6d92c6cd56a7bcaec6de7217f178a3c7b5e7a6ddbab936f86bd",
+  "finding_key": "e087f5ae6ccfc2af7ee4d9ed4e9b4cbe415343b2f19d35537da7f7223b081b4d",
+  "review_subject_hash": "8df6589f8298723e944cd3663bb779512275a045b727ae5ff9f87328fcbf3570",
   "review": {
    "decision": "rejected",
    "reviewer_name": "",
@@ -11560,8 +11560,8 @@
   }
  },
  {
-  "finding_key": "85513492dc40747219dcebf60bdfaf71cf06d3660f54f828d2d9994c65228518",
-  "review_subject_hash": "3c926537fb07cc35b1fb61cb8ed385db08bc8e7a130a68b43bba0f36e97282df",
+  "finding_key": "5a05121dffeb56d9ce628c66847fd15370d29ef1407a0b01de3c5b89b4d714f3",
+  "review_subject_hash": "b5b965749d4ccb04b5436032ae7feb606088d5aa86c2745f56cbefec98fd520b",
   "review": {
    "decision": "rejected",
    "reviewer_name": "",
@@ -11747,20 +11747,20 @@
   }
  },
  {
-  "finding_key": "1a802b5f9b9435316827314da4c8cc36965a84c3348aa34759290844bd110ae2",
-  "review_subject_hash": "2ddbca6a5bf6572f78d73cdc661769c22614ccb393b4587a130d222ec8bd33ae",
+  "finding_key": "1909e44c8110be68710dd775d942bfe28b542411f0ba962685e5c79e91e783dc",
+  "review_subject_hash": "cf105d7515b54441d47568bfdeeba2f67b307bed95712539223a252b8a23d86a",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "correction_note": "Under the team rule of 30 Sep 2026, government ownership of IP in commissioned work counts as a surrender. Treasury circulars PK 2.1 para. 2.10(iv) and PK 2.2 Lampiran 2 cl. (xvii)(a) are such a measure and the recorded score is 1, so the no-evidence conclusion is wrong. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T14:21:22.911448+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
   }
  },
  {
@@ -11815,8 +11815,8 @@
   }
  },
  {
-  "finding_key": "fae6ec8c9b32b87b7cf99e0bf2283c65569907fc73a92254dc6290abbb90f67e",
-  "review_subject_hash": "0d109d40ca983d2bb371cdb2b6c0eb64c86ae1639057be55eb9710ede0d74964",
+  "finding_key": "e5b4a51e7515a03b1138d9cb9dce9bab9394e9e9af5452bcf23b2ef0a00d76ff",
+  "review_subject_hash": "3c3fca3a6616afa733f20245b6594e0de0cd6c37c7468bbdb29d66a2e6618364",
   "review": {
    "decision": "rejected",
    "reviewer_name": "",
@@ -11832,8 +11832,25 @@
   }
  },
  {
-  "finding_key": "ab8f8a80fa2b5e89753f7223a9a4099204ceec6a6847957ba98b140f97378b95",
-  "review_subject_hash": "73fa7cb579fd57dac764671e9d6dd37195a438f71503bb9c144bb2d1be6eafb2",
+  "finding_key": "1a8aa77d8cb2b7f0e079fdb3853f95d839c1ea2081a802b5d6a7fbabfe7ed65e",
+  "review_subject_hash": "a6b8cece1af5d20b7e496634e658e523c56f0ecfffdc6965e0d3b742bbbdd724",
+  "review": {
+   "citation_checked": false,
+   "citation_reviewer_name": "",
+   "correction_note": "A measure exists: ESCAP scores Australia 2.3 at 0.5 on the SME and Indigenous procurement measures, and the recorded score is 1. The no-evidence conclusion is wrong. Entered on my instruction by the review assistant, 30 Sep 2026.",
+   "decision": "rejected",
+   "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T14:21:22.580782+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
+   "status_checked": false,
+   "status_reviewer_name": ""
+  }
+ },
+ {
+  "finding_key": "754fdcbc8b938a199ea655192c6cf4d39c561b80d300ee57a6b105837be4fd17",
+  "review_subject_hash": "fec368dd450a6f953f1a1aec57f302d61d80146e8daa7f56f9d8444ff164ce90",
   "review": {
    "decision": "rejected",
    "reviewer_name": "",
@@ -11849,37 +11866,20 @@
   }
  },
  {
-  "finding_key": "40bcca90d20c5d535307b73878036d56d0bf2e2040e88320f12127f3100c4852",
-  "review_subject_hash": "71e38e49d9ab5ebb6ab4a00a34a1bded9f7b6f54b6d00e711a6ecae4dad1f919",
+  "finding_key": "bcbe0ba17f23ea49237824a72f10b830f1ffcd0bd6fbd4d27299cfb93d760b1b",
+  "review_subject_hash": "3bacd7e04be47caa1ec6e885f14b00c91fbbf0a8f59cfe67015fa93828b4968a",
   "review": {
-   "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
    "citation_checked": false,
-   "mapping_checked": false,
-   "status_checked": false,
    "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
-  }
- },
- {
-  "finding_key": "6fd880739daef889b25e72bbee65c44d9732f701537e0c96df3d5a73b93176ac",
-  "review_subject_hash": "959738684b9c3faf5769edcefc2dc4a91fc900e9bfd73c5414baa523092408e4",
-  "review": {
+   "correction_note": "The search behind this row was incomplete: two Department of Intellectual Property sources (the government software-procurement guidelines and the Layout Designs of Integrated Circuits Act) could not be acquired, so it cannot confirm on its own that no measure exists. The score of 0 is set by the Zone-3 decision instead. Entered on my instruction by the review assistant, 30 Sep 2026.",
    "decision": "rejected",
-   "reviewer_name": "",
-   "reviewer_role": "",
-   "reviewed_at": "",
-   "citation_checked": false,
    "mapping_checked": false,
+   "mapping_reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewed_at": "2026-09-30T14:21:22.757516+00:00",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "mapping",
    "status_checked": false,
-   "citation_reviewer_name": "",
-   "mapping_reviewer_name": "",
-   "status_reviewer_name": "",
-   "correction_note": "UNSIGNED TEMPLATE — change only after human review"
+   "status_reviewer_name": ""
   }
  },
  {
@@ -14739,8 +14739,8 @@
   }
  },
  {
-  "finding_key": "0d0528fbe50d74aef60f76f6041bdbc11662b35e12d15aa612ba62724f4c5bab",
-  "review_subject_hash": "762da38bde9b82ab866fdab070505605897561b6d9570966915c4538d7e85ce5",
+  "finding_key": "044b3a3747f1a36685cca7ded28c82dfec2c6f9c37352be3118498c87f5b0841",
+  "review_subject_hash": "22903f977e6ca6295fe2efa9f8a14e754751624abd5d0d73ac7791e742b66206",
   "review": {
    "decision": "rejected",
    "reviewer_name": "",
@@ -14909,8 +14909,8 @@
   }
  },
  {
-  "finding_key": "665dab8a4f93cb3100d8aa4bab7001008db6e6afa6b487b0356875191c72c5ac",
-  "review_subject_hash": "34a93ac86954c44723c65316757a8f412c6117030add7b53fb24bf36b9e227e8",
+  "finding_key": "12a4ee878ed1af6fa71b6841a40622102e0a1528977840e6d7c83cac8226e1b8",
+  "review_subject_hash": "10d027e073c62da5a9e18881b4624c07beb30cabfca215cf021351629227cfb9",
   "review": {
    "decision": "rejected",
    "reviewer_name": "",
@@ -14926,8 +14926,8 @@
   }
  },
  {
-  "finding_key": "4653321fb208142b5e9c97604ede0c6af50bcbd4326f3d9368bb35a8b6455fdf",
-  "review_subject_hash": "1f005158658bed6b27eec4736e4ce10a2f096633b1ef20e6a35c21d9924ab661",
+  "finding_key": "aea8aa7c503c6b5139a0a436f7be724a5245cc59b7a5b7354a0a07d895c041d4",
+  "review_subject_hash": "9dab35581e4ccc0ab9b9c5a402eb6a97abdd9777eb50687580df79c9ac3b7395",
   "review": {
    "decision": "rejected",
    "reviewer_name": "",

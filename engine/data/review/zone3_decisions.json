@@ -869,14 +869,14 @@
   "score": 0.0
  },
  {
-  "action": "override",
+  "action": "approve",
   "economy": "India",
   "indicator": "P7-I1",
-  "reasoning": "The DPDP Act's rights and duties commence only on 13 May 2027 under G.S.R. 843(E), so India had no comprehensive law in force in August 2026. What applied was IT Act section 43A and the 2011 SPDI Rules, which reach only body corporates and mainly sensitive data, plus sectoral rules such as Aadhaar section 28(5). That is thin, partly sectoral protection: 0.5. ESCAP's 0 counts the Act from enactment.",
-  "reviewed_at": "2026-09-30T01:34:06.560872+00:00",
-  "reviewer_name": "Abu Naser Md. Nafew",
+  "reasoning": "Team rule, 30 Sep 2026: a law counts once enacted, as ESCAP counts it. The Digital Personal Data Protection Act 2023 is a horizontal personal-data law with the core rights of access, correction and erasure, so India has a comprehensive framework: 0, matching ESCAP and the engine. Its rights and duties commence on 13 May 2027 (G.S.R. 843(E)); under the enacted-law rule that date does not change the score. Entered on my instruction by the review assistant, 30 Sep 2026.",
+  "reviewed_at": "2026-09-30T13:36:46.097003+00:00",
+  "reviewer_name": "Md. Insaful Rahman Tusar",
   "reviewer_role": "mapping",
-  "score": 0.5
+  "score": 0.0
  },
  {
   "action": "override",
@@ -902,11 +902,11 @@
   "action": "override",
   "economy": "India",
   "indicator": "P7-I4",
-  "reasoning": "The 0.5 rests entirely on section 10 of the DPDP Act, which commences only on 13 May 2027, so in August 2026 nobody had to appoint a data protection officer or run an impact assessment. Nothing else on file imposes either duty in any sector, so 0. ESCAP's 1 counts section 10 before commencement; ESCAP itself scores the IT Rules compliance officer 0.",
-  "reviewed_at": "2026-09-30T01:34:06.814691+00:00",
-  "reviewer_name": "Abu Naser Md. Nafew",
+  "reasoning": "Under the enacted-law rule, section 10 of the DPDP Act 2023 counts: a Significant Data Fiduciary must appoint a data protection officer based in India and carry out periodic data protection impact assessments. The government designates Significant Data Fiduciaries by the volume and sensitivity of the data they process and the risk it poses, in any sector, so the duty is not confined to one sector: 1, as ESCAP scores it. Commencement on 13 May 2027 is noted. Entered on my instruction by the review assistant, 30 Sep 2026.",
+  "reviewed_at": "2026-09-30T13:36:46.161398+00:00",
+  "reviewer_name": "Md. Insaful Rahman Tusar",
   "reviewer_role": "mapping",
-  "score": 0.0
+  "score": 1.0
  },
  {
   "action": "approve",
@@ -1225,6 +1225,56 @@
   "reasoning": "Clause 27/3(3) of Regulation No. 2 prefers a Thai national or Thai-incorporated bidder within 3% of the cheapest foreign bid, and clause 13 of the principal regulation reserves 30% of budgets for the Thai Innovation List, open only to majority Thai-owned firms. Either alone discriminates by nationality.",
   "reviewed_at": "2026-09-30T01:34:09.609179+00:00",
   "reviewer_name": "Abu Naser Md. Nafew",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "India",
+  "indicator": "P2-I2",
+  "reasoning": "I follow ESCAP's 1, which rests on the Policy on Adoption of Open Source Software for Government of India (2015) and its framework for e-governance applications: government bodies must treat open-source software, with its source code available, as the preferred option in e-governance procurement. The only row on file, para. 30 of MeitY's cloud empanelment call, was rejected at mapping because it covers project documents rather than source code or IP. The 2015 policy is not yet filed and should be added as evidence. Entered on my instruction by the review assistant, 30 Sep 2026.",
+  "reviewed_at": "2026-09-30T13:36:45.811103+00:00",
+  "reviewer_name": "Md. Insaful Rahman Tusar",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "override",
+  "economy": "Lao PDR",
+  "indicator": "P7-I4",
+  "reasoning": "Law 25/NA read in full imposes no DPO or impact-assessment duty. Article 29 lists the data manager's rights, and item 4 only permits a unit to monitor system security. Article 30's eleven duties cover protecting data, storage and backup systems, fixing technical faults and cooperating with the authorities; none requires a data protection officer or an impact assessment. Article 46 lists what inspectors examine, and its item 3 refers to the staff of the data-protection sector, not company officers. Both filed rows were rejected at mapping and all three judges score 0. ESCAP's own entry says the Law does not state a DPO requirement, yet scores 1. Entered on my instruction by the review assistant, 30 Sep 2026.",
+  "reviewed_at": "2026-09-30T13:36:45.890086+00:00",
+  "reviewer_name": "Md. Insaful Rahman Tusar",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "override",
+  "economy": "Lao PDR",
+  "indicator": "P7-I5",
+  "reasoning": "All four filed rows were rejected at mapping. Article 27 of the AML/CFT law is the suspicious-transaction reporting duty; Articles 74 and 110 of the Commercial Bank Law concern supervisory information from banks and their auditors; Article 60 of the Cyber Crime Law is a fines clause. None gives an authority the power to obtain personal data without a court, so 0, as ESCAP scores it. Entered on my instruction by the review assistant, 30 Sep 2026.",
+  "reviewed_at": "2026-09-30T13:36:45.966346+00:00",
+  "reviewer_name": "Md. Insaful Rahman Tusar",
+  "reviewer_role": "mapping",
+  "score": 0.0
+ },
+ {
+  "action": "approve",
+  "economy": "Timor-Leste",
+  "indicator": "P6-I5",
+  "reasoning": "Timor-Leste is not party to RCEP, CPTPP, DEPA or any bilateral digital economy agreement. It joined ASEAN on 26 October 2025, and ASEAN's Digital Economy Framework Agreement, which carries the data-flow commitments, is due for signature at the November 2026 summit, so it does not yet bind Timor-Leste. No binding cross-border data-transfer commitment applies today: 1. Recheck after the DEFA signing. Entered on my instruction by the review assistant, 30 Sep 2026.",
+  "reviewed_at": "2026-09-30T13:36:46.032646+00:00",
+  "reviewer_name": "Md. Insaful Rahman Tusar",
+  "reviewer_role": "mapping",
+  "score": 1.0
+ },
+ {
+  "action": "approve",
+  "economy": "Russian Federation",
+  "indicator": "P2-I2",
+  "reasoning": "Team rule of 30 Sep 2026: the government taking ownership of IP in commissioned work counts as a surrender. Article 110.2(1) of Federal Law 44-FZ makes it a mandatory term of every state contract for design documentation or engineering surveys that the exclusive rights in the results belong to the state, and Article 1240.1 of the Civil Code obliges the contractor to acquire those rights from its staff and subcontractors for transfer to the state. Under that rule the score is 1, the engine's proposal. ESCAP scores 0. The four filed rows were rejected at mapping before the rule was set and should be reviewed again against it. Entered on my instruction by the review assistant, 30 Sep 2026.",
+  "reviewed_at": "2026-09-30T14:21:21.834324+00:00",
+  "reviewer_name": "Md. Insaful Rahman Tusar",
   "reviewer_role": "mapping",
   "score": 1.0
  }

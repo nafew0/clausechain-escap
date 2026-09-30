@@ -81,6 +81,10 @@ research_scores: { P6-I1: 0, P6-I2: 0, P6-I3: 1, P6-I4: 1, P6-I5: 1, P7-I1: 0, P
 governing_instruments:
   default: { law: "Law of Mongolia on Protection of Personal Information (2021)", url: "https://legalinfo.mn/mn/detail?lawId=16390288615991" }
   P7-I2:   { law: "Law of Mongolia on Cybersecurity (2021)", url: "https://legalinfo.mn/mn/detail?lawId=16390365491061" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "Law on the Procurement of Goods, Works and Services by State and Local Property Assets (revised, 2023)", url: "https://legalinfo.mn/mn/pdfExport?fileid=16760359992351" }
+  P2-I2:   { law: "Law on the Procurement of Goods, Works and Services by State and Local Property Assets (revised, 2023)", url: "https://legalinfo.mn/mn/pdfExport?fileid=16760359992351" }
+  P2-I3:   { law: "Law on the Procurement of Goods, Works and Services by State and Local Property Assets (revised, 2023)", url: "https://legalinfo.mn/mn/pdfExport?fileid=16760359992351" }
 
 status_assertions:
   "Law of Mongolia on Protection of Personal Information (2021)":

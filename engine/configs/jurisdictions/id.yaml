@@ -97,6 +97,10 @@ hunt_instruments:
 governing_instruments:
   default: { law: "Law No. 27 of 2022 on Personal Data Protection", url: "https://jdih.komdigi.go.id/produk_hukum/view/id/832/t/undangundang%2Bnomor%2B27%2Btahun%2B2022" }
   P7-I2:   { law: "Presidential Regulation No. 47 of 2023 on National Cybersecurity Strategy", url: "https://peraturan.bpk.go.id/Details/255542/perpres-no-47-tahun-2023" }
+  # Pillar 2: the procurement law is the reference basis for a procurement absence row (30 Sep 2026).
+  P2-I1:   { law: "Presidential Regulation No.16 on Government Procurement of Goods and Services 2018", url: "https://peraturan.bpk.go.id/Download/64076/Perpres%20Nomor%2016%20Tahun%202018.pdf" }
+  P2-I2:   { law: "Presidential Regulation No.16 on Government Procurement of Goods and Services 2018", url: "https://peraturan.bpk.go.id/Download/64076/Perpres%20Nomor%2016%20Tahun%202018.pdf" }
+  P2-I3:   { law: "Presidential Regulation No.16 on Government Procurement of Goods and Services 2018", url: "https://peraturan.bpk.go.id/Download/64076/Perpres%20Nomor%2016%20Tahun%202018.pdf" }
 
 status_assertions:
   "POJK 8/2023 AML-CFT-CPF Program Implementation":
