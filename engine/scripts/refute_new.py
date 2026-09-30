@@ -201,4 +201,10 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    finally:
+        # This stage's model calls go to the review-stage cost ledger.
+        from packages.core import review_layout
+        from packages.providers import cost
+        cost.append_stage_log("refuter", {"provider_profile": review_layout.current().provider_profile})

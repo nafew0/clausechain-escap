@@ -281,18 +281,20 @@ measured cost.
 
 ## Measured Cost
 
-**Measured from real runs, not estimated.** Every run appends its token usage and priced cost to
-`engine/logs/cost_report.json` (`engine/packages/providers/cost.py` holds the prices), and the **Runs** page
-shows each run's cost.
+**Measured from real runs and checked against the providers' billing, not estimated.** Every pipeline run
+appends its token usage and priced cost to `engine/logs/cost_report.json`, and the **Runs** page shows each run's
+cost. The refuter, the Zone-3 judges and any run that stops part-way record theirs in
+`engine/logs/review_cost_report.json`. Prices are in `engine/packages/providers/cost.py`.
 
 | Component | Engine used | Measured cost |
 | :---- | :---- | :---- |
 | OCR | PaddleOCR, self-hosted | $0.00 (no API fees) |
 | Embedding | Engine A: text-embedding-3-small · Engine B: bge-m3 (self-hosted) | $0.077 across 18 runs · $0.00 |
 | Mapping — Engine A | gpt-6-luna | $1.287 across 18 runs |
+| Refuter and Zone-3 judges — Engine A | gpt-6-luna | About 80% on top of the mapping cost (September billing, below) |
 | Mapping — Engine B | Qwen3.8-27B, self-hosted | $0.00 (no API fees; our own GPU) |
 | Crawling | Direct HTTP / headless browser | $0.00 |
-| **Total, Engine A** | | **$0.0083 per document** |
+| **Total, Engine A** | | **$0.0083 per document** for the mapping run; **about $0.015 per document** with the refuter and Zone-3 judges |
 | **Total, Engine B** | | **$0.00 per document** (API) |
 
 **Measured on:** 29–30 September 2026, from `engine/logs/cost_report.json`.
@@ -304,6 +306,17 @@ economies × 3 pillars, 425 source documents).
 Working: cost per document = a run's `total_usd` ÷ the documents in that economy–pillar's seed list; summed over
 all runs, $1.364 ÷ 164 = $0.0083. Engine B makes no paid API calls; its cost is the electricity and depreciation
 of the GPU, which we have not metered.
+
+**Checked against provider billing (30 September 2026).**
+
+- *Prices are exact.* For a test call, OpenRouter's billed cost equalled our price table's result (ratio 1.000,
+  reasoning tokens included).
+- *What the per-run ledger does not show.* September billing for Engine A was **$3.60 on OpenRouter** and
+  **$0.60 on the OpenAI API**, about **$4.20** in all. Of that, $2.35 is in `cost_report.json`: every mapping run,
+  including earlier September runs on gpt-5.6. The rest is the refuter, the Zone-3 judges (three per indicator,
+  re-run on 30 September after Engine A moved to the OpenAI API) and runs that stopped part-way. Until 30 September
+  these were not written to a ledger; they now go to `review_cost_report.json`. Hence the all-in figure: about 1.8×
+  the mapping cost, or about $0.015 per document.
 
 ---
 

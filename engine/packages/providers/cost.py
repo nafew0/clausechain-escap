@@ -67,6 +67,21 @@ def report() -> dict:
             "note": "measured from real API usage objects; prices per 1M tokens (PRICES)"}
 
 
+STAGE_LOG = "logs/review_cost_report.json"
+
+
+def append_stage_log(stage: str, extra: dict | None = None,
+                     path: str | Path = STAGE_LOG) -> dict | None:
+    """Record model spend that is not a finished pipeline run: the refuter, the
+    Zone-3 judges, the gold audit, or a run that stopped part-way. It has its own
+    ledger because the app shows each run the latest logs/cost_report.json entry
+    for its economy and pillar."""
+    if not _USAGE:
+        return None
+    stamp = int(datetime.now(timezone.utc).timestamp())
+    return append_log(f"{stage}-{stamp}", {"stage": stage, **(extra or {})}, path=path)
+
+
 def append_log(run_id: str, extra: dict | None = None,
                path: str | Path = "logs/cost_report.json") -> dict:
     entry = {"run_id": run_id, "at": datetime.now(timezone.utc).isoformat(),

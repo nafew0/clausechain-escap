@@ -51,11 +51,18 @@ def main() -> int:
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    envelope = run(
-        country=args.country,
-        pillar=args.pillar,
-        provider_profile=args.provider_profile,
-    )
+    try:
+        envelope = run(
+            country=args.country,
+            pillar=args.pillar,
+            provider_profile=args.provider_profile,
+        )
+    except BaseException:
+        # A run that stops part-way has still spent money on the model.
+        from packages.providers import cost
+        cost.append_stage_log("pipeline-stopped", {"economy": args.country, "pillar": args.pillar,
+                                                   "provider_profile": args.provider_profile})
+        raise
 
     write_csv(envelope.findings, out_dir / "output.csv")
     write_json(envelope, out_dir / "output.json")

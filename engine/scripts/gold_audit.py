@@ -403,4 +403,9 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    finally:
+        # This stage's model calls go to the review-stage cost ledger.
+        from packages.providers import cost
+        cost.append_stage_log("gold-audit", {"provider_profile": "hybrid_accuracy"})
