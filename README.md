@@ -55,10 +55,17 @@ guide with troubleshooting is **[DEPLOYMENT.md](DEPLOYMENT.md)**.
 
 ### 2. Set up the environment
 
-Install and start **Docker** — [Docker Desktop](https://docs.docker.com/desktop/) on macOS or Windows, or
-[Docker Engine](https://docs.docker.com/engine/install/) with the compose plugin on Linux. Nothing else.
+> **Install Docker Desktop first. It is the only prerequisite.** Download it for your platform, install it,
+> start it, and wait until it reports that it is running.
 
-Needs 30 GB of free disk and 8 GB of memory for Docker (Docker Desktop's default on a 16 GB machine).
+| Platform | Download page | Direct installer |
+| :--- | :--- | :--- |
+| **Windows** 10 / 11 | [Install Docker Desktop on Windows](https://docs.docker.com/desktop/setup/install/windows-install/) | [Docker Desktop Installer.exe](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) (Intel / AMD) · [ARM](https://desktop.docker.com/win/main/arm64/Docker%20Desktop%20Installer.exe) |
+| **macOS** | [Install Docker Desktop on Mac](https://docs.docker.com/desktop/setup/install/mac-install/) | [Docker.dmg for Apple silicon](https://desktop.docker.com/mac/main/arm64/Docker.dmg) (M-series) · [Intel](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
+| **Linux** | [Install Docker Desktop on Linux](https://docs.docker.com/desktop/setup/install/linux/) | [docker-desktop-amd64.deb](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb) (Ubuntu / Debian); other distributions on the page. Servers without a desktop: [Docker Engine](https://docs.docker.com/engine/install/) with the compose plugin. |
+
+Nothing else is needed: Python, Node, PostgreSQL and every library come inside the images. The machine needs
+30 GB of free disk and 8 GB of memory for Docker (Docker Desktop's default on a 16 GB machine).
 
 ### 3. Configure
 

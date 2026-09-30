@@ -20,9 +20,18 @@ that, starting and stopping take seconds.
 
 ## 1. What you need
 
+> **Install Docker Desktop first. It is the only prerequisite.** Download it for your platform, install it,
+> start it, and wait until it reports that it is running.
+
+| Platform | Download page | Direct installer |
+| :--- | :--- | :--- |
+| **Windows** 10 / 11 | [Install Docker Desktop on Windows](https://docs.docker.com/desktop/setup/install/windows-install/) | [Docker Desktop Installer.exe](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) (Intel / AMD) · [ARM](https://desktop.docker.com/win/main/arm64/Docker%20Desktop%20Installer.exe) |
+| **macOS** | [Install Docker Desktop on Mac](https://docs.docker.com/desktop/setup/install/mac-install/) | [Docker.dmg for Apple silicon](https://desktop.docker.com/mac/main/arm64/Docker.dmg) (M-series) · [Intel](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
+| **Linux** | [Install Docker Desktop on Linux](https://docs.docker.com/desktop/setup/install/linux/) | [docker-desktop-amd64.deb](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb) (Ubuntu / Debian); other distributions on the page. Servers without a desktop: [Docker Engine](https://docs.docker.com/engine/install/) with the compose plugin. |
+
 | | |
 | :--- | :--- |
-| **Docker** | macOS / Windows: [Docker Desktop](https://docs.docker.com/desktop/). Linux: [Docker Engine](https://docs.docker.com/engine/install/) with the compose plugin. Start it before you begin. |
+| **Docker** | Docker Desktop from the table above (Linux servers: Docker Engine with the compose plugin), running before you begin. |
 | **Disk** | **30 GB free** with the full data: the download (3.3 GB), the unpacked data (15.5 GB), the images (about 5 GB) and Docker's build cache (about 6 GB, reclaimable afterwards). The partial data needs about 8 GB less. |
 | **Memory for Docker** | **8 GB** or more. Docker Desktop gives itself half of the computer's memory by default, so a 16 GB machine is fine as it is; on an 8 GB machine raise it in Docker Desktop → Settings → Resources → Memory. Re-running Australia loads a 4 GB embedding cache. |
 | **Internet** | For the first run only (images and the data bundle). |
