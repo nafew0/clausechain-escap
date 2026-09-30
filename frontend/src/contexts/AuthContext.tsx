@@ -29,6 +29,7 @@ export interface User {
   designation?: string
   phone?: string
   is_superuser?: boolean
+  role?: 'admin' | 'reviewer' | 'viewer' | null
   email_verified?: boolean
   is_active?: boolean
   last_login?: string

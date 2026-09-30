@@ -18,6 +18,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { getAdminUsers } from '@/services/admin'
+import { ROLE_BADGE, ROLE_LABELS, type AccountRole } from '@/lib/roles'
 
 import { formatDateTime } from './admin-helpers'
 
@@ -25,7 +26,7 @@ interface UserRow {
   id: string
   username: string
   email: string
-  current_plan?: { name: string }
+  role: AccountRole
   is_active: boolean
   created_at: string
 }
@@ -60,7 +61,7 @@ export default function AdminUsers() {
       return {
         page: next.get('page') || '1',
         search: next.get('search') || '',
-        plan: next.get('plan') || '',
+        role: next.get('role') || '',
         is_active: next.get('is_active') || '',
         ordering: next.get('ordering') || '-created_at',
       }
@@ -86,9 +87,9 @@ export default function AdminUsers() {
         ),
       },
       {
-        accessorKey: 'current_plan',
-        header: 'Plan',
-        cell: ({ row }) => <Badge variant="outline">{row.original.current_plan?.name || 'Free'}</Badge>,
+        accessorKey: 'role',
+        header: 'Role',
+        cell: ({ row }) => <Badge variant={ROLE_BADGE[row.original.role] ?? 'secondary'}>{ROLE_LABELS[row.original.role] ?? row.original.role}</Badge>,
       },
       {
         accessorKey: 'is_active',
@@ -114,9 +115,9 @@ export default function AdminUsers() {
     getCoreRowModel: getCoreRowModel(),
   })
 
-  const planOptions = [
-    { label: 'All plans', value: '' },
-    ...((data?.plans || []).map((plan: { name: string; slug: string }) => ({ label: plan.name, value: plan.slug }))),
+  const roleOptions = [
+    { label: 'All roles', value: '' },
+    ...(Object.entries(ROLE_LABELS).map(([value, label]) => ({ label, value }))),
   ]
 
   if (isLoading) {
@@ -135,7 +136,7 @@ export default function AdminUsers() {
       <CardHeader className="gap-4">
         <div>
           <CardTitle>Users</CardTitle>
-          <CardDescription>Search, filter, and inspect ClauseChain accounts.</CardDescription>
+          <CardDescription>Search ClauseChain accounts, see each person&apos;s role, and open one to change it.</CardDescription>
         </div>
         <div className="grid gap-3 lg:grid-cols-[1.4fr_repeat(3,minmax(0,0.8fr))]">
           <Input
@@ -146,9 +147,9 @@ export default function AdminUsers() {
             }
           />
           <CustomSelect
-            value={params.plan}
-            onChange={(value) => updateSearchParams(searchParamString, { plan: String(value) }, pathname)}
-            options={planOptions}
+            value={params.role}
+            onChange={(value) => updateSearchParams(searchParamString, { role: String(value) }, pathname)}
+            options={roleOptions}
           />
           <CustomSelect
             value={params.is_active}

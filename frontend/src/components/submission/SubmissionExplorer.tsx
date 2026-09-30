@@ -22,6 +22,7 @@ import {
 import { AnimatePresence, LazyMotion, MotionConfig, domAnimation, m } from 'motion/react'
 
 import { useAuth } from '@/contexts/AuthContext'
+import { isAdmin } from '@/lib/roles'
 import { SnapshotBanner } from '@/components/workspace/SnapshotBanner'
 import { ModePageHeader } from '@/components/workspace/ModePageHeader'
 import { useEngineActions, useLaunchEngineAction, useSubmission } from '@/hooks/workspace'
@@ -107,7 +108,7 @@ export default function SubmissionExplorer() {
       eyebrow={<><span className="review-eyebrow"><FileCheck2 size={14} /> Aggregated evidence · all economies and pillars</span><SnapshotBanner /></>}
       title="Consolidated RDTII dataset"
       description="Final artifacts are produced only by deterministic engine replay—not by this table."
-      actions={user?.is_superuser ? <button className="submission-replay" onClick={replay} disabled={launch.isPending || ['queued', 'running'].includes(latestReplay?.status ?? '')}><Play size={15} /> Run approval replay</button> : null}
+      actions={isAdmin(user) ? <button className="submission-replay" onClick={replay} disabled={launch.isPending || ['queued', 'running'].includes(latestReplay?.status ?? '')}><Play size={15} /> Run approval replay</button> : null}
     >{query.data?.release ? <em className="submission-release-state">Release {query.data.release.state}</em> : null}</ModePageHeader>
     {query.data?.final_artifacts.available ? <section className="submission-final-ready"><CheckCircle2 size={19} /><div><strong>Replayed artifacts available · {query.data.final_artifacts.rows} approved rows</strong><span>CSV {query.data.final_artifacts.csv_sha256?.slice(0, 12)}… · JSON {query.data.final_artifacts.json_sha256?.slice(0, 12)}…</span></div></section> : <section className="submission-final-pending"><AlertTriangle size={19} /><div><strong>No replayed final artifact is available</strong><span>The table below contains candidates; pending or rejected rows are not silently exported.</span></div></section>}
     {latestReplay ? <section className={cn('submission-replay-state', `state-${latestReplay.status}`)}>{latestReplay.status === 'failed' ? <XCircle size={18} /> : latestReplay.status === 'succeeded' ? <CheckCircle2 size={18} /> : <LoaderCircle size={18} />}<div><strong>Replay {latestReplay.status}</strong><span>{latestReplay.error || latestReplay.stdout || 'Waiting for the dedicated engine worker.'}</span></div></section> : null}

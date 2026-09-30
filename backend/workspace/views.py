@@ -54,6 +54,7 @@ from .pagination import WorkspacePagination
 from .roles import (
     decision_reviewer_role,
     has_review_role,
+    is_admin,
     reviewer_identity,
     reviewer_roles,
 )
@@ -79,10 +80,10 @@ class DecisionConflict(APIException):
 
 
 class IsSuperuserPermission(BasePermission):
+    """Engine actions (runs, replay, refresh, sources, cancels): the Admin role only."""
+
     def has_permission(self, request, view):
-        return bool(
-            request.user and request.user.is_authenticated and request.user.is_superuser
-        )
+        return bool(request.user and request.user.is_authenticated and is_admin(request.user))
 
 
 def active_snapshot(mode=None):
@@ -1077,7 +1078,7 @@ class RunsView(APIView):
                     for action in actions_for_mode(mode).filter(cleared_at__isnull=True)[:20]
                 ],
                 "worker": worker_status(),
-                "can_launch": request.user.is_superuser,
+                "can_launch": is_admin(request.user),
             }
         )
 

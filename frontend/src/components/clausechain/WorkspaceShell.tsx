@@ -10,6 +10,7 @@ import {
   LoaderCircle,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
+import { isAdmin } from '@/lib/roles'
 import { LocalChip, useUrlMode, withMode } from '@/components/workspace/RunModeTabs'
 import { WORKSPACE_NAV_ITEMS, workspaceItemIsActive } from '@/lib/navigation'
 
@@ -216,7 +217,7 @@ export default function WorkspaceShell({ children, breadcrumbs = [], contentMode
           <button aria-label="Notifications" className="p-2 rounded-lg text-cc-ink-600 hover:bg-cc-ink-100 hover:text-cc-ink-900 transition-colors">
             <Bell size={16} />
           </button>
-          {user?.is_superuser ? <Link href="/admin" aria-label="Admin panel" className="p-2 rounded-lg text-cc-ink-600 hover:bg-cc-ink-100 hover:text-cc-ink-900 transition-colors"><ShieldCheck size={16} /></Link> : null}
+          {isAdmin(user) ? <Link href="/admin" aria-label="Admin panel" className="p-2 rounded-lg text-cc-ink-600 hover:bg-cc-ink-100 hover:text-cc-ink-900 transition-colors"><ShieldCheck size={16} /></Link> : null}
           <Link href="/profile" aria-label="Profile" className="p-2 rounded-lg text-cc-ink-600 hover:bg-cc-ink-100 hover:text-cc-ink-900 transition-colors">
             <UserRound size={16} />
           </Link>

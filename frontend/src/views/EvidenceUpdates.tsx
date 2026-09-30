@@ -7,6 +7,7 @@ import WorkspaceShell from '@/components/clausechain/WorkspaceShell'
 import { PageUnavailable, SnapshotBanner, TruthBadge } from '@/components/clausechain/TruthState'
 import { ModePageHeader } from '@/components/workspace/ModePageHeader'
 import { useAuth } from '@/contexts/AuthContext'
+import { isAdmin } from '@/lib/roles'
 import { useEvidenceChangeDecision, useEvidenceChanges, usePublishEvidenceChanges } from '@/hooks/workspace'
 import { modeHref } from '@/lib/runMode'
 
@@ -47,7 +48,7 @@ export default function EvidenceUpdates() {
       eyebrow={<><TruthBadge state="live" />{query.data ? <SnapshotBanner snapshot={query.data.snapshot} /> : null}</>}
       title="Evidence updates"
       description="Compare each engine rerun with the current ESCAP registry. Nothing historical is overwritten."
-      actions={user?.is_superuser && query.data?.change_set.state === 'draft' ? <button className="truth-primary-link" disabled={publish.isPending} onClick={() => void publishRegistry()}>{publish.isPending ? 'Publishing…' : 'Publish reviewed update'}</button> : null}
+      actions={isAdmin(user) && query.data?.change_set.state === 'draft' ? <button className="truth-primary-link" disabled={publish.isPending} onClick={() => void publishRegistry()}>{publish.isPending ? 'Publishing…' : 'Publish reviewed update'}</button> : null}
     />
     {query.isError || !query.data ? <PageUnavailable pending={query.isPending} title={query.isPending ? 'Reconciling evidence history…' : 'Evidence reconciliation is unavailable'} /> : <>
       <section className={`registry-update ${query.data.change_set.state}`} data-data-card><header><div><GitCompareArrows /><span><small>Registry reconciliation</small><strong>{query.data.change_set.state === 'draft' ? 'Candidate update' : 'Published registry version'}</strong></span></div><b>{query.data.change_set.state.toUpperCase()}</b></header><div className="registry-update-grid">{Object.entries(query.data.change_set.counts).map(([kind, count]) => <span key={kind}><strong>{count}</strong>{kind.replace('_', ' ')}</span>)}</div><footer><History size={14} />{query.data.change_set.attention.decided} of {query.data.change_set.attention.total} changed records have a final disposition.</footer></section>

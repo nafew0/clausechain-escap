@@ -6,6 +6,7 @@ from rest_framework import serializers
 from subscriptions.models import SubscriptionEvent, UserSubscription
 from subscriptions.serializers import PlanSummarySerializer
 from subscriptions.services import LicenseService
+from workspace.roles import ROLES, user_role
 
 from .ai_secrets import get_ai_api_key_meta
 from .branding import (
@@ -45,6 +46,7 @@ class AdminSubscriptionSummarySerializer(serializers.ModelSerializer):
 
 class AdminUserListSerializer(serializers.ModelSerializer):
     current_plan = serializers.SerializerMethodField()
+    role = serializers.SerializerMethodField()
 
     class Meta:
         model = User
@@ -56,11 +58,15 @@ class AdminUserListSerializer(serializers.ModelSerializer):
             "last_name",
             "is_active",
             "is_superuser",
+            "role",
             "email_verified",
             "current_plan",
             "created_at",
             "last_login",
         ]
+
+    def get_role(self, obj):
+        return user_role(obj)
 
     def get_current_plan(self, obj):
         subscription = getattr(obj, "subscription", None)
@@ -70,6 +76,7 @@ class AdminUserListSerializer(serializers.ModelSerializer):
 
 class AdminUserDetailSerializer(serializers.ModelSerializer):
     subscription = serializers.SerializerMethodField()
+    role = serializers.SerializerMethodField()
 
     class Meta:
         model = User
@@ -86,11 +93,15 @@ class AdminUserDetailSerializer(serializers.ModelSerializer):
             "is_active",
             "is_staff",
             "is_superuser",
+            "role",
             "email_verified",
             "created_at",
             "last_login",
             "subscription",
         ]
+
+    def get_role(self, obj):
+        return user_role(obj)
 
     def get_subscription(self, obj):
         subscription = getattr(obj, "subscription", None) or LicenseService.get_user_subscription(
@@ -102,6 +113,7 @@ class AdminUserDetailSerializer(serializers.ModelSerializer):
 class AdminUserUpdateSerializer(serializers.Serializer):
     is_active = serializers.BooleanField(required=False)
     plan_id = serializers.UUIDField(required=False)
+    role = serializers.ChoiceField(choices=ROLES, required=False)
 
 
 class SubscriptionEventSerializer(serializers.ModelSerializer):

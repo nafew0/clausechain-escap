@@ -1,13 +1,6 @@
-'use client'
-import dynamic from 'next/dynamic'
+import { redirect } from 'next/navigation'
 
-import AdminLoadingState from '@/components/AdminLoadingState'
-
-const AdminDashboard = dynamic(() => import('@/views/admin/AdminDashboard'), {
-  ssr: false,
-  loading: () => <AdminLoadingState />,
-})
-
+/** The admin panel holds users and roles; its landing page is the user list. */
 export default function AdminPage() {
-  return <AdminDashboard />
+  redirect('/admin/users')
 }

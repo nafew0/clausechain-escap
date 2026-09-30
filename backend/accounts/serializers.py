@@ -8,6 +8,7 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 from PIL import Image, ImageOps, ImageSequence, UnidentifiedImageError
 
 from subscriptions.serializers import PlanSummarySerializer
+from workspace.roles import user_role
 from subscriptions.services import LicenseService
 
 from .branding import resolve_branding_asset_url
@@ -83,6 +84,7 @@ class UserSerializer(serializers.ModelSerializer):
     """Serializer for User model."""
 
     current_plan = serializers.SerializerMethodField()
+    role = serializers.SerializerMethodField()
 
     class Meta:
         model = User
@@ -98,12 +100,16 @@ class UserSerializer(serializers.ModelSerializer):
             "designation",
             "phone",
             "is_superuser",
+            "role",
             "email_verified",
             "current_plan",
             "created_at",
             "updated_at",
         ]
         read_only_fields = ["id", "is_superuser", "created_at", "updated_at"]
+
+    def get_role(self, obj):
+        return user_role(obj)
 
     def get_current_plan(self, obj):
         plan = LicenseService.get_user_plan(obj)

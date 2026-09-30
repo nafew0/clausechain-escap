@@ -1,13 +1,15 @@
 """Create/refresh the public read-only demo account shown on the login page.
 
-The viewer is a plain authenticated user with NO reviewer groups and no staff
-bits: every decision endpoint requires a reviewer role (workspace.views
-require_role) and run-launch requires superuser, so this account can browse the
-entire workspace but cannot write anything. Idempotent — safe to run on every
+The viewer holds the Viewer role and no staff bits: every decision endpoint
+requires the Reviewer or Admin role (workspace.views require_role) and engine
+actions require Admin, so this account can browse the entire workspace but
+cannot write anything. Idempotent — safe to run on every
 deploy.
 """
 from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand
+
+from workspace.roles import set_user_role
 
 DEMO_USERNAME = "viewer"
 DEMO_EMAIL = "viewer@clausechain.demo"
@@ -31,6 +33,6 @@ class Command(BaseCommand):
         user.email_verified = True
         user.set_password(DEMO_PASSWORD)
         user.save()
-        user.groups.clear()  # NO reviewer roles: read-only by construction
+        set_user_role(user, "viewer")  # the Viewer role: read-only by construction
         self.stdout.write(f"demo viewer {'created' if created else 'refreshed'}: "
                           f"{DEMO_USERNAME} / {DEMO_PASSWORD} (read-only)")

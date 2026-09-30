@@ -7,6 +7,7 @@ from .admin_views import (
     AdminGateView,
     AdminPaymentsExportView,
     AdminPaymentsView,
+    AdminRolesView,
     AdminSendPasswordResetView,
     AdminSettingsTestAIView,
     AdminSettingsView,
@@ -19,6 +20,7 @@ app_name = "admin_api"
 urlpatterns = [
     path("_gate/", AdminGateView.as_view(), name="gate"),
     path("dashboard/", AdminDashboardView.as_view(), name="dashboard"),
+    path("roles/", AdminRolesView.as_view(), name="roles"),
     path("users/", AdminUsersView.as_view(), name="users"),
     path("users/<uuid:user_id>/", AdminUserDetailView.as_view(), name="user-detail"),
     path(

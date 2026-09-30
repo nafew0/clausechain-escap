@@ -6,6 +6,7 @@ import { AnimatePresence, MotionConfig, motion } from 'motion/react'
 import { LoaderCircle, LogOut, Menu, ShieldCheck, UserRound, X } from 'lucide-react'
 
 import { useAuth } from '@/contexts/AuthContext'
+import { isAdmin } from '@/lib/roles'
 import { PUBLIC_NAV_ITEMS } from '@/lib/navigation'
 
 export default function Navbar() {
@@ -40,7 +41,7 @@ export default function Navbar() {
     <>
       <Link href="/dashboard" onClick={mobile ? () => setOpen(false) : undefined} className={mobile ? 'public-mobile-primary' : 'public-header-primary'}>Open workspace</Link>
       <Link href="/profile" onClick={mobile ? () => setOpen(false) : undefined} className={mobile ? 'public-mobile-link' : 'public-header-icon'} aria-label="Profile"><UserRound size={17} /><span className="sr-only">Profile</span></Link>
-      {user?.is_superuser ? <Link href="/admin" onClick={mobile ? () => setOpen(false) : undefined} className={mobile ? 'public-mobile-link' : 'public-header-icon'} aria-label="Admin panel"><ShieldCheck size={17} /><span className={mobile ? '' : 'sr-only'}>Admin panel</span></Link> : null}
+      {isAdmin(user) ? <Link href="/admin" onClick={mobile ? () => setOpen(false) : undefined} className={mobile ? 'public-mobile-link' : 'public-header-icon'} aria-label="Admin panel"><ShieldCheck size={17} /><span className={mobile ? '' : 'sr-only'}>Admin panel</span></Link> : null}
       <button disabled={signingOut} onClick={() => { setOpen(false); void logout() }} className={mobile ? 'public-mobile-link' : 'public-header-icon'} aria-label={signingOut ? 'Signing out' : 'Sign out'}>{signingOut ? <LoaderCircle className="animate-spin" size={17} /> : <LogOut size={17} />}<span className={mobile ? '' : 'sr-only'}>{signingOut ? 'Signing out' : 'Sign out'}</span></button>
     </>
   ) : (

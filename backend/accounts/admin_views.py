@@ -28,6 +28,17 @@ from subscriptions.serializers import (
     BkashSearchTransactionSerializer,
 )
 from subscriptions.services import LicenseService
+from workspace.roles import (
+    ROLE_ADMIN,
+    ROLE_DETAILS,
+    ROLE_REVIEWER,
+    ROLE_VIEWER,
+    ROLES,
+    STAGE_GROUPS,
+    is_admin,
+    set_user_role,
+    user_role,
+)
 
 from .ai_secrets import get_ai_api_key, get_ai_api_key_env_var
 from .admin_serializers import (
@@ -57,10 +68,21 @@ BRANDING_ASSET_FIELDS = (
 
 
 class IsSuperuserPermission(BasePermission):
+    """The admin panel and its API: the Admin role only."""
+
     def has_permission(self, request, view):
-        return bool(
-            request.user and request.user.is_authenticated and request.user.is_superuser
-        )
+        return bool(request.user and request.user.is_authenticated and is_admin(request.user))
+
+
+def users_with_role(queryset, role):
+    """Filter users by account role (see workspace.roles.user_role)."""
+    admin_ids = queryset.filter(Q(is_superuser=True) | Q(groups__name=ROLE_ADMIN)).values("pk")
+    reviewer_ids = queryset.filter(groups__name__in=(ROLE_REVIEWER, *STAGE_GROUPS)).values("pk")
+    if role == ROLE_ADMIN:
+        return queryset.filter(pk__in=admin_ids)
+    if role == ROLE_REVIEWER:
+        return queryset.filter(pk__in=reviewer_ids).exclude(pk__in=admin_ids)
+    return queryset.exclude(pk__in=admin_ids).exclude(pk__in=reviewer_ids)
 
 
 class AdminPagination(PageNumberPagination):
@@ -99,6 +121,27 @@ def parse_datetime_filter(value, *, end_of_day=False):
     return parsed
 
 
+class AdminRolesView(AdminAPIView):
+    """The three account roles, what each can do, and who holds them."""
+
+    def get(self, request):
+        roles = []
+        for role in ROLES:
+            members = users_with_role(User.objects.all(), role).order_by("first_name", "username")
+            roles.append({
+                "key": role,
+                **ROLE_DETAILS[role],
+                "user_count": members.count(),
+                "default_for_new_users": role == ROLE_VIEWER,
+                "members": [
+                    {"id": str(user.pk), "username": user.username, "full_name": user.full_name,
+                     "email": user.email, "is_active": user.is_active}
+                    for user in members[:200]
+                ],
+            })
+        return Response({"roles": roles})
+
+
 class AdminDashboardView(AdminAPIView):
     def get(self, request):
         return Response(AdminPaymentsService.build_dashboard_payload())
@@ -122,6 +165,10 @@ class AdminUsersView(AdminAPIView):
         plan_slug = (request.query_params.get("plan") or "").strip()
         if plan_slug:
             queryset = queryset.filter(subscription__plan__slug=plan_slug)
+
+        role = (request.query_params.get("role") or "").strip().lower()
+        if role in ROLES:
+            queryset = users_with_role(queryset, role)
 
         is_active = (request.query_params.get("is_active") or "").strip().lower()
         if is_active in {"true", "false"}:
@@ -235,6 +282,39 @@ class AdminUserDetailView(AdminAPIView):
                     )
                 locked_user.is_active = next_is_active
                 locked_user.save(update_fields=["is_active"])
+
+            if "role" in validated and validated["role"] != user_role(locked_user):
+                next_role = validated["role"]
+                if locked_user.pk == request.user.pk:
+                    log_audit_event(
+                        "admin_user_update",
+                        outcome="failure",
+                        level="warning",
+                        request=request,
+                        target_user=locked_user,
+                        reason="self_role_change_blocked",
+                    )
+                    return Response(
+                        {"detail": "You cannot change your own role."},
+                        status=status.HTTP_400_BAD_REQUEST,
+                    )
+                if (
+                    user_role(locked_user) == ROLE_ADMIN
+                    and users_with_role(User.objects.filter(is_active=True), ROLE_ADMIN).count() <= 1
+                ):
+                    log_audit_event(
+                        "admin_user_update",
+                        outcome="failure",
+                        level="warning",
+                        request=request,
+                        target_user=locked_user,
+                        reason="last_admin_blocked",
+                    )
+                    return Response(
+                        {"detail": "At least one active admin is required."},
+                        status=status.HTTP_400_BAD_REQUEST,
+                    )
+                set_user_role(locked_user, next_role)
 
             if "plan_id" in validated:
                 plan = get_object_or_404(Plan.objects.filter(is_active=True), pk=validated["plan_id"])

@@ -82,11 +82,6 @@ export async function resolveAdminGateAccess(userId: string) {
   return request
 }
 
-export async function getAdminDashboard() {
-  const response = await api.get('/admin/dashboard/')
-  return response.data
-}
-
 export async function getAdminUsers(params: Record<string, string> = {}) {
   const response = await api.get(`/admin/users/?${buildParams(params).toString()}`)
   return response.data
@@ -112,44 +107,26 @@ export async function sendAdminPasswordReset(userId: string) {
   return response.data
 }
 
-export async function getAdminPayments(params: Record<string, string> = {}) {
-  const response = await api.get(`/admin/payments/?${buildParams(params).toString()}`)
-  return response.data
+export interface AdminRoleMember {
+  id: string
+  username: string
+  full_name: string
+  email: string
+  is_active: boolean
 }
 
-export async function exportAdminPayments(params: Record<string, string> = {}) {
-  const response = await api.get(`/admin/payments/export/?${buildParams(params).toString()}`, {
-    responseType: 'blob',
-  })
-  return response.data
+export interface AdminRole {
+  key: 'admin' | 'reviewer' | 'viewer'
+  label: string
+  description: string
+  permissions: string[]
+  user_count: number
+  default_for_new_users: boolean
+  members: AdminRoleMember[]
 }
 
-export async function searchAdminBkashTransaction(trxId: string) {
-  const response = await api.get(
-    `/admin/payments/bkash/search/?${buildParams({ trx_id: trxId }).toString()}`
-  )
-  return response.data
-}
-
-export async function refundAdminBkashPayment(paymentId: string, payload: Record<string, unknown>) {
-  const response = await api.post(`/admin/payments/bkash/${paymentId}/refund/`, payload)
-  return response.data
-}
-
-export async function getAdminSettings() {
-  const response = await api.get('/admin/settings/')
-  return response.data
-}
-
-export async function updateAdminSettings(payload: Record<string, unknown> | FormData) {
-  const isFormData = payload instanceof FormData
-  const response = await api.patch('/admin/settings/', payload, {
-    headers: isFormData ? { 'Content-Type': 'multipart/form-data' } : undefined,
-  })
-  return response.data
-}
-
-export async function testAdminAI(payload: Record<string, unknown>) {
-  const response = await api.post('/admin/settings/test-ai/', payload)
+/** The three account roles, what each can do, and who holds them. */
+export async function getAdminRoles(): Promise<{ roles: AdminRole[] }> {
+  const response = await api.get('/admin/roles/')
   return response.data
 }
