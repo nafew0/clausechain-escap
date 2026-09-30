@@ -1,28 +1,32 @@
 #!/usr/bin/env bash
-# Build the data bundle that deploy.sh / deploy.ps1 download: everything the app
+# Build the data bundles that deploy.sh / deploy.ps1 download: everything the app
 # and the engine use that is not in git.
 #
-#   engine/data/graph_v2.db   the built corpus (a consistent snapshot, safe while the app runs)
-#   engine/data/raw/          every downloaded source document
-#   engine/data/cache/        embedding caches for both models (re-runs need no re-embedding)
-#   engine/outputs/           every Hybrid and Local run
-#   engine/logs/*.log         the run and corpus-build logs
+#   full     clausechain-fulldata-YYYYMMDD.tar.gz   corpus database, source downloads, run outputs,
+#                                                   embedding caches for both models, run and cost logs
+#   partial  clausechain-data-YYYYMMDD.tar.gz       corpus database, source downloads, run outputs
 #
-# The proof images, review decisions, Zone-3 scores and review bundles are in git.
+# The corpus database is a consistent snapshot, safe while the app runs. The proof
+# images, review decisions, Zone-3 scores and review bundles are in git.
 #
-#   deploy/make_data_bundle.sh [output.tar.gz]
+#   deploy/make_data_bundle.sh            both bundles, into dist/
+#   deploy/make_data_bundle.sh full       only the full bundle
+#   deploy/make_data_bundle.sh partial    only the partial bundle
 #
-# Upload the .tar.gz, then put its link and the printed SHA-256 into
-# deploy/data_bundle.cfg.
+# Upload the .tar.gz files, then put their links and the printed SHA-256 values into
+# deploy/data_bundle.cfg (CLAUSECHAIN_DATA_FULL_* and CLAUSECHAIN_DATA_PARTIAL_*).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 ROOT="$(pwd)"
-OUT="${1:-dist/clausechain-data-$(date +%Y%m%d).tar.gz}"
-STAGE="dist/.bundle-stage"
-mkdir -p "$(dirname "$OUT")" "$STAGE/engine/data"
+WHICH="${1:-both}"
+case "$WHICH" in full|partial|both) ;; *) echo "usage: $0 [full|partial|both]" >&2; exit 2 ;; esac
+DIST="${BUNDLE_DIR:-dist}"
+STAMP="$(date +%Y%m%d)"
+STAGE="$DIST/.bundle-stage"
+mkdir -p "$STAGE/engine/data"
 
-# The API keys never go into the bundle: stop if one shows up in the text parts.
-if grep -rlE "sk-or-v1-|sk-proj-|AIza[0-9A-Za-z_-]{30}" engine/logs/*.log engine/outputs >/dev/null 2>&1; then
+# The API keys never go into a bundle: stop if one shows up in the text parts.
+if grep -rlE "sk-or-v1-|sk-proj-|AIza[0-9A-Za-z_-]{30}" engine/logs engine/outputs >/dev/null 2>&1; then
   echo "An API key appears in engine/logs or engine/outputs; remove it before bundling." >&2
   exit 1
 fi
@@ -45,18 +49,41 @@ fi
 
 GZIP_CMD="gzip -6"
 command -v pigz >/dev/null 2>&1 && GZIP_CMD="pigz -6"
-echo "Packing (this takes several minutes) -> $OUT"
-# COPYFILE_DISABLE stops macOS tar from adding ._ metadata files.
-COPYFILE_DISABLE=1 tar -cf - \
-  --exclude='.DS_Store' --exclude='engine/outputs/final_r2__p*' \
-  -C "$STAGE" engine/data/graph_v2.db \
-  -C "$ROOT" engine/data/raw engine/data/cache engine/outputs engine/logs/*.log \
-  | $GZIP_CMD > "$OUT"
+sha256_of() {
+  if command -v sha256sum >/dev/null 2>&1; then sha256sum "$1" | awk '{print $1}'; else shasum -a 256 "$1" | awk '{print $1}'; fi
+}
+
+# pack OUT PATH… : the snapshot database plus the given paths, gzip, and its checksum.
+pack() {
+  local out="$1"; shift
+  echo "Packing $out (several minutes) …"
+  # COPYFILE_DISABLE stops macOS tar from adding ._ metadata files.
+  COPYFILE_DISABLE=1 tar -cf - \
+    --exclude='.DS_Store' --exclude='engine/outputs/final_r2__p*' \
+    -C "$STAGE" engine/data/graph_v2.db \
+    -C "$ROOT" "$@" \
+    | $GZIP_CMD > "$out"
+  local sum
+  sum="$(sha256_of "$out")"
+  echo "$sum  $(basename "$out")" > "$out.sha256"
+  RESULTS="${RESULTS}  $(du -h "$out" | awk '{print $1}')  $out
+      SHA-256 $sum
+"
+}
+
+RESULTS=""
+if [ "$WHICH" != partial ]; then
+  LOGS="$(ls engine/logs/*.log 2>/dev/null | tr '\n' ' ')"
+  [ -f engine/logs/review_cost_report.json ] && LOGS="$LOGS engine/logs/review_cost_report.json"
+  # shellcheck disable=SC2086
+  pack "$DIST/clausechain-fulldata-$STAMP.tar.gz" engine/data/raw engine/data/cache engine/outputs $LOGS
+fi
+if [ "$WHICH" != full ]; then
+  pack "$DIST/clausechain-data-$STAMP.tar.gz" engine/data/raw engine/outputs
+fi
 rm -f "$STAGE/engine/data/graph_v2.db"
 
-if command -v sha256sum >/dev/null 2>&1; then SUM=$(sha256sum "$OUT" | awk '{print $1}'); else SUM=$(shasum -a 256 "$OUT" | awk '{print $1}'); fi
-echo "$SUM  $(basename "$OUT")" > "$OUT.sha256"
 echo
-echo "Bundle:  $OUT ($(du -h "$OUT" | awk '{print $1}'))"
-echo "SHA-256: $SUM"
-echo "Next: upload it, then set CLAUSECHAIN_DATA_URL and CLAUSECHAIN_DATA_SHA256 in deploy/data_bundle.cfg"
+echo "Bundles:"
+printf '%s' "$RESULTS"
+echo "Next: upload them, then set the links and SHA-256 values in deploy/data_bundle.cfg"
