@@ -68,8 +68,9 @@ Needs 30 GB of free disk and 8 GB of memory for Docker (Docker Desktop's default
     cp engine/.env.example keys.env
 
 Open `keys.env` and set your two declared engines and your OCR engine. See
-**[Your Two Declared Engines](#your-two-declared-engines)** below. (The team supplies a filled-in copy
-privately. The app's own secrets — database password, signing keys — are generated for you in step 4.)
+**[Your Two Declared Engines](#your-two-declared-engines)** below. (Our filled-in `keys.env` is provided
+with the submission through ESCAP's submission form (Jotform). The app's own secrets — database password,
+signing keys — are generated for you in step 4.)
 
 ### 4. Start the interface
 
@@ -80,10 +81,11 @@ Windows (PowerShell): `powershell -ExecutionPolicy Bypass -File .\deploy.ps1`
 The script asks for the port, the keys file (`keys.env` from step 3), the data bundle (full 3.3 GB or partial
 1.3 GB) and whether to build, each with a default — press Enter to accept it. It then downloads the data with a
 progress bar and verifies its checksum, builds and starts the app, loads both engines' results and the signed
-review decisions, and creates an admin account. The first run takes 20–40 minutes, mostly downloading and
-building. (No questions: `./deploy.sh --yes --env-file keys.env`.)
+review decisions, and creates an admin account. The first run takes about 20 minutes, mostly downloading and
+building (measured: 1,089 seconds on a fresh Windows machine). (No questions: `./deploy.sh --yes --env-file keys.env`.)
 
-Then open **http://localhost:8080** and sign in as `admin` — the password is in `.deploy-credentials.txt`.
+At the end it shows the admin login (URL, username `admin`, password) in a highlighted box and asks you to
+save it; it is also kept in `.deploy-credentials.txt`. Open **http://localhost:8080** and sign in.
 **Everything else happens in the interface** — starting a run, reviewing, correcting, switching engines,
 exporting.
 

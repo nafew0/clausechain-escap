@@ -296,10 +296,21 @@ user.save()
     Ok "Admin account created"
 }
 
+$credLines = Read-Lines $Cred
+$AdminUser = ($credLines | Where-Object { $_ -match '^Username:' } | ForEach-Object { ($_ -split ':\s*', 2)[1] }) | Select-Object -First 1
+$AdminPassword = ($credLines | Where-Object { $_ -match '^Password:' } | ForEach-Object { ($_ -split ':\s*', 2)[1] }) | Select-Object -First 1
 Write-Host ""
 Write-Host "ClauseChain is running:  $Url" -ForegroundColor Green
 Write-Host ""
-Write-Host "  Sign in:   username admin, password in $Cred"
+Write-Host "  ==============================================================" -ForegroundColor Yellow
+Write-Host "    ADMIN LOGIN - save these now" -ForegroundColor Yellow
+Write-Host "      URL:       $Url"
+Write-Host "      Username:  $AdminUser" -ForegroundColor White
+Write-Host "      Password:  $AdminPassword" -ForegroundColor White
+Write-Host "      (also kept in $Cred in this folder)"
+Write-Host "  ==============================================================" -ForegroundColor Yellow
+if ($Interactive) { Read-Host "  Press Enter once you have saved the password" | Out-Null }
+Write-Host ""
 Write-Host "  Try it:    Runs > Sources > Build sources, then Queue run; switch Hybrid / Local at the top of any page."
 Write-Host "  Stop:      docker compose stop          Start again: docker compose start"
 Write-Host "  Logs:      docker compose logs -f backend engine-worker"

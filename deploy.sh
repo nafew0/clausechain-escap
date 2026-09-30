@@ -350,11 +350,26 @@ user.save()
 fi
 
 # ---------------------------------------------------------------- done
+ADMIN_USER="$(sed -n 's/^Username: *//p' "$CRED")"
+ADMIN_PASSWORD="$(sed -n 's/^Password: *//p' "$CRED")"
 cat <<EOF
 
 ${G}${B}ClauseChain is running:  $URL${N}
 
-  Sign in:   $(sed -n 3,4p "$CRED" | tr '\n' ' ')  (saved in $CRED)
+  ${Y}${B}==============================================================${N}
+  ${B}  ADMIN LOGIN — save these now${N}
+      URL:       $URL
+      Username:  ${B}$ADMIN_USER${N}
+      Password:  ${B}$ADMIN_PASSWORD${N}
+      (also kept in $CRED in this folder)
+  ${Y}${B}==============================================================${N}
+EOF
+if [ "$INTERACTIVE" = 1 ]; then
+  printf '  Press Enter once you have saved the password … '
+  read -r _ || true
+fi
+cat <<EOF
+
   Try it:    Runs → Sources → Build sources, then Queue run; switch Hybrid / Local at the top of any page.
   Stop:      $COMPOSE stop          Start again: $COMPOSE start
   Logs:      $COMPOSE logs -f backend engine-worker
