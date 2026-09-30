@@ -103,3 +103,5 @@ Frontend prototype design request.zip
 /dist/
 # Word documents (submission forms, memos) stay local
 *.docx
+# Private walkthrough video script
+/ClauseChain_Walkthrough_Script.md
