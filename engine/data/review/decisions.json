@@ -54,68 +54,68 @@
   "finding_key": "1b0882f98940e356558b33a60beac3af4d19dda4aeede5d143ca1c516e1b2058",
   "review_subject_hash": "ece930b5790974c40520cfb4a3341c71007dc524ef9a7a6a568123c5f63b31fe",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "ddd541098ed2d124dde7665b5d0b17cd0be8841f00c8687f27adab928d40bd84",
   "review_subject_hash": "e48eb490295f4a99ff0b812e420b824ba3d4b73e647df4f17a6f6b24dccf4541",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 26(2); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 26(2); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "55f8bad4a5f8608c9f81475f818648961c9aada2882b518462337e244108f2b3",
   "review_subject_hash": "3e88c7bdc1ce213bc109e990735c3172e7dce52e9bed0b60f87ef8c4836f1c63",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 26(3); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 26(3); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "58df01c248f79abd0e14e4f5fe359bb9aad35481105149703436837c4d5025f3",
   "review_subject_hash": "8b7ebe1034b98940db0b2b189e7100973307cdf92db023a81e0488836fd0b070",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 26(4); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 26(4); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -190,17 +190,17 @@
   "finding_key": "cff025d2de2ad7c96d1fe7bc8e629105ff895a1d75245bc8a0c2d0896c8e5000",
   "review_subject_hash": "c43593c3c411717dc931f7733c7d2569659cda5fc1767bf495e88fe4ec13d2ff",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -411,34 +411,34 @@
   "finding_key": "353ea37a82a1aafd9d2975a51bd1bf61cf2c356357d596eba352ca794f254438",
   "review_subject_hash": "2a2a831218fede341f36dea20b5d90c19c8cb144489eafa1047cce5f48501792",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "5927d8c2eee095bfc7b54465eca2c49c0c81d4cc19364e5b42b02b594ebdf7ec",
   "review_subject_hash": "c0e4758c98d7bce71bdc16ab80f062f2909b8d7ac66e9e477eb9873e8c3c6350",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 67(3); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 67(3); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -513,51 +513,51 @@
   "finding_key": "08fccb8a79150660964d82fef8d04ec8f9ad1bff833cd1ff8757e499f25097d3",
   "review_subject_hash": "14e115b8b04ab2f3cba535547363756e19cf7d9394b2cb225a16bd630e5760d1",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 67(2); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 67(2); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "7ad590ff3e9016ef7a9f5836d2a1551db523a08a5d8271993164282f63a95c2b",
   "review_subject_hash": "808328b9789fb23e84b7697c678addc200125416326907be8f76da9d62911557",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 67(4); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 67(4); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "7d07c0ccbd15a38098740f9a8dbfb4f9b69045c07d10dd1dfb5f50699d711d46",
   "review_subject_hash": "4ecee20c7ad1c24c5b03b91f0b98eceec1a5ebe3560d3532d8d6ded3036f9615",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 67(5); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 67(5); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -1074,119 +1074,119 @@
   "finding_key": "724c9d8de615f7e928e3dc02abb481a6123a9096a565736667f0155cd5a0843c",
   "review_subject_hash": "8c6cfdd695bba6d554cd129b017fa16b67d884425dd0f7c34c472caa09e47a2b",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "72865cd7b3e6d8ebc30135954c3e8e6108a1ddb606e0ff1f14a03860868bc12d",
   "review_subject_hash": "f34cdb3a7beb63d2ea477f8d36dc633ec778872d521a6d7b9199c8ccc8ad96bc",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "The row cites s. 11(2), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection).",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "The row cites s. 11(2), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection)."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "40cf38af3ebef988b7d7d7618563816d3c10e0fc668ea22e5a23cab811332cf1",
   "review_subject_hash": "ccaa2f081d1a282cae8b05a210775dfba55e45b0013f079b076658b296d16e26",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "The row cites s. 11(5), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection).",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "The row cites s. 11(5), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection)."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "148a1f2e82cf7c69389cdc09906a868b2872fad1d75fdae97681a340dcddfb75",
   "review_subject_hash": "028336b930bc24bc871844cc8d2d1c918c17d35f62fbf02b3332b26e9d494402",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "The row cites s. 11(4), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection).",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "The row cites s. 11(4), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection)."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "4aaa50ed791dc7ff561b8b1335a273a7c5642ff3a027c02bd9f55dccdf606165",
   "review_subject_hash": "71ef3c17a8f6540d258a2ba7d9a714b6af0d0ce4ac00bf23286aed2ab5f25577",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "The row cites s. 11(1), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection).",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "The row cites s. 11(1), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection)."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "ae2bce3ea0249f334685848d0e2a21d0c5541287e9ef8dec6a75a9fa38cf79b2",
   "review_subject_hash": "6c7a402a21e36f3fbbb39b19c1dcf2e78b895b3fedb4b1fad6d26eac78034c5c",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "The row cites s. 11(5A), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection).",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "The row cites s. 11(5A), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection)."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "69c006e449228179b766751345046344dae94ed7c99509307706e4791c6c7f94",
   "review_subject_hash": "55e95b7ceb139cfa1db176b65c3d5022c645f136dc72cd892274aa0dfcf869c0",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "The row cites s. 11(6), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection).",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "The row cites s. 11(6), but the exact excerpt begins at subsection (3). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection)."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -1227,34 +1227,34 @@
   "finding_key": "59a44931d3f5cb7620d2585d51647f2430ae85c1ba62b9739cf2e93bed152858",
   "review_subject_hash": "fd47245912c1ee33de84a3e3597cfdaccc8d49bb2fb2d86fc3e5a2e94651e7e8",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "80e70cc1a6d574de0ba47023240d7548f2a4a506bc1044f9419d495b7a92a3ce",
   "review_subject_hash": "d3055cafc0a80cbf0dc170fc4606af87a391063f50a97f20397ecffdf5e5be45",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -1278,170 +1278,170 @@
   "finding_key": "90ead86e5082436db044e95a449ec2a91ee46fcba7c25885c8e5e10daebbb69a",
   "review_subject_hash": "78596b98456bb06f696fc948fcb00b039dbcdadaf672b82d86bd45f3b397c656",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "344bad04bdc57d043ba2fefd54e2a8c5cad7208f9dc31a01425e22604bfed22e",
   "review_subject_hash": "cf241bef6592c331de1df13be63e91279d0fc01ad864b16dbc1d43ff64cdb5dc",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(2); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(2); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "482b42ff75b06907267f0925826aa990d82005ac18d8367ea429fd12f659cb4e",
   "review_subject_hash": "c940d027054654a1eef9337e5b6469b7f10929fe1fa1da5619d3bacdb7debd7c",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(1A); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(1A); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "322cf6393ad1b624a170317ed2c918177a91a44cd93acd50a0b518555d9710da",
   "review_subject_hash": "ffc8ba90a7cd90206da944aa17a031f36107f94bcbc0352c0ee01380be56d3c0",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(2B); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(2B); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "1cd92cc433299be2ba2788a92fa3245db1a3dae36f233111b42db95fdfe695aa",
   "review_subject_hash": "1c592fe7caa94b9212f90ff7dc92c3c51693078f46d538a08a99c0704bd6d5b7",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(2A); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(2A); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "1d0bc984103e81daf97458cec09b73032ec7f48910af43ec168d5a13218bfccc",
   "review_subject_hash": "6266391afea1e328556779f8ee9aa918c4f3461b2f0ae8e8a7f3063921b5b73b",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "The row cites s. 20(3A), but the exact excerpt begins at subsection (1A). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection).",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "The row cites s. 20(3A), but the exact excerpt begins at subsection (1A). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection)."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "1626743d6a7e622974c22c071d945cde3f0dd33a3a4efe0d03cafc82e02dbdae",
   "review_subject_hash": "440f1350da18acfdaac15eaa86bad7d76e47b3410da2fd329c5a4ae8174145e0",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(3); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(3); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "b4a5b00e27f5abd5a1cd10240c1a155309579f4535b9e50d5a4fd55549224f4c",
   "review_subject_hash": "8d46c5f7ecc928887a15477382974b96e5282ee05a3739d8a11aa759cb1f35d6",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(4); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(4); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "bcd39701ccc6824aabbc6cb57103711eead7ebfbb60bd1494b06be95b2c0b649",
   "review_subject_hash": "d4b24fd9f791bca41b9256dd1cae1437a11e3168c51efa50416a18cfd5d0e542",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(5); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(5); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "35a248596fb1b7b3de2ad1f5ffa8cbe7df3e560a463be763314f8bb147eabb5b",
   "review_subject_hash": "09fcf275dfbd0f95957b180887126f2cd74c4e52f858b026732b6e5d987a2e90",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(6); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 39(6); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -1482,17 +1482,17 @@
   "finding_key": "0ecd252d2bf9a398a4e1b9e61ef83ecd53357140db05bd448380d289aae79209",
   "review_subject_hash": "7a64a4918b61c64d235f224f96a6ac038b4a5c803cea7794710829f017e70553",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 20(3); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 20(3); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -1516,17 +1516,17 @@
   "finding_key": "da638a93aa511956d4ffb11f01df52ee1682abd4c0db726fd4224147b07102d3",
   "review_subject_hash": "d099617a3a3cc6d43981626a01806b97c17f2ed912628111a33d162dfcec61af",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "The row cites s. 20(6), but the exact excerpt begins at subsection (1A). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection).",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "The row cites s. 20(6), but the exact excerpt begins at subsection (1A). Re-slice the cited subsection or merge/remove the duplicate before approval. Duplicate-excerpt row removed (the retained row for this section carries the full closed passage including this subsection)."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -1550,34 +1550,34 @@
   "finding_key": "ee3916b60f8149dc338672f393698f470cfdb1336bb396512a87cb65fcbd61ff",
   "review_subject_hash": "f07cc9565dc00faf5b63952a519d18679951b75f1468fb9b3b147f6e2821eab2",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 20(8); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 20(8); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "1377efcba8473dca9581e18bb564d903451bacd3149e818c45d9a7793141e39b",
   "review_subject_hash": "7f371a154f1c69290eda60786ffd32fc4d323b9662c0ec4e09876f7909b6a6f4",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 20(9); the retained row for this section carries the full passage.",
+   "decision": "rejected",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "rejected",
-   "correction_note": "Rejected as duplicate presentation: the excerpt is the whole closed section (beginning at subsection (1)) while this row cites s. 20(9); the retained row for this section carries the full passage."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -3250,17 +3250,17 @@
   "finding_key": "27d43afb0237e3bbe2343364e7201f004363fdedb03df571761a8b9e5493f50a",
   "review_subject_hash": "8e620288078e8802a055f63ef58a98425f045593e34532a0ae95f6e34c333b14",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -3641,17 +3641,17 @@
   "finding_key": "c0578e277726f9d6e8df49d7aa7a2fa2a2e244a6e618e4f748271a57baa44f1c",
   "review_subject_hash": "cb4db0975003c76ae2390f87d54fc6dbb968f48e809f26122f06020f5b97805f",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -3709,17 +3709,17 @@
   "finding_key": "641bdbdc19f766fd5c73fbb895cdf16a4903272be84955dbd9a63e963608f01c",
   "review_subject_hash": "90ed3ea2f829c25a1c988d11aa5b67c30f3ea740e4d1a7dd1f0cf93f7c842dfa",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -3743,17 +3743,17 @@
   "finding_key": "f0b3b4fee74084b57420533798f0083bc68f07d04720d2506c564f852b72a1cf",
   "review_subject_hash": "25c0a5934c781cacdf116a4c77be7467afd7f0e3798059b22c38d796343f0f37",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -3811,34 +3811,34 @@
   "finding_key": "0d750e14556590c76b63d5fa814a8ac8d01caa46332e18d3c455ad3349922ed5",
   "review_subject_hash": "5dd5345bb377b9872892e634c537c44bf81601abe90dcc88a4428588266dcd47",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
   "finding_key": "2b2ed466c6f19b1d06a593aeac865a873f88211452f97d5f2368652258193daf",
   "review_subject_hash": "b552cd7372240e0998d35f42af6aa9d0d3a96430ae5b4f538c7e610009d5c1e9",
   "review": {
+   "citation_checked": true,
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator.",
+   "decision": "approved",
+   "mapping_checked": true,
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
    "reviewer_name": "Abu Naser Md. Nafew",
    "reviewer_role": "Team Lead, Team zAI BD",
-   "reviewed_at": "2026-07-20T16:46:48.495118+00:00",
-   "citation_checked": true,
-   "mapping_checked": true,
    "status_checked": true,
-   "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
-   "status_reviewer_name": "Abu Naser Md. Nafew",
-   "decision": "approved",
-   "correction_note": "Verified against the archived official source; the excerpt is source-exact and the citation aligns with the indicator."
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
