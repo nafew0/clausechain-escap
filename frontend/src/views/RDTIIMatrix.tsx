@@ -7,6 +7,7 @@ import { AlertTriangle, ArrowUpRight, CheckCircle2, CircleDashed, FileText, Gave
 import WorkspaceShell from '@/components/clausechain/WorkspaceShell'
 import { TruthBadge } from '@/components/clausechain/TruthState'
 import { ModePageHeader } from '@/components/workspace/ModePageHeader'
+import { FinalRoundExportMenu } from '@/components/workspace/FinalRoundExportMenu'
 import { useRunMode } from '@/components/workspace/RunModeTabs'
 import { SnapshotBanner } from '@/components/workspace/SnapshotBanner'
 import { useDecide, useSummary, useZone3Matrix } from '@/hooks/workspace'
@@ -78,6 +79,7 @@ export default function RDTIIMatrix() {
     onModeChange={() => setSelectedKey(null)}
     eyebrow={<>{local ? <span className="z3-local-chip"><Server size={13} /> Local · open weights</span> : <TruthBadge state="live" />}{matrix.data?.snapshot ? <SnapshotBanner /> : null}</>}
     title={`RDTII indicator matrix${local ? ' · local' : ''}`}
+    actions={<FinalRoundExportMenu mode={mode} disabled={!matrix.data?.snapshot} />}
     description={local ? 'The open-weights model’s own matrix: its Zone-3 proposals and your Local review decisions, from the Local snapshot. Scores are 0 / 0.5 / 1 at indicator level; Model comparison sets them beside the hybrid scores.' : 'Economies × indicators · engine-proposed, reviewer-decided, evidence-anchored. Scores are 0 / 0.5 / 1 at indicator level.'}
   />
   if (matrix.isPending) return <WorkspaceShell breadcrumbs={[{ label: 'RDTII Matrix' }]}><div className="cc-page z3-page">{header}<div className="run-page-state"><LoaderCircle size={28} /> Loading indicator scores…</div></div></WorkspaceShell>

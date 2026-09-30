@@ -1271,6 +1271,48 @@ class WorkspaceApiTests(TestCase):
         self.assertEqual(response.status_code, 400)
         writer.assert_not_called()
 
+    @patch("workspace.views.apply_authoritative_decision", return_value=RECEIPT)
+    def test_final_round_export_payload_is_the_current_results(self, writer):
+        from .final_export import export_payload
+
+        payload = export_payload(self.snapshot)
+        # Two provisions awaiting review; the no-evidence placeholder is left out.
+        self.assertEqual(payload["mode"], "hybrid")
+        self.assertEqual(payload["excluded"], {"rejected": 0, "absence": 1})
+        self.assertEqual([row["review"]["decision"] for row in payload["rows"]], ["pending", "pending"])
+        self.assertEqual(payload["source"]["id"], str(self.snapshot.pk))
+        self.assertIsInstance(payload["scores"], list)
+
+        self.authenticate(self.citation)
+        response = self.client.post("/api/workspace/decisions/findings/", {
+            "finding_key": "1" * 64, "queue": "new", "review_stage": "citation", "decision": "rejected",
+            "note": "The quote is not in the cited section.", "expected_latest_decision_id": None,
+        }, format="json")
+        self.assertEqual(response.status_code, 201, response.data)
+        payload = export_payload(self.snapshot)
+        self.assertEqual(payload["excluded"], {"rejected": 1, "absence": 1})
+        self.assertEqual(len(payload["rows"]), 1)
+
+    def test_final_round_export_downloads_each_format(self):
+        def fake_build(snapshot, fmt, out_dir):
+            path = Path(out_dir) / f"OUTPUT_FINAL_ROUND.{fmt}"
+            path.write_bytes(f"{snapshot.mode}:{fmt}".encode())
+            return path
+
+        self.assertEqual(self.client.get("/api/workspace/export/final-round/?type=csv").status_code, 401)
+        self.authenticate(self.citation)
+        stamp = timezone.now().strftime("%Y-%m-%d")
+        with patch("workspace.final_export.build_export", side_effect=fake_build):
+            for fmt, content_type in (("xlsx", "spreadsheetml"), ("csv", "text/csv"), ("json", "application/json")):
+                response = self.client.get(f"/api/workspace/export/final-round/?type={fmt}")
+                self.assertEqual(response.status_code, 200)
+                self.assertIn(content_type, response["Content-Type"])
+                self.assertEqual(response.content, f"hybrid:{fmt}".encode())
+                self.assertIn(f"ClauseChain_RDTII_FinalRound_Hybrid_{stamp}.{fmt}", response["Content-Disposition"])
+            self.assertEqual(self.client.get("/api/workspace/export/final-round/?type=pdf").status_code, 400)
+            # Local has no snapshot in this fixture: nothing to export yet.
+            self.assertEqual(self.client.get("/api/workspace/export/final-round/?type=csv&mode=local").status_code, 404)
+
     def absence_approval(self):
         return self.client.post(
             "/api/workspace/decisions/findings/",

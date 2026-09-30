@@ -1,6 +1,7 @@
 from django.urls import path
 
 from . import comparison_views
+from .final_export import FinalRoundExportView
 from .views import (
     CorrectionRequestView,
     EvidenceDetailView,
@@ -89,6 +90,7 @@ urlpatterns = [
     ),
     path("runs/", RunsView.as_view(), name="runs"),
     path("submission/", SubmissionView.as_view(), name="submission"),
+    path("export/final-round/", FinalRoundExportView.as_view(), name="final_round_export"),
     path("engine/actions/", EngineActionsView.as_view(), name="engine_actions"),
     path("engine/refresh/", EngineRefreshView.as_view(), name="engine_refresh"),
     path("engine/replay/", EngineReplayView.as_view(), name="engine_replay"),

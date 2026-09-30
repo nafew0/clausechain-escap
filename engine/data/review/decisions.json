@@ -123,16 +123,16 @@
   "review_subject_hash": "a2cea6f68708308c2e0a30116d9697ae8dc6e289191055cdc5b5eec2dbf8bb15",
   "review": {
    "citation_checked": true,
-   "citation_reviewer_name": "admin",
-   "correction_note": "Regulation 12(1) treats an overseas recipient holding APEC CBPR or PRP, or Global CBPR, certification as bound to a comparable standard of protection. It is one of the prescribed routes that make an outbound transfer lawful under section 26 of the PDPA, so it belongs with Singapore's conditional-transfer regime alongside the Act itself.",
+   "citation_reviewer_name": "Abu Naser Md. Nafew",
+   "correction_note": "Regulation 12(1) is a current, horizontal cross-border transfer safeguard: certification makes the overseas recipient subject to legally enforceable protection comparable to the PDPA. The citation, actor, condition and effect are aligned. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]",
    "decision": "approved",
    "mapping_checked": true,
-   "mapping_reviewer_name": "Abu Naser Md. Nafew",
-   "reviewed_at": "2026-09-30T01:11:27.099532+00:00",
-   "reviewer_name": "Abu Naser Md. Nafew",
-   "reviewer_role": "admin",
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:27:27.951041Z",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
    "status_checked": true,
-   "status_reviewer_name": "admin"
+   "status_reviewer_name": "Abu Naser Md. Nafew"
   }
  },
  {
@@ -3354,13 +3354,13 @@
   "review": {
    "citation_checked": true,
    "citation_reviewer_name": "Abu Naser Md. Nafew",
-   "correction_note": "The Act is in force on the Federal Register of Legislation and section 62 remains in the current text.",
+   "correction_note": "Cyber Security Act section 62(1) establishes the Board's statutory incident-review, recommendation and public-reporting functions. It is valid dedicated-framework evidence. [Final joint-session workbook, 20 Jul — supersedes any prior batch entry.]",
    "decision": "approved",
    "mapping_checked": true,
-   "mapping_reviewer_name": "admin",
-   "reviewed_at": "2026-09-30T01:11:27.490254+00:00",
-   "reviewer_name": "Abu Naser Md. Nafew",
-   "reviewer_role": "admin",
+   "mapping_reviewer_name": "MD. INSAFUL RAHMAN TUSAR",
+   "reviewed_at": "2026-07-20T16:27:27.951041Z",
+   "reviewer_name": "Md. Insaful Rahman Tusar",
+   "reviewer_role": "Independent Legal Consultant, Legal Review, zAI BD",
    "status_checked": true,
    "status_reviewer_name": "Abu Naser Md. Nafew"
   }

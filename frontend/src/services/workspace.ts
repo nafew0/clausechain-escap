@@ -27,6 +27,7 @@ import type {
   EngineActionResponse,
   FindingDecisionInput,
   FindingDecisionResponse,
+  FinalRoundExportType,
   PaginatedResponse,
   RecallDecisionInput,
   ReviewQueueParams,
@@ -239,6 +240,23 @@ export async function downloadActionDocuments(actionId: string): Promise<void> {
   anchor.download = `documents_downloaded_${actionId.slice(0, 8)}.csv`
   anchor.click()
   URL.revokeObjectURL(href)
+}
+
+/** The current results in ESCAP's final-round template, built on request; saves it and returns the file name. */
+export async function downloadFinalRoundExport(type: FinalRoundExportType, mode: RunMode): Promise<string> {
+  const response = await api.get<Blob>('/workspace/export/final-round/', {
+    params: { type, mode },
+    responseType: 'blob',
+  })
+  const disposition = String(response.headers['content-disposition'] ?? '')
+  const filename = /filename="?([^";]+)"?/.exec(disposition)?.[1] ?? `ClauseChain_RDTII_FinalRound.${type}`
+  const href = URL.createObjectURL(response.data)
+  const anchor = document.createElement('a')
+  anchor.href = href
+  anchor.download = filename
+  anchor.click()
+  URL.revokeObjectURL(href)
+  return filename
 }
 
 export async function cancelEngineAction(actionId: string): Promise<EngineAction> {

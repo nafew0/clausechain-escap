@@ -2578,3 +2578,22 @@
 .run-documents th,.run-documents td{padding:6px 10px;border-top:1px solid var(--cc-ink-100);text-align:left;vertical-align:top}
 .run-documents th{color:var(--cc-ink-500);font-size:10px;text-transform:uppercase;letter-spacing:.04em}
 .run-documents td a{color:var(--cc-authority-700);word-break:break-all}
+
+/* Final-round export menu (RDTII matrix header) */
+.final-export { position: relative; }
+.final-export-toggle { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 11px; border: 1px solid var(--cc-ink-200); border-radius: 9px; background: white; color: var(--cc-ink-800); font-size: 11px; font-weight: 700; cursor: pointer; }
+.final-export-toggle:hover:not(:disabled) { border-color: var(--cc-authority-600); color: var(--cc-authority-700); }
+.final-export-toggle:disabled { opacity: .5; cursor: not-allowed; }
+.final-export-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 40; width: min(340px, calc(100vw - 32px)); padding: 6px; background: white; border: 1px solid var(--cc-ink-200); border-radius: 12px; box-shadow: var(--cc-shadow-lg); }
+.final-export-menu header { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px 9px; border-bottom: 1px solid var(--cc-ink-100); margin-bottom: 4px; }
+.final-export-menu header strong { font-size: 12px; color: var(--cc-ink-950); }
+.final-export-menu header span { font: 500 9px/1.5 var(--cc-font-mono); color: var(--cc-ink-500); }
+.final-export-menu button { display: flex; align-items: flex-start; gap: 10px; width: 100%; padding: 9px 10px; border-radius: 8px; text-align: left; color: var(--cc-authority-600); cursor: pointer; }
+.final-export-menu button:hover:not(:disabled), .final-export-menu button:focus-visible { background: var(--cc-authority-50); outline: none; }
+.final-export-menu button:disabled { cursor: progress; }
+.final-export-menu button > span { display: flex; flex-direction: column; gap: 2px; }
+.final-export-menu b { font-size: 12px; color: var(--cc-ink-950); }
+.final-export-menu em { font: 500 10px var(--cc-font-mono); font-style: normal; color: var(--cc-ink-500); }
+.final-export-menu small { font-size: 10px; line-height: 1.45; color: var(--cc-ink-500); }
+.final-export-menu .spin { animation: match-spin 1s linear infinite; }
+.final-export-error { margin: 4px; padding: 7px 9px; border-radius: 8px; background: #FFF2F2; color: #A72828; font-size: 10px; }

@@ -184,8 +184,9 @@ def effective_finding_review(finding_key, *, review_subject_hash=None, prospecti
     }
 
 
-def bulk_effective_finding_decisions(revisions):
-    """Resolve final verdicts for many registry revisions in bounded queries."""
+def bulk_finding_stages(revisions):
+    """Latest decision per review stage (direct or carried forward) for many registry
+    revisions, keyed by (finding_key, review_subject_hash), in bounded queries."""
 
     revisions = list(revisions)
     if not revisions:
@@ -236,21 +237,33 @@ def bulk_effective_finding_decisions(revisions):
                 if carried:
                     stages[stage] = carried
                     break
-        rejected = any(
-            row.decision == FindingDecision.Verdict.REJECTED for row in stages.values()
-        )
-        citation = stages.get(FindingDecision.Stage.CITATION)
-        mapping = stages.get(FindingDecision.Stage.MAPPING)
-        status_checked = any(row.status_checked for row in stages.values())
-        complete = bool(
-            citation
-            and mapping
-            and citation.decision == FindingDecision.Verdict.APPROVED
-            and mapping.decision == FindingDecision.Verdict.APPROVED
-            and _reviewer_separation_satisfied(citation, mapping)
-            and status_checked
-        )
-        result[(current.finding_key, current.review_subject_hash)] = (
-            "rejected" if rejected else ("approved" if complete else None)
-        )
+        result[(current.finding_key, current.review_subject_hash)] = stages
     return result
+
+
+def stages_verdict(stages):
+    """"rejected", "approved" or None (undecided) from a finding's latest stage decisions."""
+    rejected = any(
+        row.decision == FindingDecision.Verdict.REJECTED for row in stages.values()
+    )
+    citation = stages.get(FindingDecision.Stage.CITATION)
+    mapping = stages.get(FindingDecision.Stage.MAPPING)
+    status_checked = any(row.status_checked for row in stages.values())
+    complete = bool(
+        citation
+        and mapping
+        and citation.decision == FindingDecision.Verdict.APPROVED
+        and mapping.decision == FindingDecision.Verdict.APPROVED
+        and _reviewer_separation_satisfied(citation, mapping)
+        and status_checked
+    )
+    return "rejected" if rejected else ("approved" if complete else None)
+
+
+def bulk_effective_finding_decisions(revisions):
+    """Resolve final verdicts for many registry revisions in bounded queries."""
+
+    return {
+        key: stages_verdict(stages)
+        for key, stages in bulk_finding_stages(revisions).items()
+    }

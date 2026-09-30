@@ -487,6 +487,8 @@ export interface SubmissionRow {
   review_state: FindingReviewState
 }
 
+export type FinalRoundExportType = 'xlsx' | 'csv' | 'json'
+
 export interface SubmissionResponse extends PaginatedResponse<SubmissionRow> {
   template_columns: string[]
   snapshot: { id: string; source_hash: string; stale: boolean }
